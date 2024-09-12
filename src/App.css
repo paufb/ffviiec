@@ -1,42 +1,49 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+:root {
+  --app-max-width: 82rem;
+  --app-padding: 1rem;
+  --navbar-header-height: 4rem;
+  --sidebar-width: 23rem;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.arrow-up {
+  display: inline-block;
+  border-bottom: 0.42em solid;
+  border-right: 0.32em solid transparent;
+  border-left: 0.32em solid transparent;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.arrow-down {
+  display: inline-block;
+  border-top: 0.42em solid;
+  border-right: 0.32em solid transparent;
+  border-left: 0.32em solid transparent;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.arrow-right {
+  display: inline-block;
+  vertical-align: 0.09em;
+  border-left: 0.42em solid;
+  border-top: 0.32em solid transparent;
+  border-bottom: 0.32em solid transparent;
 }
 
-.card {
-  padding: 2em;
+.arrow-up-down {
+  display: inline-block;
 }
 
-.read-the-docs {
-  color: #888;
+.arrow-up-down:before,
+.arrow-up-down:after {
+  content: "";
+  display: block;
+  border-right: 0.32em solid transparent;
+  border-left: 0.32em solid transparent;
+}
+
+.arrow-up-down:before {
+  border-bottom: 0.42em solid;
+  margin-bottom: 1px;
+}
+
+.arrow-up-down:after {
+  border-top: 0.42em solid;
 }

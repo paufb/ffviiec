@@ -1,0 +1,663 @@
+.page-background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: radial-gradient(ellipse at bottom, rgb(7, 51, 108) 0%, black 100%);
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin: 8rem auto 3rem auto;
+  width: calc(100% - calc(2 * var(--app-padding)));
+  max-width: var(--app-max-width);
+}
+
+.filters-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background-color: rgb(9, 36, 67);
+  border-radius: 4px;
+  width: 100%;
+  padding: 0.75rem;
+  box-sizing: border-box;
+  box-shadow: 0 0 0.5rem 0.2rem rgb(28, 117, 190);
+}
+
+.filters-container-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  gap: 0.75rem;
+
+  &.filters-container-row--narrow {
+    flex-direction: column;
+  }
+}
+
+.filters-container-column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  gap: 0.75rem;
+}
+
+.filter {
+  background-color: rgb(4, 16, 30);
+  color: white;
+  border-radius: 4px;
+  padding: 0.5rem;
+}
+
+.filter-name {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  & svg {
+    position: absolute;
+    left: 0.5rem;
+    width: 24px;
+    height: 24px;
+  }
+
+  & input {
+    flex-grow: 1;
+    box-sizing: border-box;
+    width: 0;
+    height: 2.25rem;
+    border-radius: 50px;
+    padding-left: 2.25rem;
+    background-color: lightgray;
+  }
+}
+
+.level-and-overboost-container {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.filter-layout {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  & .layout-grid,
+  & .layout-table {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  & .layout-grid--selected,
+  & .layout-table--selected {
+    & svg {
+      fill: white;
+    }
+  }
+}
+
+.statistic {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0.25rem;
+  color: white;
+  background-color: rgb(5, 22, 41);
+  border: 2px solid rgb(38, 56, 79);
+  border-radius: 50px;
+  width: min-content;
+  padding: 0.25rem 0.5rem;
+
+  & svg {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
+
+.filter-characters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.character-toggle {
+  display: flex;
+  align-items: center;
+  color: white;
+  white-space: nowrap;
+  cursor: pointer;
+  background-color: rgb(5, 41, 80);
+  border-style: solid;
+  border-color: rgb(21, 81, 151);
+  border-radius: 4px;
+  border-width: 0.125rem;
+  outline: rgb(21, 81, 151) solid calc(0.3rem / 2.5);
+  outline-width: 0.125rem;
+  outline-offset: calc(-0.125rem * 3);
+  padding: calc(0.125rem * 3);
+
+  &:hover {
+    background-color: #08325e;
+    border-color: #2164ab;
+    outline-color: #2164ab;
+  }
+
+  &.character-toggle--selected {
+    background-color: rgb(13, 83, 157);
+    border-color: rgb(44, 128, 215);
+    outline-color: rgb(44, 128, 215);
+  }
+
+  & img {
+    width: calc(4.1875rem * 0.5);
+    height: calc(4.9375rem * 0.5);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    margin: 0 0.125rem 0 0.25rem;
+  }
+
+  & .character-toggle-name {
+    margin: 0 0.25rem 0 0.125rem;
+  }
+}
+
+.filter-level {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.filter-overboost {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.filter-overboost__stars {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  vertical-align: middle;
+}
+
+.filter-elements {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.element-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  cursor: pointer;
+  background-color: rgb(5, 41, 80);
+  border-style: solid;
+  border-color: rgb(21, 81, 151);
+  border-radius: 4px;
+  border-width: 0.125rem;
+  outline: rgb(21, 81, 151) solid calc(0.3rem / 2.5);
+  outline-width: 0.125rem;
+  outline-offset: calc(-0.125rem * 3);
+  padding: calc(0.125rem * 3);
+
+  &:hover {
+    background-color: #08325e;
+    border-color: #2164ab;
+    outline-color: #2164ab;
+  }
+
+  &.element-toggle--selected {
+    background-color: rgb(13, 83, 157);
+    border-color: rgb(44, 128, 215);
+    outline-color: rgb(44, 128, 215);
+  }
+
+  & span {
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.table-decoration {
+  position: relative;
+  overflow: visible;
+  outline: rgb(28, 117, 190) solid 0.15rem;
+}
+
+.table-decoration::before, .table-decoration::after {
+  content: "";
+  position: absolute;
+  width: 0.5rem;
+  height: 0.5rem;
+  background: rgb(28, 117, 190);
+  outline: rgb(28, 117, 190) solid 0.15rem;
+  outline-offset: 0.1rem;
+  transform: rotate(45deg);
+  z-index: 1;
+}
+
+.table-decoration::before {
+  top: -0.4rem;
+  left: -0.4rem;
+}
+
+.table-decoration::after {
+  top: -0.4rem;
+  right: -0.4rem;
+}
+
+.table-container {
+  padding: 0 0.5rem;
+  color: white;
+  background-color: rgb(4, 16, 30);
+  position: relative;
+  overflow-x: scroll;
+  z-index: 0;
+}
+
+.table {
+  width: 100%;
+  position: relative;
+  table-layout: auto;
+  border-collapse: separate;
+  border-spacing: 0 0.5rem;
+}
+
+.table-header--sortable {
+  &:hover {
+    background-color: rgb(12, 48, 90);
+    border-radius: 4px;
+    cursor: pointer;
+  }
+}
+
+.table-head-row {
+  height: 2rem;
+}
+
+.table-header-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table-row {
+  background-color: rgb(9, 36, 67);
+
+  &:hover {
+    background-color: #0c305a;
+    cursor: pointer;
+  }
+}
+
+.table-data {
+  padding: 0.5rem;
+}
+
+.table-data--centered {
+  text-align: center;
+}
+
+.table-data--nowrap {
+  white-space: nowrap;
+}
+
+.table-data-element {
+  width: 2rem;
+  height: 2rem;
+}
+
+.table-data-weapon-container-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.table-data-weapon-container-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.table-data-weapon-container-character {
+  width: calc(4.1875rem * 0.5);
+  height: calc(4.9375rem * 0.5);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.c-ability-container {
+  display: flex;
+  flex-direction: column;
+  max-height: 7em;
+  gap: 0.25rem;
+
+  & .c-ability-header {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  & .c-ability-separator {
+    width: 100%;
+    height: 2px;
+    background-color: rgb(46, 67, 92);
+  }
+
+  & .table-data-c-ability {
+    overflow-x: scroll;
+  }
+}
+
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 0.75rem;
+  padding: 0.75rem;
+}
+
+.weapon-grid-entry {
+  display: flex;
+  color: white;
+  width: 15rem;
+  gap: 0.5rem;
+
+  & .weapon-grid-entry-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  & .weapon-grid-image {
+    position: relative;
+    width: 4rem;
+    height: 4rem;
+    background-color: rgb(5, 41, 80);
+    border-style: solid;
+    border-color: rgb(21, 81, 151);
+    border-radius: 4px;
+    border-width: 0.125rem;
+    outline: rgb(21, 81, 151) solid calc(0.3rem / 2.5);
+    outline-width: 0.125rem;
+    outline-offset: calc(-0.125rem * 3);
+    padding: calc(0.125rem * 3);
+  
+    & img {
+      width: 4rem;
+      height: 4rem;
+    }
+  
+    & .weapon-grid-image-overboost-stars {
+      position: absolute;
+      white-space: nowrap;
+      display: flex;
+      justify-content: center;
+      bottom: -0.25rem;
+      right: 0;
+      left: 0;
+    }
+  }
+}
+
+.weapon-modal {
+  /* in-game modal: 2405x1283 */ /* header height 92px */
+  /* in-game info esquerra: 702x1134 */
+  /* in-game info dreta: 741x994 */
+  /* in-game footer: 2405x145 */
+  --modal-height: 44rem;  
+  padding: 0;
+  background-color: rgb(4, 16, 30);
+  overflow: none;
+
+  /* width: var(--app-max-width); */
+  max-width: calc(100vw - calc(2 * var(--app-padding)));
+  /* max-width: var(--app-max-width); */
+
+  & .weapon-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(0.07 * var(--modal-height));
+    color: white;
+    font-size: 1.5rem;
+    background-color: rgb(11, 64, 136);
+
+    & .weapon-modal-header-close-button {
+      position: absolute;
+      right: 0.5rem;
+      cursor: pointer;
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  & .weapon-modal-body {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    height: calc(0.82 * var(--modal-height));
+    padding: 1rem;
+    box-sizing: border-box;
+    color: white;
+
+    width: var(--app-max-width);
+    overflow-x: scroll;
+
+    & .weapon-modal-body-column-info,
+    & .weapon-modal-body-column-abilities {
+      background-color: rgb(5, 22, 41);
+      border: 3px solid rgb(25, 61, 98);
+      border-radius: 8px;
+      box-sizing: border-box;
+    }
+
+    & .weapon-modal-body-column-info {
+      display: flex;
+      flex-direction: column;
+      width: 30%;
+      height: 100%;
+      padding: 0.75rem;
+      gap: 2rem;
+
+      & .weapon-modal-body-column-info-header {
+        display: flex;
+        gap: 1rem;
+
+        & img {
+          clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+          height: 4rem;
+        }
+
+        & .weapon-modal-body-column-info-header-title {
+          display: flex;
+          flex-direction: column;
+          gap: 0.25rem;
+
+          & .weapon-modal-body-column-info-header-title-name {
+            font-size: 1.5rem;
+          }
+
+          & .weapon-modal-body-column-info-header-title-overboost {
+            flex-wrap: nowrap;
+          }
+
+          & .weapon-modal-body-column-info-header-title-level {
+            font-size: 1.25rem;
+          }
+        }
+      }
+
+      & .weapon-modal-body-column-info-stats {
+        color: rgb(149, 199, 255);
+        font-size: 1.5rem;
+
+        & hr {
+          width: 100%;
+          height: 0.2rem;
+          background-color: rgb(149, 199, 255);
+          border: none;
+          margin: 0.25rem 0 1rem 0;
+        }
+
+        & .weapon-modal-body-column-info-stats-row {
+          display: flex;
+          justify-content: space-between;
+          padding: 0.2rem 0.5rem;
+
+          & .weapon-modal-body-column-info-stats-row-title {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+
+            & img {
+              width: 1rem;
+              height: 1rem;
+            }
+          }
+
+          & .weapon-modal-body-column-info-stats-row-value {
+            color: white;
+          }
+        }
+      }
+    }
+
+    & .weapon-modal-body-column-middle {
+      display: flex;
+      flex-direction: column;
+      width: 35%;
+      height: 100%;
+
+      & .weapon-modal-body-column-middle-image {
+        flex-grow: 1;
+      }
+
+      & .weapon-modal-body-column-middle-controls {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        & .weapon-modal-body-column-middle-controls-previous,
+        & .weapon-modal-body-column-middle-controls-next {
+          width: 4rem;
+          height: 4rem;
+          border: 2px solid rgb(58, 82, 110);
+          border-radius: 8px;
+          outline: 2px solid rgb(58, 82, 110);
+          outline-offset: -7px;
+          background-color: rgb(14, 21, 27);
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          & svg {
+            width: 2.25rem;
+            height: 2.25rem;
+            fill: rgb(145, 165, 187);
+          }
+        }
+
+        & .weapon-modal-body-column-middle-controls-tier {
+          background-color: rgb(5, 22, 41);
+          border: 3px solid rgb(25, 61, 98);
+          border-radius: 8px;
+          box-sizing: border-box;
+          width: 15rem;
+          height: 3rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+    
+    & .weapon-modal-body-column-abilities {
+      display: flex;
+      flex-direction: column;
+      width: 35%;
+      height: 100%;
+      padding: 0.75rem;
+
+      & .weapon-modal-body-column-abilities-cability {
+        color: rgb(149, 199, 255);
+        font-size: 1.5rem;
+
+        & hr {
+          width: 100%;
+          height: 0.2rem;
+          background-color: rgb(149, 199, 255);
+          border: none;
+          margin: 0.25rem 0 1rem 0;
+        }
+
+        & .weapon-modal-body-column-abilities-cability-container {
+          border: 3px solid rgb(25, 61, 98);
+          border-radius: 8px;
+          box-sizing: border-box;
+          color: white;
+          padding: 0.75rem;
+
+          & .weapon-modal-body-column-abilities-cability-container-header {
+            display: flex;
+            gap: 0.5rem;
+            position: relative;
+
+            & .weapon-modal-body-column-abilities-cability-container-header-icons {
+              display: flex;
+
+              & img {
+                background-color: rgb(5, 40, 84);
+                border: 4px solid rgb(63, 117, 173);
+              }
+
+              & .weapon-modal-body-column-abilities-cability-container-header-icons-cability {
+                width: 3rem;
+                height: 3rem;
+              }
+
+              & .weapon-modal-body-column-abilities-cability-container-header-icons-element,
+              & .weapon-modal-body-column-abilities-cability-container-header-icons-sigil {
+                width: 1.5rem;
+                height: 1.5rem;
+              }
+            }
+
+            & .weapon-modal-body-column-abilities-cability-container-header-atb {
+              position: absolute;
+              bottom: 0;
+              right: 0;
+            }
+          }
+
+          & hr {
+            background-color: rgb(46, 67, 92);
+            margin: 0.3rem 0;
+          }
+
+          & .weapon-modal-body-column-abilities-cability-container-description {
+            font-size: 1.15rem;
+            white-space: pre-line;
+          }
+        }
+      }
+    }
+  }
+}

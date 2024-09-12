@@ -1,0 +1,28 @@
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10rem 0;
+
+  & img {
+    width: 15rem;
+    height: 15rem;
+  }
+
+  & .title-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    & .title {
+      font-size: 3rem;
+    }
+
+    & svg {
+      aspect-ratio: 83 / 16;
+      width: auto;
+      height: 4rem;
+      transform: translateX(-2.25rem);
+    }
+  }
+}
