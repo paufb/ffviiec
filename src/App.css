@@ -1,7 +1,7 @@
 :root {
   --app-max-width: 82rem;
   --app-padding: 1rem;
-  --navbar-header-height: 4rem;
+  --app-bar-height: 4rem;
   --sidebar-width: 23rem;
 }
 

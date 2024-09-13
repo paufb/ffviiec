@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useRoutes } from 'react-router-dom';
+import { AppBar } from './components/AppBar.tsx';
 import { Home } from './pages/HomePage.tsx';
 import { WeaponsPage } from './pages/WeaponsPage.tsx';
 import './App.css';
@@ -26,6 +27,7 @@ function App() {
 
   return (
     <>
+      <AppBar isViewportNarrow={isViewportNarrow} />
       {routes}
     </>
   );

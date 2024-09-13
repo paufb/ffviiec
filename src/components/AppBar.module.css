@@ -1,0 +1,66 @@
+.app-bar {
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  width: 100vw;
+  height: var(--app-bar-height);
+  display: flex;
+  justify-content: center;
+  background-color: lightgray;
+  padding: 0 var(--app-padding);
+  box-sizing: border-box;
+
+  & .centered-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: var(--app-max-width);
+
+    & .logo-nav {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      & .buster-sword-logo {
+        width: auto;
+        height: 3rem;
+      }
+
+      & nav {
+
+        & ul {
+          display: flex;
+          gap: 1rem;
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+  
+          & li {
+            display: inline-block;
+
+            & a {
+              text-decoration: none;
+              color: black;
+              padding: 0.5rem 1rem;
+              border-radius: 50px;
+
+              &:hover {
+                background-color: #b3b3b3;
+              }
+
+              &.active {
+                color: white;
+                background-color: #4169e1;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    & .github-logo {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+}
