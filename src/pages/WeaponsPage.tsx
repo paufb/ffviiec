@@ -268,14 +268,6 @@ export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean })
         {layout === "table" && (
           <div className={styles["table-container"]}>
             <table className={styles["table"]}>
-              <colgroup>
-                <col style={{ width: "calc(100% / 6)" }} />
-                <col style={{ width: "calc(100% / 12)" }} />
-                <col style={{ width: "calc(100% / 12)" }} />
-                <col style={{ width: "calc(100% / 12)" }} />
-                <col style={{ width: "calc(100% / 12)" }} />
-                <col style={{ width: "calc(100% / 2)" }} />
-              </colgroup>
               <thead>
                 <tr className={styles["table-head-row"]}>
                   <th onClick={() => handleOnClickColumnSorting("weapon")} className={styles["table-header--sortable"]}>
@@ -283,24 +275,22 @@ export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean })
                       Weapon {renderColumnSortIcon("weapon")}
                     </div>
                   </th>
-                  <th>
-                    <div className={styles["table-header-cell"]}>
-                      Element
-                    </div>
-                  </th>
                   <th onClick={() => handleOnClickColumnSorting("pAtk")} className={styles["table-header--sortable"]}>
-                    <div className={styles["table-header-cell"]}>
-                      PATK {renderColumnSortIcon("pAtk")}
+                    <div className={`${styles["table-header-cell"]} ${styles['table-header-cell-patk']}`}>
+                      <img src={new URL('../assets/stats/PATK.webp', import.meta.url).href} />
+                      {renderColumnSortIcon("pAtk")}
                     </div>
                   </th>
                   <th onClick={() => handleOnClickColumnSorting("mAtk")} className={styles["table-header--sortable"]}>
-                    <div className={styles["table-header-cell"]}>
-                      MATK {renderColumnSortIcon("mAtk")}
+                    <div className={`${styles["table-header-cell"]} ${styles['table-header-cell-matk']}`}>
+                      <img src={new URL('../assets/stats/MATK.webp', import.meta.url).href} />
+                      {renderColumnSortIcon("mAtk")}
                     </div>
                   </th>
                   <th onClick={() => handleOnClickColumnSorting("heal")} className={styles["table-header--sortable"]}>
-                    <div className={styles["table-header-cell"]}>
-                      HEAL {renderColumnSortIcon("heal")}
+                    <div className={`${styles["table-header-cell"]} ${styles['table-header-cell-heal']}`}>
+                      <img src={new URL('../assets/stats/HEAL.webp', import.meta.url).href} />
+                      {renderColumnSortIcon("heal")}
                     </div>
                   </th>
                   <th onClick={() => handleOnClickColumnSorting("atbCost")} className={styles["table-header--sortable"]}>
@@ -329,15 +319,13 @@ export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean })
                           <div>
                             <OverboostStars level={selectedOverboostLevel} />
                           </div>
+                          <div className={styles['table-data-weapon-container-icons']}>
+                            <img src="" alt="" />
+                            <img src={new URL(`../assets/elements/${weapon.element}.webp`, import.meta.url).href} alt="" />
+                            <img src="" alt="" />
+                          </div>
                         </div>
                       </div>
-                    </td>
-                    <td className={`${styles["table-data"]}} ${styles["table-data--centered"]}`}>
-                      <img src={new URL(`../assets/elements/${weapon.element}.webp`, import.meta.url).href}
-                        className={styles["table-data-element"]}
-                        title={String(weapon.element)}
-                        alt=""
-                      />
                     </td>
                     <td className={`${styles["table-data"]} ${styles["table-data--centered"]}`}>
                       {getWeaponPAtk(weapon, selectedOverboostLevel)}
