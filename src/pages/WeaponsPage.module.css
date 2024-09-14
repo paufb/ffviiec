@@ -542,6 +542,10 @@
           justify-content: space-between;
           padding: 0.2rem 0.5rem;
 
+          &:nth-child(even) {
+            background-color: rgb(5, 31, 63);
+          }
+
           & .weapon-modal-body-column-info-stats-row-title {
             display: flex;
             align-items: center;
