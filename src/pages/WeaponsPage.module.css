@@ -3,7 +3,7 @@
   flex-direction: column;
   gap: 3rem;
   margin: 8rem auto 3rem auto;
-  width: calc(100% - calc(2 * var(--app-padding)));
+  padding: 0 var(--app-padding);
   max-width: var(--app-max-width);
 }
 
@@ -419,18 +419,10 @@
 }
 
 .weapon-modal {
-  /* in-game modal: 2405x1283 */ /* header height 92px */
-  /* in-game info esquerra: 702x1134 */
-  /* in-game info dreta: 741x994 */
-  /* in-game footer: 2405x145 */
   --modal-height: 44rem;  
   padding: 0;
   background-color: rgb(4, 16, 30);
   overflow: none;
-
-  /* width: var(--app-max-width); */
-  max-width: calc(100vw - calc(2 * var(--app-padding)));
-  /* max-width: var(--app-max-width); */
 
   & .weapon-modal-header {
     display: flex;
@@ -458,7 +450,6 @@
     padding: 1rem;
     box-sizing: border-box;
     color: white;
-
     width: var(--app-max-width);
     overflow-x: scroll;
 
