@@ -28,6 +28,7 @@ function App() {
   return (
     <>
       <AppBar isViewportNarrow={isViewportNarrow} />
+      <div className="background" />
       {routes}
     </>
   );
