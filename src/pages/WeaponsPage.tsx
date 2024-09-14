@@ -371,7 +371,7 @@ export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean })
           {layout === "grid" && (
             <div className={styles["grid-container"]}>
               {Object.entries(filteredWeapons).map(([weaponName, weapon]) => (
-                <div key={weaponName} className={styles["weapon-grid-entry"]}>
+                <div key={weaponName} className={styles["weapon-grid-entry"]} onClick={() => openWeaponModal(weaponName)}>
                   <div className={styles["weapon-grid-image"]}>
                     <img src={""} title={weaponName} alt="" />
                     <div className={styles["weapon-grid-image-overboost-stars"]}>

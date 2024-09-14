@@ -379,6 +379,18 @@
   width: 15rem;
   gap: 0.5rem;
 
+  &:hover {
+    background-color: #0c305a;
+    border-radius: 8px;
+    cursor: pointer;
+
+    & .weapon-grid-image {
+      background-color: #08325e;
+      border-color: #2164ab;
+      outline-color: #2164ab;
+    }
+  }
+
   & .weapon-grid-entry-column {
     display: flex;
     flex-direction: column;
