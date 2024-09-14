@@ -32,7 +32,7 @@ export function AppBar({ isViewportNarrow }: AppBarProps) {
             </ul>
           </nav>
         </div>
-        {!isViewportNarrow && <Link className={styles['github-anchor']} to="https://github.com/PauFB/ffviiec-companion" target="_blank" rel="noreferrer">
+        {!isViewportNarrow && <Link className={styles['github-anchor']} to="https://github.com/PauFB/ffviiec" target="_blank" rel="noreferrer">
           <img src={GitHubIcon} />
         </Link>}
       </div>
