@@ -6,9 +6,11 @@
   height: var(--app-bar-height);
   display: flex;
   justify-content: center;
-  background-color: lightgray;
+  background-color: rgba(35, 35, 35, 0.5);
+  backdrop-filter: blur(10px);
   padding: 0 var(--app-padding);
   box-sizing: border-box;
+  box-shadow: 0 0 10px 0 #4d4d4d;
 
   & .centered-container {
     display: flex;
@@ -24,6 +26,7 @@
       & .buster-sword-logo {
         width: auto;
         height: 3rem;
+        filter: drop-shadow(0 0 6px white);
       }
 
       & nav {
@@ -40,16 +43,16 @@
 
             & a {
               text-decoration: none;
-              color: black;
+              color: white;
               padding: 0.5rem 1rem;
               border-radius: 50px;
+              font-weight: bold;
 
               &:hover {
-                background-color: #b3b3b3;
+                background-color: #404040;
               }
 
               &.active {
-                color: white;
                 background-color: #4169e1;
               }
             }
@@ -58,9 +61,10 @@
       }
     }
 
-    & .github-logo {
+    & .github-anchor {
       width: 2rem;
       height: 2rem;
+      filter: drop-shadow(0 0 8px white);
     }
   }
 }
