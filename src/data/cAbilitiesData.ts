@@ -78,7 +78,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
     atbCost: 5,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}\nNo boosts to limit and summon gauges when using this ability.`,
     valuesByOverboost: {
-      damage: ["850", "", "", "", "", "", "1,320", "1,320", "1,320", "1,320", "1,600"]
+      damage: ["850", "1,020", "1,020", "1,020", "1,020", "1,020", "1,320", "1,320", "1,320", "1,320", "1,600"]
     }
   },
   "Bloody End": {
@@ -172,6 +172,16 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
     description: `${damage("Phys. Fire", "Single Enemy", null)}`,
     valuesByOverboost: {
       damage: ["320", "", "", "", "", "", "430", "430", "430", "430", "450"]
+    }
+  },
+  "Fierce Claw": {
+    atbCost: 4,
+    description: `${damage('Phys. Non-elem.', 'All Enemies', 10)}\nAlso, [Condition: First use] ${apply('Haste', 'Self', null, undefined, undefined)}\nWhen [Rng.: Self]'s HP is 50% or more, ${additionalDamage('Non-elem.', 'Phys.', 'All Enemies')}`,
+    valuesByOverboost: {
+      damage: ['430', '520', '520', '520', '520', '520', '670', '670', '670', '670', '800'],
+      hasteDur: ['20', '20', '20', '20', '20', '20', '25', '25', '25', '25', '30'],
+      hasteExt: ['6', '6', '6', '6', '6', '6', '8', '8', '8', '8', '10'],
+      additionalDamage: ['10000', '20000', '20000', '20000', '20000', '20000', '30000', '30000', '30000', '30000', '40000']
     }
   },
   "Blitz Beat": {
@@ -1037,6 +1047,16 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
     description: `${damage("Mag. Ice", "All Enemies", null)}`,
     valuesByOverboost: {
       damage: ["210", "", "", "", "", "", "280", "280", "280", "280", "290"]
+    }
+  },
+  "Razor Wings": {
+    atbCost: 4,
+    description: `${damage('Phys. Non-elem.', 'Single Enemy', 10)}\nAlso, ${increase('MDEF', 'Mid', 'All Allies', null, undefined, undefined, undefined)}\nWhen Debuff is granted to Target, x1.3 damage.`,
+    valuesByOverboost: {
+      damage: ['540', '650', '650', '650', '650', '650', '950', '950', '950', '950', '1,080'],
+      mDefIncreaseDur: ['15', '20', '20', '20', '20', '20', '20', '20', '20', '20', '25'],
+      mDefIncreaseExt: ['5', '7', '7', '7', '7', '7', '7', '7', '7', '7', '8'],
+      mDefIncreaseMaxPot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High']
     }
   },
   "Sonic Meow": {
@@ -2167,6 +2187,7 @@ type Potency = 'Low' | 'Mid' | 'High' | undefined;
 type Rate = number | undefined | null;
 type Duration = number | undefined;
 type Extension = number | undefined;
+type AdditionalDamageType = 'Phys.' | 'Mag.';
 
 function getAttributeKey(attribute: Attribute) {
   const attributeMap: { [K in Attribute]: string } = {
@@ -2259,4 +2280,8 @@ function increaseLimitGauge(potency: Potency, range: Range) {
 function increaseCommandGauge(potency: number) {
   const pot = potency ? potency : '{{commandGaugeIncreasePot}}';
   return `Increases Command Gauge [Pot.: ${pot}%]`;
+}
+
+function additionalDamage(element: Element, type: AdditionalDamageType, range: Range) {
+  return `deals {{additionalDamage}} additional ${element} ${type} pot. damage [Rng.: ${range}].`;
 }

@@ -221,6 +221,16 @@ export const weaponsData: { [key: string]: Weapon } = {
       heal: 165
     }
   },
+  "Bahamut Greatsword": {
+    character: "Cloud",
+    element: "Non-elemental",
+    cAbility: "Fierce Claw",
+    fiveStarLevel120: {
+      pAtk: 291,
+      mAtk: 218,
+      heal: 150
+    }
+  },
   "Gatling Gun": {
     character: "Barret",
     element: "Non-elemental",
@@ -1189,6 +1199,16 @@ export const weaponsData: { [key: string]: Weapon } = {
       pAtk: 205,
       mAtk: 225,
       heal: 164
+    }
+  },
+  "Bahamut Cutter": {
+    character: "Yuffie",
+    element: "Non-elemental",
+    cAbility: "Razor Wings",
+    fiveStarLevel120: {
+      pAtk: 289,
+      mAtk: 191,
+      heal: 174
     }
   },
   "Yellow Megaphone": {
