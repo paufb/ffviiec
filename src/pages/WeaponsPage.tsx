@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { ATBBarCost } from '../components/ATBBarCost.tsx';
+import { ElementIcon } from '../components/ElementIcon.tsx';
 import { OverboostStars } from '../components/OverboostStars.tsx';
+import { SigilIcon } from '../components/SigilIcon.tsx';
 import { WeaponModal } from '../components/WeaponModal.tsx';
 import { Characters, CommandAbilities, Elements, Weapon, Weapons } from '../types.ts';
 import styles from './WeaponsPage.module.css';
@@ -321,8 +323,8 @@ export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean })
                           </div>
                           <div className={styles['table-data-weapon-container-icons']}>
                             <img src="" alt="" />
-                            <img src={new URL(`../assets/elements/${weapon.element}.webp`, import.meta.url).href} alt="" />
-                            <img src="" alt="" />
+                            <ElementIcon element={weapon.element} />
+                            <SigilIcon sigil={cAbilities[weapon.cAbility].sigil} />
                           </div>
                         </div>
                       </div>

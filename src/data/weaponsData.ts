@@ -1,6 +1,6 @@
-import { Weapon } from '../types.ts';
+import { Weapons } from '../types.ts';
 
-export const weaponsData: { [key: string]: Weapon } = {
+export const weaponsData: Weapons = {
   "Buster Sword": {
     character: "Cloud",
     element: "Non-elemental",

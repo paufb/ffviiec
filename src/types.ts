@@ -1,5 +1,8 @@
+export type SigilType = 'circle' | 'triangle' | 'cross' | 'rhombus' | 'square' | null;
+
 export interface CommandAbility {
   atbCost: number;
+  sigil: SigilType;
   description: string;
   valuesByOverboost: { [key: string]: [string, string, string, string, string, string, string, string, string, string, string] };
 }

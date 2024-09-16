@@ -6,8 +6,10 @@ import MDEFIcon from '../assets/stats/MDEF.webp';
 import HEALIcon from '../assets/stats/HEAL.webp';
 import { CommandAbility, Character, Weapon, Weapons } from '../types.ts';
 import { useEffect, useState } from 'react';
-import { ATBBarCost } from './ATBBarCost';
-import { OverboostStars } from './OverboostStars';
+import { ATBBarCost } from './ATBBarCost.tsx';
+import { ElementIcon } from './ElementIcon.tsx';
+import { OverboostStars } from './OverboostStars.tsx';
+import { SigilIcon } from './SigilIcon.tsx';
 import styles from '../pages/WeaponsPage.module.css';
 
 interface WeaponModalProps {
@@ -165,8 +167,8 @@ export function WeaponModal({ weaponName, weapon, character, cAbility, selectedO
               <div className={styles['weapon-modal-body-column-abilities-cability-container-header']}>
                 <div className={styles['weapon-modal-body-column-abilities-cability-container-header-icons']}>
                   <img src="" alt="" className={styles['weapon-modal-body-column-abilities-cability-container-header-icons-cability']} />
-                  <img src={new URL(`../assets/elements/${weapon.element}.webp`, import.meta.url).href} alt="" className={styles['weapon-modal-body-column-abilities-cability-container-header-icons-element']} />
-                  <img src="" alt="" className={styles['weapon-modal-body-column-abilities-cability-container-header-icons-sigil']} />
+                  <ElementIcon element={weapon.element} className={styles['weapon-modal-body-column-abilities-cability-container-header-icons-element']} />
+                  <SigilIcon sigil={cAbility.sigil} className={styles['weapon-modal-body-column-abilities-cability-container-header-icons-sigil']} />
                 </div>
                 {weapon.cAbility}
                 <div className={styles['weapon-modal-body-column-abilities-cability-container-header-atb']}>

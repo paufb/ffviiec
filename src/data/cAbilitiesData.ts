@@ -3,6 +3,7 @@ import { CommandAbility } from '../types.ts';
 export const cAbilitiesData: { [key: string]: CommandAbility } = {
   "Braver": {
     atbCost: 4,
+    sigil: 'cross',
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}\nAlso, when matching sigils are destroyed, x1.5 damage.`,
     valuesByOverboost: {
       damage: ["400", "", "", "", "", "", "620", "620", "620", "620", "750"]
@@ -10,6 +11,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Blast Wave": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "All Enemies", 10)}\nAlso, ${decrease("PATK", undefined, "All Enemies", null, undefined, undefined, "Mid")}`,
     valuesByOverboost: {
       damage: ["220", "250", "250", "250", "250", "250", "310", "310", "310", "310", "350"],
@@ -20,6 +22,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Armor Break": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}\nAlso, ${decrease("PDEF", undefined, "Single Enemy", null, undefined, undefined, "High")}`,
     valuesByOverboost: {
       damage: ["320", "", "", "", "", "", "450", "450", "450", "450", "510"],
@@ -30,6 +33,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Blade Burst": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Non-elem.", "Single Enemy", 10)}`,
     valuesByOverboost: {
       damage: ["500", "600", "600", "600", "600", "600", "780", "780", "780", "780", "940"]
@@ -37,6 +41,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Stalwart Barrier": {
     atbCost: 4,
+    sigil: null,
     description: `${increase("PDEF", undefined, "Single Ally", null, undefined, undefined, "High")}\nAlso, ${heal("Mag.", "Single Ally")}`,
     valuesByOverboost: {
       pDefIncreasePot: ["Mid", "Mid", "Mid", "Mid", "Mid", "Mid", "High", "High", "High", "High", "High"],
@@ -47,6 +52,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Thunderstrike": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Lightning", "Single Enemy", null)}`,
     valuesByOverboost: {
       damage: ["400", "480", "480", "480", "480", "480", "620", "620", "620", "620", "750"]
@@ -54,6 +60,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Shock Slice": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}\nAlso, ${apply("Ailment: Stun", "Single Enemy", undefined, 5, 2)}`,
     valuesByOverboost: {
       damage: ["400", "", "", "", "", "", "620", "620", "620", "620", "750"],
@@ -62,6 +69,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Healing Wave": {
     atbCost: 5,
+    sigil: null,
     description: `${heal("Mag.", "All Allies")}`,
     valuesByOverboost: {
       heal: ["50", "60", "60", "60", "60", "60", "65", "65", "65", "65", "71"]
@@ -69,6 +77,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Blizzaga A (1)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Ice", "All Enemies", null)}`,
     valuesByOverboost: {
       damage: ["280", "340", "340", "340", "340", "340", "440", "440", "440", "440", "520"]
@@ -76,6 +85,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Disorder": {
     atbCost: 5,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}\nNo boosts to limit and summon gauges when using this ability.`,
     valuesByOverboost: {
       damage: ["850", "1,020", "1,020", "1,020", "1,020", "1,020", "1,320", "1,320", "1,320", "1,320", "1,600"]
@@ -83,6 +93,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Bloody End": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}`,
     valuesByOverboost: {
       damage: ["500", "600", "600", "600", "600", "600", "780", "780", "780", "780", "940"]
@@ -90,6 +101,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Seasplitter": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Water", "Single Enemy", null)}`,
     valuesByOverboost: {
       damage: ["400", "480", "480", "480", "480", "480", "620", "620", "620", "620", "750"]
@@ -97,6 +109,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Blizzara Surge (1)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Ice", "Single Enemy", null)}`,
     valuesByOverboost: {
       damage: ["320", "", "", "", "", "", "430", "430", "430", "430", "450"]
@@ -104,6 +117,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Sanctuary": {
     atbCost: 4,
+    sigil: null,
     description: `${increase("MDEF", undefined, "All Allies", null, undefined, undefined, "High")}\nAlso, ${heal("Mag.", "All Allies")}`,
     valuesByOverboost: {
       mDefIncreasePot: ["Mid", "Mid", "Mid", "Mid", "Mid", "Mid", "High", "High", "High", "High", "High"],
@@ -114,6 +128,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Blazing Strike": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Fire", "Single Enemy", null)}`,
     valuesByOverboost: {
       damage: ["480", "580", "580", "580", "580", "580", "710", "710", "710", "710", "850"]
@@ -121,6 +136,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Free Energy": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}`,
     valuesByOverboost: {
       damage: ["650", "", "", "", "", "", "1,140", "1,140", "1,140", "1,140", "1,300"]
@@ -128,6 +144,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Quakera Surge A (1)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Earth", "All Enemies", null)}`,
     valuesByOverboost: {
       damage: ["210", "", "", "", "", "", "280", "280", "280", "280", "290"]
@@ -135,6 +152,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Freezing Stream": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Ice", "Single Enemy", null)}`,
     valuesByOverboost: {
       damage: ["500", "600", "600", "600", "600", "600", "740", "740", "740", "740", "900"]
@@ -142,6 +160,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Fira Surge A (1)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Fire", "All Enemies", null)}`,
     valuesByOverboost: {
       damage: ["210", "240", "240", "240", "240", "240", "280", "280", "280", "280", "290"]
@@ -149,6 +168,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Fierce Charged Slash": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}\nAlso, ${decrease("PDEF", "Mid", "Single Enemy", null, undefined, undefined, "Mid")}\nWhen [Rng.: Self]'s HP is 50% or more, ${increase("PATK", undefined, "Self", null, undefined, undefined, undefined)}`,
     valuesByOverboost: {
       damage: ["530", "", "", "", "", "", "740", "740", "740", "740", "850"],
@@ -162,6 +182,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Blizzara Surge A (1)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Ice", "All Enemies", null)}`,
     valuesByOverboost: {
       damage: ["210", "", "", "", "", "", "280", "280", "280", "280", "290"]
@@ -169,6 +190,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Fira Impact (1)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Fire", "Single Enemy", null)}`,
     valuesByOverboost: {
       damage: ["320", "", "", "", "", "", "430", "430", "430", "430", "450"]
@@ -176,6 +198,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Fierce Claw": {
     atbCost: 4,
+    sigil: null,
     description: `${damage('Phys. Non-elem.', 'All Enemies', 10)}\nAlso, [Condition: First use] ${apply('Haste', 'Self', null, undefined, undefined)}\nWhen [Rng.: Self]'s HP is 50% or more, ${additionalDamage('Non-elem.', 'Phys.', 'All Enemies')}`,
     valuesByOverboost: {
       damage: ['430', '520', '520', '520', '520', '520', '670', '670', '670', '670', '800'],
@@ -186,6 +209,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Blitz Beat": {
     atbCost: 4,
+    sigil: 'cross',
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}`,
     valuesByOverboost: {
       damage: ["400", "", "", "", "", "", "620", "620", "620", "620", "750"]
@@ -193,6 +217,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Agitation": {
     atbCost: 4,
+    sigil: null,
     description: `${increase("PDEF", undefined, "All Allies", null, undefined, undefined, "High")}\nAlso, ${heal("Phys.", "All Allies")}`,
     valuesByOverboost: {
       pDefIncreasePot: ["Mid", "", "", "", "", "", "High", "High", "High", "High", "High"],
@@ -203,6 +228,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Stalwart Manaward (1)": {
     atbCost: 4,
+    sigil: null,
     description: `${increase("MDEF", undefined, "Single Ally", null, undefined, undefined, "High")}\nAlso, ${heal("Mag.", "Single Ally")}`,
     valuesByOverboost: {
       mDefIncreasePot: ["Mid", "Mid", "Mid", "Mid", "Mid", "Mid", "High", "High", "High", "High", "High"],
@@ -213,6 +239,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Stalwart Faith (1)": {
     atbCost: 4,
+    sigil: null,
     description: `${increase("MATK", undefined, "Single Ally", null, undefined, undefined, "High")}\nAlso, ${regen("Single Ally", undefined, 3)}\n${heal("Mag.", "Single Ally")}`,
     valuesByOverboost: {
       mAtkIncreasePot: ["Mid", "Mid", "Mid", "Mid", "Mid", "Mid", "High", "High", "High", "High", "High"],
@@ -224,6 +251,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Quick Burst": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}\nAlso, ${decrease("PDEF", undefined, "Single Enemy", null, undefined, undefined, "High")}`,
     valuesByOverboost: {
       damage: ["320", "370", "370", "370", "370", "370", "450", "450", "450", "450", "510"],
@@ -234,6 +262,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Doom Impact": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}\nAlso, ${decrease("MATK", undefined, "Single Enemy", null, undefined, undefined, "High")}`,
     valuesByOverboost: {
       damage: ["320", "370", "370", "370", "370", "370", "450", "450", "450", "450", "510"],
@@ -244,6 +273,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Chain Bomber": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "All Enemies", 10)}`,
     valuesByOverboost: {
       damage: ["350", "420", "420", "420", "420", "420", "550", "550", "550", "550", "650"]
@@ -251,6 +281,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Energy Laser": {
     atbCost: 4,
+    sigil: 'rhombus',
     description: `${damage("Mag. Non-elem.", "Single Enemy", 10)}`,
     valuesByOverboost: {
       damage: ["400", "480", "480", "480", "480", "480", "620", "620", "620", "620", "750"]
@@ -258,6 +289,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Firaga A (1)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Fire", "All Enemies", null)}`,
     valuesByOverboost: {
       damage: ["280", "340", "340", "340", "340", "340", "440", "440", "440", "440", "520"]
@@ -265,6 +297,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Pyroball": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}`,
     valuesByOverboost: {
       damage: ["500", "600", "600", "600", "600", "600", "780", "780", "780", "780", "940"]
@@ -272,6 +305,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Solid Barrier (1)": {
     atbCost: 4,
+    sigil: null,
     description: `${increase("PDEF", "Mid", "Single Ally", null, undefined, undefined, undefined)}\nAlso, ${heal("Mag.", "Single Ally")}`,
     valuesByOverboost: {
       pDefIncreaseDur: ["30", "", "", "", "", "", "34", "34", "34", "34", "38"],
@@ -282,6 +316,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Jet Fists": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)} The lower your HP, the higher the ability pot. (max: x3).`,
     valuesByOverboost: {
       damage: ["270", "", "", "", "", "", "420", "420", "420", "420", "500"]
@@ -289,6 +324,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Blizzara Surge (2)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Ice", "Single Enemy", null)}`,
     valuesByOverboost: {
       damage: ["320", "", "", "", "", "", "430", "430", "430", "430", "450"]
@@ -296,6 +332,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Manara Breach Surge (1)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Non-elem.", "Single Enemy", 10)}\nAlso, ${decrease("MDEF", "Low", "Single Enemy", null, undefined, undefined, "Mid")}`,
     valuesByOverboost: {
       damage: ["260", "", "", "", "", "", "350", "350", "350", "350", "360"],
@@ -305,6 +342,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Watera Surge A (1)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Water", "All Enemies", null)}`,
     valuesByOverboost: {
       damage: ["210", "", "", "", "", "", "280", "280", "280", "280", "290"]
@@ -312,6 +350,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Energization": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Lightning", "All Enemies", null)}\nAlso, ${decrease("PATK", "Mid", "All Enemies", null, undefined, undefined, undefined)}\nWhen [Rng.: Self]'s HP is 50% or more, ${decrease("MATK", "Mid", "All Enemies", null, undefined, undefined, "Mid")}`,
     valuesByOverboost: {
       damage: ["340", "", "", "", "", "", "480", "480", "480", "480", "540"],
@@ -324,6 +363,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Watera Surge (1)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Water", "Single Enemy", null)}`,
     valuesByOverboost: {
       damage: ["320", "370", "370", "370", "370", "370", "430", "430", "430", "430", "450"]
@@ -331,6 +371,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Dorsal Fin Shot": {
     atbCost: 3,
+    sigil: 'rhombus',
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}\nAlso, ${decrease("Fire Resist.", undefined, "Single Enemy", null, undefined, undefined, "High")}\nWhen [Rng.: Self]'s HP is 50% or more, ${decrease("Water Resist.", undefined, "Single Enemy", null, undefined, undefined, "High")}`,
     valuesByOverboost: {
       damage: ["260", "", "", "", "", "", "360", "360", "360", "360", "420"],
@@ -344,6 +385,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Omnistrike": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}\nAlso, ${decrease("PATK", undefined, "Single Enemy", null, undefined, undefined, "High")}`,
     valuesByOverboost: {
       damage: ["340", "390", "390", "390", "390", "390", "480", "480", "480", "480", "540"],
@@ -354,6 +396,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Vigor": {
     atbCost: 5,
+    sigil: null,
     description: `${heal("Phys.", "Self")}\nAlso, ${remove("Ailment: Poison, Ailment: Silence", "Self")}`,
     valuesByOverboost: {
       heal: ["93", "112", "112", "112", "112", "112", "121", "121", "121", "121", "130"]
@@ -361,6 +404,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Divekick": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}`,
     valuesByOverboost: {
       damage: ["530", "640", "640", "640", "640", "640", "830", "830", "830", "830", "990"]
@@ -368,6 +412,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Uppershot": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}\nAlso, ${decrease("MATK", undefined, "Single Enemy", null, undefined, undefined, "High")}`,
     valuesByOverboost: {
       damage: ["340", "390", "390", "390", "390", "390", "480", "480", "480", "480", "540"],
@@ -378,6 +423,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Thundaga A (1)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Lightning", "All Enemies", null)}`,
     valuesByOverboost: {
       damage: ["280", "320", "320", "320", "320", "320", "420", "420", "420", "420", "500"]
@@ -385,6 +431,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Sonic Spiral": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Wind", "Single Enemy", null)}`,
     valuesByOverboost: {
       damage: ["420", "500", "500", "500", "500", "500", "660", "660", "660", "660", "790"]
@@ -392,6 +439,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Chi Trap": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Non-elem.", "Single Enemy", 10)}\nAlso, ${decrease("MDEF", undefined, "Single Enemy", null, undefined, undefined, "High")}`,
     valuesByOverboost: {
       damage: ["300", "350", "350", "350", "350", "350", "420", "420", "420", "420", "480"],
@@ -402,6 +450,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Wall of Will": {
     atbCost: 4,
+    sigil: null,
     description: `${increase("PDEF", undefined, "Self", null, undefined, undefined, "High")}\nAlso, ${increase("PATK", undefined, "Self", null, undefined, undefined, "High")}\n${heal("Mag.", "Self")}`,
     valuesByOverboost: {
       pDefIncreasePot: ["Mid", "", "", "", "", "", "High", "High", "High", "High", "High"],
@@ -415,6 +464,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Savage Blast": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Non-elem.", "Single Enemy", 10)}`,
     valuesByOverboost: {
       damage: ["480", "580", "580", "580", "580", "580", "750", "750", "750", "750", "900"]
@@ -422,6 +472,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Healing Waves": {
     atbCost: 4,
+    sigil: null,
     description: `${heal("Mag.", "All Allies")}`,
     valuesByOverboost: {
       heal: ["38", "46", "46", "46", "46", "46", "49", "49", "49", "49", "54"]
@@ -429,6 +480,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Featherstrike": {
     atbCost: 3,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}\nAlso, ${decrease("MDEF", "Mid", "Single Enemy", null, undefined, undefined, "Mid")}\nWhen [Rng: Self]'s HP is 50% or more, ${increase("Water Damage", undefined, "Self", null, undefined, undefined, undefined)}`,
     valuesByOverboost: {
       damage: ["260", "300", "300", "300", "300", "300", "360", "360", "360", "360", "420"],
@@ -442,6 +494,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Ruinra Surge (1)": {
     atbCost: 4,
+    sigil: 'rhombus',
     description: `${damage("Mag. Non-elem.", "Single Enemy", 10)}`,
     valuesByOverboost: {
       damage: ["320", "", "", "", "", "", "430", "430", "430", "430", "450"]
@@ -449,6 +502,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Freezing Blow": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Ice", "Single Enemy", null)}`,
     valuesByOverboost: {
       damage: ["440", "530", "530", "530", "530", "530", "660", "660", "660", "660", "800"]
@@ -456,6 +510,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "No Mercy": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}\nAlso, ${increase("PATK", undefined, "Self", null, undefined, undefined, undefined)}\nWhen [Rng.: Self]'s HP is 50% or more, ${decrease("MATK", "Mid", "Single Enemy", null, undefined, undefined, undefined)}`,
     valuesByOverboost: {
       damage: ["360", "", "", "", "", "", "630", "630", "630", "630", "720"],
@@ -470,6 +525,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Aqua Splash": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Water", "Single Enemy", null)}\nAlso, when [Rng.: Self]'s HP is 50% or more, ${increase("MATK", "Low", "Self", null, undefined, undefined, undefined)}`,
     valuesByOverboost: {
       damage: ["480", "580", "580", "580", "580", "580", "710", "710", "710", "710", "850"],
@@ -480,6 +536,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Solid Bravery (1)": {
     atbCost: 4,
+    sigil: null,
     description: `${increase("PATK", "Low", "Single Ally", null, undefined, undefined, "Mid")}\nAlso, ${regen("Single Ally", undefined, 3)}\n${heal("Mag.", "Single Ally")}`,
     valuesByOverboost: {
       pAtkIncreaseDur: ["34", "", "", "", "", "", "40", "40", "40", "40", "44"],
@@ -490,6 +547,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Armora Breach Surge (1)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Non-elem.", "Single Enemy", 10)}\nAlso, ${decrease("PDEF", "Low", "Single Enemy", null, undefined, undefined, "Mid")}`,
     valuesByOverboost: {
       damage: ["260", "", "", "", "", "", "350", "350", "350", "350", "360"],
@@ -499,6 +557,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Zangan Fist": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}`,
     valuesByOverboost: {
       damage: ["650", "780", "780", "780", "780", "780", "1,140", "1,140", "1,140", "1,140", "1,300"]
@@ -506,6 +565,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Spiral Levin Strike": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Lightning", "Single Enemy", null)}\nAlso, when [Rng.: Self]'s HP is 50% or more, ${increase("MATK", undefined, "Self", null, undefined, undefined, "Mid")}`,
     valuesByOverboost: {
       damage: ["520", "", "", "", "", "", "780", "780", "780", "780", "940"],
@@ -516,6 +576,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Spinning Fervor": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Fire", "Single Enemy", null)}\nAlso, when [Rng.: Self]'s HP is 70% or more, x1.2 damage.`,
     valuesByOverboost: {
       damage: ["520", "", "", "", "", "", "810", "810", "810", "810", "940"]
@@ -523,6 +584,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Debravera Surge (1)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Non-elem.", "Single Enemy", 10)}\nAlso, ${decrease("PATK", "Low", "Single Enemy", null, undefined, undefined, "Mid")}`,
     valuesByOverboost: {
       damage: ["260", "", "", "", "", "", "350", "350", "350", "350", "360"],
@@ -532,6 +594,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Stalwart Manaward (2)": {
     atbCost: 4,
+    sigil: null,
     description: `${increase("MDEF", undefined, "Single Ally", null, undefined, undefined, "High")}\nAlso, ${heal("Mag.", "Single Ally")}`,
     valuesByOverboost: {
       mDefIncreasePot: ["Mid", "Mid", "Mid", "Mid", "Mid", "Mid", "High", "High", "High", "High", "High"],
@@ -542,6 +605,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Blizzaga A (2)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Ice", "All Enemies", null)}`,
     valuesByOverboost: {
       damage: ["290", "350", "350", "350", "350", "350", "450", "450", "450", "450", "540"]
@@ -549,6 +613,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Tempest Force": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}`,
     valuesByOverboost: {
       damage: ["480", "580", "580", "580", "580", "580", "750", "750", "750", "750", "900"]
@@ -556,6 +621,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Saving Grace": {
     atbCost: 5,
+    sigil: null,
     description: `${increase("PDEF", undefined, "All Allies", null, undefined, undefined, "Mid")}\nAlso, ${increase("MDEF", undefined, "All Allies", null, undefined, undefined, "Mid")}\n${heal("Mag.", "All Allies")}`,
     valuesByOverboost: {
       pDefIncreasePot: ["Low", "Low", "Low", "Low", "Low", "Low", "Mid", "Mid", "Mid", "Mid", "Mid"],
@@ -569,6 +635,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Heavenly Spike": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "All Enemies", 10)}\nAlso, ${decrease("PATK", undefined, "All Enemies", null, undefined, undefined, "Mid")}`,
     valuesByOverboost: {
       damage: ["210", "240", "240", "240", "240", "240", "290", "290", "290", "290", "340"],
@@ -579,6 +646,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Raging Sphere": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Wind", "Single Enemy", null)}`,
     valuesByOverboost: {
       damage: ["440", "530", "530", "530", "530", "530", "660", "660", "660", "660", "800"]
@@ -586,6 +654,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Curaga A": {
     atbCost: 5,
+    sigil: null,
     description: `${heal("Mag.", "All Allies")}`,
     valuesByOverboost: {
       heal: ["53", "63", "63", "63", "63", "63", "69", "69", "69", "69", "74"]
@@ -593,6 +662,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Thundaga A (2)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Lightning", "All Enemies", null)}`,
     valuesByOverboost: {
       damage: ["290", "350", "350", "350", "350", "350", "450", "450", "450", "450", "540"]
@@ -600,6 +670,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Quaga A (1)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Earth", "All Enemies", null)}`,
     valuesByOverboost: {
       damage: ["290", "350", "350", "350", "350", "350", "450", "450", "450", "450", "540"]
@@ -607,6 +678,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Nightbloom": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Non-elem.", "Single Enemy", 10)}\nAlso, ${decrease("PDEF", undefined, "Single Enemy", null, undefined, undefined, "Mid")}\n${decrease("MDEF", undefined, "Single Enemy", null, undefined, undefined, "Mid")}`,
     valuesByOverboost: {
       damage: ["340", "390", "390", "390", "390", "390", "480", "480", "480", "480", "540"],
@@ -620,6 +692,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Floral Flare": {
     atbCost: 3,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}\nAlso, ${decrease("PDEF", "Mid", "Single Enemy", null, undefined, undefined, "Mid")}\nWhen [Rng.: Self]'s HP is 50% or more, ${decrease("Wind Resist.", undefined, "Single Enemy", null, undefined, undefined, undefined)}`,
     valuesByOverboost: {
       damage: ["260", "300", "300", "300", "300", "300", "360", "360", "360", "360", "420"],
@@ -633,6 +706,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Cleansing Rain": {
     atbCost: 4,
+    sigil: null,
     description: `${remove("Phys. Attack Down, Mag. Attack Down", "Single Ally")}\nAlso, ${heal("Mag.", "Single Ally")}`,
     valuesByOverboost: {
       heal: ["77", "", "", "", "", "", "100", "100", "100", "100", "108"]
@@ -640,6 +714,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Solid Manaward (1)": {
     atbCost: 4,
+    sigil: null,
     description: `${increase("MDEF", "Mid", "Single Ally", null, undefined, undefined, undefined)}\nAlso, ${heal("Mag.", "Single Ally")}`,
     valuesByOverboost: {
       mDefIncreaseDur: ["30", "34", "34", "34", "34", "34", "34", "34", "34", "34", "38"],
@@ -650,6 +725,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Snowspell": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Ice", "Single Enemy", null)}\nAlso, ${decrease("MDEF", "Mid", "Single Enemy", null, undefined, undefined, undefined)}`,
     valuesByOverboost: {
       damage: ["340", "390", "390", "390", "390", "390", "480", "480", "480", "480", "540"],
@@ -660,6 +736,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Thundara Surge (1)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Lightning", "Single Enemy", null)}`,
     valuesByOverboost: {
       damage: ["340", "", "", "", "", "", "460", "460", "460", "460", "480"]
@@ -667,6 +744,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Healing Pulse": {
     atbCost: 3,
+    sigil: null,
     description: `${increase("MATK", undefined, "Single Ally", null, undefined, undefined, "High")}\nAlso, ${regen("Single Ally", undefined, 3)}\n${heal("Mag.", "Single Ally")}`,
     valuesByOverboost: {
       mAtkIncreasePot: ["Mid", "", "", "", "", "", "High", "High", "High", "High", "High"],
@@ -678,6 +756,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Helical Flame": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Fire", "All Enemies", null)}\nAlso, against a single target, x1.3 damage.`,
     valuesByOverboost: {
       damage: ["340", "", "", "", "", "", "530", "530", "530", "530", "630"]
@@ -685,6 +764,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Armora Breach Surge (2)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Non-elem.", "Single Enemy", 10)}\nAlso, ${decrease("PDEF", "Low", "Single Enemy", null, undefined, undefined, "Mid")}`,
     valuesByOverboost: {
       damage: ["260", "", "", "", "", "", "350", "350", "350", "350", "360"],
@@ -694,6 +774,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Spiritual Harmony": {
     atbCost: 4,
+    sigil: null,
     description: `${increase("PATK", undefined, "All Allies", null, undefined, undefined, "High")}\nAlso, when [Rng.: Self]'s HP is 70% or more, ${increase("MDEF", undefined, "All Allies", null, undefined, undefined, "High")}\n${heal("Mag.", "All Allies")}`,
     valuesByOverboost: {
       pAtkIncreasePot: ["Mid", "", "", "", "", "", "High", "High", "High", "High", "High"],
@@ -707,6 +788,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Watera Surge A (2)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Water", "All Enemies", null)}`,
     valuesByOverboost: {
       damage: ["210", "", "", "", "", "", "280", "280", "280", "280", "290"]
@@ -714,6 +796,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Blizzara Surge A (2)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Ice", "All Enemies", null)}`,
     valuesByOverboost: {
       damage: ["210", "", "", "", "", "", "280", "280", "280", "280", "290"]
@@ -721,6 +804,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Fruitful Energy": {
     atbCost: 3,
+    sigil: null,
     description: `${increase("Ice Damage", undefined, "Single Ally", null, undefined, undefined, undefined)}\nAlso, ${heal("Mag.", "Single Ally")}\nWhen [Rng.: Self]'s HP is 50% or more, ${increase("MATK", "Mid", "Single Ally", null, undefined, undefined, undefined)}`,
     valuesByOverboost: {
       iceDamageIncreasePot: ["Mid", "", "", "", "", "", "High", "High", "High", "High", "High"],
@@ -735,6 +819,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Manaward A": {
     atbCost: 4,
+    sigil: null,
     description: `${increase("MDEF", undefined, "All Allies", null, undefined, undefined, "High")}\nAlso, ${heal("Mag.", "All Allies")}`,
     valuesByOverboost: {
       mDefIncreasePot: ["Mid", "Mid", "Mid", "Mid", "Mid", "Mid", "High", "High", "High", "High", "High"],
@@ -745,6 +830,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Eternal Storm": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Non-elem.", "All Enemies", 10)}\nAlso, ${decrease("MDEF", undefined, "All Enemies", null, undefined, undefined, "Mid")}`,
     valuesByOverboost: {
       damage: ["220", "250", "250", "250", "250", "250", "310", "310", "310", "310", "350"],
@@ -755,6 +841,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Therapeutic Touch": {
     atbCost: 5,
+    sigil: null,
     description: `${heal("Mag.", "All Allies")}\nAlso, ${regen("All Allies", undefined, undefined)}`,
     valuesByOverboost: {
       heal: ["8", "9", "9", "9", "9", "9", "10", "10", "10", "10", "11"],
@@ -764,6 +851,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Waterga A (1)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Water", "All Enemies", null)}`,
     valuesByOverboost: {
       damage: ["280", "340", "340", "340", "340", "340", "440", "440", "440", "440", "520"]
@@ -771,6 +859,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Blaze Rush": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Fire", "Single Enemy", null)}`,
     valuesByOverboost: {
       damage: ["400", "480", "480", "480", "480", "480", "620", "620", "620", "620", "750"]
@@ -778,6 +867,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Sonic Fangs": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}`,
     valuesByOverboost: {
       damage: ["500", "600", "600", "600", "600", "600", "780", "780", "780", "780", "940"]
@@ -785,6 +875,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Mystic Flow": {
     atbCost: 5,
+    sigil: null,
     description: `${heal("Mag.", "Single Ally")}`,
     valuesByOverboost: {
       heal: ["81", "97", "97", "97", "97", "97", "105", "105", "105", "105", "113"]
@@ -792,6 +883,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Frenzied Fang": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}\nAlso, ${decrease("MATK", undefined, "Single Enemy", null, undefined, undefined, "High")}`,
     valuesByOverboost: {
       damage: ["320", "370", "370", "370", "370", "370", "450", "450", "450", "450", "510"],
@@ -802,6 +894,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Canyon Gale": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Wind", "All Enemies", null)}\nAlso, when [Rng.: Self]'s HP is 50% or more, ${decrease("MDEF", "Mid", "All Enemies", null, undefined, undefined, undefined)}`,
     valuesByOverboost: {
       damage: ["270", "320", "320", "320", "320", "320", "420", "420", "420", "420", "500"],
@@ -812,6 +905,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Spiral Swing (1)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Non-elem.", "Single Enemy", 10)}\nAlso, ${decrease("PDEF", "Low", "Single Enemy", null, undefined, undefined, "Mid")}`,
     valuesByOverboost: {
       damage: ["260", "", "", "", "", "", "350", "350", "350", "350", "360"],
@@ -821,6 +915,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Wild Howling": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Non-elem.", "All Enemies", 10)}\nAlso, ${remove("Mag. Defense Up", "All Enemies")}`,
     valuesByOverboost: {
       damage: ["290", "", "", "", "", "", "450", "450", "450", "450", "540"]
@@ -828,6 +923,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Power Fang": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}\nAlso, ${decrease("Thunder Resist.", undefined, "Single Enemy", null, undefined, undefined, "High")}\n${regen("Self", 3, 3)}`,
     valuesByOverboost: {
       damage: ["320", "370", "370", "370", "370", "370", "450", "450", "450", "450", "510"],
@@ -838,6 +934,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Manara Breach Surge (2)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Non-elem.", "Single Enemy", 10)}\nAlso, ${decrease("MDEF", "Low", "Single Enemy", null, undefined, undefined, "Mid")}`,
     valuesByOverboost: {
       damage: ["260", "", "", "", "", "", "350", "350", "350", "350", "360"],
@@ -847,6 +944,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Defira Surge (1)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Non-elem.", "Single Enemy", 10)}\nAlso, ${decrease("Fire Resist.", undefined, "Single Enemy", null, undefined, undefined, "Mid")}`,
     valuesByOverboost: {
       damage: ["260", "300", "300", "300", "300", "300", "350", "350", "350", "350", "360"],
@@ -857,6 +955,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Fira Surge A (2)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Fire", "All Enemies", null)}`,
     valuesByOverboost: {
       damage: ["210", "240", "240", "240", "240", "240", "280", "280", "280", "280", "290"]
@@ -864,6 +963,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Growing Ivy": {
     atbCost: 3,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}\nAlso, ${decrease("Fire Resist.", undefined, "Single Enemy", null, undefined, undefined, "High")}\n${decrease("Ice Resist.", undefined, "Single Enemy", null, undefined, undefined, "High")}`,
     valuesByOverboost: {
       damage: ["260", "300", "300", "300", "300", "300", "360", "360", "360", "360", "420"],
@@ -877,6 +977,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Blizzara Surge A (3)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Ice", "All Enemies", null)}`,
     valuesByOverboost: {
       damage: ["210", "", "", "", "", "", "280", "280", "280", "280", "290"]
@@ -884,6 +985,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Rolling Claw": {
     atbCost: 3,
+    sigil: 'rhombus',
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}\nAlso, ${decrease("Wind Resist.", undefined, "Single Enemy", null, undefined, undefined, "High")}\nWhen [Rng.: Self]'s HP is 50% or more, ${decrease("Water Resist.", undefined, "Single Enemy", null, undefined, undefined, "High")}`,
     valuesByOverboost: {
       damage: ["200", "", "", "", "", "", "280", "280", "280", "280", "320"],
@@ -897,6 +999,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Debravera Surge (2)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Non-elem.", "Single Enemy", 10)}\nAlso, ${decrease("PATK", "Low", "Single Enemy", null, undefined, undefined, "Mid")}`,
     valuesByOverboost: {
       damage: ["260", "300", "300", "300", "300", "300", "350", "350", "350", "350", "360"],
@@ -906,6 +1009,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Shuriken Throw": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "All Enemies", 10)}\nAlso, ${decrease("PATK", undefined, "All Enemies", null, undefined, undefined, "Mid")}`,
     valuesByOverboost: {
       damage: ["220", "", "", "", "", "", "310", "310", "310", "310", "350"],
@@ -916,6 +1020,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Flurry of Steel": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}\nAlso, ${decrease("Fire Resist.", undefined, "Single Enemy", null, undefined, undefined, "High")}`,
     valuesByOverboost: {
       damage: ["320", "370", "370", "370", "370", "370", "450", "450", "450", "450", "510"],
@@ -926,6 +1031,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Sweeping Spin": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}\nAlso, ${decrease("Ice Resist.", undefined, "Single Enemy", null, undefined, undefined, "High")}`,
     valuesByOverboost: {
       damage: ["320", "370", "370", "370", "370", "370", "450", "450", "450", "450", "510"],
@@ -936,6 +1042,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Quaga A (2)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Earth", "All Enemies", null)}`,
     valuesByOverboost: {
       damage: ["280", "340", "340", "340", "340", "340", "440", "440", "440", "440", "520"]
@@ -943,6 +1050,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Earth Ninjutsu": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Earth", "Single Enemy", null)}\nAlso, when [Rng.: Self]'s HP is 70% or more, x1.2 damage.`,
     valuesByOverboost: {
       damage: ["480", "580", "580", "580", "580", "580", "710", "710", "710", "710", "850"]
@@ -950,6 +1058,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Stalwart Faith (2)": {
     atbCost: 4,
+    sigil: null,
     description: `${increase("MATK", undefined, "Single Ally", null, undefined, undefined, "High")}\nAlso, ${regen("Single Ally", undefined, 3)}\n${heal("Mag.", "Single Ally")}`,
     valuesByOverboost: {
       mAtkIncreasePot: ["Mid", "Mid", "Mid", "Mid", "Mid", "Mid", "High", "High", "High", "High", "High"],
@@ -961,6 +1070,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Nimble Wind Slash": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}\nAlso, ${decrease("Thunder Resist.", undefined, "Single Enemy", null, undefined, undefined, "High")}`,
     valuesByOverboost: {
       damage: ["320", "370", "370", "370", "370", "370", "450", "450", "450", "450", "510"],
@@ -971,6 +1081,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Venomstrike": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}\nAlso, ${apply("Ailment: Poison", "Single Enemy", undefined, undefined, undefined)}`,
     valuesByOverboost: {
       damage: ["320", "370", "370", "370", "370", "370", "450", "450", "450", "450", "510"],
@@ -981,6 +1092,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Ice Ninjutsu": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Ice", "Single Enemy", null)}`,
     valuesByOverboost: {
       damage: ["440", "530", "530", "530", "530", "530", "660", "660", "660", "660", "800"]
@@ -988,6 +1100,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Wind Ninjutsu": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Wind", "All Enemies", null)}`,
     valuesByOverboost: {
       damage: ["280", "340", "340", "340", "340", "340", "440", "440", "440", "440", "520"]
@@ -995,6 +1108,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Twister": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Wind", "Single Enemy", null)}`,
     valuesByOverboost: {
       damage: ["480", "580", "580", "580", "580", "580", "710", "710", "710", "710", "850"]
@@ -1002,6 +1116,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Feisty Spirit": {
     atbCost: 4,
+    sigil: null,
     description: `${increase("PATK", undefined, "Single Ally", null, undefined, undefined, "High")}\nAlso, ${heal("Mag.", "Single Ally")}\n${increase("PATK", "Mid", "Self", null, undefined, undefined, undefined)}`,
     valuesByOverboost: {
       pAtkIncreasePot: ["Mid", "Mid", "Mid", "Mid", "Mid", "Mid", "High", "High", "High", "High", "High"],
@@ -1013,6 +1128,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Baddies Begone": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)} The higher your HP, the higher the ability pot. (max: x2).`,
     valuesByOverboost: {
       damage: ["270", "", "", "", "", "", "420", "420", "420", "420", "500"]
@@ -1020,6 +1136,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Watera Surge A (3)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Water", "All Enemies", null)}`,
     valuesByOverboost: {
       damage: ["210", "", "", "", "", "", "280", "280", "280", "280", "290"]
@@ -1027,6 +1144,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Watera Surge (2)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Water", "Single Enemy", null)}`,
     valuesByOverboost: {
       damage: ["320", "370", "370", "370", "370", "370", "430", "430", "430", "430", "450"]
@@ -1034,6 +1152,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Explosion": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Fire", "All Enemies", null)}\nAlso, when [Rng.: Self]'s HP is 50% or more, ${increase("Fire Damage", "Low", "Self", null, undefined, undefined, undefined)}`,
     valuesByOverboost: {
       damage: ["390", "530", "530", "530", "530", "530", "620", "620", "620", "620", "700"],
@@ -1044,6 +1163,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Blizzara Surge A (4)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Ice", "All Enemies", null)}`,
     valuesByOverboost: {
       damage: ["210", "", "", "", "", "", "280", "280", "280", "280", "290"]
@@ -1051,6 +1171,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Razor Wings": {
     atbCost: 4,
+    sigil: null,
     description: `${damage('Phys. Non-elem.', 'Single Enemy', 10)}\nAlso, ${increase('MDEF', 'Mid', 'All Allies', null, undefined, undefined, undefined)}\nWhen Debuff is granted to Target, x1.3 damage.`,
     valuesByOverboost: {
       damage: ['540', '650', '650', '650', '650', '650', '950', '950', '950', '950', '1,080'],
@@ -1061,6 +1182,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Sonic Meow": {
     atbCost: 5,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 30)}\nAlso, when hitting critical, x3 damage.`,
     valuesByOverboost: {
       damage: ["380", "460", "460", "460", "460", "460", "590", "590", "590", "590", "700"]
@@ -1068,6 +1190,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Bloomin' Spray": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Water", "Single Enemy", null)}\nAlso, when [Rng.: Self]'s HP is 50% or more, ${decrease("Water Resist.", undefined, "Single Enemy", null, undefined, undefined, "High")}`,
     valuesByOverboost: {
       damage: ["390", "450", "450", "450", "450", "450", "550", "550", "550", "550", "620"],
@@ -1078,6 +1201,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Blizzaga A (3)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Ice", "All Enemies", null)}`,
     valuesByOverboost: {
       damage: ["280", "", "", "", "", "", "440", "440", "440", "440", "520"]
@@ -1085,6 +1209,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Firaga A (2)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Fire", "All Enemies", null)}`,
     valuesByOverboost: {
       damage: ["280", "340", "340", "340", "340", "340", "440", "440", "440", "440", "520"]
@@ -1092,6 +1217,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Instant Barrier": {
     atbCost: 4,
+    sigil: null,
     description: `${increase("PDEF", undefined, "Single Ally", null, undefined, undefined, "High")}\nAlso, ${regen("Single Ally", undefined, 3)}\n${heal("Mag.", "Single Ally")}`,
     valuesByOverboost: {
       pDefIncreasePot: ["Mid", "Mid", "Mid", "Mid", "Mid", "Mid", "High", "High", "High", "High", "High"],
@@ -1103,6 +1229,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Spinning Punch": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 20)}\nAlso, ${decrease("PDEF", "Low", "Single Enemy", null, undefined, undefined, "Low")}\nWhen hitting critical, ${decrease("PDEF", "High", "Affected Targets", null, undefined, undefined, "High")}`,
     valuesByOverboost: {
       damage: ["320", "", "", "", "", "", "450", "450", "450", "450", "510"],
@@ -1112,6 +1239,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Fat Cat Attack": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 20)}\nAlso, ${decrease("Fire Resist.", undefined, "Single Enemy", null, undefined, undefined, "High")}\nWhen hitting critical, ${decrease("MATK", undefined, "Affected Targets", null, undefined, undefined, "High")}`,
     valuesByOverboost: {
       damage: ["320", "370", "370", "370", "370", "370", "450", "450", "450", "450", "510"],
@@ -1125,6 +1253,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Battle Drum": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "All Enemies", 20)}\nAlso, ${decrease("MATK", undefined, "All Enemies", null, undefined, undefined, "Mid")}\nWhen hitting critical, ${decrease("PATK", undefined, "Affected Targets", null, undefined, undefined, "High")}`,
     valuesByOverboost: {
       damage: ["220", "250", "250", "250", "250", "250", "310", "310", "310", "310", "350"],
@@ -1138,6 +1267,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Shellmanship": {
     atbCost: 4,
+    sigil: null,
     description: `${increase("PATK", undefined, "All Allies", null, undefined, undefined, "Mid")}\nAlso, ${heal("Mag.", "All Allies")}\n${increase("MATK", undefined, "All Allies", 20, undefined, undefined, "Mid")}`,
     valuesByOverboost: {
       pAtkIncreasePot: ["Low", "", "", "", "", "", "Mid", "Mid", "Mid", "Mid", "Mid"],
@@ -1151,6 +1281,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Stalwart Bravery (1)": {
     atbCost: 4,
+    sigil: null,
     description: `${increase("PATK", undefined, "Single Ally", null, undefined, undefined, "High")}\nAlso, ${regen("Single Ally", undefined, 3)}\n${heal("Mag.", "Single Ally")}`,
     valuesByOverboost: {
       pAtkIncreasePot: ["Mid", "Mid", "Mid", "Mid", "Mid", "Mid", "High", "High", "High", "High", "High"],
@@ -1162,6 +1293,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Hang in There": {
     atbCost: 4,
+    sigil: null,
     description: `${increase("MATK", undefined, "Single Ally", null, undefined, undefined, "High")}\nAlso, ${regen("Single Ally", undefined, 3)}\n${heal("Mag.", "Single Ally")}\n${apply("Haste", "Single Ally", 20, undefined, 5)}`,
     valuesByOverboost: {
       mAtkIncreasePot: ["Mid", "", "", "", "", "", "High", "High", "High", "High", "High"],
@@ -1174,6 +1306,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Aerora Surge A (1)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Wind", "All Enemies", null)}`,
     valuesByOverboost: {
       damage: ["210", "", "", "", "", "", "280", "280", "280", "280", "290"]
@@ -1181,6 +1314,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Solid Bravery (2)": {
     atbCost: 4,
+    sigil: null,
     description: `${increase("PATK", "Low", "Single Ally", null, undefined, undefined, "Mid")}\nAlso, ${regen("Single Ally", undefined, 3)}\n${heal("Mag.", "Single Ally")}`,
     valuesByOverboost: {
       pAtkIncreaseDur: ["34", "", "", "", "", "", "40", "40", "40", "40", "44"],
@@ -1191,6 +1325,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Blizzara Surge A (5)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Ice", "All Enemies", null)}`,
     valuesByOverboost: {
       damage: ["210", "", "", "", "", "", "280", "280", "280", "280", "290"]
@@ -1198,6 +1333,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Comforting Cuisine": {
     atbCost: 4,
+    sigil: null,
     description: `${increase("PATK", undefined, "All Allies", null, undefined, undefined, "High")}\nAlso, ${heal("Mag.", "All Allies")}\nWhen [Rng.: Self]'s HP is 70% or more, ${increase("PDEF", undefined, "All Allies", null, undefined, undefined, "High")}`,
     valuesByOverboost: {
       pAtkIncreasePot: ["Mid", "", "", "", "", "", "High", "High", "High", "High", "High"],
@@ -1211,6 +1347,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Blizzaga A (4)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Ice", "All Enemies", null)}`,
     valuesByOverboost: {
       damage: ["280", "340", "340", "340", "340", "340", "440", "440", "440", "440", "520"]
@@ -1218,6 +1355,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Gilded Spirit": {
     atbCost: 4,
+    sigil: null,
     description: `${increaseLimitGauge(undefined, "Self")}\nAlso, ${heal("Mag.", "Self")}\n${regen("Self", undefined, 3)}`,
     valuesByOverboost: {
       limitGaugeIncreasePot: ["5", "", "", "", "", "", "8", "8", "8", "8", "10"],
@@ -1227,6 +1365,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Spellgun Shower": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Non-elem.", "All Enemies", 10)}\nAlso, ${decrease("PATK", "Mid", "All Enemies", null, undefined, undefined, undefined)}\n${decrease("MATK", "Mid", "All Enemies", null, undefined, undefined, undefined)}\n${increaseLimitGauge(undefined, "Self")}`,
     valuesByOverboost: {
       damage: ["340", "", "", "", "", "", "480", "480", "480", "480", "540"],
@@ -1241,6 +1380,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Stormround": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Wind", "Single Enemy", null)}\nThe higher your HP, the higher the ability pot. (max: x3).\nAlso, ${increaseLimitGauge(undefined, "Self")}`,
     valuesByOverboost: {
       damage: ["220", "", "", "", "", "", "340", "340", "340", "340", "400"],
@@ -1249,6 +1389,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Quick Draw": {
     atbCost: 2,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}\nThe lower your HP, the higher the ability pot. (max: x3).\nAlso, ${increaseLimitGauge(undefined, "Self")}`,
     valuesByOverboost: {
       damage: ["160", "190", "190", "190", "190", "190", "250", "250", "250", "250", "300"],
@@ -1257,6 +1398,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Wardshot": {
     atbCost: 4,
+    sigil: null,
     description: `${increase("MATK", undefined, "Self", null, undefined, undefined, "High")}\nAlso, ${increase("MDEF", undefined, "Self", null, undefined, undefined, "High")}\n${increaseLimitGauge(undefined, "Self")}\n${heal("Mag.", "Self")}`,
     valuesByOverboost: {
       mAtkIncreasePot: ["Mid", "Mid", "Mid", "Mid", "Mid", "Mid", "High", "High", "High", "High", "High"],
@@ -1271,6 +1413,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Sageshot": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}\nAlso, when [Rng.: Self]'s HP is 50% or more, ${decrease("Earth Resist.", undefined, "Single Enemy", null, undefined, undefined, "High")}\n${increaseLimitGauge(undefined, "Self")}`,
     valuesByOverboost: {
       damage: ["320", "370", "370", "370", "370", "370", "450", "450", "450", "450", "510"],
@@ -1282,6 +1425,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Poison Sphere": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Non-elem.", "All Enemies", 10)}\nAlso, ${increaseLimitGauge(undefined, "Self")}\nWhen [Rng.: Self]'s HP is 30% or less, ${apply("Ailment: Poison", "All Enemies", null, undefined, undefined)}`,
     valuesByOverboost: {
       damage: ["280", "340", "340", "340", "340", "340", "440", "440", "440", "440", "520"],
@@ -1292,6 +1436,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Sludge Shot": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Earth", "Single Enemy", null)}\nAlso, when Debuff is granted to Target, x1.2 damage.\n${increaseLimitGauge(undefined, "Self")}`,
     valuesByOverboost: {
       damage: ["520", "", "", "", "", "", "780", "780", "780", "780", "940"],
@@ -1300,6 +1445,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Gunspinner Shot": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}\nAlso, when Debuff is granted to Target, x1.5 damage.\n${increaseLimitGauge(undefined, "Self")}`,
     valuesByOverboost: {
       damage: ["370", "", "", "", "", "", "570", "570", "570", "570", "700"],
@@ -1308,6 +1454,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Pentaburst Shot": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Non-elem.", "Single Enemy", 10)}\nAlso, ${increaseLimitGauge(undefined, "Self")}`,
     valuesByOverboost: {
       damage: ["650", "", "", "", "", "", "1,140", "1,140", "1,140", "1,140", "1,300"],
@@ -1316,6 +1463,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Spinning Pentashot": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}\nThe lower your HP, the higher the ability pot. (max: x1.5).\nAlso, ${increaseLimitGauge(undefined, "Self")}`,
     valuesByOverboost: {
       damage: ["400", "", "", "", "", "", "620", "620", "620", "620", "750"],
@@ -1324,6 +1472,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Rapid Slash": {
     atbCost: 4,
+    sigil: 'circle',
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}`,
     valuesByOverboost: {
       damage: ["400", "480", "480", "480", "480", "480", "620", "620", "620", "620", "750"]
@@ -1331,6 +1480,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Magic Ray (1)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Non-elem.", "Single Enemy", 10)}`,
     valuesByOverboost: {
       damage: ["400", "460", "460", "460", "460", "460", "540", "540", "540", "540", "560"]
@@ -1338,6 +1488,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Healing Vortex": {
     atbCost: 5,
+    sigil: null,
     description: `${heal("Mag.", "Single Ally")}`,
     valuesByOverboost: {
       heal: ["101", "121", "121", "121", "121", "121", "131", "131", "131", "131", "141"]
@@ -1345,6 +1496,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Spirit Burst": {
     atbCost: 4,
+    sigil: null,
     description: `${increase("PDEF", undefined, "Single Ally", null, undefined, undefined, "High")}\nAlso, ${regen("Single Ally", undefined, 3)}\n${heal("Mag.", "Single Ally")}`,
     valuesByOverboost: {
       pDefIncreasePot: ["Mid", "Mid", "Mid", "Mid", "Mid", "Mid", "High", "High", "High", "High", "High"],
@@ -1356,6 +1508,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Firaga A (3)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Fire", "All Enemies", null)}`,
     valuesByOverboost: {
       damage: ["280", "340", "340", "340", "340", "340", "440", "440", "440", "440", "520"]
@@ -1363,6 +1516,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Gale Blast": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Wind", "All Enemies", null)}`,
     valuesByOverboost: {
       damage: ["280", "340", "340", "340", "340", "340", "440", "440", "440", "440", "520"]
@@ -1370,6 +1524,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Slashing Thrust": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}`,
     valuesByOverboost: {
       damage: ["500", "600", "600", "600", "600", "600", "780", "780", "780", "780", "940"]
@@ -1377,6 +1532,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Homing Blast": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Non-elem.", "Single Enemy", 10)}\nAlso, ${decrease("MDEF", undefined, "Single Enemy", null, undefined, undefined, "High")}`,
     valuesByOverboost: {
       damage: ["320", "370", "370", "370", "370", "370", "450", "450", "450", "450", "510"],
@@ -1387,6 +1543,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Destructive Swipe": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}\nAlso, ${decrease("PDEF", undefined, "Single Enemy", null, undefined, undefined, "High")}`,
     valuesByOverboost: {
       damage: ["320", "370", "370", "370", "370", "370", "450", "450", "450", "450", "510"],
@@ -1397,6 +1554,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Ceremonial Slice": {
     atbCost: 5,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}\nAlso, ${increase("PATK", undefined, "Self", null, undefined, undefined, "High")}`,
     valuesByOverboost: {
       damage: ["700", "840", "840", "840", "840", "840", "1,220", "1,220", "1,220", "1,220", "1,400"],
@@ -1407,6 +1565,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Floral Flourish": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}\nThe higher your HP, the higher the ability pot. (max: x3).`,
     valuesByOverboost: {
       damage: ["210", "", "", "", "", "", "330", "330", "330", "330", "400"]
@@ -1414,6 +1573,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Freezing Cleave": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Ice", "Single Enemy", null)}\nAlso, when [Rng.: Self]'s HP is 50% or more, ${decrease("Ice Resist.", undefined, "Single Enemy", null, undefined, undefined, "High")}`,
     valuesByOverboost: {
       damage: ["390", "", "", "", "", "", "550", "550", "550", "550", "620"],
@@ -1424,6 +1584,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Spiral Swing (2)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Non-elem.", "Single Enemy", 10)}\nAlso, ${decrease("PDEF", "Low", "Single Enemy", null, undefined, undefined, "Mid")}`,
     valuesByOverboost: {
       damage: ["260", "300", "300", "300", "300", "300", "350", "350", "350", "350", "360"],
@@ -1433,6 +1594,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Fira Surge (4)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Fire", "Single Enemy", null)}`,
     valuesByOverboost: {
       damage: ["320", "", "", "", "", "", "430", "430", "430", "430", "450"]
@@ -1440,6 +1602,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Dual Onslaught": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}\nAlso, ${decrease("MATK", "Mid", "Single Enemy", null, undefined, undefined, undefined)}\nWhen [Rng.: Self]'s HP is 50% or more, ${decrease("PDEF", "Mid", "Single Enemy", null, undefined, undefined, undefined)}`,
     valuesByOverboost: {
       damage: ["340", "390", "390", "390", "390", "390", "480", "480", "480", "480", "540"],
@@ -1453,6 +1616,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Swirl Drop": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}\nAlso, ${decrease("PDEF", "Mid", "Single Enemy", null, undefined, undefined, "Mid")}\n${decrease("Water Resist.", undefined, "Single Enemy", null, undefined, undefined, undefined)}`,
     valuesByOverboost: {
       damage: ["340", "390", "390", "390", "390", "390", "480", "480", "480", "480", "540"],
@@ -1466,6 +1630,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Igniting Stream": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Fire", "Single Enemy", null)}\nAlso, when [Rng.: Self]'s HP is 70% or more, x1.2 damage.`,
     valuesByOverboost: {
       damage: ["480", "", "", "", "", "", "710", "710", "710", "710", "850"]
@@ -1473,6 +1638,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Lightning Edge": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Lightning", "Single Enemy", null)}\nAlso, when [Rng.: Self]'s HP is 70% or more, x1.2 damage.`,
     valuesByOverboost: {
       damage: ["520", "", "", "", "", "", "780", "780", "780", "780", "940"]
@@ -1480,6 +1646,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Fira Surge A (3)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Fire", "All Enemies", null)}`,
     valuesByOverboost: {
       damage: ["210", "", "", "", "", "", "280", "280", "280", "280", "290"]
@@ -1487,6 +1654,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Ruinra Impact A": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "All Enemies", 10)}`,
     valuesByOverboost: {
       damage: ["280", "320", "320", "320", "320", "320", "380", "380", "380", "380", "390"]
@@ -1494,6 +1662,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Gale Slash": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Wind", "Single Enemy", null)}\nAlso, when Debuff is granted to Target, x1.2 damage.`,
     valuesByOverboost: {
       damage: ["520", "", "", "", "", "", "780", "780", "780", "780", "940"]
@@ -1501,6 +1670,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Telluric Fury": {
     atbCost: 2,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}\nAlso, ${decrease("MDEF", undefined, "Single Enemy", null, undefined, undefined, "Mid")}`,
     valuesByOverboost: {
       damage: ["150", "170", "170", "170", "170", "170", "210", "210", "210", "210", "240"],
@@ -1511,6 +1681,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Aerial Frostblade": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Ice", "Single Enemy", null)}`,
     valuesByOverboost: {
       damage: ["440", "530", "530", "530", "530", "530", "660", "660", "660", "660", "800"]
@@ -1518,6 +1689,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Sweeping Slash": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "All Enemies", 10)}`,
     valuesByOverboost: {
       damage: ["350", "420", "420", "420", "420", "420", "550", "550", "550", "550", "650"]
@@ -1525,6 +1697,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Frenzied Stance": {
     atbCost: 4,
+    sigil: null,
     description: `${increase("MATK", undefined, "Self", null, undefined, undefined, "High")}\nAlso, ${regen("Self", undefined, 3)}\n${heal("Mag.", "Self")}`,
     valuesByOverboost: {
       mAtkIncreasePot: ["Mid", "Mid", "Mid", "Mid", "Mid", "Mid", "High", "High", "High", "High", "High"],
@@ -1536,6 +1709,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Radiant Aurora": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}\nAlso, ${decrease("PATK", undefined, "Single Enemy", null, undefined, undefined, "High")}`,
     valuesByOverboost: {
       damage: ["320", "370", "370", "370", "370", "370", "450", "450", "450", "450", "510"],
@@ -1546,6 +1720,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Firaga A (4)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Fire", "All Enemies", null)}`,
     valuesByOverboost: {
       damage: ["280", "340", "340", "340", "340", "340", "440", "440", "440", "440", "520"]
@@ -1553,6 +1728,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Thundaga A (3)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Lightning", "All Enemies", null)}`,
     valuesByOverboost: {
       damage: ["280", "340", "340", "340", "340", "340", "440", "440", "440", "440", "520"]
@@ -1560,6 +1736,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Steadfast Stance": {
     atbCost: 4,
+    sigil: null,
     description: `${increase("PDEF", undefined, "Self", null, undefined, undefined, "High")}\nAlso, ${regen("Self", undefined, 3)}\n${heal("Phys.", "Self")}`,
     valuesByOverboost: {
       pDefIncreasePot: ["Mid", "Mid", "Mid", "Mid", "Mid", "Mid", "High", "High", "High", "High", "High"],
@@ -1571,6 +1748,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Shock Blast": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Non-elem.", "Single Enemy", 10)}`,
     valuesByOverboost: {
       damage: ["500", "600", "600", "600", "600", "600", "780", "780", "780", "780", "940"]
@@ -1578,6 +1756,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Solid Barrier (2)": {
     atbCost: 4,
+    sigil: null,
     description: `${increase("PDEF", "Mid", "Single Ally", null, undefined, undefined, undefined)}\nAlso, ${heal("Mag.", "Single Ally")}`,
     valuesByOverboost: {
       pDefIncreaseDur: ["30", "", "", "", "", "", "34", "34", "34", "34", "38"],
@@ -1588,6 +1767,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Heavenly Grasp": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}\nAlso, with Command Gauge max in Attack Stance: x1.5 damage.`,
     valuesByOverboost: {
       damage: ["370", "", "", "", "", "", "570", "570", "570", "570", "700"]
@@ -1595,6 +1775,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Gale Strike": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Wind", "Single Enemy", null)}`,
     valuesByOverboost: {
       damage: ["440", "530", "530", "530", "530", "530", "660", "660", "660", "660", "800"]
@@ -1602,6 +1783,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Flare Star": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Non-elem.", "All Enemies", 10)}\nAlso, ${decrease("MATK", "Mid", "All Enemies", null, undefined, undefined, undefined)}\nWhen [Rng.: Self]'s HP is 50% or more, ${decrease("PATK", "Mid", "All Enemies", null, undefined, undefined, undefined)}`,
     valuesByOverboost: {
       damage: ["340", "", "", "", "", "", "480", "480", "480", "480", "540"],
@@ -1615,6 +1797,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Iai": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}\nAlso, ${decrease("PDEF", "Mid", "Single Enemy", null, undefined, undefined, "Mid")}\nWhen [Rng.: Self]'s HP is 50% or more, ${decrease("Fire Resist.", undefined, "Single Enemy", null, undefined, undefined, undefined)}`,
     valuesByOverboost: {
       damage: ["340", "390", "390", "390", "390", "390", "480", "480", "480", "480", "540"],
@@ -1628,6 +1811,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Protector's Blow": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Non-elem.", "All Enemies", 10)}\nAlso, against a single target, x1.3 damage.`,
     valuesByOverboost: {
       damage: ["500", "", "", "", "", "", "740", "740", "740", "740", "900"]
@@ -1635,6 +1819,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Defira Surge (2)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Non-elem.", "Single Enemy", 10)}\nAlso, ${decrease("Fire Resist.", undefined, "Single Enemy", null, undefined, undefined, "Mid")}`,
     valuesByOverboost: {
       damage: ["260", "300", "300", "300", "300", "300", "350", "350", "350", "350", "360"],
@@ -1645,6 +1830,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Fira Surge A (4)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Fire", "All Enemies", null)}`,
     valuesByOverboost: {
       damage: ["210", "", "", "", "", "", "280", "280", "280", "280", "290"]
@@ -1652,6 +1838,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Theatrical Strike": {
     atbCost: 3,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}\nAlso, ${increase("PATK", "Mid", "Self", null, undefined, undefined, "Mid")}\nWhen [Rng.: Self]'s HP is 50% or more, ${increase("Wind Damage", undefined, "Self", null, undefined, undefined, undefined)}`,
     valuesByOverboost: {
       damage: ["260", "300", "300", "300", "300", "300", "360", "360", "360", "360", "420"],
@@ -1665,6 +1852,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Defira Surge A": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Non-elem.", "All Enemies", 10)}\nAlso, ${decrease("Fire Resist.", "Low", "All Enemies", null, undefined, undefined, "Mid")}`,
     valuesByOverboost: {
       damage: ["180", "", "", "", "", "", "240", "240", "240", "240", "250"],
@@ -1674,6 +1862,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Torrential Thrust": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Water", "Single Enemy", null)}\nAlso, when [Rng.: Self]'s HP is 50% or more, ${decrease("Water Resist.", undefined, "Single Enemy", null, undefined, undefined, "High")}`,
     valuesByOverboost: {
       damage: ["440", "510", "510", "510", "510", "510", "620", "620", "620", "620", "700"],
@@ -1684,6 +1873,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Sandsplitter": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Earth", "Single Enemy", null)}\nAlso, when [Rng.: Self]'s HP is 50% or more, ${decrease("Earth Resist.", undefined, "Single Enemy", null, undefined, undefined, "High")}`,
     valuesByOverboost: {
       damage: ["440", "510", "510", "510", "510", "510", "620", "620", "620", "620", "700"],
@@ -1694,6 +1884,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Mad Bull": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}`,
     valuesByOverboost: {
       damage: ["500", "600", "600", "600", "600", "600", "780", "780", "780", "780", "940"]
@@ -1701,6 +1892,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Spinning Blaze": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Fire", "Single Enemy", null)}`,
     valuesByOverboost: {
       damage: ["400", "480", "480", "480", "480", "480", "620", "620", "620", "620", "750"]
@@ -1708,6 +1900,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Quaga A (3)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Earth", "All Enemies", null)}`,
     valuesByOverboost: {
       damage: ["280", "340", "340", "340", "340", "340", "440", "440", "440", "440", "520"]
@@ -1715,6 +1908,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Good Vibes": {
     atbCost: 5,
+    sigil: null,
     description: `${increase("PDEF", undefined, "All Allies", null, undefined, undefined, "Mid")}\nAlso, ${increase("MDEF", undefined, "All Allies", null, undefined, undefined, "Mid")}\n${heal("Mag.", "All Allies")}`,
     valuesByOverboost: {
       pDefIncreasePot: ["Low", "Low", "Low", "Low", "Low", "Low", "Mid", "Mid", "Mid", "Mid", "Mid"],
@@ -1728,6 +1922,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Hell's Penalty": {
     atbCost: 4,
+    sigil: 'rhombus',
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}`,
     valuesByOverboost: {
       damage: ["400", "480", "480", "480", "480", "480", "620", "620", "620", "620", "750"]
@@ -1735,6 +1930,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Skullknocker": {
     atbCost: 4,
+    sigil: 'circle',
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}`,
     valuesByOverboost: {
       damage: ["520", "620", "620", "620", "620", "620", "910", "910", "910", "910", "1,040"]
@@ -1742,6 +1938,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Dual Slash": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}\nAlso, ${decrease("PDEF", undefined, "Single Enemy", null, undefined, undefined, "High")}`,
     valuesByOverboost: {
       damage: ["320", "370", "370", "370", "370", "370", "450", "450", "450", "450", "510"],
@@ -1752,6 +1949,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Thundaga A (4)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Lightning", "All Enemies", null)}`,
     valuesByOverboost: {
       damage: ["280", "340", "340", "340", "340", "340", "440", "440", "440", "440", "520"]
@@ -1759,6 +1957,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Twin Hell": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}`,
     valuesByOverboost: {
       damage: ["500", "600", "600", "600", "600", "600", "780", "780", "780", "780", "940"]
@@ -1766,6 +1965,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Crushing Jump": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}\nThe lower your HP, the higher the ability pot. (max: x2).`,
     valuesByOverboost: {
       damage: ["370", "", "", "", "", "", "570", "570", "570", "570", "700"]
@@ -1773,6 +1973,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Fira Surge (5)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Fire", "Single Enemy", null)}`,
     valuesByOverboost: {
       damage: ["320", "", "", "", "", "", "430", "430", "430", "430", "450"]
@@ -1780,6 +1981,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Stalwart Bravery (2)": {
     atbCost: 4,
+    sigil: null,
     description: `${increase("PATK", undefined, "Single Ally", null, undefined, undefined, "High")}\nAlso, ${regen("Single Ally", undefined, 3)}\n${heal("Mag.", "Single Ally")}`,
     valuesByOverboost: {
       pAtkIncreasePot: ["Mid", "Mid", "Mid", "Mid", "Mid", "Mid", "High", "High", "High", "High", "High"],
@@ -1791,6 +1993,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Magic Ray (2)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Non-elem.", "Single Enemy", 10)}`,
     valuesByOverboost: {
       damage: ["400", "460", "460", "460", "460", "460", "540", "540", "540", "540", "560"]
@@ -1798,6 +2001,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Power Break": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}\nAlso, ${decrease("PATK", "Low", "Single Enemy", null, undefined, undefined, "Mid")}`,
     valuesByOverboost: {
       damage: ["260", "", "", "", "", "", "350", "350", "350", "350", "360"],
@@ -1807,6 +2011,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Flooding Stream": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Water", "Single Enemy", null)}`,
     valuesByOverboost: {
       damage: ["500", "600", "600", "600", "600", "600", "740", "740", "740", "740", "900"]
@@ -1814,6 +2019,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Armora Breach Surge (3)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Non-elem.", "Single Enemy", 10)}\nAlso, ${decrease("PDEF", "Low", "Single Enemy", null, undefined, undefined, "Mid")}`,
     valuesByOverboost: {
       damage: ["260", "300", "300", "300", "300", "300", "350", "350", "350", "350", "360"],
@@ -1823,6 +2029,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Watera Surge A (4)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Water", "All Enemies", null)}`,
     valuesByOverboost: {
       damage: ["210", "", "", "", "", "", "280", "280", "280", "280", "290"]
@@ -1830,6 +2037,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Fira Surge A (5)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Fire", "All Enemies", null)}`,
     valuesByOverboost: {
       damage: ["210", "", "", "", "", "", "280", "280", "280", "280", "290"]
@@ -1837,6 +2045,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Rising Strike": {
     atbCost: 3,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}\nAlso, ${decrease("PDEF", "Mid", "Single Enemy", null, undefined, undefined, "Mid")}\nWhen [Rng.: Self]'s HP is 50% or more, ${increase("Water Damage", undefined, "Self", null, undefined, undefined, undefined)}`,
     valuesByOverboost: {
       damage: ["260", "300", "300", "300", "300", "300", "360", "360", "360", "360", "420"],
@@ -1850,6 +2059,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Shoot & Slash": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}`,
     valuesByOverboost: {
       damage: ["480", "", "", "", "", "", "750", "750", "750", "750", "900"]
@@ -1857,6 +2067,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Waterga A (2)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Water", "All Enemies", null)}`,
     valuesByOverboost: {
       damage: ["290", "", "", "", "", "", "450", "450", "450", "450", "540"]
@@ -1864,6 +2075,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Snowstorm": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Ice", "All Enemies", null)}`,
     valuesByOverboost: {
       damage: ["290", "350", "350", "350", "350", "350", "450", "450", "450", "450", "540"]
@@ -1871,6 +2083,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Healing Showers": {
     atbCost: 5,
+    sigil: null,
     description: `${heal("Mag.", "All Allies")}`,
     valuesByOverboost: {
       heal: ["53", "63", "63", "63", "63", "63", "69", "69", "69", "69", "74"]
@@ -1878,6 +2091,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "First Aid": {
     atbCost: 5,
+    sigil: null,
     description: `${heal("Mag.", "Single Ally")}`,
     valuesByOverboost: {
       heal: ["106", "", "", "", "", "", "138", "138", "138", "138", "148"]
@@ -1885,6 +2099,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Amulet Tribute": {
     atbCost: 4,
+    sigil: null,
     description: `${increase("MDEF", undefined, "All Allies", null, undefined, undefined, "High")}\nAlso, ${heal("Mag.", "All Allies")}`,
     valuesByOverboost: {
       mDefIncreasePot: ["Mid", "Mid", "Mid", "Mid", "Mid", "Mid", "High", "High", "High", "High", "High"],
@@ -1895,6 +2110,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Recovery Circle": {
     atbCost: 5,
+    sigil: null,
     description: `${heal("Mag.", "All Allies")}\nAlso, ${increase("PDEF", "Mid", "All Allies", null, undefined, undefined, undefined)}`,
     valuesByOverboost: {
       heal: ["42", "50", "50", "50", "50", "50", "54", "54", "54", "54", "59"],
@@ -1905,6 +2121,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Core Sting": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Non-elem.", "Single Enemy", 10)}\nAlso, ${decrease("MDEF", undefined, "Single Enemy", null, undefined, undefined, "High")}`,
     valuesByOverboost: {
       damage: ["340", "390", "390", "390", "390", "390", "480", "480", "480", "480", "540"],
@@ -1915,6 +2132,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Killing Slash": {
     atbCost: 4,
+    sigil: 'rhombus',
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}`,
     valuesByOverboost: {
       damage: ["380", "460", "460", "460", "460", "460", "590", "590", "590", "590", "720"]
@@ -1922,6 +2140,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Stalwart Bravery (3)": {
     atbCost: 4,
+    sigil: null,
     description: `${increase("PATK", undefined, "Single Ally", null, undefined, undefined, "High")}\nAlso, ${regen("Single Ally", undefined, 3)}\n${heal("Mag.", "Single Ally")}`,
     valuesByOverboost: {
       pAtkIncreasePot: ["Mid", "Mid", "Mid", "Mid", "Mid", "Mid", "High", "High", "High", "High", "High"],
@@ -1933,6 +2152,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Defending Jab": {
     atbCost: 4,
+    sigil: null,
     description: `${increase("MDEF", "Mid", "All Allies", null, undefined, undefined, undefined)}\nAlso, ${heal("Mag.", "All Allies")}\nWhen [Rng.: Self]'s HP is 50% or more, ${increase("PDEF", "Mid", "All Allies", null, undefined, undefined, undefined)}`,
     valuesByOverboost: {
       mDefIncreaseDur: ["10", "12", "12", "12", "12", "12", "12", "12", "12", "12", "14"],
@@ -1946,6 +2166,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Swing": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}\nAlso, ${remove("Phys. Defense Up", "Single Enemy")}`,
     valuesByOverboost: {
       damage: ["330", "400", "400", "400", "400", "400", "510", "510", "510", "510", "620"]
@@ -1953,6 +2174,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "X-Shot": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}\nAlso, ${decrease("PATK", undefined, "Single Enemy", null, undefined, undefined, "High")}`,
     valuesByOverboost: {
       damage: ["300", "350", "350", "350", "350", "350", "420", "420", "420", "420", "480"],
@@ -1963,6 +2185,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Ruinra Surge (2)": {
     atbCost: 4,
+    sigil: 'rhombus',
     description: `${damage("Mag. Non-elem.", "Single Enemy", 10)}`,
     valuesByOverboost: {
       damage: ["320", "", "", "", "", "", "430", "430", "430", "430", "450"]
@@ -1970,6 +2193,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Quakera Surge A (2)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Earth", "All Enemies", null)}`,
     valuesByOverboost: {
       damage: ["210", "", "", "", "", "", "280", "280", "280", "280", "290"]
@@ -1977,6 +2201,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Solid Bravery (3)": {
     atbCost: 4,
+    sigil: null,
     description: `${increase("PATK", "Low", "Single Ally", null, undefined, undefined, "Mid")}\nAlso, ${regen("Single Ally", undefined, 3)}\n${heal("Mag.", "Single Ally")}`,
     valuesByOverboost: {
       pAtkIncreaseDur: ["34", "36", "36", "36", "36", "36", "40", "40", "40", "40", "44"],
@@ -1987,6 +2212,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Aerora Surge A (2)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Wind", "All Enemies", null)}`,
     valuesByOverboost: {
       damage: ["210", "240", "240", "240", "240", "240", "280", "280", "280", "280", "290"]
@@ -1994,6 +2220,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Fira Impact (2)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Fire", "Single Enemy", null)}`,
     valuesByOverboost: {
       damage: ["320", "", "", "", "", "", "430", "430", "430", "430", "450"]
@@ -2001,6 +2228,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Pineapple Shot": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "All Enemies", 10)}`,
     valuesByOverboost: {
       damage: ["370", "440", "440", "440", "440", "440", "580", "580", "580", "580", "690"]
@@ -2008,6 +2236,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Aeroga A": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Wind", "All Enemies", null)}`,
     valuesByOverboost: {
       damage: ["270", "320", "320", "320", "320", "320", "420", "420", "420", "420", "500"]
@@ -2015,6 +2244,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Hydroshot": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Water", "Single Enemy", null)}`,
     valuesByOverboost: {
       damage: ["420", "500", "500", "500", "500", "500", "660", "660", "660", "660", "790"]
@@ -2022,6 +2252,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Laser Spark": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Lightning", "Single Enemy", null)}\nAlso, ${decrease("MDEF", "Mid", "Single Enemy", null, undefined, undefined, undefined)}`,
     valuesByOverboost: {
       damage: ["340", "390", "390", "390", "390", "390", "480", "480", "480", "480", "540"],
@@ -2032,6 +2263,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Potion Volley": {
     atbCost: 5,
+    sigil: null,
     description: `${heal("Mag.", "Self")}\nAlso, ${remove("Ailment: Poison, Ailment: Darkness", "Self")}`,
     valuesByOverboost: {
       heal: ["117", "140", "140", "140", "140", "140", "152", "152", "152", "152", "163"]
@@ -2039,6 +2271,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Stalwart Manaward (3)": {
     atbCost: 4,
+    sigil: null,
     description: `${increase("MDEF", undefined, "Single Ally", null, undefined, undefined, "High")}\nAlso, ${heal("Mag.", "Single Ally")}`,
     valuesByOverboost: {
       mDefIncreasePot: ["Mid", "Mid", "Mid", "Mid", "Mid", "Mid", "High", "High", "High", "High", "High"],
@@ -2049,6 +2282,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Barrage": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}\nAlso, ${decrease("MATK", undefined, "Single Enemy", null, undefined, undefined, "High")}`,
     valuesByOverboost: {
       damage: ["340", "390", "390", "390", "390", "390", "480", "480", "480", "480", "540"],
@@ -2059,6 +2293,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Diving Burst": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}\nAlso, ${decrease("Ice Resist.", undefined, "Single Enemy", null, undefined, undefined, "High")}`,
     valuesByOverboost: {
       damage: ["340", "390", "390", "390", "390", "390", "480", "480", "480", "480", "540"],
@@ -2069,6 +2304,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Quietude": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}\nAlso, ${apply("Ailment: Silence", "Single Enemy", undefined, 5, 2)}`,
     valuesByOverboost: {
       damage: ["420", "500", "500", "500", "500", "500", "660", "660", "660", "660", "790"],
@@ -2077,6 +2313,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Parading Shot": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}\nAlso, ${increaseCommandGauge(20)}`,
     valuesByOverboost: {
       damage: ["330", "", "", "", "", "", "510", "510", "510", "510", "620"]
@@ -2084,6 +2321,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Debravera Surge (3)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Non-elem.", "Single Enemy", 10)}\nAlso, ${decrease("PATK", "Low", "Single Enemy", null, undefined, undefined, "Mid")}`,
     valuesByOverboost: {
       damage: ["260", "300", "300", "300", "300", "300", "350", "350", "350", "350", "360"],
@@ -2093,6 +2331,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Striking Quintet": {
     atbCost: 4,
+    sigil: 'rhombus',
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}`,
     valuesByOverboost: {
       damage: ["420", "", "", "", "", "", "660", "660", "660", "660", "790"]
@@ -2100,6 +2339,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Solid Manaward (2)": {
     atbCost: 4,
+    sigil: null,
     description: `${increase("MDEF", "Mid", "Single Ally", null, undefined, undefined, undefined)}\nAlso, ${heal("Mag.", "Single Ally")}`,
     valuesByOverboost: {
       mDefIncreaseDur: ["30", "", "", "", "", "", "34", "34", "34", "34", "38"],
@@ -2110,6 +2350,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Thundara Surge (2)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Lightning", "Single Enemy", null)}`,
     valuesByOverboost: {
       damage: ["300", "", "", "", "", "", "410", "410", "410", "410", "420"]
@@ -2117,6 +2358,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Rock Blast": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Earth", "Single Enemy", null)}`,
     valuesByOverboost: {
       damage: ["440", "530", "530", "530", "530", "530", "660", "660", "660", "660", "800"]
@@ -2124,6 +2366,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Fira Surge A (6)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Fire", "All Enemies", null)}`,
     valuesByOverboost: {
       damage: ["210", "", "", "", "", "", "280", "280", "280", "280", "290"]
@@ -2131,6 +2374,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Blazing Rose": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Fire", "Single Enemy", null)}\nAlso, when [Rng.: Self]'s HP is 50% or more, ${decrease("MDEF", undefined, "Single Enemy", null, undefined, undefined, "High")}`,
     valuesByOverboost: {
       damage: ["390", "450", "450", "450", "450", "450", "550", "550", "550", "550", "620"],
@@ -2141,6 +2385,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Armora Breach Surge (4)": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Mag. Non-elem.", "Single Enemy", 10)}\nAlso, ${decrease("PDEF", "Low", "Single Enemy", null, undefined, undefined, "Mid")}`,
     valuesByOverboost: {
       damage: ["260", "", "", "", "", "", "350", "350", "350", "350", "360"],
@@ -2150,6 +2395,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Bullet Hail": {
     atbCost: 4,
+    sigil: null,
     description: `${damage("Phys. Non-elem.", "All Enemies", null)}\nAlso, ${decrease("PATK", "Mid", "All Enemies", null, undefined, undefined, undefined)}\nWhen [Rng.: Self]'s HP is 50% or more, ${decrease("Fire Resist.", undefined, "All Enemies", null, undefined, undefined, "High")}`,
     valuesByOverboost: {
       damage: ["350", "400", "400", "400", "400", "400", "490", "490", "490", "490", "560"],
@@ -2163,6 +2409,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   },
   "Nightglint": {
     atbCost: 3,
+    sigil: 'rhombus',
     description: `${damage("Mag. Non-elem.", "Single Enemy", 10)}\nAlso, ${decrease("PDEF", undefined, "Single Enemy", null, undefined, undefined, "High")}\nWhen Buff is granted to [Rng.: Self], ${decrease("MDEF", undefined, "Single Enemy", null, undefined, undefined, "Mid")}`,
     valuesByOverboost: {
       damage: ["260", "", "", "", "", "", "360", "360", "360", "360", "420"],

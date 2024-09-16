@@ -1,6 +1,6 @@
-import { Element } from '../types.ts';
+import { Elements } from '../types.ts';
 
-export const elementsData: { [key: string]: Element } = {
+export const elementsData: Elements = {
   'Non-elemental': {
     icon: 'non-elemental.webp'
   },

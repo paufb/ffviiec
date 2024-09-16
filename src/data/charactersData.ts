@@ -1,6 +1,6 @@
-import { Character } from '../types.ts';
+import { Characters } from '../types.ts';
 
-export const charactersData: { [key: string]: Character } = {
+export const charactersData: Characters = {
   'Cloud': {
     icon: 'https://image.en.ffviiec.com/c5d1eed1-b083-4034-9bd6-82862f0f6f90/ch001_small_button.png'
   },
