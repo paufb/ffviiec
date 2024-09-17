@@ -1,0 +1,45 @@
+.hamburger-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  transition: filter 0.3s ease;
+
+  &:hover {
+    filter: drop-shadow(0 0 7.5px white);
+  }
+
+  & .line {
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    border-radius: 1rem;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+
+    &.line-top {
+      transform: translateY(-300%);
+    }
+
+    &.line-bottom {
+      transform: translateY(300%);
+    }
+  }
+
+  &.active {
+    & .line-top {
+      transform: rotate(45deg);
+    }
+
+    & .line-middle {
+      transform: rotate(45deg);
+    }
+
+    & .line-bottom {
+      transform: rotate(-45deg);
+    }
+  }
+}

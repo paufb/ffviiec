@@ -2,9 +2,9 @@
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  margin: 8rem auto 3rem auto;
+  margin: 4rem auto;
   padding: 0 var(--app-padding);
-  max-width: var(--app-max-width);
+  max-width: 90rem;
 }
 
 .filters-container {
