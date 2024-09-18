@@ -14,15 +14,29 @@ export function AppSidebar({ isCollapsed, isViewportNarrow }: SidebarProps) {
   }
 
   return (
-    <nav className={`${styles['sidebar']}${isCollapsed ? ` ${styles['collapsed']}` : ''}`}>
-      <NavLink to={'/'} className={getNavLinkClasses}>
-        <img src={MainIcon} />
-        Home
-      </NavLink>
-      <NavLink to={'/weapons'} className={getNavLinkClasses}>
-        <img src={WeaponsIcon} />
-        Weapons
-      </NavLink>
+    <nav className={`${styles['app-sidebar']}${isCollapsed ? ` ${styles['collapsed']}` : ''}`}>
+      <ul>
+        <li>
+          <NavLink to={'/'} className={getNavLinkClasses}>
+            <div className={styles['content']}>
+              <img src={MainIcon} />
+              <div className={styles['title']}>
+                Home
+              </div>
+            </div>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to={'/weapons'} className={getNavLinkClasses}>
+            <div className={styles['content']}>
+              <img src={WeaponsIcon} />
+              <div className={styles['title']}>
+                Weapons
+              </div>
+            </div>
+          </NavLink>
+        </li>
+      </ul>
     </nav>
   );
 }
