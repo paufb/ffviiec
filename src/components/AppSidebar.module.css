@@ -38,7 +38,7 @@
   & .content {
     display: flex;
     align-items: center;
-    transition: transform, 0.1s ease;
+    transition: transform 0.1s ease;
   }
 
   &:active .content {

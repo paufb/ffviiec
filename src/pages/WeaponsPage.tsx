@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { ATBBarCost } from '../components/ATBBarCost.tsx';
 import { ElementIcon } from '../components/ElementIcon.tsx';
 import { OverboostStars } from '../components/OverboostStars.tsx';
@@ -9,11 +9,9 @@ import styles from './WeaponsPage.module.css';
 
 export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean }) {
   type Column = 'weapon' | keyof Weapon['fiveStarLevel120'] | 'atbCost';
-  type SortConfig = {
-    column: null | Column;
-    direction: null | 'asc' | 'desc';
-  }
+  type SortConfig = { column: null | Column; direction: null | 'asc' | 'desc'; }
   type Layout = 'table' | 'grid';
+  type IsDropdownVisible = { [key in 'characters' | 'elements']: boolean };
 
   const [weapons, setWeapons] = useState<Weapons>({});
   const [elements, setElements] = useState<Elements>({});
@@ -28,6 +26,11 @@ export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean })
   const [sortConfig, setSortConfig] = useState<SortConfig>({ column: null, direction: null });
   const [layout, setLayout] = useState<Layout>('table');
   const [selectedWeaponForModal, setSelectedWeaponForModal] = useState<keyof Weapons | null>(null);
+  const [isDropdownVisible, setIsDropdownVisible] = useState<IsDropdownVisible>({ characters: false, elements: false });
+  const dropdownRefs = {
+    characters: { menu: useRef<HTMLDivElement>(null), button: useRef<HTMLButtonElement>(null) },
+    elements: { menu: useRef<HTMLDivElement>(null), button: useRef<HTMLButtonElement>(null) }
+  };
 
   useEffect(() => {
     Promise.all([
@@ -69,6 +72,25 @@ export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean })
     }
     setFilteredWeapons(Object.fromEntries(filteredEntries));
   }, [weapons, nameQuery, selectedCharacters, selectedElements, sortConfig, cAbilities]);
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      (Object.keys(dropdownRefs) as Array<keyof typeof dropdownRefs>).forEach(dropdownName => {
+        const menuRef = dropdownRefs[dropdownName].menu.current;
+        const buttonRef = dropdownRefs[dropdownName].button.current;
+        if (!menuRef?.contains(event.target as HTMLElement) && !buttonRef?.contains(event.target as HTMLElement)) {
+          setIsDropdownVisible(prevState => ({
+            ...prevState,
+            [dropdownName]: false
+          }));
+        }
+      });
+    };
+    if (Object.values(isDropdownVisible).some(isVisible => isVisible)) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [isDropdownVisible]);
 
   function handleNameQueryChange(event: React.ChangeEvent<HTMLInputElement>) {
     const query = event.target.value;
@@ -159,50 +181,6 @@ export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean })
       <div className={styles["filters-container"]}>
         <div className={`${styles["filters-container-row"]} ${isViewportNarrow ? styles["filters-container-row--narrow"] : ""}`}>
           <div className={styles["filters-container-column"]}>
-            <div className={styles["filter"]}>
-              <div className={styles["filter-characters"]}>
-                {Object.entries(characters).map(([characterName, character]) => (
-                  <label className={`${styles["character-toggle"]} ${selectedCharacters.includes(characterName) ? styles["character-toggle--selected"] : ""}`} key={characterName}>
-                    <input
-                      type="checkbox"
-                      value={characterName}
-                      onChange={handleSelectedCharactersChange}
-                      style={{ display: "none" }}
-                    />
-                    <img src={character.icon} title={characterName} alt="" />
-                    <div className={styles["character-toggle-name"]}>
-                      {characterName}
-                    </div>
-                  </label>
-                ))}
-              </div>
-            </div>
-          </div>
-          <div className={styles["filters-container-column"]}>
-            <div className={styles["filter"]}>
-              <div className={styles["filter-elements"]}>
-                {Object.entries(elements).map(([elementName, _]) => (
-                  <label className={`${styles["element-toggle"]} ${selectedElements.includes(elementName) ? styles["element-toggle--selected"] : ""}`} key={elementName}>
-                    <input
-                      type="checkbox"
-                      value={elementName}
-                      onChange={handleSelectedElementsChange}
-                      style={{ display: "none" }}
-                    />
-                    <span
-                      title={elementName}
-                      style={{ backgroundImage: `url(${new URL(`../assets/elements/${elementName}.webp`, import.meta.url).href})` }}
-                    />
-                  </label>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className={styles["filters-container"]}>
-        <div className={`${styles["filters-container-row"]} ${isViewportNarrow ? styles["filters-container-row--narrow"] : ""}`}>
-          <div className={styles["filters-container-column"]}>
             <div className={styles["filter-name"]}>
               <svg width="24px" height="24px" viewBox="0 -960 960 960" fill="#5f6368"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>
               <input type="text" onChange={handleNameQueryChange} placeholder="Search by name" />
@@ -237,6 +215,60 @@ export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean })
           </div>
         </div>
         <div className={styles["filters-container-row"]}>
+          <div className={styles['dropdown-group']}>
+            <button
+              ref={dropdownRefs.characters.button}
+              className={`${styles['dropdown-button']} ${styles['downscale-on-click']}`}
+              onClick={() => setIsDropdownVisible(prevState => ({...prevState, characters: !prevState.characters}))}
+            >
+              <img src={new URL(`../assets/ui/filter_${selectedCharacters.length ? 'on' : 'off'}.png`, import.meta.url).href} alt="" />
+              Characters
+              <span className="arrow-down" />
+            </button>
+            <div ref={dropdownRefs.characters.menu} className={`${styles['dropdown']} ${isDropdownVisible.characters ? styles['dropdown--visible'] : ''}`}>
+              {Object.entries(characters).map(([characterName, character]) => (
+                <label className={`${styles['character-toggle']} ${selectedCharacters.includes(characterName) ? styles['character-toggle--selected'] : ''} ${styles['downscale-on-click']}`} key={characterName}>
+                  <input
+                    type="checkbox"
+                    value={characterName}
+                    onChange={handleSelectedCharactersChange}
+                    style={{ display: 'none' }}
+                  />
+                  <img src={character.icon} title={characterName} alt="" />
+                  <div className={styles['character-toggle-name']}>
+                    {characterName}
+                  </div>
+                </label>
+              ))}
+            </div>
+          </div>
+          <div className={styles['dropdown-group']}>
+            <button
+              ref={dropdownRefs.elements.button}
+              className={`${styles['dropdown-button']} ${styles['downscale-on-click']}`}
+              onClick={() => setIsDropdownVisible(prevState => ({...prevState, elements: !prevState.elements}))}
+            >
+              <img src={new URL(`../assets/ui/filter_${selectedElements.length ? 'on' : 'off'}.png`, import.meta.url).href} alt="" />
+              Elements
+              <span className="arrow-down" />
+            </button>
+            <div ref={dropdownRefs.elements.menu} className={`${styles['dropdown']} ${isDropdownVisible.elements ? styles['dropdown--visible'] : ''}`}>
+              {Object.entries(elements).map(([elementName, _]) => (
+                <label className={`${styles['element-toggle']} ${selectedElements.includes(elementName) ? styles['element-toggle--selected'] : ''} ${styles['downscale-on-click']}`} key={elementName}>
+                  <input
+                    type="checkbox"
+                    value={elementName}
+                    onChange={handleSelectedElementsChange}
+                    style={{ display: 'none' }}
+                  />
+                  <span
+                    title={elementName}
+                    style={{ backgroundImage: `url(${new URL(`../assets/elements/${elementName}.webp`, import.meta.url).href})` }}
+                  />
+                </label>
+              ))}
+            </div>
+          </div>
           <div className={styles["filter"]}>
             <div className={styles["filter-layout"]}>
               Layout
