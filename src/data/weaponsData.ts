@@ -841,6 +841,16 @@ export const weaponsData: Weapons = {
       heal: 208
     }
   },
+  "Bahamut Rod": {
+    character: "Aerith",
+    element: "Non-elemental",
+    cAbility: "Blessed Aura",
+    fiveStarLevel120: {
+      pAtk: 191,
+      mAtk: 212,
+      heal: 237
+    }
+  },
   "Sleek Collar": {
     character: "Red XIII",
     element: "Non-elemental",
@@ -1361,6 +1371,16 @@ export const weaponsData: Weapons = {
       heal: 192
     }
   },
+  "Alba Megaphone": {
+    character: "Cait Sith",
+    element: "Non-elemental",
+    cAbility: "Ruinra Impact A (1)",
+    fiveStarLevel120: {
+      pAtk: 220,
+      mAtk: 205,
+      heal: 167
+    }
+  },
   "Cath Palug": {
     character: "Vincent",
     element: "Ice",
@@ -1674,7 +1694,7 @@ export const weaponsData: Weapons = {
   "Alba Blade": {
     character: "Zack",
     element: "Non-elemental",
-    cAbility: "Ruinra Impact A",
+    cAbility: "Ruinra Impact A (2)",
     fiveStarLevel120: {
       pAtk: 222,
       mAtk: 204,

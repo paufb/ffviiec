@@ -817,6 +817,17 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
       mAtkIncreaseMaxPot: ["Mid", "", "", "", "", "", "High", "High", "High", "High", "High"]
     }
   },
+  "Blessed Aura": {
+    atbCost: 5,
+    sigil: null,
+    description: `${heal("Mag.", "All Allies")}\nAlso, ${increase("PDEF", undefined, "All Allies", null, undefined, undefined, "Mid")}\nWhen [Rng.: Self]'s HP is 40% or less, ${increaseATBGauge(1, "Ally (Excluding Self)")}`,
+    valuesByOverboost: {
+      heal: ["42", "", "", "", "", "", "54", "54", "54", "54", "59"],
+      pDefIncreasePot: ["Low", "", "", "", "", "", "Mid", "Mid", "Mid", "Mid", "Mid"],
+      pDefIncreaseDur: ["12", "", "", "", "", "", "16", "16", "16", "16", "20"],
+      pDefIncreaseExt: ["4", "", "", "", "", "", "4", "4", "4", "4", "5"]
+    }
+  },
   "Manaward A": {
     atbCost: 4,
     sigil: null,
@@ -1345,6 +1356,14 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
       pDefIncreaseExt: ["4", "", "", "", "", "", "5", "5", "5", "5", "6"]
     }
   },
+  "Ruinra Impact A (1)": {
+    atbCost: 4,
+    sigil: null,
+    description: `${damage("Phys. Non-elem.", "All Enemies", 10)}`,
+    valuesByOverboost: {
+      damage: ["280", "320", "320", "320", "320", "320", "380", "380", "380", "380", "390"]
+    }
+  },
   "Blizzaga A (4)": {
     atbCost: 4,
     sigil: null,
@@ -1358,9 +1377,9 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
     sigil: null,
     description: `${increaseLimitGauge(undefined, "Self")}\nAlso, ${heal("Mag.", "Self")}\n${regen("Self", undefined, 3)}`,
     valuesByOverboost: {
-      limitGaugeIncreasePot: ["5", "", "", "", "", "", "8", "8", "8", "8", "10"],
-      heal: ["9", "", "", "", "", "", "12", "12", "12", "12", "13"],
-      regenDur: ["9", "", "", "", "", "", "12", "12", "12", "12", "15"]
+      limitGaugeIncreasePot: ["5", "6", "6", "6", "6", "6", "8", "8", "8", "8", "10"],
+      heal: ["9", "11", "11", "11", "11", "11", "12", "12", "12", "12", "13"],
+      regenDur: ["9", "12", "12", "12", "12", "12", "12", "12", "12", "12", "15"]
     }
   },
   "Spellgun Shower": {
@@ -1466,8 +1485,8 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
     sigil: null,
     description: `${damage("Phys. Non-elem.", "Single Enemy", 10)}\nThe lower your HP, the higher the ability pot. (max: x1.5).\nAlso, ${increaseLimitGauge(undefined, "Self")}`,
     valuesByOverboost: {
-      damage: ["400", "", "", "", "", "", "620", "620", "620", "620", "750"],
-      limitGaugeIncreasePot: ["3", "", "", "", "", "", "5", "5", "5", "5", "5"]
+      damage: ["400", "480", "480", "480", "480", "480", "620", "620", "620", "620", "750"],
+      limitGaugeIncreasePot: ["3", "3", "3", "3", "3", "3", "5", "5", "5", "5", "5"]
     }
   },
   "Rapid Slash": {
@@ -1652,7 +1671,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
       damage: ["210", "", "", "", "", "", "280", "280", "280", "280", "290"]
     }
   },
-  "Ruinra Impact A": {
+  "Ruinra Impact A (2)": {
     atbCost: 4,
     sigil: null,
     description: `${damage("Phys. Non-elem.", "All Enemies", 10)}`,
@@ -2423,7 +2442,7 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
   }
 };
 
-type Range = 'Single Enemy' | 'All Enemies' | 'Single Ally' | 'All Allies' | 'Self' | 'Affected Targets' | null;
+type Range = 'Single Enemy' | 'All Enemies' | 'Single Ally' | 'All Allies' | 'Self' | 'Affected Targets' | 'Ally (Excluding Self)' | null;
 type CriticalRate = number | null;
 type Effect = 'Ailment: Stun' | 'Ailment: Poison' | 'Ailment: Silence' | 'Haste';
 type Attribute = 'PATK' | 'MATK' | 'PDEF' | 'MDEF' | 'Fire Resist.' | 'Ice Resist.' | 'Thunder Resist.' | 'Earth Resist.' | 'Water Resist.' | 'Wind Resist.' | 'Fire Damage' | 'Ice Damage' | 'Thunder Damage' | 'Earth Damage' | 'Water Damage' | 'Wind Damage';
@@ -2531,4 +2550,8 @@ function increaseCommandGauge(potency: number) {
 
 function additionalDamage(element: Element, type: AdditionalDamageType, range: Range) {
   return `deals {{additionalDamage}} additional ${element} ${type} pot. damage [Rng.: ${range}].`;
+}
+
+function increaseATBGauge(increase: number, range: Range) {
+  return `+${increase} ATB Gauge [Rng.: ${range}].`;
 }
