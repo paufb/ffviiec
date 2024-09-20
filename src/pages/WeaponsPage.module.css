@@ -120,10 +120,12 @@
     transition: 0.3s ease;
     opacity: 0;
     visibility: hidden;
+    pointer-events: none;
 
     &.dropdown--visible {
       opacity: 1;
       visibility: visible;
+      pointer-events: auto;
       transform: translate(0, 5px);
     }
 
@@ -198,7 +200,7 @@
   outline: rgb(21, 81, 151) solid calc(0.3rem / 2.5);
   outline-width: 0.125rem;
   outline-offset: calc(-0.125rem * 3);
-  --top-and-bottom-padding: calc(0.125rem * 3);
+  --top-and-bottom-padding: calc(0.125rem * 2);
   --left-and-right-padding: calc(var(--top-and-bottom-padding) + var(--gap));
   padding: var(--top-and-bottom-padding) var(--left-and-right-padding);
 
