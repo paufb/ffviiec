@@ -7,6 +7,7 @@ import HEALIcon from '../assets/stats/HEAL.webp';
 import { CommandAbility, Character, Weapon, Weapons } from '../types.ts';
 import { useEffect, useState } from 'react';
 import { ATBBarCost } from './ATBBarCost.tsx';
+import { CharacterDiamond } from './CharacterDiamond.tsx';
 import { ElementIcon } from './ElementIcon.tsx';
 import { OverboostStars } from './OverboostStars.tsx';
 import { SigilIcon } from './SigilIcon.tsx';
@@ -71,7 +72,7 @@ export function WeaponModal({ weaponName, weapon, character, cAbility, selectedO
       <div className={styles['modal-body']}>
         <div className={styles['column-info']}>
           <div className={styles['column-info-header']}>
-            <img src={character.icon} alt="" />
+            <CharacterDiamond character={character} height="64px" />
             <div className={styles['column-info-header-title']}>
               <div className={styles['column-info-header-title-name']}>
                 {weaponName}

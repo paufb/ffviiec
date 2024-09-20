@@ -8,7 +8,7 @@ export interface CommandAbility {
 }
 
 export interface Character {
-  icon: string;
+  id: number;
 }
 
 export interface Element {

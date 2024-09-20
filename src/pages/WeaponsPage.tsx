@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { ATBBarCost } from '../components/ATBBarCost.tsx';
+import { CharacterDiamond } from '../components/CharacterDiamond.tsx';
 import { ElementIcon } from '../components/ElementIcon.tsx';
 import { OverboostStars } from '../components/OverboostStars.tsx';
 import { SigilIcon } from '../components/SigilIcon.tsx';
@@ -234,7 +235,7 @@ export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean })
                     onChange={handleSelectedCharactersChange}
                     style={{ display: 'none' }}
                   />
-                  <img src={character.icon} title={characterName} alt="" />
+                  <CharacterDiamond character={character} width="32px" />
                   <div className={styles['character-toggle-name']}>
                     {characterName}
                   </div>
@@ -340,11 +341,7 @@ export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean })
                     <td className={`${styles["table-data"]} ${styles["table-data--nowrap"]}`}>
                       <div className={styles["table-data-weapon-container-row"]}>
                         <div className={styles["table-data-weapon-container-column"]}>
-                          <img src={characters[weapon.character].icon}
-                            className={styles["table-data-weapon-container-character"]}
-                            title={String(weapon.character)}
-                            alt=""
-                          />
+                          <CharacterDiamond character={characters[weapon.character]} height="64px" />
                         </div>
                         <div className={styles["table-data-weapon-container-column"]}>
                           <div>

@@ -185,6 +185,8 @@
 .character-toggle {
   display: flex;
   align-items: center;
+  --gap: 0.25rem;
+  gap: var(--gap);
   color: white;
   white-space: nowrap;
   cursor: pointer;
@@ -196,7 +198,9 @@
   outline: rgb(21, 81, 151) solid calc(0.3rem / 2.5);
   outline-width: 0.125rem;
   outline-offset: calc(-0.125rem * 3);
-  padding: calc(0.125rem * 3);
+  --top-and-bottom-padding: calc(0.125rem * 3);
+  --left-and-right-padding: calc(var(--top-and-bottom-padding) + var(--gap));
+  padding: var(--top-and-bottom-padding) var(--left-and-right-padding);
 
   &:hover {
     background-color: #08325e;
@@ -208,17 +212,6 @@
     background-color: rgb(13, 83, 157);
     border-color: rgb(44, 128, 215);
     outline-color: rgb(44, 128, 215);
-  }
-
-  & img {
-    width: calc(4.1875rem * 0.5);
-    height: calc(4.9375rem * 0.5);
-    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-    margin: 0 0.125rem 0 0.25rem;
-  }
-
-  & .character-toggle-name {
-    margin: 0 0.25rem 0 0.125rem;
   }
 }
 
@@ -388,13 +381,6 @@
 .table-data-weapon-container-column {
   display: flex;
   flex-direction: column;
-}
-
-.table-data-weapon-container-character {
-  aspect-ratio: 67 / 79;
-  width: 3rem;
-  height: auto;
-  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
 
 .table-data-weapon-container-icons {
