@@ -30,12 +30,29 @@ export function WeaponModal({ weaponName, weapon, character, cAbility, selectedO
   const [displayedOverboostLevel, setDisplayedOverboostLevel] = useState(selectedOverboostLevel);
 
   useEffect(() => {
+    const modal = document.querySelector('#weapon-modal') as HTMLDialogElement;
+    modal.addEventListener('click', (e) => {
+      if (e.target instanceof HTMLDialogElement && e.target.nodeName === 'DIALOG') {
+        closeModal();
+      }
+    });
+    modal.addEventListener('contextmenu', (e) => {
+      e.preventDefault();
+      closeModal();
+    })
+  }, []);
+
+  useEffect(() => {
     setDisplayedOverboostLevel(selectedOverboostLevel);
   }, [selectedOverboostLevel]);
 
   function closeModal() {
     const modal = document.querySelector('#weapon-modal') as HTMLDialogElement;
-    if (modal) modal.close();
+    modal.setAttribute('closing', '');
+    modal.addEventListener('animationend', () => {
+      modal.removeAttribute('closing');
+      modal.close();
+    }, { once: true });
   }
 
   function renderCurrentTier() {
