@@ -27,13 +27,17 @@ function App() {
   }
 
   function toggleSidebar() {
-    setIsSidebarCollapsed(!isSidebarCollapsed);
+    setIsSidebarCollapsed((prevState) => !prevState);
+  }
+
+  function collapseSidebar() {
+    setIsSidebarCollapsed(true);
   }
 
   return (
     <>
       <AppBar isSidebarCollapsed={isSidebarCollapsed} toggleSidebar={toggleSidebar} />
-      <AppSidebar isCollapsed={isSidebarCollapsed} />
+      <AppSidebar isCollapsed={isSidebarCollapsed} collapseSidebar={collapseSidebar} />
       <div className="background" />
       <main style={{ transition: 'padding 0.25s ease',
                      padding: `var(--app-bar-height) 0 0 ${isViewportNarrow || isSidebarCollapsed ? 'var(--app-sidebar-collapsed-width)' : 'var(--app-sidebar-width)'}` }}>

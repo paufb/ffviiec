@@ -5,9 +5,10 @@ import styles from './AppSidebar.module.css';
 
 interface AppSidebarProps {
   isCollapsed: boolean;
+  collapseSidebar: Function;
 }
 
-export function AppSidebar({ isCollapsed }: AppSidebarProps) {
+export function AppSidebar({ isCollapsed, collapseSidebar }: AppSidebarProps) {
   function getNavLinkClasses({ isActive }: { isActive: boolean }) {
     return `${styles['entry']}${isActive ? ` ${styles['active']}` : ''}`;
   }
@@ -16,7 +17,7 @@ export function AppSidebar({ isCollapsed }: AppSidebarProps) {
     <nav className={`${styles['app-sidebar']}${isCollapsed ? ` ${styles['collapsed']}` : ''}`}>
       <ul>
         <li>
-          <NavLink to={'/'} className={getNavLinkClasses}>
+          <NavLink to={'/'} className={getNavLinkClasses} onClick={() => collapseSidebar()}>
             <div className={styles['content']}>
               <img src={MainIcon} />
               <div className={styles['title']}>
@@ -26,7 +27,7 @@ export function AppSidebar({ isCollapsed }: AppSidebarProps) {
           </NavLink>
         </li>
         <li>
-          <NavLink to={'/weapons'} className={getNavLinkClasses}>
+          <NavLink to={'/weapons'} className={getNavLinkClasses} onClick={() => collapseSidebar()}>
             <div className={styles['content']}>
               <img src={WeaponsIcon} />
               <div className={styles['title']}>
