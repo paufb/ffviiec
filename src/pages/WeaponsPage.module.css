@@ -101,6 +101,12 @@
     color: white;
     font-size: 1rem;
     height: 100%;
+
+    &:hover {
+      background-color: #08325e;
+      border-color: #2164ab;
+      outline-color: #2164ab;
+    }
   
     & img {
       width: 1rem;
@@ -441,11 +447,22 @@
   flex-grow: 1;
   gap: 0.5rem;
   color: white;
+  transition: transform 0.1s ease;
 
   &:hover {
-    background-color: #0c305a;
+    background-color: rgba(12, 48, 90, 0.75);
     border-radius: 8px;
     cursor: pointer;
+
+    & .grid-image-container {
+      background-color: #08325e;
+      border-color: #2164ab;
+      outline-color: #2164ab;
+    }
+  }
+
+  &:active {
+    transform: scale(0.975);
   }
 
   & .grid-image-container {
