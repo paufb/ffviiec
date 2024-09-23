@@ -16,6 +16,7 @@ export interface Element {
 }
 
 export interface Weapon {
+  id: number;
   character: keyof Characters;
   element: keyof Elements;
   cAbility: keyof CommandAbilities;

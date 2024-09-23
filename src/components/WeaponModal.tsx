@@ -11,6 +11,7 @@ import { CharacterDiamond } from './CharacterDiamond.tsx';
 import { ElementIcon } from './ElementIcon.tsx';
 import { OverboostStars } from './OverboostStars.tsx';
 import { SigilIcon } from './SigilIcon.tsx';
+import { WeaponIconLarge } from './WeaponIconLarge.tsx';
 import styles from './WeaponModal.module.css';
 
 interface WeaponModalProps {
@@ -163,7 +164,7 @@ export function WeaponModal({ weaponName, weapon, character, cAbility, selectedO
         </div>
         <div className={styles['column-middle']}>
           <div className={styles['column-middle-image']}>
-
+            <WeaponIconLarge weapon={weapon} />
           </div>
           <div className={styles['column-middle-controls']}>
             <div className={styles['column-middle-controls-previous']} onClick={decreaseTier}>

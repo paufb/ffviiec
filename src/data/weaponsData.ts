@@ -2,6 +2,7 @@ import { Weapons } from '../types.ts';
 
 export const weaponsData: Weapons = {
   "Buster Sword": {
+    id: 1001,
     character: "Cloud",
     element: "Non-elemental",
     cAbility: "Braver",
@@ -12,6 +13,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Iron Blade": {
+    id: 1002,
     character: "Cloud",
     element: "Non-elemental",
     cAbility: "Blast Wave",
@@ -22,6 +24,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Hardedge": {
+    id: 1003,
     character: "Cloud",
     element: "Non-elemental",
     cAbility: "Armor Break",
@@ -32,6 +35,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Mythril Saber": {
+    id: 1004,
     character: "Cloud",
     element: "Non-elemental",
     cAbility: "Blade Burst",
@@ -42,6 +46,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Butterfly Edge": {
+    id: 1006,
     character: "Cloud",
     element: "Non-elemental",
     cAbility: "Stalwart Barrier",
@@ -52,6 +57,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Murasame": {
+    id: 1007,
     character: "Cloud",
     element: "Lightning",
     cAbility: "Thunderstrike",
@@ -62,6 +68,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Organics": {
+    id: 1008,
     character: "Cloud",
     element: "Non-elemental",
     cAbility: "Shock Slice",
@@ -72,6 +79,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Crystal Sword": {
+    id: 1009,
     character: "Cloud",
     element: "Non-elemental",
     cAbility: "Healing Wave",
@@ -82,6 +90,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Enhance Sword": {
+    id: 1012,
     character: "Cloud",
     element: "Ice",
     cAbility: "Blizzaga A (1)",
@@ -92,6 +101,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Nail Bat": {
+    id: 1013,
     character: "Cloud",
     element: "Non-elemental",
     cAbility: "Disorder",
@@ -102,6 +112,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Apocalypse": {
+    id: 1015,
     character: "Cloud",
     element: "Non-elemental",
     cAbility: "Bloody End",
@@ -112,6 +123,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Maritime Sword": {
+    id: 1020,
     character: "Cloud",
     element: "Water",
     cAbility: "Seasplitter",
@@ -122,6 +134,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Shiva's Blade": {
+    id: 1024,
     character: "Cloud",
     element: "Ice",
     cAbility: "Blizzara Surge (1)",
@@ -132,6 +145,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Bandaged Sword": {
+    id: 1025,
     character: "Cloud",
     element: "Non-elemental",
     cAbility: "Sanctuary",
@@ -142,6 +156,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Skysplitter": {
+    id: 1028,
     character: "Cloud",
     element: "Fire",
     cAbility: "Blazing Strike",
@@ -152,6 +167,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Zidane's Sword": {
+    id: 1029,
     character: "Cloud",
     element: "Non-elemental",
     cAbility: "Free Energy",
@@ -162,6 +178,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Holiday Cheer": {
+    id: 1030,
     character: "Cloud",
     element: "Earth",
     cAbility: "Quakera Surge A (1)",
@@ -172,6 +189,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Stream Saber": {
+    id: 1031,
     character: "Cloud",
     element: "Ice",
     cAbility: "Freezing Stream",
@@ -182,6 +200,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Igneous Saber": {
+    id: 1032,
     character: "Cloud",
     element: "Fire",
     cAbility: "Fira Surge A (1)",
@@ -192,6 +211,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Glavenus Sword": {
+    id: 1033,
     character: "Cloud",
     element: "Non-elemental",
     cAbility: "Fierce Charged Slash",
@@ -202,6 +222,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Rune Blade": {
+    id: 1034,
     character: "Cloud",
     element: "Ice",
     cAbility: "Blizzara Surge A (1)",
@@ -212,6 +233,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Burning Oar": {
+    id: 1035,
     character: "Cloud",
     element: "Fire",
     cAbility: "Fira Impact (1)",
@@ -222,6 +244,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Bahamut Greatsword": {
+    id: 1036,
     character: "Cloud",
     element: "Non-elemental",
     cAbility: "Fierce Claw",
@@ -232,6 +255,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Gatling Gun": {
+    id: 2001,
     character: "Barret",
     element: "Non-elemental",
     cAbility: "Blitz Beat",
@@ -242,6 +266,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Assault Gun": {
+    id: 2002,
     character: "Barret",
     element: "Non-elemental",
     cAbility: "Agitation",
@@ -252,6 +277,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Heavy Vulcan": {
+    id: 2007,
     character: "Barret",
     element: "Non-elemental",
     cAbility: "Stalwart Manaward (1)",
@@ -262,6 +288,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Microlaser": {
+    id: 2008,
     character: "Barret",
     element: "Non-elemental",
     cAbility: "Stalwart Faith (1)",
@@ -272,6 +299,7 @@ export const weaponsData: Weapons = {
     }
   },
   "W Machine": {
+    id: 2010,
     character: "Barret",
     element: "Non-elemental",
     cAbility: "Quick Burst",
@@ -282,6 +310,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Solid Bazooka": {
+    id: 2011,
     character: "Barret",
     element: "Non-elemental",
     cAbility: "Doom Impact",
@@ -292,6 +321,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Enemy Launcher": {
+    id: 2012,
     character: "Barret",
     element: "Non-elemental",
     cAbility: "Chain Bomber",
@@ -302,6 +332,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Max Ray": {
+    id: 2013,
     character: "Barret",
     element: "Non-elemental",
     cAbility: "Energy Laser",
@@ -312,6 +343,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Flame Projector": {
+    id: 2015,
     character: "Barret",
     element: "Fire",
     cAbility: "Firaga A (1)",
@@ -322,6 +354,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Heavy Hauser": {
+    id: 2018,
     character: "Barret",
     element: "Non-elemental",
     cAbility: "Pyroball",
@@ -332,6 +365,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Lefko Kypseli": {
+    id: 2019,
     character: "Barret",
     element: "Non-elemental",
     cAbility: "Solid Barrier (1)",
@@ -342,6 +376,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Rocket Punch": {
+    id: 2020,
     character: "Barret",
     element: "Non-elemental",
     cAbility: "Jet Fists",
@@ -352,6 +387,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Shiva Cannon": {
+    id: 2022,
     character: "Barret",
     element: "Ice",
     cAbility: "Blizzara Surge (2)",
@@ -362,6 +398,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Hell House Cannon": {
+    id: 2024,
     character: "Barret",
     element: "Non-elemental",
     cAbility: "Manara Breach Surge (1)",
@@ -372,6 +409,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Siege Cannon": {
+    id: 2025,
     character: "Barret",
     element: "Water",
     cAbility: "Watera Surge A (1)",
@@ -382,6 +420,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Electrocannon": {
+    id: 2017,
     character: "Barret",
     element: "Lightning",
     cAbility: "Energization",
@@ -392,6 +431,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Leviathan Buster": {
+    id: 2027,
     character: "Barret",
     element: "Water",
     cAbility: "Watera Surge (1)",
@@ -402,6 +442,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Sharkslayer": {
+    id: 2021,
     character: "Barret",
     element: "Non-elemental",
     cAbility: "Dorsal Fin Shot",
@@ -412,6 +453,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Leather Gloves": {
+    id: 3001,
     character: "Tifa",
     element: "Non-elemental",
     cAbility: "Omnistrike",
@@ -422,6 +464,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Grand Gloves": {
+    id: 3005,
     character: "Tifa",
     element: "Non-elemental",
     cAbility: "Vigor",
@@ -432,6 +475,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Sonic Striker": {
+    id: 3006,
     character: "Tifa",
     element: "Non-elemental",
     cAbility: "Divekick",
@@ -442,6 +486,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Tiger Fangs": {
+    id: 3007,
     character: "Tifa",
     element: "Non-elemental",
     cAbility: "Uppershot",
@@ -452,6 +497,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Crystal Gloves": {
+    id: 3010,
     character: "Tifa",
     element: "Lightning",
     cAbility: "Thundaga A (1)",
@@ -462,6 +508,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Motor Drive": {
+    id: 3011,
     character: "Tifa",
     element: "Wind",
     cAbility: "Sonic Spiral",
@@ -472,6 +519,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Kaiser Knuckles": {
+    id: 3013,
     character: "Tifa",
     element: "Non-elemental",
     cAbility: "Chi Trap",
@@ -482,6 +530,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Work Gloves": {
+    id: 3014,
     character: "Tifa",
     element: "Non-elemental",
     cAbility: "Wall of Will",
@@ -492,6 +541,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Powersoul": {
+    id: 3015,
     character: "Tifa",
     element: "Non-elemental",
     cAbility: "Savage Blast",
@@ -502,6 +552,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Lifeguard Wraps": {
+    id: 3019,
     character: "Tifa",
     element: "Non-elemental",
     cAbility: "Healing Waves",
@@ -512,6 +563,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Feathered Gloves": {
+    id: 3020,
     character: "Tifa",
     element: "Non-elemental",
     cAbility: "Featherstrike",
@@ -522,6 +574,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Bahamut Knuckles": {
+    id: 3024,
     character: "Tifa",
     element: "Non-elemental",
     cAbility: "Ruinra Surge (1)",
@@ -532,6 +585,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Holy Flame Gloves": {
+    id: 3025,
     character: "Tifa",
     element: "Ice",
     cAbility: "Freezing Blow",
@@ -542,6 +596,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Amarant's Claws": {
+    id: 3027,
     character: "Tifa",
     element: "Non-elemental",
     cAbility: "No Mercy",
@@ -552,6 +607,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Bunny Gloves": {
+    id: 3028,
     character: "Tifa",
     element: "Water",
     cAbility: "Aqua Splash",
@@ -562,6 +618,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Oven Mitts": {
+    id: 3029,
     character: "Tifa",
     element: "Non-elemental",
     cAbility: "Solid Bravery (1)",
@@ -572,6 +629,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Turks' Gloves": {
+    id: 3030,
     character: "Tifa",
     element: "Non-elemental",
     cAbility: "Armora Breach Surge (1)",
@@ -582,6 +640,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Guide Gloves": {
+    id: 3031,
     character: "Tifa",
     element: "Non-elemental",
     cAbility: "Zangan Fist",
@@ -592,6 +651,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Kirin Gloves": {
+    id: 3032,
     character: "Tifa",
     element: "Lightning",
     cAbility: "Spiral Levin Strike",
@@ -602,6 +662,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Shell Knuckles": {
+    id: 3033,
     character: "Tifa",
     element: "Fire",
     cAbility: "Spinning Fervor",
@@ -612,6 +673,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Steward Gloves": {
+    id: 3034,
     character: "Tifa",
     element: "Non-elemental",
     cAbility: "Debravera Surge (1)",
@@ -622,6 +684,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Guard Stick": {
+    id: 4001,
     character: "Aerith",
     element: "Non-elemental",
     cAbility: "Stalwart Manaward (2)",
@@ -632,6 +695,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Silver Staff": {
+    id: 4002,
     character: "Aerith",
     element: "Ice",
     cAbility: "Blizzaga A (2)",
@@ -642,6 +706,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Striking Staff": {
+    id: 4003,
     character: "Aerith",
     element: "Non-elemental",
     cAbility: "Tempest Force",
@@ -652,6 +717,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Mythril Rod": {
+    id: 4004,
     character: "Aerith",
     element: "Non-elemental",
     cAbility: "Saving Grace",
@@ -662,6 +728,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Full Metal Staff": {
+    id: 4005,
     character: "Aerith",
     element: "Non-elemental",
     cAbility: "Heavenly Spike",
@@ -672,6 +739,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Prism Rod": {
+    id: 4007,
     character: "Aerith",
     element: "Wind",
     cAbility: "Raging Sphere",
@@ -682,6 +750,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Fairy Tale": {
+    id: 4008,
     character: "Aerith",
     element: "Non-elemental",
     cAbility: "Curaga A",
@@ -692,6 +761,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Wizard Staff": {
+    id: 4009,
     character: "Aerith",
     element: "Lightning",
     cAbility: "Thundaga A (2)",
@@ -702,6 +772,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Wizer Staff": {
+    id: 4010,
     character: "Aerith",
     element: "Earth",
     cAbility: "Quaga A (1)",
@@ -712,6 +783,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Sun Umbrella": {
+    id: 4014,
     character: "Aerith",
     element: "Non-elemental",
     cAbility: "Nightbloom",
@@ -722,6 +794,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Floral Wand": {
+    id: 4015,
     character: "Aerith",
     element: "Non-elemental",
     cAbility: "Floral Flare",
@@ -732,6 +805,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Umbrella": {
+    id: 4016,
     character: "Aerith",
     element: "Non-elemental",
     cAbility: "Cleansing Rain",
@@ -742,6 +816,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Chocobo Staff": {
+    id: 4019,
     character: "Aerith",
     element: "Non-elemental",
     cAbility: "Solid Manaward (1)",
@@ -752,6 +827,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Snowflake": {
+    id: 4020,
     character: "Aerith",
     element: "Ice",
     cAbility: "Snowspell",
@@ -762,6 +838,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Ramuh's Staff": {
+    id: 4021,
     character: "Aerith",
     element: "Lightning",
     cAbility: "Thundara Surge (1)",
@@ -772,6 +849,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Garnet's Rod": {
+    id: 4022,
     character: "Aerith",
     element: "Non-elemental",
     cAbility: "Healing Pulse",
@@ -782,6 +860,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Egg Staff": {
+    id: 4023,
     character: "Aerith",
     element: "Fire",
     cAbility: "Helical Flame",
@@ -792,6 +871,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Dawn's Prayers": {
+    id: 4024,
     character: "Aerith",
     element: "Non-elemental",
     cAbility: "Armora Breach Surge (2)",
@@ -802,6 +882,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Kamura Wand": {
+    id: 4025,
     character: "Aerith",
     element: "Non-elemental",
     cAbility: "Spiritual Harmony",
@@ -812,6 +893,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Radrod": {
+    id: 4026,
     character: "Aerith",
     element: "Water",
     cAbility: "Watera Surge A (2)",
@@ -822,6 +904,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Hell House Rod": {
+    id: 4027,
     character: "Aerith",
     element: "Ice",
     cAbility: "Blizzara Surge A (2)",
@@ -832,6 +915,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Citric Wand": {
+    id: 4028,
     character: "Aerith",
     element: "Non-elemental",
     cAbility: "Fruitful Energy",
@@ -842,6 +926,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Bahamut Rod": {
+    id: 4029,
     character: "Aerith",
     element: "Non-elemental",
     cAbility: "Blessed Aura",
@@ -852,6 +937,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Sleek Collar": {
+    id: 5001,
     character: "Red XIII",
     element: "Non-elemental",
     cAbility: "Manaward A",
@@ -862,6 +948,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Gold Collar": {
+    id: 5005,
     character: "Red XIII",
     element: "Non-elemental",
     cAbility: "Eternal Storm",
@@ -872,6 +959,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Platinum Collar": {
+    id: 5009,
     character: "Red XIII",
     element: "Non-elemental",
     cAbility: "Therapeutic Touch",
@@ -882,6 +970,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Noble Collar": {
+    id: 5016,
     character: "Red XIII",
     element: "Water",
     cAbility: "Waterga A (1)",
@@ -892,6 +981,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Rage Collar": {
+    id: 5018,
     character: "Red XIII",
     element: "Fire",
     cAbility: "Blaze Rush",
@@ -902,6 +992,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Leather Collar": {
+    id: 5019,
     character: "Red XIII",
     element: "Non-elemental",
     cAbility: "Sonic Fangs",
@@ -912,6 +1003,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Rubber Collar": {
+    id: 5020,
     character: "Red XIII",
     element: "Non-elemental",
     cAbility: "Mystic Flow",
@@ -922,6 +1014,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Junk Collar": {
+    id: 5021,
     character: "Red XIII",
     element: "Non-elemental",
     cAbility: "Frenzied Fang",
@@ -932,6 +1025,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Canyon Collar": {
+    id: 5023,
     character: "Red XIII",
     element: "Wind",
     cAbility: "Canyon Gale",
@@ -942,6 +1036,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Iron Collar": {
+    id: 5026,
     character: "Red XIII",
     element: "Non-elemental",
     cAbility: "Spiral Swing (1)",
@@ -952,6 +1047,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Headphones": {
+    id: 5027,
     character: "Red XIII",
     element: "Non-elemental",
     cAbility: "Wild Howling",
@@ -962,6 +1058,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Seaside Collar": {
+    id: 5028,
     character: "Red XIII",
     element: "Non-elemental",
     cAbility: "Power Fang",
@@ -972,6 +1069,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Hell House Collar": {
+    id: 5031,
     character: "Red XIII",
     element: "Non-elemental",
     cAbility: "Manara Breach Surge (2)",
@@ -982,6 +1080,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Flame Dragon's Band": {
+    id: 5032,
     character: "Red XIII",
     element: "Non-elemental",
     cAbility: "Defira Surge (1)",
@@ -992,6 +1091,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Egg Collar": {
+    id: 5033,
     character: "Red XIII",
     element: "Fire",
     cAbility: "Fira Surge A (2)",
@@ -1002,6 +1102,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Ivy Collar": {
+    id: 5017,
     character: "Red XIII",
     element: "Non-elemental",
     cAbility: "Growing Ivy",
@@ -1012,6 +1113,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Amethyst Collar": {
+    id: 5034,
     character: "Red XIII",
     element: "Ice",
     cAbility: "Blizzara Surge A (3)",
@@ -1022,6 +1124,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Silver Collar": {
+    id: 5004,
     character: "Red XIII",
     element: "Non-elemental",
     cAbility: "Rolling Claw",
@@ -1032,6 +1135,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Steward Collar": {
+    id: 5035,
     character: "Red XIII",
     element: "Non-elemental",
     cAbility: "Debravera Surge (2)",
@@ -1042,6 +1146,7 @@ export const weaponsData: Weapons = {
     }
   },
   "4-Point Shuriken": {
+    id: 6001,
     character: "Yuffie",
     element: "Non-elemental",
     cAbility: "Shuriken Throw",
@@ -1052,6 +1157,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Boomerang": {
+    id: 6002,
     character: "Yuffie",
     element: "Non-elemental",
     cAbility: "Flurry of Steel",
@@ -1062,6 +1168,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Pinwheel": {
+    id: 6003,
     character: "Yuffie",
     element: "Non-elemental",
     cAbility: "Sweeping Spin",
@@ -1072,6 +1179,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Razor Ring": {
+    id: 6004,
     character: "Yuffie",
     element: "Earth",
     cAbility: "Quaga A (2)",
@@ -1082,6 +1190,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Hawkeye": {
+    id: 6005,
     character: "Yuffie",
     element: "Earth",
     cAbility: "Earth Ninjutsu",
@@ -1092,6 +1201,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Crystal Cross": {
+    id: 6006,
     character: "Yuffie",
     element: "Non-elemental",
     cAbility: "Stalwart Faith (2)",
@@ -1102,6 +1212,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Wind Slash": {
+    id: 6007,
     character: "Yuffie",
     element: "Non-elemental",
     cAbility: "Nimble Wind Slash",
@@ -1112,6 +1223,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Twin Viper": {
+    id: 6008,
     character: "Yuffie",
     element: "Non-elemental",
     cAbility: "Venomstrike",
@@ -1122,6 +1234,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Spiral Shuriken": {
+    id: 6009,
     character: "Yuffie",
     element: "Ice",
     cAbility: "Ice Ninjutsu",
@@ -1132,6 +1245,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Magic Shuriken": {
+    id: 6010,
     character: "Yuffie",
     element: "Wind",
     cAbility: "Wind Ninjutsu",
@@ -1142,6 +1256,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Diner Tray": {
+    id: 6014,
     character: "Yuffie",
     element: "Wind",
     cAbility: "Twister",
@@ -1152,6 +1267,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Arctic Star": {
+    id: 6015,
     character: "Yuffie",
     element: "Non-elemental",
     cAbility: "Feisty Spirit",
@@ -1162,6 +1278,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Bamboo Ring": {
+    id: 6016,
     character: "Yuffie",
     element: "Non-elemental",
     cAbility: "Baddies Begone",
@@ -1172,6 +1289,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Chariot Wheel": {
+    id: 6022,
     character: "Yuffie",
     element: "Water",
     cAbility: "Watera Surge A (3)",
@@ -1182,6 +1300,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Leviathan Cutter": {
+    id: 6024,
     character: "Yuffie",
     element: "Water",
     cAbility: "Watera Surge (2)",
@@ -1192,6 +1311,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Striped Moogle Float": {
+    id: 6026,
     character: "Yuffie",
     element: "Fire",
     cAbility: "Explosion",
@@ -1202,6 +1322,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Cactuar Fan": {
+    id: 6027,
     character: "Yuffie",
     element: "Ice",
     cAbility: "Blizzara Surge A (4)",
@@ -1212,6 +1333,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Bahamut Cutter": {
+    id: 6028,
     character: "Yuffie",
     element: "Non-elemental",
     cAbility: "Razor Wings",
@@ -1222,6 +1344,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Yellow Megaphone": {
+    id: 7001,
     character: "Cait Sith",
     element: "Non-elemental",
     cAbility: "Sonic Meow",
@@ -1232,6 +1355,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Green Megaphone": {
+    id: 7002,
     character: "Cait Sith",
     element: "Water",
     cAbility: "Bloomin' Spray",
@@ -1242,6 +1366,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Blue Megaphone": {
+    id: 7003,
     character: "Cait Sith",
     element: "Ice",
     cAbility: "Blizzaga A (3)",
@@ -1252,6 +1377,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Red Megaphone": {
+    id: 7004,
     character: "Cait Sith",
     element: "Fire",
     cAbility: "Firaga A (2)",
@@ -1262,6 +1388,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Crystal Megaphone": {
+    id: 7005,
     character: "Cait Sith",
     element: "Non-elemental",
     cAbility: "Instant Barrier",
@@ -1272,6 +1399,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Silver Megaphone": {
+    id: 7008,
     character: "Cait Sith",
     element: "Non-elemental",
     cAbility: "Spinning Punch",
@@ -1282,6 +1410,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Gold Megaphone": {
+    id: 7009,
     character: "Cait Sith",
     element: "Non-elemental",
     cAbility: "Fat Cat Attack",
@@ -1292,6 +1421,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Battle Trumpet": {
+    id: 7010,
     character: "Cait Sith",
     element: "Non-elemental",
     cAbility: "Battle Drum",
@@ -1302,6 +1432,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Trumpet Shell": {
+    id: 7011,
     character: "Cait Sith",
     element: "Non-elemental",
     cAbility: "Shellmanship",
@@ -1312,6 +1443,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Marching Horn": {
+    id: 7014,
     character: "Cait Sith",
     element: "Non-elemental",
     cAbility: "Stalwart Bravery (1)",
@@ -1322,6 +1454,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Flower Vase": {
+    id: 7022,
     character: "Cait Sith",
     element: "Non-elemental",
     cAbility: "Hang in There",
@@ -1332,6 +1465,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Humus Megaphone": {
+    id: 7024,
     character: "Cait Sith",
     element: "Wind",
     cAbility: "Aerora Surge A (1)",
@@ -1342,6 +1476,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Catsmegaphone": {
+    id: 7023,
     character: "Cait Sith",
     element: "Non-elemental",
     cAbility: "Solid Bravery (2)",
@@ -1352,6 +1487,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Fireworks Megaphone": {
+    id: 7025,
     character: "Cait Sith",
     element: "Ice",
     cAbility: "Blizzara Surge A (5)",
@@ -1362,6 +1498,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Quina Megaphone": {
+    id: 7029,
     character: "Cait Sith",
     element: "Non-elemental",
     cAbility: "Comforting Cuisine",
@@ -1372,6 +1509,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Alba Megaphone": {
+    id: 7026,
     character: "Cait Sith",
     element: "Non-elemental",
     cAbility: "Ruinra Impact A (1)",
@@ -1382,6 +1520,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Cath Palug": {
+    id: 8002,
     character: "Vincent",
     element: "Ice",
     cAbility: "Blizzaga A (4)",
@@ -1392,6 +1531,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Gilded Age": {
+    id: 8003,
     character: "Vincent",
     element: "Non-elemental",
     cAbility: "Gilded Spirit",
@@ -1402,6 +1542,7 @@ export const weaponsData: Weapons = {
     }
   },
   "S1976C": {
+    id: 8004,
     character: "Vincent",
     element: "Non-elemental",
     cAbility: "Spellgun Shower",
@@ -1412,6 +1553,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Shortbarrel": {
+    id: 8005,
     character: "Vincent",
     element: "Wind",
     cAbility: "Stormround",
@@ -1422,6 +1564,7 @@ export const weaponsData: Weapons = {
     }
   },
   "T03 Model N": {
+    id: 8007,
     character: "Vincent",
     element: "Non-elemental",
     cAbility: "Quick Draw",
@@ -1432,6 +1575,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Sawed-Off GS": {
+    id: 8008,
     character: "Vincent",
     element: "Non-elemental",
     cAbility: "Wardshot",
@@ -1442,6 +1586,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Chiron": {
+    id: 8009,
     character: "Vincent",
     element: "Non-elemental",
     cAbility: "Sageshot",
@@ -1452,6 +1597,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Double Stem E": {
+    id: 8010,
     character: "Vincent",
     element: "Non-elemental",
     cAbility: "Poison Sphere",
@@ -1462,6 +1608,7 @@ export const weaponsData: Weapons = {
     }
   },
   "White Dog": {
+    id: 8012,
     character: "Vincent",
     element: "Earth",
     cAbility: "Sludge Shot",
@@ -1472,6 +1619,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Silver Rifle": {
+    id: 8014,
     character: "Vincent",
     element: "Non-elemental",
     cAbility: "Gunspinner Shot",
@@ -1482,6 +1630,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Hugin & Munin": {
+    id: 8015,
     character: "Vincent",
     element: "Non-elemental",
     cAbility: "Pentaburst Shot",
@@ -1492,6 +1641,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Quicksilver": {
+    id: 8017,
     character: "Vincent",
     element: "Non-elemental",
     cAbility: "Spinning Pentashot",
@@ -1502,6 +1652,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Type-99 Longsword": {
+    id: 20001,
     character: "Zack",
     element: "Non-elemental",
     cAbility: "Rapid Slash",
@@ -1512,6 +1663,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Beach Parasol": {
+    id: 20003,
     character: "Zack",
     element: "Non-elemental",
     cAbility: "Magic Ray (1)",
@@ -1522,6 +1674,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Enhance Sword (Z)": {
+    id: 20004,
     character: "Zack",
     element: "Non-elemental",
     cAbility: "Healing Vortex",
@@ -1532,6 +1685,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Defender": {
+    id: 20005,
     character: "Zack",
     element: "Non-elemental",
     cAbility: "Spirit Burst",
@@ -1542,6 +1696,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Crystal Sword (Z)": {
+    id: 20006,
     character: "Zack",
     element: "Fire",
     cAbility: "Firaga A (3)",
@@ -1552,6 +1707,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Falchion": {
+    id: 20007,
     character: "Zack",
     element: "Wind",
     cAbility: "Gale Blast",
@@ -1562,6 +1718,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Zweihander": {
+    id: 20008,
     character: "Zack",
     element: "Non-elemental",
     cAbility: "Slashing Thrust",
@@ -1572,6 +1729,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Arc Sword": {
+    id: 20009,
     character: "Zack",
     element: "Non-elemental",
     cAbility: "Homing Blast",
@@ -1582,6 +1740,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Cutlass": {
+    id: 20010,
     character: "Zack",
     element: "Non-elemental",
     cAbility: "Destructive Swipe",
@@ -1592,6 +1751,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Ceremonial Sword (Z)": {
+    id: 20011,
     character: "Zack",
     element: "Non-elemental",
     cAbility: "Ceremonial Slice",
@@ -1602,6 +1762,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Bouquet": {
+    id: 20013,
     character: "Zack",
     element: "Non-elemental",
     cAbility: "Floral Flourish",
@@ -1612,6 +1773,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Pressure Ridge": {
+    id: 20014,
     character: "Zack",
     element: "Ice",
     cAbility: "Freezing Cleave",
@@ -1622,6 +1784,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Iron Greatsword": {
+    id: 20015,
     character: "Zack",
     element: "Non-elemental",
     cAbility: "Spiral Swing (2)",
@@ -1632,6 +1795,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Ifrit's Sword": {
+    id: 20016,
     character: "Zack",
     element: "Fire",
     cAbility: "Fira Surge (4)",
@@ -1642,6 +1806,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Twinkling Star": {
+    id: 20018,
     character: "Zack",
     element: "Non-elemental",
     cAbility: "Dual Onslaught",
@@ -1652,6 +1817,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Black Whiskers": {
+    id: 20019,
     character: "Zack",
     element: "Non-elemental",
     cAbility: "Swirl Drop",
@@ -1662,6 +1828,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Stream Guard": {
+    id: 20020,
     character: "Zack",
     element: "Fire",
     cAbility: "Igniting Stream",
@@ -1672,6 +1839,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Zinogre Blade": {
+    id: 20023,
     character: "Zack",
     element: "Lightning",
     cAbility: "Lightning Edge",
@@ -1682,6 +1850,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Carrot Sword": {
+    id: 20024,
     character: "Zack",
     element: "Fire",
     cAbility: "Fira Surge A (3)",
@@ -1692,6 +1861,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Alba Blade": {
+    id: 20025,
     character: "Zack",
     element: "Non-elemental",
     cAbility: "Ruinra Impact A (2)",
@@ -1702,6 +1872,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Beatrix Sword": {
+    id: 20027,
     character: "Zack",
     element: "Wind",
     cAbility: "Gale Slash",
@@ -1712,6 +1883,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Nameless": {
+    id: 49001,
     character: "Sephiroth",
     element: "Non-elemental",
     cAbility: "Telluric Fury",
@@ -1722,6 +1894,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Edged Wings": {
+    id: 49002,
     character: "Sephiroth",
     element: "Ice",
     cAbility: "Aerial Frostblade",
@@ -1732,6 +1905,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Glaireid": {
+    id: 49003,
     character: "Sephiroth",
     element: "Non-elemental",
     cAbility: "Sweeping Slash",
@@ -1742,6 +1916,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Aonibi": {
+    id: 49004,
     character: "Sephiroth",
     element: "Non-elemental",
     cAbility: "Frenzied Stance",
@@ -1752,6 +1927,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Northern Lights": {
+    id: 49005,
     character: "Sephiroth",
     element: "Non-elemental",
     cAbility: "Radiant Aurora",
@@ -1762,6 +1938,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Prototype Crimson Blade": {
+    id: 49006,
     character: "Sephiroth",
     element: "Fire",
     cAbility: "Firaga A (4)",
@@ -1772,6 +1949,7 @@ export const weaponsData: Weapons = {
     }
   },
   "CC Alloy Sword": {
+    id: 49007,
     character: "Sephiroth",
     element: "Lightning",
     cAbility: "Thundaga A (3)",
@@ -1782,6 +1960,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Mythril Type-0 Katana": {
+    id: 49008,
     character: "Sephiroth",
     element: "Non-elemental",
     cAbility: "Steadfast Stance",
@@ -1792,6 +1971,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Shinra Blade: Model I": {
+    id: 49009,
     character: "Sephiroth",
     element: "Non-elemental",
     cAbility: "Shock Blast",
@@ -1802,6 +1982,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Torn Wing": {
+    id: 49012,
     character: "Sephiroth",
     element: "Non-elemental",
     cAbility: "Solid Barrier (2)",
@@ -1812,6 +1993,7 @@ export const weaponsData: Weapons = {
     }
   },
   "World Tree Bough": {
+    id: 49013,
     character: "Sephiroth",
     element: "Non-elemental",
     cAbility: "Heavenly Grasp",
@@ -1822,6 +2004,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Dark Heavens": {
+    id: 49015,
     character: "Sephiroth",
     element: "Wind",
     cAbility: "Gale Strike",
@@ -1832,6 +2015,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Kuja's Spirit Blade": {
+    id: 49016,
     character: "Sephiroth",
     element: "Non-elemental",
     cAbility: "Flare Star",
@@ -1842,6 +2026,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Radiant Edge": {
+    id: 49017,
     character: "Sephiroth",
     element: "Non-elemental",
     cAbility: "Iai",
@@ -1852,6 +2037,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Protector's Blade": {
+    id: 49018,
     character: "Sephiroth",
     element: "Non-elemental",
     cAbility: "Protector's Blow",
@@ -1862,6 +2048,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Flame Dragon Blade": {
+    id: 49019,
     character: "Sephiroth",
     element: "Non-elemental",
     cAbility: "Defira Surge (2)",
@@ -1872,6 +2059,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Ashura": {
+    id: 49020,
     character: "Sephiroth",
     element: "Fire",
     cAbility: "Fira Surge A (4)",
@@ -1882,6 +2070,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Shinra Military Sword": {
+    id: 49011,
     character: "Sephiroth",
     element: "Non-elemental",
     cAbility: "Theatrical Strike",
@@ -1892,6 +2081,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Shinra Wyvern Blade": {
+    id: 49023,
     character: "Sephiroth",
     element: "Non-elemental",
     cAbility: "Defira Surge A",
@@ -1902,6 +2092,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Tempest": {
+    id: 49010,
     character: "Sephiroth",
     element: "Water",
     cAbility: "Torrential Thrust",
@@ -1912,6 +2103,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Blue Bramble": {
+    id: 49024,
     character: "Sephiroth",
     element: "Earth",
     cAbility: "Sandsplitter",
@@ -1922,6 +2114,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Personal Style": {
+    id: 50001,
     character: "Glenn",
     element: "Non-elemental",
     cAbility: "Mad Bull",
@@ -1932,6 +2125,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Crewkicker": {
+    id: 50002,
     character: "Glenn",
     element: "Fire",
     cAbility: "Spinning Blaze",
@@ -1942,6 +2136,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Jiggy Fam": {
+    id: 50003,
     character: "Glenn",
     element: "Earth",
     cAbility: "Quaga A (3)",
@@ -1952,6 +2147,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Hardcore Squad": {
+    id: 50004,
     character: "Glenn",
     element: "Non-elemental",
     cAbility: "Good Vibes",
@@ -1962,6 +2158,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Rest in Peace": {
+    id: 50005,
     character: "Glenn",
     element: "Non-elemental",
     cAbility: "Hell's Penalty",
@@ -1972,6 +2169,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Ultimatic": {
+    id: 50007,
     character: "Glenn",
     element: "Non-elemental",
     cAbility: "Skullknocker",
@@ -1982,6 +2180,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Piece of Cake": {
+    id: 50008,
     character: "Glenn",
     element: "Non-elemental",
     cAbility: "Dual Slash",
@@ -1992,6 +2191,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Shockbuster": {
+    id: 50010,
     character: "Glenn",
     element: "Lightning",
     cAbility: "Thundaga A (4)",
@@ -2002,6 +2202,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Apology in Hell": {
+    id: 50011,
     character: "Glenn",
     element: "Non-elemental",
     cAbility: "Twin Hell",
@@ -2012,6 +2213,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Squeaky Hammer": {
+    id: 50014,
     character: "Glenn",
     element: "Non-elemental",
     cAbility: "Crushing Jump",
@@ -2022,6 +2224,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Inferno Grave": {
+    id: 50015,
     character: "Glenn",
     element: "Fire",
     cAbility: "Fira Surge (5)",
@@ -2032,6 +2235,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Pumpkin Lamppost": {
+    id: 50016,
     character: "Glenn",
     element: "Non-elemental",
     cAbility: "Stalwart Bravery (2)",
@@ -2042,6 +2246,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Thousand Waves": {
+    id: 50018,
     character: "Glenn",
     element: "Non-elemental",
     cAbility: "Magic Ray (2)",
@@ -2052,6 +2257,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Steiner's Blade": {
+    id: 50019,
     character: "Glenn",
     element: "Non-elemental",
     cAbility: "Power Break",
@@ -2062,6 +2268,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Stream Slasher": {
+    id: 50020,
     character: "Glenn",
     element: "Water",
     cAbility: "Flooding Stream",
@@ -2072,6 +2279,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Best Wishes": {
+    id: 50021,
     character: "Glenn",
     element: "Non-elemental",
     cAbility: "Armora Breach Surge (3)",
@@ -2082,6 +2290,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Radglaive": {
+    id: 50022,
     character: "Glenn",
     element: "Water",
     cAbility: "Watera Surge A (4)",
@@ -2092,6 +2301,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Silver Sol Buster": {
+    id: 50023,
     character: "Glenn",
     element: "Fire",
     cAbility: "Fira Surge A (5)",
@@ -2102,6 +2312,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Slay the Day": {
+    id: 50006,
     character: "Glenn",
     element: "Non-elemental",
     cAbility: "Rising Strike",
@@ -2112,6 +2323,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Broadsword: Axis": {
+    id: 51001,
     character: "Matt",
     element: "Non-elemental",
     cAbility: "Shoot & Slash",
@@ -2122,6 +2334,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Orthodox Raven": {
+    id: 51002,
     character: "Matt",
     element: "Water",
     cAbility: "Waterga A (2)",
@@ -2132,6 +2345,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Absolute Royal": {
+    id: 51003,
     character: "Matt",
     element: "Ice",
     cAbility: "Snowstorm",
@@ -2142,6 +2356,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Prime Number": {
+    id: 51004,
     character: "Matt",
     element: "Non-elemental",
     cAbility: "Healing Showers",
@@ -2152,6 +2367,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Espee Rapiere Next-G": {
+    id: 51005,
     character: "Matt",
     element: "Non-elemental",
     cAbility: "First Aid",
@@ -2162,6 +2378,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Core Defender": {
+    id: 51006,
     character: "Matt",
     element: "Non-elemental",
     cAbility: "Amulet Tribute",
@@ -2172,6 +2389,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Centipede": {
+    id: 51007,
     character: "Matt",
     element: "Non-elemental",
     cAbility: "Recovery Circle",
@@ -2182,6 +2400,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Stingray": {
+    id: 51008,
     character: "Matt",
     element: "Non-elemental",
     cAbility: "Core Sting",
@@ -2192,6 +2411,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Killer Hornet": {
+    id: 51009,
     character: "Matt",
     element: "Non-elemental",
     cAbility: "Killing Slash",
@@ -2202,6 +2422,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Bramble Spine": {
+    id: 51010,
     character: "Matt",
     element: "Non-elemental",
     cAbility: "Stalwart Bravery (3)",
@@ -2212,6 +2433,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Syringe Rapier": {
+    id: 51012,
     character: "Matt",
     element: "Non-elemental",
     cAbility: "Defending Jab",
@@ -2222,6 +2444,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Foam Sword": {
+    id: 51013,
     character: "Matt",
     element: "Non-elemental",
     cAbility: "Swing",
@@ -2232,6 +2455,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Slick Beetle": {
+    id: 51015,
     character: "Matt",
     element: "Non-elemental",
     cAbility: "X-Shot",
@@ -2242,6 +2466,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Bahamut Rapier": {
+    id: 51016,
     character: "Matt",
     element: "Non-elemental",
     cAbility: "Ruinra Surge (2)",
@@ -2252,6 +2477,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Holiday Cane": {
+    id: 51017,
     character: "Matt",
     element: "Earth",
     cAbility: "Quakera Surge A (2)",
@@ -2262,6 +2488,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Giant Fork": {
+    id: 51018,
     character: "Matt",
     element: "Non-elemental",
     cAbility: "Solid Bravery (3)",
@@ -2272,6 +2499,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Humus Rapier": {
+    id: 51020,
     character: "Matt",
     element: "Wind",
     cAbility: "Aerora Surge A (2)",
@@ -2282,6 +2510,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Firefish": {
+    id: 51022,
     character: "Matt",
     element: "Fire",
     cAbility: "Fira Impact (2)",
@@ -2292,6 +2521,7 @@ export const weaponsData: Weapons = {
     }
   },
   "V39": {
+    id: 52001,
     character: "Lucia",
     element: "Non-elemental",
     cAbility: "Pineapple Shot",
@@ -2302,6 +2532,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Pulse Gun": {
+    id: 52002,
     character: "Lucia",
     element: "Wind",
     cAbility: "Aeroga A",
@@ -2312,6 +2543,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Serpent Eater": {
+    id: 52003,
     character: "Lucia",
     element: "Water",
     cAbility: "Hydroshot",
@@ -2322,6 +2554,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Thunderbird": {
+    id: 52004,
     character: "Lucia",
     element: "Lightning",
     cAbility: "Laser Spark",
@@ -2332,6 +2565,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Tranquilizer Gun": {
+    id: 52005,
     character: "Lucia",
     element: "Non-elemental",
     cAbility: "Potion Volley",
@@ -2342,6 +2576,7 @@ export const weaponsData: Weapons = {
     }
   },
   "SSR1976": {
+    id: 52006,
     character: "Lucia",
     element: "Non-elemental",
     cAbility: "Stalwart Manaward (3)",
@@ -2352,6 +2587,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Mad Minute": {
+    id: 52007,
     character: "Lucia",
     element: "Non-elemental",
     cAbility: "Barrage",
@@ -2362,6 +2598,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Bald Eagle": {
+    id: 52009,
     character: "Lucia",
     element: "Non-elemental",
     cAbility: "Diving Burst",
@@ -2372,6 +2609,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Black Rifle": {
+    id: 52010,
     character: "Lucia",
     element: "Non-elemental",
     cAbility: "Quietude",
@@ -2382,6 +2620,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Rubber Band Gun": {
+    id: 52014,
     character: "Lucia",
     element: "Non-elemental",
     cAbility: "Parading Shot",
@@ -2392,6 +2631,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Featherscatter": {
+    id: 52015,
     character: "Lucia",
     element: "Non-elemental",
     cAbility: "Debravera Surge (3)",
@@ -2402,6 +2642,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Barn Swallow": {
+    id: 52016,
     character: "Lucia",
     element: "Non-elemental",
     cAbility: "Striking Quintet",
@@ -2412,6 +2653,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Pumpkin Blaster": {
+    id: 52017,
     character: "Lucia",
     element: "Non-elemental",
     cAbility: "Solid Manaward (2)",
@@ -2422,6 +2664,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Rifle of Levin": {
+    id: 52019,
     character: "Lucia",
     element: "Lightning",
     cAbility: "Thundara Surge (2)",
@@ -2432,6 +2675,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Holiday Revolver": {
+    id: 52020,
     character: "Lucia",
     element: "Earth",
     cAbility: "Rock Blast",
@@ -2442,6 +2686,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Vivi's Magical Gun": {
+    id: 52021,
     character: "Lucia",
     element: "Fire",
     cAbility: "Fira Surge A (6)",
@@ -2452,6 +2697,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Rose Musket": {
+    id: 52022,
     character: "Lucia",
     element: "Fire",
     cAbility: "Blazing Rose",
@@ -2462,6 +2708,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Turks' Rifle": {
+    id: 52023,
     character: "Lucia",
     element: "Non-elemental",
     cAbility: "Armora Breach Surge (4)",
@@ -2472,6 +2719,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Marine Shooter": {
+    id: 52025,
     character: "Lucia",
     element: "Non-elemental",
     cAbility: "Bullet Hail",
@@ -2482,6 +2730,7 @@ export const weaponsData: Weapons = {
     }
   },
   "Nightjar": {
+    id: 52013,
     character: "Lucia",
     element: "Non-elemental",
     cAbility: "Nightglint",

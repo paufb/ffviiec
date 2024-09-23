@@ -149,7 +149,10 @@ dialog.modal {
     height: 100%;
 
     & .column-middle-image {
+      display: flex;
       flex-grow: 1;
+      justify-content: center;
+      overflow: hidden;
     }
 
     & .column-middle-controls {
