@@ -1,9 +1,9 @@
 .page {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
-  margin: 4rem auto;
-  padding: 0 var(--app-padding);
+  gap: 2rem;
+  margin: 0 auto;
+  padding: var(--app-padding);
   max-width: 90rem;
 }
 
@@ -16,7 +16,7 @@
   width: 100%;
   padding: 0.75rem;
   box-sizing: border-box;
-  box-shadow: 0 0 0.5rem 0.2rem rgb(28, 117, 190);
+  border: 3px solid rgb(21, 81, 151);
 }
 
 .filters-container-row {
@@ -430,40 +430,28 @@
 }
 
 .grid-container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   gap: 1rem 0.75rem;
   padding: 0.75rem;
 }
 
-.weapon-grid-entry {
+.grid-entry {
   display: flex;
-  color: white;
-  width: 15rem;
+  flex-grow: 1;
   gap: 0.5rem;
+  color: white;
 
   &:hover {
     background-color: #0c305a;
     border-radius: 8px;
     cursor: pointer;
-
-    & .weapon-grid-image {
-      background-color: #08325e;
-      border-color: #2164ab;
-      outline-color: #2164ab;
-    }
   }
 
-  & .weapon-grid-entry-column {
+  & .grid-image-container {
     display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-  }
-
-  & .weapon-grid-image {
+    flex-grow: 0;
     position: relative;
-    width: 4rem;
-    height: 4rem;
     background-color: rgb(5, 41, 80);
     border-style: solid;
     border-color: rgb(21, 81, 151);
@@ -475,11 +463,11 @@
     padding: calc(0.125rem * 3);
   
     & img {
-      width: 4rem;
-      height: 4rem;
+      width: 5rem;
+      height: 5rem;
     }
   
-    & .weapon-grid-image-overboost-stars {
+    & .grid-image-overboost-stars {
       position: absolute;
       white-space: nowrap;
       display: flex;
@@ -487,6 +475,63 @@
       bottom: -0.25rem;
       right: 0;
       left: 0;
+    }
+  }
+
+  & .grid-entry-body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    & .grid-entry-body-row {
+      display: flex;
+      justify-content: space-between;
+      flex: 1;
+
+      & .grid-entry-column-1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    
+        & .grid-entry-column-row-1 {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+    
+          & img {
+            width: 1.15rem;
+            height: 1.15rem;
+          }
+        }
+      }
+    
+      & .grid-entry-column-2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 0.25rem;
+    
+        & .ability-icons {
+          display: flex;
+    
+          & img {
+            background-color: rgb(5, 40, 84);
+            border: 2px solid rgb(63, 117, 173);
+            box-sizing: border-box;
+          }
+    
+          & img:nth-child(1) {
+            width: 3rem;
+            height: 3rem;
+          }
+    
+          & img:nth-child(2),
+          & img:nth-child(3) {
+            width: 1.5rem;
+            height: 1.5rem;
+          }
+        }
+      }
     }
   }
 }

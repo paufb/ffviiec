@@ -1,3 +1,6 @@
+import PATKIcon from '../assets/stats/PATK.webp';
+import MATKIcon from '../assets/stats/MATK.webp';
+import HEALIcon from '../assets/stats/HEAL.webp';
 import { useEffect, useRef, useState } from 'react';
 import { ATBBarCost } from '../components/ATBBarCost.tsx';
 import { CharacterDiamond } from '../components/CharacterDiamond.tsx';
@@ -25,7 +28,7 @@ export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean })
   const [selectedWeaponLevel, setSelectedWeaponLevel] = useState(120);
   const [selectedOverboostLevel, setSelectedOverboostLevel] = useState(10);
   const [sortConfig, setSortConfig] = useState<SortConfig>({ column: null, direction: null });
-  const [layout, setLayout] = useState<Layout>('table');
+  const [layout, setLayout] = useState<Layout>('grid');
   const [selectedWeaponForModal, setSelectedWeaponForModal] = useState<keyof Weapons | null>(null);
   const [isDropdownVisible, setIsDropdownVisible] = useState<IsDropdownVisible>({ characters: false, elements: false });
   const dropdownRefs = {
@@ -388,16 +391,39 @@ export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean })
         {layout === "grid" && (
           <div className={styles["grid-container"]}>
             {Object.entries(filteredWeapons).map(([weaponName, weapon]) => (
-              <div key={weaponName} className={styles["weapon-grid-entry"]} onClick={() => openWeaponModal(weaponName)}>
-                <div className={styles["weapon-grid-image"]}>
+              <div key={weaponName} className={styles["grid-entry"]} onClick={() => openWeaponModal(weaponName)}>
+                <div className={styles["grid-image-container"]}>
                   <img src={""} title={weaponName} alt="" />
-                  <div className={styles["weapon-grid-image-overboost-stars"]}>
+                  <div className={styles["grid-image-overboost-stars"]}>
                     <OverboostStars level={selectedOverboostLevel} />
                   </div>
                 </div>
-                <div className={styles["weapon-grid-entry-column"]}>
+                <div className={styles['grid-entry-body']}>
                   {weaponName}
-                  <ATBBarCost cost={cAbilities[weapon.cAbility].atbCost} />
+                  <div className={styles['grid-entry-body-row']}>
+                    <div className={styles["grid-entry-column-1"]}>
+                      <div className={styles['grid-entry-column-row-1']}>
+                        <img src={PATKIcon} alt="" />
+                        <div>{getWeaponPAtk(weapon, selectedOverboostLevel)}</div>
+                      </div>
+                      <div className={styles['grid-entry-column-row-1']}>
+                        <img src={MATKIcon} alt="" />
+                        <div>{getWeaponMAtk(weapon, selectedOverboostLevel)}</div>
+                      </div>
+                      <div className={styles['grid-entry-column-row-1']}>
+                        <img src={HEALIcon} alt="" />
+                        <div>{getWeaponHeal(weapon, selectedOverboostLevel)}</div>
+                      </div>
+                    </div>
+                    <div className={styles["grid-entry-column-2"]}>
+                      <div className={styles['ability-icons']}>
+                        <img src={""} alt="" />
+                        <ElementIcon element={weapon.element} />
+                        <SigilIcon sigil={cAbilities[weapon.cAbility].sigil} />
+                      </div>
+                      <ATBBarCost cost={cAbilities[weapon.cAbility].atbCost} />
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}
