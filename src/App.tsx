@@ -32,8 +32,8 @@ function App() {
 
   return (
     <>
-      <AppBar isSidebarCollapsed={isSidebarCollapsed} isViewportNarrow={isViewportNarrow} toggleSidebar={toggleSidebar} />
-      <AppSidebar isCollapsed={isSidebarCollapsed} isViewportNarrow={isViewportNarrow} />
+      <AppBar isSidebarCollapsed={isSidebarCollapsed} toggleSidebar={toggleSidebar} />
+      <AppSidebar isCollapsed={isSidebarCollapsed} />
       <div className="background" />
       <main style={{ transition: 'padding 0.25s ease',
                      padding: `var(--app-bar-height) 0 0 ${isViewportNarrow || isSidebarCollapsed ? 'var(--app-sidebar-collapsed-width)' : 'var(--app-sidebar-width)'}` }}>

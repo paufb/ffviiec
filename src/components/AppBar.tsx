@@ -1,18 +1,13 @@
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { HamburgerMenuIcon } from './HamburgerMenuIcon';
 import styles from './AppBar.module.css';
 
 type AppBarProps = {
   isSidebarCollapsed: boolean;
-  isViewportNarrow: boolean;
   toggleSidebar: Function;
 }
 
-export function AppBar({ isSidebarCollapsed, isViewportNarrow, toggleSidebar }: AppBarProps) {
-  function setActive({ isActive }: { isActive: boolean }) {
-    return isActive ? styles['active'] : '';
-  }
-
+export function AppBar({ isSidebarCollapsed, toggleSidebar }: AppBarProps) {
   return (
     <div className={styles['app-bar']}>
       <div className={styles['container']}>

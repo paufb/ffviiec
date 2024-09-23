@@ -3,12 +3,11 @@ import MainIcon from '../assets/ui/main.png';
 import WeaponsIcon from '../assets/ui/enhance.png';
 import styles from './AppSidebar.module.css';
 
-interface SidebarProps {
+interface AppSidebarProps {
   isCollapsed: boolean;
-  isViewportNarrow: boolean;
 }
 
-export function AppSidebar({ isCollapsed, isViewportNarrow }: SidebarProps) {
+export function AppSidebar({ isCollapsed }: AppSidebarProps) {
   function getNavLinkClasses({ isActive }: { isActive: boolean }) {
     return `${styles['entry']}${isActive ? ` ${styles['active']}` : ''}`;
   }
