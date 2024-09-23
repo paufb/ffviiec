@@ -20,9 +20,7 @@ export function AppSidebar({ isCollapsed, collapseSidebar }: AppSidebarProps) {
           <NavLink to={'/'} className={getNavLinkClasses} onClick={() => collapseSidebar()}>
             <div className={styles['content']}>
               <img src={MainIcon} />
-              <div className={styles['title']}>
-                Home
-              </div>
+              Home
             </div>
           </NavLink>
         </li>
@@ -30,9 +28,7 @@ export function AppSidebar({ isCollapsed, collapseSidebar }: AppSidebarProps) {
           <NavLink to={'/weapons'} className={getNavLinkClasses} onClick={() => collapseSidebar()}>
             <div className={styles['content']}>
               <img src={WeaponsIcon} />
-              <div className={styles['title']}>
-                Weapons
-              </div>
+              Weapons
             </div>
           </NavLink>
         </li>

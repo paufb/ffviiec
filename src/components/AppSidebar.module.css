@@ -30,6 +30,7 @@
   color: white;
   position: relative;
   transition: background-color 0.25s ease;
+  overflow: hidden;
 
   &:not(.active):hover {
     background-color: rgba(51, 51, 51, 0.5);
@@ -49,10 +50,6 @@
     width: 2rem;
     height: 2rem;
     padding: 0 1rem;
-  }
-
-  & .title {
-    overflow: hidden;
   }
 
   &::before {
