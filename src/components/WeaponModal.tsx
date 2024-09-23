@@ -25,36 +25,28 @@ interface WeaponModalProps {
   getWeaponMAtk: Function;
   getWeaponHeal: Function;
   getWeaponCAbility: Function;
+  closeWeaponModal: Function;
 }
 
-export function WeaponModal({ weaponName, weapon, character, cAbility, selectedOverboostLevel, selectedWeaponLevel, getWeaponPAtk, getWeaponMAtk, getWeaponHeal, getWeaponCAbility }: WeaponModalProps) {
+export function WeaponModal({ weaponName, weapon, character, cAbility, selectedOverboostLevel, selectedWeaponLevel, getWeaponPAtk, getWeaponMAtk, getWeaponHeal, getWeaponCAbility, closeWeaponModal }: WeaponModalProps) {
   const [displayedOverboostLevel, setDisplayedOverboostLevel] = useState(selectedOverboostLevel);
 
   useEffect(() => {
     const modal = document.querySelector('#weapon-modal') as HTMLDialogElement;
     modal.addEventListener('click', (e) => {
       if (e.target instanceof HTMLDialogElement && e.target.nodeName === 'DIALOG') {
-        closeModal();
+        closeWeaponModal();
       }
     });
     modal.addEventListener('contextmenu', (e) => {
       e.preventDefault();
-      closeModal();
+      closeWeaponModal();
     })
   }, []);
 
   useEffect(() => {
     setDisplayedOverboostLevel(selectedOverboostLevel);
   }, [selectedOverboostLevel]);
-
-  function closeModal() {
-    const modal = document.querySelector('#weapon-modal') as HTMLDialogElement;
-    modal.setAttribute('closing', '');
-    modal.addEventListener('animationend', () => {
-      modal.removeAttribute('closing');
-      modal.close();
-    }, { once: true });
-  }
 
   function renderCurrentTier() {
     return displayedOverboostLevel === 0  ? 'C. Ability Tier 1'    :
@@ -85,7 +77,7 @@ export function WeaponModal({ weaponName, weapon, character, cAbility, selectedO
     <dialog id="weapon-modal" className={styles['modal']}>
       <header className={styles['modal-header']}>
         Weapon Details
-        <svg className={styles['close-button']} onClick={closeModal} height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+        <svg className={styles['close-button']} onClick={() => closeWeaponModal()} height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
       </header>
       <div className={styles['modal-body']}>
         <div className={styles['column-info']}>

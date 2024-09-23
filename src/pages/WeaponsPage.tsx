@@ -176,9 +176,18 @@ export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean })
   function openWeaponModal(weaponName: keyof Weapons) {
     setSelectedWeaponForModal(weaponName);
     setTimeout(() => {
-      const modal = document.querySelector('#weapon-modal') as HTMLDialogElement;
-      if (modal) modal.showModal();
+      (document.querySelector('#weapon-modal') as HTMLDialogElement)?.showModal();
     }, 0);
+  }
+
+  function closeWeaponModal() {
+    const modal = document.querySelector('#weapon-modal') as HTMLDialogElement;
+    modal.setAttribute('closing', '');
+    modal.addEventListener('animationend', () => {
+      modal.removeAttribute('closing');
+      modal.close();
+      setSelectedWeaponForModal(null);
+    }, { once: true });
   }
 
   return (
@@ -302,6 +311,7 @@ export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean })
         getWeaponMAtk={getWeaponMAtk}
         getWeaponHeal={getWeaponHeal}
         getWeaponCAbility={getWeaponCAbility}
+        closeWeaponModal={closeWeaponModal}
       />}
       <div className={styles["table-decoration"]}>
         {layout === "table" && (
