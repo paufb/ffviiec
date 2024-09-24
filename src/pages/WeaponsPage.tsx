@@ -9,14 +9,14 @@ import { OverboostStars } from '../components/OverboostStars.tsx';
 import { SigilIcon } from '../components/SigilIcon.tsx';
 import { WeaponIcon } from '../components/WeaponIcon.tsx';
 import { WeaponModal } from '../components/WeaponModal.tsx';
-import { Characters, CommandAbilities, Elements, Weapon, Weapons } from '../types.ts';
+import { sigils, Characters, CommandAbilities, Elements, SigilType, Weapon, Weapons } from '../types.ts';
 import styles from './WeaponsPage.module.css';
 
 export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean }) {
   type Column = 'weapon' | keyof Weapon['fiveStarLevel120'] | 'atbCost';
   type SortConfig = { column: null | Column; direction: null | 'asc' | 'desc'; }
   type Layout = 'table' | 'grid';
-  type IsDropdownVisible = { [key in 'characters' | 'elements']: boolean };
+  type IsDropdownVisible = { [key in 'characters' | 'elements' | 'sigils']: boolean };
 
   const [weapons, setWeapons] = useState<Weapons>({});
   const [elements, setElements] = useState<Elements>({});
@@ -24,17 +24,19 @@ export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean })
   const [cAbilities, setCAbilities] = useState<CommandAbilities>({});
   const [filteredWeapons, setFilteredWeapons] = useState<Weapons>({});
   const [nameQuery, setNameQuery] = useState('');
-  const [selectedElements, setSelectedElements] = useState<(keyof Elements)[]>([]);
   const [selectedCharacters, setSelectedCharacters] = useState<(keyof Characters)[]>([]);
+  const [selectedElements, setSelectedElements] = useState<(keyof Elements)[]>([]);
+  const [selectedSigils, setSelectedSigils] = useState<(SigilType)[]>([]);
   const [selectedWeaponLevel, setSelectedWeaponLevel] = useState(120);
   const [selectedOverboostLevel, setSelectedOverboostLevel] = useState(10);
   const [sortConfig, setSortConfig] = useState<SortConfig>({ column: null, direction: null });
   const [layout, setLayout] = useState<Layout>('grid');
   const [selectedWeaponForModal, setSelectedWeaponForModal] = useState<keyof Weapons | null>(null);
-  const [isDropdownVisible, setIsDropdownVisible] = useState<IsDropdownVisible>({ characters: false, elements: false });
+  const [isDropdownVisible, setIsDropdownVisible] = useState<IsDropdownVisible>({ characters: false, elements: false, sigils: false });
   const dropdownRefs = {
     characters: { menu: useRef<HTMLDivElement>(null), button: useRef<HTMLButtonElement>(null) },
-    elements: { menu: useRef<HTMLDivElement>(null), button: useRef<HTMLButtonElement>(null) }
+    elements: { menu: useRef<HTMLDivElement>(null), button: useRef<HTMLButtonElement>(null) },
+    sigils: { menu: useRef<HTMLDivElement>(null), button: useRef<HTMLButtonElement>(null) }
   };
 
   useEffect(() => {
@@ -55,10 +57,12 @@ export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean })
     const lowerCaseNameQuery = nameQuery.toLowerCase();
     const hasSelectedCharacters = selectedCharacters.length > 0;
     const hasSelectedElements = selectedElements.length > 0;
+    const hasSelectedSigils = selectedSigils.length > 0;
     let filteredEntries = Object.entries(weapons).filter(([weaponName, weapon]: [string, Weapon]) =>
       weaponName.toLowerCase().includes(lowerCaseNameQuery)
       && (!hasSelectedCharacters || selectedCharacters.includes(weapon.character))
       && (!hasSelectedElements || selectedElements.includes(weapon.element))
+      && (!hasSelectedSigils || selectedSigils.includes(cAbilities[weapon.cAbility].sigil))
     );
     if (sortConfig.column && sortConfig.direction) {
       filteredEntries = filteredEntries.sort(([weaponNameA, weaponA]: [string, Weapon], [weaponNameB, weaponB]: [string, Weapon]) => {
@@ -76,7 +80,7 @@ export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean })
       });
     }
     setFilteredWeapons(Object.fromEntries(filteredEntries));
-  }, [weapons, nameQuery, selectedCharacters, selectedElements, sortConfig, cAbilities]);
+  }, [weapons, nameQuery, selectedCharacters, selectedElements, selectedSigils, sortConfig, cAbilities]);
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -117,6 +121,15 @@ export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean })
       event.target.checked
         ? [...prevState, elementName]
         : prevState.filter(e => e !== elementName)
+    );
+  }
+
+  function handleSelectedSigilsChange(event: React.ChangeEvent<HTMLInputElement>) {
+    const sigilName = event.target.value;
+    setSelectedSigils(prevState =>
+      event.target.checked
+        ? [...prevState, sigilName]
+        : prevState.filter(s => s !== sigilName)
     );
   }
 
@@ -241,7 +254,7 @@ export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean })
             </button>
             <div ref={dropdownRefs.characters.menu} className={`${styles['dropdown']} ${isDropdownVisible.characters ? styles['dropdown--visible'] : ''}`}>
               {Object.entries(characters).map(([characterName, character]) => (
-                <label className={`${styles['character-toggle']} ${selectedCharacters.includes(characterName) ? styles['character-toggle--selected'] : ''} ${styles['downscale-on-click']}`} key={characterName}>
+                <label className={`${styles['togglable-button']} ${styles['togglable-button--character']} ${selectedCharacters.includes(characterName) ? styles['togglable-button--toggled'] : ''} ${styles['downscale-on-click']}`} key={characterName}>
                   <input
                     type="checkbox"
                     value={characterName}
@@ -249,9 +262,7 @@ export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean })
                     style={{ display: 'none' }}
                   />
                   <CharacterDiamond character={character} width="32px" />
-                  <div className={styles['character-toggle-name']}>
-                    {characterName}
-                  </div>
+                  {characterName}
                 </label>
               ))}
             </div>
@@ -268,7 +279,7 @@ export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean })
             </button>
             <div ref={dropdownRefs.elements.menu} className={`${styles['dropdown']} ${isDropdownVisible.elements ? styles['dropdown--visible'] : ''}`}>
               {Object.entries(elements).map(([elementName, _]) => (
-                <label className={`${styles['element-toggle']} ${selectedElements.includes(elementName) ? styles['element-toggle--selected'] : ''} ${styles['downscale-on-click']}`} key={elementName}>
+                <label className={`${styles['togglable-button']} ${styles['togglable-button--element']} ${selectedElements.includes(elementName) ? styles['togglable-button--toggled'] : ''} ${styles['downscale-on-click']}`} key={elementName}>
                   <input
                     type="checkbox"
                     value={elementName}
@@ -278,6 +289,33 @@ export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean })
                   <span
                     title={elementName}
                     style={{ backgroundImage: `url(${new URL(`../assets/elements/${elementName}.webp`, import.meta.url).href})` }}
+                  />
+                </label>
+              ))}
+            </div>
+          </div>
+          <div className={styles['dropdown-group']}>
+            <button
+              ref={dropdownRefs.sigils.button}
+              className={`${styles['dropdown-button']} ${styles['downscale-on-click']}`}
+              onClick={() => setIsDropdownVisible(prevState => ({...prevState, sigils: !prevState.sigils}))}
+            >
+              <img src={new URL(`../assets/ui/filter_${selectedSigils.length ? 'on' : 'off'}.png`, import.meta.url).href} alt="" />
+              Sigils
+              <span className="arrow-down" />
+            </button>
+            <div ref={dropdownRefs.sigils.menu} className={`${styles['dropdown']} ${isDropdownVisible.sigils ? styles['dropdown--visible'] : ''}`}>
+              {sigils.map(sigil => (
+                <label className={`${styles['togglable-button']} ${styles['togglable-button--sigil']} ${selectedSigils.includes(sigil) ? styles['togglable-button--toggled'] : ''} ${styles['downscale-on-click']}`} key={sigil}>
+                  <input
+                    type="checkbox"
+                    value={sigil}
+                    onChange={handleSelectedSigilsChange}
+                    style={{ display: 'none' }}
+                  />
+                  <span
+                    title={sigil}
+                    style={{ backgroundImage: `url(${new URL(`../assets/sigils/${sigil}.png`, import.meta.url).href})` }}
                   />
                 </label>
               ))}

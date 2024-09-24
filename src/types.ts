@@ -1,4 +1,5 @@
-export type SigilType = 'circle' | 'triangle' | 'cross' | 'rhombus' | 'square' | null;
+export const sigils = ['circle', 'triangle', 'cross', 'rhombus', 'square'];
+export type SigilType = typeof sigils[number] | null;
 
 export interface CommandAbility {
   atbCost: number;

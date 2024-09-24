@@ -190,39 +190,6 @@
   }
 }
 
-.character-toggle {
-  display: flex;
-  align-items: center;
-  --gap: 0.25rem;
-  gap: var(--gap);
-  color: white;
-  white-space: nowrap;
-  cursor: pointer;
-  background-color: rgb(5, 41, 80);
-  border-style: solid;
-  border-color: rgb(21, 81, 151);
-  border-radius: 4px;
-  border-width: 0.125rem;
-  outline: rgb(21, 81, 151) solid calc(0.3rem / 2.5);
-  outline-width: 0.125rem;
-  outline-offset: calc(-0.125rem * 3);
-  --top-and-bottom-padding: calc(0.125rem * 2);
-  --left-and-right-padding: calc(var(--top-and-bottom-padding) + var(--gap));
-  padding: var(--top-and-bottom-padding) var(--left-and-right-padding);
-
-  &:hover {
-    background-color: #08325e;
-    border-color: #2164ab;
-    outline-color: #2164ab;
-  }
-
-  &.character-toggle--selected {
-    background-color: rgb(13, 83, 157);
-    border-color: rgb(44, 128, 215);
-    outline-color: rgb(44, 128, 215);
-  }
-}
-
 .filter-level {
   display: flex;
   flex-wrap: nowrap;
@@ -245,12 +212,7 @@
   vertical-align: middle;
 }
 
-.element-toggle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.25rem;
-  height: 2.25rem;
+.togglable-button {
   cursor: pointer;
   background-color: rgb(5, 41, 80);
   border-style: solid;
@@ -260,7 +222,6 @@
   outline: rgb(21, 81, 151) solid calc(0.3rem / 2.5);
   outline-width: 0.125rem;
   outline-offset: calc(-0.125rem * 3);
-  padding: calc(0.125rem * 3);
 
   &:hover {
     background-color: #08325e;
@@ -268,16 +229,38 @@
     outline-color: #2164ab;
   }
 
-  &.element-toggle--selected {
+  &.togglable-button--toggled {
     background-color: rgb(13, 83, 157);
     border-color: rgb(44, 128, 215);
     outline-color: rgb(44, 128, 215);
   }
 
-  & span {
-    background-size: 100%;
-    width: 100%;
-    height: 100%;
+  &.togglable-button--character {
+    display: flex;
+    align-items: center;
+    --gap: 0.25rem;
+    gap: var(--gap);
+    color: white;
+    white-space: nowrap;
+    --top-and-bottom-padding: calc(0.125rem * 2);
+    --left-and-right-padding: calc(var(--top-and-bottom-padding) + var(--gap));
+    padding: var(--top-and-bottom-padding) var(--left-and-right-padding);
+  }
+
+  &.togglable-button--element,
+  &.togglable-button--sigil {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    padding: calc(0.125rem * 3);
+  
+    & span {
+      background-size: 100%;
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 
