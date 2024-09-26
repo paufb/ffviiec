@@ -16,7 +16,7 @@ export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean })
   type Column = 'weapon' | keyof Weapon['fiveStarLevel120'] | 'atbCost';
   type SortConfig = { column: null | Column; direction: null | 'asc' | 'desc'; }
   type Layout = 'table' | 'grid';
-  type IsDropdownVisible = { [key in 'characters' | 'elements' | 'sigils']: boolean };
+  type IsDropdownVisible = { [key in 'overboost' | 'characters' | 'elements' | 'sigils']: boolean };
 
   const [weapons, setWeapons] = useState<Weapons>({});
   const [elements, setElements] = useState<Elements>({});
@@ -32,8 +32,9 @@ export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean })
   const [sortConfig, setSortConfig] = useState<SortConfig>({ column: null, direction: null });
   const [layout, setLayout] = useState<Layout>('grid');
   const [selectedWeaponForModal, setSelectedWeaponForModal] = useState<keyof Weapons | null>(null);
-  const [isDropdownVisible, setIsDropdownVisible] = useState<IsDropdownVisible>({ characters: false, elements: false, sigils: false });
+  const [isDropdownVisible, setIsDropdownVisible] = useState<IsDropdownVisible>({ overboost: false, characters: false, elements: false, sigils: false });
   const dropdownRefs = {
+    overboost: { menu: useRef<HTMLDivElement>(null), button: useRef<HTMLButtonElement>(null) },
     characters: { menu: useRef<HTMLDivElement>(null), button: useRef<HTMLButtonElement>(null) },
     elements: { menu: useRef<HTMLDivElement>(null), button: useRef<HTMLButtonElement>(null) },
     sigils: { menu: useRef<HTMLDivElement>(null), button: useRef<HTMLButtonElement>(null) }
@@ -104,6 +105,12 @@ export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean })
   function handleNameQueryChange(event: React.ChangeEvent<HTMLInputElement>) {
     const query = event.target.value;
     setNameQuery(query);
+  }
+
+  function handleSelectedOverboostLevelChange(event: React.ChangeEvent<HTMLInputElement>) {
+    const selectedLevel = parseInt(event.target.value);
+    setSelectedOverboostLevel(selectedLevel);
+    setIsDropdownVisible(prevState => ({...prevState, overboost: !prevState.overboost}));
   }
 
   function handleSelectedCharactersChange(event: React.ChangeEvent<HTMLInputElement>) {
@@ -215,27 +222,33 @@ export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean })
           </div>
           <div className={styles["level-and-overboost-container"]}>
             <div className={styles["filters-container-column"]}>
-              <div className={styles["filter"]}>
-                <div className={styles["filter-level"]}>
-                  Level
-                  <select defaultValue={selectedWeaponLevel} onChange={e => setSelectedWeaponLevel(parseInt(e.target.value))} disabled>
-                    {[...Array(120)].map((_, i) => <option key={i + 1} value={i + 1}>{i + 1}</option>)}
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div className={styles["filters-container-column"]}>
-              <div className={styles["filter"]}>
-                <div className={styles["filter-overboost"]}>
-                  Overboost
-                  <select defaultValue={selectedOverboostLevel} onChange={e => setSelectedOverboostLevel(parseInt(e.target.value))}>
-                    <option value="0">0</option>
-                    <option value="6">6</option>
-                    <option value="10">10</option>
-                  </select>
-                  <div className={styles["filter-overboost__stars"]}>
+              <div className={styles['selector-group']}>
+                <button
+                  ref={dropdownRefs.overboost.button}
+                  className={`${styles['selector-button']} ${styles['downscale-on-click']}`}
+                  onClick={() => setIsDropdownVisible(prevState => ({...prevState, overboost: !prevState.overboost}))}
+                >
+                  {selectedOverboostLevel}
+                  <div style={{ display: 'flex' }}>
                     <OverboostStars level={selectedOverboostLevel} />
                   </div>
+                  <span className="arrow-down" />
+                </button>
+                <div ref={dropdownRefs.overboost.menu} className={`${styles['selector']} ${isDropdownVisible.overboost ? styles['selector--visible'] : ''}`}>
+                  {[0, 6, 10].map(level => (
+                    <label className={`${styles['selectable-button']} ${styles['selectable-button--overboost']} ${level === selectedOverboostLevel ? styles['selectable-button--selected'] : ''} ${styles['downscale-on-click']}`} key={level}>
+                      <input
+                        type="checkbox"
+                        value={level}
+                        onChange={handleSelectedOverboostLevelChange}
+                        style={{ display: 'none' }}
+                      />
+                      {level}
+                      <div style={{ display: 'flex' }}>
+                        <OverboostStars level={level} />
+                      </div>
+                    </label>
+                  ))}
                 </div>
               </div>
             </div>
@@ -323,7 +336,6 @@ export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean })
           </div>
           <div className={styles["filter"]}>
             <div className={styles["filter-layout"]}>
-              Layout
               <div className={`${styles["layout-grid"]} ${layout === "grid" ? styles["layout-grid--selected"] : ""}`} onClick={() => setLayout("grid")}>
                 <svg height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M120-520v-320h320v320H120Zm0 400v-320h320v320H120Zm400-400v-320h320v320H520Zm0 400v-320h320v320H520ZM200-600h160v-160H200v160Zm400 0h160v-160H600v160Zm0 400h160v-160H600v160Zm-400 0h160v-160H200v160Zm400-400Zm0 240Zm-240 0Zm0-240Z"/></svg>
               </div>
