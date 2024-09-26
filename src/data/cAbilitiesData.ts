@@ -592,6 +592,19 @@ export const cAbilitiesData: { [key: string]: CommandAbility } = {
       pAtkDecreaseExt: ["6", "", "", "", "", "", "7", "7", "7", "7", "9"]
     }
   },
+  "Dark Strike": {
+    atbCost: 4,
+    sigil: null,
+    description: `${damage("Mag. Non-elem.", "Single Enemy", 10)}\nAlso, [Condition: First use] ${apply('Haste', 'Self', null, undefined, undefined)}\n${increase("MATK", "Mid", "All Allies", null, undefined, undefined, undefined)}`,
+    valuesByOverboost: {
+      damage: ["600", "720", "720", "720", "720", "720", "1,000", "1,000", "1,000", "1,000", "1,100"],
+      hasteDur: ["20", "20", "20", "20", "20", "20", "25", "25", "25", "25", "30"],
+      hasteExt: ["6", "6", "6", "6", "6", "6", "8", "8", "8", "8", "10"],
+      mAtkIncreaseDur: ["15", "20", "20", "20", "20", "20", "20", "20", "20", "20", "25"],
+      mAtkIncreaseExt: ["5", "7", "7", "7", "7", "7", "7", "7", "7", "7", "8"],
+      mAtkIncreaseMaxPot: ["Mid", "Mid", "Mid", "Mid", "Mid", "Mid", "High", "High", "High", "High", "High"]
+    }
+  },
   "Stalwart Manaward (2)": {
     atbCost: 4,
     sigil: null,

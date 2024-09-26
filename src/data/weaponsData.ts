@@ -683,6 +683,17 @@ export const weaponsData: Weapons = {
       heal: 154
     }
   },
+  "Bahamut Fangs": {
+    id: 3035,
+    character: "Tifa",
+    element: "Non-elemental",
+    cAbility: "Dark Strike",
+    fiveStarLevel120: {
+      pAtk: 212,
+      mAtk: 291,
+      heal: 154
+    }
+  },
   "Guard Stick": {
     id: 4001,
     character: "Aerith",
