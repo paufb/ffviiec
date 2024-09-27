@@ -2,6 +2,7 @@ export const sigils = ['circle', 'triangle', 'cross', 'rhombus', 'square'];
 export type SigilType = typeof sigils[number] | null;
 
 export interface CommandAbility {
+  id: number;
   atbCost: number;
   sigil: SigilType;
   description: string;

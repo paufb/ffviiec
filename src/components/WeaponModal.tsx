@@ -8,6 +8,7 @@ import { CommandAbility, Character, Weapon, Weapons } from '../types.ts';
 import { useEffect, useState } from 'react';
 import { ATBBarCost } from './ATBBarCost.tsx';
 import { CharacterDiamond } from './CharacterDiamond.tsx';
+import { CAbilityIcon } from './CAbilityIcon.tsx';
 import { ElementIcon } from './ElementIcon.tsx';
 import { OverboostStars } from './OverboostStars.tsx';
 import { SigilIcon } from './SigilIcon.tsx';
@@ -177,7 +178,7 @@ export function WeaponModal({ weaponName, weapon, character, cAbility, selectedO
             <div className={styles['column-abilities-cability-container']}>
               <div className={styles['column-abilities-cability-container-header']}>
                 <div className={styles['column-abilities-cability-container-header-icons']}>
-                  <img src="" alt="" className={styles['column-abilities-cability-container-header-icons-cability']} />
+                  <CAbilityIcon cAbility={cAbility} className={styles['column-abilities-cability-container-header-icons-cability']} />
                   <ElementIcon element={weapon.element} className={styles['column-abilities-cability-container-header-icons-element']} />
                   <SigilIcon sigil={cAbility.sigil} className={styles['column-abilities-cability-container-header-icons-sigil']} />
                 </div>

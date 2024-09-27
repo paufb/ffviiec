@@ -249,7 +249,7 @@ dialog.modal {
 
             & img {
               background-color: rgb(5, 40, 84);
-              border: 4px solid rgb(63, 117, 173);
+              border: 2px solid rgb(63, 117, 173);
             }
 
             & .column-abilities-cability-container-header-icons-cability {

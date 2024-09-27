@@ -4,6 +4,7 @@ import HEALIcon from '../assets/stats/HEAL.webp';
 import { useEffect, useRef, useState } from 'react';
 import { ATBBarCost } from '../components/ATBBarCost.tsx';
 import { CharacterDiamond } from '../components/CharacterDiamond.tsx';
+import { CAbilityIcon } from '../components/CAbilityIcon.tsx';
 import { ElementIcon } from '../components/ElementIcon.tsx';
 import { OverboostStars } from '../components/OverboostStars.tsx';
 import { SigilIcon } from '../components/SigilIcon.tsx';
@@ -415,7 +416,7 @@ export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean })
                             <OverboostStars level={selectedOverboostLevel} />
                           </div>
                           <div className={styles['table-data-weapon-container-icons']}>
-                            <img src="" alt="" />
+                            <CAbilityIcon cAbility={cAbilities[weapon.cAbility]} />
                             <ElementIcon element={weapon.element} />
                             <SigilIcon sigil={cAbilities[weapon.cAbility].sigil} />
                           </div>
@@ -478,7 +479,7 @@ export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean })
                     </div>
                     <div className={styles["grid-entry-column-2"]}>
                       <div className={styles['ability-icons']}>
-                        <img src={""} alt="" />
+                        <CAbilityIcon cAbility={cAbilities[weapon.cAbility]} />
                         <ElementIcon element={weapon.element} />
                         <SigilIcon sigil={cAbilities[weapon.cAbility].sigil} />
                       </div>
