@@ -4,17 +4,20 @@ import HEALIcon from '../assets/stats/HEAL.webp';
 import { useEffect, useRef, useState } from 'react';
 import { ATBBarCost } from '../components/ATBBarCost.tsx';
 import { CharacterDiamond } from '../components/CharacterDiamond.tsx';
-import { CAbilityIcon } from '../components/CAbilityIcon.tsx';
+import { CommandAbilityIcon } from '../components/CommandAbilityIcon.tsx';
 import { ElementIcon } from '../components/ElementIcon.tsx';
 import { OverboostStars } from '../components/OverboostStars.tsx';
 import { SigilIcon } from '../components/SigilIcon.tsx';
 import { WeaponIcon } from '../components/WeaponIcon.tsx';
 import { WeaponModal } from '../components/WeaponModal.tsx';
-import { sigils, Characters, CommandAbilities, Elements, SigilType, Weapon, Weapons } from '../types.ts';
+import { sigils, Characters, Elements, SigilType, WeaponType, Weapons } from '../types.ts';
 import styles from './WeaponsPage.module.css';
+import { Weapon } from '../models/Weapon.ts';
+import { UltimateWeapon } from '../models/UltimateWeapon.ts';
+import { UltimateStars } from '../components/UltimateStars.tsx';
 
 export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean }) {
-  type Column = 'weapon' | keyof Weapon['fiveStarLevel120'] | 'atbCost';
+  type Column = 'weapon' | keyof WeaponType['fiveStarLevel120'] | 'atbCost';
   type SortConfig = { column: null | Column; direction: null | 'asc' | 'desc'; }
   type Layout = 'table' | 'grid';
   type IsDropdownVisible = { [key in 'overboost' | 'characters' | 'elements' | 'sigils']: boolean };
@@ -22,17 +25,16 @@ export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean })
   const [weapons, setWeapons] = useState<Weapons>({});
   const [elements, setElements] = useState<Elements>({});
   const [characters, setCharacters] = useState<Characters>({});
-  const [cAbilities, setCAbilities] = useState<CommandAbilities>({});
   const [filteredWeapons, setFilteredWeapons] = useState<Weapons>({});
   const [nameQuery, setNameQuery] = useState('');
-  const [selectedCharacters, setSelectedCharacters] = useState<(keyof Characters)[]>([]);
+  const [selectedCharacterIds, setSelectedCharacterIds] = useState<number[]>([]);
   const [selectedElements, setSelectedElements] = useState<(keyof Elements)[]>([]);
   const [selectedSigils, setSelectedSigils] = useState<(SigilType)[]>([]);
   const [selectedWeaponLevel, setSelectedWeaponLevel] = useState(120);
   const [selectedOverboostLevel, setSelectedOverboostLevel] = useState(10);
   const [sortConfig, setSortConfig] = useState<SortConfig>({ column: null, direction: null });
   const [layout, setLayout] = useState<Layout>('grid');
-  const [selectedWeaponForModal, setSelectedWeaponForModal] = useState<keyof Weapons | null>(null);
+  const [selectedWeaponForModal, setSelectedWeaponForModal] = useState<Weapon | null>(null);
   const [isDropdownVisible, setIsDropdownVisible] = useState<IsDropdownVisible>({ overboost: false, characters: false, elements: false, sigils: false });
   const dropdownRefs = {
     overboost: { menu: useRef<HTMLDivElement>(null), button: useRef<HTMLButtonElement>(null) },
@@ -45,44 +47,42 @@ export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean })
     Promise.all([
       import('../data/weaponsData.ts'),
       import('../data/elementsData.ts'),
-      import('../data/charactersData.ts'),
-      import('../data/cAbilitiesData.ts')
-    ]).then(([weaponsModule, elementsModule, charactersModule, cAbilitiesModule]) => {
+      import('../data/charactersData.ts')
+    ]).then(([weaponsModule, elementsModule, charactersModule]) => {
       setWeapons(weaponsModule.weaponsData);
       setElements(elementsModule.elementsData);
       setCharacters(charactersModule.charactersData);
-      setCAbilities(cAbilitiesModule.cAbilitiesData);
     });
   }, []);
 
   useEffect(() => {
     const lowerCaseNameQuery = nameQuery.toLowerCase();
-    const hasSelectedCharacters = selectedCharacters.length > 0;
+    const hasSelectedCharacters = selectedCharacterIds.length > 0;
     const hasSelectedElements = selectedElements.length > 0;
     const hasSelectedSigils = selectedSigils.length > 0;
-    let filteredEntries = Object.entries(weapons).filter(([weaponName, weapon]: [string, Weapon]) =>
-      weaponName.toLowerCase().includes(lowerCaseNameQuery)
-      && (!hasSelectedCharacters || selectedCharacters.includes(weapon.character))
+    let filteredEntries = Object.entries(weapons).filter(([_, weapon]) =>
+      weapon.name.toLowerCase().includes(lowerCaseNameQuery)
+      && (!hasSelectedCharacters || selectedCharacterIds.includes(weapon.characterId))
       && (!hasSelectedElements || selectedElements.includes(weapon.element))
-      && (!hasSelectedSigils || selectedSigils.includes(cAbilities[weapon.cAbility].sigil))
+      && (!hasSelectedSigils || selectedSigils.includes(weapon.commandAbility.sigil))
     );
     if (sortConfig.column && sortConfig.direction) {
-      filteredEntries = filteredEntries.sort(([weaponNameA, weaponA]: [string, Weapon], [weaponNameB, weaponB]: [string, Weapon]) => {
+      filteredEntries = filteredEntries.sort(([_, weaponA], [__, weaponB]) => {
         if (sortConfig.column && ['pAtk', 'mAtk', 'heal'].includes(sortConfig.column)) {
-          const diff = weaponA.fiveStarLevel120[sortConfig.column as keyof Weapon['fiveStarLevel120']] - weaponB.fiveStarLevel120[sortConfig.column as keyof Weapon['fiveStarLevel120']];
+          const diff = weaponA.maxRarityStats[sortConfig.column] - weaponB.maxRarityStats[sortConfig.column];
           return sortConfig.direction === 'asc' ? diff : -diff;
         } else if (sortConfig.column === 'weapon') {
-          const comparison = weaponNameA.localeCompare(weaponNameB, 'en', { sensitivity: 'base' });
+          const comparison = weaponA.name.localeCompare(weaponB.name, 'en', { sensitivity: 'base' });
           return sortConfig.direction === 'asc' ? comparison : -comparison;
         } else if (sortConfig.column === 'atbCost') {
-          const diff = cAbilities[weaponA.cAbility].atbCost - cAbilities[weaponB.cAbility].atbCost;
+          const diff = weaponA.commandAbility.atbCost - weaponB.commandAbility.atbCost;
           return sortConfig.direction === 'asc' ? diff : -diff;
         }
         return 0;
       });
     }
     setFilteredWeapons(Object.fromEntries(filteredEntries));
-  }, [weapons, nameQuery, selectedCharacters, selectedElements, selectedSigils, sortConfig, cAbilities]);
+  }, [weapons, nameQuery, selectedCharacterIds, selectedElements, selectedSigils, sortConfig]);
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -115,11 +115,11 @@ export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean })
   }
 
   function handleSelectedCharactersChange(event: React.ChangeEvent<HTMLInputElement>) {
-    const characterName = event.target.value;
-    setSelectedCharacters(prevState =>
+    const characterId = parseInt(event.target.value);
+    setSelectedCharacterIds(prevState =>
       event.target.checked
-        ? [...prevState, characterName]
-        : prevState.filter(c => c !== characterName)
+        ? [...prevState, characterId]
+        : prevState.filter(cId => cId !== characterId)
     );
   }
 
@@ -159,43 +159,8 @@ export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean })
                                              <span style={{ marginLeft: '0.25rem' }} className="arrow-up-down" /> ;
   }
 
-  function getWeaponPAtk(weapon: Weapon, overboostLevel: number) {
-    const overboostLevelMultipliers = [0, 0.4, 0.3, 0.2, 0.1, 0.1, 0.1, 0.05, 0.05, 0.05, 0.05];
-    const basePAtk = weapon.fiveStarLevel120.pAtk;
-    let additionalPAtk = 0;
-    for (let i = 0; i <= overboostLevel; i++) {
-      additionalPAtk += basePAtk * overboostLevelMultipliers[i];
-    }
-    return Math.floor(basePAtk + additionalPAtk);
-  }
-
-  function getWeaponMAtk(weapon: Weapon, overboostLevel: number) {
-    const overboostLevelMultipliers = [0, 0.4, 0.3, 0.2, 0.1, 0.1, 0.1, 0.05, 0.05, 0.05, 0.05];
-    const baseMAtk = weapon.fiveStarLevel120.mAtk;
-    let additionalMAtk = 0;
-    for (let i = 0; i <= overboostLevel; i++) {
-      additionalMAtk += baseMAtk * overboostLevelMultipliers[i];
-    }
-    return Math.floor(baseMAtk + additionalMAtk);
-  }
-
-  function getWeaponHeal(weapon: Weapon, overboostLevel: number) {
-    const overboostLevelMultipliers = [0, 0.1, 0.05, 0.05, 0.04, 0.04, 0.04, 0.02, 0.02, 0.02, 0.02];
-    const baseHeal = weapon.fiveStarLevel120.heal;
-    let additionalHeal = 0;
-    for (let i = 0; i <= overboostLevel; i++) {
-      additionalHeal += baseHeal * overboostLevelMultipliers[i];
-    }
-    return Math.floor(baseHeal + additionalHeal);
-  }
-
-  function getWeaponCAbility(weapon: Weapon, overboostLevel: number) {
-    const { description, valuesByOverboost } = cAbilities[weapon.cAbility];
-    return description.replace(/\{\{(\w+)\}\}/g, (_, key) => valuesByOverboost[key][overboostLevel]);
-  }
-
-  function openWeaponModal(weaponName: keyof Weapons) {
-    setSelectedWeaponForModal(weaponName);
+  function openWeaponModal(weapon: Weapon) {
+    setSelectedWeaponForModal(weapon);
     setTimeout(() => {
       (document.querySelector('#weapon-modal') as HTMLDialogElement)?.showModal();
     }, 0);
@@ -222,6 +187,11 @@ export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean })
             </div>
           </div>
           <div className={styles["level-and-overboost-container"]}>
+            <div className={styles["filters-container-column"]}>
+              <select defaultValue={selectedWeaponLevel} onChange={e => setSelectedWeaponLevel(parseInt(e.target.value))} disabled>
+                {[...Array(120)].map((_, i) => <option key={i + 1} value={i + 1}>{i + 1}</option>)}
+              </select>
+            </div>
             <div className={styles["filters-container-column"]}>
               <div className={styles['selector-group']}>
                 <button
@@ -262,20 +232,20 @@ export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean })
               className={`${styles['dropdown-button']} ${styles['downscale-on-click']}`}
               onClick={() => setIsDropdownVisible(prevState => ({...prevState, characters: !prevState.characters}))}
             >
-              <img src={new URL(`../assets/ui/filter_${selectedCharacters.length ? 'on' : 'off'}.png`, import.meta.url).href} alt="" />
+              <img src={new URL(`../assets/ui/filter_${selectedCharacterIds.length ? 'on' : 'off'}.png`, import.meta.url).href} alt="" />
               Characters
               <span className="arrow-down" />
             </button>
             <div ref={dropdownRefs.characters.menu} className={`${styles['dropdown']} ${isDropdownVisible.characters ? styles['dropdown--visible'] : ''}`}>
               {Object.entries(characters).map(([characterName, character]) => (
-                <label className={`${styles['togglable-button']} ${styles['togglable-button--character']} ${selectedCharacters.includes(characterName) ? styles['togglable-button--toggled'] : ''} ${styles['downscale-on-click']}`} key={characterName}>
+                <label className={`${styles['togglable-button']} ${styles['togglable-button--character']} ${selectedCharacterIds.includes(character.id) ? styles['togglable-button--toggled'] : ''} ${styles['downscale-on-click']}`} key={characterName}>
                   <input
                     type="checkbox"
-                    value={characterName}
+                    value={character.id}
                     onChange={handleSelectedCharactersChange}
                     style={{ display: 'none' }}
                   />
-                  <CharacterDiamond character={character} width="32px" />
+                  <CharacterDiamond characterId={character.id} width="32px" />
                   {characterName}
                 </label>
               ))}
@@ -352,20 +322,13 @@ export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean })
         </div>
       </div>
       {selectedWeaponForModal && <WeaponModal
-        weaponName={selectedWeaponForModal}
-        weapon={weapons[selectedWeaponForModal]}
-        character={characters[weapons[selectedWeaponForModal].character]}
-        cAbility={cAbilities[weapons[selectedWeaponForModal].cAbility]}
+        weapon={selectedWeaponForModal}
         selectedOverboostLevel={selectedOverboostLevel}
         selectedWeaponLevel={selectedWeaponLevel}
-        getWeaponPAtk={getWeaponPAtk}
-        getWeaponMAtk={getWeaponMAtk}
-        getWeaponHeal={getWeaponHeal}
-        getWeaponCAbility={getWeaponCAbility}
         closeWeaponModal={closeWeaponModal}
       />}
       <div className={styles["table-decoration"]}>
-        {layout === "table" && (
+        {layout === 'table' && (
           <div className={styles["table-container"]}>
             <table className={styles["table"]}>
               <thead>
@@ -401,46 +364,46 @@ export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean })
                 </tr>
               </thead>
               <tbody>
-                {Object.entries(filteredWeapons).map(([weaponName, weapon]) => (
-                  <tr className={styles["table-row"]} key={weaponName} onClick={() => openWeaponModal(weaponName)}>
+                {Object.entries(filteredWeapons).map(([_, weapon]) => (
+                  <tr className={styles["table-row"]} key={weapon.name} onClick={() => openWeaponModal(weapon)}>
                     <td className={`${styles["table-data"]} ${styles["table-data--nowrap"]}`}>
                       <div className={styles["table-data-weapon-container-row"]}>
                         <div className={styles["table-data-weapon-container-column"]}>
-                          <CharacterDiamond character={characters[weapon.character]} height="64px" />
+                          <CharacterDiamond characterId={weapon.characterId} height="64px" />
                         </div>
                         <div className={styles["table-data-weapon-container-column"]}>
                           <div>
-                            {weaponName}
+                            {weapon.name}
                           </div>
                           <div>
                             <OverboostStars level={selectedOverboostLevel} />
                           </div>
                           <div className={styles['table-data-weapon-container-icons']}>
-                            <CAbilityIcon cAbility={cAbilities[weapon.cAbility]} />
+                            <CommandAbilityIcon commandAbility={weapon.commandAbility} />
                             <ElementIcon element={weapon.element} />
-                            <SigilIcon sigil={cAbilities[weapon.cAbility].sigil} />
+                            <SigilIcon sigil={weapon.commandAbility.sigil} />
                           </div>
                         </div>
                       </div>
                     </td>
                     <td className={`${styles["table-data"]} ${styles["table-data--centered"]}`}>
-                      {getWeaponPAtk(weapon, selectedOverboostLevel)}
+                      {weapon.getPAtk(selectedOverboostLevel)}
                     </td>
                     <td className={`${styles["table-data"]} ${styles["table-data--centered"]}`}>
-                      {getWeaponMAtk(weapon, selectedOverboostLevel)}
+                      {weapon.getMAtk(selectedOverboostLevel)}
                     </td>
                     <td className={`${styles["table-data"]} ${styles["table-data--centered"]}`}>
-                      {getWeaponHeal(weapon, selectedOverboostLevel)}
+                      {weapon.getHeal(selectedOverboostLevel)}
                     </td>
                     <td className={styles["table-data"]}>
                       <div className={styles["c-ability-container"]}>
                         <div className={styles["c-ability-header"]}>
-                          <ATBBarCost cost={cAbilities[weapon.cAbility].atbCost} />
+                          <ATBBarCost cost={weapon.commandAbility.atbCost} />
                           {weapon.cAbility}
                         </div>
                         <div className={styles["c-ability-separator"]} />
                         <div className={styles["table-data-c-ability"]}>
-                          {getWeaponCAbility(weapon, selectedOverboostLevel)}
+                          {weapon.getCAbilityDescription(selectedOverboostLevel)}
                         </div>
                       </div>
                     </td>
@@ -450,40 +413,44 @@ export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean })
             </table>
           </div>
         )}
-        {layout === "grid" && (
+        {layout === 'grid' && (
           <div className={styles["grid-container"]}>
-            {Object.entries(filteredWeapons).map(([weaponName, weapon]) => (
-              <div key={weaponName} className={styles["grid-entry"]} onClick={() => openWeaponModal(weaponName)}>
-                <div className={styles["grid-image-container"]}>
+            {Object.entries(filteredWeapons).map(([_, weapon]) => (
+              <div key={weapon.name} className={styles["grid-entry"]} onClick={() => openWeaponModal(weapon)}>
+                <div className={`${styles["grid-image-container"]} ${weapon instanceof UltimateWeapon ? styles['grid-image-container--ultimate'] : ''}`}>
                   <WeaponIcon weapon={weapon} />
                   <div className={styles["grid-image-overboost-stars"]}>
-                    <OverboostStars level={selectedOverboostLevel} />
+                    {weapon instanceof UltimateWeapon ? (
+                      <UltimateStars overlap={true} />
+                    ) : (
+                      <OverboostStars level={selectedOverboostLevel} overlap={true} />
+                    )}
                   </div>
                 </div>
                 <div className={styles['grid-entry-body']}>
-                  {weaponName}
+                  {weapon.name}
                   <div className={styles['grid-entry-body-row']}>
                     <div className={styles["grid-entry-column-1"]}>
                       <div className={styles['grid-entry-column-row-1']}>
                         <img src={PATKIcon} alt="" />
-                        <div>{getWeaponPAtk(weapon, selectedOverboostLevel)}</div>
+                        <div>{weapon.getPAtk(selectedOverboostLevel)}</div>
                       </div>
                       <div className={styles['grid-entry-column-row-1']}>
                         <img src={MATKIcon} alt="" />
-                        <div>{getWeaponMAtk(weapon, selectedOverboostLevel)}</div>
+                        <div>{weapon.getMAtk(selectedOverboostLevel)}</div>
                       </div>
                       <div className={styles['grid-entry-column-row-1']}>
                         <img src={HEALIcon} alt="" />
-                        <div>{getWeaponHeal(weapon, selectedOverboostLevel)}</div>
+                        <div>{weapon.getHeal(selectedOverboostLevel)}</div>
                       </div>
                     </div>
                     <div className={styles["grid-entry-column-2"]}>
                       <div className={styles['ability-icons']}>
-                        <CAbilityIcon cAbility={cAbilities[weapon.cAbility]} />
+                        <CommandAbilityIcon commandAbility={weapon.commandAbility} />
                         <ElementIcon element={weapon.element} />
-                        <SigilIcon sigil={cAbilities[weapon.cAbility].sigil} />
+                        <SigilIcon sigil={weapon.commandAbility.sigil} />
                       </div>
-                      <ATBBarCost cost={cAbilities[weapon.cAbility].atbCost} />
+                      <ATBBarCost cost={weapon.commandAbility.atbCost} />
                     </div>
                   </div>
                 </div>

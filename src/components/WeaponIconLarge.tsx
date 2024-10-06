@@ -1,4 +1,4 @@
-import { Weapon } from '../types.ts';
+import { Weapon } from '../models/Weapon.ts';
 
 interface WeaponIconLargeProps {
   weapon: Weapon;
@@ -9,7 +9,7 @@ export function WeaponIconLarge({ weapon, className }: WeaponIconLargeProps) {
   return (
     <img
       className={className}
-      src={new URL(`../assets/weapons_l/${weapon.id}.png`, import.meta.url).href}
+      src={new URL(`../assets/weapon_l/${weapon.id}.png`, import.meta.url).href}
       alt=""
     />
   );

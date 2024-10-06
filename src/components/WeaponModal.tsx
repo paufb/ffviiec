@@ -4,32 +4,27 @@ import MATKIcon from '../assets/stats/MATK.webp';
 import PDEFIcon from '../assets/stats/PDEF.webp';
 import MDEFIcon from '../assets/stats/MDEF.webp';
 import HEALIcon from '../assets/stats/HEAL.webp';
-import { CommandAbility, Character, Weapon, Weapons } from '../types.ts';
 import { useEffect, useState } from 'react';
 import { ATBBarCost } from './ATBBarCost.tsx';
 import { CharacterDiamond } from './CharacterDiamond.tsx';
-import { CAbilityIcon } from './CAbilityIcon.tsx';
+import { CommandAbilityIcon } from './CommandAbilityIcon.tsx';
 import { ElementIcon } from './ElementIcon.tsx';
 import { OverboostStars } from './OverboostStars.tsx';
 import { SigilIcon } from './SigilIcon.tsx';
 import { WeaponIconLarge } from './WeaponIconLarge.tsx';
 import styles from './WeaponModal.module.css';
+import { Weapon } from '../models/Weapon.ts';
+import { UltimateWeapon } from '../models/UltimateWeapon.ts';
+import { UltimateStars } from './UltimateStars.tsx';
 
 interface WeaponModalProps {
-  weaponName: keyof Weapons | null;
   weapon: Weapon;
-  character: Character;
-  cAbility: CommandAbility;
   selectedOverboostLevel: number;
   selectedWeaponLevel: number;
-  getWeaponPAtk: Function;
-  getWeaponMAtk: Function;
-  getWeaponHeal: Function;
-  getWeaponCAbility: Function;
   closeWeaponModal: Function;
 }
 
-export function WeaponModal({ weaponName, weapon, character, cAbility, selectedOverboostLevel, selectedWeaponLevel, getWeaponPAtk, getWeaponMAtk, getWeaponHeal, getWeaponCAbility, closeWeaponModal }: WeaponModalProps) {
+export function WeaponModal({ weapon, selectedOverboostLevel, selectedWeaponLevel, closeWeaponModal }: WeaponModalProps) {
   const [displayedOverboostLevel, setDisplayedOverboostLevel] = useState(selectedOverboostLevel);
 
   useEffect(() => {
@@ -83,13 +78,17 @@ export function WeaponModal({ weaponName, weapon, character, cAbility, selectedO
       <div className={styles['modal-body']}>
         <div className={styles['column-info']}>
           <div className={styles['column-info-header']}>
-            <CharacterDiamond character={character} height="64px" />
+            <CharacterDiamond characterId={weapon.characterId} height="64px" />
             <div className={styles['column-info-header-title']}>
               <div className={styles['column-info-header-title-name']}>
-                {weaponName}
+                {weapon.name}
               </div>
               <div className={styles['column-info-header-title-overboost']}>
-                <OverboostStars level={displayedOverboostLevel} size="1.5rem" />
+                {weapon instanceof UltimateWeapon ? (
+                  <UltimateStars size="1.5rem" />
+                ) : (
+                  <OverboostStars level={displayedOverboostLevel} size="1.5rem" />
+                )}
               </div>
               <div className={styles['column-info-header-title-level']}>
                 Lv. {selectedWeaponLevel}
@@ -114,7 +113,7 @@ export function WeaponModal({ weaponName, weapon, character, cAbility, selectedO
                 PATK
               </div>
               <div className={styles['column-info-stats-row-value']}>
-                {getWeaponPAtk(weapon, displayedOverboostLevel)}
+                {weapon.getPAtk(displayedOverboostLevel)}
               </div>
             </div>
             <div className={styles['column-info-stats-row']}>
@@ -123,7 +122,7 @@ export function WeaponModal({ weaponName, weapon, character, cAbility, selectedO
                 MATK
               </div>
               <div className={styles['column-info-stats-row-value']}>
-                {getWeaponMAtk(weapon, displayedOverboostLevel)}
+                {weapon.getMAtk(displayedOverboostLevel)}
               </div>
             </div>
             <div className={styles['column-info-stats-row']}>
@@ -150,7 +149,7 @@ export function WeaponModal({ weaponName, weapon, character, cAbility, selectedO
                 HEAL
               </div>
               <div className={styles['column-info-stats-row-value']}>
-                {getWeaponHeal(weapon, displayedOverboostLevel)}
+                {weapon.getHeal(displayedOverboostLevel)}
               </div>
             </div>
           </div>
@@ -178,18 +177,18 @@ export function WeaponModal({ weaponName, weapon, character, cAbility, selectedO
             <div className={styles['column-abilities-cability-container']}>
               <div className={styles['column-abilities-cability-container-header']}>
                 <div className={styles['column-abilities-cability-container-header-icons']}>
-                  <CAbilityIcon cAbility={cAbility} className={styles['column-abilities-cability-container-header-icons-cability']} />
+                  <CommandAbilityIcon commandAbility={weapon.commandAbility} className={styles['column-abilities-cability-container-header-icons-cability']} />
                   <ElementIcon element={weapon.element} className={styles['column-abilities-cability-container-header-icons-element']} />
-                  <SigilIcon sigil={cAbility.sigil} className={styles['column-abilities-cability-container-header-icons-sigil']} />
+                  <SigilIcon sigil={weapon.commandAbility.sigil} className={styles['column-abilities-cability-container-header-icons-sigil']} />
                 </div>
-                {weapon.cAbility}
+                {weapon.commandAbility.name}
                 <div className={styles['column-abilities-cability-container-header-atb']}>
-                  <ATBBarCost cost={cAbility.atbCost} />
+                  {!(weapon instanceof UltimateWeapon) && <ATBBarCost cost={weapon.commandAbility.atbCost} />}
                 </div>
               </div>
               <hr />
               <div className={styles['column-abilities-cability-container-description']}>
-                {getWeaponCAbility(weapon, displayedOverboostLevel)}
+                {weapon.getCAbilityDescription(displayedOverboostLevel)}
               </div>
             </div>
           </div>
