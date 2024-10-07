@@ -3,6 +3,7 @@ import { UltimateCommandAbility } from '../models/UltimateCommandAbility.ts';
 import { UltimateWeapon } from '../models/UltimateWeapon.ts';
 import { Weapon } from '../models/Weapon.ts';
 import { Weapons } from '../types.ts';
+import { reinforcementAbilitiesData } from './reinforcementAbilitiesData.ts';
 
 export const weaponsData: Weapons = {
   1001: new Weapon({
@@ -25,7 +26,11 @@ export const weaponsData: Weapons = {
       pAtk: 252,
       mAtk: 220,
       heal: 181
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[11001]
+    ]
   }),
   1002: new Weapon({
     id: 1002,
@@ -50,7 +55,11 @@ export const weaponsData: Weapons = {
       pAtk: 262,
       mAtk: 210,
       heal: 181
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10401],
+      reinforcementAbilitiesData[10801]
+    ]
   }),
   1003: new Weapon({
     id: 1003,
@@ -75,7 +84,11 @@ export const weaponsData: Weapons = {
       pAtk: 262,
       mAtk: 220,
       heal: 172
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[11001],
+      reinforcementAbilitiesData[30701]
+    ]
   }),
   1004: new Weapon({
     id: 1004,
@@ -97,7 +110,11 @@ export const weaponsData: Weapons = {
       pAtk: 231,
       mAtk: 252,
       heal: 172
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[51301]
+    ]
   }),
   1006: new Weapon({
     id: 1006,
@@ -122,7 +139,11 @@ export const weaponsData: Weapons = {
       pAtk: 273,
       mAtk: 210,
       heal: 172
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[51701]
+    ]
   }),
   1007: new Weapon({
     id: 1007,
@@ -144,7 +165,11 @@ export const weaponsData: Weapons = {
       pAtk: 278,
       mAtk: 205,
       heal: 170
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10201],
+      reinforcementAbilitiesData[20401]
+    ]
   }),
   1008: new Weapon({
     id: 1008,
@@ -167,7 +192,11 @@ export const weaponsData: Weapons = {
       pAtk: 262,
       mAtk: 212,
       heal: 178
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10501],
+      reinforcementAbilitiesData[30301]
+    ]
   }),
   1009: new Weapon({
     id: 1009,
@@ -189,7 +218,11 @@ export const weaponsData: Weapons = {
       pAtk: 225,
       mAtk: 207,
       heal: 213
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10601],
+      reinforcementAbilitiesData[30501]
+    ]
   }),
   1012: new Weapon({
     id: 1012,
@@ -211,7 +244,11 @@ export const weaponsData: Weapons = {
       pAtk: 225,
       mAtk: 262,
       heal: 168
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[11001],
+      reinforcementAbilitiesData[20301]
+    ]
   }),
   1013: new Weapon({
     id: 1013,
@@ -233,7 +270,11 @@ export const weaponsData: Weapons = {
       pAtk: 231,
       mAtk: 199,
       heal: 164
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[30201],
+      reinforcementAbilitiesData[51801]
+    ]
   }),
   1015: new Weapon({
     id: 1015,
@@ -255,7 +296,11 @@ export const weaponsData: Weapons = {
       pAtk: 257,
       mAtk: 212,
       heal: 182
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[11001],
+      reinforcementAbilitiesData[20701]
+    ]
   }),
   1020: new Weapon({
     id: 1020,
@@ -277,7 +322,11 @@ export const weaponsData: Weapons = {
       pAtk: 268,
       mAtk: 215,
       heal: 170
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10201],
+      reinforcementAbilitiesData[20601]
+    ]
   }),
   1024: new Weapon({
     id: 1024,
@@ -299,7 +348,11 @@ export const weaponsData: Weapons = {
       pAtk: 189,
       mAtk: 233,
       heal: 170
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[30201],
+      reinforcementAbilitiesData[10101]
+    ]
   }),
   1025: new Weapon({
     id: 1025,
@@ -324,7 +377,11 @@ export const weaponsData: Weapons = {
       pAtk: 218,
       mAtk: 252,
       heal: 182
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[30301]
+    ]
   }),
   1028: new Weapon({
     id: 1028,
@@ -346,7 +403,11 @@ export const weaponsData: Weapons = {
       pAtk: 281,
       mAtk: 205,
       heal: 168
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10201],
+      reinforcementAbilitiesData[20201]
+    ]
   }),
   1029: new Weapon({
     id: 1029,
@@ -368,7 +429,11 @@ export const weaponsData: Weapons = {
       pAtk: 273,
       mAtk: 218,
       heal: 165
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10201],
+      reinforcementAbilitiesData[51401]
+    ]
   }),
   1030: new Weapon({
     id: 1030,
@@ -390,7 +455,11 @@ export const weaponsData: Weapons = {
       pAtk: 201,
       mAtk: 214,
       heal: 175
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[10401]
+    ]
   }),
   1031: new Weapon({
     id: 1031,
@@ -412,7 +481,11 @@ export const weaponsData: Weapons = {
       pAtk: 283,
       mAtk: 204,
       heal: 168
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[11201],
+      reinforcementAbilitiesData[20301]
+    ]
   }),
   1032: new Weapon({
     id: 1032,
@@ -434,7 +507,11 @@ export const weaponsData: Weapons = {
       pAtk: 197,
       mAtk: 218,
       heal: 175
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[10501]
+    ]
   }),
   1033: new Weapon({
     id: 1033,
@@ -462,7 +539,11 @@ export const weaponsData: Weapons = {
       pAtk: 288,
       mAtk: 220,
       heal: 151
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[51401]
+    ]
   }),
   1034: new Weapon({
     id: 1034,
@@ -484,7 +565,11 @@ export const weaponsData: Weapons = {
       pAtk: 204,
       mAtk: 220,
       heal: 168
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[20301]
+    ]
   }),
   1035: new Weapon({
     id: 1035,
@@ -506,7 +591,11 @@ export const weaponsData: Weapons = {
       pAtk: 225,
       mAtk: 204,
       heal: 165
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10201],
+      reinforcementAbilitiesData[20201]
+    ]
   }),
   1036: new Weapon({
     id: 1036,
@@ -531,7 +620,11 @@ export const weaponsData: Weapons = {
       pAtk: 291,
       mAtk: 218,
       heal: 150
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[11201],
+      reinforcementAbilitiesData[51401]
+    ]
   }),
   1037: new UltimateWeapon({
     id: 1037,
@@ -548,7 +641,11 @@ export const weaponsData: Weapons = {
       pAtk: 172,
       mAtk: 172,
       heal: 129
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[51301],
+      reinforcementAbilitiesData[10401]
+    ]
   }),
   2001: new Weapon({
     id: 2001,
@@ -570,7 +667,11 @@ export const weaponsData: Weapons = {
       pAtk: 254,
       mAtk: 218,
       heal: 181
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[30601]
+    ]
   }),
   2002: new Weapon({
     id: 2002,
@@ -595,7 +696,11 @@ export const weaponsData: Weapons = {
       pAtk: 257,
       mAtk: 210,
       heal: 184
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10601],
+      reinforcementAbilitiesData[30301]
+    ]
   }),
   2007: new Weapon({
     id: 2007,
@@ -620,7 +725,11 @@ export const weaponsData: Weapons = {
       pAtk: 235,
       mAtk: 194,
       heal: 215
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10501],
+      reinforcementAbilitiesData[20501]
+    ]
   }),
   2008: new Weapon({
     id: 2008,
@@ -646,7 +755,11 @@ export const weaponsData: Weapons = {
       pAtk: 231,
       mAtk: 249,
       heal: 174
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10601],
+      reinforcementAbilitiesData[30201]
+    ]
   }),
   2010: new Weapon({
     id: 2010,
@@ -671,7 +784,11 @@ export const weaponsData: Weapons = {
       pAtk: 273,
       mAtk: 214,
       heal: 168
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10201],
+      reinforcementAbilitiesData[30401]
+    ]
   }),
   2011: new Weapon({
     id: 2011,
@@ -696,7 +813,11 @@ export const weaponsData: Weapons = {
       pAtk: 260,
       mAtk: 210,
       heal: 182
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[10801]
+    ]
   }),
   2012: new Weapon({
     id: 2012,
@@ -718,7 +839,11 @@ export const weaponsData: Weapons = {
       pAtk: 267,
       mAtk: 212,
       heal: 175
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[11001],
+      reinforcementAbilitiesData[51401]
+    ]
   }),
   2013: new Weapon({
     id: 2013,
@@ -740,7 +865,11 @@ export const weaponsData: Weapons = {
       pAtk: 233,
       mAtk: 252,
       heal: 170
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10401],
+      reinforcementAbilitiesData[10801]
+    ]
   }),
   2015: new Weapon({
     id: 2015,
@@ -762,7 +891,11 @@ export const weaponsData: Weapons = {
       pAtk: 236,
       mAtk: 243,
       heal: 174
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[20201]
+    ]
   }),
   2018: new Weapon({
     id: 2018,
@@ -784,7 +917,11 @@ export const weaponsData: Weapons = {
       pAtk: 252,
       mAtk: 214,
       heal: 185
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[11001],
+      reinforcementAbilitiesData[51301]
+    ]
   }),
   2019: new Weapon({
     id: 2019,
@@ -809,7 +946,11 @@ export const weaponsData: Weapons = {
       pAtk: 201,
       mAtk: 205,
       heal: 182
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[11001],
+      reinforcementAbilitiesData[10401]
+    ]
   }),
   2020: new Weapon({
     id: 2020,
@@ -831,7 +972,11 @@ export const weaponsData: Weapons = {
       pAtk: 235,
       mAtk: 191,
       heal: 167
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[30501],
+      reinforcementAbilitiesData[11401]
+    ]
   }),
   2022: new Weapon({
     id: 2022,
@@ -853,7 +998,11 @@ export const weaponsData: Weapons = {
       pAtk: 199,
       mAtk: 222,
       heal: 170
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[30201],
+      reinforcementAbilitiesData[11001]
+    ]
   }),
   2024: new Weapon({
     id: 2024,
@@ -877,7 +1026,11 @@ export const weaponsData: Weapons = {
       pAtk: 204,
       mAtk: 214,
       heal: 174
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[10401]
+    ]
   }),
   2025: new Weapon({
     id: 2025,
@@ -899,7 +1052,11 @@ export const weaponsData: Weapons = {
       pAtk: 199,
       mAtk: 215,
       heal: 175
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[20601]
+    ]
   }),
   2017: new Weapon({
     id: 2017,
@@ -926,7 +1083,11 @@ export const weaponsData: Weapons = {
       pAtk: 214,
       mAtk: 277,
       heal: 165
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[51501]
+    ]
   }),
   2027: new Weapon({
     id: 2027,
@@ -948,7 +1109,11 @@ export const weaponsData: Weapons = {
       pAtk: 201,
       mAtk: 226,
       heal: 165
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[30401],
+      reinforcementAbilitiesData[10101]
+    ]
   }),
   2021: new Weapon({
     id: 2021,
@@ -976,7 +1141,11 @@ export const weaponsData: Weapons = {
       pAtk: 254,
       mAtk: 235,
       heal: 167
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[51901]
+    ]
   }),
   2031: new UltimateWeapon({
     id: 2031,
@@ -993,7 +1162,11 @@ export const weaponsData: Weapons = {
       pAtk: 169,
       mAtk: 175,
       heal: 130
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10401],
+      reinforcementAbilitiesData[10101]
+    ]
   }),
   3001: new Weapon({
     id: 3001,
@@ -1018,7 +1191,11 @@ export const weaponsData: Weapons = {
       pAtk: 236,
       mAtk: 236,
       heal: 178
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10401],
+      reinforcementAbilitiesData[30401]
+    ]
   }),
   3005: new Weapon({
     id: 3005,
@@ -1040,7 +1217,11 @@ export const weaponsData: Weapons = {
       pAtk: 215,
       mAtk: 214,
       heal: 215
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10601],
+      reinforcementAbilitiesData[20601]
+    ]
   }),
   3006: new Weapon({
     id: 3006,
@@ -1062,7 +1243,11 @@ export const weaponsData: Weapons = {
       pAtk: 256,
       mAtk: 220,
       heal: 177
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[11001],
+      reinforcementAbilitiesData[30601]
+    ]
   }),
   3007: new Weapon({
     id: 3007,
@@ -1087,7 +1272,11 @@ export const weaponsData: Weapons = {
       pAtk: 273,
       mAtk: 215,
       heal: 167
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[10801]
+    ]
   }),
   3010: new Weapon({
     id: 3010,
@@ -1109,7 +1298,11 @@ export const weaponsData: Weapons = {
       pAtk: 225,
       mAtk: 256,
       heal: 174
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[20401]
+    ]
   }),
   3011: new Weapon({
     id: 3011,
@@ -1131,7 +1324,11 @@ export const weaponsData: Weapons = {
       pAtk: 254,
       mAtk: 222,
       heal: 177
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10201],
+      reinforcementAbilitiesData[20701]
+    ]
   }),
   3013: new Weapon({
     id: 3013,
@@ -1156,7 +1353,11 @@ export const weaponsData: Weapons = {
       pAtk: 214,
       mAtk: 273,
       heal: 168
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10501],
+      reinforcementAbilitiesData[30301]
+    ]
   }),
   3014: new Weapon({
     id: 3014,
@@ -1184,7 +1385,11 @@ export const weaponsData: Weapons = {
       pAtk: 235,
       mAtk: 197,
       heal: 161
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[30301],
+      reinforcementAbilitiesData[51801]
+    ]
   }),
   3015: new Weapon({
     id: 3015,
@@ -1206,7 +1411,11 @@ export const weaponsData: Weapons = {
       pAtk: 228,
       mAtk: 267,
       heal: 161
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[51501]
+    ]
   }),
   3019: new Weapon({
     id: 3019,
@@ -1228,7 +1437,11 @@ export const weaponsData: Weapons = {
       pAtk: 220,
       mAtk: 231,
       heal: 198
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10601],
+      reinforcementAbilitiesData[30201]
+    ]
   }),
   3020: new Weapon({
     id: 3020,
@@ -1256,7 +1469,11 @@ export const weaponsData: Weapons = {
       pAtk: 226,
       mAtk: 262,
       heal: 167
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[11001],
+      reinforcementAbilitiesData[20601]
+    ]
   }),
   3024: new Weapon({
     id: 3024,
@@ -1278,7 +1495,11 @@ export const weaponsData: Weapons = {
       pAtk: 207,
       mAtk: 225,
       heal: 161
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10501],
+      reinforcementAbilitiesData[10101]
+    ]
   }),
   3025: new Weapon({
     id: 3025,
@@ -1300,7 +1521,11 @@ export const weaponsData: Weapons = {
       pAtk: 278,
       mAtk: 201,
       heal: 174
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10201],
+      reinforcementAbilitiesData[20301]
+    ]
   }),
   3027: new Weapon({
     id: 3027,
@@ -1329,7 +1554,11 @@ export const weaponsData: Weapons = {
       pAtk: 268,
       mAtk: 220,
       heal: 167
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[51401]
+    ]
   }),
   3028: new Weapon({
     id: 3028,
@@ -1354,7 +1583,11 @@ export const weaponsData: Weapons = {
       pAtk: 207,
       mAtk: 281,
       heal: 167
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[20601]
+    ]
   }),
   3029: new Weapon({
     id: 3029,
@@ -1379,7 +1612,11 @@ export const weaponsData: Weapons = {
       pAtk: 222,
       mAtk: 212,
       heal: 160
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[10401]
+    ]
   }),
   3030: new Weapon({
     id: 3030,
@@ -1403,7 +1640,11 @@ export const weaponsData: Weapons = {
       pAtk: 226,
       mAtk: 207,
       heal: 160
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10201],
+      reinforcementAbilitiesData[51301]
+    ]
   }),
   3031: new Weapon({
     id: 3031,
@@ -1425,7 +1666,11 @@ export const weaponsData: Weapons = {
       pAtk: 262,
       mAtk: 214,
       heal: 177
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10201],
+      reinforcementAbilitiesData[51401]
+    ]
   }),
   3032: new Weapon({
     id: 3032,
@@ -1450,7 +1695,11 @@ export const weaponsData: Weapons = {
       pAtk: 205,
       mAtk: 283,
       heal: 167
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[20401]
+    ]
   }),
   3033: new Weapon({
     id: 3033,
@@ -1472,7 +1721,11 @@ export const weaponsData: Weapons = {
       pAtk: 220,
       mAtk: 275,
       heal: 161
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[20201]
+    ]
   }),
   3034: new Weapon({
     id: 3034,
@@ -1496,7 +1749,11 @@ export const weaponsData: Weapons = {
       pAtk: 218,
       mAtk: 222,
       heal: 154
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[51301]
+    ]
   }),
   3035: new Weapon({
     id: 3035,
@@ -1523,7 +1780,11 @@ export const weaponsData: Weapons = {
       pAtk: 212,
       mAtk: 291,
       heal: 154
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[11301],
+      reinforcementAbilitiesData[51501]
+    ]
   }),
   3037: new UltimateWeapon({
     id: 3037,
@@ -1540,7 +1801,11 @@ export const weaponsData: Weapons = {
       pAtk: 179,
       mAtk: 175,
       heal: 122
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[51301],
+      reinforcementAbilitiesData[10501]
+    ]
   }),
   3036: new Weapon({
     id: 3036,
@@ -1562,7 +1827,11 @@ export const weaponsData: Weapons = {
       pAtk: 212,
       mAtk: 226,
       heal: 157
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[20401]
+    ]
   }),
   4001: new Weapon({
     id: 4001,
@@ -1587,7 +1856,11 @@ export const weaponsData: Weapons = {
       pAtk: 199,
       mAtk: 241,
       heal: 206
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10601],
+      reinforcementAbilitiesData[51701]
+    ]
   }),
   4002: new Weapon({
     id: 4002,
@@ -1609,7 +1882,11 @@ export const weaponsData: Weapons = {
       pAtk: 199,
       mAtk: 273,
       heal: 181
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[11001],
+      reinforcementAbilitiesData[20301]
+    ]
   }),
   4003: new Weapon({
     id: 4003,
@@ -1631,7 +1908,11 @@ export const weaponsData: Weapons = {
       pAtk: 246,
       mAtk: 215,
       heal: 189
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[11001],
+      reinforcementAbilitiesData[51701]
+    ]
   }),
   4004: new Weapon({
     id: 4004,
@@ -1659,7 +1940,11 @@ export const weaponsData: Weapons = {
       pAtk: 193,
       mAtk: 231,
       heal: 220
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10501],
+      reinforcementAbilitiesData[30401]
+    ]
   }),
   4005: new Weapon({
     id: 4005,
@@ -1684,7 +1969,11 @@ export const weaponsData: Weapons = {
       pAtk: 252,
       mAtk: 212,
       heal: 188
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10201],
+      reinforcementAbilitiesData[30301]
+    ]
   }),
   4007: new Weapon({
     id: 4007,
@@ -1706,7 +1995,11 @@ export const weaponsData: Weapons = {
       pAtk: 194,
       mAtk: 268,
       heal: 188
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[20701]
+    ]
   }),
   4008: new Weapon({
     id: 4008,
@@ -1728,7 +2021,11 @@ export const weaponsData: Weapons = {
       pAtk: 189,
       mAtk: 220,
       heal: 232
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10601],
+      reinforcementAbilitiesData[30501]
+    ]
   }),
   4009: new Weapon({
     id: 4009,
@@ -1750,7 +2047,11 @@ export const weaponsData: Weapons = {
       pAtk: 204,
       mAtk: 256,
       heal: 191
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[20401]
+    ]
   }),
   4010: new Weapon({
     id: 4010,
@@ -1772,7 +2073,11 @@ export const weaponsData: Weapons = {
       pAtk: 201,
       mAtk: 262,
       heal: 188
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[20501]
+    ]
   }),
   4014: new Weapon({
     id: 4014,
@@ -1800,7 +2105,11 @@ export const weaponsData: Weapons = {
       pAtk: 204,
       mAtk: 257,
       heal: 189
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[51501]
+    ]
   }),
   4015: new Weapon({
     id: 4015,
@@ -1828,7 +2137,11 @@ export const weaponsData: Weapons = {
       pAtk: 275,
       mAtk: 186,
       heal: 189
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[11001],
+      reinforcementAbilitiesData[20701]
+    ]
   }),
   4016: new Weapon({
     id: 4016,
@@ -1850,7 +2163,11 @@ export const weaponsData: Weapons = {
       pAtk: 191,
       mAtk: 199,
       heal: 196
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[30401],
+      reinforcementAbilitiesData[11501]
+    ]
   }),
   4019: new Weapon({
     id: 4019,
@@ -1875,7 +2192,11 @@ export const weaponsData: Weapons = {
       pAtk: 184,
       mAtk: 186,
       heal: 160
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10601],
+      reinforcementAbilitiesData[10501]
+    ]
   }),
   4020: new Weapon({
     id: 4020,
@@ -1900,7 +2221,11 @@ export const weaponsData: Weapons = {
       pAtk: 193,
       mAtk: 264,
       heal: 192
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[20301]
+    ]
   }),
   4021: new Weapon({
     id: 4021,
@@ -1922,7 +2247,11 @@ export const weaponsData: Weapons = {
       pAtk: 191,
       mAtk: 226,
       heal: 174
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[30601],
+      reinforcementAbilitiesData[10101]
+    ]
   }),
   4022: new Weapon({
     id: 4022,
@@ -1948,7 +2277,11 @@ export const weaponsData: Weapons = {
       pAtk: 193,
       mAtk: 233,
       heal: 219
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[51301]
+    ]
   }),
   4023: new Weapon({
     id: 4023,
@@ -1970,7 +2303,11 @@ export const weaponsData: Weapons = {
       pAtk: 191,
       mAtk: 278,
       heal: 182
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[20201]
+    ]
   }),
   4024: new Weapon({
     id: 4024,
@@ -1994,7 +2331,11 @@ export const weaponsData: Weapons = {
       pAtk: 204,
       mAtk: 212,
       heal: 175
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10401],
+      reinforcementAbilitiesData[10501]
+    ]
   }),
   4025: new Weapon({
     id: 4025,
@@ -2022,7 +2363,11 @@ export const weaponsData: Weapons = {
       pAtk: 205,
       mAtk: 204,
       heal: 232
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[51901]
+    ]
   }),
   4026: new Weapon({
     id: 4026,
@@ -2044,7 +2389,11 @@ export const weaponsData: Weapons = {
       pAtk: 197,
       mAtk: 222,
       heal: 172
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[20601]
+    ]
   }),
   4027: new Weapon({
     id: 4027,
@@ -2066,7 +2415,11 @@ export const weaponsData: Weapons = {
       pAtk: 189,
       mAtk: 226,
       heal: 175
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[20301]
+    ]
   }),
   4028: new Weapon({
     id: 4028,
@@ -2095,7 +2448,11 @@ export const weaponsData: Weapons = {
       pAtk: 194,
       mAtk: 243,
       heal: 208
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[51901]
+    ]
   }),
   4029: new Weapon({
     id: 4029,
@@ -2121,7 +2478,11 @@ export const weaponsData: Weapons = {
       pAtk: 191,
       mAtk: 212,
       heal: 237
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[11301],
+      reinforcementAbilitiesData[10601]
+    ]
   }),
   4030: new UltimateWeapon({
     id: 4030,
@@ -2138,7 +2499,11 @@ export const weaponsData: Weapons = {
       pAtk: 154,
       mAtk: 157,
       heal: 157
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10601],
+      reinforcementAbilitiesData[10501]
+    ]
   }),
   5001: new Weapon({
     id: 5001,
@@ -2163,7 +2528,11 @@ export const weaponsData: Weapons = {
       pAtk: 199,
       mAtk: 252,
       heal: 198
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10501],
+      reinforcementAbilitiesData[30701]
+    ]
   }),
   5005: new Weapon({
     id: 5005,
@@ -2188,7 +2557,11 @@ export const weaponsData: Weapons = {
       pAtk: 201,
       mAtk: 222,
       heal: 220
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[30501]
+    ]
   }),
   5009: new Weapon({
     id: 5009,
@@ -2212,7 +2585,11 @@ export const weaponsData: Weapons = {
       pAtk: 193,
       mAtk: 283,
       heal: 177
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10601],
+      reinforcementAbilitiesData[10801]
+    ]
   }),
   5016: new Weapon({
     id: 5016,
@@ -2234,7 +2611,11 @@ export const weaponsData: Weapons = {
       pAtk: 189,
       mAtk: 268,
       heal: 192
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[11001],
+      reinforcementAbilitiesData[20601]
+    ]
   }),
   5018: new Weapon({
     id: 5018,
@@ -2256,7 +2637,11 @@ export const weaponsData: Weapons = {
       pAtk: 197,
       mAtk: 257,
       heal: 195
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[11001],
+      reinforcementAbilitiesData[20201]
+    ]
   }),
   5019: new Weapon({
     id: 5019,
@@ -2278,7 +2663,11 @@ export const weaponsData: Weapons = {
       pAtk: 252,
       mAtk: 222,
       heal: 178
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[20501]
+    ]
   }),
   5020: new Weapon({
     id: 5020,
@@ -2300,7 +2689,11 @@ export const weaponsData: Weapons = {
       pAtk: 194,
       mAtk: 225,
       heal: 223
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10401],
+      reinforcementAbilitiesData[51701]
+    ]
   }),
   5021: new Weapon({
     id: 5021,
@@ -2325,7 +2718,11 @@ export const weaponsData: Weapons = {
       pAtk: 246,
       mAtk: 225,
       heal: 182
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10401],
+      reinforcementAbilitiesData[30201]
+    ]
   }),
   5023: new Weapon({
     id: 5023,
@@ -2350,7 +2747,11 @@ export const weaponsData: Weapons = {
       pAtk: 204,
       mAtk: 281,
       heal: 170
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[20701]
+    ]
   }),
   5026: new Weapon({
     id: 5026,
@@ -2374,7 +2775,11 @@ export const weaponsData: Weapons = {
       pAtk: 205,
       mAtk: 215,
       heal: 170
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[11001],
+      reinforcementAbilitiesData[10801]
+    ]
   }),
   5027: new Weapon({
     id: 5027,
@@ -2396,7 +2801,11 @@ export const weaponsData: Weapons = {
       pAtk: 189,
       mAtk: 241,
       heal: 164
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[30301],
+      reinforcementAbilitiesData[11501]
+    ]
   }),
   5028: new Weapon({
     id: 5028,
@@ -2421,7 +2830,11 @@ export const weaponsData: Weapons = {
       pAtk: 246,
       mAtk: 226,
       heal: 181
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[20401]
+    ]
   }),
   5031: new Weapon({
     id: 5031,
@@ -2445,7 +2858,11 @@ export const weaponsData: Weapons = {
       pAtk: 204,
       mAtk: 220,
       heal: 168
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[10401]
+    ]
   }),
   5032: new Weapon({
     id: 5032,
@@ -2470,7 +2887,11 @@ export const weaponsData: Weapons = {
       pAtk: 194,
       mAtk: 235,
       heal: 164
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[30301],
+      reinforcementAbilitiesData[10101]
+    ]
   }),
   5033: new Weapon({
     id: 5033,
@@ -2492,7 +2913,11 @@ export const weaponsData: Weapons = {
       pAtk: 194,
       mAtk: 218,
       heal: 177
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[20201]
+    ]
   }),
   5017: new Weapon({
     id: 5017,
@@ -2520,7 +2945,11 @@ export const weaponsData: Weapons = {
       pAtk: 243,
       mAtk: 235,
       heal: 175
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[11001],
+      reinforcementAbilitiesData[51301]
+    ]
   }),
   5034: new Weapon({
     id: 5034,
@@ -2542,7 +2971,11 @@ export const weaponsData: Weapons = {
       pAtk: 191,
       mAtk: 222,
       heal: 177
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[20301]
+    ]
   }),
   5004: new Weapon({
     id: 5004,
@@ -2570,7 +3003,11 @@ export const weaponsData: Weapons = {
       pAtk: 199,
       mAtk: 231,
       heal: 215
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10601],
+      reinforcementAbilitiesData[51901]
+    ]
   }),
   5035: new Weapon({
     id: 5035,
@@ -2594,7 +3031,11 @@ export const weaponsData: Weapons = {
       pAtk: 212,
       mAtk: 220,
       heal: 161
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[51301]
+    ]
   }),
   5036: new UltimateWeapon({
     id: 5036,
@@ -2611,7 +3052,11 @@ export const weaponsData: Weapons = {
       pAtk: 161,
       mAtk: 161,
       heal: 149
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10601],
+      reinforcementAbilitiesData[10401]
+    ]
   }),
   6001: new Weapon({
     id: 6001,
@@ -2636,7 +3081,11 @@ export const weaponsData: Weapons = {
       pAtk: 249,
       mAtk: 218,
       heal: 184
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[51901]
+    ]
   }),
   6002: new Weapon({
     id: 6002,
@@ -2661,7 +3110,11 @@ export const weaponsData: Weapons = {
       pAtk: 267,
       mAtk: 205,
       heal: 181
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10201],
+      reinforcementAbilitiesData[20201]
+    ]
   }),
   6003: new Weapon({
     id: 6003,
@@ -2686,7 +3139,11 @@ export const weaponsData: Weapons = {
       pAtk: 247,
       mAtk: 220,
       heal: 184
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[20301]
+    ]
   }),
   6004: new Weapon({
     id: 6004,
@@ -2708,7 +3165,11 @@ export const weaponsData: Weapons = {
       pAtk: 228,
       mAtk: 256,
       heal: 170
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[20501]
+    ]
   }),
   6005: new Weapon({
     id: 6005,
@@ -2730,7 +3191,11 @@ export const weaponsData: Weapons = {
       pAtk: 270,
       mAtk: 201,
       heal: 181
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10201],
+      reinforcementAbilitiesData[20501]
+    ]
   }),
   6006: new Weapon({
     id: 6006,
@@ -2756,7 +3221,11 @@ export const weaponsData: Weapons = {
       pAtk: 212,
       mAtk: 256,
       heal: 184
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[51301]
+    ]
   }),
   6007: new Weapon({
     id: 6007,
@@ -2781,7 +3250,11 @@ export const weaponsData: Weapons = {
       pAtk: 260,
       mAtk: 218,
       heal: 175
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10201],
+      reinforcementAbilitiesData[51901]
+    ]
   }),
   6008: new Weapon({
     id: 6008,
@@ -2806,7 +3279,11 @@ export const weaponsData: Weapons = {
       pAtk: 267,
       mAtk: 204,
       heal: 182
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[11001],
+      reinforcementAbilitiesData[51701]
+    ]
   }),
   6009: new Weapon({
     id: 6009,
@@ -2828,7 +3305,11 @@ export const weaponsData: Weapons = {
       pAtk: 275,
       mAtk: 212,
       heal: 168
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10201],
+      reinforcementAbilitiesData[20301]
+    ]
   }),
   6010: new Weapon({
     id: 6010,
@@ -2850,7 +3331,11 @@ export const weaponsData: Weapons = {
       pAtk: 262,
       mAtk: 225,
       heal: 168
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[11001],
+      reinforcementAbilitiesData[20701]
+    ]
   }),
   6014: new Weapon({
     id: 6014,
@@ -2872,7 +3357,11 @@ export const weaponsData: Weapons = {
       pAtk: 267,
       mAtk: 204,
       heal: 182
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10201],
+      reinforcementAbilitiesData[20701]
+    ]
   }),
   6015: new Weapon({
     id: 6015,
@@ -2898,7 +3387,11 @@ export const weaponsData: Weapons = {
       pAtk: 270,
       mAtk: 207,
       heal: 175
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10201],
+      reinforcementAbilitiesData[51901]
+    ]
   }),
   6016: new Weapon({
     id: 6016,
@@ -2920,7 +3413,11 @@ export const weaponsData: Weapons = {
       pAtk: 236,
       mAtk: 191,
       heal: 165
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[30701],
+      reinforcementAbilitiesData[51801]
+    ]
   }),
   6022: new Weapon({
     id: 6022,
@@ -2942,7 +3439,11 @@ export const weaponsData: Weapons = {
       pAtk: 207,
       mAtk: 212,
       heal: 172
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[20601]
+    ]
   }),
   6024: new Weapon({
     id: 6024,
@@ -2964,7 +3465,11 @@ export const weaponsData: Weapons = {
       pAtk: 205,
       mAtk: 218,
       heal: 168
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[30401],
+      reinforcementAbilitiesData[10501]
+    ]
   }),
   6026: new Weapon({
     id: 6026,
@@ -2989,7 +3494,11 @@ export const weaponsData: Weapons = {
       pAtk: 285,
       mAtk: 189,
       heal: 178
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10201],
+      reinforcementAbilitiesData[20201]
+    ]
   }),
   6027: new Weapon({
     id: 6027,
@@ -3011,7 +3520,11 @@ export const weaponsData: Weapons = {
       pAtk: 205,
       mAtk: 225,
       heal: 164
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[51301]
+    ]
   }),
   6028: new Weapon({
     id: 6028,
@@ -3036,7 +3549,11 @@ export const weaponsData: Weapons = {
       pAtk: 289,
       mAtk: 191,
       heal: 174
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[11201],
+      reinforcementAbilitiesData[51401]
+    ]
   }),
   6029: new UltimateWeapon({
     id: 6029,
@@ -3053,7 +3570,11 @@ export const weaponsData: Weapons = {
       pAtk: 175,
       mAtk: 169,
       heal: 130
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[51301],
+      reinforcementAbilitiesData[10501]
+    ]
   }),
   7001: new Weapon({
     id: 7001,
@@ -3075,7 +3596,11 @@ export const weaponsData: Weapons = {
       pAtk: 275,
       mAtk: 215,
       heal: 165
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[11001],
+      reinforcementAbilitiesData[51301]
+    ]
   }),
   7002: new Weapon({
     id: 7002,
@@ -3100,7 +3625,11 @@ export const weaponsData: Weapons = {
       pAtk: 222,
       mAtk: 277,
       heal: 158
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[20601]
+    ]
   }),
   7003: new Weapon({
     id: 7003,
@@ -3122,7 +3651,11 @@ export const weaponsData: Weapons = {
       pAtk: 214,
       mAtk: 267,
       heal: 174
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[20301]
+    ]
   }),
   7004: new Weapon({
     id: 7004,
@@ -3144,7 +3677,11 @@ export const weaponsData: Weapons = {
       pAtk: 215,
       mAtk: 262,
       heal: 175
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[20201]
+    ]
   }),
   7005: new Weapon({
     id: 7005,
@@ -3170,7 +3707,11 @@ export const weaponsData: Weapons = {
       pAtk: 207,
       mAtk: 218,
       heal: 219
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[11001],
+      reinforcementAbilitiesData[51501]
+    ]
   }),
   7008: new Weapon({
     id: 7008,
@@ -3194,7 +3735,11 @@ export const weaponsData: Weapons = {
       pAtk: 233,
       mAtk: 228,
       heal: 189
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[51301]
+    ]
   }),
   7009: new Weapon({
     id: 7009,
@@ -3222,7 +3767,11 @@ export const weaponsData: Weapons = {
       pAtk: 236,
       mAtk: 231,
       heal: 184
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10201],
+      reinforcementAbilitiesData[20201]
+    ]
   }),
   7010: new Weapon({
     id: 7010,
@@ -3250,7 +3799,11 @@ export const weaponsData: Weapons = {
       pAtk: 246,
       mAtk: 228,
       heal: 178
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10201],
+      reinforcementAbilitiesData[51301]
+    ]
   }),
   7011: new Weapon({
     id: 7011,
@@ -3278,7 +3831,11 @@ export const weaponsData: Weapons = {
       pAtk: 226,
       mAtk: 197,
       heal: 168
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[30301],
+      reinforcementAbilitiesData[11501]
+    ]
   }),
   7014: new Weapon({
     id: 7014,
@@ -3304,7 +3861,11 @@ export const weaponsData: Weapons = {
       pAtk: 247,
       mAtk: 212,
       heal: 191
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10601],
+      reinforcementAbilitiesData[51901]
+    ]
   }),
   7022: new Weapon({
     id: 7022,
@@ -3331,7 +3892,11 @@ export const weaponsData: Weapons = {
       pAtk: 212,
       mAtk: 218,
       heal: 215
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[51501]
+    ]
   }),
   7024: new Weapon({
     id: 7024,
@@ -3353,7 +3918,11 @@ export const weaponsData: Weapons = {
       pAtk: 204,
       mAtk: 222,
       heal: 167
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[20701]
+    ]
   }),
   7023: new Weapon({
     id: 7023,
@@ -3378,7 +3947,11 @@ export const weaponsData: Weapons = {
       pAtk: 215,
       mAtk: 201,
       heal: 174
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10201],
+      reinforcementAbilitiesData[51301]
+    ]
   }),
   7025: new Weapon({
     id: 7025,
@@ -3400,7 +3973,11 @@ export const weaponsData: Weapons = {
       pAtk: 205,
       mAtk: 228,
       heal: 160
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[51301]
+    ]
   }),
   7029: new Weapon({
     id: 7029,
@@ -3428,7 +4005,11 @@ export const weaponsData: Weapons = {
       pAtk: 254,
       mAtk: 204,
       heal: 192
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[11001],
+      reinforcementAbilitiesData[51901]
+    ]
   }),
   7026: new Weapon({
     id: 7026,
@@ -3450,7 +4031,11 @@ export const weaponsData: Weapons = {
       pAtk: 220,
       mAtk: 205,
       heal: 167
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10201],
+      reinforcementAbilitiesData[51301]
+    ]
   }),
   7028: new UltimateWeapon({
     id: 7028,
@@ -3467,7 +4052,11 @@ export const weaponsData: Weapons = {
       pAtk: 171,
       mAtk: 163,
       heal: 138
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[51901],
+      reinforcementAbilitiesData[10401]
+    ]
   }),
   7032: new UltimateWeapon({
     id: 7032,
@@ -3484,7 +4073,11 @@ export const weaponsData: Weapons = {
       pAtk: 187,
       mAtk: 187,
       heal: 145
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[51901],
+      reinforcementAbilitiesData[53801]
+    ]
   }),
   7019: new Weapon({
     id: 7019,
@@ -3512,7 +4105,43 @@ export const weaponsData: Weapons = {
       pAtk: 256,
       mAtk: 243,
       heal: 158
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[11001],
+      reinforcementAbilitiesData[20401]
+    ]
+  }),
+  7027: new Weapon({
+    id: 7027,
+    name: 'Icebolt Megaphone',
+    characterId: 7,
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: 10702701,
+      name: 'Deblizzara & Dethundara Surge',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Mag. Non-elem.', 'Single Enemy', 10)}\nAlso, ${decrease('Ice Resist.', undefined, 'Single Enemy', null, undefined, undefined, 'Mid')}\n${decrease('Thunder Resist.', undefined, 'Single Enemy', null, undefined, undefined, 'Mid')}`,
+      valuesByOverboostLevel: {
+        damage: ['240', '280', '280', '280', '280', '280', '320', '320', '320', '320', '340'],
+        iceResistDecreasePot: ['Low', 'Low', 'Low', 'Low', 'Low', 'Low', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid'],
+        iceResistDecreaseDur: ['20', '22', '22', '22', '22', '22', '22', '22', '22', '22', '25'],
+        iceResistDecreaseExt: ['6', '7', '7', '7', '7', '7', '7', '7', '7', '7', '8'],
+        lightningResistDecreasePot: ['Low', 'Low', 'Low', 'Low', 'Low', 'Low', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid'],
+        lightningResistDecreaseDur: ['20', '22', '22', '22', '22', '22', '22', '22', '22', '22', '25'],
+        lightningResistDecreaseExt: ['6', '7', '7', '7', '7', '7', '7', '7', '7', '7', '8']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 197,
+      mAtk: 215,
+      heal: 177
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[30201],
+      reinforcementAbilitiesData[10101]
+    ]
   }),
   8002: new Weapon({
     id: 8002,
@@ -3534,7 +4163,11 @@ export const weaponsData: Weapons = {
       pAtk: 225,
       mAtk: 268,
       heal: 164
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[20301]
+    ]
   }),
   8003: new Weapon({
     id: 8003,
@@ -3558,7 +4191,11 @@ export const weaponsData: Weapons = {
       pAtk: 220,
       mAtk: 220,
       heal: 206
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[51301]
+    ]
   }),
   8004: new Weapon({
     id: 8004,
@@ -3587,7 +4224,11 @@ export const weaponsData: Weapons = {
       pAtk: 231,
       mAtk: 260,
       heal: 165
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[51301]
+    ]
   }),
   8005: new Weapon({
     id: 8005,
@@ -3610,7 +4251,11 @@ export const weaponsData: Weapons = {
       pAtk: 268,
       mAtk: 226,
       heal: 161
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10201],
+      reinforcementAbilitiesData[20701]
+    ]
   }),
   8007: new Weapon({
     id: 8007,
@@ -3633,7 +4278,11 @@ export const weaponsData: Weapons = {
       pAtk: 264,
       mAtk: 236,
       heal: 157
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10201],
+      reinforcementAbilitiesData[51401]
+    ]
   }),
   8008: new Weapon({
     id: 8008,
@@ -3662,7 +4311,11 @@ export const weaponsData: Weapons = {
       pAtk: 220,
       mAtk: 225,
       heal: 203
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[11001],
+      reinforcementAbilitiesData[51501]
+    ]
   }),
   8009: new Weapon({
     id: 8009,
@@ -3688,7 +4341,11 @@ export const weaponsData: Weapons = {
       pAtk: 243,
       mAtk: 243,
       heal: 168
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[51901]
+    ]
   }),
   8010: new Weapon({
     id: 8010,
@@ -3713,7 +4370,11 @@ export const weaponsData: Weapons = {
       pAtk: 226,
       mAtk: 273,
       heal: 158
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[51501]
+    ]
   }),
   8012: new Weapon({
     id: 8012,
@@ -3736,7 +4397,11 @@ export const weaponsData: Weapons = {
       pAtk: 212,
       mAtk: 278,
       heal: 165
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[11301],
+      reinforcementAbilitiesData[20501]
+    ]
   }),
   8014: new Weapon({
     id: 8014,
@@ -3759,7 +4424,11 @@ export const weaponsData: Weapons = {
       pAtk: 235,
       mAtk: 205,
       heal: 154
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[30601],
+      reinforcementAbilitiesData[51801]
+    ]
   }),
   8015: new Weapon({
     id: 8015,
@@ -3782,7 +4451,11 @@ export const weaponsData: Weapons = {
       pAtk: 207,
       mAtk: 285,
       heal: 164
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[51501]
+    ]
   }),
   8017: new Weapon({
     id: 8017,
@@ -3805,7 +4478,11 @@ export const weaponsData: Weapons = {
       pAtk: 262,
       mAtk: 228,
       heal: 165
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[11001],
+      reinforcementAbilitiesData[51701]
+    ]
   }),
   8019: new UltimateWeapon({
     id: 8019,
@@ -3822,7 +4499,11 @@ export const weaponsData: Weapons = {
       pAtk: 176,
       mAtk: 183,
       heal: 118
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[51301],
+      reinforcementAbilitiesData[10401]
+    ]
   }),
   8016: new Weapon({
     id: 8016,
@@ -3845,7 +4526,43 @@ export const weaponsData: Weapons = {
       pAtk: 212,
       mAtk: 277,
       heal: 167
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[20401]
+    ]
+  }),
+  8018: new Weapon({
+    id: 8018,
+    name: 'Icebolt Shooter',
+    characterId: 8,
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: 10801801,
+      name: 'Deblizzara & Dethundara Surge',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Mag. Non-elem.', 'Single Enemy', 10)}\nAlso, ${decrease('Ice Resist.', undefined, 'Single Enemy', null, undefined, undefined, 'Mid')}\n${decrease('Thunder Resist.', undefined, 'Single Enemy', null, undefined, undefined, 'Mid')}`,
+      valuesByOverboostLevel: {
+        damage: ['240', '280', '280', '280', '280', '280', '320', '320', '320', '320', '340'],
+        iceResistDecreasePot: ['Low', 'Low', 'Low', 'Low', 'Low', 'Low', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid'],
+        iceResistDecreaseDur: ['20', '22', '22', '22', '22', '22', '22', '22', '22', '22', '25'],
+        iceResistDecreaseExt: ['6', '7', '7', '7', '7', '7', '7', '7', '7', '7', '8'],
+        lightningResistDecreasePot: ['Low', 'Low', 'Low', 'Low', 'Low', 'Low', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid'],
+        lightningResistDecreaseDur: ['20', '22', '22', '22', '22', '22', '22', '22', '22', '22', '25'],
+        lightningResistDecreaseExt: ['6', '7', '7', '7', '7', '7', '7', '7', '7', '7', '8']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 207,
+      mAtk: 220,
+      heal: 165
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[30601],
+      reinforcementAbilitiesData[10101]
+    ]
   }),
   20001: new Weapon({
     id: 20001,
@@ -3867,7 +4584,11 @@ export const weaponsData: Weapons = {
       pAtk: 252,
       mAtk: 210,
       heal: 189
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[11001],
+      reinforcementAbilitiesData[10801]
+    ]
   }),
   20003: new Weapon({
     id: 20003,
@@ -3889,7 +4610,11 @@ export const weaponsData: Weapons = {
       pAtk: 183,
       mAtk: 193,
       heal: 157
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[10501]
+    ]
   }),
   20004: new Weapon({
     id: 20004,
@@ -3911,7 +4636,11 @@ export const weaponsData: Weapons = {
       pAtk: 233,
       mAtk: 236,
       heal: 182
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10601],
+      reinforcementAbilitiesData[51301]
+    ]
   }),
   20005: new Weapon({
     id: 20005,
@@ -3937,7 +4666,11 @@ export const weaponsData: Weapons = {
       pAtk: 252,
       mAtk: 189,
       heal: 206
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10601],
+      reinforcementAbilitiesData[20301]
+    ]
   }),
   20006: new Weapon({
     id: 20006,
@@ -3959,7 +4692,11 @@ export const weaponsData: Weapons = {
       pAtk: 207,
       mAtk: 212,
       heal: 223
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[11001],
+      reinforcementAbilitiesData[20201]
+    ]
   }),
   20007: new Weapon({
     id: 20007,
@@ -3981,7 +4718,11 @@ export const weaponsData: Weapons = {
       pAtk: 247,
       mAtk: 204,
       heal: 198
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10201],
+      reinforcementAbilitiesData[20701]
+    ]
   }),
   20008: new Weapon({
     id: 20008,
@@ -4003,7 +4744,11 @@ export const weaponsData: Weapons = {
       pAtk: 273,
       mAtk: 199,
       heal: 181
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[11001],
+      reinforcementAbilitiesData[30201]
+    ]
   }),
   20009: new Weapon({
     id: 20009,
@@ -4028,7 +4773,11 @@ export const weaponsData: Weapons = {
       pAtk: 212,
       mAtk: 262,
       heal: 178
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[30601]
+    ]
   }),
   20010: new Weapon({
     id: 20010,
@@ -4053,7 +4802,11 @@ export const weaponsData: Weapons = {
       pAtk: 235,
       mAtk: 225,
       heal: 191
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10401],
+      reinforcementAbilitiesData[51301]
+    ]
   }),
   20011: new Weapon({
     id: 20011,
@@ -4078,7 +4831,11 @@ export const weaponsData: Weapons = {
       pAtk: 275,
       mAtk: 193,
       heal: 184
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10201],
+      reinforcementAbilitiesData[51401]
+    ]
   }),
   20013: new Weapon({
     id: 20013,
@@ -4100,7 +4857,11 @@ export const weaponsData: Weapons = {
       pAtk: 236,
       mAtk: 201,
       heal: 157
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[30201],
+      reinforcementAbilitiesData[11401]
+    ]
   }),
   20014: new Weapon({
     id: 20014,
@@ -4125,7 +4886,11 @@ export const weaponsData: Weapons = {
       pAtk: 275,
       mAtk: 205,
       heal: 174
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10201],
+      reinforcementAbilitiesData[20301]
+    ]
   }),
   20015: new Weapon({
     id: 20015,
@@ -4149,7 +4914,11 @@ export const weaponsData: Weapons = {
       pAtk: 204,
       mAtk: 214,
       heal: 174
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[11001],
+      reinforcementAbilitiesData[10801]
+    ]
   }),
   20016: new Weapon({
     id: 20016,
@@ -4171,7 +4940,11 @@ export const weaponsData: Weapons = {
       pAtk: 205,
       mAtk: 212,
       heal: 174
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[30301],
+      reinforcementAbilitiesData[10101]
+    ]
   }),
   20018: new Weapon({
     id: 20018,
@@ -4199,7 +4972,11 @@ export const weaponsData: Weapons = {
       pAtk: 257,
       mAtk: 201,
       heal: 191
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[51401]
+    ]
   }),
   20019: new Weapon({
     id: 20019,
@@ -4227,7 +5004,11 @@ export const weaponsData: Weapons = {
       pAtk: 262,
       mAtk: 201,
       heal: 188
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10201],
+      reinforcementAbilitiesData[20601]
+    ]
   }),
   20020: new Weapon({
     id: 20020,
@@ -4249,7 +5030,11 @@ export const weaponsData: Weapons = {
       pAtk: 207,
       mAtk: 277,
       heal: 170
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[11301],
+      reinforcementAbilitiesData[20201]
+    ]
   }),
   20023: new Weapon({
     id: 20023,
@@ -4271,7 +5056,11 @@ export const weaponsData: Weapons = {
       pAtk: 278,
       mAtk: 222,
       heal: 157
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10201],
+      reinforcementAbilitiesData[20401]
+    ]
   }),
   20024: new Weapon({
     id: 20024,
@@ -4293,7 +5082,11 @@ export const weaponsData: Weapons = {
       pAtk: 197,
       mAtk: 225,
       heal: 170
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[20201]
+    ]
   }),
   20025: new Weapon({
     id: 20025,
@@ -4315,7 +5108,11 @@ export const weaponsData: Weapons = {
       pAtk: 222,
       mAtk: 204,
       heal: 167
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10201],
+      reinforcementAbilitiesData[51301]
+    ]
   }),
   20027: new Weapon({
     id: 20027,
@@ -4337,7 +5134,11 @@ export const weaponsData: Weapons = {
       pAtk: 283,
       mAtk: 220,
       heal: 154
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10201],
+      reinforcementAbilitiesData[20701]
+    ]
   }),
   20026: new UltimateWeapon({
     id: 20026,
@@ -4354,7 +5155,11 @@ export const weaponsData: Weapons = {
       pAtk: 178,
       mAtk: 171,
       heal: 126
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[51301],
+      reinforcementAbilitiesData[10501]
+    ]
   }),
   49001: new Weapon({
     id: 49001,
@@ -4379,7 +5184,11 @@ export const weaponsData: Weapons = {
       pAtk: 260,
       mAtk: 228,
       heal: 167
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[30401]
+    ]
   }),
   49002: new Weapon({
     id: 49002,
@@ -4401,7 +5210,11 @@ export const weaponsData: Weapons = {
       pAtk: 225,
       mAtk: 267,
       heal: 165
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[20301]
+    ]
   }),
   49003: new Weapon({
     id: 49003,
@@ -4423,7 +5236,11 @@ export const weaponsData: Weapons = {
       pAtk: 262,
       mAtk: 214,
       heal: 177
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10201],
+      reinforcementAbilitiesData[51701]
+    ]
   }),
   49004: new Weapon({
     id: 49004,
@@ -4449,7 +5266,11 @@ export const weaponsData: Weapons = {
       pAtk: 215,
       mAtk: 222,
       heal: 208
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[51301]
+    ]
   }),
   49005: new Weapon({
     id: 49005,
@@ -4474,7 +5295,11 @@ export const weaponsData: Weapons = {
       pAtk: 249,
       mAtk: 214,
       heal: 188
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10501],
+      reinforcementAbilitiesData[30201]
+    ]
   }),
   49006: new Weapon({
     id: 49006,
@@ -4496,7 +5321,11 @@ export const weaponsData: Weapons = {
       pAtk: 220,
       mAtk: 260,
       heal: 174
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[11001],
+      reinforcementAbilitiesData[20201]
+    ]
   }),
   49007: new Weapon({
     id: 49007,
@@ -4518,7 +5347,11 @@ export const weaponsData: Weapons = {
       pAtk: 226,
       mAtk: 256,
       heal: 172
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[20401]
+    ]
   }),
   49008: new Weapon({
     id: 49008,
@@ -4544,7 +5377,11 @@ export const weaponsData: Weapons = {
       pAtk: 212,
       mAtk: 220,
       heal: 213
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[51501]
+    ]
   }),
   49009: new Weapon({
     id: 49009,
@@ -4566,7 +5403,11 @@ export const weaponsData: Weapons = {
       pAtk: 228,
       mAtk: 257,
       heal: 168
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[11001],
+      reinforcementAbilitiesData[51301]
+    ]
   }),
   49012: new Weapon({
     id: 49012,
@@ -4591,7 +5432,11 @@ export const weaponsData: Weapons = {
       pAtk: 204,
       mAtk: 207,
       heal: 178
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[11001],
+      reinforcementAbilitiesData[10401]
+    ]
   }),
   49013: new Weapon({
     id: 49013,
@@ -4613,7 +5458,11 @@ export const weaponsData: Weapons = {
       pAtk: 235,
       mAtk: 193,
       heal: 165
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[30501],
+      reinforcementAbilitiesData[51801]
+    ]
   }),
   49015: new Weapon({
     id: 49015,
@@ -4635,7 +5484,11 @@ export const weaponsData: Weapons = {
       pAtk: 260,
       mAtk: 212,
       heal: 181
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10201],
+      reinforcementAbilitiesData[20701]
+    ]
   }),
   49016: new Weapon({
     id: 49016,
@@ -4663,7 +5516,11 @@ export const weaponsData: Weapons = {
       pAtk: 212,
       mAtk: 264,
       heal: 177
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[51301]
+    ]
   }),
   49017: new Weapon({
     id: 49017,
@@ -4691,7 +5548,11 @@ export const weaponsData: Weapons = {
       pAtk: 273,
       mAtk: 212,
       heal: 170
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10201],
+      reinforcementAbilitiesData[20201]
+    ]
   }),
   49018: new Weapon({
     id: 49018,
@@ -4713,7 +5574,11 @@ export const weaponsData: Weapons = {
       pAtk: 201,
       mAtk: 278,
       heal: 174
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[11301],
+      reinforcementAbilitiesData[51501]
+    ]
   }),
   49019: new Weapon({
     id: 49019,
@@ -4738,7 +5603,11 @@ export const weaponsData: Weapons = {
       pAtk: 199,
       mAtk: 226,
       heal: 167
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[30301],
+      reinforcementAbilitiesData[10501]
+    ]
   }),
   49020: new Weapon({
     id: 49020,
@@ -4760,7 +5629,11 @@ export const weaponsData: Weapons = {
       pAtk: 204,
       mAtk: 218,
       heal: 170
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[10501]
+    ]
   }),
   49011: new Weapon({
     id: 49011,
@@ -4788,7 +5661,11 @@ export const weaponsData: Weapons = {
       pAtk: 283,
       mAtk: 201,
       heal: 170
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10201],
+      reinforcementAbilitiesData[20701]
+    ]
   }),
   49023: new Weapon({
     id: 49023,
@@ -4812,7 +5689,11 @@ export const weaponsData: Weapons = {
       pAtk: 207,
       mAtk: 218,
       heal: 167
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[51301]
+    ]
   }),
   49010: new Weapon({
     id: 49010,
@@ -4837,7 +5718,11 @@ export const weaponsData: Weapons = {
       pAtk: 277,
       mAtk: 214,
       heal: 165
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10201],
+      reinforcementAbilitiesData[20601]
+    ]
   }),
   49024: new Weapon({
     id: 49024,
@@ -4862,7 +5747,11 @@ export const weaponsData: Weapons = {
       pAtk: 212,
       mAtk: 281,
       heal: 164
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[20501]
+    ]
   }),
   49026: new UltimateWeapon({
     id: 49026,
@@ -4879,7 +5768,11 @@ export const weaponsData: Weapons = {
       pAtk: 183,
       mAtk: 171,
       heal: 122
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[51301],
+      reinforcementAbilitiesData[10401]
+    ]
   }),
   49027: new UltimateWeapon({
     id: 49027,
@@ -4896,7 +5789,11 @@ export const weaponsData: Weapons = {
       pAtk: 203,
       mAtk: 196,
       heal: 126
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[51301],
+      reinforcementAbilitiesData[53601]
+    ]
   }),
   50001: new Weapon({
     id: 50001,
@@ -4918,7 +5815,11 @@ export const weaponsData: Weapons = {
       pAtk: 256,
       mAtk: 218,
       heal: 178
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[20601]
+    ]
   }),
   50002: new Weapon({
     id: 50002,
@@ -4940,7 +5841,11 @@ export const weaponsData: Weapons = {
       pAtk: 260,
       mAtk: 214,
       heal: 178
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[20201]
+    ]
   }),
   50003: new Weapon({
     id: 50003,
@@ -4962,7 +5867,11 @@ export const weaponsData: Weapons = {
       pAtk: 228,
       mAtk: 239,
       heal: 184
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[20501]
+    ]
   }),
   50004: new Weapon({
     id: 50004,
@@ -4990,7 +5899,11 @@ export const weaponsData: Weapons = {
       pAtk: 231,
       mAtk: 241,
       heal: 181
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10601],
+      reinforcementAbilitiesData[10801]
+    ]
   }),
   50005: new Weapon({
     id: 50005,
@@ -5012,7 +5925,11 @@ export const weaponsData: Weapons = {
       pAtk: 283,
       mAtk: 205,
       heal: 167
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[11001],
+      reinforcementAbilitiesData[30701]
+    ]
   }),
   50007: new Weapon({
     id: 50007,
@@ -5034,7 +5951,11 @@ export const weaponsData: Weapons = {
       pAtk: 275,
       mAtk: 199,
       heal: 178
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[11001],
+      reinforcementAbilitiesData[51401]
+    ]
   }),
   50008: new Weapon({
     id: 50008,
@@ -5059,7 +5980,11 @@ export const weaponsData: Weapons = {
       pAtk: 268,
       mAtk: 212,
       heal: 174
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10401],
+      reinforcementAbilitiesData[30301]
+    ]
   }),
   50010: new Weapon({
     id: 50010,
@@ -5081,7 +6006,11 @@ export const weaponsData: Weapons = {
       pAtk: 233,
       mAtk: 239,
       heal: 181
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[11001],
+      reinforcementAbilitiesData[20401]
+    ]
   }),
   50011: new Weapon({
     id: 50011,
@@ -5103,7 +6032,11 @@ export const weaponsData: Weapons = {
       pAtk: 249,
       mAtk: 225,
       heal: 178
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[11001],
+      reinforcementAbilitiesData[30301]
+    ]
   }),
   50014: new Weapon({
     id: 50014,
@@ -5125,7 +6058,11 @@ export const weaponsData: Weapons = {
       pAtk: 243,
       mAtk: 201,
       heal: 151
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[30601],
+      reinforcementAbilitiesData[11401]
+    ]
   }),
   50015: new Weapon({
     id: 50015,
@@ -5147,7 +6084,11 @@ export const weaponsData: Weapons = {
       pAtk: 212,
       mAtk: 215,
       heal: 165
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[30301],
+      reinforcementAbilitiesData[11001]
+    ]
   }),
   50016: new Weapon({
     id: 50016,
@@ -5173,7 +6114,11 @@ export const weaponsData: Weapons = {
       pAtk: 212,
       mAtk: 226,
       heal: 208
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10201],
+      reinforcementAbilitiesData[51301]
+    ]
   }),
   50018: new Weapon({
     id: 50018,
@@ -5195,7 +6140,11 @@ export const weaponsData: Weapons = {
       pAtk: 189,
       mAtk: 191,
       heal: 153
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[10501]
+    ]
   }),
   50019: new Weapon({
     id: 50019,
@@ -5219,7 +6168,11 @@ export const weaponsData: Weapons = {
       pAtk: 197,
       mAtk: 186,
       heal: 150
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[11001],
+      reinforcementAbilitiesData[51701]
+    ]
   }),
   50020: new Weapon({
     id: 50020,
@@ -5241,7 +6194,11 @@ export const weaponsData: Weapons = {
       pAtk: 281,
       mAtk: 214,
       heal: 161
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[11201],
+      reinforcementAbilitiesData[20601]
+    ]
   }),
   50021: new Weapon({
     id: 50021,
@@ -5265,7 +6222,11 @@ export const weaponsData: Weapons = {
       pAtk: 204,
       mAtk: 215,
       heal: 172
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10401],
+      reinforcementAbilitiesData[10501]
+    ]
   }),
   50022: new Weapon({
     id: 50022,
@@ -5287,7 +6248,11 @@ export const weaponsData: Weapons = {
       pAtk: 207,
       mAtk: 215,
       heal: 168
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[20601]
+    ]
   }),
   50023: new Weapon({
     id: 50023,
@@ -5309,7 +6274,11 @@ export const weaponsData: Weapons = {
       pAtk: 207,
       mAtk: 214,
       heal: 170
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[51301]
+    ]
   }),
   50006: new Weapon({
     id: 50006,
@@ -5337,7 +6306,11 @@ export const weaponsData: Weapons = {
       pAtk: 277,
       mAtk: 220,
       heal: 160
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10201],
+      reinforcementAbilitiesData[20601]
+    ]
   }),
   50024: new UltimateWeapon({
     id: 50024,
@@ -5354,7 +6327,11 @@ export const weaponsData: Weapons = {
       pAtk: 184,
       mAtk: 175,
       heal: 118
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10501],
+      reinforcementAbilitiesData[10101]
+    ]
   }),
   51001: new Weapon({
     id: 51001,
@@ -5376,7 +6353,11 @@ export const weaponsData: Weapons = {
       pAtk: 199,
       mAtk: 243,
       heal: 205
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10201],
+      reinforcementAbilitiesData[20401]
+    ]
   }),
   51002: new Weapon({
     id: 51002,
@@ -5398,7 +6379,11 @@ export const weaponsData: Weapons = {
       pAtk: 205,
       mAtk: 254,
       heal: 191
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[20601]
+    ]
   }),
   51003: new Weapon({
     id: 51003,
@@ -5420,7 +6405,11 @@ export const weaponsData: Weapons = {
       pAtk: 210,
       mAtk: 246,
       heal: 195
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[20301]
+    ]
   }),
   51004: new Weapon({
     id: 51004,
@@ -5442,7 +6431,11 @@ export const weaponsData: Weapons = {
       pAtk: 207,
       mAtk: 215,
       heal: 220
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10601],
+      reinforcementAbilitiesData[30401]
+    ]
   }),
   51005: new Weapon({
     id: 51005,
@@ -5464,7 +6457,11 @@ export const weaponsData: Weapons = {
       pAtk: 199,
       mAtk: 210,
       heal: 232
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10501],
+      reinforcementAbilitiesData[51501]
+    ]
   }),
   51006: new Weapon({
     id: 51006,
@@ -5489,7 +6486,11 @@ export const weaponsData: Weapons = {
       pAtk: 197,
       mAtk: 273,
       heal: 182
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[30601]
+    ]
   }),
   51007: new Weapon({
     id: 51007,
@@ -5514,7 +6515,11 @@ export const weaponsData: Weapons = {
       pAtk: 205,
       mAtk: 207,
       heal: 229
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10601],
+      reinforcementAbilitiesData[51901]
+    ]
   }),
   51008: new Weapon({
     id: 51008,
@@ -5539,7 +6544,11 @@ export const weaponsData: Weapons = {
       pAtk: 193,
       mAtk: 267,
       heal: 191
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10201],
+      reinforcementAbilitiesData[30701]
+    ]
   }),
   51009: new Weapon({
     id: 51009,
@@ -5561,7 +6570,11 @@ export const weaponsData: Weapons = {
       pAtk: 267,
       mAtk: 225,
       heal: 165
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10201],
+      reinforcementAbilitiesData[51401]
+    ]
   }),
   51010: new Weapon({
     id: 51010,
@@ -5587,7 +6600,11 @@ export const weaponsData: Weapons = {
       pAtk: 199,
       mAtk: 260,
       heal: 191
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10601],
+      reinforcementAbilitiesData[10501]
+    ]
   }),
   51012: new Weapon({
     id: 51012,
@@ -5615,7 +6632,11 @@ export const weaponsData: Weapons = {
       pAtk: 207,
       mAtk: 214,
       heal: 222
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[51901]
+    ]
   }),
   51013: new Weapon({
     id: 51013,
@@ -5637,7 +6658,11 @@ export const weaponsData: Weapons = {
       pAtk: 226,
       mAtk: 189,
       heal: 175
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[30401],
+      reinforcementAbilitiesData[11501]
+    ]
   }),
   51015: new Weapon({
     id: 51015,
@@ -5662,7 +6687,11 @@ export const weaponsData: Weapons = {
       pAtk: 254,
       mAtk: 212,
       heal: 185
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[10801]
+    ]
   }),
   51016: new Weapon({
     id: 51016,
@@ -5684,7 +6713,11 @@ export const weaponsData: Weapons = {
       pAtk: 189,
       mAtk: 226,
       heal: 175
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10501],
+      reinforcementAbilitiesData[10301]
+    ]
   }),
   51017: new Weapon({
     id: 51017,
@@ -5706,7 +6739,11 @@ export const weaponsData: Weapons = {
       pAtk: 199,
       mAtk: 215,
       heal: 175
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[10401]
+    ]
   }),
   51018: new Weapon({
     id: 51018,
@@ -5731,7 +6768,11 @@ export const weaponsData: Weapons = {
       pAtk: 214,
       mAtk: 207,
       heal: 170
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[10401]
+    ]
   }),
   51020: new Weapon({
     id: 51020,
@@ -5753,7 +6794,11 @@ export const weaponsData: Weapons = {
       pAtk: 199,
       mAtk: 220,
       heal: 172
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[20701]
+    ]
   }),
   51022: new Weapon({
     id: 51022,
@@ -5775,7 +6820,11 @@ export const weaponsData: Weapons = {
       pAtk: 215,
       mAtk: 199,
       heal: 175
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10201],
+      reinforcementAbilitiesData[20201]
+    ]
   }),
   51024: new UltimateWeapon({
     id: 51024,
@@ -5792,7 +6841,11 @@ export const weaponsData: Weapons = {
       pAtk: 179,
       mAtk: 176,
       heal: 121
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10601],
+      reinforcementAbilitiesData[10501]
+    ]
   }),
   52001: new Weapon({
     id: 52001,
@@ -5814,7 +6867,11 @@ export const weaponsData: Weapons = {
       pAtk: 252,
       mAtk: 225,
       heal: 177
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[11001],
+      reinforcementAbilitiesData[30201]
+    ]
   }),
   52002: new Weapon({
     id: 52002,
@@ -5836,7 +6893,11 @@ export const weaponsData: Weapons = {
       pAtk: 247,
       mAtk: 225,
       heal: 181
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[11001],
+      reinforcementAbilitiesData[20701]
+    ]
   }),
   52003: new Weapon({
     id: 52003,
@@ -5858,7 +6919,11 @@ export const weaponsData: Weapons = {
       pAtk: 222,
       mAtk: 256,
       heal: 175
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[20601]
+    ]
   }),
   52004: new Weapon({
     id: 52004,
@@ -5883,7 +6948,11 @@ export const weaponsData: Weapons = {
       pAtk: 205,
       mAtk: 281,
       heal: 168
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[20401]
+    ]
   }),
   52005: new Weapon({
     id: 52005,
@@ -5905,7 +6974,11 @@ export const weaponsData: Weapons = {
       pAtk: 225,
       mAtk: 205,
       heal: 215
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10601],
+      reinforcementAbilitiesData[51301]
+    ]
   }),
   52006: new Weapon({
     id: 52006,
@@ -5930,7 +7003,11 @@ export const weaponsData: Weapons = {
       pAtk: 220,
       mAtk: 262,
       heal: 172
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[20401]
+    ]
   }),
   52007: new Weapon({
     id: 52007,
@@ -5955,7 +7032,11 @@ export const weaponsData: Weapons = {
       pAtk: 243,
       mAtk: 226,
       heal: 182
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[51401]
+    ]
   }),
   52009: new Weapon({
     id: 52009,
@@ -5980,7 +7061,11 @@ export const weaponsData: Weapons = {
       pAtk: 264,
       mAtk: 199,
       heal: 188
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10201],
+      reinforcementAbilitiesData[20301]
+    ]
   }),
   52010: new Weapon({
     id: 52010,
@@ -6003,7 +7088,11 @@ export const weaponsData: Weapons = {
       pAtk: 273,
       mAtk: 207,
       heal: 174
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10201],
+      reinforcementAbilitiesData[10801]
+    ]
   }),
   52014: new Weapon({
     id: 52014,
@@ -6025,7 +7114,11 @@ export const weaponsData: Weapons = {
       pAtk: 233,
       mAtk: 199,
       heal: 161
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[30701],
+      reinforcementAbilitiesData[11401]
+    ]
   }),
   52015: new Weapon({
     id: 52015,
@@ -6049,7 +7142,11 @@ export const weaponsData: Weapons = {
       pAtk: 201,
       mAtk: 215,
       heal: 174
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[10401]
+    ]
   }),
   52016: new Weapon({
     id: 52016,
@@ -6071,7 +7168,11 @@ export const weaponsData: Weapons = {
       pAtk: 264,
       mAtk: 204,
       heal: 184
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[30401]
+    ]
   }),
   52017: new Weapon({
     id: 52017,
@@ -6096,7 +7197,11 @@ export const weaponsData: Weapons = {
       pAtk: 180,
       mAtk: 193,
       heal: 158
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10601],
+      reinforcementAbilitiesData[10501]
+    ]
   }),
   52019: new Weapon({
     id: 52019,
@@ -6118,7 +7223,11 @@ export const weaponsData: Weapons = {
       pAtk: 205,
       mAtk: 220,
       heal: 167
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[30601],
+      reinforcementAbilitiesData[11001]
+    ]
   }),
   52020: new Weapon({
     id: 52020,
@@ -6140,7 +7249,11 @@ export const weaponsData: Weapons = {
       pAtk: 205,
       mAtk: 275,
       heal: 174
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[20501]
+    ]
   }),
   52021: new Weapon({
     id: 52021,
@@ -6162,7 +7275,11 @@ export const weaponsData: Weapons = {
       pAtk: 184,
       mAtk: 199,
       heal: 150
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[11001],
+      reinforcementAbilitiesData[51701]
+    ]
   }),
   52022: new Weapon({
     id: 52022,
@@ -6187,7 +7304,11 @@ export const weaponsData: Weapons = {
       pAtk: 210,
       mAtk: 275,
       heal: 170
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[51501],
+      reinforcementAbilitiesData[20201]
+    ]
   }),
   52023: new Weapon({
     id: 52023,
@@ -6211,7 +7332,11 @@ export const weaponsData: Weapons = {
       pAtk: 222,
       mAtk: 215,
       heal: 157
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10201],
+      reinforcementAbilitiesData[51301]
+    ]
   }),
   52025: new Weapon({
     id: 52025,
@@ -6239,7 +7364,11 @@ export const weaponsData: Weapons = {
       pAtk: 277,
       mAtk: 212,
       heal: 167
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[51401],
+      reinforcementAbilitiesData[20201]
+    ]
   }),
   52013: new Weapon({
     id: 52013,
@@ -6267,7 +7396,11 @@ export const weaponsData: Weapons = {
       pAtk: 247,
       mAtk: 247,
       heal: 161
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[51301]
+    ]
   }),
   52026: new UltimateWeapon({
     id: 52026,
@@ -6284,7 +7417,11 @@ export const weaponsData: Weapons = {
       pAtk: 164,
       mAtk: 164,
       heal: 143
-    }
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[51901],
+      reinforcementAbilitiesData[10401]
+    ]
   }),
 };
 

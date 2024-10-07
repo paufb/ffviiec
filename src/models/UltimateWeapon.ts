@@ -1,4 +1,5 @@
 import { Elements } from '../types.ts';
+import { ReinforcementAbility } from './ReinforcementAbility.ts';
 import { UltimateCommandAbility } from './UltimateCommandAbility.ts';
 import { Weapon } from './Weapon.ts';
 
@@ -9,11 +10,12 @@ interface UltimateWeaponProps {
   element: keyof Elements;
   commandAbility: UltimateCommandAbility;
   maxRarityStats: { pAtk: number; mAtk: number; heal: number; };
+  reinforcementAbilities: ReinforcementAbility[];
 }
 
 export class UltimateWeapon extends Weapon {
-  constructor({ id, name, characterId, element, commandAbility, maxRarityStats }: UltimateWeaponProps) {
-    super({ id: id, name: name, characterId: characterId, element: element, commandAbility: commandAbility, maxRarityLevel: 6, maxRarityStats: maxRarityStats });
+  constructor({ id, name, characterId, element, commandAbility, maxRarityStats, reinforcementAbilities }: UltimateWeaponProps) {
+    super({ id: id, name: name, characterId: characterId, element: element, commandAbility: commandAbility, maxRarityLevel: 6, maxRarityStats: maxRarityStats, reinforcementAbilities: reinforcementAbilities });
   }
 
   getPAtk() {
