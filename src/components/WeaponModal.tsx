@@ -16,6 +16,7 @@ import styles from './WeaponModal.module.css';
 import { Weapon } from '../models/Weapon.ts';
 import { UltimateWeapon } from '../models/UltimateWeapon.ts';
 import { UltimateStars } from './UltimateStars.tsx';
+import { ReinforcementAbilityIcon } from './ReinforcementAbilityIcon.tsx';
 
 interface WeaponModalProps {
   weapon: Weapon;
@@ -189,6 +190,20 @@ export function WeaponModal({ weapon, selectedOverboostLevel, selectedWeaponLeve
               <hr />
               <div className={styles['column-abilities-cability-container-description']}>
                 {weapon.getCAbilityDescription(displayedOverboostLevel)}
+              </div>
+            </div>
+          </div>
+          <div className={styles['column-abilities-rabilities']}>
+            R. Abilities
+            <hr />
+            <div className={styles['column-abilities-rability-list']}>
+              <div className={styles['column-abilities-rability-container']}>
+                <ReinforcementAbilityIcon reinforcementAbility={weapon.reinforcementAbilities[0]} />
+                {weapon.reinforcementAbilities[0].name}
+              </div>
+              <div className={styles['column-abilities-rability-container']}>
+                <ReinforcementAbilityIcon reinforcementAbility={weapon.reinforcementAbilities[1]} />
+                {weapon.reinforcementAbilities[1].name}
               </div>
             </div>
           </div>

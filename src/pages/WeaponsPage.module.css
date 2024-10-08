@@ -618,22 +618,30 @@
     
         & .ability-icons {
           display: flex;
-    
+
+          & .ability-icons-column {
+            display: flex;
+            flex-direction: column;
+          }
+
+          & .ability-icons-row {
+            display: flex;
+          }
+
+          & .ability-icons-column:nth-child(1) img {
+            width: 3rem;
+            height: 3rem;
+          }
+
+          & .ability-icons-column:nth-child(2) img {
+            width: 1.5rem;
+            height: 1.5rem;
+          }
+
           & img {
             background-color: rgb(5, 40, 84);
             border: 2px solid rgb(63, 117, 173);
             box-sizing: border-box;
-          }
-    
-          & img:nth-child(1) {
-            width: 3rem;
-            height: 3rem;
-          }
-    
-          & img:nth-child(2),
-          & img:nth-child(3) {
-            width: 1.5rem;
-            height: 1.5rem;
           }
         }
       }

@@ -15,6 +15,7 @@ import styles from './WeaponsPage.module.css';
 import { Weapon } from '../models/Weapon.ts';
 import { UltimateWeapon } from '../models/UltimateWeapon.ts';
 import { UltimateStars } from '../components/UltimateStars.tsx';
+import { ReinforcementAbilityIcon } from '../components/ReinforcementAbilityIcon.tsx';
 
 export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean }) {
   type Column = 'weapon' | keyof WeaponType['fiveStarLevel120'] | 'atbCost';
@@ -446,9 +447,19 @@ export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean })
                     </div>
                     <div className={styles["grid-entry-column-2"]}>
                       <div className={styles['ability-icons']}>
-                        <CommandAbilityIcon commandAbility={weapon.commandAbility} lazy={true} />
-                        <ElementIcon element={weapon.element} />
-                        <SigilIcon sigil={weapon.commandAbility.sigil} />
+                        <div className={styles['ability-icons-column']}>
+                          <CommandAbilityIcon commandAbility={weapon.commandAbility} lazy={true} />
+                        </div>
+                        <div className={styles['ability-icons-column']}>
+                          <div className={styles['ability-icons-row']}>
+                            <ElementIcon element={weapon.element} />
+                            <SigilIcon sigil={weapon.commandAbility.sigil} />
+                          </div>
+                          <div className={styles['ability-icons-row']}>
+                            <ReinforcementAbilityIcon reinforcementAbility={weapon.reinforcementAbilities[0]} lazy={true} />
+                            <ReinforcementAbilityIcon reinforcementAbility={weapon.reinforcementAbilities[1]} lazy={true} />
+                          </div>
+                        </div>
                       </div>
                       <ATBBarCost cost={weapon.commandAbility.atbCost} />
                     </div>
