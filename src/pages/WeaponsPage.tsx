@@ -418,7 +418,7 @@ export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean })
             {Object.entries(filteredWeapons).map(([_, weapon]) => (
               <div key={weapon.name} className={styles["grid-entry"]} onClick={() => openWeaponModal(weapon)}>
                 <div className={`${styles["grid-image-container"]} ${weapon instanceof UltimateWeapon ? styles['grid-image-container--ultimate'] : ''}`}>
-                  <WeaponIcon weapon={weapon} />
+                  <WeaponIcon weapon={weapon} lazy={true} />
                   <div className={styles["grid-image-overboost-stars"]}>
                     {weapon instanceof UltimateWeapon ? (
                       <UltimateStars overlap={true} />
@@ -446,7 +446,7 @@ export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean })
                     </div>
                     <div className={styles["grid-entry-column-2"]}>
                       <div className={styles['ability-icons']}>
-                        <CommandAbilityIcon commandAbility={weapon.commandAbility} />
+                        <CommandAbilityIcon commandAbility={weapon.commandAbility} lazy={true} />
                         <ElementIcon element={weapon.element} />
                         <SigilIcon sigil={weapon.commandAbility.sigil} />
                       </div>
