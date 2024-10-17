@@ -1487,7 +1487,7 @@ export const weaponsData: Weapons = {
       sigil: 'rhombus',
       description: `${damage(undefined, 'Mag. Non-elem.', 'Single Enemy', 10)}`,
       valuesByOverboostLevel: {
-        damage: ['320', '', '', '', '', '', '430', '430', '430', '430', '450']
+        damage: ['320', '370', '370', '370', '370', '370', '430', '430', '430', '430', '450']
       }
     }),
     maxRarityLevel: 5,
@@ -2321,9 +2321,9 @@ export const weaponsData: Weapons = {
       sigil: null,
       description: `${damage(undefined, 'Mag. Non-elem.', 'Single Enemy', 10)}\nAlso, ${decrease('PDEF', 'Low', 'Single Enemy', null, undefined, undefined, 'Mid')}`,
       valuesByOverboostLevel: {
-        damage: ['260', '', '', '', '', '', '350', '350', '350', '350', '360'],
-        pDefDecreaseDur: ['20', '', '', '', '', '', '25', '25', '25', '25', '28'],
-        pDefDecreaseExt: ['6', '', '', '', '', '', '7', '7', '7', '7', '9']
+        damage: ['260', '300', '300', '300', '300', '300', '350', '350', '350', '350', '360'],
+        pDefDecreaseDur: ['20', '22', '22', '22', '22', '22', '25', '25', '25', '25', '28'],
+        pDefDecreaseExt: ['6', '7', '7', '7', '7', '7', '7', '7', '7', '7', '9']
       }
     }),
     maxRarityLevel: 5,
@@ -2433,14 +2433,14 @@ export const weaponsData: Weapons = {
       sigil: null,
       description: `${increase('Ice Damage', undefined, 'Single Ally', null, undefined, undefined, undefined)}\nAlso, ${heal(undefined, 'Mag.', 'Single Ally')}\nWhen [Rng.: Self]'s HP is 50% or more, ${increase('MATK', 'Mid', 'Single Ally', null, undefined, undefined, undefined)}`,
       valuesByOverboostLevel: {
-        iceDamageIncreasePot: ['Mid', '', '', '', '', '', 'High', 'High', 'High', 'High', 'High'],
-        iceDamageIncreaseDur: ['24', '', '', '', '', '', '26', '26', '26', '26', '30'],
-        iceDamageIncreaseExt: ['8', '', '', '', '', '', '8', '8', '8', '8', '10'],
-        iceDamageIncreaseMaxPot: ['Mid', '', '', '', '', '', 'High', 'High', 'High', 'High', 'High'],
-        heal: ['7', '', '', '', '', '', '9', '9', '9', '9', '9'],
-        mAtkIncreaseDur: ['24', '', '', '', '', '', '26', '26', '26', '26', '30'],
-        mAtkIncreaseExt: ['8', '', '', '', '', '', '8', '8', '8', '8', '10'],
-        mAtkIncreaseMaxPot: ['Mid', '', '', '', '', '', 'High', 'High', 'High', 'High', 'High']
+        iceDamageIncreasePot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        iceDamageIncreaseDur: ['24', '26', '26', '26', '26', '26', '26', '26', '26', '26', '30'],
+        iceDamageIncreaseExt: ['8', '8', '8', '8', '8', '8', '8', '8', '8', '8', '10'],
+        iceDamageIncreaseMaxPot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        heal: ['7', '8', '8', '8', '8', '8', '9', '9', '9', '9', '9'],
+        mAtkIncreaseDur: ['24', '26', '26', '26', '26', '26', '26', '26', '26', '26', '30'],
+        mAtkIncreaseExt: ['8', '8', '8', '8', '8', '8', '8', '8', '8', '8', '10'],
+        mAtkIncreaseMaxPot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High']
       }
     }),
     maxRarityLevel: 5,
@@ -3576,6 +3576,32 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10501]
     ]
   }),
+  6019: new Weapon({
+    id: 6019,
+    name: 'Little Red Wreath',
+    characterId: 6,
+    element: 'Ice',
+    commandAbility: new CommandAbility({
+      id: 10601901,
+      name: 'Icebound',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Mag. Ice', 'Single Enemy', null)}\nAlso, when Debuff is granted to Target, x1.2 damage.`,
+      valuesByOverboostLevel: {
+        damage: ['520', '620', '620', '620', '620', '620', '780', '780', '780', '780', '940']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 215,
+      mAtk: 285,
+      heal: 157
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[20301]
+    ]
+  }),
   7001: new Weapon({
     id: 7001,
     name: 'Yellow Megaphone',
@@ -3643,7 +3669,7 @@ export const weaponsData: Weapons = {
       sigil: null,
       description: `${damage(undefined, 'Mag. Ice', 'All Enemies', null)}`,
       valuesByOverboostLevel: {
-        damage: ['280', '', '', '', '', '', '440', '440', '440', '440', '520']
+        damage: ['280', '340', '340', '340', '340', '340', '440', '440', '440', '440', '520']
       }
     }),
     maxRarityLevel: 5,
@@ -3879,12 +3905,12 @@ export const weaponsData: Weapons = {
       sigil: null,
       description: `${increase('MATK', undefined, 'Single Ally', null, undefined, undefined, 'High')}\nAlso, ${regen('Single Ally', undefined, 3)}\n${heal(undefined, 'Mag.', 'Single Ally')}\n${apply('Haste', 'Single Ally', 20, undefined, 5)}`,
       valuesByOverboostLevel: {
-        mAtkIncreasePot: ['Mid', '', '', '', '', '', 'High', 'High', 'High', 'High', 'High'],
-        mAtkIncreaseDur: ['30', '', '', '', '', '', '34', '34', '34', '34', '38'],
-        mAtkIncreaseExt: ['10', '', '', '', '', '', '11', '11', '11', '11', '12'],
-        regenDur: ['9', '', '', '', '', '', '12', '12', '12', '12', '15'],
-        heal: ['9', '', '', '', '', '', '12', '12', '12', '12', '13'],
-        hasteDur: ['10', '', '', '', '', '', '15', '15', '15', '15', '20']
+        mAtkIncreasePot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        mAtkIncreaseDur: ['30', '34', '34', '34', '34', '34', '34', '34', '34', '34', '38'],
+        mAtkIncreaseExt: ['10', '11', '11', '11', '11', '11', '11', '11', '11', '11', '12'],
+        regenDur: ['9', '12', '12', '12', '12', '12', '12', '12', '12', '12', '15'],
+        heal: ['9', '11', '11', '11', '11', '11', '12', '12', '12', '12', '13'],
+        hasteDur: ['10', '10', '10', '10', '10', '10', '15', '15', '15', '15', '20']
       }
     }),
     maxRarityLevel: 5,
@@ -6731,7 +6757,7 @@ export const weaponsData: Weapons = {
       sigil: null,
       description: `${damage(undefined, 'Mag. Earth', 'All Enemies', null)}`,
       valuesByOverboostLevel: {
-        damage: ['210', '', '', '', '', '', '280', '280', '280', '280', '290']
+        damage: ['210', '240', '240', '240', '240', '240', '280', '280', '280', '280', '290']
       }
     }),
     maxRarityLevel: 5,
@@ -6845,6 +6871,32 @@ export const weaponsData: Weapons = {
     reinforcementAbilities: [
       reinforcementAbilitiesData[10601],
       reinforcementAbilitiesData[10501]
+    ]
+  }),
+  51025: new Weapon({
+    id: 51025,
+    name: 'Candle Rapier',
+    characterId: 51,
+    element: 'Lightning',
+    commandAbility: new CommandAbility({
+      id: 15102501,
+      name: 'Thundara Surge A',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Mag. Lightning', 'All Enemies', null)}`,
+      valuesByOverboostLevel: {
+        damage: ['220', '230', '230', '230', '230', '230', '280', '280', '280', '280', '290']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 193,
+      mAtk: 228,
+      heal: 170
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[20401]
     ]
   }),
   52001: new Weapon({
