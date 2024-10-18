@@ -79,7 +79,7 @@ export function WeaponModal({ weapon, selectedOverboostLevel, selectedWeaponLeve
       <div className={styles['modal-body']}>
         <div className={styles['column-info']}>
           <div className={styles['column-info-header']}>
-            <CharacterDiamond characterId={weapon.characterId} height="64px" />
+            <CharacterDiamond character={weapon.character} height="64px" />
             <div className={styles['column-info-header-title']}>
               <div className={styles['column-info-header-title-name']}>
                 {weapon.name}

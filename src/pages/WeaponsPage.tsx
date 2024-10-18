@@ -238,16 +238,16 @@ export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean })
               <span className="arrow-down" />
             </button>
             <div ref={dropdownRefs.characters.menu} className={`${styles['dropdown']} ${isDropdownVisible.characters ? styles['dropdown--visible'] : ''}`}>
-              {Object.entries(characters).map(([characterName, character]) => (
-                <label className={`${styles['togglable-button']} ${styles['togglable-button--character']} ${selectedCharacterIds.includes(character.id) ? styles['togglable-button--toggled'] : ''} ${styles['downscale-on-click']}`} key={characterName}>
+              {Object.entries(characters).map(([_, character]) => (
+                <label className={`${styles['togglable-button']} ${styles['togglable-button--character']} ${selectedCharacterIds.includes(character.id) ? styles['togglable-button--toggled'] : ''} ${styles['downscale-on-click']}`} key={character.name}>
                   <input
                     type="checkbox"
                     value={character.id}
                     onChange={handleSelectedCharactersChange}
                     style={{ display: 'none' }}
                   />
-                  <CharacterDiamond characterId={character.id} width="32px" />
-                  {characterName}
+                  <CharacterDiamond character={character} width="32px" />
+                  {character.name}
                 </label>
               ))}
             </div>
@@ -370,7 +370,7 @@ export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean })
                     <td className={`${styles["table-data"]} ${styles["table-data--nowrap"]}`}>
                       <div className={styles["table-data-weapon-container-row"]}>
                         <div className={styles["table-data-weapon-container-column"]}>
-                          <CharacterDiamond characterId={weapon.characterId} height="64px" />
+                          <CharacterDiamond character={weapon.character} height="64px" />
                         </div>
                         <div className={styles["table-data-weapon-container-column"]}>
                           <div>

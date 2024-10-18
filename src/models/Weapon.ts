@@ -1,11 +1,12 @@
 import { Elements } from '../types.ts';
+import { Character } from './Character.ts';
 import { CommandAbility } from './CommandAbility.ts';
 import { ReinforcementAbility } from './ReinforcementAbility.ts';
 
 interface WeaponProps {
   id: number;
   name: string;
-  characterId: number;
+  character: Character;
   element: keyof Elements;
   commandAbility: CommandAbility;
   maxRarityLevel: number;
@@ -16,7 +17,7 @@ interface WeaponProps {
 export class Weapon {
   #id: number;
   #name: string;
-  #characterId: number;
+  #character: Character;
   #element: keyof Elements;
   #commandAbility: CommandAbility;
   #maxRarityLevel: number;
@@ -26,10 +27,10 @@ export class Weapon {
   static #overboostLevelMAtkMultipliers = [0, 0.4, 0.3, 0.2, 0.1, 0.1, 0.1, 0.05, 0.05, 0.05, 0.05];
   static #overboostLevelHealMultipliers = [0, 0.1, 0.05, 0.05, 0.04, 0.04, 0.04, 0.02, 0.02, 0.02, 0.02];
 
-  constructor({ id, name, characterId, element, commandAbility, maxRarityLevel, maxRarityStats, reinforcementAbilities }: WeaponProps) {
+  constructor({ id, name, character, element, commandAbility, maxRarityLevel, maxRarityStats, reinforcementAbilities }: WeaponProps) {
     this.#id = id;
     this.#name = name;
-    this.#characterId = characterId;
+    this.#character = character;
     this.#element = element;
     this.#commandAbility = commandAbility;
     this.#maxRarityLevel = maxRarityLevel;
@@ -39,7 +40,7 @@ export class Weapon {
 
   get id() { return this.#id; }
   get name() { return this.#name; }
-  get characterId() { return this.#characterId; }
+  get character() { return this.#character; }
   get element() { return this.#element; }
   get commandAbility() { return this.#commandAbility; }
   get maxRarityLevel() { return this.#maxRarityLevel; }

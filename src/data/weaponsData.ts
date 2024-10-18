@@ -3,13 +3,14 @@ import { UltimateCommandAbility } from '../models/UltimateCommandAbility.ts';
 import { UltimateWeapon } from '../models/UltimateWeapon.ts';
 import { Weapon } from '../models/Weapon.ts';
 import { Weapons } from '../types.ts';
+import { charactersData } from './charactersData.ts';
 import { reinforcementAbilitiesData } from './reinforcementAbilitiesData.ts';
 
 export const weaponsData: Weapons = {
   1001: new Weapon({
     id: 1001,
     name: 'Buster Sword',
-    characterId: 1,
+    character: charactersData[1],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10100101,
@@ -35,7 +36,7 @@ export const weaponsData: Weapons = {
   1002: new Weapon({
     id: 1002,
     name: 'Iron Blade',
-    characterId: 1,
+    character: charactersData[1],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10100201,
@@ -64,7 +65,7 @@ export const weaponsData: Weapons = {
   1003: new Weapon({
     id: 1003,
     name: 'Hardedge',
-    characterId: 1,
+    character: charactersData[1],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10100301,
@@ -93,7 +94,7 @@ export const weaponsData: Weapons = {
   1004: new Weapon({
     id: 1004,
     name: 'Mythril Saber',
-    characterId: 1,
+    character: charactersData[1],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10100401,
@@ -119,7 +120,7 @@ export const weaponsData: Weapons = {
   1006: new Weapon({
     id: 1006,
     name: 'Butterfly Edge',
-    characterId: 1,
+    character: charactersData[1],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10100601,
@@ -148,7 +149,7 @@ export const weaponsData: Weapons = {
   1007: new Weapon({
     id: 1007,
     name: 'Murasame',
-    characterId: 1,
+    character: charactersData[1],
     element: 'Lightning',
     commandAbility: new CommandAbility({
       id: 10100701,
@@ -174,7 +175,7 @@ export const weaponsData: Weapons = {
   1008: new Weapon({
     id: 1008,
     name: 'Organics',
-    characterId: 1,
+    character: charactersData[1],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10100801,
@@ -201,7 +202,7 @@ export const weaponsData: Weapons = {
   1009: new Weapon({
     id: 1009,
     name: 'Crystal Sword',
-    characterId: 1,
+    character: charactersData[1],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10100901,
@@ -227,7 +228,7 @@ export const weaponsData: Weapons = {
   1012: new Weapon({
     id: 1012,
     name: 'Enhance Sword',
-    characterId: 1,
+    character: charactersData[1],
     element: 'Ice',
     commandAbility: new CommandAbility({
       id: 10101201,
@@ -253,7 +254,7 @@ export const weaponsData: Weapons = {
   1013: new Weapon({
     id: 1013,
     name: 'Nail Bat',
-    characterId: 1,
+    character: charactersData[1],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10101301,
@@ -279,7 +280,7 @@ export const weaponsData: Weapons = {
   1015: new Weapon({
     id: 1015,
     name: 'Apocalypse',
-    characterId: 1,
+    character: charactersData[1],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10101501,
@@ -305,7 +306,7 @@ export const weaponsData: Weapons = {
   1020: new Weapon({
     id: 1020,
     name: 'Maritime Sword',
-    characterId: 1,
+    character: charactersData[1],
     element: 'Water',
     commandAbility: new CommandAbility({
       id: 10102001,
@@ -331,7 +332,7 @@ export const weaponsData: Weapons = {
   1024: new Weapon({
     id: 1024,
     name: 'Shiva\'s Blade',
-    characterId: 1,
+    character: charactersData[1],
     element: 'Ice',
     commandAbility: new CommandAbility({
       id: 10102401,
@@ -357,7 +358,7 @@ export const weaponsData: Weapons = {
   1025: new Weapon({
     id: 1025,
     name: 'Bandaged Sword',
-    characterId: 1,
+    character: charactersData[1],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10102501,
@@ -386,7 +387,7 @@ export const weaponsData: Weapons = {
   1028: new Weapon({
     id: 1028,
     name: 'Skysplitter',
-    characterId: 1,
+    character: charactersData[1],
     element: 'Fire',
     commandAbility: new CommandAbility({
       id: 10102801,
@@ -412,7 +413,7 @@ export const weaponsData: Weapons = {
   1029: new Weapon({
     id: 1029,
     name: 'Zidane\'s Sword',
-    characterId: 1,
+    character: charactersData[1],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10102901,
@@ -438,7 +439,7 @@ export const weaponsData: Weapons = {
   1030: new Weapon({
     id: 1030,
     name: 'Holiday Cheer',
-    characterId: 1,
+    character: charactersData[1],
     element: 'Earth',
     commandAbility: new CommandAbility({
       id: 10103001,
@@ -464,7 +465,7 @@ export const weaponsData: Weapons = {
   1031: new Weapon({
     id: 1031,
     name: 'Stream Saber',
-    characterId: 1,
+    character: charactersData[1],
     element: 'Ice',
     commandAbility: new CommandAbility({
       id: 10103101,
@@ -490,7 +491,7 @@ export const weaponsData: Weapons = {
   1032: new Weapon({
     id: 1032,
     name: 'Igneous Saber',
-    characterId: 1,
+    character: charactersData[1],
     element: 'Fire',
     commandAbility: new CommandAbility({
       id: 10103201,
@@ -516,7 +517,7 @@ export const weaponsData: Weapons = {
   1033: new Weapon({
     id: 1033,
     name: 'Glavenus Sword',
-    characterId: 1,
+    character: charactersData[1],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10103301,
@@ -548,7 +549,7 @@ export const weaponsData: Weapons = {
   1034: new Weapon({
     id: 1034,
     name: 'Rune Blade',
-    characterId: 1,
+    character: charactersData[1],
     element: 'Ice',
     commandAbility: new CommandAbility({
       id: 10103401,
@@ -574,7 +575,7 @@ export const weaponsData: Weapons = {
   1035: new Weapon({
     id: 1035,
     name: 'Burning Oar',
-    characterId: 1,
+    character: charactersData[1],
     element: 'Fire',
     commandAbility: new CommandAbility({
       id: 10103501,
@@ -600,7 +601,7 @@ export const weaponsData: Weapons = {
   1036: new Weapon({
     id: 1036,
     name: 'Bahamut Greatsword',
-    characterId: 1,
+    character: charactersData[1],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10103601,
@@ -629,7 +630,7 @@ export const weaponsData: Weapons = {
   1037: new UltimateWeapon({
     id: 1037,
     name: 'Ultimate Buster Sword',
-    characterId: 1,
+    character: charactersData[1],
     element: 'Non-elemental',
     commandAbility: new UltimateCommandAbility({
       id: 10103701,
@@ -650,7 +651,7 @@ export const weaponsData: Weapons = {
   2001: new Weapon({
     id: 2001,
     name: 'Gatling Gun',
-    characterId: 2,
+    character: charactersData[2],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10200101,
@@ -676,7 +677,7 @@ export const weaponsData: Weapons = {
   2002: new Weapon({
     id: 2002,
     name: 'Assault Gun',
-    characterId: 2,
+    character: charactersData[2],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10200201,
@@ -705,7 +706,7 @@ export const weaponsData: Weapons = {
   2007: new Weapon({
     id: 2007,
     name: 'Heavy Vulcan',
-    characterId: 2,
+    character: charactersData[2],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10200701,
@@ -734,7 +735,7 @@ export const weaponsData: Weapons = {
   2008: new Weapon({
     id: 2008,
     name: 'Microlaser',
-    characterId: 2,
+    character: charactersData[2],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10202601,
@@ -764,7 +765,7 @@ export const weaponsData: Weapons = {
   2010: new Weapon({
     id: 2010,
     name: 'W Machine',
-    characterId: 2,
+    character: charactersData[2],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10201001,
@@ -793,7 +794,7 @@ export const weaponsData: Weapons = {
   2011: new Weapon({
     id: 2011,
     name: 'Solid Bazooka',
-    characterId: 2,
+    character: charactersData[2],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10201101,
@@ -822,7 +823,7 @@ export const weaponsData: Weapons = {
   2012: new Weapon({
     id: 2012,
     name: 'Enemy Launcher',
-    characterId: 2,
+    character: charactersData[2],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10201201,
@@ -848,7 +849,7 @@ export const weaponsData: Weapons = {
   2013: new Weapon({
     id: 2013,
     name: 'Max Ray',
-    characterId: 2,
+    character: charactersData[2],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10201301,
@@ -874,7 +875,7 @@ export const weaponsData: Weapons = {
   2015: new Weapon({
     id: 2015,
     name: 'Flame Projector',
-    characterId: 2,
+    character: charactersData[2],
     element: 'Fire',
     commandAbility: new CommandAbility({
       id: 10201501,
@@ -900,7 +901,7 @@ export const weaponsData: Weapons = {
   2018: new Weapon({
     id: 2018,
     name: 'Heavy Hauser',
-    characterId: 2,
+    character: charactersData[2],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10201801,
@@ -926,7 +927,7 @@ export const weaponsData: Weapons = {
   2019: new Weapon({
     id: 2019,
     name: 'Lefko Kypseli',
-    characterId: 2,
+    character: charactersData[2],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10201901,
@@ -955,7 +956,7 @@ export const weaponsData: Weapons = {
   2020: new Weapon({
     id: 2020,
     name: 'Rocket Punch',
-    characterId: 2,
+    character: charactersData[2],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10202001,
@@ -981,7 +982,7 @@ export const weaponsData: Weapons = {
   2022: new Weapon({
     id: 2022,
     name: 'Shiva Cannon',
-    characterId: 2,
+    character: charactersData[2],
     element: 'Ice',
     commandAbility: new CommandAbility({
       id: 10202201,
@@ -1007,7 +1008,7 @@ export const weaponsData: Weapons = {
   2024: new Weapon({
     id: 2024,
     name: 'Hell House Cannon',
-    characterId: 2,
+    character: charactersData[2],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10202401,
@@ -1035,7 +1036,7 @@ export const weaponsData: Weapons = {
   2025: new Weapon({
     id: 2025,
     name: 'Siege Cannon',
-    characterId: 2,
+    character: charactersData[2],
     element: 'Water',
     commandAbility: new CommandAbility({
       id: 10202501,
@@ -1061,7 +1062,7 @@ export const weaponsData: Weapons = {
   2017: new Weapon({
     id: 2017,
     name: 'Electrocannon',
-    characterId: 2,
+    character: charactersData[2],
     element: 'Lightning',
     commandAbility: new CommandAbility({
       id: 10201701,
@@ -1092,7 +1093,7 @@ export const weaponsData: Weapons = {
   2027: new Weapon({
     id: 2027,
     name: 'Leviathan Buster',
-    characterId: 2,
+    character: charactersData[2],
     element: 'Water',
     commandAbility: new CommandAbility({
       id: 10202701,
@@ -1118,7 +1119,7 @@ export const weaponsData: Weapons = {
   2021: new Weapon({
     id: 2021,
     name: 'Sharkslayer',
-    characterId: 2,
+    character: charactersData[2],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10202101,
@@ -1150,7 +1151,7 @@ export const weaponsData: Weapons = {
   2031: new UltimateWeapon({
     id: 2031,
     name: 'Ultimate Gatling Gun',
-    characterId: 2,
+    character: charactersData[2],
     element: 'Non-elemental',
     commandAbility: new UltimateCommandAbility({
       id: 10203101,
@@ -1171,7 +1172,7 @@ export const weaponsData: Weapons = {
   3001: new Weapon({
     id: 3001,
     name: 'Leather Gloves',
-    characterId: 3,
+    character: charactersData[3],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10300601,
@@ -1200,7 +1201,7 @@ export const weaponsData: Weapons = {
   3005: new Weapon({
     id: 3005,
     name: 'Grand Gloves',
-    characterId: 3,
+    character: charactersData[3],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10300501,
@@ -1226,7 +1227,7 @@ export const weaponsData: Weapons = {
   3006: new Weapon({
     id: 3006,
     name: 'Sonic Striker',
-    characterId: 3,
+    character: charactersData[3],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10300101,
@@ -1252,7 +1253,7 @@ export const weaponsData: Weapons = {
   3007: new Weapon({
     id: 3007,
     name: 'Tiger Fangs',
-    characterId: 3,
+    character: charactersData[3],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10300701,
@@ -1281,7 +1282,7 @@ export const weaponsData: Weapons = {
   3010: new Weapon({
     id: 3010,
     name: 'Crystal Gloves',
-    characterId: 3,
+    character: charactersData[3],
     element: 'Lightning',
     commandAbility: new CommandAbility({
       id: 10301001,
@@ -1307,7 +1308,7 @@ export const weaponsData: Weapons = {
   3011: new Weapon({
     id: 3011,
     name: 'Motor Drive',
-    characterId: 3,
+    character: charactersData[3],
     element: 'Wind',
     commandAbility: new CommandAbility({
       id: 10301101,
@@ -1333,7 +1334,7 @@ export const weaponsData: Weapons = {
   3013: new Weapon({
     id: 3013,
     name: 'Kaiser Knuckles',
-    characterId: 3,
+    character: charactersData[3],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10301301,
@@ -1362,7 +1363,7 @@ export const weaponsData: Weapons = {
   3014: new Weapon({
     id: 3014,
     name: 'Work Gloves',
-    characterId: 3,
+    character: charactersData[3],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10301401,
@@ -1394,7 +1395,7 @@ export const weaponsData: Weapons = {
   3015: new Weapon({
     id: 3015,
     name: 'Powersoul',
-    characterId: 3,
+    character: charactersData[3],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10301501,
@@ -1420,7 +1421,7 @@ export const weaponsData: Weapons = {
   3019: new Weapon({
     id: 3019,
     name: 'Lifeguard Wraps',
-    characterId: 3,
+    character: charactersData[3],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10301901,
@@ -1446,7 +1447,7 @@ export const weaponsData: Weapons = {
   3020: new Weapon({
     id: 3020,
     name: 'Feathered Gloves',
-    characterId: 3,
+    character: charactersData[3],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10302001,
@@ -1478,7 +1479,7 @@ export const weaponsData: Weapons = {
   3024: new Weapon({
     id: 3024,
     name: 'Bahamut Knuckles',
-    characterId: 3,
+    character: charactersData[3],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10302401,
@@ -1504,7 +1505,7 @@ export const weaponsData: Weapons = {
   3025: new Weapon({
     id: 3025,
     name: 'Holy Flame Gloves',
-    characterId: 3,
+    character: charactersData[3],
     element: 'Ice',
     commandAbility: new CommandAbility({
       id: 10302501,
@@ -1530,7 +1531,7 @@ export const weaponsData: Weapons = {
   3027: new Weapon({
     id: 3027,
     name: 'Amarant\'s Claws',
-    characterId: 3,
+    character: charactersData[3],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10302701,
@@ -1563,7 +1564,7 @@ export const weaponsData: Weapons = {
   3028: new Weapon({
     id: 3028,
     name: 'Bunny Gloves',
-    characterId: 3,
+    character: charactersData[3],
     element: 'Water',
     commandAbility: new CommandAbility({
       id: 10302801,
@@ -1592,7 +1593,7 @@ export const weaponsData: Weapons = {
   3029: new Weapon({
     id: 3029,
     name: 'Oven Mitts',
-    characterId: 3,
+    character: charactersData[3],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10302901,
@@ -1621,7 +1622,7 @@ export const weaponsData: Weapons = {
   3030: new Weapon({
     id: 3030,
     name: 'Turks\' Gloves',
-    characterId: 3,
+    character: charactersData[3],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: null,
@@ -1649,7 +1650,7 @@ export const weaponsData: Weapons = {
   3031: new Weapon({
     id: 3031,
     name: 'Guide Gloves',
-    characterId: 3,
+    character: charactersData[3],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10303101,
@@ -1675,7 +1676,7 @@ export const weaponsData: Weapons = {
   3032: new Weapon({
     id: 3032,
     name: 'Kirin Gloves',
-    characterId: 3,
+    character: charactersData[3],
     element: 'Lightning',
     commandAbility: new CommandAbility({
       id: 10303201,
@@ -1704,7 +1705,7 @@ export const weaponsData: Weapons = {
   3033: new Weapon({
     id: 3033,
     name: 'Shell Knuckles',
-    characterId: 3,
+    character: charactersData[3],
     element: 'Fire',
     commandAbility: new CommandAbility({
       id: 10303301,
@@ -1730,7 +1731,7 @@ export const weaponsData: Weapons = {
   3034: new Weapon({
     id: 3034,
     name: 'Steward Gloves',
-    characterId: 3,
+    character: charactersData[3],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: null,
@@ -1758,7 +1759,7 @@ export const weaponsData: Weapons = {
   3035: new Weapon({
     id: 3035,
     name: 'Bahamut Fangs',
-    characterId: 3,
+    character: charactersData[3],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10303501,
@@ -1789,7 +1790,7 @@ export const weaponsData: Weapons = {
   3037: new UltimateWeapon({
     id: 3037,
     name: 'Ultimate Leather Gloves',
-    characterId: 3,
+    character: charactersData[3],
     element: 'Non-elemental',
     commandAbility: new UltimateCommandAbility({
       id: 10303701,
@@ -1810,7 +1811,7 @@ export const weaponsData: Weapons = {
   3036: new Weapon({
     id: 3036,
     name: 'Black Cat\'s Paws',
-    characterId: 3,
+    character: charactersData[3],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10303601,
@@ -1836,7 +1837,7 @@ export const weaponsData: Weapons = {
   4001: new Weapon({
     id: 4001,
     name: 'Guard Stick',
-    characterId: 4,
+    character: charactersData[4],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10400101,
@@ -1865,7 +1866,7 @@ export const weaponsData: Weapons = {
   4002: new Weapon({
     id: 4002,
     name: 'Silver Staff',
-    characterId: 4,
+    character: charactersData[4],
     element: 'Ice',
     commandAbility: new CommandAbility({
       id: 10400201,
@@ -1891,7 +1892,7 @@ export const weaponsData: Weapons = {
   4003: new Weapon({
     id: 4003,
     name: 'Striking Staff',
-    characterId: 4,
+    character: charactersData[4],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10400301,
@@ -1917,7 +1918,7 @@ export const weaponsData: Weapons = {
   4004: new Weapon({
     id: 4004,
     name: 'Mythril Rod',
-    characterId: 4,
+    character: charactersData[4],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10400401,
@@ -1949,7 +1950,7 @@ export const weaponsData: Weapons = {
   4005: new Weapon({
     id: 4005,
     name: 'Full Metal Staff',
-    characterId: 4,
+    character: charactersData[4],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10400501,
@@ -1978,7 +1979,7 @@ export const weaponsData: Weapons = {
   4007: new Weapon({
     id: 4007,
     name: 'Prism Rod',
-    characterId: 4,
+    character: charactersData[4],
     element: 'Wind',
     commandAbility: new CommandAbility({
       id: 10401201,
@@ -2004,7 +2005,7 @@ export const weaponsData: Weapons = {
   4008: new Weapon({
     id: 4008,
     name: 'Fairy Tale',
-    characterId: 4,
+    character: charactersData[4],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10400801,
@@ -2030,7 +2031,7 @@ export const weaponsData: Weapons = {
   4009: new Weapon({
     id: 4009,
     name: 'Wizard Staff',
-    characterId: 4,
+    character: charactersData[4],
     element: 'Lightning',
     commandAbility: new CommandAbility({
       id: 10401001,
@@ -2056,7 +2057,7 @@ export const weaponsData: Weapons = {
   4010: new Weapon({
     id: 4010,
     name: 'Wizer Staff',
-    characterId: 4,
+    character: charactersData[4],
     element: 'Earth',
     commandAbility: new CommandAbility({
       id: 10400901,
@@ -2082,7 +2083,7 @@ export const weaponsData: Weapons = {
   4014: new Weapon({
     id: 4014,
     name: 'Sun Umbrella',
-    characterId: 4,
+    character: charactersData[4],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10401401,
@@ -2114,7 +2115,7 @@ export const weaponsData: Weapons = {
   4015: new Weapon({
     id: 4015,
     name: 'Floral Wand',
-    characterId: 4,
+    character: charactersData[4],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10401501,
@@ -2146,7 +2147,7 @@ export const weaponsData: Weapons = {
   4016: new Weapon({
     id: 4016,
     name: 'Umbrella',
-    characterId: 4,
+    character: charactersData[4],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10401601,
@@ -2172,7 +2173,7 @@ export const weaponsData: Weapons = {
   4019: new Weapon({
     id: 4019,
     name: 'Chocobo Staff',
-    characterId: 4,
+    character: charactersData[4],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10401901,
@@ -2201,7 +2202,7 @@ export const weaponsData: Weapons = {
   4020: new Weapon({
     id: 4020,
     name: 'Snowflake',
-    characterId: 4,
+    character: charactersData[4],
     element: 'Ice',
     commandAbility: new CommandAbility({
       id: 10402001,
@@ -2230,7 +2231,7 @@ export const weaponsData: Weapons = {
   4021: new Weapon({
     id: 4021,
     name: 'Ramuh\'s Staff',
-    characterId: 4,
+    character: charactersData[4],
     element: 'Lightning',
     commandAbility: new CommandAbility({
       id: 10402101,
@@ -2256,7 +2257,7 @@ export const weaponsData: Weapons = {
   4022: new Weapon({
     id: 4022,
     name: 'Garnet\'s Rod',
-    characterId: 4,
+    character: charactersData[4],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10402201,
@@ -2286,7 +2287,7 @@ export const weaponsData: Weapons = {
   4023: new Weapon({
     id: 4023,
     name: 'Egg Staff',
-    characterId: 4,
+    character: charactersData[4],
     element: 'Fire',
     commandAbility: new CommandAbility({
       id: 10402301,
@@ -2312,7 +2313,7 @@ export const weaponsData: Weapons = {
   4024: new Weapon({
     id: 4024,
     name: 'Dawn\'s Prayers',
-    characterId: 4,
+    character: charactersData[4],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10402401,
@@ -2340,7 +2341,7 @@ export const weaponsData: Weapons = {
   4025: new Weapon({
     id: 4025,
     name: 'Kamura Wand',
-    characterId: 4,
+    character: charactersData[4],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10402501,
@@ -2372,7 +2373,7 @@ export const weaponsData: Weapons = {
   4026: new Weapon({
     id: 4026,
     name: 'Radrod',
-    characterId: 4,
+    character: charactersData[4],
     element: 'Water',
     commandAbility: new CommandAbility({
       id: null,
@@ -2398,7 +2399,7 @@ export const weaponsData: Weapons = {
   4027: new Weapon({
     id: 4027,
     name: 'Hell House Rod',
-    characterId: 4,
+    character: charactersData[4],
     element: 'Ice',
     commandAbility: new CommandAbility({
       id: null,
@@ -2424,7 +2425,7 @@ export const weaponsData: Weapons = {
   4028: new Weapon({
     id: 4028,
     name: 'Citric Wand',
-    characterId: 4,
+    character: charactersData[4],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10402801,
@@ -2457,7 +2458,7 @@ export const weaponsData: Weapons = {
   4029: new Weapon({
     id: 4029,
     name: 'Bahamut Rod',
-    characterId: 4,
+    character: charactersData[4],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10402901,
@@ -2487,7 +2488,7 @@ export const weaponsData: Weapons = {
   4030: new UltimateWeapon({
     id: 4030,
     name: 'Ultimate Guard Stick',
-    characterId: 4,
+    character: charactersData[4],
     element: 'Non-elemental',
     commandAbility: new UltimateCommandAbility({
       id: 10403001,
@@ -2508,7 +2509,7 @@ export const weaponsData: Weapons = {
   5001: new Weapon({
     id: 5001,
     name: 'Sleek Collar',
-    characterId: 5,
+    character: charactersData[5],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10500101,
@@ -2537,7 +2538,7 @@ export const weaponsData: Weapons = {
   5005: new Weapon({
     id: 5005,
     name: 'Gold Collar',
-    characterId: 5,
+    character: charactersData[5],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10500901,
@@ -2566,7 +2567,7 @@ export const weaponsData: Weapons = {
   5009: new Weapon({
     id: 5009,
     name: 'Platinum Collar',
-    characterId: 5,
+    character: charactersData[5],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10500501,
@@ -2594,7 +2595,7 @@ export const weaponsData: Weapons = {
   5016: new Weapon({
     id: 5016,
     name: 'Noble Collar',
-    characterId: 5,
+    character: charactersData[5],
     element: 'Water',
     commandAbility: new CommandAbility({
       id: 10501601,
@@ -2620,7 +2621,7 @@ export const weaponsData: Weapons = {
   5018: new Weapon({
     id: 5018,
     name: 'Rage Collar',
-    characterId: 5,
+    character: charactersData[5],
     element: 'Fire',
     commandAbility: new CommandAbility({
       id: 10501801,
@@ -2646,7 +2647,7 @@ export const weaponsData: Weapons = {
   5019: new Weapon({
     id: 5019,
     name: 'Leather Collar',
-    characterId: 5,
+    character: charactersData[5],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10501901,
@@ -2672,7 +2673,7 @@ export const weaponsData: Weapons = {
   5020: new Weapon({
     id: 5020,
     name: 'Rubber Collar',
-    characterId: 5,
+    character: charactersData[5],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10502001,
@@ -2698,7 +2699,7 @@ export const weaponsData: Weapons = {
   5021: new Weapon({
     id: 5021,
     name: 'Junk Collar',
-    characterId: 5,
+    character: charactersData[5],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10502101,
@@ -2727,7 +2728,7 @@ export const weaponsData: Weapons = {
   5023: new Weapon({
     id: 5023,
     name: 'Canyon Collar',
-    characterId: 5,
+    character: charactersData[5],
     element: 'Wind',
     commandAbility: new CommandAbility({
       id: 10502301,
@@ -2756,7 +2757,7 @@ export const weaponsData: Weapons = {
   5026: new Weapon({
     id: 5026,
     name: 'Iron Collar',
-    characterId: 5,
+    character: charactersData[5],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10502601,
@@ -2784,7 +2785,7 @@ export const weaponsData: Weapons = {
   5027: new Weapon({
     id: 5027,
     name: 'Headphones',
-    characterId: 5,
+    character: charactersData[5],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10502701,
@@ -2810,7 +2811,7 @@ export const weaponsData: Weapons = {
   5028: new Weapon({
     id: 5028,
     name: 'Seaside Collar',
-    characterId: 5,
+    character: charactersData[5],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10502801,
@@ -2839,7 +2840,7 @@ export const weaponsData: Weapons = {
   5031: new Weapon({
     id: 5031,
     name: 'Hell House Collar',
-    characterId: 5,
+    character: charactersData[5],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10503101,
@@ -2867,7 +2868,7 @@ export const weaponsData: Weapons = {
   5032: new Weapon({
     id: 5032,
     name: 'Flame Dragon\'s Band',
-    characterId: 5,
+    character: charactersData[5],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10503201,
@@ -2896,7 +2897,7 @@ export const weaponsData: Weapons = {
   5033: new Weapon({
     id: 5033,
     name: 'Egg Collar',
-    characterId: 5,
+    character: charactersData[5],
     element: 'Fire',
     commandAbility: new CommandAbility({
       id: null,
@@ -2922,7 +2923,7 @@ export const weaponsData: Weapons = {
   5017: new Weapon({
     id: 5017,
     name: 'Ivy Collar',
-    characterId: 5,
+    character: charactersData[5],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10501701,
@@ -2954,7 +2955,7 @@ export const weaponsData: Weapons = {
   5034: new Weapon({
     id: 5034,
     name: 'Amethyst Collar',
-    characterId: 5,
+    character: charactersData[5],
     element: 'Ice',
     commandAbility: new CommandAbility({
       id: 10503401,
@@ -2980,7 +2981,7 @@ export const weaponsData: Weapons = {
   5004: new Weapon({
     id: 5004,
     name: 'Silver Collar',
-    characterId: 5,
+    character: charactersData[5],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10500401,
@@ -3012,7 +3013,7 @@ export const weaponsData: Weapons = {
   5035: new Weapon({
     id: 5035,
     name: 'Steward Collar',
-    characterId: 5,
+    character: charactersData[5],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: null,
@@ -3040,7 +3041,7 @@ export const weaponsData: Weapons = {
   5036: new UltimateWeapon({
     id: 5036,
     name: 'Ultimate Leather Collar',
-    characterId: 5,
+    character: charactersData[5],
     element: 'Non-elemental',
     commandAbility: new UltimateCommandAbility({
       id: 10503601,
@@ -3061,7 +3062,7 @@ export const weaponsData: Weapons = {
   6001: new Weapon({
     id: 6001,
     name: '4-Point Shuriken',
-    characterId: 6,
+    character: charactersData[6],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10600101,
@@ -3090,7 +3091,7 @@ export const weaponsData: Weapons = {
   6002: new Weapon({
     id: 6002,
     name: 'Boomerang',
-    characterId: 6,
+    character: charactersData[6],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10600201,
@@ -3119,7 +3120,7 @@ export const weaponsData: Weapons = {
   6003: new Weapon({
     id: 6003,
     name: 'Pinwheel',
-    characterId: 6,
+    character: charactersData[6],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10600301,
@@ -3148,7 +3149,7 @@ export const weaponsData: Weapons = {
   6004: new Weapon({
     id: 6004,
     name: 'Razor Ring',
-    characterId: 6,
+    character: charactersData[6],
     element: 'Earth',
     commandAbility: new CommandAbility({
       id: 10600401,
@@ -3174,7 +3175,7 @@ export const weaponsData: Weapons = {
   6005: new Weapon({
     id: 6005,
     name: 'Hawkeye',
-    characterId: 6,
+    character: charactersData[6],
     element: 'Earth',
     commandAbility: new CommandAbility({
       id: 10600501,
@@ -3200,7 +3201,7 @@ export const weaponsData: Weapons = {
   6006: new Weapon({
     id: 6006,
     name: 'Crystal Cross',
-    characterId: 6,
+    character: charactersData[6],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10600601,
@@ -3230,7 +3231,7 @@ export const weaponsData: Weapons = {
   6007: new Weapon({
     id: 6007,
     name: 'Wind Slash',
-    characterId: 6,
+    character: charactersData[6],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10600701,
@@ -3259,7 +3260,7 @@ export const weaponsData: Weapons = {
   6008: new Weapon({
     id: 6008,
     name: 'Twin Viper',
-    characterId: 6,
+    character: charactersData[6],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10600801,
@@ -3288,7 +3289,7 @@ export const weaponsData: Weapons = {
   6009: new Weapon({
     id: 6009,
     name: 'Spiral Shuriken',
-    characterId: 6,
+    character: charactersData[6],
     element: 'Ice',
     commandAbility: new CommandAbility({
       id: 10600901,
@@ -3314,7 +3315,7 @@ export const weaponsData: Weapons = {
   6010: new Weapon({
     id: 6010,
     name: 'Magic Shuriken',
-    characterId: 6,
+    character: charactersData[6],
     element: 'Wind',
     commandAbility: new CommandAbility({
       id: 10601001,
@@ -3340,7 +3341,7 @@ export const weaponsData: Weapons = {
   6014: new Weapon({
     id: 6014,
     name: 'Diner Tray',
-    characterId: 6,
+    character: charactersData[6],
     element: 'Wind',
     commandAbility: new CommandAbility({
       id: 10602301,
@@ -3366,7 +3367,7 @@ export const weaponsData: Weapons = {
   6015: new Weapon({
     id: 6015,
     name: 'Arctic Star',
-    characterId: 6,
+    character: charactersData[6],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10601501,
@@ -3396,7 +3397,7 @@ export const weaponsData: Weapons = {
   6016: new Weapon({
     id: 6016,
     name: 'Bamboo Ring',
-    characterId: 6,
+    character: charactersData[6],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10601601,
@@ -3422,7 +3423,7 @@ export const weaponsData: Weapons = {
   6022: new Weapon({
     id: 6022,
     name: 'Chariot Wheel',
-    characterId: 6,
+    character: charactersData[6],
     element: 'Water',
     commandAbility: new CommandAbility({
       id: 10602201,
@@ -3448,7 +3449,7 @@ export const weaponsData: Weapons = {
   6024: new Weapon({
     id: 6024,
     name: 'Leviathan Cutter',
-    characterId: 6,
+    character: charactersData[6],
     element: 'Water',
     commandAbility: new CommandAbility({
       id: 10602401,
@@ -3474,7 +3475,7 @@ export const weaponsData: Weapons = {
   6026: new Weapon({
     id: 6026,
     name: 'Striped Moogle Float',
-    characterId: 6,
+    character: charactersData[6],
     element: 'Fire',
     commandAbility: new CommandAbility({
       id: 10602601,
@@ -3503,7 +3504,7 @@ export const weaponsData: Weapons = {
   6027: new Weapon({
     id: 6027,
     name: 'Cactuar Fan',
-    characterId: 6,
+    character: charactersData[6],
     element: 'Ice',
     commandAbility: new CommandAbility({
       id: null,
@@ -3529,7 +3530,7 @@ export const weaponsData: Weapons = {
   6028: new Weapon({
     id: 6028,
     name: 'Bahamut Cutter',
-    characterId: 6,
+    character: charactersData[6],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10602801,
@@ -3558,7 +3559,7 @@ export const weaponsData: Weapons = {
   6029: new UltimateWeapon({
     id: 6029,
     name: 'Ultimate 4-Point Shuriken',
-    characterId: 6,
+    character: charactersData[6],
     element: 'Non-elemental',
     commandAbility: new UltimateCommandAbility({
       id: 10602901,
@@ -3579,7 +3580,7 @@ export const weaponsData: Weapons = {
   6019: new Weapon({
     id: 6019,
     name: 'Little Red Wreath',
-    characterId: 6,
+    character: charactersData[6],
     element: 'Ice',
     commandAbility: new CommandAbility({
       id: 10601901,
@@ -3605,7 +3606,7 @@ export const weaponsData: Weapons = {
   7001: new Weapon({
     id: 7001,
     name: 'Yellow Megaphone',
-    characterId: 7,
+    character: charactersData[7],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10700101,
@@ -3631,7 +3632,7 @@ export const weaponsData: Weapons = {
   7002: new Weapon({
     id: 7002,
     name: 'Green Megaphone',
-    characterId: 7,
+    character: charactersData[7],
     element: 'Water',
     commandAbility: new CommandAbility({
       id: 10702201,
@@ -3660,7 +3661,7 @@ export const weaponsData: Weapons = {
   7003: new Weapon({
     id: 7003,
     name: 'Blue Megaphone',
-    characterId: 7,
+    character: charactersData[7],
     element: 'Ice',
     commandAbility: new CommandAbility({
       id: null,
@@ -3686,7 +3687,7 @@ export const weaponsData: Weapons = {
   7004: new Weapon({
     id: 7004,
     name: 'Red Megaphone',
-    characterId: 7,
+    character: charactersData[7],
     element: 'Fire',
     commandAbility: new CommandAbility({
       id: null,
@@ -3712,7 +3713,7 @@ export const weaponsData: Weapons = {
   7005: new Weapon({
     id: 7005,
     name: 'Crystal Megaphone',
-    characterId: 7,
+    character: charactersData[7],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10700501,
@@ -3742,7 +3743,7 @@ export const weaponsData: Weapons = {
   7008: new Weapon({
     id: 7008,
     name: 'Silver Megaphone',
-    characterId: 7,
+    character: charactersData[7],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10700801,
@@ -3770,7 +3771,7 @@ export const weaponsData: Weapons = {
   7009: new Weapon({
     id: 7009,
     name: 'Gold Megaphone',
-    characterId: 7,
+    character: charactersData[7],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10700901,
@@ -3802,7 +3803,7 @@ export const weaponsData: Weapons = {
   7010: new Weapon({
     id: 7010,
     name: 'Battle Trumpet',
-    characterId: 7,
+    character: charactersData[7],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10701001,
@@ -3834,7 +3835,7 @@ export const weaponsData: Weapons = {
   7011: new Weapon({
     id: 7011,
     name: 'Trumpet Shell',
-    characterId: 7,
+    character: charactersData[7],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10701101,
@@ -3866,7 +3867,7 @@ export const weaponsData: Weapons = {
   7014: new Weapon({
     id: 7014,
     name: 'Marching Horn',
-    characterId: 7,
+    character: charactersData[7],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10701401,
@@ -3896,7 +3897,7 @@ export const weaponsData: Weapons = {
   7022: new Weapon({
     id: 7022,
     name: 'Flower Vase',
-    characterId: 7,
+    character: charactersData[7],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10700201,
@@ -3927,7 +3928,7 @@ export const weaponsData: Weapons = {
   7024: new Weapon({
     id: 7024,
     name: 'Humus Megaphone',
-    characterId: 7,
+    character: charactersData[7],
     element: 'Wind',
     commandAbility: new CommandAbility({
       id: 10702401,
@@ -3953,7 +3954,7 @@ export const weaponsData: Weapons = {
   7023: new Weapon({
     id: 7023,
     name: 'Catsmegaphone',
-    characterId: 7,
+    character: charactersData[7],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: null,
@@ -3982,7 +3983,7 @@ export const weaponsData: Weapons = {
   7025: new Weapon({
     id: 7025,
     name: 'Fireworks Megaphone',
-    characterId: 7,
+    character: charactersData[7],
     element: 'Ice',
     commandAbility: new CommandAbility({
       id: null,
@@ -4008,7 +4009,7 @@ export const weaponsData: Weapons = {
   7029: new Weapon({
     id: 7029,
     name: 'Quina Megaphone',
-    characterId: 7,
+    character: charactersData[7],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10702901,
@@ -4040,7 +4041,7 @@ export const weaponsData: Weapons = {
   7026: new Weapon({
     id: 7026,
     name: 'Alba Megaphone',
-    characterId: 7,
+    character: charactersData[7],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10702601,
@@ -4066,7 +4067,7 @@ export const weaponsData: Weapons = {
   7028: new UltimateWeapon({
     id: 7028,
     name: 'Ultimate Yellow Megaphone',
-    characterId: 7,
+    character: charactersData[7],
     element: 'Non-elemental',
     commandAbility: new UltimateCommandAbility({
       id: 10702801,
@@ -4087,7 +4088,7 @@ export const weaponsData: Weapons = {
   7032: new UltimateWeapon({
     id: 7032,
     name: 'HP Shout',
-    characterId: 7,
+    character: charactersData[7],
     element: 'Non-elemental',
     commandAbility: new UltimateCommandAbility({
       id: 10703201,
@@ -4108,7 +4109,7 @@ export const weaponsData: Weapons = {
   7019: new Weapon({
     id: 7019,
     name: 'Witch\'s Broom',
-    characterId: 7,
+    character: charactersData[7],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10701901,
@@ -4140,7 +4141,7 @@ export const weaponsData: Weapons = {
   7027: new Weapon({
     id: 7027,
     name: 'Icebolt Megaphone',
-    characterId: 7,
+    character: charactersData[7],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10702701,
@@ -4172,7 +4173,7 @@ export const weaponsData: Weapons = {
   8002: new Weapon({
     id: 8002,
     name: 'Cath Palug',
-    characterId: 8,
+    character: charactersData[8],
     element: 'Ice',
     commandAbility: new CommandAbility({
       id: null,
@@ -4198,7 +4199,7 @@ export const weaponsData: Weapons = {
   8003: new Weapon({
     id: 8003,
     name: 'Gilded Age',
-    characterId: 8,
+    character: charactersData[8],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10800301,
@@ -4226,7 +4227,7 @@ export const weaponsData: Weapons = {
   8004: new Weapon({
     id: 8004,
     name: 'S1976C',
-    characterId: 8,
+    character: charactersData[8],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10800401,
@@ -4259,7 +4260,7 @@ export const weaponsData: Weapons = {
   8005: new Weapon({
     id: 8005,
     name: 'Shortbarrel',
-    characterId: 8,
+    character: charactersData[8],
     element: 'Wind',
     commandAbility: new CommandAbility({
       id: 10800501,
@@ -4286,7 +4287,7 @@ export const weaponsData: Weapons = {
   8007: new Weapon({
     id: 8007,
     name: 'T03 Model N',
-    characterId: 8,
+    character: charactersData[8],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10800701,
@@ -4313,7 +4314,7 @@ export const weaponsData: Weapons = {
   8008: new Weapon({
     id: 8008,
     name: 'Sawed-Off GS',
-    characterId: 8,
+    character: charactersData[8],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10800801,
@@ -4346,7 +4347,7 @@ export const weaponsData: Weapons = {
   8009: new Weapon({
     id: 8009,
     name: 'Chiron',
-    characterId: 8,
+    character: charactersData[8],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10800901,
@@ -4376,7 +4377,7 @@ export const weaponsData: Weapons = {
   8010: new Weapon({
     id: 8010,
     name: 'Double Stem E',
-    characterId: 8,
+    character: charactersData[8],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10801001,
@@ -4405,7 +4406,7 @@ export const weaponsData: Weapons = {
   8012: new Weapon({
     id: 8012,
     name: 'White Dog',
-    characterId: 8,
+    character: charactersData[8],
     element: 'Earth',
     commandAbility: new CommandAbility({
       id: 10801201,
@@ -4432,7 +4433,7 @@ export const weaponsData: Weapons = {
   8014: new Weapon({
     id: 8014,
     name: 'Silver Rifle',
-    characterId: 8,
+    character: charactersData[8],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10801401,
@@ -4459,7 +4460,7 @@ export const weaponsData: Weapons = {
   8015: new Weapon({
     id: 8015,
     name: 'Hugin & Munin',
-    characterId: 8,
+    character: charactersData[8],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10801501,
@@ -4486,7 +4487,7 @@ export const weaponsData: Weapons = {
   8017: new Weapon({
     id: 8017,
     name: 'Quicksilver',
-    characterId: 8,
+    character: charactersData[8],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10800101,
@@ -4513,7 +4514,7 @@ export const weaponsData: Weapons = {
   8019: new UltimateWeapon({
     id: 8019,
     name: 'Ultimate Quicksilver',
-    characterId: 8,
+    character: charactersData[8],
     element: 'Non-elemental',
     commandAbility: new UltimateCommandAbility({
       id: 10801901,
@@ -4534,7 +4535,7 @@ export const weaponsData: Weapons = {
   8016: new Weapon({
     id: 8016,
     name: 'Crow Familiar',
-    characterId: 8,
+    character: charactersData[8],
     element: 'Lightning',
     commandAbility: new CommandAbility({
       id: 10801601,
@@ -4561,7 +4562,7 @@ export const weaponsData: Weapons = {
   8018: new Weapon({
     id: 8018,
     name: 'Icebolt Shooter',
-    characterId: 8,
+    character: charactersData[8],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10801801,
@@ -4593,7 +4594,7 @@ export const weaponsData: Weapons = {
   20001: new Weapon({
     id: 20001,
     name: 'Type-99 Longsword',
-    characterId: 20,
+    character: charactersData[20],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 12000101,
@@ -4619,7 +4620,7 @@ export const weaponsData: Weapons = {
   20003: new Weapon({
     id: 20003,
     name: 'Beach Parasol',
-    characterId: 20,
+    character: charactersData[20],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 12000301,
@@ -4645,7 +4646,7 @@ export const weaponsData: Weapons = {
   20004: new Weapon({
     id: 20004,
     name: 'Enhance Sword (Z)',
-    characterId: 20,
+    character: charactersData[20],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 12000601,
@@ -4671,7 +4672,7 @@ export const weaponsData: Weapons = {
   20005: new Weapon({
     id: 20005,
     name: 'Defender',
-    characterId: 20,
+    character: charactersData[20],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 12000501,
@@ -4701,7 +4702,7 @@ export const weaponsData: Weapons = {
   20006: new Weapon({
     id: 20006,
     name: 'Crystal Sword (Z)',
-    characterId: 20,
+    character: charactersData[20],
     element: 'Fire',
     commandAbility: new CommandAbility({
       id: 12000401,
@@ -4727,7 +4728,7 @@ export const weaponsData: Weapons = {
   20007: new Weapon({
     id: 20007,
     name: 'Falchion',
-    characterId: 20,
+    character: charactersData[20],
     element: 'Wind',
     commandAbility: new CommandAbility({
       id: 12000701,
@@ -4753,7 +4754,7 @@ export const weaponsData: Weapons = {
   20008: new Weapon({
     id: 20008,
     name: 'Zweihander',
-    characterId: 20,
+    character: charactersData[20],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 12000801,
@@ -4779,7 +4780,7 @@ export const weaponsData: Weapons = {
   20009: new Weapon({
     id: 20009,
     name: 'Arc Sword',
-    characterId: 20,
+    character: charactersData[20],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 12000901,
@@ -4808,7 +4809,7 @@ export const weaponsData: Weapons = {
   20010: new Weapon({
     id: 20010,
     name: 'Cutlass',
-    characterId: 20,
+    character: charactersData[20],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 12001001,
@@ -4837,7 +4838,7 @@ export const weaponsData: Weapons = {
   20011: new Weapon({
     id: 20011,
     name: 'Ceremonial Sword (Z)',
-    characterId: 20,
+    character: charactersData[20],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 12001101,
@@ -4866,7 +4867,7 @@ export const weaponsData: Weapons = {
   20013: new Weapon({
     id: 20013,
     name: 'Bouquet',
-    characterId: 20,
+    character: charactersData[20],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 12001301,
@@ -4892,7 +4893,7 @@ export const weaponsData: Weapons = {
   20014: new Weapon({
     id: 20014,
     name: 'Pressure Ridge',
-    characterId: 20,
+    character: charactersData[20],
     element: 'Ice',
     commandAbility: new CommandAbility({
       id: 12001401,
@@ -4921,7 +4922,7 @@ export const weaponsData: Weapons = {
   20015: new Weapon({
     id: 20015,
     name: 'Iron Greatsword',
-    characterId: 20,
+    character: charactersData[20],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 12001501,
@@ -4949,7 +4950,7 @@ export const weaponsData: Weapons = {
   20016: new Weapon({
     id: 20016,
     name: 'Ifrit\'s Sword',
-    characterId: 20,
+    character: charactersData[20],
     element: 'Fire',
     commandAbility: new CommandAbility({
       id: 12001601,
@@ -4975,7 +4976,7 @@ export const weaponsData: Weapons = {
   20018: new Weapon({
     id: 20018,
     name: 'Twinkling Star',
-    characterId: 20,
+    character: charactersData[20],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 12001201,
@@ -5007,7 +5008,7 @@ export const weaponsData: Weapons = {
   20019: new Weapon({
     id: 20019,
     name: 'Black Whiskers',
-    characterId: 20,
+    character: charactersData[20],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 12001901,
@@ -5039,7 +5040,7 @@ export const weaponsData: Weapons = {
   20020: new Weapon({
     id: 20020,
     name: 'Stream Guard',
-    characterId: 20,
+    character: charactersData[20],
     element: 'Fire',
     commandAbility: new CommandAbility({
       id: 12002001,
@@ -5065,7 +5066,7 @@ export const weaponsData: Weapons = {
   20023: new Weapon({
     id: 20023,
     name: 'Zinogre Blade',
-    characterId: 20,
+    character: charactersData[20],
     element: 'Lightning',
     commandAbility: new CommandAbility({
       id: 12002301,
@@ -5091,7 +5092,7 @@ export const weaponsData: Weapons = {
   20024: new Weapon({
     id: 20024,
     name: 'Carrot Sword',
-    characterId: 20,
+    character: charactersData[20],
     element: 'Fire',
     commandAbility: new CommandAbility({
       id: null,
@@ -5117,7 +5118,7 @@ export const weaponsData: Weapons = {
   20025: new Weapon({
     id: 20025,
     name: 'Alba Blade',
-    characterId: 20,
+    character: charactersData[20],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 12002501,
@@ -5143,7 +5144,7 @@ export const weaponsData: Weapons = {
   20027: new Weapon({
     id: 20027,
     name: 'Beatrix Sword',
-    characterId: 20,
+    character: charactersData[20],
     element: 'Wind',
     commandAbility: new CommandAbility({
       id: 12002701,
@@ -5169,7 +5170,7 @@ export const weaponsData: Weapons = {
   20026: new UltimateWeapon({
     id: 20026,
     name: 'Ultimate Type-99 Longsword',
-    characterId: 20,
+    character: charactersData[20],
     element: 'Non-elemental',
     commandAbility: new UltimateCommandAbility({
       id: 12002601,
@@ -5190,7 +5191,7 @@ export const weaponsData: Weapons = {
   49001: new Weapon({
     id: 49001,
     name: 'Nameless',
-    characterId: 49,
+    character: charactersData[49],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 14900301,
@@ -5219,7 +5220,7 @@ export const weaponsData: Weapons = {
   49002: new Weapon({
     id: 49002,
     name: 'Edged Wings',
-    characterId: 49,
+    character: charactersData[49],
     element: 'Ice',
     commandAbility: new CommandAbility({
       id: 14900201,
@@ -5245,7 +5246,7 @@ export const weaponsData: Weapons = {
   49003: new Weapon({
     id: 49003,
     name: 'Glaireid',
-    characterId: 49,
+    character: charactersData[49],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 14900101,
@@ -5271,7 +5272,7 @@ export const weaponsData: Weapons = {
   49004: new Weapon({
     id: 49004,
     name: 'Aonibi',
-    characterId: 49,
+    character: charactersData[49],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 14900401,
@@ -5301,7 +5302,7 @@ export const weaponsData: Weapons = {
   49005: new Weapon({
     id: 49005,
     name: 'Northern Lights',
-    characterId: 49,
+    character: charactersData[49],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 14900501,
@@ -5330,7 +5331,7 @@ export const weaponsData: Weapons = {
   49006: new Weapon({
     id: 49006,
     name: 'Prototype Crimson Blade',
-    characterId: 49,
+    character: charactersData[49],
     element: 'Fire',
     commandAbility: new CommandAbility({
       id: 14900601,
@@ -5356,7 +5357,7 @@ export const weaponsData: Weapons = {
   49007: new Weapon({
     id: 49007,
     name: 'CC Alloy Sword',
-    characterId: 49,
+    character: charactersData[49],
     element: 'Lightning',
     commandAbility: new CommandAbility({
       id: 14900701,
@@ -5382,7 +5383,7 @@ export const weaponsData: Weapons = {
   49008: new Weapon({
     id: 49008,
     name: 'Mythril Type-0 Katana',
-    characterId: 49,
+    character: charactersData[49],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 14900801,
@@ -5412,7 +5413,7 @@ export const weaponsData: Weapons = {
   49009: new Weapon({
     id: 49009,
     name: 'Shinra Blade: Model I',
-    characterId: 49,
+    character: charactersData[49],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 14900901,
@@ -5438,7 +5439,7 @@ export const weaponsData: Weapons = {
   49012: new Weapon({
     id: 49012,
     name: 'Torn Wing',
-    characterId: 49,
+    character: charactersData[49],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 14901201,
@@ -5467,7 +5468,7 @@ export const weaponsData: Weapons = {
   49013: new Weapon({
     id: 49013,
     name: 'World Tree Bough',
-    characterId: 49,
+    character: charactersData[49],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 14901301,
@@ -5493,7 +5494,7 @@ export const weaponsData: Weapons = {
   49015: new Weapon({
     id: 49015,
     name: 'Dark Heavens',
-    characterId: 49,
+    character: charactersData[49],
     element: 'Wind',
     commandAbility: new CommandAbility({
       id: 14901501,
@@ -5519,7 +5520,7 @@ export const weaponsData: Weapons = {
   49016: new Weapon({
     id: 49016,
     name: 'Kuja\'s Spirit Blade',
-    characterId: 49,
+    character: charactersData[49],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 14901601,
@@ -5551,7 +5552,7 @@ export const weaponsData: Weapons = {
   49017: new Weapon({
     id: 49017,
     name: 'Radiant Edge',
-    characterId: 49,
+    character: charactersData[49],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 14901701,
@@ -5583,7 +5584,7 @@ export const weaponsData: Weapons = {
   49018: new Weapon({
     id: 49018,
     name: 'Protector\'s Blade',
-    characterId: 49,
+    character: charactersData[49],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 14901801,
@@ -5609,7 +5610,7 @@ export const weaponsData: Weapons = {
   49019: new Weapon({
     id: 49019,
     name: 'Flame Dragon Blade',
-    characterId: 49,
+    character: charactersData[49],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 14901901,
@@ -5638,7 +5639,7 @@ export const weaponsData: Weapons = {
   49020: new Weapon({
     id: 49020,
     name: 'Ashura',
-    characterId: 49,
+    character: charactersData[49],
     element: 'Fire',
     commandAbility: new CommandAbility({
       id: 14902001,
@@ -5664,7 +5665,7 @@ export const weaponsData: Weapons = {
   49011: new Weapon({
     id: 49011,
     name: 'Shinra Military Sword',
-    characterId: 49,
+    character: charactersData[49],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 14901101,
@@ -5696,7 +5697,7 @@ export const weaponsData: Weapons = {
   49023: new Weapon({
     id: 49023,
     name: 'Shinra Wyvern Blade',
-    characterId: 49,
+    character: charactersData[49],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 14902301,
@@ -5724,7 +5725,7 @@ export const weaponsData: Weapons = {
   49010: new Weapon({
     id: 49010,
     name: 'Tempest',
-    characterId: 49,
+    character: charactersData[49],
     element: 'Water',
     commandAbility: new CommandAbility({
       id: 14901001,
@@ -5753,7 +5754,7 @@ export const weaponsData: Weapons = {
   49024: new Weapon({
     id: 49024,
     name: 'Blue Bramble',
-    characterId: 49,
+    character: charactersData[49],
     element: 'Earth',
     commandAbility: new CommandAbility({
       id: 14902401,
@@ -5782,7 +5783,7 @@ export const weaponsData: Weapons = {
   49026: new UltimateWeapon({
     id: 49026,
     name: 'Ultimate Nameless',
-    characterId: 49,
+    character: charactersData[49],
     element: 'Non-elemental',
     commandAbility: new UltimateCommandAbility({
       id: 14902601,
@@ -5803,7 +5804,7 @@ export const weaponsData: Weapons = {
   49027: new UltimateWeapon({
     id: 49027,
     name: 'Genji Blade',
-    characterId: 49,
+    character: charactersData[49],
     element: 'Non-elemental',
     commandAbility: new UltimateCommandAbility({
       id: 14902701,
@@ -5824,7 +5825,7 @@ export const weaponsData: Weapons = {
   50001: new Weapon({
     id: 50001,
     name: 'Personal Style',
-    characterId: 50,
+    character: charactersData[50],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 15000101,
@@ -5850,7 +5851,7 @@ export const weaponsData: Weapons = {
   50002: new Weapon({
     id: 50002,
     name: 'Crewkicker',
-    characterId: 50,
+    character: charactersData[50],
     element: 'Fire',
     commandAbility: new CommandAbility({
       id: 15000201,
@@ -5876,7 +5877,7 @@ export const weaponsData: Weapons = {
   50003: new Weapon({
     id: 50003,
     name: 'Jiggy Fam',
-    characterId: 50,
+    character: charactersData[50],
     element: 'Earth',
     commandAbility: new CommandAbility({
       id: 15000301,
@@ -5902,7 +5903,7 @@ export const weaponsData: Weapons = {
   50004: new Weapon({
     id: 50004,
     name: 'Hardcore Squad',
-    characterId: 50,
+    character: charactersData[50],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 15000401,
@@ -5934,7 +5935,7 @@ export const weaponsData: Weapons = {
   50005: new Weapon({
     id: 50005,
     name: 'Rest in Peace',
-    characterId: 50,
+    character: charactersData[50],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 15000501,
@@ -5960,7 +5961,7 @@ export const weaponsData: Weapons = {
   50007: new Weapon({
     id: 50007,
     name: 'Ultimatic',
-    characterId: 50,
+    character: charactersData[50],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 15000701,
@@ -5986,7 +5987,7 @@ export const weaponsData: Weapons = {
   50008: new Weapon({
     id: 50008,
     name: 'Piece of Cake',
-    characterId: 50,
+    character: charactersData[50],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 15000801,
@@ -6015,7 +6016,7 @@ export const weaponsData: Weapons = {
   50010: new Weapon({
     id: 50010,
     name: 'Shockbuster',
-    characterId: 50,
+    character: charactersData[50],
     element: 'Lightning',
     commandAbility: new CommandAbility({
       id: 15001001,
@@ -6041,7 +6042,7 @@ export const weaponsData: Weapons = {
   50011: new Weapon({
     id: 50011,
     name: 'Apology in Hell',
-    characterId: 50,
+    character: charactersData[50],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 15001101,
@@ -6067,7 +6068,7 @@ export const weaponsData: Weapons = {
   50014: new Weapon({
     id: 50014,
     name: 'Squeaky Hammer',
-    characterId: 50,
+    character: charactersData[50],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 15001401,
@@ -6093,7 +6094,7 @@ export const weaponsData: Weapons = {
   50015: new Weapon({
     id: 50015,
     name: 'Inferno Grave',
-    characterId: 50,
+    character: charactersData[50],
     element: 'Fire',
     commandAbility: new CommandAbility({
       id: 15001501,
@@ -6119,7 +6120,7 @@ export const weaponsData: Weapons = {
   50016: new Weapon({
     id: 50016,
     name: 'Pumpkin Lamppost',
-    characterId: 50,
+    character: charactersData[50],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 15001601,
@@ -6149,7 +6150,7 @@ export const weaponsData: Weapons = {
   50018: new Weapon({
     id: 50018,
     name: 'Thousand Waves',
-    characterId: 50,
+    character: charactersData[50],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 15001801,
@@ -6175,7 +6176,7 @@ export const weaponsData: Weapons = {
   50019: new Weapon({
     id: 50019,
     name: 'Steiner\'s Blade',
-    characterId: 50,
+    character: charactersData[50],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 15001901,
@@ -6203,7 +6204,7 @@ export const weaponsData: Weapons = {
   50020: new Weapon({
     id: 50020,
     name: 'Stream Slasher',
-    characterId: 50,
+    character: charactersData[50],
     element: 'Water',
     commandAbility: new CommandAbility({
       id: 15002001,
@@ -6229,7 +6230,7 @@ export const weaponsData: Weapons = {
   50021: new Weapon({
     id: 50021,
     name: 'Best Wishes',
-    characterId: 50,
+    character: charactersData[50],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 15002101,
@@ -6257,7 +6258,7 @@ export const weaponsData: Weapons = {
   50022: new Weapon({
     id: 50022,
     name: 'Radglaive',
-    characterId: 50,
+    character: charactersData[50],
     element: 'Water',
     commandAbility: new CommandAbility({
       id: null,
@@ -6283,7 +6284,7 @@ export const weaponsData: Weapons = {
   50023: new Weapon({
     id: 50023,
     name: 'Silver Sol Buster',
-    characterId: 50,
+    character: charactersData[50],
     element: 'Fire',
     commandAbility: new CommandAbility({
       id: null,
@@ -6309,7 +6310,7 @@ export const weaponsData: Weapons = {
   50006: new Weapon({
     id: 50006,
     name: 'Slay the Day',
-    characterId: 50,
+    character: charactersData[50],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 15000601,
@@ -6341,7 +6342,7 @@ export const weaponsData: Weapons = {
   50024: new UltimateWeapon({
     id: 50024,
     name: 'Ultimate Personal Style',
-    characterId: 50,
+    character: charactersData[50],
     element: 'Non-elemental',
     commandAbility: new UltimateCommandAbility({
       id: 15002401,
@@ -6362,7 +6363,7 @@ export const weaponsData: Weapons = {
   51001: new Weapon({
     id: 51001,
     name: 'Broadsword: Axis',
-    characterId: 51,
+    character: charactersData[51],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 15100101,
@@ -6388,7 +6389,7 @@ export const weaponsData: Weapons = {
   51002: new Weapon({
     id: 51002,
     name: 'Orthodox Raven',
-    characterId: 51,
+    character: charactersData[51],
     element: 'Water',
     commandAbility: new CommandAbility({
       id: 15100201,
@@ -6414,7 +6415,7 @@ export const weaponsData: Weapons = {
   51003: new Weapon({
     id: 51003,
     name: 'Absolute Royal',
-    characterId: 51,
+    character: charactersData[51],
     element: 'Ice',
     commandAbility: new CommandAbility({
       id: 15100301,
@@ -6440,7 +6441,7 @@ export const weaponsData: Weapons = {
   51004: new Weapon({
     id: 51004,
     name: 'Prime Number',
-    characterId: 51,
+    character: charactersData[51],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 15100401,
@@ -6466,7 +6467,7 @@ export const weaponsData: Weapons = {
   51005: new Weapon({
     id: 51005,
     name: 'Espee Rapiere Next-G',
-    characterId: 51,
+    character: charactersData[51],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 15100501,
@@ -6492,7 +6493,7 @@ export const weaponsData: Weapons = {
   51006: new Weapon({
     id: 51006,
     name: 'Core Defender',
-    characterId: 51,
+    character: charactersData[51],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 15100601,
@@ -6521,7 +6522,7 @@ export const weaponsData: Weapons = {
   51007: new Weapon({
     id: 51007,
     name: 'Centipede',
-    characterId: 51,
+    character: charactersData[51],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 15100701,
@@ -6550,7 +6551,7 @@ export const weaponsData: Weapons = {
   51008: new Weapon({
     id: 51008,
     name: 'Stingray',
-    characterId: 51,
+    character: charactersData[51],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 15100801,
@@ -6579,7 +6580,7 @@ export const weaponsData: Weapons = {
   51009: new Weapon({
     id: 51009,
     name: 'Killer Hornet',
-    characterId: 51,
+    character: charactersData[51],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 15100901,
@@ -6605,7 +6606,7 @@ export const weaponsData: Weapons = {
   51010: new Weapon({
     id: 51010,
     name: 'Bramble Spine',
-    characterId: 51,
+    character: charactersData[51],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 15101101,
@@ -6635,7 +6636,7 @@ export const weaponsData: Weapons = {
   51012: new Weapon({
     id: 51012,
     name: 'Syringe Rapier',
-    characterId: 51,
+    character: charactersData[51],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 15101201,
@@ -6667,7 +6668,7 @@ export const weaponsData: Weapons = {
   51013: new Weapon({
     id: 51013,
     name: 'Foam Sword',
-    characterId: 51,
+    character: charactersData[51],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 15101301,
@@ -6693,7 +6694,7 @@ export const weaponsData: Weapons = {
   51015: new Weapon({
     id: 51015,
     name: 'Slick Beetle',
-    characterId: 51,
+    character: charactersData[51],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 15101501,
@@ -6722,7 +6723,7 @@ export const weaponsData: Weapons = {
   51016: new Weapon({
     id: 51016,
     name: 'Bahamut Rapier',
-    characterId: 51,
+    character: charactersData[51],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 15101601,
@@ -6748,7 +6749,7 @@ export const weaponsData: Weapons = {
   51017: new Weapon({
     id: 51017,
     name: 'Holiday Cane',
-    characterId: 51,
+    character: charactersData[51],
     element: 'Earth',
     commandAbility: new CommandAbility({
       id: 15101701,
@@ -6774,7 +6775,7 @@ export const weaponsData: Weapons = {
   51018: new Weapon({
     id: 51018,
     name: 'Giant Fork',
-    characterId: 51,
+    character: charactersData[51],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 15101801,
@@ -6803,7 +6804,7 @@ export const weaponsData: Weapons = {
   51020: new Weapon({
     id: 51020,
     name: 'Humus Rapier',
-    characterId: 51,
+    character: charactersData[51],
     element: 'Wind',
     commandAbility: new CommandAbility({
       id: 15102001,
@@ -6829,7 +6830,7 @@ export const weaponsData: Weapons = {
   51022: new Weapon({
     id: 51022,
     name: 'Firefish',
-    characterId: 51,
+    character: charactersData[51],
     element: 'Fire',
     commandAbility: new CommandAbility({
       id: 15102201,
@@ -6855,7 +6856,7 @@ export const weaponsData: Weapons = {
   51024: new UltimateWeapon({
     id: 51024,
     name: 'Ultimate Broadsword: Axis',
-    characterId: 51,
+    character: charactersData[51],
     element: 'Non-elemental',
     commandAbility: new UltimateCommandAbility({
       id: 15102401,
@@ -6876,7 +6877,7 @@ export const weaponsData: Weapons = {
   51025: new Weapon({
     id: 51025,
     name: 'Candle Rapier',
-    characterId: 51,
+    character: charactersData[51],
     element: 'Lightning',
     commandAbility: new CommandAbility({
       id: 15102501,
@@ -6902,7 +6903,7 @@ export const weaponsData: Weapons = {
   52001: new Weapon({
     id: 52001,
     name: 'V39',
-    characterId: 52,
+    character: charactersData[52],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 15200101,
@@ -6928,7 +6929,7 @@ export const weaponsData: Weapons = {
   52002: new Weapon({
     id: 52002,
     name: 'Pulse Gun',
-    characterId: 52,
+    character: charactersData[52],
     element: 'Wind',
     commandAbility: new CommandAbility({
       id: 15200301,
@@ -6954,7 +6955,7 @@ export const weaponsData: Weapons = {
   52003: new Weapon({
     id: 52003,
     name: 'Serpent Eater',
-    characterId: 52,
+    character: charactersData[52],
     element: 'Water',
     commandAbility: new CommandAbility({
       id: 15200201,
@@ -6980,7 +6981,7 @@ export const weaponsData: Weapons = {
   52004: new Weapon({
     id: 52004,
     name: 'Thunderbird',
-    characterId: 52,
+    character: charactersData[52],
     element: 'Lightning',
     commandAbility: new CommandAbility({
       id: 15200401,
@@ -7009,7 +7010,7 @@ export const weaponsData: Weapons = {
   52005: new Weapon({
     id: 52005,
     name: 'Tranquilizer Gun',
-    characterId: 52,
+    character: charactersData[52],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 15200501,
@@ -7035,7 +7036,7 @@ export const weaponsData: Weapons = {
   52006: new Weapon({
     id: 52006,
     name: 'SSR1976',
-    characterId: 52,
+    character: charactersData[52],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 15200601,
@@ -7064,7 +7065,7 @@ export const weaponsData: Weapons = {
   52007: new Weapon({
     id: 52007,
     name: 'Mad Minute',
-    characterId: 52,
+    character: charactersData[52],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 15200701,
@@ -7093,7 +7094,7 @@ export const weaponsData: Weapons = {
   52009: new Weapon({
     id: 52009,
     name: 'Bald Eagle',
-    characterId: 52,
+    character: charactersData[52],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 15200901,
@@ -7122,7 +7123,7 @@ export const weaponsData: Weapons = {
   52010: new Weapon({
     id: 52010,
     name: 'Black Rifle',
-    characterId: 52,
+    character: charactersData[52],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 15201001,
@@ -7149,7 +7150,7 @@ export const weaponsData: Weapons = {
   52014: new Weapon({
     id: 52014,
     name: 'Rubber Band Gun',
-    characterId: 52,
+    character: charactersData[52],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 15201401,
@@ -7175,7 +7176,7 @@ export const weaponsData: Weapons = {
   52015: new Weapon({
     id: 52015,
     name: 'Featherscatter',
-    characterId: 52,
+    character: charactersData[52],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 15201501,
@@ -7203,7 +7204,7 @@ export const weaponsData: Weapons = {
   52016: new Weapon({
     id: 52016,
     name: 'Barn Swallow',
-    characterId: 52,
+    character: charactersData[52],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 15201601,
@@ -7229,7 +7230,7 @@ export const weaponsData: Weapons = {
   52017: new Weapon({
     id: 52017,
     name: 'Pumpkin Blaster',
-    characterId: 52,
+    character: charactersData[52],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 15201701,
@@ -7258,7 +7259,7 @@ export const weaponsData: Weapons = {
   52019: new Weapon({
     id: 52019,
     name: 'Rifle of Levin',
-    characterId: 52,
+    character: charactersData[52],
     element: 'Lightning',
     commandAbility: new CommandAbility({
       id: 15201901,
@@ -7284,7 +7285,7 @@ export const weaponsData: Weapons = {
   52020: new Weapon({
     id: 52020,
     name: 'Holiday Revolver',
-    characterId: 52,
+    character: charactersData[52],
     element: 'Earth',
     commandAbility: new CommandAbility({
       id: 15202001,
@@ -7310,7 +7311,7 @@ export const weaponsData: Weapons = {
   52021: new Weapon({
     id: 52021,
     name: 'Vivi\'s Magical Gun',
-    characterId: 52,
+    character: charactersData[52],
     element: 'Fire',
     commandAbility: new CommandAbility({
       id: 15202101,
@@ -7336,7 +7337,7 @@ export const weaponsData: Weapons = {
   52022: new Weapon({
     id: 52022,
     name: 'Rose Musket',
-    characterId: 52,
+    character: charactersData[52],
     element: 'Fire',
     commandAbility: new CommandAbility({
       id: 15202201,
@@ -7365,7 +7366,7 @@ export const weaponsData: Weapons = {
   52023: new Weapon({
     id: 52023,
     name: 'Turks\' Rifle',
-    characterId: 52,
+    character: charactersData[52],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: null,
@@ -7393,7 +7394,7 @@ export const weaponsData: Weapons = {
   52025: new Weapon({
     id: 52025,
     name: 'Marine Shooter',
-    characterId: 52,
+    character: charactersData[52],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 15202501,
@@ -7425,7 +7426,7 @@ export const weaponsData: Weapons = {
   52013: new Weapon({
     id: 52013,
     name: 'Nightjar',
-    characterId: 52,
+    character: charactersData[52],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 15201301,
@@ -7457,7 +7458,7 @@ export const weaponsData: Weapons = {
   52026: new UltimateWeapon({
     id: 52026,
     name: 'Ultimate V39',
-    characterId: 52,
+    character: charactersData[52],
     element: 'Non-elemental',
     commandAbility: new UltimateCommandAbility({
       id: 15202601,

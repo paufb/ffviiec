@@ -1,13 +1,14 @@
 import { useEffect, useRef } from 'react';
 import styles from './CharacterDiamond.module.css';
+import { Character } from '../models/Character.ts';
 
 interface CharacterDiamondProps {
-  characterId: number;
+  character: Character;
   width?: CSSStyleDeclaration['width'];
   height?: CSSStyleDeclaration['height'];
 }
 
-export function CharacterDiamond({ characterId, width, height }: CharacterDiamondProps) {
+export function CharacterDiamond({ character, width, height }: CharacterDiamondProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLImageElement>(null);
   const imageAspectRatio = 94 / 125;
@@ -35,7 +36,7 @@ export function CharacterDiamond({ characterId, width, height }: CharacterDiamon
     >
       <img
         ref={imageRef}
-        src={new URL(`../assets/characters/diamonds/${characterId}.png`, import.meta.url).href}
+        src={new URL(`../assets/characters/diamonds/${character.id}.png`, import.meta.url).href}
         alt=""
       />
     </div>

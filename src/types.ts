@@ -1,8 +1,12 @@
 import { UltimateWeapon } from './models/UltimateWeapon.ts';
+import { Character } from './models/Character.ts';
 import { Weapon } from './models/Weapon.ts';
 
 export const sigils = ['circle', 'triangle', 'cross', 'rhombus', 'square'];
 export type SigilType = typeof sigils[number] | null;
+
+export const characterNames = ['Cloud', 'Barret', 'Tifa', 'Aerith', 'Red XIII', 'Yuffie', 'Cait Sith', 'Vincent', 'Zack', 'Sephiroth', 'Glenn', 'Matt', 'Lucia'];
+export type CharacterNameType = typeof characterNames[number];
 
 export interface CommandAbility {
   id: number;
@@ -16,10 +20,6 @@ export interface UltimateCommandAbility {
   id: number;
   sigil: SigilType;
   description: string;
-}
-
-export interface Character {
-  id: number;
 }
 
 export interface Element {
@@ -51,21 +51,21 @@ export interface UltimateWeaponType {
 }
 
 export interface CommandAbilities {
-  [key: string]: CommandAbility | UltimateCommandAbility
+  [key: string]: CommandAbility | UltimateCommandAbility;
 }
 
 export interface Characters {
-  [key: string]: Character
+  [key: number]: Character;
 }
 
 export interface Elements {
-  [key: string]: Element
+  [key: string]: Element;
 }
 
 export interface Weapons {
-  [key: number]: Weapon | UltimateWeapon
+  [key: number]: Weapon | UltimateWeapon;
 }
 
 export interface ValuesByOverboostLevel {
-  [key: string]: [string, string, string, string, string, string, string, string, string, string, string]
+  [key: string]: [string, string, string, string, string, string, string, string, string, string, string];
 }
