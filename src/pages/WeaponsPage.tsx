@@ -63,7 +63,7 @@ export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean })
     const hasSelectedSigils = selectedSigils.length > 0;
     let filteredEntries = Object.entries(weapons).filter(([_, weapon]) =>
       weapon.name.toLowerCase().includes(lowerCaseNameQuery)
-      && (!hasSelectedCharacters || selectedCharacterIds.includes(weapon.characterId))
+      && (!hasSelectedCharacters || selectedCharacterIds.includes(weapon.character.id))
       && (!hasSelectedElements || selectedElements.includes(weapon.element))
       && (!hasSelectedSigils || selectedSigils.includes(weapon.commandAbility.sigil))
     );
