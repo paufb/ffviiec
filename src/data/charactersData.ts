@@ -53,5 +53,9 @@ export const charactersData: Characters = {
   52: new Character({
     id: 52,
     name: 'Lucia'
+  }),
+  56: new Character({
+    id: 56,
+    name: 'Angeal'
   })
 };

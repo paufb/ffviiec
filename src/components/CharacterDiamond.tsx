@@ -36,7 +36,7 @@ export function CharacterDiamond({ character, width, height }: CharacterDiamondP
     >
       <img
         ref={imageRef}
-        src={new URL(`../assets/characters/diamonds/${character.id}.png`, import.meta.url).href}
+        src={new URL(`../assets/character_diamond/${character.id}.png`, import.meta.url).href}
         alt=""
       />
     </div>
