@@ -226,9 +226,14 @@ dialog.modal {
     height: 100%;
     padding: 0.75rem;
 
-    & img {
+    & .column-abilities-cability img {
       background-color: rgb(5, 40, 84);
       border: 2px solid rgb(63, 117, 173);
+    }
+
+    & .column-abilities-rabilities img {
+      background-color: rgb(24, 45, 57);
+      border: 2px solid rgb(16, 138, 156);
     }
 
     & .column-abilities-cability,
@@ -255,19 +260,21 @@ dialog.modal {
           display: flex;
           gap: 0.5rem;
           position: relative;
+          line-height: 1.25rem;
+          font-size: 1.25rem;
 
           & .column-abilities-cability-container-header-icons {
             display: flex;
 
             & .column-abilities-cability-container-header-icons-cability {
-              width: 3rem;
-              height: 3rem;
+              width: 2.5rem;
+              height: 2.5rem;
             }
 
             & .column-abilities-cability-container-header-icons-element,
             & .column-abilities-cability-container-header-icons-sigil {
-              width: 1.5rem;
-              height: 1.5rem;
+              width: 1.25rem;
+              height: 1.25rem;
             }
           }
 
@@ -309,8 +316,8 @@ dialog.modal {
           font-size: 1.25rem;
   
           & img {
-            width: 3rem;
-            height: 3rem;
+            width: 2.5rem;
+            height: 2.5rem;
           }
         }
       }
