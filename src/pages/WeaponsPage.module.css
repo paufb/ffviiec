@@ -619,6 +619,12 @@
         & .ability-icons {
           display: flex;
 
+          & img {
+            background-color: rgb(5, 40, 84);
+            border: 2px solid rgb(63, 117, 173);
+            box-sizing: border-box;
+          }
+
           & .ability-icons-column {
             display: flex;
             flex-direction: column;
@@ -626,6 +632,11 @@
 
           & .ability-icons-row {
             display: flex;
+
+            &:nth-child(2) img {
+              background-color: rgb(24, 45, 57);
+              border: 2px solid rgb(16, 138, 156);
+            }
           }
 
           & .ability-icons-column:nth-child(1) img {
@@ -636,12 +647,6 @@
           & .ability-icons-column:nth-child(2) img {
             width: 1.5rem;
             height: 1.5rem;
-          }
-
-          & img {
-            background-color: rgb(5, 40, 84);
-            border: 2px solid rgb(63, 117, 173);
-            box-sizing: border-box;
           }
         }
       }
