@@ -182,7 +182,7 @@ export const weaponsData: Weapons = {
       name: 'Shock Slice',
       atbCost: 4,
       sigil: null,
-      description: `${damage(undefined, 'Phys. Non-elem.', 'Single Enemy', 10)}\nAlso, ${apply('Ailment: Stun', 'Single Enemy', undefined, 5, 2)}`,
+      description: `${damage(undefined, 'Phys. Non-elem.', 'Single Enemy', 10)}\nAlso, ${apply('Ailment: Stun', null, 'Single Enemy', undefined, 5, 2)}`,
       valuesByOverboostLevel: {
         damage: ['400', '480', '480', '480', '480', '480', '620', '620', '620', '620', '750'],
         stunRate: ['20', '20', '20', '20', '20', '20', '30', '30', '30', '30', '30']
@@ -608,7 +608,7 @@ export const weaponsData: Weapons = {
       name: 'Fierce Claw',
       atbCost: 4,
       sigil: null,
-      description: `${damage(undefined, 'Phys. Non-elem.', 'All Enemies', 10)}\nAlso, [Condition: First use] ${apply('Haste', 'Self', null, undefined, undefined)}\nWhen [Rng.: Self]'s HP is 50% or more, ${additionalDamage('Non-elem.', 'Phys.', 'All Enemies')}`,
+      description: `${damage(undefined, 'Phys. Non-elem.', 'All Enemies', 10)}\nAlso, [Condition: First use] ${apply('Haste', null, 'Self', null, undefined, undefined)}\nWhen [Rng.: Self]'s HP is 50% or more, ${additionalDamage('Non-elem.', 'Phys.', 'All Enemies')}`,
       valuesByOverboostLevel: {
         damage: ['430', '520', '520', '520', '520', '520', '670', '670', '670', '670', '800'],
         hasteDur: ['20', '20', '20', '20', '20', '20', '25', '25', '25', '25', '30'],
@@ -1766,7 +1766,7 @@ export const weaponsData: Weapons = {
       name: 'Dark Strike',
       atbCost: 4,
       sigil: null,
-      description: `${damage(undefined, 'Mag. Non-elem.', 'Single Enemy', 10)}\nAlso, [Condition: First use] ${apply('Haste', 'Self', null, undefined, undefined)}\n${increase('MATK', 'Mid', 'All Allies', null, undefined, undefined, undefined)}`,
+      description: `${damage(undefined, 'Mag. Non-elem.', 'Single Enemy', 10)}\nAlso, [Condition: First use] ${apply('Haste', null, 'Self', null, undefined, undefined)}\n${increase('MATK', 'Mid', 'All Allies', null, undefined, undefined, undefined)}`,
       valuesByOverboostLevel: {
         damage: ['600', '720', '720', '720', '720', '720', '1,000', '1,000', '1,000', '1,000', '1,100'],
         hasteDur: ['20', '20', '20', '20', '20', '20', '25', '25', '25', '25', '30'],
@@ -3267,7 +3267,7 @@ export const weaponsData: Weapons = {
       name: 'Venomstrike',
       atbCost: 4,
       sigil: null,
-      description: `${damage(undefined, 'Phys. Non-elem.', 'Single Enemy', 10)}\nAlso, ${apply('Ailment: Poison', 'Single Enemy', undefined, undefined, undefined)}`,
+      description: `${damage(undefined, 'Phys. Non-elem.', 'Single Enemy', 10)}\nAlso, ${apply('Ailment: Poison', null, 'Single Enemy', undefined, undefined, undefined)}`,
       valuesByOverboostLevel: {
         damage: ['320', '370', '370', '370', '370', '370', '450', '450', '450', '450', '510'],
         poisonRate: ['50', '50', '50', '50', '50', '50', '70', '70', '70', '70', '70'],
@@ -3904,7 +3904,7 @@ export const weaponsData: Weapons = {
       name: 'Hang in There',
       atbCost: 4,
       sigil: null,
-      description: `${increase('MATK', undefined, 'Single Ally', null, undefined, undefined, 'High')}\nAlso, ${regen('Single Ally', undefined, 3)}\n${heal(undefined, 'Mag.', 'Single Ally')}\n${apply('Haste', 'Single Ally', 20, undefined, 5)}`,
+      description: `${increase('MATK', undefined, 'Single Ally', null, undefined, undefined, 'High')}\nAlso, ${regen('Single Ally', undefined, 3)}\n${heal(undefined, 'Mag.', 'Single Ally')}\n${apply('Haste', null, 'Single Ally', 20, undefined, 5)}`,
       valuesByOverboostLevel: {
         mAtkIncreasePot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
         mAtkIncreaseDur: ['30', '34', '34', '34', '34', '34', '34', '34', '34', '34', '38'],
@@ -4094,7 +4094,7 @@ export const weaponsData: Weapons = {
       id: 10703201,
       name: 'Heavenly Cheer',
       sigil: null,
-      description: `${damage('1,000', 'Phys./Mag. Non-elem.', 'Single Enemy', null)}\nAlso, ${apply('Haste', 'All Allies', null, 20, 20)}\n${chargeAndUses(60, 20, 2)}`
+      description: `${damage('1,000', 'Phys./Mag. Non-elem.', 'Single Enemy', null)}\nAlso, ${apply('Haste', null, 'All Allies', null, 20, 20)}\n${chargeAndUses(60, 20, 2)}`
     }),
     maxRarityStats: {
       pAtk: 187,
@@ -4384,7 +4384,7 @@ export const weaponsData: Weapons = {
       name: 'Poison Sphere',
       atbCost: 4,
       sigil: null,
-      description: `${damage(undefined, 'Mag. Non-elem.', 'All Enemies', 10)}\nAlso, ${increaseLimitGauge(undefined, 'Self')}\nWhen [Rng.: Self]'s HP is 30% or less, ${apply('Ailment: Poison', 'All Enemies', null, undefined, undefined)}`,
+      description: `${damage(undefined, 'Mag. Non-elem.', 'All Enemies', 10)}\nAlso, ${increaseLimitGauge(undefined, 'Self')}\nWhen [Rng.: Self]'s HP is 30% or less, ${apply('Ailment: Poison', null, 'All Enemies', null, undefined, undefined)}`,
       valuesByOverboostLevel: {
         damage: ['280', '340', '340', '340', '340', '340', '440', '440', '440', '440', '520'],
         limitGaugeIncreasePot: ['2', '2', '2', '2', '2', '2', '3', '3', '3', '3', '3'],
@@ -7130,7 +7130,7 @@ export const weaponsData: Weapons = {
       name: 'Quietude',
       atbCost: 4,
       sigil: null,
-      description: `${damage(undefined, 'Phys. Non-elem.', 'Single Enemy', 10)}\nAlso, ${apply('Ailment: Silence', 'Single Enemy', undefined, 5, 2)}`,
+      description: `${damage(undefined, 'Phys. Non-elem.', 'Single Enemy', 10)}\nAlso, ${apply('Ailment: Silence', null, 'Single Enemy', undefined, 5, 2)}`,
       valuesByOverboostLevel: {
         damage: ['420', '500', '500', '500', '500', '500', '660', '660', '660', '660', '790'],
         silenceRate: ['20', '20', '20', '20', '20', '20', '30', '30', '30', '30', '30']
@@ -7476,11 +7476,348 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10401]
     ]
   }),
+  56001: new Weapon({
+    id: 56001,
+    name: 'Type-90 Longsword',
+    character: charactersData[56],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: 15600101,
+      name: 'Rapid Blade',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Phys. Non-elem.', 'Single Enemy', 10)}\nAlso, ${apply('Provoke', null, 'Self', null, 60, 0)}\n${regen('Self', undefined, 3)}`,
+      valuesByOverboostLevel: {
+        damage: ['400', '480', '480', '480', '480', '480', '620', '620', '620', '620', '750'],
+        regenDur: ['3', '3', '3', '3', '3', '3', '6', '6', '6', '6', '9']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 268,
+      mAtk: 225,
+      heal: 164
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10401],
+      reinforcementAbilitiesData[51401]
+    ]
+  }),
+  56002: new Weapon({
+    id: 56002,
+    name: 'Greatsword (A)',
+    character: charactersData[56],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: 15600201,
+      name: 'Crushing Swing',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Phys. Non-elem.', 'All Enemies', 10)}\nAlso, ${decrease('PDEF', undefined, 'All Enemies', null, undefined, undefined, 'High')}\n${apply('Veil', undefined, 'Self', null, undefined, undefined)}`,
+      valuesByOverboostLevel: {
+        damage: ['340', '390', '390', '390', '390', '390', '480', '480', '480', '480', '540'],
+        pDefDecreasePot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        pDefDecreaseDur: ['20', '22', '22', '22', '22', '22', '26', '26', '26', '26', '30'],
+        pDefDecreaseExt: ['6', '7', '7', '7', '7', '7', '8', '8', '8', '8', '10'],
+        veilPot: ['5', '6', '6', '6', '6', '6', '8', '8', '8', '8', '10'],
+        veilDur: ['40', '45', '45', '45', '45', '45', '50', '50', '50', '50', '60'],
+        veilExt: ['8', '9', '9', '9', '9', '9', '10', '10', '10', '10', '12']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 260,
+      mAtk: 235,
+      heal: 161
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10201],
+      reinforcementAbilitiesData[51401]
+    ]
+  }),
+  56003: new Weapon({
+    id: 56003,
+    name: 'Type-91 Two-Hander',
+    character: charactersData[56],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: 15600301,
+      name: 'Flash Thrust',
+      atbCost: 3,
+      sigil: 'rhombus',
+      description: `${damage(undefined, 'Mag. Non-elem.', 'Single Enemy', 10)}\nAlso, ${decrease('PATK', 'Mid', 'Single Enemy', null, undefined, undefined, undefined)}\n${conditionHP('Self', '50', 'more')}, ${decrease('MATK', 'Mid', 'Single Enemy', null, undefined, undefined, 'Mid')}`,
+      valuesByOverboostLevel: {
+        damage: ['260', '300', '300', '300', '300', '300', '360', '360', '360', '360', '420'],
+        pAtkDecreaseDur: ['16', '18', '18', '18', '18', '18', '20', '20', '20', '20', '24'],
+        pAtkDecreaseExt: ['5', '6', '6', '6', '6', '6', '6', '6', '6', '6', '8'],
+        pAtkDecreaseMaxPot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        mAtkDecreaseDur: ['16', '18', '18', '18', '18', '18', '20', '20', '20', '20', '24'],
+        mAtkDecreaseExt: ['5', '6', '6', '6', '6', '6', '6', '6', '6', '6', '8']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 215,
+      mAtk: 264,
+      heal: 174
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[51301]
+    ]
+  }),
+  56004: new Weapon({
+    id: 56004,
+    name: 'Shinra Greatsword: Model I',
+    character: charactersData[56],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: 15600401,
+      name: 'Shock Slash',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Phys. Non-elem.', 'Single Enemy', 10)}\nAlso, ${decrease('Earth Resist.', undefined, 'Single Enemy', null, undefined, undefined, 'High')}\n${apply('Veil', undefined, 'Self', null, undefined, undefined)}`,
+      valuesByOverboostLevel: {
+        damage: ['390', '450', '450', '450', '450', '450', '550', '550', '550', '550', '620'],
+        earthResistDecreasePot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        earthResistDecreaseDur: ['20', '22', '22', '22', '22', '22', '26', '26', '26', '26', '30'],
+        earthResistDecreaseExt: ['6', '7', '7', '7', '7', '7', '8', '8', '8', '8', '10'],
+        veilPot: ['5', '6', '6', '6', '6', '6', '8', '8', '8', '8', '10'],
+        veilDur: ['40', '45', '45', '45', '45', '45', '50', '50', '50', '50', '60'],
+        veilExt: ['8', '9', '9', '9', '9', '9', '10', '10', '10', '10', '12']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 262,
+      mAtk: 207,
+      heal: 182
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10201],
+      reinforcementAbilitiesData[51901]
+    ]
+  }),
+  56005: new Weapon({
+    id: 56005,
+    name: 'CC Alloy Greatsword',
+    character: charactersData[56],
+    element: 'Lightning',
+    commandAbility: new CommandAbility({
+      id: 15600501,
+      name: 'Thundaga Burst',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Mag. Lightning', 'Single Enemy', null)}`,
+      valuesByOverboostLevel: {
+        damage: ['500', '', '', '', '', '', '740', '740', '740', '740', '900']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 212,
+      mAtk: 277,
+      heal: 167
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[20401]
+    ]
+  }),
+  56006: new Weapon({
+    id: 56006,
+    name: 'Stalwart Integrity',
+    character: charactersData[56],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: 15600601,
+      name: 'Fortress Guard',
+      atbCost: 4,
+      sigil: null,
+      description: `${increase('PDEF', undefined, 'All Allies', null, undefined, undefined, 'High')}\nAlso, ${heal(undefined, 'Mag.', 'All Allies')}\n${conditionHP('Self', '70', 'more')}, ${increase('PATK', undefined, 'All Allies', null, undefined, undefined, 'High')}`,
+      valuesByOverboostLevel: {
+        pDefIncreasePot: ['Mid', '', '', '', '', '', 'High', 'High', 'High', 'High', 'High'],
+        pDefIncreaseDur: ['12', '', '', '', '', '', '16', '16', '16', '16', '20'],
+        pDefIncreaseExt: ['4', '', '', '', '', '', '5', '5', '5', '5', '6'],
+        heal: ['5', '', '', '', '', '', '6', '6', '6', '6', '7'],
+        pAtkIncreasePot: ['Mid', '', '', '', '', '', 'High', 'High', 'High', 'High', 'High'],
+        pAtkIncreaseDur: ['12', '', '', '', '', '', '16', '16', '16', '16', '20'],
+        pAtkIncreaseExt: ['4', '', '', '', '', '', '5', '5', '5', '5', '6']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 220,
+      mAtk: 214,
+      heal: 212
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[51901]
+    ]
+  }),
+  56007: new Weapon({
+    id: 56007,
+    name: 'Innocent Warrior',
+    character: charactersData[56],
+    element: 'Fire',
+    commandAbility: new CommandAbility({
+      id: null,
+      name: 'Firaga A',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Mag. Fire', 'All Enemies', null)}`,
+      valuesByOverboostLevel: {
+        damage: ['280', '340', '340', '340', '340', '340', '440', '440', '440', '440', '520']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 215,
+      mAtk: 254,
+      heal: 182
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[20201]
+    ]
+  }),
+  56008: new Weapon({
+    id: 56008,
+    name: 'Gargantuan Monolith',
+    character: charactersData[56],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: 15600801,
+      name: 'Mark of Bravery',
+      atbCost: 4,
+      sigil: null,
+      description: `${apply('Provoke', null, 'Self', null, 60, 0)}\nAlso, ${increase('MDEF', undefined, 'Self', null, undefined, undefined, 'High')}\n${heal(undefined, 'Phys.', 'Self')}`,
+      valuesByOverboostLevel: {
+        mDefIncreasePot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        mDefIncreaseDur: ['36', '40', '40', '40', '40', '40', '40', '40', '40', '40', '44'],
+        mDefIncreaseExt: ['12', '13', '13', '13', '13', '13', '13', '13', '13', '13', '14'],
+        heal: ['11', '13', '13', '13', '13', '13', '14', '14', '14', '14', '15']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 231,
+      mAtk: 214,
+      heal: 203
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[10501]
+    ]
+  }),
+  56009: new Weapon({
+    id: 56009,
+    name: 'Sequoiadendron',
+    character: charactersData[56],
+    element: 'Earth',
+    commandAbility: new CommandAbility({
+      id: 15600901,
+      name: 'Earthly Horn',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Phys. Earth', 'Single Enemy', null)} The lower your HP, the higher the ability pot. (max: x2).`,
+      valuesByOverboostLevel: {
+        damage: ['320', '380', '380', '380', '380', '380', '500', '500', '500', '500', '600']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 270,
+      mAtk: 201,
+      heal: 181
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10201],
+      reinforcementAbilitiesData[20501]
+    ]
+  }),
+  56010: new Weapon({
+    id: 56010,
+    name: 'Tranquility',
+    character: charactersData[56],
+    element: 'Water',
+    commandAbility: new CommandAbility({
+      id: 15601001,
+      name: 'Smashing Splash',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Phys. Water', 'Single Enemy', null)}\nAlso, ${apply('Provoke', null, 'Self', null, 60, 0)}\n${apply('Veil', undefined, 'Self', null, undefined, undefined)}`,
+      valuesByOverboostLevel: {
+        damage: ['520', '', '', '', '', '', '780', '780', '780', '780', '940'],
+        veilPot: ['5', '', '', '', '', '', '8', '8', '8', '8', '10'],
+        veilDur: ['40', '', '', '', '', '', '50', '50', '50', '50', '60'],
+        veilExt: ['8', '', '', '', '', '', '10', '10', '10', '10', '12']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 285,
+      mAtk: 199,
+      heal: 170
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[11201],
+      reinforcementAbilitiesData[20601]
+    ]
+  }),
+  56011: new Weapon({
+    id: 56011,
+    name: 'Orchard Shovel',
+    character: charactersData[56],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: 15601101,
+      name: 'Good Harvest',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Phys. Non-elem.', 'Single Enemy', 10)} The lower your HP, the higher the ability pot. (max: x3).\nAlso, ${apply('Provoke', null, 'Self', null, 60, 0)}`,
+      valuesByOverboostLevel: {
+        damage: ['210', '260', '260', '260', '260', '260', '370', '370', '370', '370', '490']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 236,
+      mAtk: 186,
+      heal: 168
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[30501],
+      reinforcementAbilitiesData[11401]
+    ]
+  }),
+  56012: new UltimateWeapon({
+    id: 56012,
+    name: 'Ultimate Type-90 Longsword',
+    character: charactersData[56],
+    element: 'Non-elemental',
+    commandAbility: new UltimateCommandAbility({
+      id: 15601201,
+      name: 'Unyielding Keeper',
+      sigil: null,
+      description: `${increase('PDEF', 'Mid', 'All Allies', null, 20, 20, 'High')}\nAlso, ${increase('MDEF', 'Mid', 'All Allies', null, 20, 20, 'High')}\n${heal(5, 'Mag.', 'All Allies')}\n${chargeAndUses(30, null, 1)}`
+    }),
+    maxRarityStats: {
+      pAtk: 171,
+      mAtk: 172,
+      heal: 130
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10401],
+      reinforcementAbilitiesData[10501]
+    ]
+  })
 };
 
 type Range = 'Single Enemy' | 'All Enemies' | 'Single Ally' | 'All Allies' | 'Self' | 'Affected Targets' | 'Ally (Excluding Self)' | null;
 type CriticalRate = number | null;
-type Effect = 'Ailment: Stun' | 'Ailment: Poison' | 'Ailment: Silence' | 'Haste';
+type Effect = 'Ailment: Stun' | 'Ailment: Poison' | 'Ailment: Silence' | 'Haste' | 'Provoke' | 'Veil';
 type Attribute = 'PATK' | 'MATK' | 'PDEF' | 'MDEF' | 'Fire Resist.' | 'Ice Resist.' | 'Thunder Resist.' | 'Earth Resist.' | 'Water Resist.' | 'Wind Resist.' | 'Fire Damage' | 'Ice Damage' | 'Thunder Damage' | 'Earth Damage' | 'Water Damage' | 'Wind Damage';
 type Element = 'Non-elem.' | 'Fire' | 'Ice' | 'Lightning' | 'Earth' | 'Water' | 'Wind';
 type Damage = string | undefined;
@@ -7559,20 +7896,25 @@ function regen(range: Range, duration: Duration, extension: Extension) {
   return `Regen is applied [Rng.: ${range}]. [Dur.: ${dur}s] [Ext.: +${ext}s]`;
 }
 
-function apply(effect: Effect, range: Range, rate: Rate, duration: Duration, extension: Extension) {
+function apply(effect: Effect, potency: number | null | undefined, range: Range, rate: Rate, duration: Duration, extension: Extension) {
   const effectMap: { [K in Effect]: string } = {
     'Ailment: Stun': 'stun',
     'Ailment: Poison': 'poison',
     'Ailment: Silence': 'silence',
-    'Haste': 'haste'
+    'Haste': 'haste',
+    'Provoke': 'provoke',
+    'Veil': 'veil'
   }
   const effectKey = effectMap[effect];
   const rateString = rate === null      ? ''                               :
                      rate === undefined ? ` [Rate: {{${effectKey}Rate}}%]` :
                                           ` [Rate: ${rate}%]`              ;
-  const dur = duration ? duration : `{{${effectKey}Dur}}`;
-  const ext = extension ? extension : `{{${effectKey}Ext}}`;
-  return `${effect} is applied [Rng.: ${range}]${rateString}. [Dur.: ${dur}s] [Ext.: +${ext}s]`;
+  const potencyString = potency === null      ? '' :
+                        potency === undefined ? ` [Pot.: {{${effectKey}Pot}}%${effect === 'Veil' ? ' of max HP of the affected' : ''}]` :
+                                                ` [Pot.: ${potency}%${effect === 'Veil' ? ' of max HP of the affected' : ''}]` ;
+  const dur = duration === undefined ? `{{${effectKey}Dur}}` : duration;
+  const ext = extension === undefined ? `{{${effectKey}Ext}}` : extension;
+  return `${effect}${potencyString} is applied [Rng.: ${range}]${rateString}. [Dur.: ${dur}s] [Ext.: +${ext}s]`;
 }
 
 function remove(effect: string, range: Range) {
