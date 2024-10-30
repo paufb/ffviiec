@@ -11,6 +11,7 @@ import { SigilIcon } from '../components/SigilIcon.tsx';
 import { WeaponIcon } from '../components/WeaponIcon.tsx';
 import { WeaponModal } from '../components/WeaponModal.tsx';
 import { sigils, Characters, Elements, SigilType, WeaponType, Weapons } from '../types.ts';
+import pageAnimations from './page-animations.module.css';
 import styles from './WeaponsPage.module.css';
 import { Weapon } from '../models/Weapon.ts';
 import { UltimateWeapon } from '../models/UltimateWeapon.ts';
@@ -179,7 +180,7 @@ export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean })
 
   return (
     <div className={styles["page"]}>
-      <div className={styles["filters-container"]}>
+      <div className={`${styles["filters-container"]} ${pageAnimations['fade-in-from-left']}`}>
         <div className={`${styles["filters-container-row"]} ${isViewportNarrow ? styles["filters-container-row--narrow"] : ""}`}>
           <div className={styles["filters-container-column"]}>
             <div className={styles["filter-name"]}>
@@ -328,7 +329,7 @@ export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean })
         selectedWeaponLevel={selectedWeaponLevel}
         closeWeaponModal={closeWeaponModal}
       />}
-      <div className={styles["table-decoration"]}>
+      <div className={`${styles["table-decoration"]} ${pageAnimations['fade-in-from-right']}`}>
         {layout === 'table' && (
           <div className={styles["table-container"]}>
             <table className={styles["table"]}>

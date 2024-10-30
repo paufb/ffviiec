@@ -4,6 +4,7 @@
   --app-bar-height: 4rem;
   --app-sidebar-width: 16rem;
   --app-sidebar-collapsed-width: 4rem;
+  --app-page-transition-animation-time : 0.5s;
 }
 
 .background {
