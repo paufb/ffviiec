@@ -3,6 +3,7 @@ import { useRoutes } from 'react-router-dom';
 import { AppBar } from './components/AppBar.tsx';
 import { AppSidebar } from './components/AppSidebar.tsx';
 import { Home } from './pages/HomePage.tsx';
+import { MateriaPage } from './pages/MateriaPage.tsx';
 import { WeaponsPage } from './pages/WeaponsPage.tsx';
 import './App.css';
 
@@ -11,7 +12,8 @@ function App() {
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(getIsViewportNarrow());
   const routes = useRoutes([
     { path: '/', element: <Home /> },
-    { path: 'weapons', element: <WeaponsPage isViewportNarrow={isViewportNarrow} /> }
+    { path: 'weapons', element: <WeaponsPage isViewportNarrow={isViewportNarrow} /> },
+    { path: '/materia', element: <MateriaPage /> }
   ]);
 
   useEffect(() => {

@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import MainIcon from '../assets/ui/main.png';
 import WeaponsIcon from '../assets/ui/enhance.png';
+import MateriaIcon from '../assets/ui/materia.png';
 import styles from './AppSidebar.module.css';
 
 interface AppSidebarProps {
@@ -29,6 +30,14 @@ export function AppSidebar({ isCollapsed, collapseSidebar }: AppSidebarProps) {
             <div className={styles['content']}>
               <img src={WeaponsIcon} />
               Weapons
+            </div>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to={'/materia'} className={getNavLinkClasses} onClick={() => collapseSidebar()}>
+            <div className={styles['content']}>
+              <img src={MateriaIcon} />
+              Materia
             </div>
           </NavLink>
         </li>

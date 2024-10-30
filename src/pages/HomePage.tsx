@@ -1,4 +1,5 @@
 import WeaponsIcon from '../assets/ui/enhance.png';
+import MateriaIcon from '../assets/ui/materia.png';
 import pageAnimations from './page-animations.module.css';
 import styles from './HomePage.module.css';
 import { NavLink } from 'react-router-dom';
@@ -24,7 +25,15 @@ export function Home() {
             <div className={styles['inner-shadow']} />
             <div className={styles['border']} />
             <NavLink to={'/weapons'} className={styles['anchor']}>
-              <img src={WeaponsIcon} />
+              <img src={WeaponsIcon} className={styles['weapons-img']} />
+            </NavLink>
+          </div>
+          <div className={styles['anchor-container']}>
+            <div className={styles['outer-shadow']} />
+            <div className={styles['inner-shadow']} />
+            <div className={styles['border']} />
+            <NavLink to={'/materia'} className={styles['anchor']}>
+              <img src={MateriaIcon} />
             </NavLink>
           </div>
         </div>
