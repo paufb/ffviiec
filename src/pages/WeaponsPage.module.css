@@ -618,6 +618,7 @@
     
         & .ability-icons {
           display: flex;
+          gap: 0.125rem;
 
           & img {
             background-color: rgb(5, 40, 84);
@@ -628,10 +629,12 @@
           & .ability-icons-column {
             display: flex;
             flex-direction: column;
+            gap: 0.125rem;
           }
 
           & .ability-icons-row {
             display: flex;
+            gap: 0.125rem;
 
             &:nth-child(2) img {
               background-color: rgb(24, 45, 57);
@@ -640,8 +643,8 @@
           }
 
           & .ability-icons-column:nth-child(1) img {
-            width: 3rem;
-            height: 3rem;
+            width: 3.125rem;
+            height: 3.125rem;
           }
 
           & .ability-icons-column:nth-child(2) img {
