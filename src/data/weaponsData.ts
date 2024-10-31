@@ -1169,6 +1169,67 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10101]
     ]
   }),
+  2029: new Weapon({
+    id: 2029,
+    name: 'Rhad Cannon',
+    character: charactersData[2],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: null,
+      name: 'Solid Bravery',
+      atbCost: 4,
+      sigil: null,
+      description: `${increase('PATK', 'Low', 'Single Ally', null, undefined, undefined, 'Mid')}\nAlso, ${regen('Single Ally', undefined, 3)}\n${heal(undefined, 'Mag.', 'Single Ally')}`,
+      valuesByOverboostLevel: {
+        pAtkIncreaseDur: ['34', '36', '36', '36', '36', '36', '40', '40', '40', '40', '44'],
+        pAtkIncreaseExt: ['11', '12', '12', '12', '12', '12', '13', '13', '13', '13', '14'],
+        regenDur: ['9', '12', '12', '12', '12', '12', '12', '12', '12', '12', '15'],
+        heal: ['9', '11', '11', '11', '11', '11', '12', '12', '12', '12', '13']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 218,
+      mAtk: 199,
+      heal: 174
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10201],
+      reinforcementAbilitiesData[51301]
+    ]
+  }),
+  2032: new Weapon({
+    id: 2032,
+    name: 'Escutcheon Cannon',
+    character: charactersData[2],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: 10203201,
+      name: 'Zone of Protection',
+      atbCost: 4,
+      sigil: null,
+      description: `${increase('MDEF', undefined, 'All Allies', null, undefined, undefined, 'High')}\nAlso, ${conditionHP('Self', '70', 'more')}, ${increase('MATK', undefined, 'All Allies', null, undefined, undefined, 'High')}\n${heal(undefined, 'Mag.', 'All Allies')}`,
+      valuesByOverboostLevel: {
+        mDefIncreasePot: ['Mid', '', '', '', '', '', 'High', 'High', 'High', 'High', 'High'],
+        mDefIncreaseDur: ['12', '', '', '', '', '', '16', '16', '16', '16', '20'],
+        mDefIncreaseExt: ['4', '', '', '', '', '', '5', '5', '5', '5', '6'],
+        mAtkIncreasePot: ['Mid', '', '', '', '', '', 'High', 'High', 'High', 'High', 'High'],
+        mAtkIncreaseDur: ['12', '', '', '', '', '', '16', '16', '16', '16', '20'],
+        mAtkIncreaseExt: ['4', '', '', '', '', '', '5', '5', '5', '5', '6'],
+        heal: ['5', '', '', '', '', '', '7', '7', '7', '7', '7']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 207,
+      mAtk: 254,
+      heal: 189
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10501],
+      reinforcementAbilitiesData[51901]
+    ]
+  }),
   3001: new Weapon({
     id: 3001,
     name: 'Leather Gloves',
@@ -2506,6 +2567,62 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10501]
     ]
   }),
+  4031: new Weapon({
+    id: 4031,
+    name: 'Terra\'s Rod',
+    character: charactersData[4],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: 10403101,
+      name: 'Riot Blade',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Mag. Non-elem.', 'All Enemies', 10)}\nAlso, ${decrease('Fire Resist.', undefined, 'All Enemies', null, undefined, undefined, 'High')}\n${decrease('Ice Resist.', undefined, 'All Enemies', null, undefined, undefined, 'High')}\n${decrease('Thunder Resist.', undefined, 'All Enemies', null, undefined, undefined, 'High')}`,
+      valuesByOverboostLevel: {
+        damage: ['470', '', '', '', '', '', '660', '660', '660', '660', '750'],
+        fireResistDecreasePot: ['Mid', '', '', '', '', '', 'High', 'High', 'High', 'High', 'High'],
+        fireResistDecreaseDur: ['20', '', '', '', '', '', '25', '25', '25', '25', '35'],
+        fireResistDecreaseExt: ['6', '', '', '', '', '', '8', '8', '8', '8', '11'],
+        iceResistDecreasePot: ['Mid', '', '', '', '', '', 'High', 'High', 'High', 'High', 'High'],
+        iceResistDecreaseDur: ['20', '', '', '', '', '', '25', '25', '25', '25', '35'],
+        iceResistDecreaseExt: ['6', '', '', '', '', '', '8', '8', '8', '8', '11'],
+        lightningResistDecreasePot: ['Mid', '', '', '', '', '', 'High', 'High', 'High', 'High', 'High'],
+        lightningResistDecreaseDur: ['20', '', '', '', '', '', '25', '25', '25', '25', '35'],
+        lightningResistDecreaseExt: ['6', '', '', '', '', '', '8', '8', '8', '8', '11']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 186,
+      mAtk: 275,
+      heal: 189
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[51901]
+    ]
+  }),
+  4036: new UltimateWeapon({
+    id: 4036,
+    name: 'Princess Guard',
+    character: charactersData[4],
+    element: 'Non-elemental',
+    commandAbility: new UltimateCommandAbility({
+      id: 10403601,
+      name: 'Jubilation',
+      sigil: null,
+      description: `${restoreMaxHP(30, 'Mag.', 'All Allies')}\nAlso, ${increaseATBGauge(3, 'All Allies')}\n${chargeAndUses(60, 20, 2)}`
+    }),
+    maxRarityStats: {
+      pAtk: 169,
+      mAtk: 161,
+      heal: 183
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10601],
+      reinforcementAbilitiesData[53901]
+    ]
+  }),
   5001: new Weapon({
     id: 5001,
     name: 'Sleek Collar',
@@ -3057,6 +3174,35 @@ export const weaponsData: Weapons = {
     reinforcementAbilities: [
       reinforcementAbilitiesData[10601],
       reinforcementAbilitiesData[10401]
+    ]
+  }),
+  5024: new Weapon({
+    id: 5024,
+    name: 'Pilot\'s Collar',
+    character: charactersData[5],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: 10502401,
+      name: 'Healing Howl',
+      atbCost: 5,
+      sigil: null,
+      description: `${heal(undefined, 'Mag.', 'All Allies')}\nAlso, ${increase('MDEF', 'Mid', 'All Allies', null, undefined, undefined, undefined)}`,
+      valuesByOverboostLevel: {
+        heal: ['42', '', '', '', '', '', '54', '54', '54', '54', '59'],
+        mDefIncreaseDur: ['10', '', '', '', '', '', '12', '14', '14', '14', '14'],
+        mDefIncreaseExt: ['3', '', '', '', '', '', '4', '4', '4', '4', '4'],
+        mDefIncreaseMaxPot: ['Mid', '', '', '', '', '', 'High', 'High', 'High', 'High', 'High']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 193,
+      mAtk: 215,
+      heal: 232
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10601],
+      reinforcementAbilitiesData[51901]
     ]
   }),
   6001: new Weapon({
@@ -4589,6 +4735,35 @@ export const weaponsData: Weapons = {
     reinforcementAbilities: [
       reinforcementAbilitiesData[30601],
       reinforcementAbilitiesData[10101]
+    ]
+  }),
+  8020: new Weapon({
+    id: 8020,
+    name: 'Rhad Gun',
+    character: charactersData[8],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: null,
+      name: 'Solid Bravery',
+      atbCost: 4,
+      sigil: null,
+      description: `${increase('PATK', 'Low', 'Single Ally', null, undefined, undefined, 'Mid')}\nAlso, ${regen('Single Ally', undefined, 3)}\n${heal(undefined, 'Mag.', 'Single Ally')}`,
+      valuesByOverboostLevel: {
+        pAtkIncreaseDur: ['34', '36', '36', '36', '36', '36', '40', '40', '40', '40', '44'],
+        pAtkIncreaseExt: ['11', '12', '12', '12', '12', '12', '13', '13', '13', '13', '14'],
+        regenDur: ['9', '12', '12', '12', '12', '12', '12', '12', '12', '12', '15'],
+        heal: ['9', '11', '11', '11', '11', '11', '12', '12', '12', '12', '13']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 225,
+      mAtk: 197,
+      heal: 170
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10201],
+      reinforcementAbilitiesData[51301]
     ]
   }),
   20001: new Weapon({
@@ -7811,6 +7986,32 @@ export const weaponsData: Weapons = {
     reinforcementAbilities: [
       reinforcementAbilitiesData[10401],
       reinforcementAbilitiesData[10501]
+    ]
+  }),
+  56013: new Weapon({
+    id: 56013,
+    name: 'Cyan\'s Blade',
+    character: charactersData[56],
+    element: 'Ice',
+    commandAbility: new CommandAbility({
+      id: 15601301,
+      name: 'Blizzara Impact',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Phys. Ice', 'Single Enemy', null)}`,
+      valuesByOverboostLevel: {
+        damage: ['320', '370', '370', '370', '370', '370', '430', '430', '430', '430', '450']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 225,
+      mAtk: 199,
+      heal: 168
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[51401]
     ]
   })
 };

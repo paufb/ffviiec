@@ -548,5 +548,14 @@ export const reinforcementAbilitiesData = {
     levelValues: {
       flat: [0.5, 1, 1.5, 2]
     }
-  })
+  }),
+  53901: new ReinforcementAbility({
+    id: 53901,
+    name: 'Regen Boost',
+    effect: 'Applies Regen to all allies when battle begins\n(Effect Dur.: {{flat}}s / Effect Dur. Ext.: +0s)',
+    reqPts: [1, 5, 15, 25],
+    levelValues: {
+      flat: [15, 30, 45, 60]
+    }
+  }),
 }
