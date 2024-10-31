@@ -11,7 +11,7 @@ function App() {
   const [isViewportNarrow, setIsViewportNarrow] = useState(getIsViewportNarrow());
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(getIsViewportNarrow());
   const routes = useRoutes([
-    { path: '/', element: <Home /> },
+    { path: '/', element: <Home collapseSidebar={collapseSidebar} /> },
     { path: 'weapons', element: <WeaponsPage isViewportNarrow={isViewportNarrow} /> },
     { path: '/materia', element: <MateriaPage /> }
   ]);

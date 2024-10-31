@@ -1,10 +1,13 @@
-import WeaponsIcon from '../assets/ui/enhance.png';
-import MateriaIcon from '../assets/ui/materia.png';
 import pageAnimations from './page-animations.module.css';
 import styles from './HomePage.module.css';
 import { NavLink } from 'react-router-dom';
 
-export function Home() {
+export function Home({ collapseSidebar }: { collapseSidebar: Function }) {
+  const routeIcons = {
+    '/weapons': new URL('../assets/ui/enhance.png', import.meta.url).href,
+    '/materia': new URL('../assets/ui/materia.png', import.meta.url).href
+  };
+
   return (
     <>
       <div className={styles['background']} />
@@ -20,22 +23,20 @@ export function Home() {
           </div>
         </div>
         <div className={`${styles['anchors-container']} ${pageAnimations['fade-in-from-bottom']}`}>
-          <div className={styles['anchor-container']}>
-            <div className={styles['outer-shadow']} />
-            <div className={styles['inner-shadow']} />
-            <div className={styles['border']} />
-            <NavLink to={'/weapons'} className={styles['anchor']}>
-              <img src={WeaponsIcon} className={styles['weapons-img']} />
-            </NavLink>
-          </div>
-          <div className={styles['anchor-container']}>
-            <div className={styles['outer-shadow']} />
-            <div className={styles['inner-shadow']} />
-            <div className={styles['border']} />
-            <NavLink to={'/materia'} className={styles['anchor']}>
-              <img src={MateriaIcon} />
-            </NavLink>
-          </div>
+          {Object.entries(routeIcons).map(([route, iconURL]) => (
+            <div className={styles['anchor-container']} key={route}>
+              <div className={styles['outer-shadow']} />
+              <div className={styles['inner-shadow']} />
+              <div className={styles['border']} />
+              <NavLink to={route} className={styles['anchor']} onClick={() => collapseSidebar()}>
+                <img
+                  src={iconURL}
+                  alt=""
+                  className={route === '/weapons' ? styles['weapons-img'] : ''}
+                />
+              </NavLink>
+            </div>
+          ))}
         </div>
       </div>
     </>
