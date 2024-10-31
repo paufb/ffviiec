@@ -81,6 +81,11 @@
     height: 128px;
     background: rgb(26, 63, 176);
     clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+    transition: background-color 0.1s;
+
+    &:hover {
+      background-color: rgb(30, 72, 200);
+    }
   
     & img.weapons-img {
       transform: scale(0.8) translateX(-17px) translateY(10px);
