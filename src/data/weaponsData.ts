@@ -5997,6 +5997,32 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[53601]
     ]
   }),
+  49028: new Weapon({
+    id: 49028,
+    name: 'Edgar\'s Coiled Blade',
+    character: charactersData[49],
+    element: 'Water',
+    commandAbility: new CommandAbility({
+      id: 14902801,
+      name: 'Royal Shock',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Mag. Water', 'Single Enemy', null)}\nAlso, when Debuff is granted to Target, x1.2 damage.`,
+      valuesByOverboostLevel: {
+        damage: ['520', '', '', '', '', '', '780', '780', '780', '780', '940']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 207,
+      mAtk: 289,
+      heal: 160
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[20601]
+    ]
+  }),
   50001: new Weapon({
     id: 50001,
     name: 'Personal Style',
