@@ -5,7 +5,7 @@ import { UltimateCommandAbility } from './UltimateCommandAbility.ts';
 import { Weapon } from './Weapon.ts';
 
 interface UltimateWeaponProps {
-  id: number;
+  id: number | null;
   name: string;
   character: Character;
   element: keyof Elements;
@@ -15,8 +15,8 @@ interface UltimateWeaponProps {
 }
 
 export class UltimateWeapon extends Weapon {
-  constructor({ id, name, character, element, commandAbility, maxRarityStats, reinforcementAbilities }: UltimateWeaponProps) {
-    super({ id: id, name: name, character: character, element: element, commandAbility: commandAbility, maxRarityLevel: 6, maxRarityStats: maxRarityStats, reinforcementAbilities: reinforcementAbilities });
+  constructor(props: UltimateWeaponProps) {
+    super({ ...props, maxRarityLevel: 6 });
   }
 
   getPAtk() {

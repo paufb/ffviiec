@@ -4,7 +4,7 @@ import { CommandAbility } from './CommandAbility.ts';
 import { ReinforcementAbility } from './ReinforcementAbility.ts';
 
 interface WeaponProps {
-  id: number;
+  id: number | null;
   name: string;
   character: Character;
   element: keyof Elements;
@@ -15,40 +15,26 @@ interface WeaponProps {
 }
 
 export class Weapon {
-  #id: number;
-  #name: string;
-  #character: Character;
-  #element: keyof Elements;
-  #commandAbility: CommandAbility;
-  #maxRarityLevel: number;
-  #maxRarityStats: { pAtk: number; mAtk: number; heal: number; };
-  #reinforcementAbilities: ReinforcementAbility[];
+  #props: WeaponProps;
   static #overboostLevelPAtkMultipliers = [0, 0.4, 0.3, 0.2, 0.1, 0.1, 0.1, 0.05, 0.05, 0.05, 0.05];
   static #overboostLevelMAtkMultipliers = [0, 0.4, 0.3, 0.2, 0.1, 0.1, 0.1, 0.05, 0.05, 0.05, 0.05];
   static #overboostLevelHealMultipliers = [0, 0.1, 0.05, 0.05, 0.04, 0.04, 0.04, 0.02, 0.02, 0.02, 0.02];
 
-  constructor({ id, name, character, element, commandAbility, maxRarityLevel, maxRarityStats, reinforcementAbilities }: WeaponProps) {
-    this.#id = id;
-    this.#name = name;
-    this.#character = character;
-    this.#element = element;
-    this.#commandAbility = commandAbility;
-    this.#maxRarityLevel = maxRarityLevel;
-    this.#maxRarityStats = maxRarityStats;
-    this.#reinforcementAbilities = reinforcementAbilities;
+  constructor(props: WeaponProps) {
+    this.#props = props;
   }
 
-  get id() { return this.#id; }
-  get name() { return this.#name; }
-  get character() { return this.#character; }
-  get element() { return this.#element; }
-  get commandAbility() { return this.#commandAbility; }
-  get maxRarityLevel() { return this.#maxRarityLevel; }
-  get maxRarityStats() { return this.#maxRarityStats; }
-  get reinforcementAbilities() { return this.#reinforcementAbilities; }
+  get id() { return this.#props.id; }
+  get name() { return this.#props.name; }
+  get character() { return this.#props.character; }
+  get element() { return this.#props.element; }
+  get commandAbility() { return this.#props.commandAbility; }
+  get maxRarityLevel() { return this.#props.maxRarityLevel; }
+  get maxRarityStats() { return this.#props.maxRarityStats; }
+  get reinforcementAbilities() { return this.#props.reinforcementAbilities; }
 
   getPAtk(overboostLevel: number) {
-    const basePAtk = this.#maxRarityStats.pAtk;
+    const basePAtk = this.#props.maxRarityStats.pAtk;
     let additionalPAtk = 0;
     for (let i = 0; i <= overboostLevel; i++) {
       additionalPAtk += basePAtk * Weapon.#overboostLevelPAtkMultipliers[i];
@@ -57,7 +43,7 @@ export class Weapon {
   }
 
   getMAtk(overboostLevel: number) {
-    const baseMAtk = this.#maxRarityStats.mAtk;
+    const baseMAtk = this.#props.maxRarityStats.mAtk;
     let additionalMAtk = 0;
     for (let i = 0; i <= overboostLevel; i++) {
       additionalMAtk += baseMAtk * Weapon.#overboostLevelMAtkMultipliers[i];
@@ -66,7 +52,7 @@ export class Weapon {
   }
 
   getHeal(overboostLevel: number) {
-    const baseHeal = this.#maxRarityStats.heal;
+    const baseHeal = this.#props.maxRarityStats.heal;
     let additionalHeal = 0;
     for (let i = 0; i <= overboostLevel; i++) {
       additionalHeal += baseHeal * Weapon.#overboostLevelHealMultipliers[i];
@@ -75,6 +61,6 @@ export class Weapon {
   }
 
   getCAbilityDescription(overboostLevel: number) {
-    return this.#commandAbility.getDescription(overboostLevel);
+    return this.#props.commandAbility.getDescription(overboostLevel);
   }
 }
