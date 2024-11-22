@@ -7,7 +7,7 @@ import { charactersData } from './charactersData.ts';
 import { reinforcementAbilitiesData } from './reinforcementAbilitiesData.ts';
 
 export const weaponsData: Weapons = {
-  1001: new Weapon({
+  "Buster Sword": new Weapon({
     id: 1001,
     name: 'Buster Sword',
     character: charactersData[1],
@@ -33,7 +33,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[11001]
     ]
   }),
-  1002: new Weapon({
+  "Iron Blade": new Weapon({
     id: 1002,
     name: 'Iron Blade',
     character: charactersData[1],
@@ -62,7 +62,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10801]
     ]
   }),
-  1003: new Weapon({
+  "Hardedge": new Weapon({
     id: 1003,
     name: 'Hardedge',
     character: charactersData[1],
@@ -91,7 +91,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[30701]
     ]
   }),
-  1004: new Weapon({
+  "Mythril Saber": new Weapon({
     id: 1004,
     name: 'Mythril Saber',
     character: charactersData[1],
@@ -117,7 +117,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51301]
     ]
   }),
-  1006: new Weapon({
+  "Butterfly Edge": new Weapon({
     id: 1006,
     name: 'Butterfly Edge',
     character: charactersData[1],
@@ -146,7 +146,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51701]
     ]
   }),
-  1007: new Weapon({
+  "Murasame": new Weapon({
     id: 1007,
     name: 'Murasame',
     character: charactersData[1],
@@ -172,7 +172,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20401]
     ]
   }),
-  1008: new Weapon({
+  "Organics": new Weapon({
     id: 1008,
     name: 'Organics',
     character: charactersData[1],
@@ -199,7 +199,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[30301]
     ]
   }),
-  1009: new Weapon({
+  "Crystal Sword": new Weapon({
     id: 1009,
     name: 'Crystal Sword',
     character: charactersData[1],
@@ -225,7 +225,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[30501]
     ]
   }),
-  1012: new Weapon({
+  "Enhance Sword": new Weapon({
     id: 1012,
     name: 'Enhance Sword',
     character: charactersData[1],
@@ -251,7 +251,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20301]
     ]
   }),
-  1013: new Weapon({
+  "Nail Bat": new Weapon({
     id: 1013,
     name: 'Nail Bat',
     character: charactersData[1],
@@ -277,7 +277,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51801]
     ]
   }),
-  1015: new Weapon({
+  "Apocalypse": new Weapon({
     id: 1015,
     name: 'Apocalypse',
     character: charactersData[1],
@@ -303,7 +303,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20701]
     ]
   }),
-  1020: new Weapon({
+  "Maritime Sword": new Weapon({
     id: 1020,
     name: 'Maritime Sword',
     character: charactersData[1],
@@ -329,7 +329,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20601]
     ]
   }),
-  1024: new Weapon({
+  "Shiva's Blade": new Weapon({
     id: 1024,
     name: 'Shiva\'s Blade',
     character: charactersData[1],
@@ -355,7 +355,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10101]
     ]
   }),
-  1025: new Weapon({
+  "Bandaged Sword": new Weapon({
     id: 1025,
     name: 'Bandaged Sword',
     character: charactersData[1],
@@ -384,7 +384,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[30301]
     ]
   }),
-  1028: new Weapon({
+  "Skysplitter": new Weapon({
     id: 1028,
     name: 'Skysplitter',
     character: charactersData[1],
@@ -410,7 +410,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20201]
     ]
   }),
-  1029: new Weapon({
+  "Zidane's Sword": new Weapon({
     id: 1029,
     name: 'Zidane\'s Sword',
     character: charactersData[1],
@@ -436,7 +436,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51401]
     ]
   }),
-  1030: new Weapon({
+  "Holiday Cheer": new Weapon({
     id: 1030,
     name: 'Holiday Cheer',
     character: charactersData[1],
@@ -462,7 +462,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10401]
     ]
   }),
-  1031: new Weapon({
+  "Stream Saber": new Weapon({
     id: 1031,
     name: 'Stream Saber',
     character: charactersData[1],
@@ -488,7 +488,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20301]
     ]
   }),
-  1032: new Weapon({
+  "Igneous Saber": new Weapon({
     id: 1032,
     name: 'Igneous Saber',
     character: charactersData[1],
@@ -514,7 +514,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10501]
     ]
   }),
-  1033: new Weapon({
+  "Glavenus Sword": new Weapon({
     id: 1033,
     name: 'Glavenus Sword',
     character: charactersData[1],
@@ -546,7 +546,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51401]
     ]
   }),
-  1034: new Weapon({
+  "Rune Blade": new Weapon({
     id: 1034,
     name: 'Rune Blade',
     character: charactersData[1],
@@ -572,7 +572,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20301]
     ]
   }),
-  1035: new Weapon({
+  "Burning Oar": new Weapon({
     id: 1035,
     name: 'Burning Oar',
     character: charactersData[1],
@@ -598,7 +598,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20201]
     ]
   }),
-  1036: new Weapon({
+  "Bahamut Greatsword": new Weapon({
     id: 1036,
     name: 'Bahamut Greatsword',
     character: charactersData[1],
@@ -627,7 +627,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51401]
     ]
   }),
-  1037: new UltimateWeapon({
+  "Ultimate Buster Sword": new UltimateWeapon({
     id: 1037,
     name: 'Ultimate Buster Sword',
     character: charactersData[1],
@@ -648,7 +648,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10401]
     ]
   }),
-  2001: new Weapon({
+  "Gatling Gun": new Weapon({
     id: 2001,
     name: 'Gatling Gun',
     character: charactersData[2],
@@ -674,7 +674,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[30601]
     ]
   }),
-  2002: new Weapon({
+  "Assault Gun": new Weapon({
     id: 2002,
     name: 'Assault Gun',
     character: charactersData[2],
@@ -703,7 +703,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[30301]
     ]
   }),
-  2007: new Weapon({
+  "Heavy Vulcan": new Weapon({
     id: 2007,
     name: 'Heavy Vulcan',
     character: charactersData[2],
@@ -732,7 +732,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20501]
     ]
   }),
-  2008: new Weapon({
+  "Microlaser": new Weapon({
     id: 2008,
     name: 'Microlaser',
     character: charactersData[2],
@@ -762,7 +762,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[30201]
     ]
   }),
-  2010: new Weapon({
+  "W Machine": new Weapon({
     id: 2010,
     name: 'W Machine',
     character: charactersData[2],
@@ -791,7 +791,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[30401]
     ]
   }),
-  2011: new Weapon({
+  "Solid Bazooka": new Weapon({
     id: 2011,
     name: 'Solid Bazooka',
     character: charactersData[2],
@@ -820,7 +820,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10801]
     ]
   }),
-  2012: new Weapon({
+  "Enemy Launcher": new Weapon({
     id: 2012,
     name: 'Enemy Launcher',
     character: charactersData[2],
@@ -846,7 +846,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51401]
     ]
   }),
-  2013: new Weapon({
+  "Max Ray": new Weapon({
     id: 2013,
     name: 'Max Ray',
     character: charactersData[2],
@@ -872,7 +872,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10801]
     ]
   }),
-  2015: new Weapon({
+  "Flame Projector": new Weapon({
     id: 2015,
     name: 'Flame Projector',
     character: charactersData[2],
@@ -898,7 +898,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20201]
     ]
   }),
-  2018: new Weapon({
+  "Heavy Hauser": new Weapon({
     id: 2018,
     name: 'Heavy Hauser',
     character: charactersData[2],
@@ -924,7 +924,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51301]
     ]
   }),
-  2019: new Weapon({
+  "Lefko Kypseli": new Weapon({
     id: 2019,
     name: 'Lefko Kypseli',
     character: charactersData[2],
@@ -953,7 +953,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10401]
     ]
   }),
-  2020: new Weapon({
+  "Rocket Punch": new Weapon({
     id: 2020,
     name: 'Rocket Punch',
     character: charactersData[2],
@@ -979,7 +979,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[11401]
     ]
   }),
-  2022: new Weapon({
+  "Shiva Cannon": new Weapon({
     id: 2022,
     name: 'Shiva Cannon',
     character: charactersData[2],
@@ -1005,7 +1005,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[11001]
     ]
   }),
-  2024: new Weapon({
+  "Hell House Cannon": new Weapon({
     id: 2024,
     name: 'Hell House Cannon',
     character: charactersData[2],
@@ -1033,7 +1033,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10401]
     ]
   }),
-  2025: new Weapon({
+  "Siege Cannon": new Weapon({
     id: 2025,
     name: 'Siege Cannon',
     character: charactersData[2],
@@ -1059,7 +1059,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20601]
     ]
   }),
-  2017: new Weapon({
+  "Electrocannon": new Weapon({
     id: 2017,
     name: 'Electrocannon',
     character: charactersData[2],
@@ -1090,7 +1090,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51501]
     ]
   }),
-  2027: new Weapon({
+  "Leviathan Buster": new Weapon({
     id: 2027,
     name: 'Leviathan Buster',
     character: charactersData[2],
@@ -1116,7 +1116,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10101]
     ]
   }),
-  2021: new Weapon({
+  "Sharkslayer": new Weapon({
     id: 2021,
     name: 'Sharkslayer',
     character: charactersData[2],
@@ -1148,7 +1148,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51901]
     ]
   }),
-  2031: new UltimateWeapon({
+  "Ultimate Gatling Gun": new UltimateWeapon({
     id: 2031,
     name: 'Ultimate Gatling Gun',
     character: charactersData[2],
@@ -1169,7 +1169,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10101]
     ]
   }),
-  2029: new Weapon({
+  "Rhad Cannon": new Weapon({
     id: 2029,
     name: 'Rhad Cannon',
     character: charactersData[2],
@@ -1198,7 +1198,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51301]
     ]
   }),
-  2032: new Weapon({
+  "Escutcheon Cannon": new Weapon({
     id: 2032,
     name: 'Escutcheon Cannon',
     character: charactersData[2],
@@ -1230,7 +1230,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51901]
     ]
   }),
-  3001: new Weapon({
+  "Leather Gloves": new Weapon({
     id: 3001,
     name: 'Leather Gloves',
     character: charactersData[3],
@@ -1259,7 +1259,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[30401]
     ]
   }),
-  3005: new Weapon({
+  "Grand Gloves": new Weapon({
     id: 3005,
     name: 'Grand Gloves',
     character: charactersData[3],
@@ -1285,7 +1285,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20601]
     ]
   }),
-  3006: new Weapon({
+  "Sonic Striker": new Weapon({
     id: 3006,
     name: 'Sonic Striker',
     character: charactersData[3],
@@ -1311,7 +1311,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[30601]
     ]
   }),
-  3007: new Weapon({
+  "Tiger Fangs": new Weapon({
     id: 3007,
     name: 'Tiger Fangs',
     character: charactersData[3],
@@ -1340,7 +1340,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10801]
     ]
   }),
-  3010: new Weapon({
+  "Crystal Gloves": new Weapon({
     id: 3010,
     name: 'Crystal Gloves',
     character: charactersData[3],
@@ -1366,7 +1366,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20401]
     ]
   }),
-  3011: new Weapon({
+  "Motor Drive": new Weapon({
     id: 3011,
     name: 'Motor Drive',
     character: charactersData[3],
@@ -1392,7 +1392,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20701]
     ]
   }),
-  3013: new Weapon({
+  "Kaiser Knuckles": new Weapon({
     id: 3013,
     name: 'Kaiser Knuckles',
     character: charactersData[3],
@@ -1421,7 +1421,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[30301]
     ]
   }),
-  3014: new Weapon({
+  "Work Gloves": new Weapon({
     id: 3014,
     name: 'Work Gloves',
     character: charactersData[3],
@@ -1453,7 +1453,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51801]
     ]
   }),
-  3015: new Weapon({
+  "Powersoul": new Weapon({
     id: 3015,
     name: 'Powersoul',
     character: charactersData[3],
@@ -1479,7 +1479,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51501]
     ]
   }),
-  3019: new Weapon({
+  "Lifeguard Wraps": new Weapon({
     id: 3019,
     name: 'Lifeguard Wraps',
     character: charactersData[3],
@@ -1505,7 +1505,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[30201]
     ]
   }),
-  3020: new Weapon({
+  "Feathered Gloves": new Weapon({
     id: 3020,
     name: 'Feathered Gloves',
     character: charactersData[3],
@@ -1537,7 +1537,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20601]
     ]
   }),
-  3024: new Weapon({
+  "Bahamut Knuckles": new Weapon({
     id: 3024,
     name: 'Bahamut Knuckles',
     character: charactersData[3],
@@ -1563,7 +1563,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10101]
     ]
   }),
-  3025: new Weapon({
+  "Holy Flame Gloves": new Weapon({
     id: 3025,
     name: 'Holy Flame Gloves',
     character: charactersData[3],
@@ -1589,7 +1589,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20301]
     ]
   }),
-  3027: new Weapon({
+  "Amarant's Claws": new Weapon({
     id: 3027,
     name: 'Amarant\'s Claws',
     character: charactersData[3],
@@ -1622,7 +1622,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51401]
     ]
   }),
-  3028: new Weapon({
+  "Bunny Gloves": new Weapon({
     id: 3028,
     name: 'Bunny Gloves',
     character: charactersData[3],
@@ -1651,7 +1651,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20601]
     ]
   }),
-  3029: new Weapon({
+  "Oven Mitts": new Weapon({
     id: 3029,
     name: 'Oven Mitts',
     character: charactersData[3],
@@ -1680,7 +1680,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10401]
     ]
   }),
-  3030: new Weapon({
+  "Turks' Gloves": new Weapon({
     id: 3030,
     name: 'Turks\' Gloves',
     character: charactersData[3],
@@ -1708,7 +1708,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51301]
     ]
   }),
-  3031: new Weapon({
+  "Guide Gloves": new Weapon({
     id: 3031,
     name: 'Guide Gloves',
     character: charactersData[3],
@@ -1734,7 +1734,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51401]
     ]
   }),
-  3032: new Weapon({
+  "Kirin Gloves": new Weapon({
     id: 3032,
     name: 'Kirin Gloves',
     character: charactersData[3],
@@ -1763,7 +1763,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20401]
     ]
   }),
-  3033: new Weapon({
+  "Shell Knuckles": new Weapon({
     id: 3033,
     name: 'Shell Knuckles',
     character: charactersData[3],
@@ -1789,7 +1789,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20201]
     ]
   }),
-  3034: new Weapon({
+  "Steward Gloves": new Weapon({
     id: 3034,
     name: 'Steward Gloves',
     character: charactersData[3],
@@ -1817,7 +1817,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51301]
     ]
   }),
-  3035: new Weapon({
+  "Bahamut Fangs": new Weapon({
     id: 3035,
     name: 'Bahamut Fangs',
     character: charactersData[3],
@@ -1848,7 +1848,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51501]
     ]
   }),
-  3037: new UltimateWeapon({
+  "Ultimate Leather Gloves": new UltimateWeapon({
     id: 3037,
     name: 'Ultimate Leather Gloves',
     character: charactersData[3],
@@ -1869,7 +1869,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10501]
     ]
   }),
-  3036: new Weapon({
+  "Black Cat's Paws": new Weapon({
     id: 3036,
     name: 'Black Cat\'s Paws',
     character: charactersData[3],
@@ -1895,7 +1895,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20401]
     ]
   }),
-  4001: new Weapon({
+  "Guard Stick": new Weapon({
     id: 4001,
     name: 'Guard Stick',
     character: charactersData[4],
@@ -1924,7 +1924,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51701]
     ]
   }),
-  4002: new Weapon({
+  "Silver Staff": new Weapon({
     id: 4002,
     name: 'Silver Staff',
     character: charactersData[4],
@@ -1950,7 +1950,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20301]
     ]
   }),
-  4003: new Weapon({
+  "Striking Staff": new Weapon({
     id: 4003,
     name: 'Striking Staff',
     character: charactersData[4],
@@ -1976,7 +1976,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51701]
     ]
   }),
-  4004: new Weapon({
+  "Mythril Rod": new Weapon({
     id: 4004,
     name: 'Mythril Rod',
     character: charactersData[4],
@@ -2008,7 +2008,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[30401]
     ]
   }),
-  4005: new Weapon({
+  "Full Metal Staff": new Weapon({
     id: 4005,
     name: 'Full Metal Staff',
     character: charactersData[4],
@@ -2037,7 +2037,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[30301]
     ]
   }),
-  4007: new Weapon({
+  "Prism Rod": new Weapon({
     id: 4007,
     name: 'Prism Rod',
     character: charactersData[4],
@@ -2063,7 +2063,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20701]
     ]
   }),
-  4008: new Weapon({
+  "Fairy Tale": new Weapon({
     id: 4008,
     name: 'Fairy Tale',
     character: charactersData[4],
@@ -2089,7 +2089,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[30501]
     ]
   }),
-  4009: new Weapon({
+  "Wizard Staff": new Weapon({
     id: 4009,
     name: 'Wizard Staff',
     character: charactersData[4],
@@ -2115,7 +2115,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20401]
     ]
   }),
-  4010: new Weapon({
+  "Wizer Staff": new Weapon({
     id: 4010,
     name: 'Wizer Staff',
     character: charactersData[4],
@@ -2141,7 +2141,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20501]
     ]
   }),
-  4014: new Weapon({
+  "Sun Umbrella": new Weapon({
     id: 4014,
     name: 'Sun Umbrella',
     character: charactersData[4],
@@ -2173,7 +2173,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51501]
     ]
   }),
-  4015: new Weapon({
+  "Floral Wand": new Weapon({
     id: 4015,
     name: 'Floral Wand',
     character: charactersData[4],
@@ -2205,7 +2205,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20701]
     ]
   }),
-  4016: new Weapon({
+  "Umbrella": new Weapon({
     id: 4016,
     name: 'Umbrella',
     character: charactersData[4],
@@ -2231,7 +2231,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[11501]
     ]
   }),
-  4019: new Weapon({
+  "Chocobo Staff": new Weapon({
     id: 4019,
     name: 'Chocobo Staff',
     character: charactersData[4],
@@ -2260,7 +2260,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10501]
     ]
   }),
-  4020: new Weapon({
+  "Snowflake": new Weapon({
     id: 4020,
     name: 'Snowflake',
     character: charactersData[4],
@@ -2289,7 +2289,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20301]
     ]
   }),
-  4021: new Weapon({
+  "Ramuh's Staff": new Weapon({
     id: 4021,
     name: 'Ramuh\'s Staff',
     character: charactersData[4],
@@ -2315,7 +2315,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10101]
     ]
   }),
-  4022: new Weapon({
+  "Garnet's Rod": new Weapon({
     id: 4022,
     name: 'Garnet\'s Rod',
     character: charactersData[4],
@@ -2345,7 +2345,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51301]
     ]
   }),
-  4023: new Weapon({
+  "Egg Staff": new Weapon({
     id: 4023,
     name: 'Egg Staff',
     character: charactersData[4],
@@ -2371,7 +2371,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20201]
     ]
   }),
-  4024: new Weapon({
+  "Dawn's Prayers": new Weapon({
     id: 4024,
     name: 'Dawn\'s Prayers',
     character: charactersData[4],
@@ -2399,7 +2399,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10501]
     ]
   }),
-  4025: new Weapon({
+  "Kamura Wand": new Weapon({
     id: 4025,
     name: 'Kamura Wand',
     character: charactersData[4],
@@ -2431,7 +2431,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51901]
     ]
   }),
-  4026: new Weapon({
+  "Radrod": new Weapon({
     id: 4026,
     name: 'Radrod',
     character: charactersData[4],
@@ -2457,7 +2457,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20601]
     ]
   }),
-  4027: new Weapon({
+  "Hell House Rod": new Weapon({
     id: 4027,
     name: 'Hell House Rod',
     character: charactersData[4],
@@ -2483,7 +2483,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20301]
     ]
   }),
-  4028: new Weapon({
+  "Citric Wand": new Weapon({
     id: 4028,
     name: 'Citric Wand',
     character: charactersData[4],
@@ -2516,7 +2516,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51901]
     ]
   }),
-  4029: new Weapon({
+  "Bahamut Rod": new Weapon({
     id: 4029,
     name: 'Bahamut Rod',
     character: charactersData[4],
@@ -2546,7 +2546,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10601]
     ]
   }),
-  4030: new UltimateWeapon({
+  "Ultimate Guard Stick": new UltimateWeapon({
     id: 4030,
     name: 'Ultimate Guard Stick',
     character: charactersData[4],
@@ -2567,7 +2567,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10501]
     ]
   }),
-  4031: new Weapon({
+  "Terra's Rod": new Weapon({
     id: 4031,
     name: 'Terra\'s Rod',
     character: charactersData[4],
@@ -2602,7 +2602,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51901]
     ]
   }),
-  4036: new UltimateWeapon({
+  "Princess Guard": new UltimateWeapon({
     id: 4036,
     name: 'Princess Guard',
     character: charactersData[4],
@@ -2623,7 +2623,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[53901]
     ]
   }),
-  5001: new Weapon({
+  "Sleek Collar": new Weapon({
     id: 5001,
     name: 'Sleek Collar',
     character: charactersData[5],
@@ -2652,7 +2652,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[30701]
     ]
   }),
-  5005: new Weapon({
+  "Gold Collar": new Weapon({
     id: 5005,
     name: 'Gold Collar',
     character: charactersData[5],
@@ -2681,7 +2681,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[30501]
     ]
   }),
-  5009: new Weapon({
+  "Platinum Collar": new Weapon({
     id: 5009,
     name: 'Platinum Collar',
     character: charactersData[5],
@@ -2709,7 +2709,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10801]
     ]
   }),
-  5016: new Weapon({
+  "Noble Collar": new Weapon({
     id: 5016,
     name: 'Noble Collar',
     character: charactersData[5],
@@ -2735,7 +2735,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20601]
     ]
   }),
-  5018: new Weapon({
+  "Rage Collar": new Weapon({
     id: 5018,
     name: 'Rage Collar',
     character: charactersData[5],
@@ -2761,7 +2761,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20201]
     ]
   }),
-  5019: new Weapon({
+  "Leather Collar": new Weapon({
     id: 5019,
     name: 'Leather Collar',
     character: charactersData[5],
@@ -2787,7 +2787,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20501]
     ]
   }),
-  5020: new Weapon({
+  "Rubber Collar": new Weapon({
     id: 5020,
     name: 'Rubber Collar',
     character: charactersData[5],
@@ -2813,7 +2813,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51701]
     ]
   }),
-  5021: new Weapon({
+  "Junk Collar": new Weapon({
     id: 5021,
     name: 'Junk Collar',
     character: charactersData[5],
@@ -2842,7 +2842,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[30201]
     ]
   }),
-  5023: new Weapon({
+  "Canyon Collar": new Weapon({
     id: 5023,
     name: 'Canyon Collar',
     character: charactersData[5],
@@ -2871,7 +2871,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20701]
     ]
   }),
-  5026: new Weapon({
+  "Iron Collar": new Weapon({
     id: 5026,
     name: 'Iron Collar',
     character: charactersData[5],
@@ -2899,7 +2899,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10801]
     ]
   }),
-  5027: new Weapon({
+  "Headphones": new Weapon({
     id: 5027,
     name: 'Headphones',
     character: charactersData[5],
@@ -2925,7 +2925,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[11501]
     ]
   }),
-  5028: new Weapon({
+  "Seaside Collar": new Weapon({
     id: 5028,
     name: 'Seaside Collar',
     character: charactersData[5],
@@ -2954,7 +2954,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20401]
     ]
   }),
-  5031: new Weapon({
+  "Hell House Collar": new Weapon({
     id: 5031,
     name: 'Hell House Collar',
     character: charactersData[5],
@@ -2982,7 +2982,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10401]
     ]
   }),
-  5032: new Weapon({
+  "Flame Dragon's Band": new Weapon({
     id: 5032,
     name: 'Flame Dragon\'s Band',
     character: charactersData[5],
@@ -3011,7 +3011,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10101]
     ]
   }),
-  5033: new Weapon({
+  "Egg Collar": new Weapon({
     id: 5033,
     name: 'Egg Collar',
     character: charactersData[5],
@@ -3037,7 +3037,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20201]
     ]
   }),
-  5017: new Weapon({
+  "Ivy Collar": new Weapon({
     id: 5017,
     name: 'Ivy Collar',
     character: charactersData[5],
@@ -3069,7 +3069,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51301]
     ]
   }),
-  5034: new Weapon({
+  "Amethyst Collar": new Weapon({
     id: 5034,
     name: 'Amethyst Collar',
     character: charactersData[5],
@@ -3095,7 +3095,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20301]
     ]
   }),
-  5004: new Weapon({
+  "Silver Collar": new Weapon({
     id: 5004,
     name: 'Silver Collar',
     character: charactersData[5],
@@ -3127,7 +3127,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51901]
     ]
   }),
-  5035: new Weapon({
+  "Steward Collar": new Weapon({
     id: 5035,
     name: 'Steward Collar',
     character: charactersData[5],
@@ -3155,7 +3155,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51301]
     ]
   }),
-  5036: new UltimateWeapon({
+  "Ultimate Leather Collar": new UltimateWeapon({
     id: 5036,
     name: 'Ultimate Leather Collar',
     character: charactersData[5],
@@ -3176,7 +3176,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10401]
     ]
   }),
-  5024: new Weapon({
+  "Pilot's Collar": new Weapon({
     id: 5024,
     name: 'Pilot\'s Collar',
     character: charactersData[5],
@@ -3205,7 +3205,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51901]
     ]
   }),
-  6001: new Weapon({
+  "4-Point Shuriken": new Weapon({
     id: 6001,
     name: '4-Point Shuriken',
     character: charactersData[6],
@@ -3234,7 +3234,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51901]
     ]
   }),
-  6002: new Weapon({
+  "Boomerang": new Weapon({
     id: 6002,
     name: 'Boomerang',
     character: charactersData[6],
@@ -3263,7 +3263,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20201]
     ]
   }),
-  6003: new Weapon({
+  "Pinwheel": new Weapon({
     id: 6003,
     name: 'Pinwheel',
     character: charactersData[6],
@@ -3292,7 +3292,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20301]
     ]
   }),
-  6004: new Weapon({
+  "Razor Ring": new Weapon({
     id: 6004,
     name: 'Razor Ring',
     character: charactersData[6],
@@ -3318,7 +3318,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20501]
     ]
   }),
-  6005: new Weapon({
+  "Hawkeye": new Weapon({
     id: 6005,
     name: 'Hawkeye',
     character: charactersData[6],
@@ -3344,7 +3344,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20501]
     ]
   }),
-  6006: new Weapon({
+  "Crystal Cross": new Weapon({
     id: 6006,
     name: 'Crystal Cross',
     character: charactersData[6],
@@ -3374,7 +3374,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51301]
     ]
   }),
-  6007: new Weapon({
+  "Wind Slash": new Weapon({
     id: 6007,
     name: 'Wind Slash',
     character: charactersData[6],
@@ -3403,7 +3403,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51901]
     ]
   }),
-  6008: new Weapon({
+  "Twin Viper": new Weapon({
     id: 6008,
     name: 'Twin Viper',
     character: charactersData[6],
@@ -3432,7 +3432,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51701]
     ]
   }),
-  6009: new Weapon({
+  "Spiral Shuriken": new Weapon({
     id: 6009,
     name: 'Spiral Shuriken',
     character: charactersData[6],
@@ -3458,7 +3458,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20301]
     ]
   }),
-  6010: new Weapon({
+  "Magic Shuriken": new Weapon({
     id: 6010,
     name: 'Magic Shuriken',
     character: charactersData[6],
@@ -3484,7 +3484,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20701]
     ]
   }),
-  6014: new Weapon({
+  "Diner Tray": new Weapon({
     id: 6014,
     name: 'Diner Tray',
     character: charactersData[6],
@@ -3510,7 +3510,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20701]
     ]
   }),
-  6015: new Weapon({
+  "Arctic Star": new Weapon({
     id: 6015,
     name: 'Arctic Star',
     character: charactersData[6],
@@ -3540,7 +3540,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51901]
     ]
   }),
-  6016: new Weapon({
+  "Bamboo Ring": new Weapon({
     id: 6016,
     name: 'Bamboo Ring',
     character: charactersData[6],
@@ -3566,7 +3566,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51801]
     ]
   }),
-  6022: new Weapon({
+  "Chariot Wheel": new Weapon({
     id: 6022,
     name: 'Chariot Wheel',
     character: charactersData[6],
@@ -3592,7 +3592,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20601]
     ]
   }),
-  6024: new Weapon({
+  "Leviathan Cutter": new Weapon({
     id: 6024,
     name: 'Leviathan Cutter',
     character: charactersData[6],
@@ -3618,7 +3618,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10501]
     ]
   }),
-  6026: new Weapon({
+  "Striped Moogle Float": new Weapon({
     id: 6026,
     name: 'Striped Moogle Float',
     character: charactersData[6],
@@ -3647,7 +3647,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20201]
     ]
   }),
-  6027: new Weapon({
+  "Cactuar Fan": new Weapon({
     id: 6027,
     name: 'Cactuar Fan',
     character: charactersData[6],
@@ -3673,7 +3673,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51301]
     ]
   }),
-  6028: new Weapon({
+  "Bahamut Cutter": new Weapon({
     id: 6028,
     name: 'Bahamut Cutter',
     character: charactersData[6],
@@ -3702,7 +3702,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51401]
     ]
   }),
-  6029: new UltimateWeapon({
+  "Ultimate 4-Point Shuriken": new UltimateWeapon({
     id: 6029,
     name: 'Ultimate 4-Point Shuriken',
     character: charactersData[6],
@@ -3723,7 +3723,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10501]
     ]
   }),
-  6019: new Weapon({
+  "Little Red Wreath": new Weapon({
     id: 6019,
     name: 'Little Red Wreath',
     character: charactersData[6],
@@ -3749,7 +3749,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20301]
     ]
   }),
-  7001: new Weapon({
+  "Yellow Megaphone": new Weapon({
     id: 7001,
     name: 'Yellow Megaphone',
     character: charactersData[7],
@@ -3775,7 +3775,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51301]
     ]
   }),
-  7002: new Weapon({
+  "Green Megaphone": new Weapon({
     id: 7002,
     name: 'Green Megaphone',
     character: charactersData[7],
@@ -3804,7 +3804,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20601]
     ]
   }),
-  7003: new Weapon({
+  "Blue Megaphone": new Weapon({
     id: 7003,
     name: 'Blue Megaphone',
     character: charactersData[7],
@@ -3830,7 +3830,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20301]
     ]
   }),
-  7004: new Weapon({
+  "Red Megaphone": new Weapon({
     id: 7004,
     name: 'Red Megaphone',
     character: charactersData[7],
@@ -3856,7 +3856,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20201]
     ]
   }),
-  7005: new Weapon({
+  "Crystal Megaphone": new Weapon({
     id: 7005,
     name: 'Crystal Megaphone',
     character: charactersData[7],
@@ -3886,7 +3886,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51501]
     ]
   }),
-  7008: new Weapon({
+  "Silver Megaphone": new Weapon({
     id: 7008,
     name: 'Silver Megaphone',
     character: charactersData[7],
@@ -3914,7 +3914,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51301]
     ]
   }),
-  7009: new Weapon({
+  "Gold Megaphone": new Weapon({
     id: 7009,
     name: 'Gold Megaphone',
     character: charactersData[7],
@@ -3946,7 +3946,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20201]
     ]
   }),
-  7010: new Weapon({
+  "Battle Trumpet": new Weapon({
     id: 7010,
     name: 'Battle Trumpet',
     character: charactersData[7],
@@ -3978,7 +3978,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51301]
     ]
   }),
-  7011: new Weapon({
+  "Trumpet Shell": new Weapon({
     id: 7011,
     name: 'Trumpet Shell',
     character: charactersData[7],
@@ -4010,7 +4010,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[11501]
     ]
   }),
-  7014: new Weapon({
+  "Marching Horn": new Weapon({
     id: 7014,
     name: 'Marching Horn',
     character: charactersData[7],
@@ -4040,7 +4040,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51901]
     ]
   }),
-  7022: new Weapon({
+  "Flower Vase": new Weapon({
     id: 7022,
     name: 'Flower Vase',
     character: charactersData[7],
@@ -4071,7 +4071,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51501]
     ]
   }),
-  7024: new Weapon({
+  "Humus Megaphone": new Weapon({
     id: 7024,
     name: 'Humus Megaphone',
     character: charactersData[7],
@@ -4097,7 +4097,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20701]
     ]
   }),
-  7023: new Weapon({
+  "Catsmegaphone": new Weapon({
     id: 7023,
     name: 'Catsmegaphone',
     character: charactersData[7],
@@ -4126,7 +4126,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51301]
     ]
   }),
-  7025: new Weapon({
+  "Fireworks Megaphone": new Weapon({
     id: 7025,
     name: 'Fireworks Megaphone',
     character: charactersData[7],
@@ -4152,7 +4152,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51301]
     ]
   }),
-  7029: new Weapon({
+  "Quina Megaphone": new Weapon({
     id: 7029,
     name: 'Quina Megaphone',
     character: charactersData[7],
@@ -4184,7 +4184,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51901]
     ]
   }),
-  7026: new Weapon({
+  "Alba Megaphone": new Weapon({
     id: 7026,
     name: 'Alba Megaphone',
     character: charactersData[7],
@@ -4210,7 +4210,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51301]
     ]
   }),
-  7028: new UltimateWeapon({
+  "Ultimate Yellow Megaphone": new UltimateWeapon({
     id: 7028,
     name: 'Ultimate Yellow Megaphone',
     character: charactersData[7],
@@ -4231,7 +4231,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10401]
     ]
   }),
-  7032: new UltimateWeapon({
+  "HP Shout": new UltimateWeapon({
     id: 7032,
     name: 'HP Shout',
     character: charactersData[7],
@@ -4252,7 +4252,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[53801]
     ]
   }),
-  7019: new Weapon({
+  "Witch's Broom": new Weapon({
     id: 7019,
     name: 'Witch\'s Broom',
     character: charactersData[7],
@@ -4284,7 +4284,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20401]
     ]
   }),
-  7027: new Weapon({
+  "Icebolt Megaphone": new Weapon({
     id: 7027,
     name: 'Icebolt Megaphone',
     character: charactersData[7],
@@ -4316,7 +4316,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10101]
     ]
   }),
-  8002: new Weapon({
+  "Cath Palug": new Weapon({
     id: 8002,
     name: 'Cath Palug',
     character: charactersData[8],
@@ -4342,7 +4342,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20301]
     ]
   }),
-  8003: new Weapon({
+  "Gilded Age": new Weapon({
     id: 8003,
     name: 'Gilded Age',
     character: charactersData[8],
@@ -4370,7 +4370,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51301]
     ]
   }),
-  8004: new Weapon({
+  "S1976C": new Weapon({
     id: 8004,
     name: 'S1976C',
     character: charactersData[8],
@@ -4403,7 +4403,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51301]
     ]
   }),
-  8005: new Weapon({
+  "Shortbarrel": new Weapon({
     id: 8005,
     name: 'Shortbarrel',
     character: charactersData[8],
@@ -4430,7 +4430,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20701]
     ]
   }),
-  8007: new Weapon({
+  "T03 Model N": new Weapon({
     id: 8007,
     name: 'T03 Model N',
     character: charactersData[8],
@@ -4457,7 +4457,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51401]
     ]
   }),
-  8008: new Weapon({
+  "Sawed-Off GS": new Weapon({
     id: 8008,
     name: 'Sawed-Off GS',
     character: charactersData[8],
@@ -4490,7 +4490,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51501]
     ]
   }),
-  8009: new Weapon({
+  "Chiron": new Weapon({
     id: 8009,
     name: 'Chiron',
     character: charactersData[8],
@@ -4520,7 +4520,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51901]
     ]
   }),
-  8010: new Weapon({
+  "Double Stem E": new Weapon({
     id: 8010,
     name: 'Double Stem E',
     character: charactersData[8],
@@ -4549,7 +4549,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51501]
     ]
   }),
-  8012: new Weapon({
+  "White Dog": new Weapon({
     id: 8012,
     name: 'White Dog',
     character: charactersData[8],
@@ -4576,7 +4576,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20501]
     ]
   }),
-  8014: new Weapon({
+  "Silver Rifle": new Weapon({
     id: 8014,
     name: 'Silver Rifle',
     character: charactersData[8],
@@ -4603,7 +4603,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51801]
     ]
   }),
-  8015: new Weapon({
+  "Hugin & Munin": new Weapon({
     id: 8015,
     name: 'Hugin & Munin',
     character: charactersData[8],
@@ -4630,7 +4630,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51501]
     ]
   }),
-  8017: new Weapon({
+  "Quicksilver": new Weapon({
     id: 8017,
     name: 'Quicksilver',
     character: charactersData[8],
@@ -4657,7 +4657,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51701]
     ]
   }),
-  8019: new UltimateWeapon({
+  "Ultimate Quicksilver": new UltimateWeapon({
     id: 8019,
     name: 'Ultimate Quicksilver',
     character: charactersData[8],
@@ -4678,7 +4678,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10401]
     ]
   }),
-  8016: new Weapon({
+  "Crow Familiar": new Weapon({
     id: 8016,
     name: 'Crow Familiar',
     character: charactersData[8],
@@ -4705,7 +4705,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20401]
     ]
   }),
-  8018: new Weapon({
+  "Icebolt Shooter": new Weapon({
     id: 8018,
     name: 'Icebolt Shooter',
     character: charactersData[8],
@@ -4737,7 +4737,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10101]
     ]
   }),
-  8020: new Weapon({
+  "Rhad Gun": new Weapon({
     id: 8020,
     name: 'Rhad Gun',
     character: charactersData[8],
@@ -4766,7 +4766,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51301]
     ]
   }),
-  20001: new Weapon({
+  "Type-99 Longsword": new Weapon({
     id: 20001,
     name: 'Type-99 Longsword',
     character: charactersData[20],
@@ -4792,7 +4792,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10801]
     ]
   }),
-  20003: new Weapon({
+  "Beach Parasol": new Weapon({
     id: 20003,
     name: 'Beach Parasol',
     character: charactersData[20],
@@ -4818,7 +4818,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10501]
     ]
   }),
-  20004: new Weapon({
+  "Enhance Sword (Z)": new Weapon({
     id: 20004,
     name: 'Enhance Sword (Z)',
     character: charactersData[20],
@@ -4844,7 +4844,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51301]
     ]
   }),
-  20005: new Weapon({
+  "Defender": new Weapon({
     id: 20005,
     name: 'Defender',
     character: charactersData[20],
@@ -4874,7 +4874,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20301]
     ]
   }),
-  20006: new Weapon({
+  "Crystal Sword (Z)": new Weapon({
     id: 20006,
     name: 'Crystal Sword (Z)',
     character: charactersData[20],
@@ -4900,7 +4900,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20201]
     ]
   }),
-  20007: new Weapon({
+  "Falchion": new Weapon({
     id: 20007,
     name: 'Falchion',
     character: charactersData[20],
@@ -4926,7 +4926,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20701]
     ]
   }),
-  20008: new Weapon({
+  "Zweihander": new Weapon({
     id: 20008,
     name: 'Zweihander',
     character: charactersData[20],
@@ -4952,7 +4952,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[30201]
     ]
   }),
-  20009: new Weapon({
+  "Arc Sword": new Weapon({
     id: 20009,
     name: 'Arc Sword',
     character: charactersData[20],
@@ -4981,7 +4981,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[30601]
     ]
   }),
-  20010: new Weapon({
+  "Cutlass": new Weapon({
     id: 20010,
     name: 'Cutlass',
     character: charactersData[20],
@@ -5010,7 +5010,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51301]
     ]
   }),
-  20011: new Weapon({
+  "Ceremonial Sword (Z)": new Weapon({
     id: 20011,
     name: 'Ceremonial Sword (Z)',
     character: charactersData[20],
@@ -5039,7 +5039,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51401]
     ]
   }),
-  20013: new Weapon({
+  "Bouquet": new Weapon({
     id: 20013,
     name: 'Bouquet',
     character: charactersData[20],
@@ -5065,7 +5065,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[11401]
     ]
   }),
-  20014: new Weapon({
+  "Pressure Ridge": new Weapon({
     id: 20014,
     name: 'Pressure Ridge',
     character: charactersData[20],
@@ -5094,7 +5094,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20301]
     ]
   }),
-  20015: new Weapon({
+  "Iron Greatsword": new Weapon({
     id: 20015,
     name: 'Iron Greatsword',
     character: charactersData[20],
@@ -5122,7 +5122,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10801]
     ]
   }),
-  20016: new Weapon({
+  "Ifrit's Sword": new Weapon({
     id: 20016,
     name: 'Ifrit\'s Sword',
     character: charactersData[20],
@@ -5148,7 +5148,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10101]
     ]
   }),
-  20018: new Weapon({
+  "Twinkling Star": new Weapon({
     id: 20018,
     name: 'Twinkling Star',
     character: charactersData[20],
@@ -5180,7 +5180,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51401]
     ]
   }),
-  20019: new Weapon({
+  "Black Whiskers": new Weapon({
     id: 20019,
     name: 'Black Whiskers',
     character: charactersData[20],
@@ -5212,7 +5212,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20601]
     ]
   }),
-  20020: new Weapon({
+  "Stream Guard": new Weapon({
     id: 20020,
     name: 'Stream Guard',
     character: charactersData[20],
@@ -5238,7 +5238,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20201]
     ]
   }),
-  20023: new Weapon({
+  "Zinogre Blade": new Weapon({
     id: 20023,
     name: 'Zinogre Blade',
     character: charactersData[20],
@@ -5264,7 +5264,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20401]
     ]
   }),
-  20024: new Weapon({
+  "Carrot Sword": new Weapon({
     id: 20024,
     name: 'Carrot Sword',
     character: charactersData[20],
@@ -5290,7 +5290,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20201]
     ]
   }),
-  20025: new Weapon({
+  "Alba Blade": new Weapon({
     id: 20025,
     name: 'Alba Blade',
     character: charactersData[20],
@@ -5316,7 +5316,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51301]
     ]
   }),
-  20027: new Weapon({
+  "Beatrix Sword": new Weapon({
     id: 20027,
     name: 'Beatrix Sword',
     character: charactersData[20],
@@ -5342,7 +5342,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20701]
     ]
   }),
-  20026: new UltimateWeapon({
+  "Ultimate Type-99 Longsword": new UltimateWeapon({
     id: 20026,
     name: 'Ultimate Type-99 Longsword',
     character: charactersData[20],
@@ -5363,7 +5363,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10501]
     ]
   }),
-  49001: new Weapon({
+  "Nameless": new Weapon({
     id: 49001,
     name: 'Nameless',
     character: charactersData[49],
@@ -5392,7 +5392,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[30401]
     ]
   }),
-  49002: new Weapon({
+  "Edged Wings": new Weapon({
     id: 49002,
     name: 'Edged Wings',
     character: charactersData[49],
@@ -5418,7 +5418,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20301]
     ]
   }),
-  49003: new Weapon({
+  "Glaireid": new Weapon({
     id: 49003,
     name: 'Glaireid',
     character: charactersData[49],
@@ -5444,7 +5444,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51701]
     ]
   }),
-  49004: new Weapon({
+  "Aonibi": new Weapon({
     id: 49004,
     name: 'Aonibi',
     character: charactersData[49],
@@ -5474,7 +5474,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51301]
     ]
   }),
-  49005: new Weapon({
+  "Northern Lights": new Weapon({
     id: 49005,
     name: 'Northern Lights',
     character: charactersData[49],
@@ -5503,7 +5503,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[30201]
     ]
   }),
-  49006: new Weapon({
+  "Prototype Crimson Blade": new Weapon({
     id: 49006,
     name: 'Prototype Crimson Blade',
     character: charactersData[49],
@@ -5529,7 +5529,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20201]
     ]
   }),
-  49007: new Weapon({
+  "CC Alloy Sword": new Weapon({
     id: 49007,
     name: 'CC Alloy Sword',
     character: charactersData[49],
@@ -5555,7 +5555,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20401]
     ]
   }),
-  49008: new Weapon({
+  "Mythril Type-0 Katana": new Weapon({
     id: 49008,
     name: 'Mythril Type-0 Katana',
     character: charactersData[49],
@@ -5585,7 +5585,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51501]
     ]
   }),
-  49009: new Weapon({
+  "Shinra Blade: Model I": new Weapon({
     id: 49009,
     name: 'Shinra Blade: Model I',
     character: charactersData[49],
@@ -5611,7 +5611,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51301]
     ]
   }),
-  49012: new Weapon({
+  "Torn Wing": new Weapon({
     id: 49012,
     name: 'Torn Wing',
     character: charactersData[49],
@@ -5640,7 +5640,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10401]
     ]
   }),
-  49013: new Weapon({
+  "World Tree Bough": new Weapon({
     id: 49013,
     name: 'World Tree Bough',
     character: charactersData[49],
@@ -5666,7 +5666,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51801]
     ]
   }),
-  49015: new Weapon({
+  "Dark Heavens": new Weapon({
     id: 49015,
     name: 'Dark Heavens',
     character: charactersData[49],
@@ -5692,7 +5692,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20701]
     ]
   }),
-  49016: new Weapon({
+  "Kuja's Spirit Blade": new Weapon({
     id: 49016,
     name: 'Kuja\'s Spirit Blade',
     character: charactersData[49],
@@ -5724,7 +5724,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51301]
     ]
   }),
-  49017: new Weapon({
+  "Radiant Edge": new Weapon({
     id: 49017,
     name: 'Radiant Edge',
     character: charactersData[49],
@@ -5756,7 +5756,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20201]
     ]
   }),
-  49018: new Weapon({
+  "Protector's Blade": new Weapon({
     id: 49018,
     name: 'Protector\'s Blade',
     character: charactersData[49],
@@ -5782,7 +5782,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51501]
     ]
   }),
-  49019: new Weapon({
+  "Flame Dragon Blade": new Weapon({
     id: 49019,
     name: 'Flame Dragon Blade',
     character: charactersData[49],
@@ -5811,7 +5811,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10501]
     ]
   }),
-  49020: new Weapon({
+  "Ashura": new Weapon({
     id: 49020,
     name: 'Ashura',
     character: charactersData[49],
@@ -5837,7 +5837,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10501]
     ]
   }),
-  49011: new Weapon({
+  "Shinra Military Sword": new Weapon({
     id: 49011,
     name: 'Shinra Military Sword',
     character: charactersData[49],
@@ -5869,7 +5869,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20701]
     ]
   }),
-  49023: new Weapon({
+  "Shinra Wyvern Blade": new Weapon({
     id: 49023,
     name: 'Shinra Wyvern Blade',
     character: charactersData[49],
@@ -5897,7 +5897,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51301]
     ]
   }),
-  49010: new Weapon({
+  "Tempest": new Weapon({
     id: 49010,
     name: 'Tempest',
     character: charactersData[49],
@@ -5926,7 +5926,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20601]
     ]
   }),
-  49024: new Weapon({
+  "Blue Bramble": new Weapon({
     id: 49024,
     name: 'Blue Bramble',
     character: charactersData[49],
@@ -5955,7 +5955,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20501]
     ]
   }),
-  49026: new UltimateWeapon({
+  "Ultimate Nameless": new UltimateWeapon({
     id: 49026,
     name: 'Ultimate Nameless',
     character: charactersData[49],
@@ -5976,7 +5976,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10401]
     ]
   }),
-  49027: new UltimateWeapon({
+  "Genji Blade": new UltimateWeapon({
     id: 49027,
     name: 'Genji Blade',
     character: charactersData[49],
@@ -5997,7 +5997,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[53601]
     ]
   }),
-  49028: new Weapon({
+  "Edgar's Coiled Blade": new Weapon({
     id: 49028,
     name: 'Edgar\'s Coiled Blade',
     character: charactersData[49],
@@ -6023,7 +6023,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20601]
     ]
   }),
-  50001: new Weapon({
+  "Personal Style": new Weapon({
     id: 50001,
     name: 'Personal Style',
     character: charactersData[50],
@@ -6049,7 +6049,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20601]
     ]
   }),
-  50002: new Weapon({
+  "Crewkicker": new Weapon({
     id: 50002,
     name: 'Crewkicker',
     character: charactersData[50],
@@ -6075,7 +6075,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20201]
     ]
   }),
-  50003: new Weapon({
+  "Jiggy Fam": new Weapon({
     id: 50003,
     name: 'Jiggy Fam',
     character: charactersData[50],
@@ -6101,7 +6101,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20501]
     ]
   }),
-  50004: new Weapon({
+  "Hardcore Squad": new Weapon({
     id: 50004,
     name: 'Hardcore Squad',
     character: charactersData[50],
@@ -6133,7 +6133,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10801]
     ]
   }),
-  50005: new Weapon({
+  "Rest in Peace": new Weapon({
     id: 50005,
     name: 'Rest in Peace',
     character: charactersData[50],
@@ -6159,7 +6159,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[30701]
     ]
   }),
-  50007: new Weapon({
+  "Ultimatic": new Weapon({
     id: 50007,
     name: 'Ultimatic',
     character: charactersData[50],
@@ -6185,7 +6185,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51401]
     ]
   }),
-  50008: new Weapon({
+  "Piece of Cake": new Weapon({
     id: 50008,
     name: 'Piece of Cake',
     character: charactersData[50],
@@ -6214,7 +6214,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[30301]
     ]
   }),
-  50010: new Weapon({
+  "Shockbuster": new Weapon({
     id: 50010,
     name: 'Shockbuster',
     character: charactersData[50],
@@ -6240,7 +6240,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20401]
     ]
   }),
-  50011: new Weapon({
+  "Apology in Hell": new Weapon({
     id: 50011,
     name: 'Apology in Hell',
     character: charactersData[50],
@@ -6266,7 +6266,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[30301]
     ]
   }),
-  50014: new Weapon({
+  "Squeaky Hammer": new Weapon({
     id: 50014,
     name: 'Squeaky Hammer',
     character: charactersData[50],
@@ -6292,7 +6292,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[11401]
     ]
   }),
-  50015: new Weapon({
+  "Inferno Grave": new Weapon({
     id: 50015,
     name: 'Inferno Grave',
     character: charactersData[50],
@@ -6318,7 +6318,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[11001]
     ]
   }),
-  50016: new Weapon({
+  "Pumpkin Lamppost": new Weapon({
     id: 50016,
     name: 'Pumpkin Lamppost',
     character: charactersData[50],
@@ -6348,7 +6348,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51301]
     ]
   }),
-  50018: new Weapon({
+  "Thousand Waves": new Weapon({
     id: 50018,
     name: 'Thousand Waves',
     character: charactersData[50],
@@ -6374,7 +6374,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10501]
     ]
   }),
-  50019: new Weapon({
+  "Steiner's Blade": new Weapon({
     id: 50019,
     name: 'Steiner\'s Blade',
     character: charactersData[50],
@@ -6402,7 +6402,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51701]
     ]
   }),
-  50020: new Weapon({
+  "Stream Slasher": new Weapon({
     id: 50020,
     name: 'Stream Slasher',
     character: charactersData[50],
@@ -6428,7 +6428,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20601]
     ]
   }),
-  50021: new Weapon({
+  "Best Wishes": new Weapon({
     id: 50021,
     name: 'Best Wishes',
     character: charactersData[50],
@@ -6456,7 +6456,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10501]
     ]
   }),
-  50022: new Weapon({
+  "Radglaive": new Weapon({
     id: 50022,
     name: 'Radglaive',
     character: charactersData[50],
@@ -6482,7 +6482,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20601]
     ]
   }),
-  50023: new Weapon({
+  "Silver Sol Buster": new Weapon({
     id: 50023,
     name: 'Silver Sol Buster',
     character: charactersData[50],
@@ -6508,7 +6508,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51301]
     ]
   }),
-  50006: new Weapon({
+  "Slay the Day": new Weapon({
     id: 50006,
     name: 'Slay the Day',
     character: charactersData[50],
@@ -6540,7 +6540,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20601]
     ]
   }),
-  50024: new UltimateWeapon({
+  "Ultimate Personal Style": new UltimateWeapon({
     id: 50024,
     name: 'Ultimate Personal Style',
     character: charactersData[50],
@@ -6561,7 +6561,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10101]
     ]
   }),
-  51001: new Weapon({
+  "Broadsword: Axis": new Weapon({
     id: 51001,
     name: 'Broadsword: Axis',
     character: charactersData[51],
@@ -6587,7 +6587,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20401]
     ]
   }),
-  51002: new Weapon({
+  "Orthodox Raven": new Weapon({
     id: 51002,
     name: 'Orthodox Raven',
     character: charactersData[51],
@@ -6613,7 +6613,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20601]
     ]
   }),
-  51003: new Weapon({
+  "Absolute Royal": new Weapon({
     id: 51003,
     name: 'Absolute Royal',
     character: charactersData[51],
@@ -6639,7 +6639,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20301]
     ]
   }),
-  51004: new Weapon({
+  "Prime Number": new Weapon({
     id: 51004,
     name: 'Prime Number',
     character: charactersData[51],
@@ -6665,7 +6665,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[30401]
     ]
   }),
-  51005: new Weapon({
+  "Espee Rapiere Next-G": new Weapon({
     id: 51005,
     name: 'Espee Rapiere Next-G',
     character: charactersData[51],
@@ -6691,7 +6691,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51501]
     ]
   }),
-  51006: new Weapon({
+  "Core Defender": new Weapon({
     id: 51006,
     name: 'Core Defender',
     character: charactersData[51],
@@ -6720,7 +6720,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[30601]
     ]
   }),
-  51007: new Weapon({
+  "Centipede": new Weapon({
     id: 51007,
     name: 'Centipede',
     character: charactersData[51],
@@ -6749,7 +6749,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51901]
     ]
   }),
-  51008: new Weapon({
+  "Stingray": new Weapon({
     id: 51008,
     name: 'Stingray',
     character: charactersData[51],
@@ -6778,7 +6778,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[30701]
     ]
   }),
-  51009: new Weapon({
+  "Killer Hornet": new Weapon({
     id: 51009,
     name: 'Killer Hornet',
     character: charactersData[51],
@@ -6804,7 +6804,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51401]
     ]
   }),
-  51010: new Weapon({
+  "Bramble Spine": new Weapon({
     id: 51010,
     name: 'Bramble Spine',
     character: charactersData[51],
@@ -6834,7 +6834,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10501]
     ]
   }),
-  51012: new Weapon({
+  "Syringe Rapier": new Weapon({
     id: 51012,
     name: 'Syringe Rapier',
     character: charactersData[51],
@@ -6866,7 +6866,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51901]
     ]
   }),
-  51013: new Weapon({
+  "Foam Sword": new Weapon({
     id: 51013,
     name: 'Foam Sword',
     character: charactersData[51],
@@ -6892,7 +6892,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[11501]
     ]
   }),
-  51015: new Weapon({
+  "Slick Beetle": new Weapon({
     id: 51015,
     name: 'Slick Beetle',
     character: charactersData[51],
@@ -6921,7 +6921,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10801]
     ]
   }),
-  51016: new Weapon({
+  "Bahamut Rapier": new Weapon({
     id: 51016,
     name: 'Bahamut Rapier',
     character: charactersData[51],
@@ -6947,7 +6947,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10301]
     ]
   }),
-  51017: new Weapon({
+  "Holiday Cane": new Weapon({
     id: 51017,
     name: 'Holiday Cane',
     character: charactersData[51],
@@ -6973,7 +6973,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10401]
     ]
   }),
-  51018: new Weapon({
+  "Giant Fork": new Weapon({
     id: 51018,
     name: 'Giant Fork',
     character: charactersData[51],
@@ -7002,7 +7002,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10401]
     ]
   }),
-  51020: new Weapon({
+  "Humus Rapier": new Weapon({
     id: 51020,
     name: 'Humus Rapier',
     character: charactersData[51],
@@ -7028,7 +7028,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20701]
     ]
   }),
-  51022: new Weapon({
+  "Firefish": new Weapon({
     id: 51022,
     name: 'Firefish',
     character: charactersData[51],
@@ -7054,7 +7054,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20201]
     ]
   }),
-  51024: new UltimateWeapon({
+  "Ultimate Broadsword: Axis": new UltimateWeapon({
     id: 51024,
     name: 'Ultimate Broadsword: Axis',
     character: charactersData[51],
@@ -7075,7 +7075,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10501]
     ]
   }),
-  51025: new Weapon({
+  "Candle Rapier": new Weapon({
     id: 51025,
     name: 'Candle Rapier',
     character: charactersData[51],
@@ -7101,7 +7101,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20401]
     ]
   }),
-  52001: new Weapon({
+  "V39": new Weapon({
     id: 52001,
     name: 'V39',
     character: charactersData[52],
@@ -7127,7 +7127,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[30201]
     ]
   }),
-  52002: new Weapon({
+  "Pulse Gun": new Weapon({
     id: 52002,
     name: 'Pulse Gun',
     character: charactersData[52],
@@ -7153,7 +7153,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20701]
     ]
   }),
-  52003: new Weapon({
+  "Serpent Eater": new Weapon({
     id: 52003,
     name: 'Serpent Eater',
     character: charactersData[52],
@@ -7179,7 +7179,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20601]
     ]
   }),
-  52004: new Weapon({
+  "Thunderbird": new Weapon({
     id: 52004,
     name: 'Thunderbird',
     character: charactersData[52],
@@ -7208,7 +7208,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20401]
     ]
   }),
-  52005: new Weapon({
+  "Tranquilizer Gun": new Weapon({
     id: 52005,
     name: 'Tranquilizer Gun',
     character: charactersData[52],
@@ -7234,7 +7234,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51301]
     ]
   }),
-  52006: new Weapon({
+  "SSR1976": new Weapon({
     id: 52006,
     name: 'SSR1976',
     character: charactersData[52],
@@ -7263,7 +7263,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20401]
     ]
   }),
-  52007: new Weapon({
+  "Mad Minute": new Weapon({
     id: 52007,
     name: 'Mad Minute',
     character: charactersData[52],
@@ -7292,7 +7292,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51401]
     ]
   }),
-  52009: new Weapon({
+  "Bald Eagle": new Weapon({
     id: 52009,
     name: 'Bald Eagle',
     character: charactersData[52],
@@ -7321,7 +7321,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20301]
     ]
   }),
-  52010: new Weapon({
+  "Black Rifle": new Weapon({
     id: 52010,
     name: 'Black Rifle',
     character: charactersData[52],
@@ -7348,7 +7348,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10801]
     ]
   }),
-  52014: new Weapon({
+  "Rubber Band Gun": new Weapon({
     id: 52014,
     name: 'Rubber Band Gun',
     character: charactersData[52],
@@ -7374,7 +7374,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[11401]
     ]
   }),
-  52015: new Weapon({
+  "Featherscatter": new Weapon({
     id: 52015,
     name: 'Featherscatter',
     character: charactersData[52],
@@ -7402,7 +7402,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10401]
     ]
   }),
-  52016: new Weapon({
+  "Barn Swallow": new Weapon({
     id: 52016,
     name: 'Barn Swallow',
     character: charactersData[52],
@@ -7428,7 +7428,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[30401]
     ]
   }),
-  52017: new Weapon({
+  "Pumpkin Blaster": new Weapon({
     id: 52017,
     name: 'Pumpkin Blaster',
     character: charactersData[52],
@@ -7457,7 +7457,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10501]
     ]
   }),
-  52019: new Weapon({
+  "Rifle of Levin": new Weapon({
     id: 52019,
     name: 'Rifle of Levin',
     character: charactersData[52],
@@ -7483,7 +7483,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[11001]
     ]
   }),
-  52020: new Weapon({
+  "Holiday Revolver": new Weapon({
     id: 52020,
     name: 'Holiday Revolver',
     character: charactersData[52],
@@ -7509,7 +7509,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20501]
     ]
   }),
-  52021: new Weapon({
+  "Vivi's Magical Gun": new Weapon({
     id: 52021,
     name: 'Vivi\'s Magical Gun',
     character: charactersData[52],
@@ -7535,7 +7535,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51701]
     ]
   }),
-  52022: new Weapon({
+  "Rose Musket": new Weapon({
     id: 52022,
     name: 'Rose Musket',
     character: charactersData[52],
@@ -7564,7 +7564,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20201]
     ]
   }),
-  52023: new Weapon({
+  "Turks' Rifle": new Weapon({
     id: 52023,
     name: 'Turks\' Rifle',
     character: charactersData[52],
@@ -7592,7 +7592,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51301]
     ]
   }),
-  52025: new Weapon({
+  "Marine Shooter": new Weapon({
     id: 52025,
     name: 'Marine Shooter',
     character: charactersData[52],
@@ -7624,7 +7624,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20201]
     ]
   }),
-  52013: new Weapon({
+  "Nightjar": new Weapon({
     id: 52013,
     name: 'Nightjar',
     character: charactersData[52],
@@ -7656,7 +7656,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51301]
     ]
   }),
-  52026: new UltimateWeapon({
+  "Ultimate V39": new UltimateWeapon({
     id: 52026,
     name: 'Ultimate V39',
     character: charactersData[52],
@@ -7677,7 +7677,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10401]
     ]
   }),
-  56001: new Weapon({
+  "Type-90 Longsword": new Weapon({
     id: 56001,
     name: 'Type-90 Longsword',
     character: charactersData[56],
@@ -7704,7 +7704,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51401]
     ]
   }),
-  56002: new Weapon({
+  "Greatsword (A)": new Weapon({
     id: 56002,
     name: 'Greatsword (A)',
     character: charactersData[56],
@@ -7736,7 +7736,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51401]
     ]
   }),
-  56003: new Weapon({
+  "Type-91 Two-Hander": new Weapon({
     id: 56003,
     name: 'Type-91 Two-Hander',
     character: charactersData[56],
@@ -7767,7 +7767,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51301]
     ]
   }),
-  56004: new Weapon({
+  "Shinra Greatsword: Model I": new Weapon({
     id: 56004,
     name: 'Shinra Greatsword: Model I',
     character: charactersData[56],
@@ -7799,7 +7799,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51901]
     ]
   }),
-  56005: new Weapon({
+  "CC Alloy Greatsword": new Weapon({
     id: 56005,
     name: 'CC Alloy Greatsword',
     character: charactersData[56],
@@ -7825,7 +7825,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20401]
     ]
   }),
-  56006: new Weapon({
+  "Stalwart Integrity": new Weapon({
     id: 56006,
     name: 'Stalwart Integrity',
     character: charactersData[56],
@@ -7857,7 +7857,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[51901]
     ]
   }),
-  56007: new Weapon({
+  "Innocent Warrior": new Weapon({
     id: 56007,
     name: 'Innocent Warrior',
     character: charactersData[56],
@@ -7883,7 +7883,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20201]
     ]
   }),
-  56008: new Weapon({
+  "Gargantuan Monolith": new Weapon({
     id: 56008,
     name: 'Gargantuan Monolith',
     character: charactersData[56],
@@ -7912,7 +7912,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10501]
     ]
   }),
-  56009: new Weapon({
+  "Sequoiadendron": new Weapon({
     id: 56009,
     name: 'Sequoiadendron',
     character: charactersData[56],
@@ -7938,7 +7938,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20501]
     ]
   }),
-  56010: new Weapon({
+  "Tranquility": new Weapon({
     id: 56010,
     name: 'Tranquility',
     character: charactersData[56],
@@ -7967,7 +7967,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20601]
     ]
   }),
-  56011: new Weapon({
+  "Orchard Shovel": new Weapon({
     id: 56011,
     name: 'Orchard Shovel',
     character: charactersData[56],
@@ -7993,7 +7993,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[11401]
     ]
   }),
-  56012: new UltimateWeapon({
+  "Ultimate Type-90 Longsword": new UltimateWeapon({
     id: 56012,
     name: 'Ultimate Type-90 Longsword',
     character: charactersData[56],
@@ -8014,7 +8014,7 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10501]
     ]
   }),
-  56013: new Weapon({
+  "Cyan's Blade": new Weapon({
     id: 56013,
     name: 'Cyan\'s Blade',
     character: charactersData[56],

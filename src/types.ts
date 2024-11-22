@@ -26,30 +26,6 @@ export interface Element {
   icon: string;
 }
 
-export interface WeaponType {
-  id: number;
-  character: keyof Characters;
-  element: keyof Elements;
-  cAbility: keyof CommandAbilities;
-  fiveStarLevel120: {
-    pAtk: number;
-    mAtk: number;
-    heal: number;
-  }
-}
-
-export interface UltimateWeaponType {
-  id: number;
-  character: keyof Characters;
-  element: keyof Elements;
-  cAbility: keyof CommandAbilities;
-  sixStarLevel120: {
-    pAtk: number;
-    mAtk: number;
-    heal: number;
-  }
-}
-
 export interface CommandAbilities {
   [key: string]: CommandAbility | UltimateCommandAbility;
 }
@@ -63,7 +39,7 @@ export interface Elements {
 }
 
 export interface Weapons {
-  [key: number]: Weapon | UltimateWeapon;
+  [key: string]: Weapon | UltimateWeapon;
 }
 
 export interface ValuesByOverboostLevel {

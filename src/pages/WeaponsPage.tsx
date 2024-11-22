@@ -10,7 +10,7 @@ import { OverboostStars } from '../components/OverboostStars.tsx';
 import { SigilIcon } from '../components/SigilIcon.tsx';
 import { WeaponIcon } from '../components/WeaponIcon.tsx';
 import { WeaponModal } from '../components/WeaponModal.tsx';
-import { sigils, Characters, Elements, SigilType, WeaponType, Weapons } from '../types.ts';
+import { sigils, Characters, Elements, SigilType } from '../types.ts';
 import pageAnimations from './page-animations.module.css';
 import styles from './WeaponsPage.module.css';
 import { Weapon } from '../models/Weapon.ts';
@@ -19,22 +19,22 @@ import { UltimateStars } from '../components/UltimateStars.tsx';
 import { ReinforcementAbilityIcon } from '../components/ReinforcementAbilityIcon.tsx';
 
 export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean }) {
-  type Column = 'weapon' | keyof WeaponType['fiveStarLevel120'] | 'atbCost';
-  type SortConfig = { column: null | Column; direction: null | 'asc' | 'desc'; }
+  type Column = 'weapon' | keyof Weapon['maxRarityStats'] | 'atbCost';
+  type SortConfig = { column: '' | Column; direction: '' | 'asc' | 'desc'; }
   type Layout = 'table' | 'grid';
   type IsDropdownVisible = { [key in 'overboost' | 'characters' | 'elements' | 'sigils']: boolean };
 
-  const [weapons, setWeapons] = useState<Weapons>({});
+  const [weapons, setWeapons] = useState<Record<string, Weapon>>({});
   const [elements, setElements] = useState<Elements>({});
   const [characters, setCharacters] = useState<Characters>({});
-  const [filteredWeapons, setFilteredWeapons] = useState<Weapons>({});
+  const [filteredWeapons, setFilteredWeapons] = useState<Record<string, Weapon>>({});
   const [nameQuery, setNameQuery] = useState('');
   const [selectedCharacterIds, setSelectedCharacterIds] = useState<number[]>([]);
   const [selectedElements, setSelectedElements] = useState<(keyof Elements)[]>([]);
   const [selectedSigils, setSelectedSigils] = useState<(SigilType)[]>([]);
   const [selectedWeaponLevel, setSelectedWeaponLevel] = useState(120);
   const [selectedOverboostLevel, setSelectedOverboostLevel] = useState(10);
-  const [sortConfig, setSortConfig] = useState<SortConfig>({ column: null, direction: null });
+  const [sortConfig, setSortConfig] = useState<SortConfig>({ column: '', direction: '' });
   const [layout, setLayout] = useState<Layout>('grid');
   const [selectedWeaponForModal, setSelectedWeaponForModal] = useState<Weapon | null>(null);
   const [isDropdownVisible, setIsDropdownVisible] = useState<IsDropdownVisible>({ overboost: false, characters: false, elements: false, sigils: false });
@@ -70,8 +70,8 @@ export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean })
     );
     if (sortConfig.column && sortConfig.direction) {
       filteredEntries = filteredEntries.sort(([_, weaponA], [__, weaponB]) => {
-        if (sortConfig.column && ['pAtk', 'mAtk', 'heal'].includes(sortConfig.column)) {
-          const diff = weaponA.maxRarityStats[sortConfig.column] - weaponB.maxRarityStats[sortConfig.column];
+        if (sortConfig.column in weaponA.maxRarityStats) {
+          const diff = weaponA.maxRarityStats[sortConfig.column as keyof Weapon['maxRarityStats']] - weaponB.maxRarityStats[sortConfig.column as keyof Weapon['maxRarityStats']];
           return sortConfig.direction === 'asc' ? diff : -diff;
         } else if (sortConfig.column === 'weapon') {
           const comparison = weaponA.name.localeCompare(weaponB.name, 'en', { sensitivity: 'base' });
@@ -148,7 +148,7 @@ export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean })
     let direction: SortConfig['direction'] = 'desc';
     if (sortConfig.column === column) {
         direction = sortConfig.direction === 'desc' ? 'asc' :
-                    sortConfig.direction === 'asc'  ? null  :
+                    sortConfig.direction === 'asc'  ? ''    :
                                                       'desc';
     }
     setSortConfig({ column, direction });
@@ -401,7 +401,7 @@ export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean })
                       <div className={styles["c-ability-container"]}>
                         <div className={styles["c-ability-header"]}>
                           <ATBBarCost cost={weapon.commandAbility.atbCost} />
-                          {weapon.cAbility}
+                          {weapon.commandAbility.name}
                         </div>
                         <div className={styles["c-ability-separator"]} />
                         <div className={styles["table-data-c-ability"]}>

@@ -1,7 +1,7 @@
-import { WeaponType } from '../types.ts';
+import { Weapon } from '../models/Weapon.ts';
 
 interface WeaponIconProps {
-  weapon: WeaponType;
+  weapon: Weapon;
   className?: string;
   lazy?: boolean;
 }
