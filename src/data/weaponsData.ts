@@ -608,7 +608,7 @@ export const weaponsData: Weapons = {
       name: 'Fierce Claw',
       atbCost: 4,
       sigil: null,
-      description: `${damage(undefined, 'Phys. Non-elem.', 'All Enemies', 10)}\nAlso, [Condition: First use] ${apply('Haste', null, 'Self', null, undefined, undefined)}\nWhen [Rng.: Self]'s HP is 50% or more, ${additionalDamage('Non-elem.', 'Phys.', 'All Enemies')}`,
+      description: `${damage(undefined, 'Phys. Non-elem.', 'All Enemies', 10)}\nAlso, [Condition: First use] ${apply('Haste', null, 'Self', null, undefined, undefined)}\n${conditionHP('Self', '50', 'more')}, ${additionalDamage('Non-elem.', 'Phys.', 'All Enemies')}`,
       valuesByOverboostLevel: {
         damage: ['430', '520', '520', '520', '520', '520', '670', '670', '670', '670', '800'],
         hasteDur: ['20', '20', '20', '20', '20', '20', '25', '25', '25', '25', '30'],
@@ -646,6 +646,41 @@ export const weaponsData: Weapons = {
     reinforcementAbilities: [
       reinforcementAbilitiesData[51301],
       reinforcementAbilitiesData[10401]
+    ]
+  }),
+  "Locke's Sword": new Weapon({
+    id: null,
+    name: 'Locke\'s Sword',
+    character: charactersData[1],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: null,
+      name: 'Slashing Rush',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Phys. Non-elem.', 'Single Enemy', 10)}\nAlso, ${increase('Fire Damage', 'Mid', 'Self', null, undefined, undefined, undefined)}\n${increase('Ice Damage', 'Mid', 'Self', null, undefined, undefined, undefined)}\n${increase('Lightning Damage', 'Mid', 'Self', null, undefined, undefined, undefined)}`,
+      valuesByOverboostLevel: {
+        damage: ['630', '', '', '', '', '', '880', '880', '880', '880', '1,010'],
+        fireDamageIncreaseDur: ['30', '', '', '', '', '', '45', '45', '45', '45', '55'],
+        fireDamageIncreaseExt: ['6', '', '', '', '', '', '9', '9', '9', '9', '11'],
+        fireDamageIncreaseMaxPot: ['Mid', '', '', '', '', '', 'High', 'High', 'High', 'High', 'High'],
+        iceDamageIncreaseDur: ['30', '', '', '', '', '', '45', '45', '45', '45', '55'],
+        iceDamageIncreaseExt: ['6', '', '', '', '', '', '9', '9', '9', '9', '11'],
+        iceDamageIncreaseMaxPot: ['Mid', '', '', '', '', '', 'High', 'High', 'High', 'High', 'High'],
+        lightningDamageIncreaseDur: ['30', '', '', '', '', '', '45', '45', '45', '45', '55'],
+        lightningDamageIncreaseExt: ['6', '', '', '', '', '', '9', '9', '9', '9', '11'],
+        lightningDamageIncreaseMaxPot: ['Mid', '', '', '', '', '', 'High', 'High', 'High', 'High', 'High']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 285,
+      mAtk: 225,
+      heal: 150
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[11001],
+      reinforcementAbilitiesData[51301]
     ]
   }),
   "Gatling Gun": new Weapon({
@@ -1893,6 +1928,39 @@ export const weaponsData: Weapons = {
     reinforcementAbilities: [
       reinforcementAbilitiesData[10301],
       reinforcementAbilitiesData[20401]
+    ]
+  }),
+  "Sabin's Claws": new Weapon({
+    id: null,
+    name: 'Sabin\'s Claws',
+    character: charactersData[3],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: null,
+      name: 'Aura Cannon',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Mag. Non-elem.', 'All Enemies', 10)}\nAlso, ${increase('PATK', 'Low', 'Self', null, undefined, undefined, undefined)}\n${increase('MATK', 'Low', 'Self', null, undefined, undefined, undefined)}\n${conditionHP('Self', '50', 'more')}, ${additionalDamage('Non-elem.', 'Phys.', 'All Enemies')}`,
+      valuesByOverboostLevel: {
+        damage: ['430', '', '', '', '', '', '670', '670', '670', '670', '800'],
+        pAtkIncreaseDur: ['20', '', '', '', '', '', '25', '25', '25', '25', '30'],
+        pAtkIncreaseExt: ['6', '', '', '', '', '', '8', '8', '8', '8', '10'],
+        pAtkIncreaseMaxPot: ['Mid', '', '', '', '', '', 'High', 'High', 'High', 'High', 'High'],
+        mAtkIncreaseDur: ['20', '', '', '', '', '', '25', '25', '25', '25', '30'],
+        mAtkIncreaseExt: ['6', '', '', '', '', '', '8', '8', '8', '8', '10'],
+        mAtkIncreaseMaxPot: ['Mid', '', '', '', '', '', 'High', 'High', 'High', 'High', 'High'],
+        additionalDamage: ['10000', '', '', '', '', '', '30000', '30000', '30000', '30000', '40000']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 281,
+      mAtk: 212,
+      heal: 164
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[11001],
+      reinforcementAbilitiesData[51301]
     ]
   }),
   "Guard Stick": new Weapon({
@@ -3203,6 +3271,32 @@ export const weaponsData: Weapons = {
     reinforcementAbilities: [
       reinforcementAbilitiesData[10601],
       reinforcementAbilitiesData[51901]
+    ]
+  }),
+  "Kefka's Collar": new Weapon({
+    id: null,
+    name: 'Kefka\'s Collar',
+    character: charactersData[5],
+    element: 'Lightning',
+    commandAbility: new CommandAbility({
+      id: null,
+      name: 'Thundara Surge A',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Mag. Lightning', 'All Enemies', null)}`,
+      valuesByOverboostLevel: {
+        damage: ['210', '240', '240', '240', '240', '240', '280', '280', '280', '280', '290']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 212,
+      mAtk: 228,
+      heal: 154
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[51501]
     ]
   }),
   "4-Point Shuriken": new Weapon({
@@ -4764,6 +4858,32 @@ export const weaponsData: Weapons = {
     reinforcementAbilities: [
       reinforcementAbilitiesData[10201],
       reinforcementAbilitiesData[51301]
+    ]
+  }),
+  "Eligor Gun": new Weapon({
+    id: null,
+    name: 'Eligor Gun',
+    character: charactersData[8],
+    element: 'Ice',
+    commandAbility: new CommandAbility({
+      id: null,
+      name: 'Blizzara Surge A',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Mag. Ice', 'All Enemies', null)}`,
+      valuesByOverboostLevel: {
+        damage: ['210', '240', '240', '240', '240', '240', '280', '280', '280', '280', '290'],
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 194,
+      mAtk: 226,
+      heal: 170
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[20301]
     ]
   }),
   "Type-99 Longsword": new Weapon({
@@ -8045,7 +8165,7 @@ export const weaponsData: Weapons = {
 type Range = 'Single Enemy' | 'All Enemies' | 'Single Ally' | 'All Allies' | 'Self' | 'Affected Targets' | 'Ally (Excluding Self)' | null;
 type CriticalRate = number | null;
 type Effect = 'Ailment: Stun' | 'Ailment: Poison' | 'Ailment: Silence' | 'Haste' | 'Provoke' | 'Veil';
-type Attribute = 'PATK' | 'MATK' | 'PDEF' | 'MDEF' | 'Fire Resist.' | 'Ice Resist.' | 'Thunder Resist.' | 'Earth Resist.' | 'Water Resist.' | 'Wind Resist.' | 'Fire Damage' | 'Ice Damage' | 'Thunder Damage' | 'Earth Damage' | 'Water Damage' | 'Wind Damage';
+type Attribute = 'PATK' | 'MATK' | 'PDEF' | 'MDEF' | 'Fire Resist.' | 'Ice Resist.' | 'Thunder Resist.' | 'Earth Resist.' | 'Water Resist.' | 'Wind Resist.' | 'Fire Damage' | 'Ice Damage' | 'Lightning Damage' | 'Earth Damage' | 'Water Damage' | 'Wind Damage';
 type Element = 'Non-elem.' | 'Fire' | 'Ice' | 'Lightning' | 'Earth' | 'Water' | 'Wind';
 type Damage = string | undefined;
 type DamageType = `Phys. ${Element}` | `Mag. ${Element}` | `Phys./Mag. ${Element}`;
@@ -8072,7 +8192,7 @@ function getAttributeKey(attribute: Attribute) {
     'Wind Resist.': 'windResist',
     'Fire Damage': 'fireDamage',
     'Ice Damage': 'iceDamage',
-    'Thunder Damage': 'lightningDamage',
+    'Lightning Damage': 'lightningDamage',
     'Earth Damage': 'earthDamage',
     'Water Damage': 'waterDamage',
     'Wind Damage': 'windDamage'
