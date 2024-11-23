@@ -633,7 +633,7 @@ export const weaponsData: Weapons = {
     character: charactersData[1],
     element: 'Non-elemental',
     commandAbility: new UltimateCommandAbility({
-      id: 10103701,
+      id: null,
       name: 'Ult. Braver',
       sigil: null,
       description: `${damage('1,000', 'Phys./Mag. Non-elem.', 'Single Enemy', null)}\nAlso, ${decrease('PATK', 'High', 'Single Enemy', null, 30, 30, 'High')}\n${decrease('MATK', 'High', 'Single Enemy', null, 30, 30, 'High')}\n${chargeAndUses(30, null, 1)}`
@@ -1189,7 +1189,7 @@ export const weaponsData: Weapons = {
     character: charactersData[2],
     element: 'Non-elemental',
     commandAbility: new UltimateCommandAbility({
-      id: 10203101,
+      id: null,
       name: 'Ult. Agitation',
       sigil: null,
       description: `${increase('PDEF', 'High', 'All Allies', null, 20, 20, 'High')}\nAlso, ${heal(5, 'Phys.', 'All Allies')}\n${chargeAndUses(30, null, 1)}`
@@ -1889,7 +1889,7 @@ export const weaponsData: Weapons = {
     character: charactersData[3],
     element: 'Non-elemental',
     commandAbility: new UltimateCommandAbility({
-      id: 10303701,
+      id: null,
       name: 'Tornado Shot',
       sigil: null,
       description: `${damage('1,000', 'Phys./Mag. Non-elem.', 'Single Enemy', null)}\nAlso, ${increase('PATK', 'Mid', 'All Allies', null, 30, 30, 'Mid')}\n${increase('MATK', 'Mid', 'All Allies', null, 30, 30, 'Mid')}\n${chargeAndUses(30, null, 1)}`
@@ -2620,7 +2620,7 @@ export const weaponsData: Weapons = {
     character: charactersData[4],
     element: 'Non-elemental',
     commandAbility: new UltimateCommandAbility({
-      id: 10403001,
+      id: null,
       name: 'Fos Temenos',
       sigil: null,
       description: `${heal(50, 'Mag.', 'All Allies')}\nAlso, ${regen('All Allies', 3, 3)}\n${remove('Phys. Attack Down, Mag. Attack Down', 'All Allies')}\n${chargeAndUses(40, null, 1)}`
@@ -2676,7 +2676,7 @@ export const weaponsData: Weapons = {
     character: charactersData[4],
     element: 'Non-elemental',
     commandAbility: new UltimateCommandAbility({
-      id: 10403601,
+      id: null,
       name: 'Jubilation',
       sigil: null,
       description: `${restoreMaxHP(30, 'Mag.', 'All Allies')}\nAlso, ${increaseATBGauge(3, 'All Allies')}\n${chargeAndUses(60, 20, 2)}`
@@ -3229,7 +3229,7 @@ export const weaponsData: Weapons = {
     character: charactersData[5],
     element: 'Non-elemental',
     commandAbility: new UltimateCommandAbility({
-      id: 10503601,
+      id: null,
       name: 'Ult. Therapeutic Touch',
       sigil: null,
       description: `${heal(27, 'Mag.', 'All Allies')}\nAlso, ${regen('All Allies', 12, 12)}\n${chargeAndUses(40, null, 1)}`
@@ -3802,7 +3802,7 @@ export const weaponsData: Weapons = {
     character: charactersData[6],
     element: 'Non-elemental',
     commandAbility: new UltimateCommandAbility({
-      id: 10602901,
+      id: null,
       name: 'Euphoric Dance',
       sigil: null,
       description: `${damage('1,000', 'Phys./Mag. Non-elem.', 'Single Enemy', null)}\nAlso, ${increase('PATK', 'High', 'Self', null, 30, 30, 'High')}\n${increase('MATK', 'High', 'Self', null, 30, 30, 'High')}\n${chargeAndUses(30, null, 1)}`
@@ -3875,7 +3875,7 @@ export const weaponsData: Weapons = {
     character: charactersData[7],
     element: 'Water',
     commandAbility: new CommandAbility({
-      id: 10702201,
+      id: null,
       name: 'Bloomin\' Spray',
       atbCost: 4,
       sigil: null,
@@ -4110,7 +4110,7 @@ export const weaponsData: Weapons = {
     character: charactersData[7],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
-      id: 10701401,
+      id: null,
       name: 'Stalwart Bravery',
       atbCost: 4,
       sigil: null,
@@ -4135,7 +4135,7 @@ export const weaponsData: Weapons = {
     ]
   }),
   "Flower Vase": new Weapon({
-    id: 7022,
+    id: null,
     name: 'Flower Vase',
     character: charactersData[7],
     element: 'Non-elemental',
@@ -4310,7 +4310,7 @@ export const weaponsData: Weapons = {
     character: charactersData[7],
     element: 'Non-elemental',
     commandAbility: new UltimateCommandAbility({
-      id: 10702801,
+      id: null,
       name: 'Super Spirit',
       sigil: null,
       description: `${increaseLimitGauge(30, 'Single Ally')}\nAlso, ${heal(5, 'Mag.', 'Single Ally')}\n${chargeAndUses(30, null, 1)}`
@@ -4331,7 +4331,7 @@ export const weaponsData: Weapons = {
     character: charactersData[7],
     element: 'Non-elemental',
     commandAbility: new UltimateCommandAbility({
-      id: 10703201,
+      id: null,
       name: 'Heavenly Cheer',
       sigil: null,
       description: `${damage('1,000', 'Phys./Mag. Non-elem.', 'Single Enemy', null)}\nAlso, ${apply('Haste', null, 'All Allies', null, 20, 20)}\n${chargeAndUses(60, 20, 2)}`
@@ -4757,7 +4757,7 @@ export const weaponsData: Weapons = {
     character: charactersData[8],
     element: 'Non-elemental',
     commandAbility: new UltimateCommandAbility({
-      id: 10801901,
+      id: null,
       name: 'Ult. Spinning Pentashot',
       sigil: null,
       description: `${damage('1,000', 'Phys./Mag. Non-elem.', 'Single Enemy', null)}\nAlso, ${increaseLimitGauge(40, 'Self')}\n${chargeAndUses(30, null, 1)}`
@@ -5468,7 +5468,7 @@ export const weaponsData: Weapons = {
     character: charactersData[20],
     element: 'Non-elemental',
     commandAbility: new UltimateCommandAbility({
-      id: 12002601,
+      id: null,
       name: 'Ult. Slashing Thrust',
       sigil: null,
       description: `${damage('1,000', 'Phys./Mag. Non-elem.', 'Single Enemy', null)}\nAlso, ${decrease('PDEF', 'High', 'Single Enemy', null, 30, 30, 'High')}\n${decrease('MDEF', 'High', 'Single Enemy', null, 30, 30, 'High')}\n${chargeAndUses(30, null, 1)}`
@@ -6081,7 +6081,7 @@ export const weaponsData: Weapons = {
     character: charactersData[49],
     element: 'Non-elemental',
     commandAbility: new UltimateCommandAbility({
-      id: 14902601,
+      id: null,
       name: 'Ult. Sweeping Slash',
       sigil: null,
       description: `${damage('1,500', 'Phys./Mag. Non-elem.', 'Single Enemy', null)}\nAlso, when Debuff is granted to Target, x2 damage.\n${chargeAndUses(30, null, 1)}`
@@ -6102,7 +6102,7 @@ export const weaponsData: Weapons = {
     character: charactersData[49],
     element: 'Non-elemental',
     commandAbility: new UltimateCommandAbility({
-      id: 14902701,
+      id: null,
       name: 'Flash of Steel',
       sigil: null,
       description: `${damage('2,000', 'Phys./Mag. Non-elem.', 'Single Enemy', null)}\nAlso, ${increase('PATK', 'Extra High', 'Self', null, 30, 30, 'Extra High')}\n${increase('MATK', 'Extra High', 'Self', null, 30, 30, 'Extra High')}\n${chargeAndUses(60, 20, 2)}`
@@ -6666,7 +6666,7 @@ export const weaponsData: Weapons = {
     character: charactersData[50],
     element: 'Non-elemental',
     commandAbility: new UltimateCommandAbility({
-      id: 15002401,
+      id: null,
       name: 'Fire Up',
       sigil: null,
       description: `${increase('MDEF', 'High', 'All Allies', null, 20, 20, 'High')}\nAlso, ${heal(5, 'Mag.', 'All Allies')}\n${chargeAndUses(30, null, 1)}`
@@ -7180,7 +7180,7 @@ export const weaponsData: Weapons = {
     character: charactersData[51],
     element: 'Non-elemental',
     commandAbility: new UltimateCommandAbility({
-      id: 15102401,
+      id: null,
       name: 'Ult. Healing Showers',
       sigil: null,
       description: `${restoreMaxHP(25, 'Mag.', 'All Allies')}\nAlso, ${regen('All Allies', 3, 3)}\n${remove('Phys. Defense Down, Mag. Defense Down', 'All Allies')}\n${chargeAndUses(40, null, 1)}`
@@ -7782,7 +7782,7 @@ export const weaponsData: Weapons = {
     character: charactersData[52],
     element: 'Non-elemental',
     commandAbility: new UltimateCommandAbility({
-      id: 15202601,
+      id: null,
       name: 'Boost Volley',
       sigil: null,
       description: `${increase('PATK', 'High', 'Single Ally', null, 30, 30, 'High')}\nAlso, ${increase('MATK', 'High', 'Single Ally', null, 30, 30, 'High')}\n${heal(5, 'Mag.', 'Single Ally')}\n${chargeAndUses(30, null, 1)}`
@@ -8119,7 +8119,7 @@ export const weaponsData: Weapons = {
     character: charactersData[56],
     element: 'Non-elemental',
     commandAbility: new UltimateCommandAbility({
-      id: 15601201,
+      id: null,
       name: 'Unyielding Keeper',
       sigil: null,
       description: `${increase('PDEF', 'Mid', 'All Allies', null, 20, 20, 'High')}\nAlso, ${increase('MDEF', 'Mid', 'All Allies', null, 20, 20, 'High')}\n${heal(5, 'Mag.', 'All Allies')}\n${chargeAndUses(30, null, 1)}`

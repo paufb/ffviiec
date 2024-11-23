@@ -7,11 +7,12 @@ interface ReinforcementAbilityIconProps {
 }
 
 export function ReinforcementAbilityIcon({ reinforcementAbility, className, lazy = false }: ReinforcementAbilityIconProps) {
+  const url = reinforcementAbility.id ? new URL(`../assets/passiveskill/${reinforcementAbility.id}.png`, import.meta.url).href : '';
   return (
     <img
       className={className}
       loading={lazy ? 'lazy' : undefined}
-      src={new URL(`../assets/passiveskill/${reinforcementAbility.id}.png`, import.meta.url).href}
+      src={url}
       alt=""
     />
   );

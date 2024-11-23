@@ -7,11 +7,12 @@ interface MateriaIconProps {
 }
 
 export function MateriaIcon({ materia, className, lazy = false }: MateriaIconProps) {
+  const url = materia.id ? new URL(`../assets/materia/${materia.id}.png`, import.meta.url).href : '';
   return (
     <img
       className={className}
       loading={lazy ? 'lazy' : undefined}
-      src={new URL(`../assets/materia/${materia.id}.png`, import.meta.url).href}
+      src={url}
       alt=""
     />
   );

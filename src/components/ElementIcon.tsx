@@ -6,14 +6,11 @@ interface ElementIconProps {
 }
 
 export function ElementIcon({ element, className }: ElementIconProps) {
-  function getFileName() {
-    return `${element}.webp`;
-  }
-
+  const url = element ? new URL(`../assets/elements/${element}.webp`, import.meta.url).href : '';
   return (
     <img
       className={className}
-      src={new URL(`../assets/elements/${getFileName()}`, import.meta.url).href}
+      src={url}
       alt=""
     />
   );

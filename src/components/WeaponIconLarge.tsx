@@ -6,10 +6,11 @@ interface WeaponIconLargeProps {
 }
 
 export function WeaponIconLarge({ weapon, className }: WeaponIconLargeProps) {
+  const url = weapon.id ? new URL(`../assets/weapon_l/${weapon.id}.png`, import.meta.url).href : '';
   return (
     <img
       className={className}
-      src={new URL(`../assets/weapon_l/${weapon.id}.png`, import.meta.url).href}
+      src={url}
       alt=""
     />
   );

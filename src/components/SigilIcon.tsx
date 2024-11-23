@@ -6,14 +6,11 @@ interface SigilIconProps {
 }
 
 export function SigilIcon({ sigil, className }: SigilIconProps) {
-  function getFileName() {
-    return `${sigil ? sigil : 'minus'}.png`;
-  }
-
+  const url = new URL(`../assets/sigils/${sigil ? sigil : 'minus'}.png`, import.meta.url).href;
   return (
     <img
       className={className}
-      src={new URL(`../assets/sigils/${getFileName()}`, import.meta.url).href}
+      src={url}
       alt=""
     />
   );
