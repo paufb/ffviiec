@@ -10,29 +10,19 @@ interface CommandAbilityProps {
 }
 
 export class CommandAbility {
-  #id: number | null;
-  #name: string;
-  #atbCost: number;
-  #sigil: SigilType;
-  #description: string;
-  #valuesByOverboostLevel: ValuesByOverboostLevel | null
+  #props: CommandAbilityProps;
 
-  constructor({ id, name, atbCost, sigil, description, valuesByOverboostLevel = null }: CommandAbilityProps) {
-    this.#id = id;
-    this.#name = name;
-    this.#atbCost = atbCost;
-    this.#sigil = sigil;
-    this.#description = description;
-    this.#valuesByOverboostLevel = valuesByOverboostLevel;
+  constructor(props: CommandAbilityProps) {
+    this.#props = props;
   }
 
-  get id() { return this.#id; }
-  get name() { return this.#name; }
-  get atbCost() { return this.#atbCost; }
-  get sigil() { return this.#sigil; }
-  get description() { return this.#description; }
+  get id() { return this.#props.id; }
+  get name() { return this.#props.name; }
+  get atbCost() { return this.#props.atbCost; }
+  get sigil() { return this.#props.sigil; }
+  get description() { return this.#props.description; }
 
   getDescription(overboostLevel: number) {
-    return this.#description.replace(/\{\{(\w+)\}\}/g, (_, key) => this.#valuesByOverboostLevel![key][overboostLevel]);
+    return this.#props.description.replace(/\{\{(\w+)\}\}/g, (_, key) => this.#props.valuesByOverboostLevel![key][overboostLevel]);
   }
 }
