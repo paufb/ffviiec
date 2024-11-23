@@ -544,9 +544,9 @@
     padding: calc(0.125rem * 3);
 
     &.grid-image-container--ultimate {
-      --ultimate-blue: rgb(33, 159, 240);
-      border-color: var(--ultimate-blue);
-      outline-color: var(--ultimate-blue);
+      --ultimate-teal: rgb(88, 211, 214);
+      border-color: var(--ultimate-teal);
+      outline-color: var(--ultimate-teal);
     }
   
     & img {
