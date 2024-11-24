@@ -329,7 +329,7 @@ export function WeaponsPage({ isViewportNarrow }: { isViewportNarrow: boolean })
         selectedWeaponLevel={selectedWeaponLevel}
         closeWeaponModal={closeWeaponModal}
       />}
-      <div className={`${styles["table-decoration"]} ${pageAnimations['fade-in-from-right']}`}>
+      <div className={`${styles['decorated-container']} ${pageAnimations['fade-in-from-right']}`}>
         {layout === 'table' && (
           <div className={styles["table-container"]}>
             <table className={styles["table"]}>

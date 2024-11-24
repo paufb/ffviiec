@@ -4,10 +4,34 @@
   max-width: 90rem;
 }
 
+.decorated-container {
+  position: relative;
+  overflow: visible;
+  outline: rgb(28, 117, 190) solid 0.15rem;
+  background-color: rgba(4, 16, 30, 0.75);
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 0.5rem;
+    height: 0.5rem;
+    background: rgb(28, 117, 190);
+    outline: rgb(28, 117, 190) solid 0.15rem;
+    outline-offset: 0.1rem;
+    transform: rotate(45deg);
+    z-index: 1;
+  }
+
+  &::before { top: -0.4rem; left: -0.4rem; }
+  &::after { top: -0.4rem; right: -0.4rem; }
+}
+
 .materia-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   gap: 1rem 0.75rem;
+  padding: 0.75rem;
 }
 
 .materia-entry {
