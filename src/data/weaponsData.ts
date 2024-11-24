@@ -1781,10 +1781,10 @@ export const weaponsData: Weapons = {
       sigil: null,
       description: `${damage(undefined, 'Mag. Lightning', 'Single Enemy', null)}\nAlso, when [Rng.: Self]'s HP is 50% or more, ${increase('MATK', undefined, 'Self', null, undefined, undefined, 'Mid')}`,
       valuesByOverboostLevel: {
-        damage: ['520', '', '', '', '', '', '780', '780', '780', '780', '940'],
-        mAtkIncreasePot: ['Low', '', '', '', '', '', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid'],
-        mAtkIncreaseDur: ['25', '', '', '', '', '', '30', '30', '30', '30', '35'],
-        mAtkIncreaseExt: ['5', '', '', '', '', '', '6', '6', '6', '6', '7']
+        damage: ['520', '620', '620', '620', '620', '620', '780', '780', '780', '780', '940'],
+        mAtkIncreasePot: ['Low', 'Low', 'Low', 'Low', 'Low', 'Low', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid'],
+        mAtkIncreaseDur: ['25', '28', '28', '28', '28', '28', '30', '30', '30', '30', '35'],
+        mAtkIncreaseExt: ['5', '5', '5', '5', '5', '5', '6', '6', '6', '6', '7']
       }
     }),
     maxRarityLevel: 5,
@@ -1810,7 +1810,7 @@ export const weaponsData: Weapons = {
       sigil: null,
       description: `${damage(undefined, 'Mag. Fire', 'Single Enemy', null)}\nAlso, when [Rng.: Self]'s HP is 70% or more, x1.2 damage.`,
       valuesByOverboostLevel: {
-        damage: ['520', '', '', '', '', '', '810', '810', '810', '810', '940']
+        damage: ['520', '620', '620', '620', '620', '620', '810', '810', '810', '810', '940']
       }
     }),
     maxRarityLevel: 5,
@@ -2647,16 +2647,16 @@ export const weaponsData: Weapons = {
       sigil: null,
       description: `${damage(undefined, 'Mag. Non-elem.', 'All Enemies', 10)}\nAlso, ${decrease('Fire Resist.', undefined, 'All Enemies', null, undefined, undefined, 'High')}\n${decrease('Ice Resist.', undefined, 'All Enemies', null, undefined, undefined, 'High')}\n${decrease('Thunder Resist.', undefined, 'All Enemies', null, undefined, undefined, 'High')}`,
       valuesByOverboostLevel: {
-        damage: ['470', '', '', '', '', '', '660', '660', '660', '660', '750'],
-        fireResistDecreasePot: ['Mid', '', '', '', '', '', 'High', 'High', 'High', 'High', 'High'],
-        fireResistDecreaseDur: ['20', '', '', '', '', '', '25', '25', '25', '25', '35'],
-        fireResistDecreaseExt: ['6', '', '', '', '', '', '8', '8', '8', '8', '11'],
-        iceResistDecreasePot: ['Mid', '', '', '', '', '', 'High', 'High', 'High', 'High', 'High'],
-        iceResistDecreaseDur: ['20', '', '', '', '', '', '25', '25', '25', '25', '35'],
-        iceResistDecreaseExt: ['6', '', '', '', '', '', '8', '8', '8', '8', '11'],
-        lightningResistDecreasePot: ['Mid', '', '', '', '', '', 'High', 'High', 'High', 'High', 'High'],
-        lightningResistDecreaseDur: ['20', '', '', '', '', '', '25', '25', '25', '25', '35'],
-        lightningResistDecreaseExt: ['6', '', '', '', '', '', '8', '8', '8', '8', '11']
+        damage: ['470', '540', '540', '540', '540', '540', '660', '660', '660', '660', '750'],
+        fireResistDecreasePot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        fireResistDecreaseDur: ['20', '22', '22', '22', '22', '22', '25', '25', '25', '25', '35'],
+        fireResistDecreaseExt: ['6', '7', '7', '7', '7', '7', '8', '8', '8', '8', '11'],
+        iceResistDecreasePot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        iceResistDecreaseDur: ['20', '22', '22', '22', '22', '22', '25', '25', '25', '25', '35'],
+        iceResistDecreaseExt: ['6', '7', '7', '7', '7', '7', '8', '8', '8', '8', '11'],
+        lightningResistDecreasePot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        lightningResistDecreaseDur: ['20', '22', '22', '22', '22', '22', '25', '25', '25', '25', '35'],
+        lightningResistDecreaseExt: ['6', '7', '7', '7', '7', '7', '8', '8', '8', '8', '11']
       }
     }),
     maxRarityLevel: 5,
@@ -4476,14 +4476,14 @@ export const weaponsData: Weapons = {
       sigil: null,
       description: `${damage(undefined, 'Mag. Non-elem.', 'All Enemies', 10)}\nAlso, ${decrease('PATK', 'Mid', 'All Enemies', null, undefined, undefined, undefined)}\n${decrease('MATK', 'Mid', 'All Enemies', null, undefined, undefined, undefined)}\n${increaseLimitGauge(undefined, 'Self')}`,
       valuesByOverboostLevel: {
-        damage: ['340', '', '', '', '', '', '480', '480', '480', '480', '540'],
-        pAtkDecreaseDur: ['18', '', '', '', '', '', '20', '20', '20', '20', '25'],
-        pAtkDecreaseExt: ['6', '', '', '', '', '', '6', '6', '6', '6', '8'],
-        pAtkDecreaseMaxPot: ['Mid', '', '', '', '', '', 'High', 'High', 'High', 'High', 'High'],
-        mAtkDecreaseDur: ['18', '', '', '', '', '', '20', '20', '20', '20', '25'],
-        mAtkDecreaseExt: ['6', '', '', '', '', '', '6', '6', '6', '6', '8'],
-        mAtkDecreaseMaxPot: ['Mid', '', '', '', '', '', 'High', 'High', 'High', 'High', 'High'],
-        limitGaugeIncreasePot: ['2', '', '', '', '', '', '3', '3', '3', '3', '3']
+        damage: ['340', '390', '390', '390', '390', '390', '480', '480', '480', '480', '540'],
+        pAtkDecreaseDur: ['18', '20', '20', '20', '20', '20', '20', '20', '20', '20', '25'],
+        pAtkDecreaseExt: ['6', '6', '6', '6', '6', '6', '6', '6', '6', '6', '8'],
+        pAtkDecreaseMaxPot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        mAtkDecreaseDur: ['18', '20', '20', '20', '20', '20', '20', '20', '20', '20', '25'],
+        mAtkDecreaseExt: ['6', '6', '6', '6', '6', '6', '6', '6', '6', '6', '8'],
+        mAtkDecreaseMaxPot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        limitGaugeIncreasePot: ['2', '2', '2', '2', '2', '2', '3', '3', '3', '3', '3']
       }
     }),
     maxRarityLevel: 5,
@@ -4655,8 +4655,8 @@ export const weaponsData: Weapons = {
       sigil: null,
       description: `${damage(undefined, 'Mag. Earth', 'Single Enemy', null)}\nAlso, when Debuff is granted to Target, x1.2 damage.\n${increaseLimitGauge(undefined, 'Self')}`,
       valuesByOverboostLevel: {
-        damage: ['520', '', '', '', '', '', '780', '780', '780', '780', '940'],
-        limitGaugeIncreasePot: ['4', '', '', '', '', '', '5', '5', '5', '5', '5']
+        damage: ['520', '620', '620', '620', '620', '620', '780', '780', '780', '780', '940'],
+        limitGaugeIncreasePot: ['4', '4', '4', '4', '4', '4', '5', '5', '5', '5', '5']
       }
     }),
     maxRarityLevel: 5,
@@ -6129,7 +6129,7 @@ export const weaponsData: Weapons = {
       sigil: null,
       description: `${damage(undefined, 'Mag. Water', 'Single Enemy', null)}\nAlso, when Debuff is granted to Target, x1.2 damage.`,
       valuesByOverboostLevel: {
-        damage: ['520', '', '', '', '', '', '780', '780', '780', '780', '940']
+        damage: ['520', '620', '620', '620', '620', '620', '780', '780', '780', '780', '940']
       }
     }),
     maxRarityLevel: 5,
