@@ -1,0 +1,121 @@
+.page {
+  margin: 0 auto;
+  padding: var(--app-padding);
+  max-width: 90rem;
+}
+
+.decorated-container {
+  position: relative;
+  overflow: visible;
+  outline: rgb(28, 117, 190) solid 0.15rem;
+  background-color: rgba(4, 16, 30, 0.75);
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 0.5rem;
+    height: 0.5rem;
+    background: rgb(28, 117, 190);
+    outline: rgb(28, 117, 190) solid 0.15rem;
+    outline-offset: 0.1rem;
+    transform: rotate(45deg);
+    z-index: 1;
+  }
+
+  &::before { top: -0.4rem; left: -0.4rem; }
+  &::after { top: -0.4rem; right: -0.4rem; }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: 1rem 0.75rem;
+  padding: 0.75rem;
+}
+
+.gear-entry {
+  display: flex;
+  gap: 0.5rem;
+  pointer-events: none;
+
+  & .gear-img-container {
+    min-width: 6rem;
+    min-height: 6rem;
+    max-width: 6rem;
+    max-height: 6rem;
+    box-sizing: border-box;
+    border: solid 0.125rem rgb(21, 81, 151);
+    border-radius: 4px;
+    outline: rgb(21, 81, 151) solid 0.125rem;
+    outline-offset: calc(-0.125rem * 3);
+    padding: calc(0.125rem * 2);
+    background-color: rgb(4, 16, 30);
+    background-image: radial-gradient(
+      rgb(10, 104, 168) 0%,
+      rgba(10, 104, 168, 0.987) 4.86%,
+      rgba(10, 104, 168, 0.951) 9.3%,
+      rgba(10, 104, 168, 0.896) 13.5%,
+      rgba(10, 104, 168, 0.825) 17.4%,
+      rgba(10, 104, 168, 0.741) 21.18%,
+      rgba(10, 104, 168, 0.648) 24.72%,
+      rgba(10, 104, 168, 0.55) 28.26%,
+      rgba(10, 104, 168, 0.45) 31.74%,
+      rgba(10, 104, 168, 0.352) 35.28%,
+      rgba(10, 104, 168, 0.259) 38.82%,
+      rgba(10, 104, 168, 0.175) 42.6%,
+      rgba(10, 104, 168, 0.104) 46.5%,
+      rgba(10, 104, 168, 0.049) 50.7%,
+      rgba(10, 104, 168, 0.013) 55.14%,
+      rgba(10, 104, 168, 0) 60%
+    );
+
+    & div {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+
+      & img {
+        width: 100%;
+        height: 100%;
+        transform: scale(2) translate(0, 23%);
+
+        &.red-xiii { transform: scale(2) translate(8%, -5%); }
+      }
+    }
+  }
+
+  & .gear-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    line-height: 1em;
+    padding: 0.375rem 0;
+    font-size: 1.1em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    & .reinforcement-abilities {
+      display: flex;
+      flex-direction: column;
+      gap: 0.125rem;
+
+      & .reinforcement-ability {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.9em;
+
+        & img {
+          width: 1.5rem;
+          height: 1.5rem;
+          background-color: rgb(24, 45, 57);
+          border: 2px solid rgb(16, 138, 156);
+          box-sizing: border-box;
+        }
+      }
+    }
+  }
+}

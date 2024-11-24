@@ -558,4 +558,32 @@ export const reinforcementAbilitiesData = {
       flat: [15, 30, 45, 60]
     }
   }),
+  53303: new ReinforcementAbility({
+    id: 53303,
+    name: 'Physical & Magic Ward',
+    effect: 'Phys. & Mag. Defence +{{percent}}%',
+    reqPts: [10],
+    levelValues: {
+      percent: [15]
+    }
+  }),
+  53701: new ReinforcementAbility({
+    id: 53701,
+    name: 'Eerie Mask',
+    effect: 'HP +{{hpPercent}}%\nMag. Defense +{{magDefensePercent}}%',
+    reqPts: [10],
+    levelValues: {
+      hpPercent: [5],
+      magDefensePercent: [15]
+    }
+  }),
+  11901: new ReinforcementAbility({
+    id: 11901,
+    name: 'Boost DEF (All Allies)',
+    effect: 'All Allies\' Phys. Defense +{{percent}}%\nAll Allies\' Mag. Defense +{{percent}}%',
+    reqPts: [1, 5],
+    levelValues: {
+      percent: [3, 5]
+    }
+  })
 }

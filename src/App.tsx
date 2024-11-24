@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useRoutes } from 'react-router-dom';
 import { AppBar } from './components/AppBar.tsx';
 import { AppSidebar } from './components/AppSidebar.tsx';
+import { GearPage } from './pages/GearPage.tsx';
 import { Home } from './pages/HomePage.tsx';
 import { MateriaPage } from './pages/MateriaPage.tsx';
 import { WeaponsPage } from './pages/WeaponsPage.tsx';
@@ -12,7 +13,8 @@ function App() {
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState<boolean>(true);
   const routes = useRoutes([
     { path: '/', element: <Home collapseSidebar={collapseSidebar} /> },
-    { path: 'weapons', element: <WeaponsPage isViewportNarrow={isViewportNarrow} /> },
+    { path: '/weapons', element: <WeaponsPage isViewportNarrow={isViewportNarrow} /> },
+    { path: '/gear', element: <GearPage /> },
     { path: '/materia', element: <MateriaPage /> }
   ]);
 
