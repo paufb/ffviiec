@@ -11,7 +11,7 @@ export function WeaponIcon({ weapon, className, lazy = false }: WeaponIconProps)
   return (
     <img
       className={className}
-      style={{ transform: 'scale(1.175)' }}
+      style={{ transform: 'scale(1.12)' }}
       loading={lazy ? 'lazy' : undefined}
       src={url}
       alt=""

@@ -42,12 +42,11 @@
     width: 6rem;
     height: 6rem;
     box-sizing: border-box;
-    border: solid 0.125rem rgb(21, 81, 151);
+    border: 0.125rem solid rgb(21, 81, 151);
     border-radius: 4px;
-    outline: rgb(21, 81, 151) solid calc(0.3rem / 2.5);
-    outline-width: 0.125rem;
+    outline: 0.125rem solid rgb(21, 81, 151);
     outline-offset: calc(-0.125rem * 3);
-    padding: calc(0.125rem * 3);
+    padding: calc(0.125rem * 2);
     background-color: rgb(4, 16, 30);
     background-image: radial-gradient(
       rgb(10, 104, 168) 0%,
