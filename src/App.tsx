@@ -8,8 +8,8 @@ import { WeaponsPage } from './pages/WeaponsPage.tsx';
 import './App.css';
 
 function App() {
-  const [isViewportNarrow, setIsViewportNarrow] = useState(getIsViewportNarrow());
-  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(getIsViewportNarrow());
+  const [isViewportNarrow, setIsViewportNarrow] = useState<boolean>(getIsViewportNarrow());
+  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState<boolean>(true);
   const routes = useRoutes([
     { path: '/', element: <Home collapseSidebar={collapseSidebar} /> },
     { path: 'weapons', element: <WeaponsPage isViewportNarrow={isViewportNarrow} /> },
@@ -20,8 +20,8 @@ function App() {
     function updateLayout() {
       setIsViewportNarrow(getIsViewportNarrow());
     }
-    window.addEventListener("resize", updateLayout);
-    return () => window.removeEventListener("resize", updateLayout);
+    window.addEventListener('resize', updateLayout);
+    return () => window.removeEventListener('resize', updateLayout);
   }, []);
 
   function getIsViewportNarrow() {
