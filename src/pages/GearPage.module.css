@@ -32,12 +32,16 @@
   grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   gap: 1rem 0.75rem;
   padding: 0.75rem;
+  overflow: hidden;
 }
 
 .gear-entry {
   display: flex;
   gap: 0.5rem;
-  pointer-events: none;
+  
+  & img {
+    pointer-events: none;
+  }
 
   & .gear-img-container {
     min-width: 6rem;

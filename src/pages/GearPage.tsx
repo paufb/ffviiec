@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { Gear } from '../models/Gear.ts';
-import styles from './GearPage.module.css';
-import pageAnimations from '../pages/page-animations.module.css';
 import { GearIcon } from '../components/GearIcon.tsx';
 import { ReinforcementAbilityIcon } from '../components/ReinforcementAbilityIcon.tsx';
+import styles from './GearPage.module.css';
+import pageAnimations from '../pages/page-animations.module.css';
 
 export function GearPage() {
   const [gear, setGear] = useState<{ [key: string]: Gear }>({});
@@ -20,7 +20,7 @@ export function GearPage() {
             <div className={styles['gear-entry']} key={gear.name}>
               <div className={styles['gear-img-container']}>
                 <div>
-                  <GearIcon gear={gear} className={gear.character.name === 'Red XIII' ? styles['red-xiii'] : ''} />
+                  <GearIcon gear={gear} lazy className={gear.character.name === 'Red XIII' ? styles['red-xiii'] : ''} />
                 </div>
               </div>
               <div className={styles['gear-info']}>
@@ -28,7 +28,7 @@ export function GearPage() {
                 <div className={styles['reinforcement-abilities']}>
                   {gear.reinforcementAbilities.map((reinforcementAbility, index) => (
                     <div className={styles['reinforcement-ability']} key={index}>
-                      <ReinforcementAbilityIcon reinforcementAbility={reinforcementAbility} />
+                      <ReinforcementAbilityIcon reinforcementAbility={reinforcementAbility} lazy />
                       {reinforcementAbility.name}
                     </div>
                   ))}
