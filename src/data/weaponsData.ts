@@ -7797,6 +7797,32 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[10401]
     ]
   }),
+  "Eligor Rifle": new Weapon({
+    id: null,
+    name: 'Eligor Rifle',
+    character: charactersData[52],
+    element: 'Ice',
+    commandAbility: new CommandAbility({
+      id: null,
+      name: 'Blizzara Surge A',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Mag. Ice', 'All Enemies', null)}`,
+      valuesByOverboostLevel: {
+        damage: ['210', '240', '240', '240', '240', '240', '280', '280', '280', '280', '290']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 194,
+      mAtk: 222,
+      heal: 174
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[20301]
+    ]
+  }),
   "Type-90 Longsword": new Weapon({
     id: 56001,
     name: 'Type-90 Longsword',
