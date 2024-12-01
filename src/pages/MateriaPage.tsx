@@ -23,7 +23,9 @@ export function MateriaPage() {
         <div className={styles['materia-grid']}>
           {Object.entries(materia).map(([_, materia]) => (
             <div className={styles['materia-entry']} key={materia.id}>
-              <MateriaIcon materia={materia} className={styles['materia-img']} />
+              <div className={styles['materia-img-container']}>
+                <MateriaIcon materia={materia} />
+              </div>
               <div className={styles['materia-info']}>
                 {materia.name}
                 <ATBBarCost cost={materia.commandAbility.atbCost} />
