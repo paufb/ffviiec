@@ -423,7 +423,7 @@ export function WeaponsPage({ isViewportNarrow }: WeaponsPageProps) {
                   <WeaponIcon weapon={weapon} lazy={true} />
                 </div>
                 <div className={styles['grid-entry-body']}>
-                  {weapon.name}
+                  <span>{weapon.name}</span>
                   <div className={styles['grid-entry-body-row']}>
                     <div className={styles['reinforcement-abilities']}>
                       <div className={styles['reinforcement-ability']}>

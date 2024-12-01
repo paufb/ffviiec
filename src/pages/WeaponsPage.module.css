@@ -575,6 +575,12 @@
     font-size: 1.1em;
     overflow: hidden;
 
+    & span {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
     & .grid-entry-body-row {
       display: flex;
       justify-content: space-between;
@@ -601,13 +607,6 @@
             background-color: rgb(24, 45, 57);
             border: 2px solid rgb(16, 138, 156);
             box-sizing: border-box;
-          }
-
-          & span {
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            width: 100%;
           }
         }
       }

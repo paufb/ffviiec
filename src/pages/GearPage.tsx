@@ -24,7 +24,7 @@ export function GearPage() {
                 </div>
               </div>
               <div className={styles['gear-info']}>
-                {gear.name}
+                <span>{gear.name}</span>
                 <div className={styles['reinforcement-abilities']}>
                   {gear.reinforcementAbilities.map((reinforcementAbility, index) => (
                     <div className={styles['reinforcement-ability']} key={index}>
