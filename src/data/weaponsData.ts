@@ -649,12 +649,12 @@ export const weaponsData: Weapons = {
     ]
   }),
   "Locke's Sword": new Weapon({
-    id: null,
+    id: 1038,
     name: 'Locke\'s Sword',
     character: charactersData[1],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
-      id: null,
+      id: 10103801,
       name: 'Slashing Rush',
       atbCost: 4,
       sigil: null,
@@ -1245,13 +1245,13 @@ export const weaponsData: Weapons = {
       sigil: null,
       description: `${increase('MDEF', undefined, 'All Allies', null, undefined, undefined, 'High')}\nAlso, ${conditionHP('Self', '70', 'more')}, ${increase('MATK', undefined, 'All Allies', null, undefined, undefined, 'High')}\n${heal(undefined, 'Mag.', 'All Allies')}`,
       valuesByOverboostLevel: {
-        mDefIncreasePot: ['Mid', '', '', '', '', '', 'High', 'High', 'High', 'High', 'High'],
-        mDefIncreaseDur: ['12', '', '', '', '', '', '16', '16', '16', '16', '20'],
-        mDefIncreaseExt: ['4', '', '', '', '', '', '5', '5', '5', '5', '6'],
-        mAtkIncreasePot: ['Mid', '', '', '', '', '', 'High', 'High', 'High', 'High', 'High'],
-        mAtkIncreaseDur: ['12', '', '', '', '', '', '16', '16', '16', '16', '20'],
-        mAtkIncreaseExt: ['4', '', '', '', '', '', '5', '5', '5', '5', '6'],
-        heal: ['5', '', '', '', '', '', '7', '7', '7', '7', '7']
+        mDefIncreasePot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        mDefIncreaseDur: ['12', '16', '16', '16', '16', '16', '16', '16', '16', '16', '20'],
+        mDefIncreaseExt: ['4', '5', '5', '5', '5', '5', '5', '5', '5', '5', '6'],
+        mAtkIncreasePot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        mAtkIncreaseDur: ['12', '16', '16', '16', '16', '16', '16', '16', '16', '16', '20'],
+        mAtkIncreaseExt: ['4', '5', '5', '5', '5', '5', '5', '5', '5', '5', '6'],
+        heal: ['5', '6', '6', '6', '6', '6', '7', '7', '7', '7', '7']
       }
     }),
     maxRarityLevel: 5,
@@ -3175,13 +3175,13 @@ export const weaponsData: Weapons = {
       sigil: 'rhombus',
       description: `${damage(undefined, 'Phys. Non-elem.', 'Single Enemy', 10)}\nAlso, ${decrease('Wind Resist.', undefined, 'Single Enemy', null, undefined, undefined, 'High')}\nWhen [Rng.: Self]'s HP is 50% or more, ${decrease('Water Resist.', undefined, 'Single Enemy', null, undefined, undefined, 'High')}`,
       valuesByOverboostLevel: {
-        damage: ['200', '', '', '', '', '', '280', '280', '280', '280', '320'],
-        windResistDecreasePot: ['Mid', '', '', '', '', '', 'High', 'High', 'High', 'High', 'High'],
-        windResistDecreaseDur: ['16', '', '', '', '', '', '20', '20', '20', '20', '24'],
-        windResistDecreaseExt: ['5', '', '', '', '', '', '6', '6', '6', '6', '8'],
-        waterResistDecreasePot: ['Mid', '', '', '', '', '', 'High', 'High', 'High', 'High', 'High'],
-        waterResistDecreaseDur: ['16', '', '', '', '', '', '20', '20', '20', '20', '24'],
-        waterResistDecreaseExt: ['5', '', '', '', '', '', '6', '6', '6', '6', '8']
+        damage: ['200', '230', '230', '230', '230', '230', '280', '280', '280', '280', '320'],
+        windResistDecreasePot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        windResistDecreaseDur: ['16', '18', '18', '18', '18', '18', '20', '20', '20', '20', '24'],
+        windResistDecreaseExt: ['5', '6', '6', '6', '6', '6', '6', '6', '6', '6', '8'],
+        waterResistDecreasePot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        waterResistDecreaseDur: ['16', '18', '18', '18', '18', '18', '20', '20', '20', '20', '24'],
+        waterResistDecreaseExt: ['5', '6', '6', '6', '6', '6', '6', '6', '6', '6', '8']
       }
     }),
     maxRarityLevel: 5,
@@ -3256,10 +3256,10 @@ export const weaponsData: Weapons = {
       sigil: null,
       description: `${heal(undefined, 'Mag.', 'All Allies')}\nAlso, ${increase('MDEF', 'Mid', 'All Allies', null, undefined, undefined, undefined)}`,
       valuesByOverboostLevel: {
-        heal: ['42', '', '', '', '', '', '54', '54', '54', '54', '59'],
-        mDefIncreaseDur: ['10', '', '', '', '', '', '12', '14', '14', '14', '14'],
-        mDefIncreaseExt: ['3', '', '', '', '', '', '4', '4', '4', '4', '4'],
-        mDefIncreaseMaxPot: ['Mid', '', '', '', '', '', 'High', 'High', 'High', 'High', 'High']
+        heal: ['42', '50', '50', '50', '50', '50', '54', '54', '54', '54', '59'],
+        mDefIncreaseDur: ['10', '12', '12', '12', '12', '12', '12', '14', '14', '14', '14'],
+        mDefIncreaseExt: ['3', '4', '4', '4', '4', '4', '4', '4', '4', '4', '4'],
+        mDefIncreaseMaxPot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High']
       }
     }),
     maxRarityLevel: 5,
@@ -3274,7 +3274,7 @@ export const weaponsData: Weapons = {
     ]
   }),
   "Kefka's Collar": new Weapon({
-    id: null,
+    id: 5037,
     name: 'Kefka\'s Collar',
     character: charactersData[5],
     element: 'Lightning',
@@ -3992,9 +3992,9 @@ export const weaponsData: Weapons = {
       sigil: null,
       description: `${damage(undefined, 'Phys. Non-elem.', 'Single Enemy', 20)}\nAlso, ${decrease('PDEF', 'Low', 'Single Enemy', null, undefined, undefined, 'Low')}\nWhen hitting critical, ${decrease('PDEF', 'High', 'Affected Targets', null, undefined, undefined, 'High')}`,
       valuesByOverboostLevel: {
-        damage: ['320', '', '', '', '', '', '450', '450', '450', '450', '510'],
-        pDefDecreaseDur: ['20', '', '', '', '', '', '26', '26', '26', '26', '30'],
-        pDefDecreaseExt: ['6', '', '', '', '', '', '8', '8', '8', '8', '10']
+        damage: ['320', '370', '370', '370', '370', '370', '450', '450', '450', '450', '510'],
+        pDefDecreaseDur: ['20', '22', '22', '22', '22', '22', '26', '26', '26', '26', '30'],
+        pDefDecreaseExt: ['6', '7', '7', '7', '7', '7', '8', '8', '8', '8', '10']
       }
     }),
     maxRarityLevel: 5,
@@ -4861,7 +4861,7 @@ export const weaponsData: Weapons = {
     ]
   }),
   "Eligor Gun": new Weapon({
-    id: null,
+    id: 8021,
     name: 'Eligor Gun',
     character: charactersData[8],
     element: 'Ice',
@@ -5481,6 +5481,32 @@ export const weaponsData: Weapons = {
     reinforcementAbilities: [
       reinforcementAbilitiesData[51301],
       reinforcementAbilitiesData[10501]
+    ]
+  }),
+  "Buster Sword Origin": new Weapon({
+    id: 20002,
+    name: 'Buster Sword Origin',
+    character: charactersData[20],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: 12000201,
+      name: 'High Braver',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Phys. Non-elem.', 'Single Enemy', 10)}`,
+      valuesByOverboostLevel: {
+        damage: ['480', '580', '580', '580', '580', '580', '710', '710', '710', '710', '860']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 254,
+      mAtk: 207,
+      heal: 189
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10401],
+      reinforcementAbilitiesData[10101]
     ]
   }),
   "Nameless": new Weapon({
@@ -6693,7 +6719,7 @@ export const weaponsData: Weapons = {
       sigil: null,
       description: `${damage(undefined, 'Phys. Non-elem.', 'Single Enemy', 10)}`,
       valuesByOverboostLevel: {
-        damage: ['480', '', '', '', '', '', '750', '750', '750', '750', '900']
+        damage: ['480', '580', '580', '580', '580', '580', '750', '750', '750', '750', '900']
       }
     }),
     maxRarityLevel: 5,
@@ -6719,7 +6745,7 @@ export const weaponsData: Weapons = {
       sigil: null,
       description: `${damage(undefined, 'Mag. Water', 'All Enemies', null)}`,
       valuesByOverboostLevel: {
-        damage: ['290', '', '', '', '', '', '450', '450', '450', '450', '540']
+        damage: ['290', '350', '350', '350', '350', '350', '450', '450', '450', '450', '540']
       }
     }),
     maxRarityLevel: 5,
@@ -7053,7 +7079,7 @@ export const weaponsData: Weapons = {
       sigil: 'rhombus',
       description: `${damage(undefined, 'Mag. Non-elem.', 'Single Enemy', 10)}`,
       valuesByOverboostLevel: {
-        damage: ['320', '', '', '', '', '', '430', '430', '430', '430', '450']
+        damage: ['320', '370', '370', '370', '370', '370', '430', '430', '430', '430', '450']
       }
     }),
     maxRarityLevel: 5,
@@ -7798,7 +7824,7 @@ export const weaponsData: Weapons = {
     ]
   }),
   "Eligor Rifle": new Weapon({
-    id: null,
+    id: 52027,
     name: 'Eligor Rifle',
     character: charactersData[52],
     element: 'Ice',
@@ -7957,7 +7983,7 @@ export const weaponsData: Weapons = {
       sigil: null,
       description: `${damage(undefined, 'Mag. Lightning', 'Single Enemy', null)}`,
       valuesByOverboostLevel: {
-        damage: ['500', '', '', '', '', '', '740', '740', '740', '740', '900']
+        damage: ['500', '600', '600', '600', '600', '600', '740', '740', '740', '740', '900']
       }
     }),
     maxRarityLevel: 5,
