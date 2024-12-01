@@ -104,7 +104,7 @@ export const gearData = {
     reinforcementAbilitiesPoints: [5, 10]
   }),
   "Locke's Outfit": new Gear({
-    id: null,
+    id: 1013,
     name: 'Locke\'s Outfit',
     character: charactersData[1],
     reinforcementAbilities: [
