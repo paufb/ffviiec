@@ -29,7 +29,7 @@ export function GearPage() {
                   {gear.reinforcementAbilities.map((reinforcementAbility, index) => (
                     <div className={styles['reinforcement-ability']} key={index}>
                       <ReinforcementAbilityIcon reinforcementAbility={reinforcementAbility} lazy />
-                      {reinforcementAbility.name}
+                      <span>{reinforcementAbility.name}</span>
                     </div>
                   ))}
                 </div>
