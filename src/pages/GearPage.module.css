@@ -38,6 +38,21 @@
 .gear-entry {
   display: flex;
   gap: 0.5rem;
+
+  &:hover {
+    background-color: rgba(12, 48, 90, 0.5);
+    border-radius: 4px;
+    cursor: pointer;
+
+    & .gear-img-container {
+      border-color: #2164ab;
+      outline-color: #2164ab;
+    }
+  }
+
+  &:active {
+    transform: scale(0.975);
+  }
   
   & img {
     pointer-events: none;
@@ -94,7 +109,6 @@
     flex-direction: column;
     justify-content: space-between;
     color: white;
-    line-height: 1em;
     padding: 0.375rem 0;
     font-size: 1.1em;
     overflow: hidden;
