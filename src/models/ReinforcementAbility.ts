@@ -1,5 +1,5 @@
 interface ReinforcementAbilityProps {
-  id: number;
+  id: number | null;
   name: string;
   effect: string;
   reqPts: number[];
@@ -7,27 +7,19 @@ interface ReinforcementAbilityProps {
 }
 
 export class ReinforcementAbility {
-  #id: number;
-  #name: string;
-  #effect: string;
-  #reqPts: number[];
-  #levelValues: { [key: string]: number[] };
+  #props: ReinforcementAbilityProps;
 
-  constructor({ id, name, effect, reqPts, levelValues }: ReinforcementAbilityProps) {
-    this.#id = id;
-    this.#name = name;
-    this.#effect = effect;
-    this.#reqPts = reqPts;
-    this.#levelValues = levelValues;
+  constructor(props: ReinforcementAbilityProps) {
+    this.#props = props;
   }
 
-  get id() { return this.#id; }
-  get name() { return this.#name; }
-  get effect() { return this.#effect; }
-  get reqPts() { return this.#reqPts; }
-  get levelValues() { return this.#levelValues; }
+  get id() { return this.#props.id; }
+  get name() { return this.#props.name; }
+  get effect() { return this.#props.effect; }
+  get reqPts() { return this.#props.reqPts; }
+  get levelValues() { return this.#props.levelValues; }
 
   getEffect(level: number) {
-    return this.#effect.replace(/\{\{(\w+)\}\}/g, (_, key) => String(this.#levelValues[level - 1][key]));
+    return this.#props.effect.replace(/\{\{(\w+)\}\}/g, (_, key) => String(this.#props.levelValues[level - 1][key]));
   }
 }

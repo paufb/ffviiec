@@ -1,19 +1,17 @@
 import { CharacterNameType } from '../types.ts';
 
 interface CharacterProps {
-  id: number;
+  id: number | null;
   name: CharacterNameType;
 }
 
 export class Character {
-  #id: number;
-  #name: CharacterNameType;
+  #props: CharacterProps;
 
-  constructor({ id, name }: CharacterProps) {
-    this.#id = id;
-    this.#name = name;
+  constructor(props: CharacterProps) {
+    this.#props = props;
   }
 
-  get id() { return this.#id; }
-  get name() { return this.#name; }
+  get id() { return this.#props.id; }
+  get name() { return this.#props.name; }
 }
