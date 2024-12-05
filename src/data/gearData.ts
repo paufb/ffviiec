@@ -543,6 +543,16 @@ export const gearData = {
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
+  "Holiday Cheer Reindeer": new Gear({
+    id: null,
+    name: 'Holiday Cheer Reindeer',
+    character: charactersData[6],
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[20701],
+      reinforcementAbilitiesData[20703]
+    ],
+    reinforcementAbilitiesPoints: [15, 10]
+  }),
   "Self-Professed Fortune-Teller": new Gear({
     id: 7001,
     name: 'Self-Professed Fortune-Teller',
@@ -991,7 +1001,7 @@ export const gearData = {
       reinforcementAbilitiesData[10301],
       reinforcementAbilitiesData[20503]
     ],
-    reinforcementAbilitiesPoints: [5, 10]
+    reinforcementAbilitiesPoints: [10, 10]
   }),
   "Gothic Bunny": new Gear({
     id: 52008,
