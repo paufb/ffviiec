@@ -585,5 +585,14 @@ export const reinforcementAbilitiesData = {
     levelValues: {
       percent: [3, 5]
     }
-  })
+  }),
+  "ATB Boost Arcanum": new ReinforcementAbility({
+    id: null,
+    name: 'ATB Boost Arcanum',
+    effect: 'ATB +{{flat}} when battle begins',
+    reqPts: [1, 5, 15, 25],
+    levelValues: {
+      flat: [1, 2, 3, 4]
+    }
+  }),
 }

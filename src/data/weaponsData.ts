@@ -3843,6 +3843,59 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData[20301]
     ]
   }),
+  "Holiday Bell": new Weapon({
+    id: null,
+    name: 'Holiday Bell',
+    character: charactersData[6],
+    element: 'Wind',
+    commandAbility: new CommandAbility({
+      id: null,
+      name: 'Song of Wind',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Mag. Wind', 'Single Enemy', null)}\nAlso, ${decrease('Wind Resist.', 'Low', 'Single Enemy', null, undefined, undefined, undefined)}\n${decrease('MDEF', 'Low', 'Single Enemy', null, undefined, undefined, undefined)}`,
+      valuesByOverboostLevel: {
+        damage: ['390', '450', '450', '450', '450', '450', '550', '550', '550', '550', '620'],
+        windResistDecreaseDur: ['20', '22', '22', '22', '22', '22', '25', '25', '25', '25', '30'],
+        windResistDecreaseExt: ['6', '7', '7', '7', '7', '7', '8', '8', '8', '8', '10'],
+        windResistDecreaseMaxPot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        mDefDecreaseDur: ['20', '22', '22', '22', '22', '22', '25', '25', '25', '25', '30'],
+        mDefDecreaseExt: ['6', '7', '7', '7', '7', '7', '8', '8', '8', '8', '10'],
+        mDefDecreaseMaxPot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 197,
+      mAtk: 291,
+      heal: 167
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10301],
+      reinforcementAbilitiesData[20701]
+    ]
+  }),
+  "Conformer": new UltimateWeapon({
+    id: null,
+    name: 'Conformer',
+    character: charactersData[6],
+    element: 'Non-elemental',
+    commandAbility: new UltimateCommandAbility({
+      id: null,
+      name: 'Ferocity',
+      sigil: null,
+      description: `${damage('2,000', 'Phys./Mag. Non-elem.', 'Single Enemy', null)}\nAlso, ${decrease('PDEF', 'High', 'Single Enemy', null, 30, 30, 'High')}\n${decrease('MDEF', 'High', 'Single Enemy', null, 30, 30, 'High')}\n${increaseATBGauge(7, 'Self')}\n${chargeAndUses(60, 20, 2)}`
+    }),
+    maxRarityStats: {
+      pAtk: 198,
+      mAtk: 198,
+      heal: 129
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[51301],
+      reinforcementAbilitiesData["ATB Boost Arcanum"]
+    ]
+  }),
   "Yellow Megaphone": new Weapon({
     id: 7001,
     name: 'Yellow Megaphone',
@@ -6167,6 +6220,32 @@ export const weaponsData: Weapons = {
     reinforcementAbilities: [
       reinforcementAbilitiesData[10301],
       reinforcementAbilitiesData[20601]
+    ]
+  }),
+  "Wintercrest Blade": new Weapon({
+    id: null,
+    name: 'Wintercrest Blade',
+    character: charactersData[49],
+    element: 'Wind',
+    commandAbility: new CommandAbility({
+      id: null,
+      name: 'Aerora Surge A',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Mag. Wind', 'All Enemies', null)}`,
+      valuesByOverboostLevel: {
+        damage: ['210', '240', '240', '240', '240', '240', '280', '280', '280', '280', '290']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 207,
+      mAtk: 222,
+      heal: 164
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData[10101],
+      reinforcementAbilitiesData[20701]
     ]
   }),
   "Personal Style": new Weapon({
