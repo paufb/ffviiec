@@ -418,8 +418,8 @@ export function WeaponsPage({ isViewportNarrow }: WeaponsPageProps) {
         {layout === 'grid' && (
           <div className={styles['weapons-container']}>
             {Object.entries(filteredWeapons).map(([_, weapon]) => (
-              <div key={weapon.name} className={styles['grid-entry']} onClick={() => openWeaponModal(weapon)}>
-                <div className={`${styles['weapon-img-container']} ${weapon instanceof UltimateWeapon ? styles['weapon-img-container--ultimate'] : ''}`}>
+              <div key={weapon.name} className={styles['grid-entry']}>
+                <div className={`${styles['weapon-img-container']} ${weapon instanceof UltimateWeapon ? styles['weapon-img-container--ultimate'] : ''}`} onClick={() => openWeaponModal(weapon)}>
                   <WeaponIcon weapon={weapon} lazy={true} />
                 </div>
                 <div className={styles['grid-entry-body']}>
