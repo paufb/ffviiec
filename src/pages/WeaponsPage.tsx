@@ -29,7 +29,7 @@ export function WeaponsPage({ isViewportNarrow }: WeaponsPageProps) {
   const [characters, setCharacters] = useState<Characters>({});
   const [filteredWeapons, setFilteredWeapons] = useState<Record<string, Weapon>>({});
   const [nameQuery, setNameQuery] = useState('');
-  const [selectedCharacterIds, setSelectedCharacterIds] = useState<number[]>([]);
+  const [selectedCharactersNames, setSelectedCharactersNames] = useState<string[]>([]);
   const [selectedElements, setSelectedElements] = useState<(keyof Elements)[]>([]);
   const [selectedSigils, setSelectedSigils] = useState<(SigilType)[]>([]);
   const [selectedWeaponLevel, setSelectedWeaponLevel] = useState(120);
@@ -59,12 +59,12 @@ export function WeaponsPage({ isViewportNarrow }: WeaponsPageProps) {
 
   useEffect(() => {
     const lowerCaseNameQuery = nameQuery.toLowerCase();
-    const hasSelectedCharacters = selectedCharacterIds.length > 0;
+    const hasSelectedCharacters = selectedCharactersNames.length > 0;
     const hasSelectedElements = selectedElements.length > 0;
     const hasSelectedSigils = selectedSigils.length > 0;
     let filteredEntries = Object.entries(weapons).filter(([_, weapon]) =>
       weapon.name.toLowerCase().includes(lowerCaseNameQuery)
-      && (!hasSelectedCharacters || selectedCharacterIds.includes(weapon.character.id))
+      && (!hasSelectedCharacters || selectedCharactersNames.includes(weapon.character.name))
       && (!hasSelectedElements || selectedElements.includes(weapon.element))
       && (!hasSelectedSigils || selectedSigils.includes(weapon.commandAbility.sigil))
     );
@@ -84,7 +84,7 @@ export function WeaponsPage({ isViewportNarrow }: WeaponsPageProps) {
       });
     }
     setFilteredWeapons(Object.fromEntries(filteredEntries));
-  }, [weapons, nameQuery, selectedCharacterIds, selectedElements, selectedSigils, sortConfig]);
+  }, [weapons, nameQuery, selectedCharactersNames, selectedElements, selectedSigils, sortConfig]);
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -117,11 +117,11 @@ export function WeaponsPage({ isViewportNarrow }: WeaponsPageProps) {
   }
 
   function handleSelectedCharactersChange(event: React.ChangeEvent<HTMLInputElement>) {
-    const characterId = parseInt(event.target.value);
-    setSelectedCharacterIds(prevState =>
+    const characterName = event.target.value;
+    setSelectedCharactersNames(prevState =>
       event.target.checked
-        ? [...prevState, characterId]
-        : prevState.filter(cId => cId !== characterId)
+        ? [...prevState, characterName]
+        : prevState.filter(cName => cName !== characterName)
     );
   }
 
@@ -234,16 +234,16 @@ export function WeaponsPage({ isViewportNarrow }: WeaponsPageProps) {
               className={`${styles['dropdown-button']} ${styles['downscale-on-click']}`}
               onClick={() => setIsDropdownVisible(prevState => ({...prevState, characters: !prevState.characters}))}
             >
-              <img src={new URL(`../assets/ui/filter_${selectedCharacterIds.length ? 'on' : 'off'}.png`, import.meta.url).href} alt="" />
+              <img src={new URL(`../assets/ui/filter_${selectedCharactersNames.length ? 'on' : 'off'}.png`, import.meta.url).href} alt="" />
               Characters
               <span className="arrow-down" />
             </button>
             <div ref={dropdownRefs.characters.menu} className={`${styles['dropdown']} ${isDropdownVisible.characters ? styles['dropdown--visible'] : ''}`}>
               {Object.entries(characters).map(([_, character]) => (
-                <label className={`${styles['togglable-button']} ${styles['togglable-button--character']} ${selectedCharacterIds.includes(character.id) ? styles['togglable-button--toggled'] : ''} ${styles['downscale-on-click']}`} key={character.name}>
+                <label className={`${styles['togglable-button']} ${styles['togglable-button--character']} ${selectedCharactersNames.includes(character.name) ? styles['togglable-button--toggled'] : ''} ${styles['downscale-on-click']}`} key={character.name}>
                   <input
                     type="checkbox"
-                    value={character.id}
+                    value={character.name}
                     onChange={handleSelectedCharactersChange}
                     style={{ display: 'none' }}
                   />
