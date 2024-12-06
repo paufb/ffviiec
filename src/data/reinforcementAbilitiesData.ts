@@ -1,7 +1,7 @@
 import { ReinforcementAbility } from '../models/ReinforcementAbility.ts';
 
 export const reinforcementAbilitiesData = {
-  10101: new ReinforcementAbility({
+  "Boost HP": new ReinforcementAbility({
     id: 10101,
     name: 'Boost HP',
     effect: 'HP +{{flat}} / +{{percent}}%',
@@ -11,7 +11,7 @@ export const reinforcementAbilitiesData = {
       percent: [5, 15, 30, 45, 60, 70, 80, 90, 95, 100]
     }
   }),
-  10201: new ReinforcementAbility({
+  "Boost PATK": new ReinforcementAbility({
     id: 10201,
     name: 'Boost PATK',
     effect: 'Phys. Attack +{{flat}} / +{{percent}}%',
@@ -21,7 +21,7 @@ export const reinforcementAbilitiesData = {
       percent: [5, 10, 15, 20, 30, 40, 50]
     }
   }),
-  10301: new ReinforcementAbility({
+  "Boost MATK": new ReinforcementAbility({
     id: 10301,
     name: 'Boost MATK',
     effect: 'Mag. Attack +{{flat}} / +{{percent}}%',
@@ -31,7 +31,7 @@ export const reinforcementAbilitiesData = {
       percent: [5, 10, 15, 20, 30, 40, 50]
     }
   }),
-  10401: new ReinforcementAbility({
+  "Boost PDEF": new ReinforcementAbility({
     id: 10401,
     name: 'Boost PDEF',
     effect: 'Phys. Defense +{{percent}}%',
@@ -40,7 +40,7 @@ export const reinforcementAbilitiesData = {
       percent: [5, 15, 30, 45, 60, 70, 80]
     }
   }),
-  10501: new ReinforcementAbility({
+  "Boost MDEF": new ReinforcementAbility({
     id: 10501,
     name: 'Boost MDEF',
     effect: 'Mag. Defense +{{percent}}%',
@@ -49,7 +49,7 @@ export const reinforcementAbilitiesData = {
       percent: [5, 15, 30, 45, 60, 70, 80]
     }
   }),
-  10601: new ReinforcementAbility({
+  "Boost HEAL": new ReinforcementAbility({
     id: 10601,
     name: 'Boost HEAL',
     effect: 'Healing Pot. +{{flat}} / +{{percent}}%',
@@ -59,7 +59,7 @@ export const reinforcementAbilitiesData = {
       percent: [5, 15, 30, 45, 60, 70, 80, 90, 95, 100]
     }
   }),
-  10801: new ReinforcementAbility({
+  "Boost Crit. Pot.": new ReinforcementAbility({
     id: 10801,
     name: 'Boost Crit. Pot.',
     effect: 'Crit. Dmg. +{{percent}}%',
@@ -68,7 +68,7 @@ export const reinforcementAbilitiesData = {
       percent: [5, 20, 40, 60, 80, 100, 120]
     }
   }),
-  10803: new ReinforcementAbility({
+  "Critical Pot. Arcanum": new ReinforcementAbility({
     id: 10803,
     name: 'Critical Pot. Arcanum',
     effect: 'Crit. Dmg. +{{percent}}%',
@@ -77,7 +77,7 @@ export const reinforcementAbilitiesData = {
       percent: [50]
     }
   }),
-  11001: new ReinforcementAbility({
+  "Boost ATK": new ReinforcementAbility({
     id: 11001,
     name: 'Boost ATK',
     effect: 'Phys. Attack +{{flat}} / +{{percent}}%\nMag. Attack +{{flat}} / +{{percent}}%',
@@ -87,7 +87,7 @@ export const reinforcementAbilitiesData = {
       percent: [3, 5, 7, 10, 15, 20, 25]
     }
   }),
-  11201: new ReinforcementAbility({
+  "Boost PATK (All Allies)": new ReinforcementAbility({
     id: 11201,
     name: 'Boost PATK (All Allies)',
     effect: 'All Allies\' Phys. Attack +{{flat}} / +{{percent}}%',
@@ -97,7 +97,7 @@ export const reinforcementAbilitiesData = {
       percent: [5, 10, 14, 18, 22, 25, 28]
     }
   }),
-  11301: new ReinforcementAbility({
+  "Boost MATK (All Allies)": new ReinforcementAbility({
     id: 11301,
     name: 'Boost MATK (All Allies)',
     effect: 'All Allies\' Mag. Attack +{{flat}} / +{{percent}}%',
@@ -107,7 +107,7 @@ export const reinforcementAbilitiesData = {
       percent: [5, 10, 14, 18, 22, 25, 28]
     }
   }),
-  11401: new ReinforcementAbility({
+  "Boost PDEF (All Allies)": new ReinforcementAbility({
     id: 11401,
     name: 'Boost PDEF (All Allies)',
     effect: 'All Allies\' Phys. Defense +{{percent}}%',
@@ -116,7 +116,7 @@ export const reinforcementAbilitiesData = {
       percent: [5, 10, 20, 30, 40]
     }
   }),
-  11501: new ReinforcementAbility({
+  "Boost MDEF (All Allies)": new ReinforcementAbility({
     id: 11501,
     name: 'Boost MDEF (All Allies)',
     effect: 'All Allies\' Mag. Defense +{{percent}}%',
@@ -125,7 +125,7 @@ export const reinforcementAbilitiesData = {
       percent: [5, 10, 20, 30, 40]
     }
   }),
-  12001: new ReinforcementAbility({
+  "Boost ATK (All Allies)": new ReinforcementAbility({
     id: 12001,
     name: 'Boost ATK (All Allies)',
     effect: 'All Allies\' Phys. Attack +{{flat}} / +{{percent}}%\nAll Allies\' Mag. Attack +{{flat}} / +{{percent}}%',
@@ -135,7 +135,7 @@ export const reinforcementAbilitiesData = {
       percent: [3, 5]
     }
   }),
-  20201: new ReinforcementAbility({
+  "Boost Fire Pot.": new ReinforcementAbility({
     id: 20201,
     name: 'Boost Fire Pot.',
     effect: 'Fire Ability Dmg. +{{percent}}%',
@@ -144,7 +144,7 @@ export const reinforcementAbilitiesData = {
       percent: [6, 15, 25, 40, 55, 70, 85, 100, 110, 120]
     }
   }),
-  20202: new ReinforcementAbility({
+  "Fire Mastery": new ReinforcementAbility({
     id: 20202,
     name: 'Fire Mastery',
     effect: 'Fire Ability Dmg. +{{percent}}%',
@@ -153,7 +153,7 @@ export const reinforcementAbilitiesData = {
       percent: [20]
     }
   }),
-  20203: new ReinforcementAbility({
+  "Flameblade Arcanum": new ReinforcementAbility({
     id: 20203,
     name: 'Flameblade Arcanum',
     effect: 'Fire Ability Dmg. +{{percent}}%',
@@ -162,7 +162,7 @@ export const reinforcementAbilitiesData = {
       percent: [35]
     }
   }),
-  20301: new ReinforcementAbility({
+  "Boost Ice Pot.": new ReinforcementAbility({
     id: 20301,
     name: 'Boost Ice Pot.',
     effect: 'Ice Ability Dmg. +{{percent}}%',
@@ -171,7 +171,7 @@ export const reinforcementAbilitiesData = {
       percent: [6, 15, 25, 40, 55, 70, 85, 100, 110, 120]
     }
   }),
-  20302: new ReinforcementAbility({
+  "Ice Mastery": new ReinforcementAbility({
     id: 20302,
     name: 'Ice Mastery',
     effect: 'Ice Ability Dmg. +{{percent}}%',
@@ -180,7 +180,7 @@ export const reinforcementAbilitiesData = {
       percent: [20]
     }
   }),
-  20303: new ReinforcementAbility({
+  "Frostblade Arcanum": new ReinforcementAbility({
     id: 20303,
     name: 'Frostblade Arcanum',
     effect: 'Ice Ability Damage +{{percent}}%',
@@ -189,7 +189,7 @@ export const reinforcementAbilitiesData = {
       percent: [35]
     }
   }),
-  20401: new ReinforcementAbility({
+  "Boost Lightning Pot.": new ReinforcementAbility({
     id: 20401,
     name: 'Boost Lightning Pot.',
     effect: 'Lightning Ability Dmg. +{{percent}}%',
@@ -198,7 +198,7 @@ export const reinforcementAbilitiesData = {
       percent: [6, 15, 25, 40, 55, 70, 85, 100, 110, 120]
     }
   }),
-  20403: new ReinforcementAbility({
+  "Levinblade Arcanum": new ReinforcementAbility({
     id: 20403,
     name: 'Levinblade Arcanum',
     effect: 'Lightning Ability Dmg. +{{percent}}%',
@@ -207,7 +207,7 @@ export const reinforcementAbilitiesData = {
       percent: [35]
     }
   }),
-  20501: new ReinforcementAbility({
+  "Boost Earth Pot.": new ReinforcementAbility({
     id: 20501,
     name: 'Boost Earth Pot.',
     effect: 'Earth Ability Dmg. +{{percent}}%',
@@ -216,7 +216,7 @@ export const reinforcementAbilitiesData = {
       percent: [6, 15, 25, 40, 55, 70, 85, 100, 110, 120]
     }
   }),
-  20503: new ReinforcementAbility({
+  "Earthblade Arcanum": new ReinforcementAbility({
     id: 20503,
     name: 'Earthblade Arcanum',
     effect: 'Earth Ability Dmg. +{{percent}}%',
@@ -225,7 +225,7 @@ export const reinforcementAbilitiesData = {
       percent: [35]
     }
   }),
-  20601: new ReinforcementAbility({
+  "Boost Water Pot.": new ReinforcementAbility({
     id: 20601,
     name: 'Boost Water Pot.',
     effect: 'Water Ability Dmg. +{{percent}}%',
@@ -234,7 +234,7 @@ export const reinforcementAbilitiesData = {
       percent: [6, 15, 25, 40, 55, 70, 85, 100, 110, 120]
     }
   }),
-  20602: new ReinforcementAbility({
+  "Water Mastery": new ReinforcementAbility({
     id: 20602,
     name: 'Water Mastery',
     effect: 'Water Ability Dmg. +{{percent}}%',
@@ -243,7 +243,7 @@ export const reinforcementAbilitiesData = {
       percent: [20]
     }
   }),
-  20603: new ReinforcementAbility({
+  "Waterblade Arcanum": new ReinforcementAbility({
     id: 20603,
     name: 'Waterblade Arcanum',
     effect: 'Water Ability Dmg. +{{percent}}%',
@@ -252,7 +252,7 @@ export const reinforcementAbilitiesData = {
       percent: [35]
     }
   }),
-  20701: new ReinforcementAbility({
+  "Boost Wind Pot.": new ReinforcementAbility({
     id: 20701,
     name: 'Boost Wind Pot.',
     effect: 'Wind Ability Dmg. +{{percent}}%',
@@ -261,7 +261,7 @@ export const reinforcementAbilitiesData = {
       percent: [6, 15, 25, 40, 55, 70, 85, 100, 110, 120]
     }
   }),
-  20702: new ReinforcementAbility({
+  "Wind Mastery": new ReinforcementAbility({
     id: 20702,
     name: 'Wind Mastery',
     effect: 'Wind Ability Dmg. +{{percent}}%',
@@ -270,7 +270,7 @@ export const reinforcementAbilitiesData = {
       percent: [20]
     }
   }),
-  20703: new ReinforcementAbility({
+  "Windstrike Arcanum": new ReinforcementAbility({
     id: 20703,
     name: 'Windstrike Arcanum',
     effect: 'Wind Ability Dmg. +{{percent}}%',
@@ -279,7 +279,7 @@ export const reinforcementAbilitiesData = {
       percent: [35]
     }
   }),
-  30201: new ReinforcementAbility({
+  "Boost Fire Resist.": new ReinforcementAbility({
     id: 30201,
     name: 'Boost Fire Resist.',
     effect: 'Fire Resist. +{{percent}}%',
@@ -288,7 +288,7 @@ export const reinforcementAbilitiesData = {
       percent: [5, 10, 20, 30, 40, 45, 50]
     }
   }),
-  30301: new ReinforcementAbility({
+  "Boost Ice Resist.": new ReinforcementAbility({
     id: 30301,
     name: 'Boost Ice Resist.',
     effect: 'Ice Resist. +{{percent}}%',
@@ -297,7 +297,7 @@ export const reinforcementAbilitiesData = {
       percent: [5, 10, 20, 30, 40, 45, 50]
     }
   }),
-  30401: new ReinforcementAbility({
+  "Boost Lightning Resist.": new ReinforcementAbility({
     id: 30401,
     name: 'Boost Lightning Resist.',
     effect: 'Lightning Resist. +{{percent}}%',
@@ -306,7 +306,7 @@ export const reinforcementAbilitiesData = {
       percent: [5, 10, 20, 30, 40, 45, 50]
     }
   }),
-  30501: new ReinforcementAbility({
+  "Boost Earth Resist.": new ReinforcementAbility({
     id: 30501,
     name: 'Boost Earth Resist.',
     effect: 'Earth Resist. +{{percent}}%',
@@ -315,7 +315,7 @@ export const reinforcementAbilitiesData = {
       percent: [5, 10, 20, 30, 40, 45, 50]
     }
   }),
-  30601: new ReinforcementAbility({
+  "Boost Water Resist.": new ReinforcementAbility({
     id: 30601,
     name: 'Boost Water Resist.',
     effect: 'Water Resist. +{{percent}}%',
@@ -324,7 +324,7 @@ export const reinforcementAbilitiesData = {
       percent: [5, 10, 20, 30, 40, 45, 50]
     }
   }),
-  30701: new ReinforcementAbility({
+  "Boost Wind Resist.": new ReinforcementAbility({
     id: 30701,
     name: 'Boost Wind Resist.',
     effect: 'Wind Resist. +{{percent}}%',
@@ -333,7 +333,7 @@ export const reinforcementAbilitiesData = {
       percent: [5, 10, 20, 30, 40, 45, 50]
     }
   }),
-  40101: new ReinforcementAbility({
+  "Boost Poison Resist.": new ReinforcementAbility({
     id: 40101,
     name: 'Boost Poison Resist.',
     effect: 'Poison Resist. +{{percent}}%',
@@ -342,7 +342,7 @@ export const reinforcementAbilitiesData = {
       percent: [25, 50, 100]
     }
   }),
-  51301: new ReinforcementAbility({
+  "Boost Ability Pot.": new ReinforcementAbility({
     id: 51301,
     name: 'Boost Ability Pot.',
     effect: 'Attack Stance Cmd. Gauge Max.: Mag. Ability Dmg. +{{percent}}%\nAttack Stance Cmd. Gauge Max.: Phys. Ability Dmg. +{{percent}}%',
@@ -351,7 +351,7 @@ export const reinforcementAbilitiesData = {
       percent: [3, 8, 15, 22, 30, 35, 40]
     }
   }),
-  51401: new ReinforcementAbility({
+  "Boost Phys. Ability Pot.": new ReinforcementAbility({
     id: 51401,
     name: 'Boost Phys. Ability Pot.',
     effect: 'Attack Stance Cmd. Gauge Max.: Phys. Ability Dmg. +{{percent}}%',
@@ -360,7 +360,7 @@ export const reinforcementAbilitiesData = {
       percent: [5, 15, 30, 45, 60, 70, 80]
     }
   }),
-  51501: new ReinforcementAbility({
+  "Boost Mag. Ability Pot.": new ReinforcementAbility({
     id: 51501,
     name: 'Boost Mag. Ability Pot.',
     effect: 'Attack Stance Cmd. Gauge Max.: Mag. Ability Dmg. +{{percent}}%',
@@ -369,7 +369,7 @@ export const reinforcementAbilitiesData = {
       percent: [5, 15, 30, 45, 60, 70, 80]
     }
   }),
-  51701: new ReinforcementAbility({
+  "Boost Limit Break Pot.": new ReinforcementAbility({
     id: 51701,
     name: 'Boost Limit Break Pot.',
     effect: 'Limit Break Dmg. +{{percent}}%',
@@ -378,7 +378,7 @@ export const reinforcementAbilitiesData = {
       percent: [6, 15, 25, 40, 55, 70, 85]
     }
   }),
-  51801: new ReinforcementAbility({
+  "ATB Boost": new ReinforcementAbility({
     id: 51801,
     name: 'ATB Boost',
     effect: 'ATB +{{flat}} at battle start',
@@ -387,7 +387,7 @@ export const reinforcementAbilitiesData = {
       flat: [2, 2.5, 3, 3.5, 4]
     }
   }),
-  51901: new ReinforcementAbility({
+  "Buff/Debuff Extension (Stats/Pot./Res.)": new ReinforcementAbility({
     id: 51901,
     name: 'Buff/Debuff Extension (Stats/Pot./Res.)',
     effect: 'Buff/Debuff (Stats/Pot./Res.) Effect Duration +{{percent}}%',
@@ -396,7 +396,7 @@ export const reinforcementAbilitiesData = {
       percent: [10, 40, 80, 120, 150, 180, 200]
     }
   }),
-  51903: new ReinforcementAbility({
+  "Buff/Debuff Extension+ (Stats/Pot./Res.)": new ReinforcementAbility({
     id: 51903,
     name: 'Buff/Debuff Extension+ (Stats/Pot./Res.)',
     effect: 'Buff/Debuff (Stats/Pot./Res.) Effect Duration Extension +{{percent}}%',
@@ -405,7 +405,7 @@ export const reinforcementAbilitiesData = {
       percent: [60]
     }
   }),
-  52102: new ReinforcementAbility({
+  "Debuff Extension (Stats/Pot./Res.) Mastery": new ReinforcementAbility({
     id: 52102,
     name: 'Debuff Extension (Stats/Pot./Res.) Mastery',
     effect: 'Debuff (Stats/Pot./Res.) Effect Duration +{{percent}}%',
@@ -414,7 +414,7 @@ export const reinforcementAbilitiesData = {
       percent: [60]
     }
   }),
-  52501: new ReinforcementAbility({
+  "Physical Ability Mastery": new ReinforcementAbility({
     id: 52501,
     name: 'Physical Ability Mastery',
     effect: 'Attack Stance Cmd. Gauge Max.: Phys. Ability Dmg. +{{percent}}%',
@@ -423,7 +423,7 @@ export const reinforcementAbilitiesData = {
       percent: [15]
     }
   }),
-  52601: new ReinforcementAbility({
+  "Magic Ability Mastery": new ReinforcementAbility({
     id: 52601,
     name: 'Magic Ability Mastery',
     effect: 'Attack Stance Cmd. Gauge Max.: Mag. Ability Dmg. +{{percent}}%',
@@ -432,7 +432,7 @@ export const reinforcementAbilitiesData = {
       percent: [15]
     }
   }),
-  52701: new ReinforcementAbility({
+  "Flamefrost Fangs": new ReinforcementAbility({
     id: 52701,
     name: 'Flamefrost Fangs',
     effect: 'Fire/Ice Resist. +{{percentResist}}%\nFire/Ice Ability Dmg. +{{percentDmg}}%',
@@ -442,7 +442,7 @@ export const reinforcementAbilitiesData = {
       percentDmg: [15]
     }
   }),
-  52901: new ReinforcementAbility({
+  "Flamefrost Rabbit Ears": new ReinforcementAbility({
     id: 52901,
     name: 'Flamefrost Rabbit Ears',
     effect: 'Fire/Ice Resist. +{{percentResist}}%\nFire/Ice Ability Dmg. +{{percentDmg}}%',
@@ -452,7 +452,7 @@ export const reinforcementAbilitiesData = {
       percentDmg: [15]
     }
   }),
-  53001: new ReinforcementAbility({
+  "Indomitable Soul": new ReinforcementAbility({
     id: 53001,
     name: 'Indomitable Soul',
     effect: 'Phys. & Mag. Defence +{{percentDefense}}%\nPhys. & Mag. Attack +{{percentAttack}}%',
@@ -462,7 +462,7 @@ export const reinforcementAbilitiesData = {
       percentAttack: [10]
     }
   }),
-  53101: new ReinforcementAbility({
+  "Reprieve": new ReinforcementAbility({
     id: 53101,
     name: 'Reprieve',
     effect: 'Applied Reprieve to self when battle begins (Effect Dur.: 999s / Effect Dur. Ext.: +0s)\nWhen triggered: restores {{restore}}% of max HP and grants Invincible (Effect Dur.: {{invincibleDur}}s / Effect Dur. Ext.: +0s)',
@@ -472,7 +472,7 @@ export const reinforcementAbilitiesData = {
       invincibleDur: [1, 5, 10]
     }
   }),
-  53201: new ReinforcementAbility({
+  "Sun's Favor": new ReinforcementAbility({
     id: 53201,
     name: 'Sun\'s Favor',
     effect: 'HP +{{percentHP}}% / Phys. Defense +{{percentDef}}%',
@@ -482,7 +482,7 @@ export const reinforcementAbilitiesData = {
       percentDef: [15]
     }
   }),
-  53301: new ReinforcementAbility({
+  "Magic Ward": new ReinforcementAbility({
     id: 53301,
     name: 'Magic Ward',
     effect: 'HP +{{percentHP}}%\nMag. Defense +{{percentMDef}}%',
@@ -492,7 +492,7 @@ export const reinforcementAbilitiesData = {
       percentMDef: [15]
     }
   }),
-  53401: new ReinforcementAbility({
+  "Alluring Ploy": new ReinforcementAbility({
     id: 53401,
     name: 'Alluring Ploy',
     effect: 'Phys. & Mag. Defence +{{percentDef}}%\nPhys. & Mag. Attack +{{percentAtk}}%',
@@ -502,7 +502,7 @@ export const reinforcementAbilitiesData = {
       percentAtk: [10]
     }
   }),
-  53501: new ReinforcementAbility({
+  "Bahamut's Bite": new ReinforcementAbility({
     id: 53501,
     name: 'Bahamut\'s Bite',
     effect: 'Phys, Ability Dmg. +{{percentPDmg}}%\nPhys. Attack +{{percentPAtk}}%',
@@ -512,7 +512,7 @@ export const reinforcementAbilitiesData = {
       percentPAtk: [5]
     }
   }),
-  53502: new ReinforcementAbility({
+  "Bahamut's Protection": new ReinforcementAbility({
     id: 53502,
     name: 'Bahamut\'s Protection',
     effect: 'Phys. & Mag. Defence +{{percentDef}}%\nHealing Pot. +{{percentHeal}}%',
@@ -522,7 +522,7 @@ export const reinforcementAbilitiesData = {
       percentHeal: [10]
     }
   }),
-  53503: new ReinforcementAbility({
+  "Bahamut's Whisper": new ReinforcementAbility({
     id: 53503,
     name: 'Bahamut\'s Whisper',
     effect: 'Mag. Attack +{{percent}}%\nAttack Stance Cmd. Gauge Max.: Mag. Ability Dmg. +{{percent}}%',
@@ -531,7 +531,7 @@ export const reinforcementAbilitiesData = {
       percent: [10]
     }
   }),
-  53601: new ReinforcementAbility({
+  "Interruption Mastery": new ReinforcementAbility({
     id: 53601,
     name: 'Interruption Mastery',
     effect: 'Enemy Interrupted: Ability Pot. +{{percent}}%',
@@ -540,7 +540,7 @@ export const reinforcementAbilitiesData = {
       percent: [10, 20, 40, 60]
     }
   }),
-  53801: new ReinforcementAbility({
+  "Interruption ATB Boost": new ReinforcementAbility({
     id: 53801,
     name: 'Interruption ATB Boost',
     effect: 'All Allies\' ATB +{{flat}} when interrupting enemy',
@@ -549,7 +549,7 @@ export const reinforcementAbilitiesData = {
       flat: [0.5, 1, 1.5, 2]
     }
   }),
-  53901: new ReinforcementAbility({
+  "Regen Boost": new ReinforcementAbility({
     id: 53901,
     name: 'Regen Boost',
     effect: 'Applies Regen to all allies when battle begins\n(Effect Dur.: {{flat}}s / Effect Dur. Ext.: +0s)',
@@ -558,7 +558,7 @@ export const reinforcementAbilitiesData = {
       flat: [15, 30, 45, 60]
     }
   }),
-  53303: new ReinforcementAbility({
+  "Physical & Magic Ward": new ReinforcementAbility({
     id: 53303,
     name: 'Physical & Magic Ward',
     effect: 'Phys. & Mag. Defence +{{percent}}%',
@@ -567,7 +567,7 @@ export const reinforcementAbilitiesData = {
       percent: [15]
     }
   }),
-  53701: new ReinforcementAbility({
+  "Eerie Mask": new ReinforcementAbility({
     id: 53701,
     name: 'Eerie Mask',
     effect: 'HP +{{hpPercent}}%\nMag. Defense +{{magDefensePercent}}%',
@@ -577,7 +577,7 @@ export const reinforcementAbilitiesData = {
       magDefensePercent: [15]
     }
   }),
-  11901: new ReinforcementAbility({
+  "Boost DEF (All Allies)": new ReinforcementAbility({
     id: 11901,
     name: 'Boost DEF (All Allies)',
     effect: 'All Allies\' Phys. Defense +{{percent}}%\nAll Allies\' Mag. Defense +{{percent}}%',

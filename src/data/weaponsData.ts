@@ -29,8 +29,8 @@ export const weaponsData: Weapons = {
       heal: 181
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[11001]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost ATK"]
     ]
   }),
   "Iron Blade": new Weapon({
@@ -58,8 +58,8 @@ export const weaponsData: Weapons = {
       heal: 181
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10401],
-      reinforcementAbilitiesData[10801]
+      reinforcementAbilitiesData["Boost PDEF"],
+      reinforcementAbilitiesData["Boost Crit. Pot."]
     ]
   }),
   "Hardedge": new Weapon({
@@ -87,8 +87,8 @@ export const weaponsData: Weapons = {
       heal: 172
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11001],
-      reinforcementAbilitiesData[30701]
+      reinforcementAbilitiesData["Boost ATK"],
+      reinforcementAbilitiesData["Boost Wind Resist."]
     ]
   }),
   "Mythril Saber": new Weapon({
@@ -113,8 +113,8 @@ export const weaponsData: Weapons = {
       heal: 172
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[51301]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Ability Pot."]
     ]
   }),
   "Butterfly Edge": new Weapon({
@@ -142,8 +142,8 @@ export const weaponsData: Weapons = {
       heal: 172
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[51701]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost Limit Break Pot."]
     ]
   }),
   "Murasame": new Weapon({
@@ -168,8 +168,8 @@ export const weaponsData: Weapons = {
       heal: 170
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[20401]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost Lightning Pot."]
     ]
   }),
   "Organics": new Weapon({
@@ -195,8 +195,8 @@ export const weaponsData: Weapons = {
       heal: 178
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10501],
-      reinforcementAbilitiesData[30301]
+      reinforcementAbilitiesData["Boost MDEF"],
+      reinforcementAbilitiesData["Boost Ice Resist."]
     ]
   }),
   "Crystal Sword": new Weapon({
@@ -221,8 +221,8 @@ export const weaponsData: Weapons = {
       heal: 213
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10601],
-      reinforcementAbilitiesData[30501]
+      reinforcementAbilitiesData["Boost HEAL"],
+      reinforcementAbilitiesData["Boost Earth Resist."]
     ]
   }),
   "Enhance Sword": new Weapon({
@@ -247,8 +247,8 @@ export const weaponsData: Weapons = {
       heal: 168
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11001],
-      reinforcementAbilitiesData[20301]
+      reinforcementAbilitiesData["Boost ATK"],
+      reinforcementAbilitiesData["Boost Ice Pot."]
     ]
   }),
   "Nail Bat": new Weapon({
@@ -273,8 +273,8 @@ export const weaponsData: Weapons = {
       heal: 164
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[30201],
-      reinforcementAbilitiesData[51801]
+      reinforcementAbilitiesData["Boost Fire Resist."],
+      reinforcementAbilitiesData["ATB Boost"]
     ]
   }),
   "Apocalypse": new Weapon({
@@ -299,8 +299,8 @@ export const weaponsData: Weapons = {
       heal: 182
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11001],
-      reinforcementAbilitiesData[20701]
+      reinforcementAbilitiesData["Boost ATK"],
+      reinforcementAbilitiesData["Boost Wind Pot."]
     ]
   }),
   "Maritime Sword": new Weapon({
@@ -325,8 +325,8 @@ export const weaponsData: Weapons = {
       heal: 170
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[20601]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost Water Pot."]
     ]
   }),
   "Shiva's Blade": new Weapon({
@@ -351,8 +351,8 @@ export const weaponsData: Weapons = {
       heal: 170
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[30201],
-      reinforcementAbilitiesData[10101]
+      reinforcementAbilitiesData["Boost Fire Resist."],
+      reinforcementAbilitiesData["Boost HP"]
     ]
   }),
   "Bandaged Sword": new Weapon({
@@ -380,8 +380,8 @@ export const weaponsData: Weapons = {
       heal: 182
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[30301]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost Ice Resist."]
     ]
   }),
   "Skysplitter": new Weapon({
@@ -406,8 +406,8 @@ export const weaponsData: Weapons = {
       heal: 168
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[20201]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost Fire Pot."]
     ]
   }),
   "Zidane's Sword": new Weapon({
@@ -432,8 +432,8 @@ export const weaponsData: Weapons = {
       heal: 165
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[51401]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost Phys. Ability Pot."]
     ]
   }),
   "Holiday Cheer": new Weapon({
@@ -458,8 +458,8 @@ export const weaponsData: Weapons = {
       heal: 175
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[10401]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost PDEF"]
     ]
   }),
   "Stream Saber": new Weapon({
@@ -484,8 +484,8 @@ export const weaponsData: Weapons = {
       heal: 168
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11201],
-      reinforcementAbilitiesData[20301]
+      reinforcementAbilitiesData["Boost PATK (All Allies)"],
+      reinforcementAbilitiesData["Boost Ice Pot."]
     ]
   }),
   "Igneous Saber": new Weapon({
@@ -510,8 +510,8 @@ export const weaponsData: Weapons = {
       heal: 175
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[10501]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost MDEF"]
     ]
   }),
   "Glavenus Sword": new Weapon({
@@ -542,8 +542,8 @@ export const weaponsData: Weapons = {
       heal: 151
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[51401]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost Phys. Ability Pot."]
     ]
   }),
   "Rune Blade": new Weapon({
@@ -568,8 +568,8 @@ export const weaponsData: Weapons = {
       heal: 168
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[20301]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Ice Pot."]
     ]
   }),
   "Burning Oar": new Weapon({
@@ -594,8 +594,8 @@ export const weaponsData: Weapons = {
       heal: 165
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[20201]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost Fire Pot."]
     ]
   }),
   "Bahamut Greatsword": new Weapon({
@@ -623,8 +623,8 @@ export const weaponsData: Weapons = {
       heal: 150
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11201],
-      reinforcementAbilitiesData[51401]
+      reinforcementAbilitiesData["Boost PATK (All Allies)"],
+      reinforcementAbilitiesData["Boost Phys. Ability Pot."]
     ]
   }),
   "Ultimate Buster Sword": new UltimateWeapon({
@@ -644,8 +644,8 @@ export const weaponsData: Weapons = {
       heal: 129
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[51301],
-      reinforcementAbilitiesData[10401]
+      reinforcementAbilitiesData["Boost Ability Pot."],
+      reinforcementAbilitiesData["Boost PDEF"]
     ]
   }),
   "Locke's Sword": new Weapon({
@@ -679,8 +679,8 @@ export const weaponsData: Weapons = {
       heal: 150
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11001],
-      reinforcementAbilitiesData[51301]
+      reinforcementAbilitiesData["Boost ATK"],
+      reinforcementAbilitiesData["Boost Ability Pot."]
     ]
   }),
   "Gatling Gun": new Weapon({
@@ -705,8 +705,8 @@ export const weaponsData: Weapons = {
       heal: 181
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[30601]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost Water Resist."]
     ]
   }),
   "Assault Gun": new Weapon({
@@ -734,8 +734,8 @@ export const weaponsData: Weapons = {
       heal: 184
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10601],
-      reinforcementAbilitiesData[30301]
+      reinforcementAbilitiesData["Boost HEAL"],
+      reinforcementAbilitiesData["Boost Ice Resist."]
     ]
   }),
   "Heavy Vulcan": new Weapon({
@@ -763,8 +763,8 @@ export const weaponsData: Weapons = {
       heal: 215
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10501],
-      reinforcementAbilitiesData[20501]
+      reinforcementAbilitiesData["Boost MDEF"],
+      reinforcementAbilitiesData["Boost Earth Pot."]
     ]
   }),
   "Microlaser": new Weapon({
@@ -793,8 +793,8 @@ export const weaponsData: Weapons = {
       heal: 174
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10601],
-      reinforcementAbilitiesData[30201]
+      reinforcementAbilitiesData["Boost HEAL"],
+      reinforcementAbilitiesData["Boost Fire Resist."]
     ]
   }),
   "W Machine": new Weapon({
@@ -822,8 +822,8 @@ export const weaponsData: Weapons = {
       heal: 168
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[30401]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost Lightning Resist."]
     ]
   }),
   "Solid Bazooka": new Weapon({
@@ -851,8 +851,8 @@ export const weaponsData: Weapons = {
       heal: 182
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[10801]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost Crit. Pot."]
     ]
   }),
   "Enemy Launcher": new Weapon({
@@ -877,8 +877,8 @@ export const weaponsData: Weapons = {
       heal: 175
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11001],
-      reinforcementAbilitiesData[51401]
+      reinforcementAbilitiesData["Boost ATK"],
+      reinforcementAbilitiesData["Boost Phys. Ability Pot."]
     ]
   }),
   "Max Ray": new Weapon({
@@ -903,8 +903,8 @@ export const weaponsData: Weapons = {
       heal: 170
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10401],
-      reinforcementAbilitiesData[10801]
+      reinforcementAbilitiesData["Boost PDEF"],
+      reinforcementAbilitiesData["Boost Crit. Pot."]
     ]
   }),
   "Flame Projector": new Weapon({
@@ -929,8 +929,8 @@ export const weaponsData: Weapons = {
       heal: 174
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[20201]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Fire Pot."]
     ]
   }),
   "Heavy Hauser": new Weapon({
@@ -955,8 +955,8 @@ export const weaponsData: Weapons = {
       heal: 185
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11001],
-      reinforcementAbilitiesData[51301]
+      reinforcementAbilitiesData["Boost ATK"],
+      reinforcementAbilitiesData["Boost Ability Pot."]
     ]
   }),
   "Lefko Kypseli": new Weapon({
@@ -984,8 +984,8 @@ export const weaponsData: Weapons = {
       heal: 182
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11001],
-      reinforcementAbilitiesData[10401]
+      reinforcementAbilitiesData["Boost ATK"],
+      reinforcementAbilitiesData["Boost PDEF"]
     ]
   }),
   "Rocket Punch": new Weapon({
@@ -1010,8 +1010,8 @@ export const weaponsData: Weapons = {
       heal: 167
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[30501],
-      reinforcementAbilitiesData[11401]
+      reinforcementAbilitiesData["Boost Earth Resist."],
+      reinforcementAbilitiesData["Boost PDEF (All Allies)"]
     ]
   }),
   "Shiva Cannon": new Weapon({
@@ -1036,8 +1036,8 @@ export const weaponsData: Weapons = {
       heal: 170
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[30201],
-      reinforcementAbilitiesData[11001]
+      reinforcementAbilitiesData["Boost Fire Resist."],
+      reinforcementAbilitiesData["Boost ATK"]
     ]
   }),
   "Hell House Cannon": new Weapon({
@@ -1064,8 +1064,8 @@ export const weaponsData: Weapons = {
       heal: 174
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[10401]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost PDEF"]
     ]
   }),
   "Siege Cannon": new Weapon({
@@ -1090,8 +1090,8 @@ export const weaponsData: Weapons = {
       heal: 175
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[20601]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Water Pot."]
     ]
   }),
   "Electrocannon": new Weapon({
@@ -1121,8 +1121,8 @@ export const weaponsData: Weapons = {
       heal: 165
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[51501]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Mag. Ability Pot."]
     ]
   }),
   "Leviathan Buster": new Weapon({
@@ -1147,8 +1147,8 @@ export const weaponsData: Weapons = {
       heal: 165
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[30401],
-      reinforcementAbilitiesData[10101]
+      reinforcementAbilitiesData["Boost Lightning Resist."],
+      reinforcementAbilitiesData["Boost HP"]
     ]
   }),
   "Sharkslayer": new Weapon({
@@ -1179,8 +1179,8 @@ export const weaponsData: Weapons = {
       heal: 167
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[51901]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Buff/Debuff Extension (Stats/Pot./Res.)"]
     ]
   }),
   "Ultimate Gatling Gun": new UltimateWeapon({
@@ -1200,8 +1200,8 @@ export const weaponsData: Weapons = {
       heal: 130
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10401],
-      reinforcementAbilitiesData[10101]
+      reinforcementAbilitiesData["Boost PDEF"],
+      reinforcementAbilitiesData["Boost HP"]
     ]
   }),
   "Rhad Cannon": new Weapon({
@@ -1229,8 +1229,8 @@ export const weaponsData: Weapons = {
       heal: 174
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[51301]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost Ability Pot."]
     ]
   }),
   "Escutcheon Cannon": new Weapon({
@@ -1261,8 +1261,8 @@ export const weaponsData: Weapons = {
       heal: 189
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10501],
-      reinforcementAbilitiesData[51901]
+      reinforcementAbilitiesData["Boost MDEF"],
+      reinforcementAbilitiesData["Buff/Debuff Extension (Stats/Pot./Res.)"]
     ]
   }),
   "Leather Gloves": new Weapon({
@@ -1290,8 +1290,8 @@ export const weaponsData: Weapons = {
       heal: 178
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10401],
-      reinforcementAbilitiesData[30401]
+      reinforcementAbilitiesData["Boost PDEF"],
+      reinforcementAbilitiesData["Boost Lightning Resist."]
     ]
   }),
   "Grand Gloves": new Weapon({
@@ -1316,8 +1316,8 @@ export const weaponsData: Weapons = {
       heal: 215
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10601],
-      reinforcementAbilitiesData[20601]
+      reinforcementAbilitiesData["Boost HEAL"],
+      reinforcementAbilitiesData["Boost Water Pot."]
     ]
   }),
   "Sonic Striker": new Weapon({
@@ -1342,8 +1342,8 @@ export const weaponsData: Weapons = {
       heal: 177
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11001],
-      reinforcementAbilitiesData[30601]
+      reinforcementAbilitiesData["Boost ATK"],
+      reinforcementAbilitiesData["Boost Water Resist."]
     ]
   }),
   "Tiger Fangs": new Weapon({
@@ -1371,8 +1371,8 @@ export const weaponsData: Weapons = {
       heal: 167
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[10801]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Crit. Pot."]
     ]
   }),
   "Crystal Gloves": new Weapon({
@@ -1397,8 +1397,8 @@ export const weaponsData: Weapons = {
       heal: 174
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[20401]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost Lightning Pot."]
     ]
   }),
   "Motor Drive": new Weapon({
@@ -1423,8 +1423,8 @@ export const weaponsData: Weapons = {
       heal: 177
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[20701]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost Wind Pot."]
     ]
   }),
   "Kaiser Knuckles": new Weapon({
@@ -1452,8 +1452,8 @@ export const weaponsData: Weapons = {
       heal: 168
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10501],
-      reinforcementAbilitiesData[30301]
+      reinforcementAbilitiesData["Boost MDEF"],
+      reinforcementAbilitiesData["Boost Ice Resist."]
     ]
   }),
   "Work Gloves": new Weapon({
@@ -1484,8 +1484,8 @@ export const weaponsData: Weapons = {
       heal: 161
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[30301],
-      reinforcementAbilitiesData[51801]
+      reinforcementAbilitiesData["Boost Ice Resist."],
+      reinforcementAbilitiesData["ATB Boost"]
     ]
   }),
   "Powersoul": new Weapon({
@@ -1510,8 +1510,8 @@ export const weaponsData: Weapons = {
       heal: 161
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[51501]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost Mag. Ability Pot."]
     ]
   }),
   "Lifeguard Wraps": new Weapon({
@@ -1536,8 +1536,8 @@ export const weaponsData: Weapons = {
       heal: 198
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10601],
-      reinforcementAbilitiesData[30201]
+      reinforcementAbilitiesData["Boost HEAL"],
+      reinforcementAbilitiesData["Boost Fire Resist."]
     ]
   }),
   "Feathered Gloves": new Weapon({
@@ -1568,8 +1568,8 @@ export const weaponsData: Weapons = {
       heal: 167
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11001],
-      reinforcementAbilitiesData[20601]
+      reinforcementAbilitiesData["Boost ATK"],
+      reinforcementAbilitiesData["Boost Water Pot."]
     ]
   }),
   "Bahamut Knuckles": new Weapon({
@@ -1594,8 +1594,8 @@ export const weaponsData: Weapons = {
       heal: 161
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10501],
-      reinforcementAbilitiesData[10101]
+      reinforcementAbilitiesData["Boost MDEF"],
+      reinforcementAbilitiesData["Boost HP"]
     ]
   }),
   "Holy Flame Gloves": new Weapon({
@@ -1620,8 +1620,8 @@ export const weaponsData: Weapons = {
       heal: 174
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[20301]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost Ice Pot."]
     ]
   }),
   "Amarant's Claws": new Weapon({
@@ -1653,8 +1653,8 @@ export const weaponsData: Weapons = {
       heal: 167
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[51401]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost Phys. Ability Pot."]
     ]
   }),
   "Bunny Gloves": new Weapon({
@@ -1682,8 +1682,8 @@ export const weaponsData: Weapons = {
       heal: 167
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[20601]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Water Pot."]
     ]
   }),
   "Oven Mitts": new Weapon({
@@ -1711,8 +1711,8 @@ export const weaponsData: Weapons = {
       heal: 160
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[10401]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost PDEF"]
     ]
   }),
   "Turks' Gloves": new Weapon({
@@ -1739,8 +1739,8 @@ export const weaponsData: Weapons = {
       heal: 160
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[51301]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost Ability Pot."]
     ]
   }),
   "Guide Gloves": new Weapon({
@@ -1765,8 +1765,8 @@ export const weaponsData: Weapons = {
       heal: 177
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[51401]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost Phys. Ability Pot."]
     ]
   }),
   "Kirin Gloves": new Weapon({
@@ -1794,8 +1794,8 @@ export const weaponsData: Weapons = {
       heal: 167
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[20401]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Lightning Pot."]
     ]
   }),
   "Shell Knuckles": new Weapon({
@@ -1820,8 +1820,8 @@ export const weaponsData: Weapons = {
       heal: 161
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[20201]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Fire Pot."]
     ]
   }),
   "Steward Gloves": new Weapon({
@@ -1848,8 +1848,8 @@ export const weaponsData: Weapons = {
       heal: 154
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[51301]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Ability Pot."]
     ]
   }),
   "Bahamut Fangs": new Weapon({
@@ -1879,8 +1879,8 @@ export const weaponsData: Weapons = {
       heal: 154
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11301],
-      reinforcementAbilitiesData[51501]
+      reinforcementAbilitiesData["Boost MATK (All Allies)"],
+      reinforcementAbilitiesData["Boost Mag. Ability Pot."]
     ]
   }),
   "Ultimate Leather Gloves": new UltimateWeapon({
@@ -1900,8 +1900,8 @@ export const weaponsData: Weapons = {
       heal: 122
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[51301],
-      reinforcementAbilitiesData[10501]
+      reinforcementAbilitiesData["Boost Ability Pot."],
+      reinforcementAbilitiesData["Boost MDEF"]
     ]
   }),
   "Black Cat's Paws": new Weapon({
@@ -1926,8 +1926,8 @@ export const weaponsData: Weapons = {
       heal: 157
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[20401]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Lightning Pot."]
     ]
   }),
   "Sabin's Claws": new Weapon({
@@ -1959,8 +1959,8 @@ export const weaponsData: Weapons = {
       heal: 164
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11001],
-      reinforcementAbilitiesData[51301]
+      reinforcementAbilitiesData["Boost ATK"],
+      reinforcementAbilitiesData["Boost Ability Pot."]
     ]
   }),
   "Guard Stick": new Weapon({
@@ -1988,8 +1988,8 @@ export const weaponsData: Weapons = {
       heal: 206
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10601],
-      reinforcementAbilitiesData[51701]
+      reinforcementAbilitiesData["Boost HEAL"],
+      reinforcementAbilitiesData["Boost Limit Break Pot."]
     ]
   }),
   "Silver Staff": new Weapon({
@@ -2014,8 +2014,8 @@ export const weaponsData: Weapons = {
       heal: 181
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11001],
-      reinforcementAbilitiesData[20301]
+      reinforcementAbilitiesData["Boost ATK"],
+      reinforcementAbilitiesData["Boost Ice Pot."]
     ]
   }),
   "Striking Staff": new Weapon({
@@ -2040,8 +2040,8 @@ export const weaponsData: Weapons = {
       heal: 189
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11001],
-      reinforcementAbilitiesData[51701]
+      reinforcementAbilitiesData["Boost ATK"],
+      reinforcementAbilitiesData["Boost Limit Break Pot."]
     ]
   }),
   "Mythril Rod": new Weapon({
@@ -2072,8 +2072,8 @@ export const weaponsData: Weapons = {
       heal: 220
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10501],
-      reinforcementAbilitiesData[30401]
+      reinforcementAbilitiesData["Boost MDEF"],
+      reinforcementAbilitiesData["Boost Lightning Resist."]
     ]
   }),
   "Full Metal Staff": new Weapon({
@@ -2101,8 +2101,8 @@ export const weaponsData: Weapons = {
       heal: 188
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[30301]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost Ice Resist."]
     ]
   }),
   "Prism Rod": new Weapon({
@@ -2127,8 +2127,8 @@ export const weaponsData: Weapons = {
       heal: 188
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[20701]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost Wind Pot."]
     ]
   }),
   "Fairy Tale": new Weapon({
@@ -2153,8 +2153,8 @@ export const weaponsData: Weapons = {
       heal: 232
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10601],
-      reinforcementAbilitiesData[30501]
+      reinforcementAbilitiesData["Boost HEAL"],
+      reinforcementAbilitiesData["Boost Earth Resist."]
     ]
   }),
   "Wizard Staff": new Weapon({
@@ -2179,8 +2179,8 @@ export const weaponsData: Weapons = {
       heal: 191
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[20401]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Lightning Pot."]
     ]
   }),
   "Wizer Staff": new Weapon({
@@ -2205,8 +2205,8 @@ export const weaponsData: Weapons = {
       heal: 188
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[20501]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost Earth Pot."]
     ]
   }),
   "Sun Umbrella": new Weapon({
@@ -2237,8 +2237,8 @@ export const weaponsData: Weapons = {
       heal: 189
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[51501]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Mag. Ability Pot."]
     ]
   }),
   "Floral Wand": new Weapon({
@@ -2269,8 +2269,8 @@ export const weaponsData: Weapons = {
       heal: 189
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11001],
-      reinforcementAbilitiesData[20701]
+      reinforcementAbilitiesData["Boost ATK"],
+      reinforcementAbilitiesData["Boost Wind Pot."]
     ]
   }),
   "Umbrella": new Weapon({
@@ -2295,8 +2295,8 @@ export const weaponsData: Weapons = {
       heal: 196
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[30401],
-      reinforcementAbilitiesData[11501]
+      reinforcementAbilitiesData["Boost Lightning Resist."],
+      reinforcementAbilitiesData["Boost MDEF (All Allies)"]
     ]
   }),
   "Chocobo Staff": new Weapon({
@@ -2324,8 +2324,8 @@ export const weaponsData: Weapons = {
       heal: 160
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10601],
-      reinforcementAbilitiesData[10501]
+      reinforcementAbilitiesData["Boost HEAL"],
+      reinforcementAbilitiesData["Boost MDEF"]
     ]
   }),
   "Snowflake": new Weapon({
@@ -2353,8 +2353,8 @@ export const weaponsData: Weapons = {
       heal: 192
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[20301]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Ice Pot."]
     ]
   }),
   "Ramuh's Staff": new Weapon({
@@ -2379,8 +2379,8 @@ export const weaponsData: Weapons = {
       heal: 174
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[30601],
-      reinforcementAbilitiesData[10101]
+      reinforcementAbilitiesData["Boost Water Resist."],
+      reinforcementAbilitiesData["Boost HP"]
     ]
   }),
   "Garnet's Rod": new Weapon({
@@ -2409,8 +2409,8 @@ export const weaponsData: Weapons = {
       heal: 219
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[51301]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost Ability Pot."]
     ]
   }),
   "Egg Staff": new Weapon({
@@ -2435,8 +2435,8 @@ export const weaponsData: Weapons = {
       heal: 182
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[20201]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost Fire Pot."]
     ]
   }),
   "Dawn's Prayers": new Weapon({
@@ -2463,8 +2463,8 @@ export const weaponsData: Weapons = {
       heal: 175
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10401],
-      reinforcementAbilitiesData[10501]
+      reinforcementAbilitiesData["Boost PDEF"],
+      reinforcementAbilitiesData["Boost MDEF"]
     ]
   }),
   "Kamura Wand": new Weapon({
@@ -2495,8 +2495,8 @@ export const weaponsData: Weapons = {
       heal: 232
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[51901]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Buff/Debuff Extension (Stats/Pot./Res.)"]
     ]
   }),
   "Radrod": new Weapon({
@@ -2521,8 +2521,8 @@ export const weaponsData: Weapons = {
       heal: 172
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[20601]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Water Pot."]
     ]
   }),
   "Hell House Rod": new Weapon({
@@ -2547,8 +2547,8 @@ export const weaponsData: Weapons = {
       heal: 175
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[20301]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Ice Pot."]
     ]
   }),
   "Citric Wand": new Weapon({
@@ -2580,8 +2580,8 @@ export const weaponsData: Weapons = {
       heal: 208
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[51901]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Buff/Debuff Extension (Stats/Pot./Res.)"]
     ]
   }),
   "Bahamut Rod": new Weapon({
@@ -2610,8 +2610,8 @@ export const weaponsData: Weapons = {
       heal: 237
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11301],
-      reinforcementAbilitiesData[10601]
+      reinforcementAbilitiesData["Boost MATK (All Allies)"],
+      reinforcementAbilitiesData["Boost HEAL"]
     ]
   }),
   "Ultimate Guard Stick": new UltimateWeapon({
@@ -2631,8 +2631,8 @@ export const weaponsData: Weapons = {
       heal: 157
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10601],
-      reinforcementAbilitiesData[10501]
+      reinforcementAbilitiesData["Boost HEAL"],
+      reinforcementAbilitiesData["Boost MDEF"]
     ]
   }),
   "Terra's Rod": new Weapon({
@@ -2666,8 +2666,8 @@ export const weaponsData: Weapons = {
       heal: 189
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[51901]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Buff/Debuff Extension (Stats/Pot./Res.)"]
     ]
   }),
   "Princess Guard": new UltimateWeapon({
@@ -2687,8 +2687,8 @@ export const weaponsData: Weapons = {
       heal: 183
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10601],
-      reinforcementAbilitiesData[53901]
+      reinforcementAbilitiesData["Boost HEAL"],
+      reinforcementAbilitiesData["Regen Boost"]
     ]
   }),
   "Sleek Collar": new Weapon({
@@ -2716,8 +2716,8 @@ export const weaponsData: Weapons = {
       heal: 198
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10501],
-      reinforcementAbilitiesData[30701]
+      reinforcementAbilitiesData["Boost MDEF"],
+      reinforcementAbilitiesData["Boost Wind Resist."]
     ]
   }),
   "Gold Collar": new Weapon({
@@ -2745,8 +2745,8 @@ export const weaponsData: Weapons = {
       heal: 220
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[30501]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Earth Resist."]
     ]
   }),
   "Platinum Collar": new Weapon({
@@ -2773,8 +2773,8 @@ export const weaponsData: Weapons = {
       heal: 177
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10601],
-      reinforcementAbilitiesData[10801]
+      reinforcementAbilitiesData["Boost HEAL"],
+      reinforcementAbilitiesData["Boost Crit. Pot."]
     ]
   }),
   "Noble Collar": new Weapon({
@@ -2799,8 +2799,8 @@ export const weaponsData: Weapons = {
       heal: 192
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11001],
-      reinforcementAbilitiesData[20601]
+      reinforcementAbilitiesData["Boost ATK"],
+      reinforcementAbilitiesData["Boost Water Pot."]
     ]
   }),
   "Rage Collar": new Weapon({
@@ -2825,8 +2825,8 @@ export const weaponsData: Weapons = {
       heal: 195
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11001],
-      reinforcementAbilitiesData[20201]
+      reinforcementAbilitiesData["Boost ATK"],
+      reinforcementAbilitiesData["Boost Fire Pot."]
     ]
   }),
   "Leather Collar": new Weapon({
@@ -2851,8 +2851,8 @@ export const weaponsData: Weapons = {
       heal: 178
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[20501]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost Earth Pot."]
     ]
   }),
   "Rubber Collar": new Weapon({
@@ -2877,8 +2877,8 @@ export const weaponsData: Weapons = {
       heal: 223
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10401],
-      reinforcementAbilitiesData[51701]
+      reinforcementAbilitiesData["Boost PDEF"],
+      reinforcementAbilitiesData["Boost Limit Break Pot."]
     ]
   }),
   "Junk Collar": new Weapon({
@@ -2906,8 +2906,8 @@ export const weaponsData: Weapons = {
       heal: 182
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10401],
-      reinforcementAbilitiesData[30201]
+      reinforcementAbilitiesData["Boost PDEF"],
+      reinforcementAbilitiesData["Boost Fire Resist."]
     ]
   }),
   "Canyon Collar": new Weapon({
@@ -2935,8 +2935,8 @@ export const weaponsData: Weapons = {
       heal: 170
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[20701]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Wind Pot."]
     ]
   }),
   "Iron Collar": new Weapon({
@@ -2963,8 +2963,8 @@ export const weaponsData: Weapons = {
       heal: 170
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11001],
-      reinforcementAbilitiesData[10801]
+      reinforcementAbilitiesData["Boost ATK"],
+      reinforcementAbilitiesData["Boost Crit. Pot."]
     ]
   }),
   "Headphones": new Weapon({
@@ -2989,8 +2989,8 @@ export const weaponsData: Weapons = {
       heal: 164
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[30301],
-      reinforcementAbilitiesData[11501]
+      reinforcementAbilitiesData["Boost Ice Resist."],
+      reinforcementAbilitiesData["Boost MDEF (All Allies)"]
     ]
   }),
   "Seaside Collar": new Weapon({
@@ -3018,8 +3018,8 @@ export const weaponsData: Weapons = {
       heal: 181
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[20401]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost Lightning Pot."]
     ]
   }),
   "Hell House Collar": new Weapon({
@@ -3046,8 +3046,8 @@ export const weaponsData: Weapons = {
       heal: 168
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[10401]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost PDEF"]
     ]
   }),
   "Flame Dragon's Band": new Weapon({
@@ -3075,8 +3075,8 @@ export const weaponsData: Weapons = {
       heal: 164
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[30301],
-      reinforcementAbilitiesData[10101]
+      reinforcementAbilitiesData["Boost Ice Resist."],
+      reinforcementAbilitiesData["Boost HP"]
     ]
   }),
   "Egg Collar": new Weapon({
@@ -3101,8 +3101,8 @@ export const weaponsData: Weapons = {
       heal: 177
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[20201]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Fire Pot."]
     ]
   }),
   "Ivy Collar": new Weapon({
@@ -3133,8 +3133,8 @@ export const weaponsData: Weapons = {
       heal: 175
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11001],
-      reinforcementAbilitiesData[51301]
+      reinforcementAbilitiesData["Boost ATK"],
+      reinforcementAbilitiesData["Boost Ability Pot."]
     ]
   }),
   "Amethyst Collar": new Weapon({
@@ -3159,8 +3159,8 @@ export const weaponsData: Weapons = {
       heal: 177
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[20301]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Ice Pot."]
     ]
   }),
   "Silver Collar": new Weapon({
@@ -3191,8 +3191,8 @@ export const weaponsData: Weapons = {
       heal: 215
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10601],
-      reinforcementAbilitiesData[51901]
+      reinforcementAbilitiesData["Boost HEAL"],
+      reinforcementAbilitiesData["Buff/Debuff Extension (Stats/Pot./Res.)"]
     ]
   }),
   "Steward Collar": new Weapon({
@@ -3219,8 +3219,8 @@ export const weaponsData: Weapons = {
       heal: 161
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[51301]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Ability Pot."]
     ]
   }),
   "Ultimate Leather Collar": new UltimateWeapon({
@@ -3240,8 +3240,8 @@ export const weaponsData: Weapons = {
       heal: 149
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10601],
-      reinforcementAbilitiesData[10401]
+      reinforcementAbilitiesData["Boost HEAL"],
+      reinforcementAbilitiesData["Boost PDEF"]
     ]
   }),
   "Pilot's Collar": new Weapon({
@@ -3269,8 +3269,8 @@ export const weaponsData: Weapons = {
       heal: 232
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10601],
-      reinforcementAbilitiesData[51901]
+      reinforcementAbilitiesData["Boost HEAL"],
+      reinforcementAbilitiesData["Buff/Debuff Extension (Stats/Pot./Res.)"]
     ]
   }),
   "Kefka's Collar": new Weapon({
@@ -3295,8 +3295,8 @@ export const weaponsData: Weapons = {
       heal: 154
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[51501]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost Mag. Ability Pot."]
     ]
   }),
   "4-Point Shuriken": new Weapon({
@@ -3324,8 +3324,8 @@ export const weaponsData: Weapons = {
       heal: 184
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[51901]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Buff/Debuff Extension (Stats/Pot./Res.)"]
     ]
   }),
   "Boomerang": new Weapon({
@@ -3353,8 +3353,8 @@ export const weaponsData: Weapons = {
       heal: 181
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[20201]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost Fire Pot."]
     ]
   }),
   "Pinwheel": new Weapon({
@@ -3382,8 +3382,8 @@ export const weaponsData: Weapons = {
       heal: 184
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[20301]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost Ice Pot."]
     ]
   }),
   "Razor Ring": new Weapon({
@@ -3408,8 +3408,8 @@ export const weaponsData: Weapons = {
       heal: 170
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[20501]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Earth Pot."]
     ]
   }),
   "Hawkeye": new Weapon({
@@ -3434,8 +3434,8 @@ export const weaponsData: Weapons = {
       heal: 181
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[20501]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost Earth Pot."]
     ]
   }),
   "Crystal Cross": new Weapon({
@@ -3464,8 +3464,8 @@ export const weaponsData: Weapons = {
       heal: 184
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[51301]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Ability Pot."]
     ]
   }),
   "Wind Slash": new Weapon({
@@ -3493,8 +3493,8 @@ export const weaponsData: Weapons = {
       heal: 175
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[51901]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Buff/Debuff Extension (Stats/Pot./Res.)"]
     ]
   }),
   "Twin Viper": new Weapon({
@@ -3522,8 +3522,8 @@ export const weaponsData: Weapons = {
       heal: 182
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11001],
-      reinforcementAbilitiesData[51701]
+      reinforcementAbilitiesData["Boost ATK"],
+      reinforcementAbilitiesData["Boost Limit Break Pot."]
     ]
   }),
   "Spiral Shuriken": new Weapon({
@@ -3548,8 +3548,8 @@ export const weaponsData: Weapons = {
       heal: 168
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[20301]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost Ice Pot."]
     ]
   }),
   "Magic Shuriken": new Weapon({
@@ -3574,8 +3574,8 @@ export const weaponsData: Weapons = {
       heal: 168
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11001],
-      reinforcementAbilitiesData[20701]
+      reinforcementAbilitiesData["Boost ATK"],
+      reinforcementAbilitiesData["Boost Wind Pot."]
     ]
   }),
   "Diner Tray": new Weapon({
@@ -3600,8 +3600,8 @@ export const weaponsData: Weapons = {
       heal: 182
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[20701]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost Wind Pot."]
     ]
   }),
   "Arctic Star": new Weapon({
@@ -3630,8 +3630,8 @@ export const weaponsData: Weapons = {
       heal: 175
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[51901]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Buff/Debuff Extension (Stats/Pot./Res.)"]
     ]
   }),
   "Bamboo Ring": new Weapon({
@@ -3656,8 +3656,8 @@ export const weaponsData: Weapons = {
       heal: 165
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[30701],
-      reinforcementAbilitiesData[51801]
+      reinforcementAbilitiesData["Boost Wind Resist."],
+      reinforcementAbilitiesData["ATB Boost"]
     ]
   }),
   "Chariot Wheel": new Weapon({
@@ -3682,8 +3682,8 @@ export const weaponsData: Weapons = {
       heal: 172
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[20601]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Water Pot."]
     ]
   }),
   "Leviathan Cutter": new Weapon({
@@ -3708,8 +3708,8 @@ export const weaponsData: Weapons = {
       heal: 168
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[30401],
-      reinforcementAbilitiesData[10501]
+      reinforcementAbilitiesData["Boost Lightning Resist."],
+      reinforcementAbilitiesData["Boost MDEF"]
     ]
   }),
   "Striped Moogle Float": new Weapon({
@@ -3737,8 +3737,8 @@ export const weaponsData: Weapons = {
       heal: 178
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[20201]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost Fire Pot."]
     ]
   }),
   "Cactuar Fan": new Weapon({
@@ -3763,8 +3763,8 @@ export const weaponsData: Weapons = {
       heal: 164
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[51301]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Ability Pot."]
     ]
   }),
   "Bahamut Cutter": new Weapon({
@@ -3792,8 +3792,8 @@ export const weaponsData: Weapons = {
       heal: 174
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11201],
-      reinforcementAbilitiesData[51401]
+      reinforcementAbilitiesData["Boost PATK (All Allies)"],
+      reinforcementAbilitiesData["Boost Phys. Ability Pot."]
     ]
   }),
   "Ultimate 4-Point Shuriken": new UltimateWeapon({
@@ -3813,8 +3813,8 @@ export const weaponsData: Weapons = {
       heal: 130
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[51301],
-      reinforcementAbilitiesData[10501]
+      reinforcementAbilitiesData["Boost Ability Pot."],
+      reinforcementAbilitiesData["Boost MDEF"]
     ]
   }),
   "Little Red Wreath": new Weapon({
@@ -3839,8 +3839,8 @@ export const weaponsData: Weapons = {
       heal: 157
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[20301]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Ice Pot."]
     ]
   }),
   "Holiday Bell": new Weapon({
@@ -3871,8 +3871,8 @@ export const weaponsData: Weapons = {
       heal: 167
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[20701]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Wind Pot."]
     ]
   }),
   "Conformer": new UltimateWeapon({
@@ -3892,7 +3892,7 @@ export const weaponsData: Weapons = {
       heal: 129
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[51301],
+      reinforcementAbilitiesData["Boost Ability Pot."],
       reinforcementAbilitiesData["ATB Boost Arcanum"]
     ]
   }),
@@ -3918,8 +3918,8 @@ export const weaponsData: Weapons = {
       heal: 165
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11001],
-      reinforcementAbilitiesData[51301]
+      reinforcementAbilitiesData["Boost ATK"],
+      reinforcementAbilitiesData["Boost Ability Pot."]
     ]
   }),
   "Green Megaphone": new Weapon({
@@ -3947,8 +3947,8 @@ export const weaponsData: Weapons = {
       heal: 158
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[20601]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Water Pot."]
     ]
   }),
   "Blue Megaphone": new Weapon({
@@ -3973,8 +3973,8 @@ export const weaponsData: Weapons = {
       heal: 174
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[20301]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost Ice Pot."]
     ]
   }),
   "Red Megaphone": new Weapon({
@@ -3999,8 +3999,8 @@ export const weaponsData: Weapons = {
       heal: 175
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[20201]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost Fire Pot."]
     ]
   }),
   "Crystal Megaphone": new Weapon({
@@ -4029,8 +4029,8 @@ export const weaponsData: Weapons = {
       heal: 219
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11001],
-      reinforcementAbilitiesData[51501]
+      reinforcementAbilitiesData["Boost ATK"],
+      reinforcementAbilitiesData["Boost Mag. Ability Pot."]
     ]
   }),
   "Silver Megaphone": new Weapon({
@@ -4057,8 +4057,8 @@ export const weaponsData: Weapons = {
       heal: 189
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[51301]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost Ability Pot."]
     ]
   }),
   "Gold Megaphone": new Weapon({
@@ -4089,8 +4089,8 @@ export const weaponsData: Weapons = {
       heal: 184
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[20201]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost Fire Pot."]
     ]
   }),
   "Battle Trumpet": new Weapon({
@@ -4121,8 +4121,8 @@ export const weaponsData: Weapons = {
       heal: 178
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[51301]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost Ability Pot."]
     ]
   }),
   "Trumpet Shell": new Weapon({
@@ -4153,8 +4153,8 @@ export const weaponsData: Weapons = {
       heal: 168
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[30301],
-      reinforcementAbilitiesData[11501]
+      reinforcementAbilitiesData["Boost Ice Resist."],
+      reinforcementAbilitiesData["Boost MDEF (All Allies)"]
     ]
   }),
   "Marching Horn": new Weapon({
@@ -4183,8 +4183,8 @@ export const weaponsData: Weapons = {
       heal: 191
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10601],
-      reinforcementAbilitiesData[51901]
+      reinforcementAbilitiesData["Boost HEAL"],
+      reinforcementAbilitiesData["Buff/Debuff Extension (Stats/Pot./Res.)"]
     ]
   }),
   "Flower Vase": new Weapon({
@@ -4214,8 +4214,8 @@ export const weaponsData: Weapons = {
       heal: 215
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[51501]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Mag. Ability Pot."]
     ]
   }),
   "Humus Megaphone": new Weapon({
@@ -4240,8 +4240,8 @@ export const weaponsData: Weapons = {
       heal: 167
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[20701]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Wind Pot."]
     ]
   }),
   "Catsmegaphone": new Weapon({
@@ -4269,8 +4269,8 @@ export const weaponsData: Weapons = {
       heal: 174
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[51301]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost Ability Pot."]
     ]
   }),
   "Fireworks Megaphone": new Weapon({
@@ -4295,8 +4295,8 @@ export const weaponsData: Weapons = {
       heal: 160
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[51301]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Ability Pot."]
     ]
   }),
   "Quina Megaphone": new Weapon({
@@ -4327,8 +4327,8 @@ export const weaponsData: Weapons = {
       heal: 192
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11001],
-      reinforcementAbilitiesData[51901]
+      reinforcementAbilitiesData["Boost ATK"],
+      reinforcementAbilitiesData["Buff/Debuff Extension (Stats/Pot./Res.)"]
     ]
   }),
   "Alba Megaphone": new Weapon({
@@ -4353,8 +4353,8 @@ export const weaponsData: Weapons = {
       heal: 167
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[51301]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost Ability Pot."]
     ]
   }),
   "Ultimate Yellow Megaphone": new UltimateWeapon({
@@ -4374,8 +4374,8 @@ export const weaponsData: Weapons = {
       heal: 138
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[51901],
-      reinforcementAbilitiesData[10401]
+      reinforcementAbilitiesData["Buff/Debuff Extension (Stats/Pot./Res.)"],
+      reinforcementAbilitiesData["Boost PDEF"]
     ]
   }),
   "HP Shout": new UltimateWeapon({
@@ -4395,8 +4395,8 @@ export const weaponsData: Weapons = {
       heal: 145
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[51901],
-      reinforcementAbilitiesData[53801]
+      reinforcementAbilitiesData["Buff/Debuff Extension (Stats/Pot./Res.)"],
+      reinforcementAbilitiesData["Interruption ATB Boost"]
     ]
   }),
   "Witch's Broom": new Weapon({
@@ -4427,8 +4427,8 @@ export const weaponsData: Weapons = {
       heal: 158
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11001],
-      reinforcementAbilitiesData[20401]
+      reinforcementAbilitiesData["Boost ATK"],
+      reinforcementAbilitiesData["Boost Lightning Pot."]
     ]
   }),
   "Icebolt Megaphone": new Weapon({
@@ -4459,8 +4459,8 @@ export const weaponsData: Weapons = {
       heal: 177
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[30201],
-      reinforcementAbilitiesData[10101]
+      reinforcementAbilitiesData["Boost Fire Resist."],
+      reinforcementAbilitiesData["Boost HP"]
     ]
   }),
   "Cath Palug": new Weapon({
@@ -4485,8 +4485,8 @@ export const weaponsData: Weapons = {
       heal: 164
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[20301]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Ice Pot."]
     ]
   }),
   "Gilded Age": new Weapon({
@@ -4513,8 +4513,8 @@ export const weaponsData: Weapons = {
       heal: 206
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[51301]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost Ability Pot."]
     ]
   }),
   "S1976C": new Weapon({
@@ -4546,8 +4546,8 @@ export const weaponsData: Weapons = {
       heal: 165
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[51301]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Ability Pot."]
     ]
   }),
   "Shortbarrel": new Weapon({
@@ -4573,8 +4573,8 @@ export const weaponsData: Weapons = {
       heal: 161
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[20701]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost Wind Pot."]
     ]
   }),
   "T03 Model N": new Weapon({
@@ -4600,8 +4600,8 @@ export const weaponsData: Weapons = {
       heal: 157
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[51401]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost Phys. Ability Pot."]
     ]
   }),
   "Sawed-Off GS": new Weapon({
@@ -4633,8 +4633,8 @@ export const weaponsData: Weapons = {
       heal: 203
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11001],
-      reinforcementAbilitiesData[51501]
+      reinforcementAbilitiesData["Boost ATK"],
+      reinforcementAbilitiesData["Boost Mag. Ability Pot."]
     ]
   }),
   "Chiron": new Weapon({
@@ -4663,8 +4663,8 @@ export const weaponsData: Weapons = {
       heal: 168
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[51901]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Buff/Debuff Extension (Stats/Pot./Res.)"]
     ]
   }),
   "Double Stem E": new Weapon({
@@ -4692,8 +4692,8 @@ export const weaponsData: Weapons = {
       heal: 158
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[51501]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Mag. Ability Pot."]
     ]
   }),
   "White Dog": new Weapon({
@@ -4719,8 +4719,8 @@ export const weaponsData: Weapons = {
       heal: 165
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11301],
-      reinforcementAbilitiesData[20501]
+      reinforcementAbilitiesData["Boost MATK (All Allies)"],
+      reinforcementAbilitiesData["Boost Earth Pot."]
     ]
   }),
   "Silver Rifle": new Weapon({
@@ -4746,8 +4746,8 @@ export const weaponsData: Weapons = {
       heal: 154
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[30601],
-      reinforcementAbilitiesData[51801]
+      reinforcementAbilitiesData["Boost Water Resist."],
+      reinforcementAbilitiesData["ATB Boost"]
     ]
   }),
   "Hugin & Munin": new Weapon({
@@ -4773,8 +4773,8 @@ export const weaponsData: Weapons = {
       heal: 164
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[51501]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Mag. Ability Pot."]
     ]
   }),
   "Quicksilver": new Weapon({
@@ -4800,8 +4800,8 @@ export const weaponsData: Weapons = {
       heal: 165
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11001],
-      reinforcementAbilitiesData[51701]
+      reinforcementAbilitiesData["Boost ATK"],
+      reinforcementAbilitiesData["Boost Limit Break Pot."]
     ]
   }),
   "Ultimate Quicksilver": new UltimateWeapon({
@@ -4821,8 +4821,8 @@ export const weaponsData: Weapons = {
       heal: 118
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[51301],
-      reinforcementAbilitiesData[10401]
+      reinforcementAbilitiesData["Boost Ability Pot."],
+      reinforcementAbilitiesData["Boost PDEF"]
     ]
   }),
   "Crow Familiar": new Weapon({
@@ -4848,8 +4848,8 @@ export const weaponsData: Weapons = {
       heal: 167
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[20401]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Lightning Pot."]
     ]
   }),
   "Icebolt Shooter": new Weapon({
@@ -4880,8 +4880,8 @@ export const weaponsData: Weapons = {
       heal: 165
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[30601],
-      reinforcementAbilitiesData[10101]
+      reinforcementAbilitiesData["Boost Water Resist."],
+      reinforcementAbilitiesData["Boost HP"]
     ]
   }),
   "Rhad Gun": new Weapon({
@@ -4909,8 +4909,8 @@ export const weaponsData: Weapons = {
       heal: 170
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[51301]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost Ability Pot."]
     ]
   }),
   "Eligor Gun": new Weapon({
@@ -4935,8 +4935,8 @@ export const weaponsData: Weapons = {
       heal: 170
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[20301]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost Ice Pot."]
     ]
   }),
   "Type-99 Longsword": new Weapon({
@@ -4961,8 +4961,8 @@ export const weaponsData: Weapons = {
       heal: 189
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11001],
-      reinforcementAbilitiesData[10801]
+      reinforcementAbilitiesData["Boost ATK"],
+      reinforcementAbilitiesData["Boost Crit. Pot."]
     ]
   }),
   "Beach Parasol": new Weapon({
@@ -4987,8 +4987,8 @@ export const weaponsData: Weapons = {
       heal: 157
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[10501]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost MDEF"]
     ]
   }),
   "Enhance Sword (Z)": new Weapon({
@@ -5013,8 +5013,8 @@ export const weaponsData: Weapons = {
       heal: 182
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10601],
-      reinforcementAbilitiesData[51301]
+      reinforcementAbilitiesData["Boost HEAL"],
+      reinforcementAbilitiesData["Boost Ability Pot."]
     ]
   }),
   "Defender": new Weapon({
@@ -5043,8 +5043,8 @@ export const weaponsData: Weapons = {
       heal: 206
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10601],
-      reinforcementAbilitiesData[20301]
+      reinforcementAbilitiesData["Boost HEAL"],
+      reinforcementAbilitiesData["Boost Ice Pot."]
     ]
   }),
   "Crystal Sword (Z)": new Weapon({
@@ -5069,8 +5069,8 @@ export const weaponsData: Weapons = {
       heal: 223
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11001],
-      reinforcementAbilitiesData[20201]
+      reinforcementAbilitiesData["Boost ATK"],
+      reinforcementAbilitiesData["Boost Fire Pot."]
     ]
   }),
   "Falchion": new Weapon({
@@ -5095,8 +5095,8 @@ export const weaponsData: Weapons = {
       heal: 198
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[20701]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost Wind Pot."]
     ]
   }),
   "Zweihander": new Weapon({
@@ -5121,8 +5121,8 @@ export const weaponsData: Weapons = {
       heal: 181
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11001],
-      reinforcementAbilitiesData[30201]
+      reinforcementAbilitiesData["Boost ATK"],
+      reinforcementAbilitiesData["Boost Fire Resist."]
     ]
   }),
   "Arc Sword": new Weapon({
@@ -5150,8 +5150,8 @@ export const weaponsData: Weapons = {
       heal: 178
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[30601]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Water Resist."]
     ]
   }),
   "Cutlass": new Weapon({
@@ -5179,8 +5179,8 @@ export const weaponsData: Weapons = {
       heal: 191
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10401],
-      reinforcementAbilitiesData[51301]
+      reinforcementAbilitiesData["Boost PDEF"],
+      reinforcementAbilitiesData["Boost Ability Pot."]
     ]
   }),
   "Ceremonial Sword (Z)": new Weapon({
@@ -5208,8 +5208,8 @@ export const weaponsData: Weapons = {
       heal: 184
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[51401]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost Phys. Ability Pot."]
     ]
   }),
   "Bouquet": new Weapon({
@@ -5234,8 +5234,8 @@ export const weaponsData: Weapons = {
       heal: 157
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[30201],
-      reinforcementAbilitiesData[11401]
+      reinforcementAbilitiesData["Boost Fire Resist."],
+      reinforcementAbilitiesData["Boost PDEF (All Allies)"]
     ]
   }),
   "Pressure Ridge": new Weapon({
@@ -5263,8 +5263,8 @@ export const weaponsData: Weapons = {
       heal: 174
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[20301]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost Ice Pot."]
     ]
   }),
   "Iron Greatsword": new Weapon({
@@ -5291,8 +5291,8 @@ export const weaponsData: Weapons = {
       heal: 174
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11001],
-      reinforcementAbilitiesData[10801]
+      reinforcementAbilitiesData["Boost ATK"],
+      reinforcementAbilitiesData["Boost Crit. Pot."]
     ]
   }),
   "Ifrit's Sword": new Weapon({
@@ -5317,8 +5317,8 @@ export const weaponsData: Weapons = {
       heal: 174
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[30301],
-      reinforcementAbilitiesData[10101]
+      reinforcementAbilitiesData["Boost Ice Resist."],
+      reinforcementAbilitiesData["Boost HP"]
     ]
   }),
   "Twinkling Star": new Weapon({
@@ -5349,8 +5349,8 @@ export const weaponsData: Weapons = {
       heal: 191
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[51401]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost Phys. Ability Pot."]
     ]
   }),
   "Black Whiskers": new Weapon({
@@ -5381,8 +5381,8 @@ export const weaponsData: Weapons = {
       heal: 188
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[20601]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost Water Pot."]
     ]
   }),
   "Stream Guard": new Weapon({
@@ -5407,8 +5407,8 @@ export const weaponsData: Weapons = {
       heal: 170
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11301],
-      reinforcementAbilitiesData[20201]
+      reinforcementAbilitiesData["Boost MATK (All Allies)"],
+      reinforcementAbilitiesData["Boost Fire Pot."]
     ]
   }),
   "Zinogre Blade": new Weapon({
@@ -5433,8 +5433,8 @@ export const weaponsData: Weapons = {
       heal: 157
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[20401]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost Lightning Pot."]
     ]
   }),
   "Carrot Sword": new Weapon({
@@ -5459,8 +5459,8 @@ export const weaponsData: Weapons = {
       heal: 170
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[20201]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Fire Pot."]
     ]
   }),
   "Alba Blade": new Weapon({
@@ -5485,8 +5485,8 @@ export const weaponsData: Weapons = {
       heal: 167
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[51301]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost Ability Pot."]
     ]
   }),
   "Beatrix Sword": new Weapon({
@@ -5511,8 +5511,8 @@ export const weaponsData: Weapons = {
       heal: 154
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[20701]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost Wind Pot."]
     ]
   }),
   "Ultimate Type-99 Longsword": new UltimateWeapon({
@@ -5532,8 +5532,8 @@ export const weaponsData: Weapons = {
       heal: 126
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[51301],
-      reinforcementAbilitiesData[10501]
+      reinforcementAbilitiesData["Boost Ability Pot."],
+      reinforcementAbilitiesData["Boost MDEF"]
     ]
   }),
   "Buster Sword Origin": new Weapon({
@@ -5558,8 +5558,8 @@ export const weaponsData: Weapons = {
       heal: 189
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10401],
-      reinforcementAbilitiesData[10101]
+      reinforcementAbilitiesData["Boost PDEF"],
+      reinforcementAbilitiesData["Boost HP"]
     ]
   }),
   "Nameless": new Weapon({
@@ -5587,8 +5587,8 @@ export const weaponsData: Weapons = {
       heal: 167
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[30401]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost Lightning Resist."]
     ]
   }),
   "Edged Wings": new Weapon({
@@ -5613,8 +5613,8 @@ export const weaponsData: Weapons = {
       heal: 165
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[20301]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Ice Pot."]
     ]
   }),
   "Glaireid": new Weapon({
@@ -5639,8 +5639,8 @@ export const weaponsData: Weapons = {
       heal: 177
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[51701]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost Limit Break Pot."]
     ]
   }),
   "Aonibi": new Weapon({
@@ -5669,8 +5669,8 @@ export const weaponsData: Weapons = {
       heal: 208
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[51301]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost Ability Pot."]
     ]
   }),
   "Northern Lights": new Weapon({
@@ -5698,8 +5698,8 @@ export const weaponsData: Weapons = {
       heal: 188
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10501],
-      reinforcementAbilitiesData[30201]
+      reinforcementAbilitiesData["Boost MDEF"],
+      reinforcementAbilitiesData["Boost Fire Resist."]
     ]
   }),
   "Prototype Crimson Blade": new Weapon({
@@ -5724,8 +5724,8 @@ export const weaponsData: Weapons = {
       heal: 174
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11001],
-      reinforcementAbilitiesData[20201]
+      reinforcementAbilitiesData["Boost ATK"],
+      reinforcementAbilitiesData["Boost Fire Pot."]
     ]
   }),
   "CC Alloy Sword": new Weapon({
@@ -5750,8 +5750,8 @@ export const weaponsData: Weapons = {
       heal: 172
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[20401]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Lightning Pot."]
     ]
   }),
   "Mythril Type-0 Katana": new Weapon({
@@ -5780,8 +5780,8 @@ export const weaponsData: Weapons = {
       heal: 213
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[51501]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost Mag. Ability Pot."]
     ]
   }),
   "Shinra Blade: Model I": new Weapon({
@@ -5806,8 +5806,8 @@ export const weaponsData: Weapons = {
       heal: 168
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11001],
-      reinforcementAbilitiesData[51301]
+      reinforcementAbilitiesData["Boost ATK"],
+      reinforcementAbilitiesData["Boost Ability Pot."]
     ]
   }),
   "Torn Wing": new Weapon({
@@ -5835,8 +5835,8 @@ export const weaponsData: Weapons = {
       heal: 178
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11001],
-      reinforcementAbilitiesData[10401]
+      reinforcementAbilitiesData["Boost ATK"],
+      reinforcementAbilitiesData["Boost PDEF"]
     ]
   }),
   "World Tree Bough": new Weapon({
@@ -5861,8 +5861,8 @@ export const weaponsData: Weapons = {
       heal: 165
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[30501],
-      reinforcementAbilitiesData[51801]
+      reinforcementAbilitiesData["Boost Earth Resist."],
+      reinforcementAbilitiesData["ATB Boost"]
     ]
   }),
   "Dark Heavens": new Weapon({
@@ -5887,8 +5887,8 @@ export const weaponsData: Weapons = {
       heal: 181
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[20701]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost Wind Pot."]
     ]
   }),
   "Kuja's Spirit Blade": new Weapon({
@@ -5919,8 +5919,8 @@ export const weaponsData: Weapons = {
       heal: 177
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[51301]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Ability Pot."]
     ]
   }),
   "Radiant Edge": new Weapon({
@@ -5951,8 +5951,8 @@ export const weaponsData: Weapons = {
       heal: 170
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[20201]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost Fire Pot."]
     ]
   }),
   "Protector's Blade": new Weapon({
@@ -5977,8 +5977,8 @@ export const weaponsData: Weapons = {
       heal: 174
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11301],
-      reinforcementAbilitiesData[51501]
+      reinforcementAbilitiesData["Boost MATK (All Allies)"],
+      reinforcementAbilitiesData["Boost Mag. Ability Pot."]
     ]
   }),
   "Flame Dragon Blade": new Weapon({
@@ -6006,8 +6006,8 @@ export const weaponsData: Weapons = {
       heal: 167
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[30301],
-      reinforcementAbilitiesData[10501]
+      reinforcementAbilitiesData["Boost Ice Resist."],
+      reinforcementAbilitiesData["Boost MDEF"]
     ]
   }),
   "Ashura": new Weapon({
@@ -6032,8 +6032,8 @@ export const weaponsData: Weapons = {
       heal: 170
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[10501]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost MDEF"]
     ]
   }),
   "Shinra Military Sword": new Weapon({
@@ -6064,8 +6064,8 @@ export const weaponsData: Weapons = {
       heal: 170
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[20701]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost Wind Pot."]
     ]
   }),
   "Shinra Wyvern Blade": new Weapon({
@@ -6092,8 +6092,8 @@ export const weaponsData: Weapons = {
       heal: 167
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[51301]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Ability Pot."]
     ]
   }),
   "Tempest": new Weapon({
@@ -6121,8 +6121,8 @@ export const weaponsData: Weapons = {
       heal: 165
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[20601]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost Water Pot."]
     ]
   }),
   "Blue Bramble": new Weapon({
@@ -6150,8 +6150,8 @@ export const weaponsData: Weapons = {
       heal: 164
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[20501]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Earth Pot."]
     ]
   }),
   "Ultimate Nameless": new UltimateWeapon({
@@ -6171,8 +6171,8 @@ export const weaponsData: Weapons = {
       heal: 122
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[51301],
-      reinforcementAbilitiesData[10401]
+      reinforcementAbilitiesData["Boost Ability Pot."],
+      reinforcementAbilitiesData["Boost PDEF"]
     ]
   }),
   "Genji Blade": new UltimateWeapon({
@@ -6192,8 +6192,8 @@ export const weaponsData: Weapons = {
       heal: 126
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[51301],
-      reinforcementAbilitiesData[53601]
+      reinforcementAbilitiesData["Boost Ability Pot."],
+      reinforcementAbilitiesData["Interruption Mastery"]
     ]
   }),
   "Edgar's Coiled Blade": new Weapon({
@@ -6218,8 +6218,8 @@ export const weaponsData: Weapons = {
       heal: 160
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[20601]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Water Pot."]
     ]
   }),
   "Wintercrest Blade": new Weapon({
@@ -6244,8 +6244,8 @@ export const weaponsData: Weapons = {
       heal: 164
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[20701]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost Wind Pot."]
     ]
   }),
   "Personal Style": new Weapon({
@@ -6270,8 +6270,8 @@ export const weaponsData: Weapons = {
       heal: 178
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[20601]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost Water Pot."]
     ]
   }),
   "Crewkicker": new Weapon({
@@ -6296,8 +6296,8 @@ export const weaponsData: Weapons = {
       heal: 178
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[20201]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost Fire Pot."]
     ]
   }),
   "Jiggy Fam": new Weapon({
@@ -6322,8 +6322,8 @@ export const weaponsData: Weapons = {
       heal: 184
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[20501]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Earth Pot."]
     ]
   }),
   "Hardcore Squad": new Weapon({
@@ -6354,8 +6354,8 @@ export const weaponsData: Weapons = {
       heal: 181
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10601],
-      reinforcementAbilitiesData[10801]
+      reinforcementAbilitiesData["Boost HEAL"],
+      reinforcementAbilitiesData["Boost Crit. Pot."]
     ]
   }),
   "Rest in Peace": new Weapon({
@@ -6380,8 +6380,8 @@ export const weaponsData: Weapons = {
       heal: 167
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11001],
-      reinforcementAbilitiesData[30701]
+      reinforcementAbilitiesData["Boost ATK"],
+      reinforcementAbilitiesData["Boost Wind Resist."]
     ]
   }),
   "Ultimatic": new Weapon({
@@ -6406,8 +6406,8 @@ export const weaponsData: Weapons = {
       heal: 178
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11001],
-      reinforcementAbilitiesData[51401]
+      reinforcementAbilitiesData["Boost ATK"],
+      reinforcementAbilitiesData["Boost Phys. Ability Pot."]
     ]
   }),
   "Piece of Cake": new Weapon({
@@ -6435,8 +6435,8 @@ export const weaponsData: Weapons = {
       heal: 174
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10401],
-      reinforcementAbilitiesData[30301]
+      reinforcementAbilitiesData["Boost PDEF"],
+      reinforcementAbilitiesData["Boost Ice Resist."]
     ]
   }),
   "Shockbuster": new Weapon({
@@ -6461,8 +6461,8 @@ export const weaponsData: Weapons = {
       heal: 181
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11001],
-      reinforcementAbilitiesData[20401]
+      reinforcementAbilitiesData["Boost ATK"],
+      reinforcementAbilitiesData["Boost Lightning Pot."]
     ]
   }),
   "Apology in Hell": new Weapon({
@@ -6487,8 +6487,8 @@ export const weaponsData: Weapons = {
       heal: 178
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11001],
-      reinforcementAbilitiesData[30301]
+      reinforcementAbilitiesData["Boost ATK"],
+      reinforcementAbilitiesData["Boost Ice Resist."]
     ]
   }),
   "Squeaky Hammer": new Weapon({
@@ -6513,8 +6513,8 @@ export const weaponsData: Weapons = {
       heal: 151
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[30601],
-      reinforcementAbilitiesData[11401]
+      reinforcementAbilitiesData["Boost Water Resist."],
+      reinforcementAbilitiesData["Boost PDEF (All Allies)"]
     ]
   }),
   "Inferno Grave": new Weapon({
@@ -6539,8 +6539,8 @@ export const weaponsData: Weapons = {
       heal: 165
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[30301],
-      reinforcementAbilitiesData[11001]
+      reinforcementAbilitiesData["Boost Ice Resist."],
+      reinforcementAbilitiesData["Boost ATK"]
     ]
   }),
   "Pumpkin Lamppost": new Weapon({
@@ -6569,8 +6569,8 @@ export const weaponsData: Weapons = {
       heal: 208
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[51301]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost Ability Pot."]
     ]
   }),
   "Thousand Waves": new Weapon({
@@ -6595,8 +6595,8 @@ export const weaponsData: Weapons = {
       heal: 153
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[10501]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost MDEF"]
     ]
   }),
   "Steiner's Blade": new Weapon({
@@ -6623,8 +6623,8 @@ export const weaponsData: Weapons = {
       heal: 150
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11001],
-      reinforcementAbilitiesData[51701]
+      reinforcementAbilitiesData["Boost ATK"],
+      reinforcementAbilitiesData["Boost Limit Break Pot."]
     ]
   }),
   "Stream Slasher": new Weapon({
@@ -6649,8 +6649,8 @@ export const weaponsData: Weapons = {
       heal: 161
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11201],
-      reinforcementAbilitiesData[20601]
+      reinforcementAbilitiesData["Boost PATK (All Allies)"],
+      reinforcementAbilitiesData["Boost Water Pot."]
     ]
   }),
   "Best Wishes": new Weapon({
@@ -6677,8 +6677,8 @@ export const weaponsData: Weapons = {
       heal: 172
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10401],
-      reinforcementAbilitiesData[10501]
+      reinforcementAbilitiesData["Boost PDEF"],
+      reinforcementAbilitiesData["Boost MDEF"]
     ]
   }),
   "Radglaive": new Weapon({
@@ -6703,8 +6703,8 @@ export const weaponsData: Weapons = {
       heal: 168
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[20601]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Water Pot."]
     ]
   }),
   "Silver Sol Buster": new Weapon({
@@ -6729,8 +6729,8 @@ export const weaponsData: Weapons = {
       heal: 170
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[51301]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Ability Pot."]
     ]
   }),
   "Slay the Day": new Weapon({
@@ -6761,8 +6761,8 @@ export const weaponsData: Weapons = {
       heal: 160
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[20601]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost Water Pot."]
     ]
   }),
   "Ultimate Personal Style": new UltimateWeapon({
@@ -6782,8 +6782,8 @@ export const weaponsData: Weapons = {
       heal: 118
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10501],
-      reinforcementAbilitiesData[10101]
+      reinforcementAbilitiesData["Boost MDEF"],
+      reinforcementAbilitiesData["Boost HP"]
     ]
   }),
   "Broadsword: Axis": new Weapon({
@@ -6808,8 +6808,8 @@ export const weaponsData: Weapons = {
       heal: 205
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[20401]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost Lightning Pot."]
     ]
   }),
   "Orthodox Raven": new Weapon({
@@ -6834,8 +6834,8 @@ export const weaponsData: Weapons = {
       heal: 191
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[20601]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost Water Pot."]
     ]
   }),
   "Absolute Royal": new Weapon({
@@ -6860,8 +6860,8 @@ export const weaponsData: Weapons = {
       heal: 195
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[20301]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Ice Pot."]
     ]
   }),
   "Prime Number": new Weapon({
@@ -6886,8 +6886,8 @@ export const weaponsData: Weapons = {
       heal: 220
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10601],
-      reinforcementAbilitiesData[30401]
+      reinforcementAbilitiesData["Boost HEAL"],
+      reinforcementAbilitiesData["Boost Lightning Resist."]
     ]
   }),
   "Espee Rapiere Next-G": new Weapon({
@@ -6912,8 +6912,8 @@ export const weaponsData: Weapons = {
       heal: 232
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10501],
-      reinforcementAbilitiesData[51501]
+      reinforcementAbilitiesData["Boost MDEF"],
+      reinforcementAbilitiesData["Boost Mag. Ability Pot."]
     ]
   }),
   "Core Defender": new Weapon({
@@ -6941,8 +6941,8 @@ export const weaponsData: Weapons = {
       heal: 182
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[30601]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Water Resist."]
     ]
   }),
   "Centipede": new Weapon({
@@ -6970,8 +6970,8 @@ export const weaponsData: Weapons = {
       heal: 229
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10601],
-      reinforcementAbilitiesData[51901]
+      reinforcementAbilitiesData["Boost HEAL"],
+      reinforcementAbilitiesData["Buff/Debuff Extension (Stats/Pot./Res.)"]
     ]
   }),
   "Stingray": new Weapon({
@@ -6999,8 +6999,8 @@ export const weaponsData: Weapons = {
       heal: 191
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[30701]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost Wind Resist."]
     ]
   }),
   "Killer Hornet": new Weapon({
@@ -7025,8 +7025,8 @@ export const weaponsData: Weapons = {
       heal: 165
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[51401]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost Phys. Ability Pot."]
     ]
   }),
   "Bramble Spine": new Weapon({
@@ -7055,8 +7055,8 @@ export const weaponsData: Weapons = {
       heal: 191
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10601],
-      reinforcementAbilitiesData[10501]
+      reinforcementAbilitiesData["Boost HEAL"],
+      reinforcementAbilitiesData["Boost MDEF"]
     ]
   }),
   "Syringe Rapier": new Weapon({
@@ -7087,8 +7087,8 @@ export const weaponsData: Weapons = {
       heal: 222
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[51901]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Buff/Debuff Extension (Stats/Pot./Res.)"]
     ]
   }),
   "Foam Sword": new Weapon({
@@ -7113,8 +7113,8 @@ export const weaponsData: Weapons = {
       heal: 175
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[30401],
-      reinforcementAbilitiesData[11501]
+      reinforcementAbilitiesData["Boost Lightning Resist."],
+      reinforcementAbilitiesData["Boost MDEF (All Allies)"]
     ]
   }),
   "Slick Beetle": new Weapon({
@@ -7142,8 +7142,8 @@ export const weaponsData: Weapons = {
       heal: 185
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[10801]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost Crit. Pot."]
     ]
   }),
   "Bahamut Rapier": new Weapon({
@@ -7168,8 +7168,8 @@ export const weaponsData: Weapons = {
       heal: 175
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10501],
-      reinforcementAbilitiesData[10301]
+      reinforcementAbilitiesData["Boost MDEF"],
+      reinforcementAbilitiesData["Boost MATK"]
     ]
   }),
   "Holiday Cane": new Weapon({
@@ -7194,8 +7194,8 @@ export const weaponsData: Weapons = {
       heal: 175
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[10401]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost PDEF"]
     ]
   }),
   "Giant Fork": new Weapon({
@@ -7223,8 +7223,8 @@ export const weaponsData: Weapons = {
       heal: 170
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[10401]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost PDEF"]
     ]
   }),
   "Humus Rapier": new Weapon({
@@ -7249,8 +7249,8 @@ export const weaponsData: Weapons = {
       heal: 172
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[20701]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Wind Pot."]
     ]
   }),
   "Firefish": new Weapon({
@@ -7275,8 +7275,8 @@ export const weaponsData: Weapons = {
       heal: 175
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[20201]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost Fire Pot."]
     ]
   }),
   "Ultimate Broadsword: Axis": new UltimateWeapon({
@@ -7296,8 +7296,8 @@ export const weaponsData: Weapons = {
       heal: 121
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10601],
-      reinforcementAbilitiesData[10501]
+      reinforcementAbilitiesData["Boost HEAL"],
+      reinforcementAbilitiesData["Boost MDEF"]
     ]
   }),
   "Candle Rapier": new Weapon({
@@ -7322,8 +7322,8 @@ export const weaponsData: Weapons = {
       heal: 170
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[20401]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Lightning Pot."]
     ]
   }),
   "V39": new Weapon({
@@ -7348,8 +7348,8 @@ export const weaponsData: Weapons = {
       heal: 177
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11001],
-      reinforcementAbilitiesData[30201]
+      reinforcementAbilitiesData["Boost ATK"],
+      reinforcementAbilitiesData["Boost Fire Resist."]
     ]
   }),
   "Pulse Gun": new Weapon({
@@ -7374,8 +7374,8 @@ export const weaponsData: Weapons = {
       heal: 181
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11001],
-      reinforcementAbilitiesData[20701]
+      reinforcementAbilitiesData["Boost ATK"],
+      reinforcementAbilitiesData["Boost Wind Pot."]
     ]
   }),
   "Serpent Eater": new Weapon({
@@ -7400,8 +7400,8 @@ export const weaponsData: Weapons = {
       heal: 175
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[20601]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost Water Pot."]
     ]
   }),
   "Thunderbird": new Weapon({
@@ -7429,8 +7429,8 @@ export const weaponsData: Weapons = {
       heal: 168
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[20401]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Lightning Pot."]
     ]
   }),
   "Tranquilizer Gun": new Weapon({
@@ -7455,8 +7455,8 @@ export const weaponsData: Weapons = {
       heal: 215
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10601],
-      reinforcementAbilitiesData[51301]
+      reinforcementAbilitiesData["Boost HEAL"],
+      reinforcementAbilitiesData["Boost Ability Pot."]
     ]
   }),
   "SSR1976": new Weapon({
@@ -7484,8 +7484,8 @@ export const weaponsData: Weapons = {
       heal: 172
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[20401]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost Lightning Pot."]
     ]
   }),
   "Mad Minute": new Weapon({
@@ -7513,8 +7513,8 @@ export const weaponsData: Weapons = {
       heal: 182
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[51401]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost Phys. Ability Pot."]
     ]
   }),
   "Bald Eagle": new Weapon({
@@ -7542,8 +7542,8 @@ export const weaponsData: Weapons = {
       heal: 188
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[20301]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost Ice Pot."]
     ]
   }),
   "Black Rifle": new Weapon({
@@ -7569,8 +7569,8 @@ export const weaponsData: Weapons = {
       heal: 174
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[10801]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost Crit. Pot."]
     ]
   }),
   "Rubber Band Gun": new Weapon({
@@ -7595,8 +7595,8 @@ export const weaponsData: Weapons = {
       heal: 161
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[30701],
-      reinforcementAbilitiesData[11401]
+      reinforcementAbilitiesData["Boost Wind Resist."],
+      reinforcementAbilitiesData["Boost PDEF (All Allies)"]
     ]
   }),
   "Featherscatter": new Weapon({
@@ -7623,8 +7623,8 @@ export const weaponsData: Weapons = {
       heal: 174
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[10401]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost PDEF"]
     ]
   }),
   "Barn Swallow": new Weapon({
@@ -7649,8 +7649,8 @@ export const weaponsData: Weapons = {
       heal: 184
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[30401]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Lightning Resist."]
     ]
   }),
   "Pumpkin Blaster": new Weapon({
@@ -7678,8 +7678,8 @@ export const weaponsData: Weapons = {
       heal: 158
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10601],
-      reinforcementAbilitiesData[10501]
+      reinforcementAbilitiesData["Boost HEAL"],
+      reinforcementAbilitiesData["Boost MDEF"]
     ]
   }),
   "Rifle of Levin": new Weapon({
@@ -7704,8 +7704,8 @@ export const weaponsData: Weapons = {
       heal: 167
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[30601],
-      reinforcementAbilitiesData[11001]
+      reinforcementAbilitiesData["Boost Water Resist."],
+      reinforcementAbilitiesData["Boost ATK"]
     ]
   }),
   "Holiday Revolver": new Weapon({
@@ -7730,8 +7730,8 @@ export const weaponsData: Weapons = {
       heal: 174
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[20501]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Earth Pot."]
     ]
   }),
   "Vivi's Magical Gun": new Weapon({
@@ -7756,8 +7756,8 @@ export const weaponsData: Weapons = {
       heal: 150
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11001],
-      reinforcementAbilitiesData[51701]
+      reinforcementAbilitiesData["Boost ATK"],
+      reinforcementAbilitiesData["Boost Limit Break Pot."]
     ]
   }),
   "Rose Musket": new Weapon({
@@ -7785,8 +7785,8 @@ export const weaponsData: Weapons = {
       heal: 170
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[51501],
-      reinforcementAbilitiesData[20201]
+      reinforcementAbilitiesData["Boost Mag. Ability Pot."],
+      reinforcementAbilitiesData["Boost Fire Pot."]
     ]
   }),
   "Turks' Rifle": new Weapon({
@@ -7813,8 +7813,8 @@ export const weaponsData: Weapons = {
       heal: 157
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[51301]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost Ability Pot."]
     ]
   }),
   "Marine Shooter": new Weapon({
@@ -7845,8 +7845,8 @@ export const weaponsData: Weapons = {
       heal: 167
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[51401],
-      reinforcementAbilitiesData[20201]
+      reinforcementAbilitiesData["Boost Phys. Ability Pot."],
+      reinforcementAbilitiesData["Boost Fire Pot."]
     ]
   }),
   "Nightjar": new Weapon({
@@ -7877,8 +7877,8 @@ export const weaponsData: Weapons = {
       heal: 161
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[51301]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost Ability Pot."]
     ]
   }),
   "Ultimate V39": new UltimateWeapon({
@@ -7898,8 +7898,8 @@ export const weaponsData: Weapons = {
       heal: 143
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[51901],
-      reinforcementAbilitiesData[10401]
+      reinforcementAbilitiesData["Buff/Debuff Extension (Stats/Pot./Res.)"],
+      reinforcementAbilitiesData["Boost PDEF"]
     ]
   }),
   "Eligor Rifle": new Weapon({
@@ -7924,8 +7924,8 @@ export const weaponsData: Weapons = {
       heal: 174
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[20301]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost Ice Pot."]
     ]
   }),
   "Type-90 Longsword": new Weapon({
@@ -7951,8 +7951,8 @@ export const weaponsData: Weapons = {
       heal: 164
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10401],
-      reinforcementAbilitiesData[51401]
+      reinforcementAbilitiesData["Boost PDEF"],
+      reinforcementAbilitiesData["Boost Phys. Ability Pot."]
     ]
   }),
   "Greatsword (A)": new Weapon({
@@ -7983,8 +7983,8 @@ export const weaponsData: Weapons = {
       heal: 161
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[51401]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost Phys. Ability Pot."]
     ]
   }),
   "Type-91 Two-Hander": new Weapon({
@@ -8014,8 +8014,8 @@ export const weaponsData: Weapons = {
       heal: 174
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[51301]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost Ability Pot."]
     ]
   }),
   "Shinra Greatsword: Model I": new Weapon({
@@ -8046,8 +8046,8 @@ export const weaponsData: Weapons = {
       heal: 182
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[51901]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Buff/Debuff Extension (Stats/Pot./Res.)"]
     ]
   }),
   "CC Alloy Greatsword": new Weapon({
@@ -8072,8 +8072,8 @@ export const weaponsData: Weapons = {
       heal: 167
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[20401]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Lightning Pot."]
     ]
   }),
   "Stalwart Integrity": new Weapon({
@@ -8104,8 +8104,8 @@ export const weaponsData: Weapons = {
       heal: 212
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[51901]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Buff/Debuff Extension (Stats/Pot./Res.)"]
     ]
   }),
   "Innocent Warrior": new Weapon({
@@ -8130,8 +8130,8 @@ export const weaponsData: Weapons = {
       heal: 182
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[20201]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Fire Pot."]
     ]
   }),
   "Gargantuan Monolith": new Weapon({
@@ -8159,8 +8159,8 @@ export const weaponsData: Weapons = {
       heal: 203
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[10501]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost MDEF"]
     ]
   }),
   "Sequoiadendron": new Weapon({
@@ -8185,8 +8185,8 @@ export const weaponsData: Weapons = {
       heal: 181
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[20501]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost Earth Pot."]
     ]
   }),
   "Tranquility": new Weapon({
@@ -8214,8 +8214,8 @@ export const weaponsData: Weapons = {
       heal: 170
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11201],
-      reinforcementAbilitiesData[20601]
+      reinforcementAbilitiesData["Boost PATK (All Allies)"],
+      reinforcementAbilitiesData["Boost Water Pot."]
     ]
   }),
   "Orchard Shovel": new Weapon({
@@ -8240,8 +8240,8 @@ export const weaponsData: Weapons = {
       heal: 168
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[30501],
-      reinforcementAbilitiesData[11401]
+      reinforcementAbilitiesData["Boost Earth Resist."],
+      reinforcementAbilitiesData["Boost PDEF (All Allies)"]
     ]
   }),
   "Ultimate Type-90 Longsword": new UltimateWeapon({
@@ -8261,8 +8261,8 @@ export const weaponsData: Weapons = {
       heal: 130
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10401],
-      reinforcementAbilitiesData[10501]
+      reinforcementAbilitiesData["Boost PDEF"],
+      reinforcementAbilitiesData["Boost MDEF"]
     ]
   }),
   "Cyan's Blade": new Weapon({
@@ -8287,8 +8287,8 @@ export const weaponsData: Weapons = {
       heal: 168
     },
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[51401]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost Phys. Ability Pot."]
     ]
   })
 };

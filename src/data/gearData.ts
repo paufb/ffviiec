@@ -8,8 +8,8 @@ export const gearData = {
     name: 'Ex-SOLDIER: First Class',
     character: charactersData[1],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10401],
-      reinforcementAbilitiesData[10801]
+      reinforcementAbilitiesData["Boost PDEF"],
+      reinforcementAbilitiesData["Boost Crit. Pot."]
     ],
     reinforcementAbilitiesPoints: [4, 4]
   }),
@@ -18,8 +18,8 @@ export const gearData = {
     name: 'Murasame Battle Garb',
     character: charactersData[1],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[20403]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Levinblade Arcanum"]
     ],
     reinforcementAbilitiesPoints: [5, 10]
   }),
@@ -28,8 +28,8 @@ export const gearData = {
     name: 'Battlefield Garb',
     character: charactersData[1],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[10401]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost PDEF"]
     ],
     reinforcementAbilitiesPoints: [8, 8]
   }),
@@ -38,8 +38,8 @@ export const gearData = {
     name: 'Maritime Sailor',
     character: charactersData[1],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[20602]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Water Mastery"]
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
@@ -48,8 +48,8 @@ export const gearData = {
     name: 'Bandaged Coat',
     character: charactersData[1],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[10601]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost HEAL"]
     ],
     reinforcementAbilitiesPoints: [15, 10]
   }),
@@ -58,8 +58,8 @@ export const gearData = {
     name: 'Official Festive Garb',
     character: charactersData[1],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[20203]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Flameblade Arcanum"]
     ],
     reinforcementAbilitiesPoints: [5, 10]
   }),
@@ -68,8 +68,8 @@ export const gearData = {
     name: 'Zidane\'s Outfit',
     character: charactersData[1],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[51401]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost Phys. Ability Pot."]
     ],
     reinforcementAbilitiesPoints: [15, 15]
   }),
@@ -78,8 +78,8 @@ export const gearData = {
     name: 'Saber Style',
     character: charactersData[1],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[20303]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Frostblade Arcanum"]
     ],
     reinforcementAbilitiesPoints: [5, 10]
   }),
@@ -88,8 +88,8 @@ export const gearData = {
     name: 'Glavenus Armor',
     character: charactersData[1],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[52501]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Physical Ability Mastery"]
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
@@ -98,8 +98,8 @@ export const gearData = {
     name: 'Bahamut Garb',
     character: charactersData[1],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[12001],
-      reinforcementAbilitiesData[53501]
+      reinforcementAbilitiesData["Boost ATK (All Allies)"],
+      reinforcementAbilitiesData["Bahamut's Bite"]
     ],
     reinforcementAbilitiesPoints: [5, 10]
   }),
@@ -108,8 +108,8 @@ export const gearData = {
     name: 'Locke\'s Outfit',
     character: charactersData[1],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[53303],
-      reinforcementAbilitiesData[52501]
+      reinforcementAbilitiesData["Physical & Magic Ward"],
+      reinforcementAbilitiesData["Physical Ability Mastery"]
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
@@ -118,8 +118,8 @@ export const gearData = {
     name: 'Avalanche Leader',
     character: charactersData[2],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10401],
-      reinforcementAbilitiesData[10801]
+      reinforcementAbilitiesData["Boost PDEF"],
+      reinforcementAbilitiesData["Boost Crit. Pot."]
     ],
     reinforcementAbilitiesPoints: [4, 4]
   }),
@@ -128,8 +128,8 @@ export const gearData = {
     name: 'Fiery Cape',
     character: charactersData[2],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[10401]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost PDEF"]
     ],
     reinforcementAbilitiesPoints: [8, 8]
   }),
@@ -138,8 +138,8 @@ export const gearData = {
     name: 'Electroarmor',
     character: charactersData[2],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[53001]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Indomitable Soul"]
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
@@ -148,8 +148,8 @@ export const gearData = {
     name: 'Scrap Armor',
     character: charactersData[2],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11001],
-      reinforcementAbilitiesData[10201]
+      reinforcementAbilitiesData["Boost ATK"],
+      reinforcementAbilitiesData["Boost PATK"]
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
@@ -158,8 +158,8 @@ export const gearData = {
     name: 'Seventh Heaven Bartender',
     character: charactersData[3],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10401],
-      reinforcementAbilitiesData[10801]
+      reinforcementAbilitiesData["Boost PDEF"],
+      reinforcementAbilitiesData["Boost Crit. Pot."]
     ],
     reinforcementAbilitiesPoints: [4, 4]
   }),
@@ -168,8 +168,8 @@ export const gearData = {
     name: 'Metalfoot',
     character: charactersData[3],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11001],
-      reinforcementAbilitiesData[10401]
+      reinforcementAbilitiesData["Boost ATK"],
+      reinforcementAbilitiesData["Boost PDEF"]
     ],
     reinforcementAbilitiesPoints: [8, 8]
   }),
@@ -178,8 +178,8 @@ export const gearData = {
     name: 'Lifeguard',
     character: charactersData[3],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[10601]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost HEAL"]
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
@@ -188,8 +188,8 @@ export const gearData = {
     name: 'Amarant\'s Guise',
     character: charactersData[3],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[51401]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost Phys. Ability Pot."]
     ],
     reinforcementAbilitiesPoints: [15, 15]
   }),
@@ -198,8 +198,8 @@ export const gearData = {
     name: 'Fairy of the Holy Flame',
     character: charactersData[3],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[20303]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Frostblade Arcanum"]
     ],
     reinforcementAbilitiesPoints: [5, 10]
   }),
@@ -208,8 +208,8 @@ export const gearData = {
     name: 'Guide Uniform',
     character: charactersData[3],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[52501]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Physical Ability Mastery"]
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
@@ -218,8 +218,8 @@ export const gearData = {
     name: 'Bunny Bustier',
     character: charactersData[3],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[51501],
-      reinforcementAbilitiesData[20603]
+      reinforcementAbilitiesData["Boost Mag. Ability Pot."],
+      reinforcementAbilitiesData["Waterblade Arcanum"]
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
@@ -228,8 +228,8 @@ export const gearData = {
     name: 'Feather Style',
     character: charactersData[3],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[51903]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Buff/Debuff Extension+ (Stats/Pot./Res.)"]
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
@@ -238,8 +238,8 @@ export const gearData = {
     name: 'Kirin Suit',
     character: charactersData[3],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[51501],
-      reinforcementAbilitiesData[20403]
+      reinforcementAbilitiesData["Boost Mag. Ability Pot."],
+      reinforcementAbilitiesData["Levinblade Arcanum"]
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
@@ -248,8 +248,8 @@ export const gearData = {
     name: 'Passion Mermaid',
     character: charactersData[3],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[53201],
-      reinforcementAbilitiesData[20203]
+      reinforcementAbilitiesData["Sun's Favor"],
+      reinforcementAbilitiesData["Flameblade Arcanum"]
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
@@ -258,8 +258,8 @@ export const gearData = {
     name: 'Bahamut Suit',
     character: charactersData[3],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[12001],
-      reinforcementAbilitiesData[53503]
+      reinforcementAbilitiesData["Boost ATK (All Allies)"],
+      reinforcementAbilitiesData["Bahamut's Whisper"]
     ],
     reinforcementAbilitiesPoints: [5, 10]
   }),
@@ -268,8 +268,8 @@ export const gearData = {
     name: 'Sabin\'s Style',
     character: charactersData[3],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[53303],
-      reinforcementAbilitiesData[52501]
+      reinforcementAbilitiesData["Physical & Magic Ward"],
+      reinforcementAbilitiesData["Physical Ability Mastery"]
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
@@ -278,8 +278,8 @@ export const gearData = {
     name: 'The Slums\' Flower Girl',
     character: charactersData[4],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10501],
-      reinforcementAbilitiesData[10801]
+      reinforcementAbilitiesData["Boost MDEF"],
+      reinforcementAbilitiesData["Boost Crit. Pot."]
     ],
     reinforcementAbilitiesPoints: [4, 4]
   }),
@@ -288,8 +288,8 @@ export const gearData = {
     name: 'Prism Dress',
     character: charactersData[4],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[20703]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Windstrike Arcanum"]
     ],
     reinforcementAbilitiesPoints: [5, 10]
   }),
@@ -298,8 +298,8 @@ export const gearData = {
     name: 'Rosy Battle Suit',
     character: charactersData[4],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10601],
-      reinforcementAbilitiesData[10501]
+      reinforcementAbilitiesData["Boost HEAL"],
+      reinforcementAbilitiesData["Boost MDEF"]
     ],
     reinforcementAbilitiesPoints: [8, 8]
   }),
@@ -308,8 +308,8 @@ export const gearData = {
     name: 'Sunny Robe',
     character: charactersData[4],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[10301]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost MATK"]
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
@@ -318,8 +318,8 @@ export const gearData = {
     name: 'Floral Gown',
     character: charactersData[4],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[51901]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Buff/Debuff Extension (Stats/Pot./Res.)"]
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
@@ -328,8 +328,8 @@ export const gearData = {
     name: 'Fairy of Snowfall',
     character: charactersData[4],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[20302]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Ice Mastery"]
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
@@ -338,8 +338,8 @@ export const gearData = {
     name: 'Chocobo Suit',
     character: charactersData[4],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[10501]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost MDEF"]
     ],
     reinforcementAbilitiesPoints: [8, 8]
   }),
@@ -348,8 +348,8 @@ export const gearData = {
     name: 'Garnet\'s Gown',
     character: charactersData[4],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[10601]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost HEAL"]
     ],
     reinforcementAbilitiesPoints: [15, 10]
   }),
@@ -358,8 +358,8 @@ export const gearData = {
     name: 'Classic Coney',
     character: charactersData[4],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[51501],
-      reinforcementAbilitiesData[20203]
+      reinforcementAbilitiesData["Boost Mag. Ability Pot."],
+      reinforcementAbilitiesData["Flameblade Arcanum"]
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
@@ -368,8 +368,8 @@ export const gearData = {
     name: 'Kamura Dress',
     character: charactersData[4],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10601],
-      reinforcementAbilitiesData[51903]
+      reinforcementAbilitiesData["Boost HEAL"],
+      reinforcementAbilitiesData["Buff/Debuff Extension+ (Stats/Pot./Res.)"]
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
@@ -378,8 +378,8 @@ export const gearData = {
     name: 'Citric Dress',
     character: charactersData[4],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[53301],
-      reinforcementAbilitiesData[52601]
+      reinforcementAbilitiesData["Magic Ward"],
+      reinforcementAbilitiesData["Magic Ability Mastery"]
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
@@ -388,8 +388,8 @@ export const gearData = {
     name: 'Bahamut Robe',
     character: charactersData[4],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[12001],
-      reinforcementAbilitiesData[53502]
+      reinforcementAbilitiesData["Boost ATK (All Allies)"],
+      reinforcementAbilitiesData["Bahamut's Protection"]
     ],
     reinforcementAbilitiesPoints: [5, 10]
   }),
@@ -398,8 +398,8 @@ export const gearData = {
     name: 'Terra\'s Garb',
     character: charactersData[4],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[53303],
-      reinforcementAbilitiesData[51903]
+      reinforcementAbilitiesData["Physical & Magic Ward"],
+      reinforcementAbilitiesData["Buff/Debuff Extension+ (Stats/Pot./Res.)"]
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
@@ -408,8 +408,8 @@ export const gearData = {
     name: 'Hojo\'s Specimen',
     character: charactersData[5],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10501],
-      reinforcementAbilitiesData[10801]
+      reinforcementAbilitiesData["Boost MDEF"],
+      reinforcementAbilitiesData["Boost Crit. Pot."]
     ],
     reinforcementAbilitiesPoints: [4, 4]
   }),
@@ -418,8 +418,8 @@ export const gearData = {
     name: 'Rubber Harness',
     character: charactersData[5],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10601],
-      reinforcementAbilitiesData[10401]
+      reinforcementAbilitiesData["Boost HEAL"],
+      reinforcementAbilitiesData["Boost PDEF"]
     ],
     reinforcementAbilitiesPoints: [8, 8]
   }),
@@ -428,8 +428,8 @@ export const gearData = {
     name: 'Seaside Aloha',
     character: charactersData[5],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[10201]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost PATK"]
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
@@ -438,8 +438,8 @@ export const gearData = {
     name: 'Canyon Duds',
     character: charactersData[5],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[52102]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Debuff Extension (Stats/Pot./Res.) Mastery"]
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
@@ -448,8 +448,8 @@ export const gearData = {
     name: 'The Hellhound',
     character: charactersData[5],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[52701]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Flamefrost Fangs"]
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
@@ -458,8 +458,8 @@ export const gearData = {
     name: 'Pilot\'s Jacket',
     character: charactersData[5],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10601],
-      reinforcementAbilitiesData[51903]
+      reinforcementAbilitiesData["Boost HEAL"],
+      reinforcementAbilitiesData["Buff/Debuff Extension+ (Stats/Pot./Res.)"]
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
@@ -468,8 +468,8 @@ export const gearData = {
     name: 'Amazing Materia Hunter',
     character: charactersData[6],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10401],
-      reinforcementAbilitiesData[10801]
+      reinforcementAbilitiesData["Boost PDEF"],
+      reinforcementAbilitiesData["Boost Crit. Pot."]
     ],
     reinforcementAbilitiesPoints: [4, 4]
   }),
@@ -478,8 +478,8 @@ export const gearData = {
     name: 'Puckish Lion',
     character: charactersData[6],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[10501]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost MDEF"]
     ],
     reinforcementAbilitiesPoints: [8, 8]
   }),
@@ -488,8 +488,8 @@ export const gearData = {
     name: 'Winter Moogle',
     character: charactersData[6],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[51901]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Buff/Debuff Extension (Stats/Pot./Res.)"]
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
@@ -498,8 +498,8 @@ export const gearData = {
     name: 'Sparkling Skater',
     character: charactersData[6],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[20703]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Windstrike Arcanum"]
     ],
     reinforcementAbilitiesPoints: [5, 10]
   }),
@@ -508,8 +508,8 @@ export const gearData = {
     name: 'Shinobi Hawk',
     character: charactersData[6],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[51401],
-      reinforcementAbilitiesData[20503]
+      reinforcementAbilitiesData["Boost Phys. Ability Pot."],
+      reinforcementAbilitiesData["Earthblade Arcanum"]
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
@@ -518,8 +518,8 @@ export const gearData = {
     name: 'Summer Moogle',
     character: charactersData[6],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[53201],
-      reinforcementAbilitiesData[20203]
+      reinforcementAbilitiesData["Sun's Favor"],
+      reinforcementAbilitiesData["Flameblade Arcanum"]
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
@@ -528,8 +528,8 @@ export const gearData = {
     name: 'Bahamut Mantle',
     character: charactersData[6],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[12001],
-      reinforcementAbilitiesData[53501]
+      reinforcementAbilitiesData["Boost ATK (All Allies)"],
+      reinforcementAbilitiesData["Bahamut's Bite"]
     ],
     reinforcementAbilitiesPoints: [5, 10]
   }),
@@ -538,8 +538,8 @@ export const gearData = {
     name: 'Nanaki Mantle',
     character: charactersData[6],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[53701],
-      reinforcementAbilitiesData[20303]
+      reinforcementAbilitiesData["Eerie Mask"],
+      reinforcementAbilitiesData["Frostblade Arcanum"]
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
@@ -548,8 +548,8 @@ export const gearData = {
     name: 'Holiday Cheer Reindeer',
     character: charactersData[6],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[20701],
-      reinforcementAbilitiesData[20703]
+      reinforcementAbilitiesData["Boost Wind Pot."],
+      reinforcementAbilitiesData["Windstrike Arcanum"]
     ],
     reinforcementAbilitiesPoints: [15, 10]
   }),
@@ -558,8 +558,8 @@ export const gearData = {
     name: 'Self-Professed Fortune-Teller',
     character: charactersData[7],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10501],
-      reinforcementAbilitiesData[10801]
+      reinforcementAbilitiesData["Boost MDEF"],
+      reinforcementAbilitiesData["Boost Crit. Pot."]
     ],
     reinforcementAbilitiesPoints: [4, 4]
   }),
@@ -568,8 +568,8 @@ export const gearData = {
     name: 'Marching Jacket',
     character: charactersData[7],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[10401]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost PDEF"]
     ],
     reinforcementAbilitiesPoints: [8, 8]
   }),
@@ -578,8 +578,8 @@ export const gearData = {
     name: 'Party Jacket',
     character: charactersData[7],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[51901],
-      reinforcementAbilitiesData[10803]
+      reinforcementAbilitiesData["Buff/Debuff Extension (Stats/Pot./Res.)"],
+      reinforcementAbilitiesData["Critical Pot. Arcanum"]
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
@@ -588,8 +588,8 @@ export const gearData = {
     name: 'Felyne Kamura Garb',
     character: charactersData[7],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[10501]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost MDEF"]
     ],
     reinforcementAbilitiesPoints: [8, 8]
   }),
@@ -598,8 +598,8 @@ export const gearData = {
     name: 'Pumpkin Jacket',
     character: charactersData[7],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[53701],
-      reinforcementAbilitiesData[51903]
+      reinforcementAbilitiesData["Eerie Mask"],
+      reinforcementAbilitiesData["Buff/Debuff Extension+ (Stats/Pot./Res.)"]
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
@@ -608,8 +608,8 @@ export const gearData = {
     name: 'Mournful Former Turk',
     character: charactersData[8],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10501],
-      reinforcementAbilitiesData[10801]
+      reinforcementAbilitiesData["Boost MDEF"],
+      reinforcementAbilitiesData["Boost Crit. Pot."]
     ],
     reinforcementAbilitiesPoints: [4, 4]
   }),
@@ -618,8 +618,8 @@ export const gearData = {
     name: 'Bouncer Suit',
     character: charactersData[8],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11001],
-      reinforcementAbilitiesData[10401]
+      reinforcementAbilitiesData["Boost ATK"],
+      reinforcementAbilitiesData["Boost PDEF"]
     ],
     reinforcementAbilitiesPoints: [8, 8]
   }),
@@ -628,8 +628,8 @@ export const gearData = {
     name: 'Stray Dog',
     character: charactersData[8],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[53101],
-      reinforcementAbilitiesData[20503]
+      reinforcementAbilitiesData["Reprieve"],
+      reinforcementAbilitiesData["Earthblade Arcanum"]
     ],
     reinforcementAbilitiesPoints: [15, 10]
   }),
@@ -638,8 +638,8 @@ export const gearData = {
     name: 'Formal Attire',
     character: charactersData[8],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[53301],
-      reinforcementAbilitiesData[52601]
+      reinforcementAbilitiesData["Magic Ward"],
+      reinforcementAbilitiesData["Magic Ability Mastery"]
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
@@ -648,8 +648,8 @@ export const gearData = {
     name: 'Crowmaster Suit',
     character: charactersData[8],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[53701],
-      reinforcementAbilitiesData[20403]
+      reinforcementAbilitiesData["Eerie Mask"],
+      reinforcementAbilitiesData["Levinblade Arcanum"]
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
@@ -658,8 +658,8 @@ export const gearData = {
     name: 'SOLDIER: Second Class Future Hero',
     character: charactersData[20],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10401],
-      reinforcementAbilitiesData[10801]
+      reinforcementAbilitiesData["Boost PDEF"],
+      reinforcementAbilitiesData["Boost Crit. Pot."]
     ],
     reinforcementAbilitiesPoints: [4, 4]
   }),
@@ -668,8 +668,8 @@ export const gearData = {
     name: 'Valiant Suit',
     character: charactersData[20],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11001],
-      reinforcementAbilitiesData[10401]
+      reinforcementAbilitiesData["Boost ATK"],
+      reinforcementAbilitiesData["Boost PDEF"]
     ],
     reinforcementAbilitiesPoints: [8, 8]
   }),
@@ -678,8 +678,8 @@ export const gearData = {
     name: 'Tropical Beach',
     character: charactersData[20],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[10501]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost MDEF"]
     ],
     reinforcementAbilitiesPoints: [8, 8]
   }),
@@ -688,8 +688,8 @@ export const gearData = {
     name: 'Black Hound',
     character: charactersData[20],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[10201]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost PATK"]
     ],
     reinforcementAbilitiesPoints: [15, 15]
   }),
@@ -698,8 +698,8 @@ export const gearData = {
     name: 'Holiday Suit',
     character: charactersData[20],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[51401]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost Phys. Ability Pot."]
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
@@ -708,8 +708,8 @@ export const gearData = {
     name: 'Shinra Full Dress Uniform',
     character: charactersData[20],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[51901]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Buff/Debuff Extension (Stats/Pot./Res.)"]
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
@@ -718,8 +718,8 @@ export const gearData = {
     name: 'Guardian Style',
     character: charactersData[20],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[20203]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Flameblade Arcanum"]
     ],
     reinforcementAbilitiesPoints: [5, 10]
   }),
@@ -728,8 +728,8 @@ export const gearData = {
     name: 'Glacier Armor',
     character: charactersData[20],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[51901],
-      reinforcementAbilitiesData[20303]
+      reinforcementAbilitiesData["Buff/Debuff Extension (Stats/Pot./Res.)"],
+      reinforcementAbilitiesData["Frostblade Arcanum"]
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
@@ -738,8 +738,8 @@ export const gearData = {
     name: 'Zinogre Armor',
     character: charactersData[20],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[51401],
-      reinforcementAbilitiesData[20403]
+      reinforcementAbilitiesData["Boost Phys. Ability Pot."],
+      reinforcementAbilitiesData["Levinblade Arcanum"]
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
@@ -748,8 +748,8 @@ export const gearData = {
     name: 'Shinra\'s Hero',
     character: charactersData[49],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10401],
-      reinforcementAbilitiesData[10801]
+      reinforcementAbilitiesData["Boost PDEF"],
+      reinforcementAbilitiesData["Boost Crit. Pot."]
     ],
     reinforcementAbilitiesPoints: [4, 4]
   }),
@@ -758,8 +758,8 @@ export const gearData = {
     name: 'Aeroglider',
     character: charactersData[49],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11001],
-      reinforcementAbilitiesData[10401]
+      reinforcementAbilitiesData["Boost ATK"],
+      reinforcementAbilitiesData["Boost PDEF"]
     ],
     reinforcementAbilitiesPoints: [8, 8]
   }),
@@ -768,8 +768,8 @@ export const gearData = {
     name: 'Edged Wings Training Garb',
     character: charactersData[49],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[20303]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Frostblade Arcanum"]
     ],
     reinforcementAbilitiesPoints: [5, 10]
   }),
@@ -778,8 +778,8 @@ export const gearData = {
     name: 'Dark Harbinger',
     character: charactersData[49],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[20702]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Wind Mastery"]
     ],
     reinforcementAbilitiesPoints: [15, 10]
   }),
@@ -788,8 +788,8 @@ export const gearData = {
     name: 'Kuja\'s Attire',
     character: charactersData[49],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[51501]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost Mag. Ability Pot."]
     ],
     reinforcementAbilitiesPoints: [15, 15]
   }),
@@ -798,8 +798,8 @@ export const gearData = {
     name: 'Celebratory Garb',
     character: charactersData[49],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[20202]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Fire Mastery"]
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
@@ -808,8 +808,8 @@ export const gearData = {
     name: 'Lethal Style',
     character: charactersData[49],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[52601]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Magic Ability Mastery"]
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
@@ -818,8 +818,8 @@ export const gearData = {
     name: 'Shinra Formal Uniform',
     character: charactersData[49],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[51901],
-      reinforcementAbilitiesData[20702]
+      reinforcementAbilitiesData["Buff/Debuff Extension (Stats/Pot./Res.)"],
+      reinforcementAbilitiesData["Wind Mastery"]
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
@@ -828,8 +828,8 @@ export const gearData = {
     name: 'Natant Jacket',
     character: charactersData[49],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[51901],
-      reinforcementAbilitiesData[20603]
+      reinforcementAbilitiesData["Buff/Debuff Extension (Stats/Pot./Res.)"],
+      reinforcementAbilitiesData["Waterblade Arcanum"]
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
@@ -838,8 +838,8 @@ export const gearData = {
     name: 'Dark Attire',
     character: charactersData[49],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[53301],
-      reinforcementAbilitiesData[20503]
+      reinforcementAbilitiesData["Magic Ward"],
+      reinforcementAbilitiesData["Earthblade Arcanum"]
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
@@ -848,8 +848,8 @@ export const gearData = {
     name: 'Edgar\'s Attire',
     character: charactersData[49],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[53303],
-      reinforcementAbilitiesData[20603]
+      reinforcementAbilitiesData["Physical & Magic Ward"],
+      reinforcementAbilitiesData["Waterblade Arcanum"]
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
@@ -858,8 +858,8 @@ export const gearData = {
     name: 'Unprecedented P0 SOLDIER',
     character: charactersData[50],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10401],
-      reinforcementAbilitiesData[10801]
+      reinforcementAbilitiesData["Boost PDEF"],
+      reinforcementAbilitiesData["Boost Crit. Pot."]
     ],
     reinforcementAbilitiesPoints: [4, 4]
   }),
@@ -868,8 +868,8 @@ export const gearData = {
     name: 'Doom Dodger',
     character: charactersData[50],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[10401]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost PDEF"]
     ],
     reinforcementAbilitiesPoints: [8, 8]
   }),
@@ -878,8 +878,8 @@ export const gearData = {
     name: 'Cake Breaker',
     character: charactersData[50],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11001],
-      reinforcementAbilitiesData[10501]
+      reinforcementAbilitiesData["Boost ATK"],
+      reinforcementAbilitiesData["Boost MDEF"]
     ],
     reinforcementAbilitiesPoints: [8, 8]
   }),
@@ -888,8 +888,8 @@ export const gearData = {
     name: 'Pumpkinmare',
     character: charactersData[50],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[10201]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost PATK"]
     ],
     reinforcementAbilitiesPoints: [15, 15]
   }),
@@ -898,8 +898,8 @@ export const gearData = {
     name: 'Vanguard Style',
     character: charactersData[50],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[20603]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Waterblade Arcanum"]
     ],
     reinforcementAbilitiesPoints: [5, 10]
   }),
@@ -908,8 +908,8 @@ export const gearData = {
     name: 'Intellectual P0 SOLDIER',
     character: charactersData[51],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10501],
-      reinforcementAbilitiesData[10801]
+      reinforcementAbilitiesData["Boost MDEF"],
+      reinforcementAbilitiesData["Boost Crit. Pot."]
     ],
     reinforcementAbilitiesPoints: [4, 4]
   }),
@@ -918,8 +918,8 @@ export const gearData = {
     name: 'Professor',
     character: charactersData[51],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11001],
-      reinforcementAbilitiesData[10501]
+      reinforcementAbilitiesData["Boost ATK"],
+      reinforcementAbilitiesData["Boost MDEF"]
     ],
     reinforcementAbilitiesPoints: [8, 8]
   }),
@@ -928,8 +928,8 @@ export const gearData = {
     name: 'Elite Uniform',
     character: charactersData[51],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10601],
-      reinforcementAbilitiesData[10401]
+      reinforcementAbilitiesData["Boost HEAL"],
+      reinforcementAbilitiesData["Boost PDEF"]
     ],
     reinforcementAbilitiesPoints: [8, 8]
   }),
@@ -938,8 +938,8 @@ export const gearData = {
     name: 'Killer Attire',
     character: charactersData[51],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[10201]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost PATK"]
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
@@ -948,8 +948,8 @@ export const gearData = {
     name: 'Aidman\'s White Coat',
     character: charactersData[51],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[10601]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost HEAL"]
     ],
     reinforcementAbilitiesPoints: [15, 10]
   }),
@@ -958,8 +958,8 @@ export const gearData = {
     name: 'Disciplined P0 SOLDIER',
     character: charactersData[52],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10401],
-      reinforcementAbilitiesData[10801]
+      reinforcementAbilitiesData["Boost PDEF"],
+      reinforcementAbilitiesData["Boost Crit. Pot."]
     ],
     reinforcementAbilitiesPoints: [4, 4]
   }),
@@ -968,8 +968,8 @@ export const gearData = {
     name: 'Marksqueen',
     character: charactersData[52],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11001],
-      reinforcementAbilitiesData[10401]
+      reinforcementAbilitiesData["Boost ATK"],
+      reinforcementAbilitiesData["Boost PDEF"]
     ],
     reinforcementAbilitiesPoints: [8, 8]
   }),
@@ -978,8 +978,8 @@ export const gearData = {
     name: 'Black Stealth',
     character: charactersData[52],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10201],
-      reinforcementAbilitiesData[10501]
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost MDEF"]
     ],
     reinforcementAbilitiesPoints: [8, 8]
   }),
@@ -988,8 +988,8 @@ export const gearData = {
     name: 'Vivi\'s Garb',
     character: charactersData[52],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[10501]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost MDEF"]
     ],
     reinforcementAbilitiesPoints: [8, 8]
   }),
@@ -998,8 +998,8 @@ export const gearData = {
     name: 'Holiday Coat',
     character: charactersData[52],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10301],
-      reinforcementAbilitiesData[20503]
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Earthblade Arcanum"]
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
@@ -1008,8 +1008,8 @@ export const gearData = {
     name: 'Gothic Bunny',
     character: charactersData[52],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[51901],
-      reinforcementAbilitiesData[52901]
+      reinforcementAbilitiesData["Buff/Debuff Extension (Stats/Pot./Res.)"],
+      reinforcementAbilitiesData["Flamefrost Rabbit Ears"]
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
@@ -1018,8 +1018,8 @@ export const gearData = {
     name: 'Beach Agent',
     character: charactersData[52],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[53201],
-      reinforcementAbilitiesData[51903]
+      reinforcementAbilitiesData["Sun's Favor"],
+      reinforcementAbilitiesData["Buff/Debuff Extension+ (Stats/Pot./Res.)"]
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
@@ -1028,8 +1028,8 @@ export const gearData = {
     name: 'Entrapment Gown',
     character: charactersData[52],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[40101],
-      reinforcementAbilitiesData[53401]
+      reinforcementAbilitiesData["Boost Poison Resist."],
+      reinforcementAbilitiesData["Alluring Ploy"]
     ],
     reinforcementAbilitiesPoints: [15, 10]
   }),
@@ -1038,8 +1038,8 @@ export const gearData = {
     name: 'Genial SOLDIER: Second Class',
     character: charactersData[56],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10401],
-      reinforcementAbilitiesData[10801]
+      reinforcementAbilitiesData["Boost PDEF"],
+      reinforcementAbilitiesData["Boost Crit. Pot."]
     ],
     reinforcementAbilitiesPoints: [4, 4]
   }),
@@ -1048,8 +1048,8 @@ export const gearData = {
     name: 'Shinra Expedition Wear',
     character: charactersData[56],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[10501]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost MDEF"]
     ],
     reinforcementAbilitiesPoints: [8, 8]
   }),
@@ -1058,8 +1058,8 @@ export const gearData = {
     name: 'Honorable Training Garb',
     character: charactersData[56],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[11901],
-      reinforcementAbilitiesData[20603]
+      reinforcementAbilitiesData["Boost DEF (All Allies)"],
+      reinforcementAbilitiesData["Waterblade Arcanum"]
     ],
     reinforcementAbilitiesPoints: [5, 10]
   }),
@@ -1068,8 +1068,8 @@ export const gearData = {
     name: 'Cyan\'s Attire',
     character: charactersData[56],
     reinforcementAbilities: [
-      reinforcementAbilitiesData[10101],
-      reinforcementAbilitiesData[10401]
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost PDEF"]
     ],
     reinforcementAbilitiesPoints: [8, 8]
   })
