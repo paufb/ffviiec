@@ -201,7 +201,7 @@ export const gearData = {
       reinforcementAbilitiesData["Boost PATK"],
       reinforcementAbilitiesData["Frostblade Arcanum"]
     ],
-    reinforcementAbilitiesPoints: [5, 10]
+    reinforcementAbilitiesPoints: [10, 10]
   }),
   "Guide Uniform": new Gear({
     id: 3012,
@@ -652,6 +652,16 @@ export const gearData = {
       reinforcementAbilitiesData["Levinblade Arcanum"]
     ],
     reinforcementAbilitiesPoints: [10, 10]
+  }),
+  "Holiday Formal Wear": new Gear({
+    id: null,
+    name: 'Holiday Formal Wear',
+    character: charactersData[8],
+    reinforcementAbilities: [
+      reinforcementAbilitiesData["Boost Fire Pot."],
+      reinforcementAbilitiesData["Flameblade Arcanum"]
+    ],
+    reinforcementAbilitiesPoints: [15, 10]
   }),
   "SOLDIER: Second Class Future Hero": new Gear({
     id: 20001,
