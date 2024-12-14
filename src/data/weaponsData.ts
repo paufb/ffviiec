@@ -1727,9 +1727,9 @@ export const weaponsData: Weapons = {
       sigil: null,
       description: `${damage(undefined, 'Mag. Non-elem.', 'Single Enemy', 10)}\nAlso, ${decrease('PDEF', 'Low', 'Single Enemy', null, undefined, undefined, 'Mid')}`,
       valuesByOverboostLevel: {
-        damage: ['260', '', '', '', '', '', '350', '350', '350', '350', '360'],
-        pDefDecreaseDur: ['20', '', '', '', '', '', '25', '25', '25', '25', '28'],
-        pDefDecreaseExt: ['6', '', '', '', '', '', '7', '7', '7', '7', '9']
+        damage: ['260', '300', '300', '300', '300', '300', '350', '350', '350', '350', '360'],
+        pDefDecreaseDur: ['20', '22', '22', '22', '22', '22', '25', '25', '25', '25', '28'],
+        pDefDecreaseExt: ['6', '7', '7', '7', '7', '7', '7', '7', '7', '7', '9']
       }
     }),
     maxRarityLevel: 5,
@@ -4939,6 +4939,33 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData["Boost Ice Pot."]
     ]
   }),
+  "Holiday Garm": new Weapon({
+    id: null,
+    name: 'Holiday Garm',
+    character: charactersData[8],
+    element: 'Fire',
+    commandAbility: new CommandAbility({
+      id: null,
+      name: 'Hellhound Shot',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Phys. Fire', 'Single Enemy', null)}\nAlso, When Debuff is granted to Target, x1.2 damage.\n${increaseLimitGauge(5, 'Self')}`,
+      valuesByOverboostLevel: {
+        damage: ['520', '620', '620', '620', '620', '620', '780', '780', '780', '780', '940'],
+        limitGaugeIncreasePot: ['4', '4', '4', '4', '4', '4', '5', '5', '5', '5', '5']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 288,
+      mAtk: 204,
+      heal: 165
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost Fire Pot."]
+    ]
+  }),
   "Type-99 Longsword": new Weapon({
     id: 20001,
     name: 'Type-99 Longsword',
@@ -7694,7 +7721,7 @@ export const weaponsData: Weapons = {
       sigil: null,
       description: `${damage(undefined, 'Mag. Lightning', 'Single Enemy', null)}`,
       valuesByOverboostLevel: {
-        damage: ['300', '', '', '', '', '', '410', '410', '410', '410', '420']
+        damage: ['300', '350', '350', '350', '350', '350', '410', '410', '410', '410', '420']
       }
     }),
     maxRarityLevel: 5,
@@ -7746,7 +7773,7 @@ export const weaponsData: Weapons = {
       sigil: null,
       description: `${damage(undefined, 'Mag. Fire', 'All Enemies', null)}`,
       valuesByOverboostLevel: {
-        damage: ['210', '', '', '', '', '', '280', '280', '280', '280', '290']
+        damage: ['210', '240', '240', '240', '240', '240', '280', '280', '280', '280', '290']
       }
     }),
     maxRarityLevel: 5,
@@ -7801,9 +7828,9 @@ export const weaponsData: Weapons = {
       sigil: null,
       description: `${damage(undefined, 'Mag. Non-elem.', 'Single Enemy', 10)}\nAlso, ${decrease('PDEF', 'Low', 'Single Enemy', null, undefined, undefined, 'Mid')}`,
       valuesByOverboostLevel: {
-        damage: ['260', '', '', '', '', '', '350', '350', '350', '350', '360'],
-        pDefDecreaseDur: ['20', '', '', '', '', '', '25', '25', '25', '25', '28'],
-        pDefDecreaseExt: ['6', '', '', '', '', '', '7', '7', '7', '7', '9']
+        damage: ['260', '300', '300', '300', '300', '300', '350', '350', '350', '350', '360'],
+        pDefDecreaseDur: ['20', '22', '22', '22', '22', '22', '25', '25', '25', '25', '28'],
+        pDefDecreaseExt: ['6', '7', '7', '7', '7', '7', '7', '7', '7', '7', '9']
       }
     }),
     maxRarityLevel: 5,
@@ -8289,6 +8316,65 @@ export const weaponsData: Weapons = {
     reinforcementAbilities: [
       reinforcementAbilitiesData["Boost HP"],
       reinforcementAbilitiesData["Boost Phys. Ability Pot."]
+    ]
+  }),
+  "Volcanic Heat": new Weapon({
+    id: null,
+    name: 'Volcanic Heat',
+    character: charactersData[56],
+    element: 'Fire',
+    commandAbility: new CommandAbility({
+      id: null,
+      name: 'Volcanic Swing',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Phys. Fire', 'Single Enemy', null)}\nAlso, ${conditionHP('Self', '50', 'more')}, ${decrease('Fire Resist.', undefined, 'Single Enemy', null, undefined, undefined, 'High')}\n${apply('Veil', 5, 'Self', null, undefined, undefined)}`,
+      valuesByOverboostLevel: {
+        damage: ['390', '450', '450', '450', '450', '450', '550', '550', '550', '550', '620'],
+        fireResistDecreasePot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        fireResistDecreaseDur: ['20', '22', '22', '22', '22', '22', '26', '26', '26', '26', '30'],
+        fireResistDecreaseExt: ['6', '7', '7', '7', '7', '7', '8', '8', '8', '8', '10'],
+        veilDur: ['40', '45', '45', '45', '45', '45', '50', '50', '50', '50', '60'],
+        veilExt: ['8', '9', '9', '9', '9', '9', '10', '10', '10', '10', '12']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 283,
+      mAtk: 207,
+      heal: 165
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost Fire Pot."]
+    ]
+  }),
+  "Turks' Blade": new Weapon({
+    id: null,
+    name: 'Turks\' Blade',
+    character: charactersData[56],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: null,
+      name: 'Debravera Surge A',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Mag. Non-elem.', 'All Enemies', 10)}\nAlso, ${decrease('PATK', 'Low', 'All Enemies', null, undefined, undefined, 'Mid')}`,
+      valuesByOverboostLevel: {
+        damage: ['180', '210', '210', '210', '210', '210', '240', '240', '240', '240', '250'],
+        pAtkDecreaseDur: ['20', '25', '25', '25', '25', '25', '30', '30', '30', '30', '35'],
+        pAtkDecreaseExt: ['5', '6', '6', '6', '6', '6', '7', '7', '7', '7', '8']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 201,
+      mAtk: 220,
+      heal: 170
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost Mag. Ability Pot."]
     ]
   })
 };
