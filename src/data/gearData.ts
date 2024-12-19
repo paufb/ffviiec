@@ -331,7 +331,7 @@ export const gearData = {
       reinforcementAbilitiesData["Boost HP"],
       reinforcementAbilitiesData["Ice Mastery"]
     ],
-    reinforcementAbilitiesPoints: [10, 10]
+    reinforcementAbilitiesPoints: [15, 10]
   }),
   "Chocobo Suit": new Gear({
     id: 4008,
@@ -962,6 +962,16 @@ export const gearData = {
       reinforcementAbilitiesData["Boost HEAL"]
     ],
     reinforcementAbilitiesPoints: [15, 10]
+  }),
+  "Holiday Helper": new Gear({
+    id: null,
+    name: 'Holiday Helper',
+    character: charactersData[51],
+    reinforcementAbilities: [
+      reinforcementAbilitiesData["Physical & Magic Ward"],
+      reinforcementAbilitiesData["Buff/Debuff Extension+ (Stats/Pot./Res.)"]
+    ],
+    reinforcementAbilitiesPoints: [10, 10]
   }),
   "Disciplined P0 SOLDIER": new Gear({
     id: 52001,
