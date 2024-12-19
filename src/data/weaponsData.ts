@@ -5589,6 +5589,32 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData["Boost HP"]
     ]
   }),
+  "White Tree": new Weapon({
+    id: null,
+    name: 'White Tree',
+    character: charactersData[20],
+    element: 'Wind',
+    commandAbility: new CommandAbility({
+      id: null,
+      name: 'Aerora Surge A',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Mag. Wind', 'All Enemies', null)}`,
+      valuesByOverboostLevel: {
+        damage: ['210', '240', '240', '240', '240', '240', '280', '280', '280', '280', '290']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 204,
+      mAtk: 226,
+      heal: 164
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost Wind Pot."]
+    ]
+  }),
   "Nameless": new Weapon({
     id: 49001,
     name: 'Nameless',
@@ -6273,6 +6299,35 @@ export const weaponsData: Weapons = {
     reinforcementAbilities: [
       reinforcementAbilitiesData["Boost HP"],
       reinforcementAbilitiesData["Boost Wind Pot."]
+    ]
+  }),
+  "Withering Blaze": new Weapon({
+    id: null,
+    name: 'Withering Blaze',
+    character: charactersData[49],
+    element: 'Fire',
+    commandAbility: new CommandAbility({
+      id: null,
+      name: 'Blazing Ignis',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Mag. Fire', 'Single Enemy', null)}\nAlso, ${conditionHP('Self', '50', 'more')}, ${decrease('Fire Resist.', 'Low', 'Single Enemy', null, undefined, undefined, undefined)}\nWhen Buff is granted to [Rng.: Self], x1.2 damage.`,
+      valuesByOverboostLevel: {
+        damage: ['440', '510', '510', '510', '510', '510', '620', '620', '620', '620', '700'],
+        fireResistDecreaseDur: ['20', '22', '22', '22', '22', '22', '26', '26', '26', '26', '30'],
+        fireResistDecreaseExt: ['6', '7', '7', '7', '7', '7', '8', '8', '8', '8', '10'],
+        fireResistDecreaseMaxPot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 205,
+      mAtk: 285,
+      heal: 165
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Fire Pot."]
     ]
   }),
   "Personal Style": new Weapon({
@@ -7351,6 +7406,38 @@ export const weaponsData: Weapons = {
     reinforcementAbilities: [
       reinforcementAbilitiesData["Boost MATK"],
       reinforcementAbilitiesData["Boost Lightning Pot."]
+    ]
+  }),
+  "Luminary Sword": new Weapon({
+    id: null,
+    name: 'Luminary Sword',
+    character: charactersData[51],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: null,
+      name: 'Luminary Glow',
+      atbCost: 4,
+      sigil: null,
+      description: `${increase('MATK', 'Low', 'All Allies', null, undefined, undefined, undefined)}\nAlso, ${heal(undefined, 'Mag.', 'All Allies')}\n${conditionHP('Self', '70', 'more')}, ${increase('Fire Damage', 'Low', 'All Allies', null, undefined, undefined, undefined)}`,
+      valuesByOverboostLevel: {
+        mAtkIncreaseDur: ['16', '20', '20', '20', '20', '20', '24', '24', '24', '24', '30'],
+        mAtkIncreaseExt: ['5', '6', '6', '6', '6', '6', '8', '8', '8', '8', '10'],
+        mAtkIncreaseMaxPot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        heal: ['5', '6', '6', '6', '6', '6', '7', '7', '7', '7', '7'],
+        fireDamageIncreaseDur: ['16', '20', '20', '20', '20', '20', '24', '24', '24', '24', '30'],
+        fireDamageIncreaseExt: ['5', '6', '6', '6', '6', '6', '8', '8', '8', '8', '10'],
+        fireDamageIncreaseMaxPot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 204,
+      mAtk: 214,
+      heal: 226
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData["Boost HEAL"],
+      reinforcementAbilitiesData["Buff/Debuff Extension (Stats/Pot./Res.)"]
     ]
   }),
   "V39": new Weapon({
