@@ -61,7 +61,7 @@ export const gearData = {
       reinforcementAbilitiesData["Boost PATK"],
       reinforcementAbilitiesData["Flameblade Arcanum"]
     ],
-    reinforcementAbilitiesPoints: [5, 10]
+    reinforcementAbilitiesPoints: [10, 10]
   }),
   "Zidane's Outfit": new Gear({
     id: 1009,
@@ -112,6 +112,16 @@ export const gearData = {
       reinforcementAbilitiesData["Physical Ability Mastery"]
     ],
     reinforcementAbilitiesPoints: [10, 10]
+  }),
+  "Holiday Outfit": new Gear({
+    id: null,
+    name: 'Holiday Outfit',
+    character: charactersData[1],
+    reinforcementAbilities: [
+      reinforcementAbilitiesData["Boost Wind Pot."],
+      reinforcementAbilitiesData["Windstrike Arcanum"]
+    ],
+    reinforcementAbilitiesPoints: [15, 10]
   }),
   "Avalanche Leader": new Gear({
     id: 2001,
@@ -273,6 +283,16 @@ export const gearData = {
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
+  "Festive Blue Daffodil Attire": new Gear({
+    id: null,
+    name: 'Festive Blue Daffodil Attire',
+    character: charactersData[3],
+    reinforcementAbilities: [
+      reinforcementAbilitiesData["Reprieve"],
+      reinforcementAbilitiesData["New Year's Mastery"]
+    ],
+    reinforcementAbilitiesPoints: [15, 10]
+  }),
   "The Slums' Flower Girl": new Gear({
     id: 4001,
     name: 'The Slums\' Flower Girl',
@@ -402,6 +422,16 @@ export const gearData = {
       reinforcementAbilitiesData["Buff/Debuff Extension+ (Stats/Pot./Res.)"]
     ],
     reinforcementAbilitiesPoints: [10, 10]
+  }),
+  "Festive Crimson Attire": new Gear({
+    id: null,
+    name: 'Festive Crimson Attire',
+    character: charactersData[4],
+    reinforcementAbilities: [
+      reinforcementAbilitiesData["Reprieve"],
+      reinforcementAbilitiesData["New Year's Protection"]
+    ],
+    reinforcementAbilitiesPoints: [15, 10]
   }),
   "Hojo's Specimen": new Gear({
     id: 5001,
@@ -711,7 +741,7 @@ export const gearData = {
       reinforcementAbilitiesData["Boost HP"],
       reinforcementAbilitiesData["Boost Phys. Ability Pot."]
     ],
-    reinforcementAbilitiesPoints: [10, 10]
+    reinforcementAbilitiesPoints: [15, 15]
   }),
   "Shinra Full Dress Uniform": new Gear({
     id: 20005,
@@ -811,7 +841,7 @@ export const gearData = {
       reinforcementAbilitiesData["Boost HP"],
       reinforcementAbilitiesData["Fire Mastery"]
     ],
-    reinforcementAbilitiesPoints: [10, 10]
+    reinforcementAbilitiesPoints: [15, 10]
   }),
   "Lethal Style": new Gear({
     id: 49009,

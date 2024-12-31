@@ -595,4 +595,23 @@ export const reinforcementAbilitiesData = {
       flat: [1, 2, 3, 4]
     }
   }),
+  "New Year's Mastery": new ReinforcementAbility({
+    id: null,
+    name: 'New Year\'s Mastery',
+    effect: 'Fire/Ice/Lightning/Earth/Water/Wind Ability Dmg. +{{flat}}%',
+    reqPts: [10],
+    levelValues: {
+      flat: [30]
+    }
+  }),
+  "New Year's Protection": new ReinforcementAbility({
+    id: null,
+    name: 'New Year\'s Protection',
+    effect: 'HP +{{hpPercent}}%\nHealing Pot. +{{healingPotPercent}}%',
+    reqPts: [10],
+    levelValues: {
+      hpPercent: [10],
+      healingPotPercent: [20]
+    }
+  })
 }
