@@ -17,7 +17,7 @@ export const weaponsData: Weapons = {
       name: 'Braver',
       atbCost: 4,
       sigil: 'cross',
-      description: `${damage(undefined, 'Phys. Non-elem.', 'Single Enemy', 10)}\nAlso, when matching sigils are destroyed, x1.5 damage.`,
+      description: `${damage(undefined, 'Phys. Non-elem.', 'Single Enemy', 10)}\nAlso, When matching sigils are destroyed, x1.5 damage.`,
       valuesByOverboostLevel: {
         damage: ['400', '', '', '', '', '', '620', '620', '620', '620', '750']
       }
@@ -683,6 +683,32 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData["Boost Ability Pot."]
     ]
   }),
+  "Holiday Blade": new Weapon({
+    id: null,
+    name: 'Holiday Blade',
+    character: charactersData[1],
+    element: 'Wind',
+    commandAbility: new CommandAbility({
+      id: null,
+      name: 'Twister Blade',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Mag. Wind', 'Single Enemy', null)}\nAlso, When Debuff is granted to Target, x1.2 damage.`,
+      valuesByOverboostLevel: {
+        damage: ['520', '620', '620', '620', '620', '620', '780', '780', '780', '780', '940']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 214,
+      mAtk: 289,
+      heal: 154
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Wind Pot."]
+    ]
+  }),
   "Gatling Gun": new Weapon({
     id: 2001,
     name: 'Gatling Gun',
@@ -1052,9 +1078,9 @@ export const weaponsData: Weapons = {
       sigil: null,
       description: `${damage(undefined, 'Mag. Non-elem.', 'Single Enemy', 10)}\nAlso, ${decrease('MDEF', 'Low', 'Single Enemy', null, undefined, undefined, 'Mid')}`,
       valuesByOverboostLevel: {
-        damage: ['260', '', '', '', '', '', '350', '350', '350', '350', '360'],
-        mDefDecreaseDur: ['20', '', '', '', '', '', '25', '25', '25', '25', '28'],
-        mDefDecreaseExt: ['6', '', '', '', '', '', '7', '7', '7', '7', '9']
+        damage: ['260', '300', '300', '300', '300', '300', '350', '350', '350', '350', '360'],
+        mDefDecreaseDur: ['20', '22', '22', '22', '22', '22', '25', '25', '25', '25', '28'],
+        mDefDecreaseExt: ['6', '7', '7', '7', '7', '7', '7', '7', '7', '7', '9']
       }
     }),
     maxRarityLevel: 5,
@@ -1080,7 +1106,7 @@ export const weaponsData: Weapons = {
       sigil: null,
       description: `${damage(undefined, 'Mag. Water', 'All Enemies', null)}`,
       valuesByOverboostLevel: {
-        damage: ['210', '', '', '', '', '', '280', '280', '280', '280', '290']
+        damage: ['210', '240', '240', '240', '240', '240', '280', '280', '280', '280', '290']
       }
     }),
     maxRarityLevel: 5,
@@ -1667,7 +1693,7 @@ export const weaponsData: Weapons = {
       name: 'Aqua Splash',
       atbCost: 4,
       sigil: null,
-      description: `${damage(undefined, 'Mag. Water', 'Single Enemy', null)}\nAlso, when [Rng.: Self]'s HP is 50% or more, ${increase('MATK', 'Low', 'Self', null, undefined, undefined, undefined)}`,
+      description: `${damage(undefined, 'Mag. Water', 'Single Enemy', null)}\nAlso, ${conditionHP('Self', '50', 'more')}, ${increase('MATK', 'Low', 'Self', null, undefined, undefined, undefined)}`,
       valuesByOverboostLevel: {
         damage: ['480', '580', '580', '580', '580', '580', '710', '710', '710', '710', '850'],
         mAtkIncreaseDur: ['25', '28', '28', '28', '28', '28', '30', '30', '30', '30', '35'],
@@ -1779,7 +1805,7 @@ export const weaponsData: Weapons = {
       name: 'Spiral Levin Strike',
       atbCost: 4,
       sigil: null,
-      description: `${damage(undefined, 'Mag. Lightning', 'Single Enemy', null)}\nAlso, when [Rng.: Self]'s HP is 50% or more, ${increase('MATK', undefined, 'Self', null, undefined, undefined, 'Mid')}`,
+      description: `${damage(undefined, 'Mag. Lightning', 'Single Enemy', null)}\nAlso, ${conditionHP('Self', '50', 'more')}, ${increase('MATK', undefined, 'Self', null, undefined, undefined, 'Mid')}`,
       valuesByOverboostLevel: {
         damage: ['520', '620', '620', '620', '620', '620', '780', '780', '780', '780', '940'],
         mAtkIncreasePot: ['Low', 'Low', 'Low', 'Low', 'Low', 'Low', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid'],
@@ -1808,7 +1834,7 @@ export const weaponsData: Weapons = {
       name: 'Spinning Fervor',
       atbCost: 4,
       sigil: null,
-      description: `${damage(undefined, 'Mag. Fire', 'Single Enemy', null)}\nAlso, when [Rng.: Self]'s HP is 70% or more, x1.2 damage.`,
+      description: `${damage(undefined, 'Mag. Fire', 'Single Enemy', null)}\nAlso, ${conditionHP('Self', '70', 'more')}, x1.2 damage.`,
       valuesByOverboostLevel: {
         damage: ['520', '620', '620', '620', '620', '620', '810', '810', '810', '810', '940']
       }
@@ -2477,7 +2503,7 @@ export const weaponsData: Weapons = {
       name: 'Spiritual Harmony',
       atbCost: 4,
       sigil: null,
-      description: `${increase('PATK', undefined, 'All Allies', null, undefined, undefined, 'High')}\nAlso, when [Rng.: Self]'s HP is 70% or more, ${increase('MDEF', undefined, 'All Allies', null, undefined, undefined, 'High')}\n${heal(undefined, 'Mag.', 'All Allies')}`,
+      description: `${increase('PATK', undefined, 'All Allies', null, undefined, undefined, 'High')}\nAlso, ${conditionHP('Self', '70', 'more')}, ${increase('MDEF', undefined, 'All Allies', null, undefined, undefined, 'High')}\n${heal(undefined, 'Mag.', 'All Allies')}`,
       valuesByOverboostLevel: {
         pAtkIncreasePot: ['Mid', '', '', '', '', '', 'High', 'High', 'High', 'High', 'High'],
         pAtkIncreaseDur: ['12', '', '', '', '', '', '16', '16', '16', '16', '20'],
@@ -2511,7 +2537,7 @@ export const weaponsData: Weapons = {
       sigil: null,
       description: `${damage(undefined, 'Mag. Water', 'All Enemies', null)}`,
       valuesByOverboostLevel: {
-        damage: ['210', '', '', '', '', '', '280', '280', '280', '280', '290']
+        damage: ['210', '240', '240', '240', '240', '240', '280', '280', '280', '280', '290']
       }
     }),
     maxRarityLevel: 5,
@@ -2537,7 +2563,7 @@ export const weaponsData: Weapons = {
       sigil: null,
       description: `${damage(undefined, 'Mag. Ice', 'All Enemies', null)}`,
       valuesByOverboostLevel: {
-        damage: ['210', '', '', '', '', '', '280', '280', '280', '280', '290']
+        damage: ['210', '240', '240', '240', '240', '240', '280', '280', '280', '280', '290']
       }
     }),
     maxRarityLevel: 5,
@@ -2920,7 +2946,7 @@ export const weaponsData: Weapons = {
       name: 'Canyon Gale',
       atbCost: 4,
       sigil: null,
-      description: `${damage(undefined, 'Mag. Wind', 'All Enemies', null)}\nAlso, when [Rng.: Self]'s HP is 50% or more, ${decrease('MDEF', 'Mid', 'All Enemies', null, undefined, undefined, undefined)}`,
+      description: `${damage(undefined, 'Mag. Wind', 'All Enemies', null)}\nAlso, ${conditionHP('Self', '50', 'more')}, ${decrease('MDEF', 'Mid', 'All Enemies', null, undefined, undefined, undefined)}`,
       valuesByOverboostLevel: {
         damage: ['270', '320', '320', '320', '320', '320', '420', '420', '420', '420', '500'],
         mDefDecreaseDur: ['20', '22', '22', '22', '22', '22', '26', '26', '26', '26', '30'],
@@ -3034,9 +3060,9 @@ export const weaponsData: Weapons = {
       sigil: null,
       description: `${damage(undefined, 'Mag. Non-elem.', 'Single Enemy', 10)}\nAlso, ${decrease('MDEF', 'Low', 'Single Enemy', null, undefined, undefined, 'Mid')}`,
       valuesByOverboostLevel: {
-        damage: ['260', '', '', '', '', '', '350', '350', '350', '350', '360'],
-        mDefDecreaseDur: ['20', '', '', '', '', '', '25', '25', '25', '25', '28'],
-        mDefDecreaseExt: ['6', '', '', '', '', '', '7', '7', '7', '7', '9']
+        damage: ['260', '300', '300', '300', '300', '300', '350', '350', '350', '350', '360'],
+        mDefDecreaseDur: ['20', '22', '22', '22', '22', '22', '25', '25', '25', '25', '28'],
+        mDefDecreaseExt: ['6', '7', '7', '7', '7', '7', '7', '7', '7', '7', '9']
       }
     }),
     maxRarityLevel: 5,
@@ -3149,7 +3175,7 @@ export const weaponsData: Weapons = {
       sigil: null,
       description: `${damage(undefined, 'Mag. Ice', 'All Enemies', null)}`,
       valuesByOverboostLevel: {
-        damage: ['210', '', '', '', '', '', '280', '280', '280', '280', '290']
+        damage: ['210', '240', '240', '240', '240', '240', '280', '280', '280', '280', '290']
       }
     }),
     maxRarityLevel: 5,
@@ -3311,10 +3337,10 @@ export const weaponsData: Weapons = {
       sigil: null,
       description: `${damage(undefined, 'Phys. Non-elem.', 'All Enemies', 10)}\nAlso, ${decrease('PATK', undefined, 'All Enemies', null, undefined, undefined, 'Mid')}`,
       valuesByOverboostLevel: {
-        damage: ['220', '', '', '', '', '', '310', '310', '310', '310', '350'],
-        pAtkDecreasePot: ['Low', '', '', '', '', '', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid'],
-        pAtkDecreaseDur: ['20', '', '', '', '', '', '22', '22', '22', '22', '25'],
-        pAtkDecreaseExt: ['6', '', '', '', '', '', '7', '7', '7', '7', '8']
+        damage: ['220', '250', '250', '250', '250', '250', '310', '310', '310', '310', '350'],
+        pAtkDecreasePot: ['Low', 'Low', 'Low', 'Low', 'Low', 'Low', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid'],
+        pAtkDecreaseDur: ['20', '22', '22', '22', '22', '22', '22', '22', '22', '22', '25'],
+        pAtkDecreaseExt: ['6', '7', '7', '7', '7', '7', '7', '7', '7', '7', '8']
       }
     }),
     maxRarityLevel: 5,
@@ -3422,7 +3448,7 @@ export const weaponsData: Weapons = {
       name: 'Earth Ninjutsu',
       atbCost: 4,
       sigil: null,
-      description: `${damage(undefined, 'Phys. Earth', 'Single Enemy', null)}\nAlso, when [Rng.: Self]'s HP is 70% or more, x1.2 damage.`,
+      description: `${damage(undefined, 'Phys. Earth', 'Single Enemy', null)}\nAlso, ${conditionHP('Self', '70', 'more')}, x1.2 damage.`,
       valuesByOverboostLevel: {
         damage: ['480', '580', '580', '580', '580', '580', '710', '710', '710', '710', '850']
       }
@@ -3672,7 +3698,7 @@ export const weaponsData: Weapons = {
       sigil: null,
       description: `${damage(undefined, 'Mag. Water', 'All Enemies', null)}`,
       valuesByOverboostLevel: {
-        damage: ['210', '', '', '', '', '', '280', '280', '280', '280', '290']
+        damage: ['210', '240', '240', '240', '240', '240', '280', '280', '280', '280', '290']
       }
     }),
     maxRarityLevel: 5,
@@ -3722,7 +3748,7 @@ export const weaponsData: Weapons = {
       name: 'Explosion',
       atbCost: 4,
       sigil: null,
-      description: `${damage(undefined, 'Phys. Fire', 'All Enemies', null)}\nAlso, when [Rng.: Self]'s HP is 50% or more, ${increase('Fire Damage', 'Low', 'Self', null, undefined, undefined, undefined)}`,
+      description: `${damage(undefined, 'Phys. Fire', 'All Enemies', null)}\nAlso, ${conditionHP('Self', '50', 'more')}, ${increase('Fire Damage', 'Low', 'Self', null, undefined, undefined, undefined)}`,
       valuesByOverboostLevel: {
         damage: ['390', '530', '530', '530', '530', '530', '620', '620', '620', '620', '700'],
         fireDamageIncreaseDur: ['25', '28', '28', '28', '28', '28', '30', '30', '30', '30', '35'],
@@ -3753,7 +3779,7 @@ export const weaponsData: Weapons = {
       sigil: null,
       description: `${damage(undefined, 'Mag. Ice', 'All Enemies', null)}`,
       valuesByOverboostLevel: {
-        damage: ['210', '', '', '', '', '', '280', '280', '280', '280', '290']
+        damage: ['210', '240', '240', '240', '240', '240', '280', '280', '280', '280', '290']
       }
     }),
     maxRarityLevel: 5,
@@ -3827,7 +3853,7 @@ export const weaponsData: Weapons = {
       name: 'Icebound',
       atbCost: 4,
       sigil: null,
-      description: `${damage(undefined, 'Mag. Ice', 'Single Enemy', null)}\nAlso, when Debuff is granted to Target, x1.2 damage.`,
+      description: `${damage(undefined, 'Mag. Ice', 'Single Enemy', null)}\nAlso, When Debuff is granted to Target, x1.2 damage.`,
       valuesByOverboostLevel: {
         damage: ['520', '620', '620', '620', '620', '620', '780', '780', '780', '780', '940']
       }
@@ -3906,7 +3932,7 @@ export const weaponsData: Weapons = {
       name: 'Sonic Meow',
       atbCost: 5,
       sigil: null,
-      description: `${damage(undefined, 'Phys. Non-elem.', 'Single Enemy', 30)}\nAlso, when hitting critical, x3 damage.`,
+      description: `${damage(undefined, 'Phys. Non-elem.', 'Single Enemy', 30)}\nAlso, When hitting critical, x3 damage.`,
       valuesByOverboostLevel: {
         damage: ['380', '460', '460', '460', '460', '460', '590', '590', '590', '590', '700']
       }
@@ -3932,7 +3958,7 @@ export const weaponsData: Weapons = {
       name: 'Bloomin\' Spray',
       atbCost: 4,
       sigil: null,
-      description: `${damage(undefined, 'Mag. Water', 'Single Enemy', null)}\nAlso, when [Rng.: Self]'s HP is 50% or more, ${decrease('Water Resist.', undefined, 'Single Enemy', null, undefined, undefined, 'High')}`,
+      description: `${damage(undefined, 'Mag. Water', 'Single Enemy', null)}\nAlso, ${conditionHP('Self', '50', 'more')}, ${decrease('Water Resist.', undefined, 'Single Enemy', null, undefined, undefined, 'High')}`,
       valuesByOverboostLevel: {
         damage: ['390', '450', '450', '450', '450', '450', '550', '550', '550', '550', '620'],
         waterResistDecreasePot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
@@ -4230,7 +4256,7 @@ export const weaponsData: Weapons = {
       sigil: null,
       description: `${damage(undefined, 'Mag. Wind', 'All Enemies', null)}`,
       valuesByOverboostLevel: {
-        damage: ['210', '', '', '', '', '', '280', '280', '280', '280', '290']
+        damage: ['210', '240', '240', '240', '240', '240', '280', '280', '280', '280', '290']
       }
     }),
     maxRarityLevel: 5,
@@ -4256,10 +4282,10 @@ export const weaponsData: Weapons = {
       sigil: null,
       description: `${increase('PATK', 'Low', 'Single Ally', null, undefined, undefined, 'Mid')}\nAlso, ${regen('Single Ally', undefined, 3)}\n${heal(undefined, 'Mag.', 'Single Ally')}`,
       valuesByOverboostLevel: {
-        pAtkIncreaseDur: ['34', '', '', '', '', '', '40', '40', '40', '40', '44'],
-        pAtkIncreaseExt: ['11', '', '', '', '', '', '13', '13', '13', '13', '14'],
-        regenDur: ['9', '', '', '', '', '', '12', '12', '12', '12', '15'],
-        heal: ['9', '', '', '', '', '', '12', '12', '12', '12', '13']
+        pAtkIncreaseDur: ['34', '36', '36', '36', '36', '36', '40', '40', '40', '40', '44'],
+        pAtkIncreaseExt: ['11', '12', '12', '12', '12', '12', '13', '13', '13', '13', '14'],
+        regenDur: ['9', '12', '12', '12', '12', '12', '12', '12', '12', '12', '15'],
+        heal: ['9', '11', '11', '11', '11', '11', '12', '12', '12', '12', '13']
       }
     }),
     maxRarityLevel: 5,
@@ -4285,7 +4311,7 @@ export const weaponsData: Weapons = {
       sigil: null,
       description: `${damage(undefined, 'Mag. Ice', 'All Enemies', null)}`,
       valuesByOverboostLevel: {
-        damage: ['210', '', '', '', '', '', '280', '280', '280', '280', '290']
+        damage: ['210', '240', '240', '240', '240', '240', '280', '280', '280', '280', '290']
       }
     }),
     maxRarityLevel: 5,
@@ -4562,8 +4588,8 @@ export const weaponsData: Weapons = {
       sigil: null,
       description: `${damage(undefined, 'Phys. Wind', 'Single Enemy', null)}\nThe higher your HP, the higher the ability pot. (max: x3).\nAlso, ${increaseLimitGauge(undefined, 'Self')}`,
       valuesByOverboostLevel: {
-        damage: ['220', '', '', '', '', '', '340', '340', '340', '340', '400'],
-        limitGaugeIncreasePot: ['3', '', '', '', '', '', '4', '4', '4', '4', '4']
+        damage: ['220', '260', '260', '260', '260', '260', '340', '340', '340', '340', '400'],
+        limitGaugeIncreasePot: ['3', '3', '3', '3', '3', '3', '4', '4', '4', '4', '4']
       }
     }),
     maxRarityLevel: 5,
@@ -4647,7 +4673,7 @@ export const weaponsData: Weapons = {
       name: 'Sageshot',
       atbCost: 4,
       sigil: null,
-      description: `${damage(undefined, 'Phys. Non-elem.', 'Single Enemy', 10)}\nAlso, when [Rng.: Self]'s HP is 50% or more, ${decrease('Earth Resist.', undefined, 'Single Enemy', null, undefined, undefined, 'High')}\n${increaseLimitGauge(undefined, 'Self')}`,
+      description: `${damage(undefined, 'Phys. Non-elem.', 'Single Enemy', 10)}\nAlso, ${conditionHP('Self', '50', 'more')}, ${decrease('Earth Resist.', undefined, 'Single Enemy', null, undefined, undefined, 'High')}\n${increaseLimitGauge(undefined, 'Self')}`,
       valuesByOverboostLevel: {
         damage: ['320', '370', '370', '370', '370', '370', '450', '450', '450', '450', '510'],
         earthResistDecreasePot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
@@ -4706,7 +4732,7 @@ export const weaponsData: Weapons = {
       name: 'Sludge Shot',
       atbCost: 4,
       sigil: null,
-      description: `${damage(undefined, 'Mag. Earth', 'Single Enemy', null)}\nAlso, when Debuff is granted to Target, x1.2 damage.\n${increaseLimitGauge(undefined, 'Self')}`,
+      description: `${damage(undefined, 'Mag. Earth', 'Single Enemy', null)}\nAlso, When Debuff is granted to Target, x1.2 damage.\n${increaseLimitGauge(undefined, 'Self')}`,
       valuesByOverboostLevel: {
         damage: ['520', '620', '620', '620', '620', '620', '780', '780', '780', '780', '940'],
         limitGaugeIncreasePot: ['4', '4', '4', '4', '4', '4', '5', '5', '5', '5', '5']
@@ -4733,7 +4759,7 @@ export const weaponsData: Weapons = {
       name: 'Gunspinner Shot',
       atbCost: 4,
       sigil: null,
-      description: `${damage(undefined, 'Phys. Non-elem.', 'Single Enemy', 10)}\nAlso, when Debuff is granted to Target, x1.5 damage.\n${increaseLimitGauge(undefined, 'Self')}`,
+      description: `${damage(undefined, 'Phys. Non-elem.', 'Single Enemy', 10)}\nAlso, When Debuff is granted to Target, x1.5 damage.\n${increaseLimitGauge(undefined, 'Self')}`,
       valuesByOverboostLevel: {
         damage: ['370', '440', '440', '440', '440', '440', '570', '570', '570', '570', '700'],
         limitGaugeIncreasePot: ['2', '2', '2', '2', '2', '2', '3', '3', '3', '3', '3']
@@ -4762,8 +4788,8 @@ export const weaponsData: Weapons = {
       sigil: null,
       description: `${damage(undefined, 'Mag. Non-elem.', 'Single Enemy', 10)}\nAlso, ${increaseLimitGauge(undefined, 'Self')}`,
       valuesByOverboostLevel: {
-        damage: ['650', '', '', '', '', '', '1,140', '1,140', '1,140', '1,140', '1,300'],
-        limitGaugeIncreasePot: ['4', '', '', '', '', '', '5', '5', '5', '5', '5']
+        damage: ['650', '780', '780', '780', '780', '780', '1,140', '1,140', '1,140', '1,140', '1,300'],
+        limitGaugeIncreasePot: ['4', '4', '4', '4', '4', '4', '5', '5', '5', '5', '5']
       }
     }),
     maxRarityLevel: 5,
@@ -4835,7 +4861,7 @@ export const weaponsData: Weapons = {
       name: 'Shadow Swoop',
       atbCost: 4,
       sigil: null,
-      description: `${damage(undefined, 'Mag. Lightning', 'Single Enemy', null)}\nAlso, when Buff is granted to [Rng.: Self], x1.2 damage.\n${increaseLimitGauge(undefined, 'Self')}`,
+      description: `${damage(undefined, 'Mag. Lightning', 'Single Enemy', null)}\nAlso, When Buff is granted to [Rng.: Self], x1.2 damage.\n${increaseLimitGauge(undefined, 'Self')}`,
       valuesByOverboostLevel: {
         damage: ['520', '620', '620', '620', '620', '620', '780', '780', '780', '780', '940'],
         limitGaugeIncreasePot: ['4', '4', '4', '4', '4', '4', '5', '5', '5', '5', '5']
@@ -5275,12 +5301,12 @@ export const weaponsData: Weapons = {
       name: 'Freezing Cleave',
       atbCost: 4,
       sigil: null,
-      description: `${damage(undefined, 'Phys. Ice', 'Single Enemy', null)}\nAlso, when [Rng.: Self]'s HP is 50% or more, ${decrease('Ice Resist.', undefined, 'Single Enemy', null, undefined, undefined, 'High')}`,
+      description: `${damage(undefined, 'Phys. Ice', 'Single Enemy', null)}\nAlso, ${conditionHP('Self', '50', 'more')}, ${decrease('Ice Resist.', undefined, 'Single Enemy', null, undefined, undefined, 'High')}`,
       valuesByOverboostLevel: {
-        damage: ['390', '', '', '', '', '', '550', '550', '550', '550', '620'],
-        iceResistDecreasePot: ['Mid', '', '', '', '', '', 'High', 'High', 'High', 'High', 'High'],
-        iceResistDecreaseDur: ['20', '', '', '', '', '', '26', '26', '26', '26', '30'],
-        iceResistDecreaseExt: ['6', '', '', '', '', '', '8', '8', '8', '8', '10']
+        damage: ['390', '450', '450', '450', '450', '450', '550', '550', '550', '550', '620'],
+        iceResistDecreasePot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        iceResistDecreaseDur: ['20', '22', '22', '22', '22', '22', '26', '26', '26', '26', '30'],
+        iceResistDecreaseExt: ['6', '7', '7', '7', '7', '7', '8', '8', '8', '8', '10']
       }
     }),
     maxRarityLevel: 5,
@@ -5334,7 +5360,7 @@ export const weaponsData: Weapons = {
       sigil: null,
       description: `${damage(undefined, 'Mag. Fire', 'Single Enemy', null)}`,
       valuesByOverboostLevel: {
-        damage: ['320', '', '', '', '', '', '430', '430', '430', '430', '450']
+        damage: ['320', '370', '370', '370', '370', '370', '430', '430', '430', '430', '450']
       }
     }),
     maxRarityLevel: 5,
@@ -5422,7 +5448,7 @@ export const weaponsData: Weapons = {
       name: 'Igniting Stream',
       atbCost: 4,
       sigil: null,
-      description: `${damage(undefined, 'Mag. Fire', 'Single Enemy', null)}\nAlso, when [Rng.: Self]'s HP is 70% or more, x1.2 damage.`,
+      description: `${damage(undefined, 'Mag. Fire', 'Single Enemy', null)}\nAlso, ${conditionHP('Self', '70', 'more')}, x1.2 damage.`,
       valuesByOverboostLevel: {
         damage: ['480', '', '', '', '', '', '710', '710', '710', '710', '850']
       }
@@ -5448,9 +5474,9 @@ export const weaponsData: Weapons = {
       name: 'Lightning Edge',
       atbCost: 4,
       sigil: null,
-      description: `${damage(undefined, 'Phys. Lightning', 'Single Enemy', null)}\nAlso, when [Rng.: Self]'s HP is 70% or more, x1.2 damage.`,
+      description: `${damage(undefined, 'Phys. Lightning', 'Single Enemy', null)}\nAlso, ${conditionHP('Self', '70', 'more')}, x1.2 damage.`,
       valuesByOverboostLevel: {
-        damage: ['520', '', '', '', '', '', '780', '780', '780', '780', '940']
+        damage: ['520', '620', '620', '620', '620', '620', '780', '780', '780', '780', '940']
       }
     }),
     maxRarityLevel: 5,
@@ -5476,7 +5502,7 @@ export const weaponsData: Weapons = {
       sigil: null,
       description: `${damage(undefined, 'Mag. Fire', 'All Enemies', null)}`,
       valuesByOverboostLevel: {
-        damage: ['210', '', '', '', '', '', '280', '280', '280', '280', '290']
+        damage: ['210', '240', '240', '240', '240', '240', '280', '280', '280', '280', '290']
       }
     }),
     maxRarityLevel: 5,
@@ -5526,7 +5552,7 @@ export const weaponsData: Weapons = {
       name: 'Gale Slash',
       atbCost: 4,
       sigil: null,
-      description: `${damage(undefined, 'Phys. Wind', 'Single Enemy', null)}\nAlso, when Debuff is granted to Target, x1.2 damage.`,
+      description: `${damage(undefined, 'Phys. Wind', 'Single Enemy', null)}\nAlso, When Debuff is granted to Target, x1.2 damage.`,
       valuesByOverboostLevel: {
         damage: ['520', '', '', '', '', '', '780', '780', '780', '780', '940']
       }
@@ -6075,7 +6101,7 @@ export const weaponsData: Weapons = {
       sigil: null,
       description: `${damage(undefined, 'Mag. Fire', 'All Enemies', null)}`,
       valuesByOverboostLevel: {
-        damage: ['210', '', '', '', '', '', '280', '280', '280', '280', '290']
+        damage: ['210', '240', '240', '240', '240', '240', '280', '280', '280', '280', '290']
       }
     }),
     maxRarityLevel: 5,
@@ -6133,9 +6159,9 @@ export const weaponsData: Weapons = {
       sigil: null,
       description: `${damage(undefined, 'Mag. Non-elem.', 'All Enemies', 10)}\nAlso, ${decrease('Fire Resist.', 'Low', 'All Enemies', null, undefined, undefined, 'Mid')}`,
       valuesByOverboostLevel: {
-        damage: ['180', '', '', '', '', '', '240', '240', '240', '240', '250'],
-        fireResistDecreaseDur: ['20', '', '', '', '', '', '30', '30', '30', '30', '35'],
-        fireResistDecreaseExt: ['5', '', '', '', '', '', '7', '7', '7', '7', '8']
+        damage: ['180', '210', '210', '210', '210', '210', '240', '240', '240', '240', '250'],
+        fireResistDecreaseDur: ['20', '25', '25', '25', '25', '25', '30', '30', '30', '30', '35'],
+        fireResistDecreaseExt: ['5', '6', '6', '6', '6', '6', '7', '7', '7', '7', '8']
       }
     }),
     maxRarityLevel: 5,
@@ -6159,7 +6185,7 @@ export const weaponsData: Weapons = {
       name: 'Torrential Thrust',
       atbCost: 4,
       sigil: null,
-      description: `${damage(undefined, 'Phys. Water', 'Single Enemy', null)}\nAlso, when [Rng.: Self]'s HP is 50% or more, ${decrease('Water Resist.', undefined, 'Single Enemy', null, undefined, undefined, 'High')}`,
+      description: `${damage(undefined, 'Phys. Water', 'Single Enemy', null)}\nAlso, ${conditionHP('Self', '50', 'more')}, ${decrease('Water Resist.', undefined, 'Single Enemy', null, undefined, undefined, 'High')}`,
       valuesByOverboostLevel: {
         damage: ['440', '510', '510', '510', '510', '510', '620', '620', '620', '620', '700'],
         waterResistDecreasePot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
@@ -6188,7 +6214,7 @@ export const weaponsData: Weapons = {
       name: 'Sandsplitter',
       atbCost: 4,
       sigil: null,
-      description: `${damage(undefined, 'Mag. Earth', 'Single Enemy', null)}\nAlso, when [Rng.: Self]'s HP is 50% or more, ${decrease('Earth Resist.', undefined, 'Single Enemy', null, undefined, undefined, 'High')}`,
+      description: `${damage(undefined, 'Mag. Earth', 'Single Enemy', null)}\nAlso, ${conditionHP('Self', '50', 'more')}, ${decrease('Earth Resist.', undefined, 'Single Enemy', null, undefined, undefined, 'High')}`,
       valuesByOverboostLevel: {
         damage: ['440', '510', '510', '510', '510', '510', '620', '620', '620', '620', '700'],
         earthResistDecreasePot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
@@ -6216,7 +6242,7 @@ export const weaponsData: Weapons = {
       id: null,
       name: 'Ult. Sweeping Slash',
       sigil: null,
-      description: `${damage('1,500', 'Phys./Mag. Non-elem.', 'Single Enemy', null)}\nAlso, when Debuff is granted to Target, x2 damage.\n${chargeAndUses(30, null, 1)}`
+      description: `${damage('1,500', 'Phys./Mag. Non-elem.', 'Single Enemy', null)}\nAlso, When Debuff is granted to Target, x2 damage.\n${chargeAndUses(30, null, 1)}`
     }),
     maxRarityStats: {
       pAtk: 183,
@@ -6259,7 +6285,7 @@ export const weaponsData: Weapons = {
       name: 'Royal Shock',
       atbCost: 4,
       sigil: null,
-      description: `${damage(undefined, 'Mag. Water', 'Single Enemy', null)}\nAlso, when Debuff is granted to Target, x1.2 damage.`,
+      description: `${damage(undefined, 'Mag. Water', 'Single Enemy', null)}\nAlso, When Debuff is granted to Target, x1.2 damage.`,
       valuesByOverboostLevel: {
         damage: ['520', '620', '620', '620', '620', '620', '780', '780', '780', '780', '940']
       }
@@ -6611,7 +6637,7 @@ export const weaponsData: Weapons = {
       sigil: null,
       description: `${damage(undefined, 'Mag. Fire', 'Single Enemy', null)}`,
       valuesByOverboostLevel: {
-        damage: ['320', '', '', '', '', '', '430', '430', '430', '430', '450']
+        damage: ['320', '370', '370', '370', '370', '370', '430', '430', '430', '430', '450']
       }
     }),
     maxRarityLevel: 5,
@@ -6693,9 +6719,9 @@ export const weaponsData: Weapons = {
       sigil: null,
       description: `${damage(undefined, 'Phys. Non-elem.', 'Single Enemy', 10)}\nAlso, ${decrease('PATK', 'Low', 'Single Enemy', null, undefined, undefined, 'Mid')}`,
       valuesByOverboostLevel: {
-        damage: ['260', '', '', '', '', '', '350', '350', '350', '350', '360'],
-        pAtkDecreaseDur: ['20', '', '', '', '', '', '25', '25', '25', '25', '28'],
-        pAtkDecreaseExt: ['6', '', '', '', '', '', '7', '7', '7', '7', '9']
+        damage: ['260', '300', '300', '300', '300', '300', '350', '350', '350', '350', '360'],
+        pAtkDecreaseDur: ['20', '22', '22', '22', '22', '22', '25', '25', '25', '25', '28'],
+        pAtkDecreaseExt: ['6', '7', '7', '7', '7', '7', '7', '7', '7', '7', '9']
       }
     }),
     maxRarityLevel: 5,
@@ -6775,7 +6801,7 @@ export const weaponsData: Weapons = {
       sigil: null,
       description: `${damage(undefined, 'Mag. Water', 'All Enemies', null)}`,
       valuesByOverboostLevel: {
-        damage: ['210', '', '', '', '', '', '280', '280', '280', '280', '290']
+        damage: ['210', '240', '240', '240', '240', '240', '280', '280', '280', '280', '290']
       }
     }),
     maxRarityLevel: 5,
@@ -6801,7 +6827,7 @@ export const weaponsData: Weapons = {
       sigil: null,
       description: `${damage(undefined, 'Mag. Fire', 'All Enemies', null)}`,
       valuesByOverboostLevel: {
-        damage: ['210', '', '', '', '', '', '280', '280', '280', '280', '290']
+        damage: ['210', '240', '240', '240', '240', '240', '280', '280', '280', '280', '290']
       }
     }),
     maxRarityLevel: 5,
@@ -6984,7 +7010,7 @@ export const weaponsData: Weapons = {
       sigil: null,
       description: `${heal(undefined, 'Mag.', 'Single Ally')}`,
       valuesByOverboostLevel: {
-        heal: ['106', '', '', '', '', '', '138', '138', '138', '138', '148']
+        heal: ['106', '127', '127', '127', '127', '127', '138', '138', '138', '138', '148']
       }
     }),
     maxRarityLevel: 5,
@@ -7347,7 +7373,7 @@ export const weaponsData: Weapons = {
       sigil: null,
       description: `${damage(undefined, 'Phys. Fire', 'Single Enemy', null)}`,
       valuesByOverboostLevel: {
-        damage: ['320', '', '', '', '', '', '430', '430', '430', '430', '450']
+        damage: ['320', '370', '370', '370', '370', '370', '430', '430', '430', '430', '450']
       }
     }),
     maxRarityLevel: 5,
@@ -7753,7 +7779,7 @@ export const weaponsData: Weapons = {
       sigil: 'rhombus',
       description: `${damage(undefined, 'Phys. Non-elem.', 'Single Enemy', 10)}`,
       valuesByOverboostLevel: {
-        damage: ['420', '', '', '', '', '', '660', '660', '660', '660', '790']
+        damage: ['420', '500', '500', '500', '500', '500', '660', '660', '660', '660', '790']
       }
     }),
     maxRarityLevel: 5,
@@ -7884,7 +7910,7 @@ export const weaponsData: Weapons = {
       name: 'Blazing Rose',
       atbCost: 4,
       sigil: null,
-      description: `${damage(undefined, 'Mag. Fire', 'Single Enemy', null)}\nAlso, when [Rng.: Self]'s HP is 50% or more, ${decrease('MDEF', undefined, 'Single Enemy', null, undefined, undefined, 'High')}`,
+      description: `${damage(undefined, 'Mag. Fire', 'Single Enemy', null)}\nAlso, ${conditionHP('Self', '50', 'more')}, ${decrease('MDEF', undefined, 'Single Enemy', null, undefined, undefined, 'High')}`,
       valuesByOverboostLevel: {
         damage: ['390', '450', '450', '450', '450', '450', '550', '550', '550', '550', '620'],
         mDefDecreasePot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
@@ -7975,13 +8001,13 @@ export const weaponsData: Weapons = {
       sigil: 'rhombus',
       description: `${damage(undefined, 'Mag. Non-elem.', 'Single Enemy', 10)}\nAlso, ${decrease('PDEF', undefined, 'Single Enemy', null, undefined, undefined, 'High')}\nWhen Buff is granted to [Rng.: Self], ${decrease('MDEF', undefined, 'Single Enemy', null, undefined, undefined, 'Mid')}`,
       valuesByOverboostLevel: {
-        damage: ['260', '', '', '', '', '', '360', '360', '360', '360', '420'],
-        pDefDecreasePot: ['Mid', '', '', '', '', '', 'High', 'High', 'High', 'High', 'High'],
-        pDefDecreaseDur: ['16', '', '', '', '', '', '20', '20', '20', '20', '24'],
-        pDefDecreaseExt: ['5', '', '', '', '', '', '6', '6', '6', '6', '8'],
-        mDefDecreasePot: ['Low', '', '', '', '', '', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid'],
-        mDefDecreaseDur: ['16', '', '', '', '', '', '20', '20', '20', '20', '24'],
-        mDefDecreaseExt: ['5', '', '', '', '', '', '6', '6', '6', '6', '8']
+        damage: ['260', '300', '300', '300', '300', '300', '360', '360', '360', '360', '420'],
+        pDefDecreasePot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        pDefDecreaseDur: ['16', '18', '18', '18', '18', '18', '20', '20', '20', '20', '24'],
+        pDefDecreaseExt: ['5', '6', '6', '6', '6', '6', '6', '6', '6', '6', '8'],
+        mDefDecreasePot: ['Low', 'Low', 'Low', 'Low', 'Low', 'Low', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid'],
+        mDefDecreaseDur: ['16', '18', '18', '18', '18', '18', '20', '20', '20', '20', '24'],
+        mDefDecreaseExt: ['5', '6', '6', '6', '6', '6', '6', '6', '6', '6', '8']
       }
     }),
     maxRarityLevel: 5,
@@ -8202,13 +8228,13 @@ export const weaponsData: Weapons = {
       sigil: null,
       description: `${increase('PDEF', undefined, 'All Allies', null, undefined, undefined, 'High')}\nAlso, ${heal(undefined, 'Mag.', 'All Allies')}\n${conditionHP('Self', '70', 'more')}, ${increase('PATK', undefined, 'All Allies', null, undefined, undefined, 'High')}`,
       valuesByOverboostLevel: {
-        pDefIncreasePot: ['Mid', '', '', '', '', '', 'High', 'High', 'High', 'High', 'High'],
-        pDefIncreaseDur: ['12', '', '', '', '', '', '16', '16', '16', '16', '20'],
-        pDefIncreaseExt: ['4', '', '', '', '', '', '5', '5', '5', '5', '6'],
-        heal: ['5', '', '', '', '', '', '6', '6', '6', '6', '7'],
-        pAtkIncreasePot: ['Mid', '', '', '', '', '', 'High', 'High', 'High', 'High', 'High'],
-        pAtkIncreaseDur: ['12', '', '', '', '', '', '16', '16', '16', '16', '20'],
-        pAtkIncreaseExt: ['4', '', '', '', '', '', '5', '5', '5', '5', '6']
+        pDefIncreasePot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        pDefIncreaseDur: ['12', '16', '16', '16', '16', '16', '16', '16', '16', '16', '20'],
+        pDefIncreaseExt: ['4', '5', '5', '5', '5', '5', '5', '5', '5', '5', '6'],
+        heal: ['5', '6', '6', '6', '6', '6', '6', '6', '6', '6', '7'],
+        pAtkIncreasePot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        pAtkIncreaseDur: ['12', '16', '16', '16', '16', '16', '16', '16', '16', '16', '20'],
+        pAtkIncreaseExt: ['4', '5', '5', '5', '5', '5', '5', '5', '5', '5', '6']
       }
     }),
     maxRarityLevel: 5,
