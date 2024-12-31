@@ -709,6 +709,34 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData["Boost Wind Pot."]
     ]
   }),
+  "Chocobo Paddle": new Weapon({
+    id: null,
+    name: 'Chocobo Paddle',
+    character: charactersData[1],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: null,
+      name: 'Defira Surge A',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Mag. Non-elem.', 'All Enemies', 10)}\nAlso, ${decrease('Fire Resist.', 'Low', 'All Enemies', null, undefined, undefined, 'Mid')}`,
+      valuesByOverboostLevel: {
+        damage: ['180', '210', '210', '210', '210', '210', '240', '240', '240', '240', '250'],
+        fireResistDecreaseDur: ['20', '25', '25', '25', '25', '25', '30', '30', '30', '30', '35'],
+        fireResistDecreaseExt: ['5', '6', '6', '6', '6', '6', '7', '7', '7', '7', '8']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 205,
+      mAtk: 218,
+      heal: 168
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost Fire Pot."]
+    ]
+  }),
   "Gatling Gun": new Weapon({
     id: 2001,
     name: 'Gatling Gun',
@@ -997,10 +1025,10 @@ export const weaponsData: Weapons = {
       sigil: null,
       description: `${increase('PDEF', 'Mid', 'Single Ally', null, undefined, undefined, undefined)}\nAlso, ${heal(undefined, 'Mag.', 'Single Ally')}`,
       valuesByOverboostLevel: {
-        pDefIncreaseDur: ['30', '', '', '', '', '', '34', '34', '34', '34', '38'],
-        pDefIncreaseExt: ['10', '', '', '', '', '', '11', '11', '11', '11', '12'],
-        pDefIncreaseMaxPot: ['Mid', '', '', '', '', '', 'High', 'High', 'High', 'High', 'High'],
-        heal: ['9', '', '', '', '', '', '12', '12', '12', '12', '13']
+        pDefIncreaseDur: ['30', '34', '34', '34', '34', '34', '34', '34', '34', '34', '38'],
+        pDefIncreaseExt: ['10', '11', '11', '11', '11', '11', '11', '11', '11', '11', '12'],
+        pDefIncreaseMaxPot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        heal: ['9', '11', '11', '11', '11', '11', '12', '12', '12', '12', '13']
       }
     }),
     maxRarityLevel: 5,
@@ -1989,6 +2017,35 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData["Boost Ability Pot."]
     ]
   }),
+  "Blue Daffodil Gloves": new Weapon({
+    id: null,
+    name: 'Blue Daffodil Gloves',
+    character: charactersData[3],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: null,
+      name: 'Blue Florescent Fury',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Phys. Non-elem.', 'Single Enemy', 10)}\nAlso, ${exploitWeakness('Self', undefined, undefined, undefined)}`,
+      valuesByOverboostLevel: {
+        damage: ['600', '720', '720', '720', '720', '720', '1,000', '1,000', '1,000', '1,000', '1,100'],
+        exploitWeaknessPot: ['25', '25', '25', '25', '25', '25', '40', '40', '40', '40', '40'],
+        exploitWeaknessDur: ['45', '50', '50', '50', '50', '50', '50', '50', '50', '50', '70'],
+        exploitWeaknessExt: ['9', '10', '10', '10', '10', '10', '10', '10', '10', '10', '14']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 283,
+      mAtk: 241,
+      heal: 137
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData["Boost ATK (All Allies)"],
+      reinforcementAbilitiesData["Boost Ability Pot."]
+    ]
+  }),
   "Guard Stick": new Weapon({
     id: 4001,
     name: 'Guard Stick',
@@ -2715,6 +2772,66 @@ export const weaponsData: Weapons = {
     reinforcementAbilities: [
       reinforcementAbilitiesData["Boost HEAL"],
       reinforcementAbilitiesData["Regen Boost"]
+    ]
+  }),
+  "Titan Rod": new Weapon({
+    id: null,
+    name: 'Titan Rod',
+    character: charactersData[4],
+    element: 'Earth',
+    commandAbility: new CommandAbility({
+      id: null,
+      name: 'Quakera Surge',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Mag. Earth', 'Single Enemy', null)}`,
+      valuesByOverboostLevel: {
+        damage: ['320', '370', '370', '370', '370', '370', '430', '430', '430', '430', '450']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 191,
+      mAtk: 222,
+      heal: 177
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData["Boost Wind Resist."],
+      reinforcementAbilitiesData["Boost HP"]
+    ]
+  }),
+  "Crimson Staff": new Weapon({
+    id: null,
+    name: 'Crimson Staff',
+    character: charactersData[4],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: null,
+      name: 'Crimson Florescence',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Mag. Non-elem.', 'All Enemies', 10)}\nAlso, ${increase('MATK', undefined, 'All Allies', null, undefined, undefined, undefined)}\n${conditionHP('Self', '70', 'more')}, ${decrease('MDEF', undefined, 'All Enemies', null, undefined, undefined, undefined)}`,
+      valuesByOverboostLevel: {
+        damage: ['470', '540', '540', '540', '540', '540', '660', '660', '660', '660', '750'],
+        mAtkIncreasePot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        mAtkIncreaseDur: ['12', '16', '16', '16', '16', '16', '16', '16', '16', '16', '20'],
+        mAtkIncreaseExt: ['4', '5', '5', '5', '5', '5', '5', '5', '5', '5', '6'],
+        mAtkIncreaseMaxPot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        mDefDecreasePot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        mDefDecreaseDur: ['20', '22', '22', '22', '22', '22', '25', '25', '25', '25', '35'],
+        mDefDecreaseExt: ['6', '7', '7', '7', '7', '7', '8', '8', '8', '8', '11'],
+        mDefDecreaseMaxPot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 191,
+      mAtk: 281,
+      heal: 181
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData["Boost MATK (All Allies)"],
+      reinforcementAbilitiesData["Buff/Debuff Extension (Stats/Pot./Res.)"]
     ]
   }),
   "Sleek Collar": new Weapon({
@@ -5901,10 +6018,10 @@ export const weaponsData: Weapons = {
       sigil: null,
       description: `${increase('PDEF', 'Mid', 'Single Ally', null, undefined, undefined, undefined)}\nAlso, ${heal(undefined, 'Mag.', 'Single Ally')}`,
       valuesByOverboostLevel: {
-        pDefIncreaseDur: ['30', '', '', '', '', '', '34', '34', '34', '34', '38'],
-        pDefIncreaseExt: ['10', '', '', '', '', '', '11', '11', '11', '11', '12'],
-        pDefIncreaseMaxPot: ['Mid', '', '', '', '', '', 'High', 'High', 'High', 'High', 'High'],
-        heal: ['9', '', '', '', '', '', '12', '12', '12', '12', '13']
+        pDefIncreaseDur: ['30', '34', '34', '34', '34', '34', '34', '34', '34', '34', '38'],
+        pDefIncreaseExt: ['10', '11', '11', '11', '11', '11', '11', '11', '11', '11', '12'],
+        pDefIncreaseMaxPot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        heal: ['9', '11', '11', '11', '11', '11', '12', '12', '12', '12', '13']
       }
     }),
     maxRarityLevel: 5,
@@ -8489,12 +8606,38 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData["Boost HP"],
       reinforcementAbilitiesData["Boost Mag. Ability Pot."]
     ]
+  }),
+  "Titan Blade": new Weapon({
+    id: null,
+    name: 'Titan Blade',
+    character: charactersData[56],
+    element: 'Earth',
+    commandAbility: new CommandAbility({
+      id: null,
+      name: 'Quakera Surge',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Mag. Earth', 'Single Enemy', null)}`,
+      valuesByOverboostLevel: {
+        damage: ['320', '370', '370', '370', '370', '370', '430', '430', '430', '430', '450']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 199,
+      mAtk: 225,
+      heal: 168
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData["Boost Wind Resist."],
+      reinforcementAbilitiesData["Boost PDEF"]
+    ]
   })
 };
 
 type Range = 'Single Enemy' | 'All Enemies' | 'Single Ally' | 'All Allies' | 'Self' | 'Affected Targets' | 'Ally (Excluding Self)' | null;
 type CriticalRate = number | null;
-type Effect = 'Ailment: Stun' | 'Ailment: Poison' | 'Ailment: Silence' | 'Haste' | 'Provoke' | 'Veil';
+type Effect = 'Ailment: Stun' | 'Ailment: Poison' | 'Ailment: Silence' | 'Haste' | 'Provoke' | 'Veil' | 'Exploit Weakness';
 type Attribute = 'PATK' | 'MATK' | 'PDEF' | 'MDEF' | 'Fire Resist.' | 'Ice Resist.' | 'Thunder Resist.' | 'Earth Resist.' | 'Water Resist.' | 'Wind Resist.' | 'Fire Damage' | 'Ice Damage' | 'Lightning Damage' | 'Earth Damage' | 'Water Damage' | 'Wind Damage';
 type Element = 'Non-elem.' | 'Fire' | 'Ice' | 'Lightning' | 'Earth' | 'Water' | 'Wind';
 type Damage = string | undefined;
@@ -8580,7 +8723,8 @@ function apply(effect: Effect, potency: number | null | undefined, range: Range,
     'Ailment: Silence': 'silence',
     'Haste': 'haste',
     'Provoke': 'provoke',
-    'Veil': 'veil'
+    'Veil': 'veil',
+    'Exploit Weakness': 'exploitWeakness'
   }
   const effectKey = effectMap[effect];
   const rateString = rate === null      ? ''                               :
@@ -8630,4 +8774,11 @@ function chargeAndUses(charge: number, initial: number | null, uses: number) {
 function restoreMaxHP(percentage: number, type: HealType, range: Range) {
   const pct = percentage ? percentage : '{{restorePercentage}}';
   return `Restores ${pct}% of max HP [${type}] [Rng.: ${range}].`
+}
+
+function exploitWeakness(range: Range, potency: Potency, duration: Duration, extension: Extension) {
+  const pot = potency === undefined ? '{{exploitWeaknessPot}}' : potency;
+  const dur = duration === undefined ? '{{exploitWeaknessDur}}' : duration;
+  const ext = extension === undefined ? '{{exploitWeaknessExt}}' : extension;
+  return `Applies Exploit Weakness [Rng.: ${range}] [Pot.: ${pot}%] [Dur.: ${dur}s] [Dur. Ext.: +${ext}s]`;
 }
