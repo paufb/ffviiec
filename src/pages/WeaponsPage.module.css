@@ -595,10 +595,6 @@
           & img {
             width: 1.5rem;
             height: 1.5rem;
-            aspect-ratio: 1;
-            background-color: rgb(24, 45, 57);
-            border: 2px solid rgb(16, 138, 156);
-            box-sizing: border-box;
           }
         }
       }
@@ -628,11 +624,6 @@
           & .ability-icons-row {
             display: flex;
             gap: 0.125rem;
-
-            &:nth-child(2) img {
-              background-color: rgb(24, 45, 57);
-              border: 2px solid rgb(16, 138, 156);
-            }
           }
 
           & .ability-icons-column:nth-child(1) img {

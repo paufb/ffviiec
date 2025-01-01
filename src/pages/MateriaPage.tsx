@@ -28,12 +28,12 @@ export function MateriaPage() {
               </div>
               <div className={styles['materia-info']}>
                 {materia.name}
-                <ATBBarCost cost={materia.commandAbility.atbCost} />
                 <div className={styles['materia-icons']}>
                   <CommandAbilityIcon commandAbility={materia.commandAbility} />
                   <ElementIcon element={materia.element} />
                   <SigilIcon sigil={materia.commandAbility.sigil} />
                 </div>
+                <ATBBarCost cost={materia.commandAbility.atbCost} />
               </div>
             </div>
           ))}

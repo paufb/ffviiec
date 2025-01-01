@@ -231,11 +231,6 @@ dialog.modal {
       border: 2px solid rgb(63, 117, 173);
     }
 
-    & .column-abilities-rabilities img {
-      background-color: rgb(24, 45, 57);
-      border: 2px solid rgb(16, 138, 156);
-    }
-
     & .column-abilities-cability,
     & .column-abilities-rabilities {
       color: rgb(149, 199, 255);

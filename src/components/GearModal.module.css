@@ -132,8 +132,6 @@ dialog.modal {
           & img {
             width: 2.5rem;
             height: 2.5rem;
-            background-color: rgb(24, 45, 57);
-            border: 2px solid rgb(16, 138, 156);
           }
         }
       }
