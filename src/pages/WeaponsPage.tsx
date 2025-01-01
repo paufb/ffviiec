@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { sigils, Characters, Elements, SigilType } from '../types.ts';
+import { sigils, Characters, Elements, SigilType, DisplayableOverboostLevel } from '../types.ts';
 import { ATBBarCost } from '../components/ATBBarCost.tsx';
 import { CharacterDiamond } from '../components/CharacterDiamond.tsx';
 import { CommandAbilityIcon } from '../components/CommandAbilityIcon.tsx';
@@ -33,7 +33,7 @@ export function WeaponsPage({ isViewportNarrow }: WeaponsPageProps) {
   const [selectedElements, setSelectedElements] = useState<(keyof Elements)[]>([]);
   const [selectedSigils, setSelectedSigils] = useState<(SigilType)[]>([]);
   const [selectedWeaponLevel, setSelectedWeaponLevel] = useState(120);
-  const [selectedOverboostLevel, setSelectedOverboostLevel] = useState(10);
+  const [selectedOverboostLevel, setSelectedOverboostLevel] = useState<DisplayableOverboostLevel>(10);
   const [sortConfig, setSortConfig] = useState<SortConfig>({ column: '', direction: '' });
   const [layout, setLayout] = useState<Layout>('grid');
   const [selectedWeaponForModal, setSelectedWeaponForModal] = useState<Weapon | null>(null);
@@ -45,6 +45,7 @@ export function WeaponsPage({ isViewportNarrow }: WeaponsPageProps) {
     elements: { menu: useRef<HTMLDivElement>(null), button: useRef<HTMLButtonElement>(null) },
     sigils: { menu: useRef<HTMLDivElement>(null), button: useRef<HTMLButtonElement>(null) }
   };
+  const displayableOverboostLevels: DisplayableOverboostLevel[] = [0, 1, 6, 10];
 
   useEffect(() => {
     Promise.all([
@@ -111,9 +112,8 @@ export function WeaponsPage({ isViewportNarrow }: WeaponsPageProps) {
     setNameQuery(query);
   }
 
-  function handleSelectedOverboostLevelChange(event: React.ChangeEvent<HTMLInputElement>) {
-    const selectedLevel = parseInt(event.target.value);
-    setSelectedOverboostLevel(selectedLevel);
+  function handleSelectedOverboostLevelChange(level: DisplayableOverboostLevel) {
+    setSelectedOverboostLevel(level);
     setIsDropdownVisible(prevState => ({...prevState, overboost: !prevState.overboost}));
   }
 
@@ -207,12 +207,12 @@ export function WeaponsPage({ isViewportNarrow }: WeaponsPageProps) {
                   <span className="arrow-down" />
                 </button>
                 <div ref={dropdownRefs.overboost.menu} className={`${styles['selector']} ${isDropdownVisible.overboost ? styles['selector--visible'] : ''}`}>
-                  {[0, 6, 10].map(level => (
+                  {displayableOverboostLevels.map(level => (
                     <label className={`${styles['selectable-button']} ${styles['selectable-button--overboost']} ${level === selectedOverboostLevel ? styles['selectable-button--selected'] : ''} ${styles['downscale-on-click']}`} key={level}>
                       <input
                         type="checkbox"
                         value={level}
-                        onChange={handleSelectedOverboostLevelChange}
+                        onChange={() => handleSelectedOverboostLevelChange(level)}
                         style={{ display: 'none' }}
                       />
                       {level}
@@ -325,6 +325,7 @@ export function WeaponsPage({ isViewportNarrow }: WeaponsPageProps) {
       {selectedWeaponForModal && <WeaponModal
         ref={modalRef}
         weapon={selectedWeaponForModal}
+        displayableOverboostLevels={displayableOverboostLevels}
         selectedOverboostLevel={selectedOverboostLevel}
         selectedWeaponLevel={selectedWeaponLevel}
         closeWeaponModal={closeWeaponModal}

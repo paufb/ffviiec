@@ -45,3 +45,5 @@ export interface Weapons {
 export interface ValuesByOverboostLevel {
   [key: string]: [string, string, string, string, string, string, string, string, string, string, string];
 }
+
+export type DisplayableOverboostLevel = 0 | 1 | 6 | 10;

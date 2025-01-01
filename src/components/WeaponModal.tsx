@@ -17,17 +17,19 @@ import { UltimateWeapon } from '../models/UltimateWeapon.ts';
 import { UltimateStars } from './UltimateStars.tsx';
 import { ReinforcementAbilityIcon } from './ReinforcementAbilityIcon.tsx';
 import styles from './WeaponModal.module.css';
+import { DisplayableOverboostLevel } from '../types.ts';
 
 interface WeaponModalProps {
   ref: RefObject<HTMLDialogElement | null>;
   weapon: Weapon;
-  selectedOverboostLevel: number;
+  selectedOverboostLevel: DisplayableOverboostLevel;
+  displayableOverboostLevels: DisplayableOverboostLevel[];
   selectedWeaponLevel: number;
   closeWeaponModal: Function;
 }
 
-export function WeaponModal({ ref, weapon, selectedOverboostLevel, selectedWeaponLevel, closeWeaponModal }: WeaponModalProps) {
-  const [displayedOverboostLevel, setDisplayedOverboostLevel] = useState(selectedOverboostLevel);
+export function WeaponModal({ ref, weapon, selectedOverboostLevel, displayableOverboostLevels, selectedWeaponLevel, closeWeaponModal }: WeaponModalProps) {
+  const [displayedOverboostLevel, setDisplayedOverboostLevel] = useState<DisplayableOverboostLevel>(selectedOverboostLevel);
 
   useEffect(() => {
     const modal = ref.current as HTMLDialogElement;
@@ -46,29 +48,23 @@ export function WeaponModal({ ref, weapon, selectedOverboostLevel, selectedWeapo
     setDisplayedOverboostLevel(selectedOverboostLevel);
   }, [selectedOverboostLevel]);
 
-  function renderCurrentTier() {
-    return displayedOverboostLevel === 0  ? 'C. Ability Tier 1'    :
-           displayedOverboostLevel === 6  ? 'C. Ability Tier 2'    :
-           displayedOverboostLevel === 10 ? 'C. Ability Max. Tier' :
-                                            '';
+  function renderTierLabel() {
+    const labels: Record<DisplayableOverboostLevel, string> = {
+      0: 'C. Ability Tier 1',
+      1: 'C. Ability Tier 2',
+      6: 'C. Ability Tier 3',
+      10: 'C. Ability Max. Tier'
+    };
+    return labels[displayedOverboostLevel];
   }
 
-  function decreaseTier() {
-    setDisplayedOverboostLevel(prevState =>
-      prevState === 0  ? 10 :
-      prevState === 6  ? 0  :
-      prevState === 10 ? 6  :
-                         0
-    );
-  }
-
-  function increaseTier() {
-    setDisplayedOverboostLevel(prevState =>
-      prevState === 0  ? 6  :
-      prevState === 6  ? 10 :
-      prevState === 10 ? 0  :
-                         0
-    );
+  function changeTier(direction: 'increase' | 'decrease') {
+    setDisplayedOverboostLevel(prevState => {
+      const offset = direction === 'increase' ? 1 : -1;
+      const currentIndex = displayableOverboostLevels.indexOf(prevState);
+      const nextIndex = (currentIndex + offset + displayableOverboostLevels.length) % displayableOverboostLevels.length;
+      return displayableOverboostLevels[nextIndex];
+    });
   }
 
   return (
@@ -161,13 +157,13 @@ export function WeaponModal({ ref, weapon, selectedOverboostLevel, selectedWeapo
             <WeaponIconLarge weapon={weapon} />
           </div>
           <div className={styles['column-middle-controls']}>
-            <div className={styles['column-middle-controls-previous']} onClick={decreaseTier}>
+            <div className={styles['column-middle-controls-previous']} onClick={() => changeTier('decrease')}>
               <svg style={{ transform: 'scaleX(-1)' }} width="24" height="24" viewBox="0 0 24 24"><path d="M10.477 0h-8.977l12.024 12-12.024 12h8.977l12.023-12z"/></svg>
             </div>
             <div className={styles['column-middle-controls-tier']}>
-              {renderCurrentTier()}
+              {renderTierLabel()}
             </div>
-            <div className={styles['column-middle-controls-next']} onClick={increaseTier}>
+            <div className={styles['column-middle-controls-next']} onClick={() => changeTier('increase')}>
               <svg width="24" height="24" viewBox="0 0 24 24"><path d="M10.477 0h-8.977l12.024 12-12.024 12h8.977l12.023-12z"/></svg>
             </div>
           </div>
