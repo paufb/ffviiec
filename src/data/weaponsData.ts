@@ -2046,6 +2046,27 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData["Boost Ability Pot."]
     ]
   }),
+  "Premium Heart": new UltimateWeapon({
+    id: null,
+    name: 'Premium Heart',
+    character: charactersData[3],
+    element: 'Non-elemental',
+    commandAbility: new UltimateCommandAbility({
+      id: null,
+      name: 'Ravaging Axe Kick',
+      sigil: null,
+      description: `${damage('2,000', 'Phys./Mag. Non-elem.', 'Single Enemy', null)}\nAlso, ${apply('Haste', null, 'Self', null, 30, 30)}\n${chargeAndUses(50, 15, 3)}`
+    }),
+    maxRarityStats: {
+      pAtk: 205,
+      mAtk: 198,
+      heal: 123
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData["Boost Ability Pot."],
+      reinforcementAbilitiesData["Attack Boost"]
+    ]
+  }),
   "Guard Stick": new Weapon({
     id: 4001,
     name: 'Guard Stick',

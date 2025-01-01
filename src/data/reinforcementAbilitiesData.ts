@@ -613,5 +613,15 @@ export const reinforcementAbilitiesData = {
       hpPercent: [10],
       healingPotPercent: [20]
     }
+  }),
+  "Attack Boost": new ReinforcementAbility({
+    id: null,
+    name: 'Attack Boost',
+    effect: 'PATk & MATK are increased when battle begins. (Pot.: High / Rng.: Self / Dur.: {{duration}}s / Ext.: +{{extension}}s / Max. pot.: High / Not affected by increase or reduction in Effect Duration.)',
+    reqPts: [1, 5, 15, 25],
+    levelValues: {
+      duration: [15, 30, 45, 60],
+      extension: [15, 30, 45, 60]
+    }
   })
 }
