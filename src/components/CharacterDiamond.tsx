@@ -9,7 +9,7 @@ interface CharacterDiamondProps {
 }
 
 export function CharacterDiamond({ character, width, height }: CharacterDiamondProps) {
-  const url = character.id ? new URL(`../assets/character_diamond/${character.id}.png`, import.meta.url).href : '';
+  const url = character.id ? new URL(`../assets/character_diamond/${character.id}.png`, import.meta.url).href : undefined;
   const containerRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLImageElement>(null);
   const imageAspectRatio = 94 / 125;

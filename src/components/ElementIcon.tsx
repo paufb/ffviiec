@@ -6,7 +6,7 @@ interface ElementIconProps {
 }
 
 export function ElementIcon({ element, className }: ElementIconProps) {
-  const url = element ? new URL(`../assets/elements/${element}.webp`, import.meta.url).href : '';
+  const url = element ? new URL(`../assets/elements/${element}.webp`, import.meta.url).href : undefined;
   return (
     <img
       className={className}

@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import { Gear } from '../models/Gear.ts';
 import { GearIcon } from '../components/GearIcon.tsx';
-import { GearModalForwardRef } from '../components/GearModal.tsx';
+import { GearModal } from '../components/GearModal.tsx';
 import { ReinforcementAbilityIcon } from '../components/ReinforcementAbilityIcon.tsx';
 import styles from './GearPage.module.css';
 import pageAnimations from '../pages/page-animations.module.css';
@@ -11,15 +11,11 @@ export function GearPage() {
   const [selectedGear, setSelectedGear] = useState<Gear>();
   const modalRef = useRef<HTMLDialogElement>(null);
 
-  import('../data/gearData.ts').then((module) => {
-    setGear(module.gearData);
-  });
+  import('../data/gearData.ts').then((module) => setGear(module.gearData));
 
   function openGearModal(gear: Gear) {
     setSelectedGear(gear);
-    setTimeout(() => {
-      (modalRef.current as HTMLDialogElement).showModal();
-    }, 0);
+    setTimeout(() => modalRef.current?.showModal(), 0);
   }
 
   function closeGearModal() {
@@ -58,7 +54,7 @@ export function GearPage() {
           ))}
         </div>
       </div>
-      {selectedGear && <GearModalForwardRef gear={selectedGear} closeGearModal={closeGearModal} ref={modalRef} />}
+      {selectedGear && <GearModal ref={modalRef} gear={selectedGear} closeGearModal={closeGearModal} />}
     </div>
   );
 }

@@ -7,7 +7,7 @@ interface CommandAbilityIconProps {
 }
 
 export function CommandAbilityIcon({ commandAbility, className, lazy = false }: CommandAbilityIconProps) {
-  const url = commandAbility.id ? new URL(`../assets/activeskill/${commandAbility.id}.png`, import.meta.url).href : '';
+  const url = commandAbility.id ? new URL(`../assets/activeskill/${commandAbility.id}.png`, import.meta.url).href : undefined;
   return (
     <img
       className={className}

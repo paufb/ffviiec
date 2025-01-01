@@ -7,7 +7,7 @@ interface WeaponIconProps {
 }
 
 export function WeaponIcon({ weapon, className, lazy = false }: WeaponIconProps) {
-  const url = weapon.id ? new URL(`../assets/weapon/${weapon.id}.png`, import.meta.url).href : '';
+  const url = weapon.id ? new URL(`../assets/weapon/${weapon.id}.png`, import.meta.url).href : undefined;
   return (
     <img
       className={className}

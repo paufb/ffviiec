@@ -1,4 +1,4 @@
-import { ForwardedRef, forwardRef, useEffect, useImperativeHandle, useRef } from 'react';
+import { RefObject, useEffect } from 'react';
 import { Gear } from '../models/Gear.tsx';
 import { CharacterDiamond } from './CharacterDiamond';
 import { GearIconLarge } from './GearIconLarge.tsx';
@@ -7,17 +7,14 @@ import { ReinforcementAbilityIcon } from './ReinforcementAbilityIcon.tsx';
 import styles from './GearModal.module.css';
 
 interface GearModalProps {
+  ref: RefObject<HTMLDialogElement | null>;
   gear: Gear;
   closeGearModal: Function;
 }
 
-export function GearModal({ gear, closeGearModal }: GearModalProps, forwardedRef: ForwardedRef<HTMLDialogElement>) {
-  const modalRef = useRef<HTMLDialogElement>(null);
-
-  useImperativeHandle(forwardedRef, () => modalRef.current as HTMLDialogElement);
-
+export function GearModal({ ref, gear, closeGearModal }: GearModalProps) {
   useEffect(() => {
-    const modal = modalRef.current as HTMLDialogElement;
+    const modal = ref.current as HTMLDialogElement;
     modal.addEventListener('click', (e) => {
       if (e.target instanceof HTMLDialogElement && e.target.nodeName === 'DIALOG') {
         closeGearModal();
@@ -30,7 +27,7 @@ export function GearModal({ gear, closeGearModal }: GearModalProps, forwardedRef
   }, []);
 
   return (
-    <dialog ref={modalRef} className={styles['modal']}>
+    <dialog ref={ref} className={styles['modal']}>
       <header className={styles['modal-header']}>
         Gear Details
         <svg className={styles['close-button']} onClick={() => closeGearModal()} height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
@@ -70,5 +67,3 @@ export function GearModal({ gear, closeGearModal }: GearModalProps, forwardedRef
     </dialog>
   );
 }
-
-export const GearModalForwardRef = forwardRef(GearModal);

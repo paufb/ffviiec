@@ -7,7 +7,7 @@ interface GearIconProps {
 }
 
 export function GearIcon({ gear, className, lazy }: GearIconProps) {
-  const url = gear.id ? new URL(`../assets/costume/${gear.id}.png`, import.meta.url).href : '';
+  const url = gear.id ? new URL(`../assets/costume/${gear.id}.png`, import.meta.url).href : undefined;
   return (
     <img
       className={className}

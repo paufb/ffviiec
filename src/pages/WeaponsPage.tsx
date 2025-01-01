@@ -38,6 +38,7 @@ export function WeaponsPage({ isViewportNarrow }: WeaponsPageProps) {
   const [layout, setLayout] = useState<Layout>('grid');
   const [selectedWeaponForModal, setSelectedWeaponForModal] = useState<Weapon | null>(null);
   const [isDropdownVisible, setIsDropdownVisible] = useState<IsDropdownVisible>({ overboost: false, characters: false, elements: false, sigils: false });
+  const modalRef = useRef<HTMLDialogElement>(null);
   const dropdownRefs = {
     overboost: { menu: useRef<HTMLDivElement>(null), button: useRef<HTMLButtonElement>(null) },
     characters: { menu: useRef<HTMLDivElement>(null), button: useRef<HTMLButtonElement>(null) },
@@ -163,13 +164,11 @@ export function WeaponsPage({ isViewportNarrow }: WeaponsPageProps) {
 
   function openWeaponModal(weapon: Weapon) {
     setSelectedWeaponForModal(weapon);
-    setTimeout(() => {
-      (document.querySelector('#weapon-modal') as HTMLDialogElement)?.showModal();
-    }, 0);
+    setTimeout(() => modalRef.current?.showModal(), 0);
   }
 
   function closeWeaponModal() {
-    const modal = document.querySelector('#weapon-modal') as HTMLDialogElement;
+    const modal = modalRef.current as HTMLDialogElement;
     modal.setAttribute('closing', '');
     modal.addEventListener('animationend', () => {
       modal.removeAttribute('closing');
@@ -324,6 +323,7 @@ export function WeaponsPage({ isViewportNarrow }: WeaponsPageProps) {
         </div>
       </div>
       {selectedWeaponForModal && <WeaponModal
+        ref={modalRef}
         weapon={selectedWeaponForModal}
         selectedOverboostLevel={selectedOverboostLevel}
         selectedWeaponLevel={selectedWeaponLevel}

@@ -6,7 +6,7 @@ interface GearIconLargeProps {
 }
 
 export function GearIconLarge({ gear, className }: GearIconLargeProps) {
-  const url = gear.id ? new URL(`../assets/costume/${gear.id}.png`, import.meta.url).href : '';
+  const url = gear.id ? new URL(`../assets/costume/${gear.id}.png`, import.meta.url).href : undefined;
   return (
     <img
       className={className}

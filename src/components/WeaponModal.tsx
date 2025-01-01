@@ -4,7 +4,7 @@ import MATKIcon from '../assets/stats/MATK.webp';
 import PDEFIcon from '../assets/stats/PDEF.webp';
 import MDEFIcon from '../assets/stats/MDEF.webp';
 import HEALIcon from '../assets/stats/HEAL.webp';
-import { useEffect, useState } from 'react';
+import { RefObject, useEffect, useState } from 'react';
 import { ATBBarCost } from './ATBBarCost.tsx';
 import { CharacterDiamond } from './CharacterDiamond.tsx';
 import { CommandAbilityIcon } from './CommandAbilityIcon.tsx';
@@ -12,24 +12,25 @@ import { ElementIcon } from './ElementIcon.tsx';
 import { OverboostStars } from './OverboostStars.tsx';
 import { SigilIcon } from './SigilIcon.tsx';
 import { WeaponIconLarge } from './WeaponIconLarge.tsx';
-import styles from './WeaponModal.module.css';
 import { Weapon } from '../models/Weapon.ts';
 import { UltimateWeapon } from '../models/UltimateWeapon.ts';
 import { UltimateStars } from './UltimateStars.tsx';
 import { ReinforcementAbilityIcon } from './ReinforcementAbilityIcon.tsx';
+import styles from './WeaponModal.module.css';
 
 interface WeaponModalProps {
+  ref: RefObject<HTMLDialogElement | null>;
   weapon: Weapon;
   selectedOverboostLevel: number;
   selectedWeaponLevel: number;
   closeWeaponModal: Function;
 }
 
-export function WeaponModal({ weapon, selectedOverboostLevel, selectedWeaponLevel, closeWeaponModal }: WeaponModalProps) {
+export function WeaponModal({ ref, weapon, selectedOverboostLevel, selectedWeaponLevel, closeWeaponModal }: WeaponModalProps) {
   const [displayedOverboostLevel, setDisplayedOverboostLevel] = useState(selectedOverboostLevel);
 
   useEffect(() => {
-    const modal = document.querySelector('#weapon-modal') as HTMLDialogElement;
+    const modal = ref.current as HTMLDialogElement;
     modal.addEventListener('click', (e) => {
       if (e.target instanceof HTMLDialogElement && e.target.nodeName === 'DIALOG') {
         closeWeaponModal();
@@ -71,7 +72,7 @@ export function WeaponModal({ weapon, selectedOverboostLevel, selectedWeaponLeve
   }
 
   return (
-    <dialog id="weapon-modal" className={styles['modal']}>
+    <dialog ref={ref} className={styles['modal']}>
       <header className={styles['modal-header']}>
         Weapon Details
         <svg className={styles['close-button']} onClick={() => closeWeaponModal()} height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
