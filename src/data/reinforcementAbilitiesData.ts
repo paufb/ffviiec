@@ -623,5 +623,15 @@ export const reinforcementAbilitiesData = {
       duration: [15, 30, 45, 60],
       extension: [15, 30, 45, 60]
     }
+  }),
+  "Flamefrost Celebration": new ReinforcementAbility({
+    id: null,
+    name: 'Flamefrost Celebration',
+    effect: 'Fire/Ice Ability Dmg. +{{dmg}}%\nFire/Ice Resist. +{{resist}}%',
+    reqPts: [10],
+    levelValues: {
+      dmg: [15],
+      resist: [20]
+    }
   })
 }

@@ -123,6 +123,16 @@ export const gearData = {
     ],
     reinforcementAbilitiesPoints: [15, 10]
   }),
+  "New Year's Battle Garb": new Gear({
+    id: null,
+    name: 'New Year\'s Battle Garb',
+    character: charactersData[1],
+    reinforcementAbilities: [
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Flamefrost Celebration"]
+    ],
+    reinforcementAbilitiesPoints: [10, 10]
+  }),
   "Avalanche Leader": new Gear({
     id: 2001,
     name: 'Avalanche Leader',
