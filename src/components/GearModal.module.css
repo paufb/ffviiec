@@ -93,7 +93,7 @@ dialog.modal {
         }
 
         & .column-info-header-title-overboost {
-          flex-wrap: nowrap;
+          white-space: nowrap;
         }
       }
     }
@@ -126,7 +126,7 @@ dialog.modal {
           outline: 2px solid var(--border-color);
           outline-offset: -7px;
           color: white;
-          line-height: 1.5rem;
+          line-height: 1.25rem;
           font-size: 1.25rem;
   
           & img {

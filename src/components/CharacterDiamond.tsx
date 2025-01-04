@@ -33,7 +33,7 @@ export function CharacterDiamond({ character, width, height }: CharacterDiamondP
     <div
       ref={containerRef}
       className={styles['container']}
-      style={{ width: calculatedWidth, height: calculatedHeight }}
+      style={{ width: calculatedWidth, height: calculatedHeight, aspectRatio: imageAspectRatio }}
     >
       <img
         ref={imageRef}
