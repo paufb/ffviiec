@@ -684,12 +684,12 @@ export const weaponsData: Weapons = {
     ]
   }),
   "Holiday Blade": new Weapon({
-    id: null,
+    id: 1039,
     name: 'Holiday Blade',
     character: charactersData[1],
     element: 'Wind',
     commandAbility: new CommandAbility({
-      id: null,
+      id: 10103901,
       name: 'Twister Blade',
       atbCost: 4,
       sigil: null,
@@ -710,12 +710,12 @@ export const weaponsData: Weapons = {
     ]
   }),
   "Chocobo Paddle": new Weapon({
-    id: null,
+    id: 1040,
     name: 'Chocobo Paddle',
     character: charactersData[1],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
-      id: null,
+      id: 10104001,
       name: 'Defira Surge A',
       atbCost: 4,
       sigil: null,
@@ -1264,7 +1264,7 @@ export const weaponsData: Weapons = {
     character: charactersData[2],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
-      id: null,
+      id: 10202901,
       name: 'Solid Bravery',
       atbCost: 4,
       sigil: null,
@@ -1775,7 +1775,7 @@ export const weaponsData: Weapons = {
     character: charactersData[3],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
-      id: null,
+      id: 10303001,
       name: 'Armora Breach Surge',
       atbCost: 4,
       sigil: null,
@@ -1884,7 +1884,7 @@ export const weaponsData: Weapons = {
     character: charactersData[3],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
-      id: null,
+      id: 10303401,
       name: 'Debravera Surge',
       atbCost: 4,
       sigil: null,
@@ -1985,12 +1985,12 @@ export const weaponsData: Weapons = {
     ]
   }),
   "Sabin's Claws": new Weapon({
-    id: null,
+    id: 3038,
     name: 'Sabin\'s Claws',
     character: charactersData[3],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
-      id: null,
+      id: 10303801,
       name: 'Aura Cannon',
       atbCost: 4,
       sigil: null,
@@ -2018,12 +2018,12 @@ export const weaponsData: Weapons = {
     ]
   }),
   "Blue Daffodil Gloves": new Weapon({
-    id: null,
+    id: 3039,
     name: 'Blue Daffodil Gloves',
     character: charactersData[3],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
-      id: null,
+      id: 10303901,
       name: 'Blue Florescent Fury',
       atbCost: 4,
       sigil: null,
@@ -2047,7 +2047,7 @@ export const weaponsData: Weapons = {
     ]
   }),
   "Premium Heart": new UltimateWeapon({
-    id: null,
+    id: 3040,
     name: 'Premium Heart',
     character: charactersData[3],
     element: 'Non-elemental',
@@ -2609,7 +2609,7 @@ export const weaponsData: Weapons = {
     character: charactersData[4],
     element: 'Water',
     commandAbility: new CommandAbility({
-      id: null,
+      id: 10402601,
       name: 'Watera Surge A',
       atbCost: 4,
       sigil: null,
@@ -2635,7 +2635,7 @@ export const weaponsData: Weapons = {
     character: charactersData[4],
     element: 'Ice',
     commandAbility: new CommandAbility({
-      id: null,
+      id: 10402701,
       name: 'Blizzara Surge A',
       atbCost: 4,
       sigil: null,
@@ -2796,12 +2796,12 @@ export const weaponsData: Weapons = {
     ]
   }),
   "Titan Rod": new Weapon({
-    id: null,
+    id: 4032,
     name: 'Titan Rod',
     character: charactersData[4],
     element: 'Earth',
     commandAbility: new CommandAbility({
-      id: null,
+      id: 10403201,
       name: 'Quakera Surge',
       atbCost: 4,
       sigil: null,
@@ -2822,12 +2822,12 @@ export const weaponsData: Weapons = {
     ]
   }),
   "Crimson Staff": new Weapon({
-    id: null,
+    id: 4033,
     name: 'Crimson Staff',
     character: charactersData[4],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
-      id: null,
+      id: 10403301,
       name: 'Crimson Florescence',
       atbCost: 4,
       sigil: null,
@@ -3249,7 +3249,7 @@ export const weaponsData: Weapons = {
     character: charactersData[5],
     element: 'Fire',
     commandAbility: new CommandAbility({
-      id: null,
+      id: 10503301,
       name: 'Fira Surge A',
       atbCost: 4,
       sigil: null,
@@ -3365,7 +3365,7 @@ export const weaponsData: Weapons = {
     character: charactersData[5],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
-      id: null,
+      id: 10503501,
       name: 'Debravera Surge',
       atbCost: 4,
       sigil: null,
@@ -3443,7 +3443,7 @@ export const weaponsData: Weapons = {
     character: charactersData[5],
     element: 'Lightning',
     commandAbility: new CommandAbility({
-      id: null,
+      id: 10503701,
       name: 'Thundara Surge A',
       atbCost: 4,
       sigil: null,
@@ -3911,7 +3911,7 @@ export const weaponsData: Weapons = {
     character: charactersData[6],
     element: 'Ice',
     commandAbility: new CommandAbility({
-      id: null,
+      id: 10602701,
       name: 'Blizzara Surge A',
       atbCost: 4,
       sigil: null,
@@ -4008,12 +4008,12 @@ export const weaponsData: Weapons = {
     ]
   }),
   "Holiday Bell": new Weapon({
-    id: null,
+    id: 6030,
     name: 'Holiday Bell',
     character: charactersData[6],
     element: 'Wind',
     commandAbility: new CommandAbility({
-      id: null,
+      id: 10603001,
       name: 'Song of Wind',
       atbCost: 4,
       sigil: null,
@@ -4040,7 +4040,7 @@ export const weaponsData: Weapons = {
     ]
   }),
   "Conformer": new UltimateWeapon({
-    id: null,
+    id: 6032,
     name: 'Conformer',
     character: charactersData[6],
     element: 'Non-elemental',
@@ -4058,6 +4058,34 @@ export const weaponsData: Weapons = {
     reinforcementAbilities: [
       reinforcementAbilitiesData["Boost Ability Pot."],
       reinforcementAbilitiesData["ATB Boost Arcanum"]
+    ]
+  }),
+  "Mallet of Luck": new Weapon({
+    id: 6031,
+    name: 'Mallet of Luck',
+    character: charactersData[6],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: 10603101,
+      name: 'Defira Surge A',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Mag. Non-elem.', 'All Enemies', 10)}\nAlso, ${decrease('Fire Resist.', 'Low', 'All Enemies', null, undefined, undefined, 'Mid')}`,
+      valuesByOverboostLevel: {
+        damage: ['180', '210', '210', '210', '210', '210', '240', '240', '240', '240', '250'],
+        fireResistDecreaseDur: ['20', '25', '25', '25', '25', '25', '30', '30', '30', '30', '35'],
+        fireResistDecreaseExt: ['5', '6', '6', '6', '6', '6', '7', '7', '7', '7', '8']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 201,
+      mAtk: 220,
+      heal: 170
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost Fire Pot."]
     ]
   }),
   "Yellow Megaphone": new Weapon({
@@ -4092,7 +4120,7 @@ export const weaponsData: Weapons = {
     character: charactersData[7],
     element: 'Water',
     commandAbility: new CommandAbility({
-      id: null,
+      id: 10702201,
       name: 'Bloomin\' Spray',
       atbCost: 4,
       sigil: null,
@@ -4121,7 +4149,7 @@ export const weaponsData: Weapons = {
     character: charactersData[7],
     element: 'Ice',
     commandAbility: new CommandAbility({
-      id: null,
+      id: 10700301,
       name: 'Blizzaga A',
       atbCost: 4,
       sigil: null,
@@ -4147,7 +4175,7 @@ export const weaponsData: Weapons = {
     character: charactersData[7],
     element: 'Fire',
     commandAbility: new CommandAbility({
-      id: null,
+      id: 10700401,
       name: 'Firaga A',
       atbCost: 4,
       sigil: null,
@@ -4327,7 +4355,7 @@ export const weaponsData: Weapons = {
     character: charactersData[7],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
-      id: null,
+      id: 10701401,
       name: 'Stalwart Bravery',
       atbCost: 4,
       sigil: null,
@@ -4352,7 +4380,7 @@ export const weaponsData: Weapons = {
     ]
   }),
   "Flower Vase": new Weapon({
-    id: null,
+    id: 7022,
     name: 'Flower Vase',
     character: charactersData[7],
     element: 'Non-elemental',
@@ -4414,7 +4442,7 @@ export const weaponsData: Weapons = {
     character: charactersData[7],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
-      id: null,
+      id: 10702301,
       name: 'Solid Bravery',
       atbCost: 4,
       sigil: null,
@@ -4443,7 +4471,7 @@ export const weaponsData: Weapons = {
     character: charactersData[7],
     element: 'Ice',
     commandAbility: new CommandAbility({
-      id: null,
+      id: 10702501,
       name: 'Blizzara Surge A',
       atbCost: 4,
       sigil: null,
@@ -4633,7 +4661,7 @@ export const weaponsData: Weapons = {
     character: charactersData[8],
     element: 'Ice',
     commandAbility: new CommandAbility({
-      id: null,
+      id: 10800201,
       name: 'Blizzaga A',
       atbCost: 4,
       sigil: null,
@@ -5054,7 +5082,7 @@ export const weaponsData: Weapons = {
     character: charactersData[8],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
-      id: null,
+      id: 10802001,
       name: 'Solid Bravery',
       atbCost: 4,
       sigil: null,
@@ -5083,7 +5111,7 @@ export const weaponsData: Weapons = {
     character: charactersData[8],
     element: 'Ice',
     commandAbility: new CommandAbility({
-      id: null,
+      id: 10802101,
       name: 'Blizzara Surge A',
       atbCost: 4,
       sigil: null,
@@ -5104,12 +5132,12 @@ export const weaponsData: Weapons = {
     ]
   }),
   "Holiday Garm": new Weapon({
-    id: null,
+    id: 8022,
     name: 'Holiday Garm',
     character: charactersData[8],
     element: 'Fire',
     commandAbility: new CommandAbility({
-      id: null,
+      id: 10802201,
       name: 'Hellhound Shot',
       atbCost: 4,
       sigil: null,
@@ -5128,6 +5156,41 @@ export const weaponsData: Weapons = {
     reinforcementAbilities: [
       reinforcementAbilitiesData["Boost PATK"],
       reinforcementAbilitiesData["Boost Fire Pot."]
+    ]
+  }),
+  "Kugelblitz": new Weapon({
+    id: 8013,
+    name: 'Kugelblitz',
+    character: charactersData[8],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: 10801301,
+      name: 'Lightblast',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Mag. Non-elem.', 'All Enemies', 10)}\nAlso, ${decrease('MDEF', undefined, 'All Enemies', null, undefined, undefined, undefined)}\n${conditionHP('Self', '70', 'more')}, ${increase('Earth Damage', undefined, 'Self', null, undefined, undefined, undefined)}\n${increaseLimitGauge(undefined, 'Self')}`,
+      valuesByOverboostLevel: {
+        damage: ['470', '540', '540', '540', '540', '540', '660', '660', '660', '660', '750'],
+        mDefDecreasePot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        mDefDecreaseDur: ['20', '25', '25', '25', '25', '25', '25', '25', '25', '25', '35'],
+        mDefDecreaseExt: ['6', '8', '8', '8', '8', '8', '8', '8', '8', '8', '11'],
+        mDefDecreaseMaxPot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        earthDamageIncreasePot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        earthDamageIncreaseDur: ['30', '35', '35', '35', '35', '35', '35', '35', '35', '35', '45'],
+        earthDamageIncreaseExt: ['6', '7', '7', '7', '7', '7', '7', '7', '7', '7', '9'],
+        earthDamageIncreaseMaxPot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        limitGaugeIncreasePot: ['4', '4', '4', '4', '4', '4', '5', '5', '5', '5', '5']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 214,
+      mAtk: 281,
+      heal: 161
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Earth Pot."]
     ]
   }),
   "Type-99 Longsword": new Weapon({
@@ -5634,7 +5697,7 @@ export const weaponsData: Weapons = {
     character: charactersData[20],
     element: 'Fire',
     commandAbility: new CommandAbility({
-      id: null,
+      id: 12002401,
       name: 'Fira Surge A',
       atbCost: 4,
       sigil: null,
@@ -5754,12 +5817,12 @@ export const weaponsData: Weapons = {
     ]
   }),
   "White Tree": new Weapon({
-    id: null,
+    id: 20029,
     name: 'White Tree',
     character: charactersData[20],
     element: 'Wind',
     commandAbility: new CommandAbility({
-      id: null,
+      id: 12002901,
       name: 'Aerora Surge A',
       atbCost: 4,
       sigil: null,
@@ -6440,12 +6503,12 @@ export const weaponsData: Weapons = {
     ]
   }),
   "Wintercrest Blade": new Weapon({
-    id: null,
+    id: 49029,
     name: 'Wintercrest Blade',
     character: charactersData[49],
     element: 'Wind',
     commandAbility: new CommandAbility({
-      id: null,
+      id: 14902901,
       name: 'Aerora Surge A',
       atbCost: 4,
       sigil: null,
@@ -6466,12 +6529,12 @@ export const weaponsData: Weapons = {
     ]
   }),
   "Withering Blaze": new Weapon({
-    id: null,
+    id: 49031,
     name: 'Withering Blaze',
     character: charactersData[49],
     element: 'Fire',
     commandAbility: new CommandAbility({
-      id: null,
+      id: 14903101,
       name: 'Blazing Ignis',
       atbCost: 4,
       sigil: null,
@@ -6933,7 +6996,7 @@ export const weaponsData: Weapons = {
     character: charactersData[50],
     element: 'Water',
     commandAbility: new CommandAbility({
-      id: null,
+      id: 15002201,
       name: 'Watera Surge A',
       atbCost: 4,
       sigil: null,
@@ -6959,7 +7022,7 @@ export const weaponsData: Weapons = {
     character: charactersData[50],
     element: 'Fire',
     commandAbility: new CommandAbility({
-      id: null,
+      id: 15002301,
       name: 'Fira Surge A',
       atbCost: 4,
       sigil: null,
@@ -7573,12 +7636,12 @@ export const weaponsData: Weapons = {
     ]
   }),
   "Luminary Sword": new Weapon({
-    id: null,
+    id: 51026,
     name: 'Luminary Sword',
     character: charactersData[51],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
-      id: null,
+      id: 15102601,
       name: 'Luminary Glow',
       atbCost: 4,
       sigil: null,
@@ -8073,7 +8136,7 @@ export const weaponsData: Weapons = {
     character: charactersData[52],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
-      id: null,
+      id: 15202301,
       name: 'Armora Breach Surge',
       atbCost: 4,
       sigil: null,
@@ -8186,7 +8249,7 @@ export const weaponsData: Weapons = {
     character: charactersData[52],
     element: 'Ice',
     commandAbility: new CommandAbility({
-      id: null,
+      id: 15202701,
       name: 'Blizzara Surge A',
       atbCost: 4,
       sigil: null,
@@ -8392,7 +8455,7 @@ export const weaponsData: Weapons = {
     character: charactersData[56],
     element: 'Fire',
     commandAbility: new CommandAbility({
-      id: null,
+      id: 15600701,
       name: 'Firaga A',
       atbCost: 4,
       sigil: null,
@@ -8570,12 +8633,12 @@ export const weaponsData: Weapons = {
     ]
   }),
   "Volcanic Heat": new Weapon({
-    id: null,
+    id: 56015,
     name: 'Volcanic Heat',
     character: charactersData[56],
     element: 'Fire',
     commandAbility: new CommandAbility({
-      id: null,
+      id: 15601501,
       name: 'Volcanic Swing',
       atbCost: 4,
       sigil: null,
@@ -8601,12 +8664,12 @@ export const weaponsData: Weapons = {
     ]
   }),
   "Turks' Blade": new Weapon({
-    id: null,
+    id: 56017,
     name: 'Turks\' Blade',
     character: charactersData[56],
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
-      id: null,
+      id: 15601701,
       name: 'Debravera Surge A',
       atbCost: 4,
       sigil: null,
@@ -8629,12 +8692,12 @@ export const weaponsData: Weapons = {
     ]
   }),
   "Titan Blade": new Weapon({
-    id: null,
+    id: 56016,
     name: 'Titan Blade',
     character: charactersData[56],
     element: 'Earth',
     commandAbility: new CommandAbility({
-      id: null,
+      id: 15601601,
       name: 'Quakera Surge',
       atbCost: 4,
       sigil: null,

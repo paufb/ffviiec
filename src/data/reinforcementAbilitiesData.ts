@@ -587,7 +587,7 @@ export const reinforcementAbilitiesData = {
     }
   }),
   "ATB Boost Arcanum": new ReinforcementAbility({
-    id: null,
+    id: 51803,
     name: 'ATB Boost Arcanum',
     effect: 'ATB +{{flat}} when battle begins',
     reqPts: [1, 5, 15, 25],
@@ -596,7 +596,7 @@ export const reinforcementAbilitiesData = {
     }
   }),
   "New Year's Mastery": new ReinforcementAbility({
-    id: null,
+    id: 54001,
     name: 'New Year\'s Mastery',
     effect: 'Fire/Ice/Lightning/Earth/Water/Wind Ability Dmg. +{{flat}}%',
     reqPts: [10],
@@ -605,7 +605,7 @@ export const reinforcementAbilitiesData = {
     }
   }),
   "New Year's Protection": new ReinforcementAbility({
-    id: null,
+    id: 54101,
     name: 'New Year\'s Protection',
     effect: 'HP +{{hpPercent}}%\nHealing Pot. +{{healingPotPercent}}%',
     reqPts: [10],
@@ -615,7 +615,7 @@ export const reinforcementAbilitiesData = {
     }
   }),
   "Attack Boost": new ReinforcementAbility({
-    id: null,
+    id: 54201,
     name: 'Attack Boost',
     effect: 'PATk & MATK are increased when battle begins. (Pot.: High / Rng.: Self / Dur.: {{duration}}s / Ext.: +{{extension}}s / Max. pot.: High / Not affected by increase or reduction in Effect Duration.)',
     reqPts: [1, 5, 15, 25],
@@ -625,7 +625,7 @@ export const reinforcementAbilitiesData = {
     }
   }),
   "Flamefrost Celebration": new ReinforcementAbility({
-    id: null,
+    id: 54301,
     name: 'Flamefrost Celebration',
     effect: 'Fire/Ice Ability Dmg. +{{dmg}}%\nFire/Ice Resist. +{{resist}}%',
     reqPts: [10],
