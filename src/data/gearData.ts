@@ -114,7 +114,7 @@ export const gearData = {
     reinforcementAbilitiesPoints: [10, 10]
   }),
   "Holiday Outfit": new Gear({
-    id: null,
+    id: 1014,
     name: 'Holiday Outfit',
     character: charactersData[1],
     reinforcementAbilities: [
@@ -124,7 +124,7 @@ export const gearData = {
     reinforcementAbilitiesPoints: [15, 10]
   }),
   "New Year's Battle Garb": new Gear({
-    id: null,
+    id: 1017,
     name: 'New Year\'s Battle Garb',
     character: charactersData[1],
     reinforcementAbilities: [
@@ -284,7 +284,7 @@ export const gearData = {
     reinforcementAbilitiesPoints: [5, 10]
   }),
   "Sabin's Style": new Gear({
-    id: null,
+    id: 3016,
     name: 'Sabin\'s Style',
     character: charactersData[3],
     reinforcementAbilities: [
@@ -294,7 +294,7 @@ export const gearData = {
     reinforcementAbilitiesPoints: [10, 10]
   }),
   "Festive Blue Daffodil Attire": new Gear({
-    id: null,
+    id: 3017,
     name: 'Festive Blue Daffodil Attire',
     character: charactersData[3],
     reinforcementAbilities: [
@@ -434,7 +434,7 @@ export const gearData = {
     reinforcementAbilitiesPoints: [10, 10]
   }),
   "Festive Crimson Attire": new Gear({
-    id: null,
+    id: 4015,
     name: 'Festive Crimson Attire',
     character: charactersData[4],
     reinforcementAbilities: [
@@ -584,7 +584,7 @@ export const gearData = {
     reinforcementAbilitiesPoints: [10, 10]
   }),
   "Holiday Cheer Reindeer": new Gear({
-    id: null,
+    id: 6010,
     name: 'Holiday Cheer Reindeer',
     character: charactersData[6],
     reinforcementAbilities: [
@@ -694,7 +694,7 @@ export const gearData = {
     reinforcementAbilitiesPoints: [10, 10]
   }),
   "Holiday Formal Wear": new Gear({
-    id: null,
+    id: 8007,
     name: 'Holiday Formal Wear',
     character: charactersData[8],
     reinforcementAbilities: [
@@ -702,6 +702,16 @@ export const gearData = {
       reinforcementAbilitiesData["Flameblade Arcanum"]
     ],
     reinforcementAbilitiesPoints: [15, 10]
+  }),
+  "Devil Gunner's Coat": new Gear({
+    id: 8004,
+    name: 'Devil Gunner\'s Coat',
+    character: charactersData[8],
+    reinforcementAbilities: [
+      reinforcementAbilitiesData["Physical & Magic Ward"],
+      reinforcementAbilitiesData["Buff/Debuff Extension+ (Stats/Pot./Res.)"]
+    ],
+    reinforcementAbilitiesPoints: [10, 10]
   }),
   "SOLDIER: Second Class Future Hero": new Gear({
     id: 20001,
@@ -1004,7 +1014,7 @@ export const gearData = {
     reinforcementAbilitiesPoints: [15, 10]
   }),
   "Holiday Helper": new Gear({
-    id: null,
+    id: 51007,
     name: 'Holiday Helper',
     character: charactersData[51],
     reinforcementAbilities: [
