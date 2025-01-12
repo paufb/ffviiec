@@ -1,3 +1,11 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  color: white;
+  height: 100%;
+}
+
 .column-info {
   background-color: rgb(5, 22, 41);
   border: 3px solid rgb(25, 61, 98);
@@ -48,26 +56,6 @@
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
-
-      & .column-abilities-rability-container {
-        --border-color: rgb(25, 61, 98);
-        display: flex;
-        gap: 0.5rem;
-        padding: 0.75rem;
-        background-color: rgb(5, 20, 37);
-        border: 2px solid var(--border-color);
-        border-radius: 8px;
-        outline: 2px solid var(--border-color);
-        outline-offset: -7px;
-        color: white;
-        line-height: 1.25rem;
-        font-size: 1.25rem;
-
-        & img {
-          width: 2.5rem;
-          height: 2.5rem;
-        }
-      }
     }
   }
 }

@@ -20,6 +20,6 @@ export class ReinforcementAbility {
   get levelValues() { return this.#props.levelValues; }
 
   getEffect(level: number) {
-    return this.#props.effect.replace(/\{\{(\w+)\}\}/g, (_, key) => String(this.#props.levelValues[level - 1][key]));
+    return this.#props.effect.replace(/\{\{(\w+)\}\}/g, (_, key) => String(this.#props.levelValues[key][level - 1]));
   }
 }

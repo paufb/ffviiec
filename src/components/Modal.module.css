@@ -26,36 +26,33 @@
     pointer-events: none;
     animation: dialogclosing .15s forwards;
   }
+}
 
-  & .modal-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 1.5rem;
-    background-color: rgb(11, 64, 136);
-    position: sticky;
-    top: 0;
-    left: 0;
-    height: 7.8125%;
-  
-    & .close-button {
-      position: absolute;
-      right: 0.5rem;
-      cursor: pointer;
-      width: 2rem;
-      height: 2rem;
-    }
-  }
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  background-color: rgb(11, 64, 136);
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 7.8125%;
+  z-index: 1;
+}
 
-  & .modal-body {
-    display: flex;
-    flex-direction: row;
-    gap: 0.5rem;
-    height: 92.1875%;
-    padding: 1rem;
-    box-sizing: border-box;
-    color: white;
-    min-width: min-content;
-  }
+.close {
+  position: absolute;
+  right: 0.5rem;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+}
+
+.body {
+  height: 92.1875%;
+  min-width: min-content;
+  padding: 1rem;
+  box-sizing: border-box;
 }

@@ -13,8 +13,15 @@ interface ModalProps {
 export function Modal({ children, isOpen, onClose, title, width, height }: ModalProps) {
   const dialogRef = useRef<HTMLDialogElement>(null);
   const handleClick = (e: MouseEvent) => {
-    if ((e.target as HTMLDialogElement).nodeName === 'DIALOG')
+    if ((e.target as HTMLDialogElement).nodeName === 'DIALOG') {
+      e.stopPropagation();
       onClose();
+    }
+  };
+  const handleContextMenu = (e: MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    onClose();
   };
 
   useEffect(() => {
@@ -22,10 +29,7 @@ export function Modal({ children, isOpen, onClose, title, width, height }: Modal
     if (!dialog) return;
     if (isOpen) {
       dialog.addEventListener('click', handleClick);
-      dialog.addEventListener('contextmenu', (e) => {
-        e.preventDefault();
-        onClose();
-      }, { once: true });
+      dialog.addEventListener('contextmenu', handleContextMenu, { once: true });
       setTimeout(() => dialog.showModal(), 0);
     } else {
       dialog.removeEventListener('click', handleClick);
@@ -40,13 +44,13 @@ export function Modal({ children, isOpen, onClose, title, width, height }: Modal
 
   return (
     <dialog ref={dialogRef} style={{ width: width, height: height }} className={styles['modal']}>
-      <header className={styles['modal-header']}>
+      <header className={styles['header']}>
         {title}
-        <svg className={styles['close-button']} onClick={() => onClose()} height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff">
+        <svg className={styles['close']} onClick={() => onClose()} height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff">
           <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
         </svg>
       </header>
-      <div className={styles['modal-body']}>
+      <div className={styles['body']}>
         {children}
       </div>
     </dialog>
