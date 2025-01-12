@@ -1,168 +1,101 @@
-dialog.modal {
-  --modal-height: 40rem;
-  width: 80rem;
-  height: var(--modal-height);
-  padding: 0;
-  background-color: rgb(4, 16, 30);
-  box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.5);
+.column-info {
+  background-color: rgb(5, 22, 41);
+  border: 3px solid rgb(25, 61, 98);
+  border-radius: 8px;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
 
-  &::backdrop {
-    opacity: 0;
+.column-info {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 100%;
+  padding: 0.75rem;
+
+  & .column-info-header {
+    display: flex;
+    gap: 1rem;
+
+    & .column-info-header-title {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+
+      & .column-info-header-title-name {
+        font-size: 1.5rem;
+      }
+
+      & .column-info-header-title-overboost {
+        white-space: nowrap;
+      }
+    }
   }
 
-  &[open] {
-    animation: dialogopening 0.15s forwards;
-  }
+  & .column-info-stats {
+    color: rgb(149, 199, 255);
+    font-size: 1.5rem;
 
-  &[closing] {
-    display: block;
-    pointer-events: none;
-    animation: dialogclosing 0.15s forwards;
+    & hr {
+      width: 100%;
+      height: 0.2rem;
+      background-color: rgb(149, 199, 255);
+      border: none;
+      margin: 0.25rem 0 1rem 0;
+    }
+
+    & .column-abilities-rability-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      & .column-abilities-rability-container {
+        --border-color: rgb(25, 61, 98);
+        display: flex;
+        gap: 0.5rem;
+        padding: 0.75rem;
+        background-color: rgb(5, 20, 37);
+        border: 2px solid var(--border-color);
+        border-radius: 8px;
+        outline: 2px solid var(--border-color);
+        outline-offset: -7px;
+        color: white;
+        line-height: 1.25rem;
+        font-size: 1.25rem;
+
+        & img {
+          width: 2.5rem;
+          height: 2.5rem;
+        }
+      }
+    }
   }
 }
 
-@keyframes dialogopening {
-  from { opacity: 0; scale: 0.975; }
-  to { opacity: 1; scale: 1; }
-}
-
-@keyframes dialogclosing {
-  from { opacity: 1; scale: 1; }
-  to { opacity: 0; scale: 0.975; }
-}
-
-.modal-header {
+.column-img {
   display: flex;
   align-items: center;
   justify-content: center;
-  
-  color: white;
-  font-size: 1.5rem;
-  background-color: rgb(11, 64, 136);
-  position: sticky;
-  top: 0;
-  left: 0;
-  height: 7.8125%;
-  min-height: calc(0.078125 * var(--modal-height));
+  width: 70%;
 
-  & .close-button {
-    position: absolute;
-    right: 0.5rem;
-    cursor: pointer;
-    width: 2rem;
-    height: 2rem;
-  }
-}
-
-.modal-body {
-  display: flex;
-  flex-direction: row;
-  gap: 0.5rem;
-  height: 92.1875%;
-  padding: 1rem;
-  box-sizing: border-box;
-  color: white;
-  min-width: min-content;
-
-  & .column-info {
-    background-color: rgb(5, 22, 41);
-    border: 3px solid rgb(25, 61, 98);
-    border-radius: 8px;
-    box-sizing: border-box;
-    overflow-y: scroll;
-  }
-
-  & .column-info {
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    height: 100%;
-    padding: 0.75rem;
-
-    & .column-info-header {
-      display: flex;
-      gap: 1rem;
-
-      & .column-info-header-title {
-        display: flex;
-        flex-direction: column;
-        gap: 0.25rem;
-
-        & .column-info-header-title-name {
-          font-size: 1.5rem;
-        }
-
-        & .column-info-header-title-overboost {
-          white-space: nowrap;
-        }
-      }
-    }
-
-    & .column-info-stats {
-      color: rgb(149, 199, 255);
-      font-size: 1.5rem;
-
-      & hr {
-        width: 100%;
-        height: 0.2rem;
-        background-color: rgb(149, 199, 255);
-        border: none;
-        margin: 0.25rem 0 1rem 0;
-      }
-
-      & .column-abilities-rability-list {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-  
-        & .column-abilities-rability-container {
-          --border-color: rgb(25, 61, 98);
-          display: flex;
-          gap: 0.5rem;
-          padding: 0.75rem;
-          background-color: rgb(5, 20, 37);
-          border: 2px solid var(--border-color);
-          border-radius: 8px;
-          outline: 2px solid var(--border-color);
-          outline-offset: -7px;
-          color: white;
-          line-height: 1.25rem;
-          font-size: 1.25rem;
-  
-          & img {
-            width: 2.5rem;
-            height: 2.5rem;
-          }
-        }
-      }
-    }
-  }
-
-  & .column-img {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 70%;
-
-    & img {
-      background: radial-gradient(
-          rgb(10, 104, 168) 0%,
-          rgba(10, 104, 168, 0.987) 4.86%,
-          rgba(10, 104, 168, 0.951) 9.3%,
-          rgba(10, 104, 168, 0.896) 13.5%,
-          rgba(10, 104, 168, 0.825) 17.4%,
-          rgba(10, 104, 168, 0.741) 21.18%,
-          rgba(10, 104, 168, 0.648) 24.72%,
-          rgba(10, 104, 168, 0.55) 28.26%,
-          rgba(10, 104, 168, 0.45) 31.74%,
-          rgba(10, 104, 168, 0.352) 35.28%,
-          rgba(10, 104, 168, 0.259) 38.82%,
-          rgba(10, 104, 168, 0.175) 42.6%,
-          rgba(10, 104, 168, 0.104) 46.5%,
-          rgba(10, 104, 168, 0.049) 50.7%,
-          rgba(10, 104, 168, 0.013) 55.14%,
-          rgba(10, 104, 168, 0) 60%
-        );
-    }
+  & img {
+    background: radial-gradient(
+        rgb(10, 104, 168) 0%,
+        rgba(10, 104, 168, 0.987) 4.86%,
+        rgba(10, 104, 168, 0.951) 9.3%,
+        rgba(10, 104, 168, 0.896) 13.5%,
+        rgba(10, 104, 168, 0.825) 17.4%,
+        rgba(10, 104, 168, 0.741) 21.18%,
+        rgba(10, 104, 168, 0.648) 24.72%,
+        rgba(10, 104, 168, 0.55) 28.26%,
+        rgba(10, 104, 168, 0.45) 31.74%,
+        rgba(10, 104, 168, 0.352) 35.28%,
+        rgba(10, 104, 168, 0.259) 38.82%,
+        rgba(10, 104, 168, 0.175) 42.6%,
+        rgba(10, 104, 168, 0.104) 46.5%,
+        rgba(10, 104, 168, 0.049) 50.7%,
+        rgba(10, 104, 168, 0.013) 55.14%,
+        rgba(10, 104, 168, 0) 60%
+      );
   }
 }

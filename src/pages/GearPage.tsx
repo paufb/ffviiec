@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import { Gear } from '../models/Gear.ts';
 import { GearIcon } from '../components/GearIcon.tsx';
 import { GearModal } from '../components/GearModal.tsx';
@@ -9,23 +9,13 @@ import pageAnimations from '../pages/page-animations.module.css';
 export function GearPage() {
   const [gear, setGear] = useState<{ [key: string]: Gear }>({});
   const [selectedGear, setSelectedGear] = useState<Gear>();
-  const modalRef = useRef<HTMLDialogElement>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   import('../data/gearData.ts').then((module) => setGear(module.gearData));
 
-  function openGearModal(gear: Gear) {
+  function openModal(gear: Gear) {
     setSelectedGear(gear);
-    setTimeout(() => modalRef.current?.showModal(), 0);
-  }
-
-  function closeGearModal() {
-    const modal = modalRef.current as HTMLDialogElement;
-    modal.setAttribute('closing', '');
-    modal.addEventListener('animationend', () => {
-      modal.removeAttribute('closing');
-      modal.close();
-      setSelectedGear(undefined);
-    }, { once: true });
+    setIsModalOpen(true);
   }
 
   return (
@@ -34,7 +24,7 @@ export function GearPage() {
         <div className={styles['grid']}>
           {Object.entries(gear).map(([_, gear]) => (
             <div className={styles['gear-entry']} key={gear.name}>
-              <div className={styles['gear-img-container']} onClick={() => openGearModal(gear)}>
+              <div className={styles['gear-img-container']} onClick={() => openModal(gear)}>
                 <div>
                   <GearIcon gear={gear} lazy className={gear.character.name === 'Red XIII' ? styles['red-xiii'] : ''} />
                 </div>
@@ -54,7 +44,11 @@ export function GearPage() {
           ))}
         </div>
       </div>
-      {selectedGear && <GearModal ref={modalRef} gear={selectedGear} closeGearModal={closeGearModal} />}
+      <GearModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        gear={selectedGear}
+      />
     </div>
   );
 }

@@ -36,9 +36,9 @@ export function WeaponsPage({ isViewportNarrow }: WeaponsPageProps) {
   const [selectedOverboostLevel, setSelectedOverboostLevel] = useState<DisplayableOverboostLevel>(10);
   const [sortConfig, setSortConfig] = useState<SortConfig>({ column: '', direction: '' });
   const [layout, setLayout] = useState<Layout>('grid');
-  const [selectedWeaponForModal, setSelectedWeaponForModal] = useState<Weapon | null>(null);
+  const [selectedWeapon, setSelectedWeapon] = useState<Weapon>();
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [isDropdownVisible, setIsDropdownVisible] = useState<IsDropdownVisible>({ overboost: false, characters: false, elements: false, sigils: false });
-  const modalRef = useRef<HTMLDialogElement>(null);
   const dropdownRefs = {
     overboost: { menu: useRef<HTMLDivElement>(null), button: useRef<HTMLButtonElement>(null) },
     characters: { menu: useRef<HTMLDivElement>(null), button: useRef<HTMLButtonElement>(null) },
@@ -162,19 +162,9 @@ export function WeaponsPage({ isViewportNarrow }: WeaponsPageProps) {
                                              <span style={{ marginLeft: '0.25rem' }} className="arrow-up-down" /> ;
   }
 
-  function openWeaponModal(weapon: Weapon) {
-    setSelectedWeaponForModal(weapon);
-    setTimeout(() => modalRef.current?.showModal(), 0);
-  }
-
-  function closeWeaponModal() {
-    const modal = modalRef.current as HTMLDialogElement;
-    modal.setAttribute('closing', '');
-    modal.addEventListener('animationend', () => {
-      modal.removeAttribute('closing');
-      modal.close();
-      setSelectedWeaponForModal(null);
-    }, { once: true });
+  function openModal(weapon: Weapon) {
+    setSelectedWeapon(weapon);
+    setIsModalOpen(true);
   }
 
   return (
@@ -322,14 +312,14 @@ export function WeaponsPage({ isViewportNarrow }: WeaponsPageProps) {
           </div>
         </div>
       </div>
-      {selectedWeaponForModal && <WeaponModal
-        ref={modalRef}
-        weapon={selectedWeaponForModal}
-        displayableOverboostLevels={displayableOverboostLevels}
+      <WeaponModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        weapon={selectedWeapon}
         selectedOverboostLevel={selectedOverboostLevel}
+        displayableOverboostLevels={displayableOverboostLevels}
         selectedWeaponLevel={selectedWeaponLevel}
-        closeWeaponModal={closeWeaponModal}
-      />}
+      />
       <div className={`${styles['decorated-container']} ${pageAnimations['fade-in-from-right']}`}>
         {layout === 'table' && (
           <div className={styles['table-container']}>
@@ -368,7 +358,7 @@ export function WeaponsPage({ isViewportNarrow }: WeaponsPageProps) {
               </thead>
               <tbody>
                 {Object.entries(filteredWeapons).map(([_, weapon]) => (
-                  <tr className={styles['table-row']} key={weapon.name} onClick={() => openWeaponModal(weapon)}>
+                  <tr className={styles['table-row']} key={weapon.name} onClick={() => openModal(weapon)}>
                     <td className={`${styles['table-data']} ${styles['table-data--nowrap']}`}>
                       <div className={styles['table-data-weapon-container-row']}>
                         <div className={styles['table-data-weapon-container-column']}>
@@ -420,7 +410,7 @@ export function WeaponsPage({ isViewportNarrow }: WeaponsPageProps) {
           <div className={styles['weapons-container']}>
             {Object.entries(filteredWeapons).map(([_, weapon]) => (
               <div key={weapon.name} className={styles['grid-entry']}>
-                <div className={`${styles['weapon-img-container']} ${weapon instanceof UltimateWeapon ? styles['weapon-img-container--ultimate'] : ''}`} onClick={() => openWeaponModal(weapon)}>
+                <div className={`${styles['weapon-img-container']} ${weapon instanceof UltimateWeapon ? styles['weapon-img-container--ultimate'] : ''}`} onClick={() => openModal(weapon)}>
                   <WeaponIcon weapon={weapon} lazy={true} />
                 </div>
                 <div className={styles['grid-entry-body']}>
