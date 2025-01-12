@@ -13,7 +13,7 @@ function App() {
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState<boolean>(true);
   const routes = useRoutes([
     { path: '/', element: <Home collapseSidebar={collapseSidebar} /> },
-    { path: '/weapons', element: <WeaponsPage isViewportNarrow={isViewportNarrow} /> },
+    { path: '/weapons', element: <WeaponsPage /> },
     { path: '/gear', element: <GearPage /> },
     { path: '/materia', element: <MateriaPage /> }
   ]);

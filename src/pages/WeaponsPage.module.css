@@ -1,7 +1,7 @@
 .page {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   margin: 0 auto;
   padding: var(--app-padding);
   max-width: 90rem;
@@ -19,26 +19,6 @@
   border: 3px solid rgb(21, 81, 151);
 }
 
-.filters-container-row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  width: 100%;
-  gap: 0.75rem;
-
-  &.filters-container-row--narrow {
-    flex-direction: column;
-  }
-}
-
-.filters-container-column {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: 1;
-  gap: 0.75rem;
-}
-
 .filter {
   background-color: rgb(4, 16, 30);
   color: white;
@@ -50,7 +30,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  width: 100%;
+  min-width: 6rem;
 
   & svg {
     position: absolute;
@@ -67,15 +47,6 @@
     border-radius: 50px;
     padding-left: 2.25rem;
     background-color: lightgray;
-  }
-}
-
-.level-and-overboost-container {
-  display: flex;
-  gap: 0.75rem;
-
-  & select {
-    height: 100%;
   }
 }
 
@@ -343,7 +314,6 @@
 
 .decorated-container {
   position: relative;
-  overflow: visible;
   outline: 0.15rem solid rgb(28, 117, 190);
   background-color: rgba(4, 16, 30, 0.5);
 
@@ -490,10 +460,10 @@
   }
 }
 
-.weapons-container {
+.grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
-  gap: 1rem 0.75rem;
+  gap: 1rem;
   padding: 0.75rem;
 }
 

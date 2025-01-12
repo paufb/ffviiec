@@ -14,11 +14,7 @@ import { Weapon } from '../models/Weapon.ts';
 import pageAnimations from './page-animations.module.css';
 import styles from './WeaponsPage.module.css';
 
-interface WeaponsPageProps {
-  isViewportNarrow: boolean;
-}
-
-export function WeaponsPage({ isViewportNarrow }: WeaponsPageProps) {
+export function WeaponsPage() {
   type Column = 'weapon' | keyof Weapon['maxRarityStats'] | 'atbCost';
   type SortConfig = { column: '' | Column; direction: '' | 'asc' | 'desc'; }
   type Layout = 'table' | 'grid';
@@ -32,7 +28,7 @@ export function WeaponsPage({ isViewportNarrow }: WeaponsPageProps) {
   const [selectedCharactersNames, setSelectedCharactersNames] = useState<string[]>([]);
   const [selectedElements, setSelectedElements] = useState<(keyof Elements)[]>([]);
   const [selectedSigils, setSelectedSigils] = useState<(SigilType)[]>([]);
-  const [selectedWeaponLevel, setSelectedWeaponLevel] = useState(120);
+  const selectedWeaponLevel = 120;
   const [selectedOverboostLevel, setSelectedOverboostLevel] = useState<DisplayableOverboostLevel>(10);
   const [sortConfig, setSortConfig] = useState<SortConfig>({ column: '', direction: '' });
   const [layout, setLayout] = useState<Layout>('grid');
@@ -170,53 +166,25 @@ export function WeaponsPage({ isViewportNarrow }: WeaponsPageProps) {
   return (
     <div className={styles['page']}>
       <div className={`${styles['filters-container']} ${pageAnimations['fade-in-from-left']}`}>
-        <div className={`${styles['filters-container-row']} ${isViewportNarrow ? styles['filters-container-row--narrow'] : ""}`}>
-          <div className={styles['filters-container-column']}>
-            <div className={styles['filter-name']}>
-              <svg width="24px" height="24px" viewBox="0 -960 960 960" fill="#5f6368"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>
-              <input type="text" onChange={handleNameQueryChange} placeholder="Search by name" />
-            </div>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
+          <div className={styles['filter-name']}>
+            <svg width="24px" height="24px" viewBox="0 -960 960 960" fill="#5f6368"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>
+            <input type="text" onChange={handleNameQueryChange} placeholder="Name" />
           </div>
-          <div className={styles['level-and-overboost-container']}>
-            <div className={styles['filters-container-column']}>
-              <select defaultValue={selectedWeaponLevel} onChange={e => setSelectedWeaponLevel(parseInt(e.target.value))} disabled>
-                {[...Array(120)].map((_, i) => <option key={i + 1} value={i + 1}>{i + 1}</option>)}
-              </select>
-            </div>
-            <div className={styles['filters-container-column']}>
-              <div className={styles['selector-group']}>
-                <button
-                  ref={dropdownRefs.overboost.button}
-                  className={`${styles['selector-button']} ${styles['downscale-on-click']}`}
-                  onClick={() => setIsDropdownVisible(prevState => ({...prevState, overboost: !prevState.overboost}))}
-                >
-                  {selectedOverboostLevel}
-                  <div style={{ display: 'flex' }}>
-                    <OverboostStars level={selectedOverboostLevel} />
-                  </div>
-                  <span className="arrow-down" />
-                </button>
-                <div ref={dropdownRefs.overboost.menu} className={`${styles['selector']} ${isDropdownVisible.overboost ? styles['selector--visible'] : ''}`}>
-                  {displayableOverboostLevels.map(level => (
-                    <label className={`${styles['selectable-button']} ${styles['selectable-button--overboost']} ${level === selectedOverboostLevel ? styles['selectable-button--selected'] : ''} ${styles['downscale-on-click']}`} key={level}>
-                      <input
-                        type="checkbox"
-                        value={level}
-                        onChange={() => handleSelectedOverboostLevelChange(level)}
-                        style={{ display: 'none' }}
-                      />
-                      {level}
-                      <div style={{ display: 'flex' }}>
-                        <OverboostStars level={level} />
-                      </div>
-                    </label>
-                  ))}
-                </div>
+          <div className={styles['statistic']}>
+            <svg height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="m240-160 40-160H120l20-80h160l40-160H180l20-80h160l40-160h80l-40 160h160l40-160h80l-40 160h160l-20 80H660l-40 160h160l-20 80H600l-40 160h-80l40-160H360l-40 160h-80Zm140-240h160l40-160H420l-40 160Z"/></svg>
+            {Object.keys(weapons).length}
+          </div>
+          <div className={styles['filter']}>
+            <div className={styles['filter-layout']}>
+              <div className={`${styles['layout-grid']} ${layout === "grid" ? styles['layout-grid--selected'] : ""}`} onClick={() => setLayout("grid")}>
+                <svg height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M120-520v-320h320v320H120Zm0 400v-320h320v320H120Zm400-400v-320h320v320H520Zm0 400v-320h320v320H520ZM200-600h160v-160H200v160Zm400 0h160v-160H600v160Zm0 400h160v-160H600v160Zm-400 0h160v-160H200v160Zm400-400Zm0 240Zm-240 0Zm0-240Z"/></svg>
+              </div>
+              <div className={`${styles['layout-table']} ${layout === "table" ? styles['layout-table--selected'] : ""}`} onClick={() => setLayout("table")}>
+                <svg height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M320-280q17 0 28.5-11.5T360-320q0-17-11.5-28.5T320-360q-17 0-28.5 11.5T280-320q0 17 11.5 28.5T320-280Zm0-160q17 0 28.5-11.5T360-480q0-17-11.5-28.5T320-520q-17 0-28.5 11.5T280-480q0 17 11.5 28.5T320-440Zm0-160q17 0 28.5-11.5T360-640q0-17-11.5-28.5T320-680q-17 0-28.5 11.5T280-640q0 17 11.5 28.5T320-600Zm120 320h240v-80H440v80Zm0-160h240v-80H440v80Zm0-160h240v-80H440v80ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z"/></svg>
               </div>
             </div>
           </div>
-        </div>
-        <div className={styles['filters-container-row']}>
           <div className={styles['dropdown-group']}>
             <button
               ref={dropdownRefs.characters.button}
@@ -296,20 +264,35 @@ export function WeaponsPage({ isViewportNarrow }: WeaponsPageProps) {
               ))}
             </div>
           </div>
-          <div className={styles['filter']}>
-            <div className={styles['filter-layout']}>
-              <div className={`${styles['layout-grid']} ${layout === "grid" ? styles['layout-grid--selected'] : ""}`} onClick={() => setLayout("grid")}>
-                <svg height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M120-520v-320h320v320H120Zm0 400v-320h320v320H120Zm400-400v-320h320v320H520Zm0 400v-320h320v320H520ZM200-600h160v-160H200v160Zm400 0h160v-160H600v160Zm0 400h160v-160H600v160Zm-400 0h160v-160H200v160Zm400-400Zm0 240Zm-240 0Zm0-240Z"/></svg>
+          {layout === 'table' && <div className={styles['selector-group']}>
+            <button
+              ref={dropdownRefs.overboost.button}
+              className={`${styles['selector-button']} ${styles['downscale-on-click']}`}
+              onClick={() => setIsDropdownVisible(prevState => ({...prevState, overboost: !prevState.overboost}))}
+            >
+              {selectedOverboostLevel}
+              <div style={{ display: 'flex' }}>
+                <OverboostStars level={selectedOverboostLevel} />
               </div>
-              <div className={`${styles['layout-table']} ${layout === "table" ? styles['layout-table--selected'] : ""}`} onClick={() => setLayout("table")}>
-                <svg height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M320-280q17 0 28.5-11.5T360-320q0-17-11.5-28.5T320-360q-17 0-28.5 11.5T280-320q0 17 11.5 28.5T320-280Zm0-160q17 0 28.5-11.5T360-480q0-17-11.5-28.5T320-520q-17 0-28.5 11.5T280-480q0 17 11.5 28.5T320-440Zm0-160q17 0 28.5-11.5T360-640q0-17-11.5-28.5T320-680q-17 0-28.5 11.5T280-640q0 17 11.5 28.5T320-600Zm120 320h240v-80H440v80Zm0-160h240v-80H440v80Zm0-160h240v-80H440v80ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z"/></svg>
-              </div>
+              <span className="arrow-down" />
+            </button>
+            <div ref={dropdownRefs.overboost.menu} className={`${styles['selector']} ${isDropdownVisible.overboost ? styles['selector--visible'] : ''}`}>
+              {displayableOverboostLevels.map(level => (
+                <label className={`${styles['selectable-button']} ${styles['selectable-button--overboost']} ${level === selectedOverboostLevel ? styles['selectable-button--selected'] : ''} ${styles['downscale-on-click']}`} key={level}>
+                  <input
+                    type="checkbox"
+                    value={level}
+                    onChange={() => handleSelectedOverboostLevelChange(level)}
+                    style={{ display: 'none' }}
+                  />
+                  {level}
+                  <div style={{ display: 'flex' }}>
+                    <OverboostStars level={level} />
+                  </div>
+                </label>
+              ))}
             </div>
-          </div>
-          <div className={styles['statistic']}>
-            <svg height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="m240-160 40-160H120l20-80h160l40-160H180l20-80h160l40-160h80l-40 160h160l40-160h80l-40 160h160l-20 80H660l-40 160h160l-20 80H600l-40 160h-80l40-160H360l-40 160h-80Zm140-240h160l40-160H420l-40 160Z"/></svg>
-            {Object.keys(weapons).length}
-          </div>
+          </div>}
         </div>
       </div>
       <WeaponModal
@@ -407,7 +390,7 @@ export function WeaponsPage({ isViewportNarrow }: WeaponsPageProps) {
           </div>
         )}
         {layout === 'grid' && (
-          <div className={styles['weapons-container']}>
+          <div className={styles['grid']}>
             {Object.entries(filteredWeapons).map(([_, weapon]) => (
               <div key={weapon.name} className={styles['grid-entry']}>
                 <div className={`${styles['weapon-img-container']} ${weapon instanceof UltimateWeapon ? styles['weapon-img-container--ultimate'] : ''}`} onClick={() => openModal(weapon)}>
