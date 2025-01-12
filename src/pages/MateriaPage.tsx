@@ -20,9 +20,9 @@ export function MateriaPage() {
   return (
     <div className={styles['page']}>
       <div className={`${styles['decorated-container']} ${pageAnimations['fade-in-from-right']}`}>
-        <div className={styles['materia-grid']}>
+        <div className={styles['grid']}>
           {Object.entries(materia).map(([_, materia]) => (
-            <div className={styles['materia-entry']} key={materia.id}>
+            <div className={styles['grid-entry']} key={materia.id}>
               <div className={styles['materia-img-container']}>
                 <MateriaIcon materia={materia} />
               </div>
