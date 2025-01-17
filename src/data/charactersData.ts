@@ -34,6 +34,10 @@ export const charactersData: Characters = {
     id: 8,
     name: 'Vincent'
   }),
+  9: new Character({
+    id: 9,
+    name: 'Cid'
+  }),
   20: new Character({
     id: 20,
     name: 'Zack'
