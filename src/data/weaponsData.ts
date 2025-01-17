@@ -5193,6 +5193,350 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData["Boost Earth Pot."]
     ]
   }),
+  "Spear": new Weapon({
+    id: 9001,
+    name: 'Spear',
+    character: charactersData[9],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: 10900101,
+      name: 'Quadspike',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Phys. Non-elem.', 'Single Enemy', 10)}\nAlso, [Condition: First use] ${apply('Status Ailment: Stop', null, 'Single Enemy', null, undefined, 3)}`,
+      valuesByOverboostLevel: {
+        damage: ['400', '480', '480', '480', '480', '480', '620', '620', '620', '620', '750'],
+        stopDur: ['3', '4', '4', '4', '4', '4', '6', '6', '6', '6', '8']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 262,
+      mAtk: 218,
+      heal: 174
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost Ability Pot."]
+    ]
+  }),
+  "Slash Lance": new Weapon({
+    id: 9002,
+    name: 'Slash Lance',
+    character: charactersData[9],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: 10900201,
+      name: 'Thunder Slam',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Phys. Non-elem.', 'All Enemies', 10)}\nAlso, ${increase('PDEF', undefined, 'All Enemies', null, undefined, undefined, 'High')}`,
+      valuesByOverboostLevel: {
+        damage: ['340', '390', '390', '390', '390', '390', '480', '480', '480', '480', '540'],
+        pDefIncreasePot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        pDefIncreaseDur: ['12', '16', '16', '16', '16', '16', '16', '16', '16', '16', '20'],
+        pDefIncreaseExt: ['4', '5', '5', '5', '5', '5', '5', '5', '5', '5', '6']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 252,
+      mAtk: 193,
+      heal: 203
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData["Boost ATK"],
+      reinforcementAbilitiesData["Buff/Debuff Extension (Stats/Pot./Res.)"]
+    ]
+  }),
+  "Trident": new Weapon({
+    id: 9003,
+    name: 'Trident',
+    character: charactersData[9],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: 10900301,
+      name: 'Rising Harpoon',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Phys. Non-elem.', 'Single Enemy', 10)}\nAlso, ${conditionHP('Self', '70', 'more')}, ${apply('Ailment: Poison', null, 'Single Enemy', null, undefined, undefined)}\n[Condition: First use] ${apply('Status Ailment: Stop', null, 'Single Enemy', null, undefined, 3)}`,
+      valuesByOverboostLevel: {
+        damage: ['390', '450', '450', '450', '450', '450', '550', '550', '550', '550', '620'],
+        poisonDur: ['24', '26', '26', '26', '26', '26', '26', '26', '26', '26', '30'],
+        poisonExt: ['6', '6', '6', '6', '6', '6', '6', '6', '6', '6', '7'],
+        stopDur: ['3', '3', '3', '3', '3', '3', '4', '4', '4', '4', '5']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 257,
+      mAtk: 233,
+      heal: 165
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Buff/Debuff Extension (Stats/Pot./Res.)"]
+    ]
+  }),
+  "Pole Axe": new Weapon({
+    id: 9004,
+    name: 'Pole Axe',
+    character: charactersData[9],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: 10900401,
+      name: 'Sharp Sonic',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Phys. Non-elem.', 'All Enemies', 10)}\nAlso, ${decrease('PATK', 'Mid', 'All Enemies', null, undefined, undefined, undefined)}\n${decrease('MATK', 'Mid', 'All Enemies', null, undefined, undefined, undefined)}`,
+      valuesByOverboostLevel: {
+        damage: ['340', '390', '390', '390', '390', '390', '480', '480', '480', '480', '540'],
+        pAtkDecreaseDur: ['18', '20', '20', '20', '20', '20', '20', '20', '20', '20', '25'],
+        pAtkDecreaseExt: ['6', '6', '6', '6', '6', '6', '6', '6', '6', '6', '8'],
+        pAtkDecreaseMaxPot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        mAtkDecreaseDur: ['18', '20', '20', '20', '20', '20', '20', '20', '20', '20', '25'],
+        mAtkDecreaseExt: ['6', '6', '6', '6', '6', '6', '6', '6', '6', '6', '8'],
+        mAtkDecreaseMaxPot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 249,
+      mAtk: 243,
+      heal: 164
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost Ability Pot."]
+    ]
+  }),
+  "Partisan": new Weapon({
+    id: 9005,
+    name: 'Partisan',
+    character: charactersData[9],
+    element: 'Wind',
+    commandAbility: new CommandAbility({
+      id: null,
+      name: 'Aeroga A',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Mag. Wind', 'All Enemies', null)}`,
+      valuesByOverboostLevel: {
+        damage: ['280', '340', '340', '340', '340', '340', '440', '440', '440', '440', '520']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 197,
+      mAtk: 267,
+      heal: 188
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData["Boost MATK"],
+      reinforcementAbilitiesData["Boost Wind Pot."]
+    ]
+  }),
+  "Viper Halberd": new Weapon({
+    id: 9006,
+    name: 'Viper Halberd',
+    character: charactersData[9],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: 10900601,
+      name: 'Imposing Stance',
+      atbCost: 4,
+      sigil: null,
+      description: `${increase('PDEF', undefined, 'Self', null, undefined, undefined, 'High')}\nAlso, ${increase('MDEF', undefined, 'Self', null, undefined, undefined, 'High')}\n${heal(undefined, 'Mag.', 'Self')}`,
+      valuesByOverboostLevel: {
+        pDefIncreasePot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        pDefIncreaseDur: ['30', '34', '34', '34', '34', '34', '34', '34', '34', '34', '38'],
+        pDefIncreaseExt: ['10', '11', '11', '11', '11', '11', '11', '11', '11', '11', '12'],
+        mDefIncreasePot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        mDefIncreaseDur: ['30', '34', '34', '34', '34', '34', '34', '34', '34', '34', '38'],
+        mDefIncreaseExt: ['10', '11', '11', '11', '11', '11', '11', '11', '11', '11', '12'],
+        heal: ['11', '13', '13', '13', '13', '13', '14', '14', '14', '14', '15']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 222,
+      mAtk: 212,
+      heal: 212
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData["Boost PDEF"],
+      reinforcementAbilitiesData["Boost MDEF"]
+    ]
+  }),
+  "Radiant Lance": new Weapon({
+    id: 9008,
+    name: 'Radiant Lance',
+    character: charactersData[9],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: 10900801,
+      name: 'Flying Spiral',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Phys. Non-elem.', 'Single Enemy', 10)}\nAlso, ${increaseCommandGauge(undefined)}`,
+      valuesByOverboostLevel: {
+        damage: ['400', '480', '480', '480', '480', '480', '620', '620', '620', '620', '750'],
+        commandGaugeIncreasePot: ['10', '10', '10', '10', '10', '10', '20', '20', '20', '20', '20']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 257,
+      mAtk: 218,
+      heal: 177
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData["Boost ATK"],
+      reinforcementAbilitiesData["Boost Ability Pot."]
+    ]
+  }),
+  "Scimitar": new Weapon({
+    id: 9011,
+    name: 'Scimitar',
+    character: charactersData[9],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: 10901101,
+      name: 'Dragon\'s Spirit',
+      atbCost: 4,
+      sigil: null,
+      description: `${increase('PATK', 'Mid', 'Single Ally', null, undefined, undefined, undefined)}\nAlso, ${increase('MATK', 'Mid', 'Single Ally', null, undefined, undefined, undefined)}\n${increase('Ice Damage', 'Mid', 'Single Ally', null, undefined, undefined, undefined)}\n${heal(undefined, 'Mag.', 'Single Ally')}`,
+      valuesByOverboostLevel: {
+        pAtkIncreaseDur: ['24', '26', '26', '26', '26', '26', '26', '26', '26', '26', '30'],
+        pAtkIncreaseExt: ['8', '8', '8', '8', '8', '8', '8', '8', '8', '8', '10'],
+        pAtkIncreaseMaxPot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        mAtkIncreaseDur: ['24', '26', '26', '26', '26', '26', '26', '26', '26', '26', '30'],
+        mAtkIncreaseExt: ['8', '8', '8', '8', '8', '8', '8', '8', '8', '8', '10'],
+        mAtkIncreaseMaxPot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        iceDamageIncreaseDur: ['24', '26', '26', '26', '26', '26', '26', '26', '26', '26', '30'],
+        iceDamageIncreaseExt: ['8', '8', '8', '8', '8', '8', '8', '8', '8', '8', '10'],
+        iceDamageIncreaseMaxPot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        heal: ['9', '11', '11', '11', '11', '11', '12', '12', '12', '12', '13']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 212,
+      mAtk: 212,
+      heal: 220
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData["Boost HEAL"],
+      reinforcementAbilitiesData["Buff/Debuff Extension (Stats/Pot./Res.)"]
+    ]
+  }),
+  "Flayer": new Weapon({
+    id: 9012,
+    name: 'Flayer',
+    character: charactersData[9],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: 10901201,
+      name: 'Heavy Swing',
+      atbCost: 3,
+      sigil: 'rhombus',
+      description: `${damage(undefined, 'Phys. Non-elem.', 'Single Enemy', 10)}\nAlso, [Condition: First use] ${apply('Status Ailment: Stop', null, 'Single Enemy', null, undefined, 3)}`,
+      valuesByOverboostLevel: {
+        damage: ['260', '300', '300', '300', '300', '300', '360', '360', '360', '360', '420'],
+        stopDur: ['3', '3', '3', '3', '3', '3', '4', '4', '4', '4', '5']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 270,
+      mAtk: 218,
+      heal: 167
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost Phys. Ability Pot."]
+    ]
+  }),
+  "Rocket Lance": new Weapon({
+    id: 9015,
+    name: 'Rocket Lance',
+    character: charactersData[9],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: 10901501,
+      name: 'Cosmic Burst',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Mag. Non-elem.', 'Single Enemy', 10)}\nAlso, ${apply('Status Ailment: Enfeeble', null, 'Single Enemy', null, undefined, undefined)}\n${decrease('Ice Resist.', undefined, 'Single Enemy', null, undefined, undefined, undefined)}`,
+      valuesByOverboostLevel: {
+        damage: ['390', '450', '450', '450', '450', '450', '550', '550', '550', '550', '620'],
+        enfeebleDur: ['40', '45', '45', '45', '45', '45', '50', '50', '50', '50', '70'],
+        enfeebleExt: ['8', '9', '9', '9', '9', '9', '10', '10', '10', '10', '14'],
+        iceResistDecreasePot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        iceResistDecreaseDur: ['20', '25', '25', '25', '25', '25', '25', '25', '25', '25', '35'],
+        iceResistDecreaseExt: ['6', '8', '8', '8', '8', '8', '8', '8', '8', '8', '11'],
+        iceResistDecreaseMaxPot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 256,
+      mAtk: 268,
+      heal: 137
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData["Boost ATK (All Allies)"],
+      reinforcementAbilitiesData["Buff/Debuff Extension (Stats/Pot./Res.)"]
+    ]
+  }),
+  "Mop": new Weapon({
+    id: 9016,
+    name: 'Mop',
+    character: charactersData[9],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: 10901601,
+      name: 'Cleaning Mop',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Phys. Non-elem.', 'All Enemies', 10)}\nAlso, [Condition: First use] ${apply('Status Ailment: Stop', null, 'All Enemies', null, undefined, 3)}`,
+      valuesByOverboostLevel: {
+        damage: ['340', '390', '390', '390', '390', '390', '480', '480', '480', '480', '540'],
+        stopDur: ['3', '3', '3', '3', '3', '3', '4', '4', '4', '4', '5']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 220,
+      mAtk: 212,
+      heal: 161
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData["Boost Earth Resist."],
+      reinforcementAbilitiesData["Boost PDEF (All Allies)"]
+    ]
+  }),
+  "Ultimate Spear": new UltimateWeapon({
+    id: 9018,
+    name: 'Ultimate Spear',
+    character: charactersData[9],
+    element: 'Non-elemental',
+    commandAbility: new UltimateCommandAbility({
+      id: null,
+      name: 'Ult. Dragon\'s Spirit',
+      sigil: null,
+      description: `${increaseLimitGauge(20, 'Single Ally')}\nAlso, ${increase('PATK', 'High', 'Single Ally', null, 30, 30, 'High')}\n${heal(5, 'Mag.', 'Single Ally')}\n${chargeAndUses(30, null, 1)}`
+    }),
+    maxRarityStats: {
+      pAtk: 159,
+      mAtk: 161,
+      heal: 150
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData["Buff/Debuff Extension (Stats/Pot./Res.)"],
+      reinforcementAbilitiesData["Boost MDEF"]
+    ]
+  }),
   "Type-99 Longsword": new Weapon({
     id: 20001,
     name: 'Type-99 Longsword',
@@ -7095,6 +7439,34 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData["Boost HP"]
     ]
   }),
+  "Stilva Glaive": new Weapon({
+    id: 50026,
+    name: 'Stilva Glaive',
+    character: charactersData[50],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: 15002601,
+      name: 'Deblizzara Surge A',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Mag. Non-elem.', 'All Enemies', 10)}\nAlso, ${decrease('Ice Resist.', 'Low', 'All Enemies', null, undefined, undefined, 'Mid')}`,
+      valuesByOverboostLevel: {
+        damage: ['180', '210', '210', '210', '210', '210', '240', '240', '240', '240', '250'],
+        iceResistDecreaseDur: ['20', '25', '25', '25', '25', '25', '30', '30', '30', '30', '35'],
+        iceResistDecreaseExt: ['5', '6', '6', '6', '6', '6', '7', '7', '7', '7', '8']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 201,
+      mAtk: 220,
+      heal: 170
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost Ice Pot."]
+    ]
+  }),
   "Broadsword: Axis": new Weapon({
     id: 51001,
     name: 'Broadsword: Axis',
@@ -8721,7 +9093,7 @@ export const weaponsData: Weapons = {
 
 type Range = 'Single Enemy' | 'All Enemies' | 'Single Ally' | 'All Allies' | 'Self' | 'Affected Targets' | 'Ally (Excluding Self)' | null;
 type CriticalRate = number | null;
-type Effect = 'Ailment: Stun' | 'Ailment: Poison' | 'Ailment: Silence' | 'Haste' | 'Provoke' | 'Veil' | 'Exploit Weakness';
+type Effect = 'Ailment: Stun' | 'Ailment: Poison' | 'Ailment: Silence' | 'Haste' | 'Provoke' | 'Veil' | 'Exploit Weakness' | 'Status Ailment: Stop' | 'Status Ailment: Enfeeble';
 type Attribute = 'PATK' | 'MATK' | 'PDEF' | 'MDEF' | 'Fire Resist.' | 'Ice Resist.' | 'Thunder Resist.' | 'Earth Resist.' | 'Water Resist.' | 'Wind Resist.' | 'Fire Damage' | 'Ice Damage' | 'Lightning Damage' | 'Earth Damage' | 'Water Damage' | 'Wind Damage';
 type Element = 'Non-elem.' | 'Fire' | 'Ice' | 'Lightning' | 'Earth' | 'Water' | 'Wind';
 type Damage = string | undefined;
@@ -8808,7 +9180,9 @@ function apply(effect: Effect, potency: number | null | undefined, range: Range,
     'Haste': 'haste',
     'Provoke': 'provoke',
     'Veil': 'veil',
-    'Exploit Weakness': 'exploitWeakness'
+    'Exploit Weakness': 'exploitWeakness',
+    'Status Ailment: Stop': 'stop',
+    'Status Ailment: Enfeeble': 'enfeeble'
   }
   const effectKey = effectMap[effect];
   const rateString = rate === null      ? ''                               :
@@ -8831,7 +9205,7 @@ function increaseLimitGauge(potency: number | undefined, range: Range) {
   return `Increases Limit Gauge [Pot.: ${pot}%] [Rng.: ${range}].`;
 }
 
-function increaseCommandGauge(potency: number) {
+function increaseCommandGauge(potency: number | undefined) {
   const pot = potency ? potency : '{{commandGaugeIncreasePot}}';
   return `Increases Command Gauge [Pot.: ${pot}%]`;
 }
