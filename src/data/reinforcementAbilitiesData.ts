@@ -633,5 +633,24 @@ export const reinforcementAbilitiesData = {
       dmg: [15],
       resist: [20]
     }
+  }),
+  "Buff/Debuff Extension (All Allies)": new ReinforcementAbility({
+    id: 51911,
+    name: 'Buff/Debuff Extension (All Allies)',
+    effect: 'All Allies\' Buff/Debuff (Stats/Pot./Res.) Effect Duration +{{percent}}%',
+    reqPts: [1, 5],
+    levelValues: {
+      percent: [5, 20],
+    }
+  }),
+  "Cosmic Protection": new ReinforcementAbility({
+    id: 54401,
+    name: 'Cosmic Protection',
+    effect: 'Phys. & Mag. Defence +{{defPercent}}%\nPhys. & Mag. Attack +{{atkPercent}}%',
+    reqPts: [10],
+    levelValues: {
+      defPercent: [20],
+      atkPercent: [10]
+    }
   })
 }

@@ -713,6 +713,36 @@ export const gearData = {
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
+  "Sky-Loving Pilot": new Gear({
+    id: 9001,
+    name: 'Sky-Loving Pilot',
+    character: charactersData[9],
+    reinforcementAbilities: [
+      reinforcementAbilitiesData["Boost PDEF"],
+      reinforcementAbilitiesData["Boost Crit. Pot."]
+    ],
+    reinforcementAbilitiesPoints: [4, 4]
+  }),
+  "Flying Captain": new Gear({
+    id: 9002,
+    name: 'Flying Captain',
+    character: charactersData[9],
+    reinforcementAbilities: [
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost MDEF"]
+    ],
+    reinforcementAbilitiesPoints: [8, 8]
+  }),
+  "Astronaut": new Gear({
+    id: 9003,
+    name: 'Astronaut',
+    character: charactersData[9],
+    reinforcementAbilities: [
+      reinforcementAbilitiesData["Buff/Debuff Extension (All Allies)"],
+      reinforcementAbilitiesData["Cosmic Protection"]
+    ],
+    reinforcementAbilitiesPoints: [5, 10]
+  }),
   "SOLDIER: Second Class Future Hero": new Gear({
     id: 20001,
     name: 'SOLDIER: Second Class Future Hero',
