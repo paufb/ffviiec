@@ -993,6 +993,16 @@ export const gearData = {
     ],
     reinforcementAbilitiesPoints: [5, 10]
   }),
+  "Training Garb of Ruin": new Gear({
+    id: 50005,
+    name: 'Training Garb of Ruin',
+    character: charactersData[50],
+    reinforcementAbilities: [
+      reinforcementAbilitiesData["Beads of Protection"],
+      reinforcementAbilitiesData["Frostblade Arcanum"]
+    ],
+    reinforcementAbilitiesPoints: [10, 10]
+  }),
   "Intellectual P0 SOLDIER": new Gear({
     id: 51001,
     name: 'Intellectual P0 SOLDIER',

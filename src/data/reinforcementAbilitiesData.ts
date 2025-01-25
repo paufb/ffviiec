@@ -652,5 +652,15 @@ export const reinforcementAbilitiesData = {
       defPercent: [20],
       atkPercent: [10]
     }
+  }),
+  "Beads of Protection": new ReinforcementAbility({
+    id: 54501,
+    name: 'Beads of Protection',
+    effect: 'Phys. & Mag. Defence +{{defPercent}}%\nHP +{{hpPercent}}%',
+    reqPts: [10],
+    levelValues: {
+      defPercent: [10],
+      hpPercent: [10]
+    }
   })
 }
