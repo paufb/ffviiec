@@ -4655,6 +4655,34 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData["Boost HP"]
     ]
   }),
+  "Stilva Megaphone": new Weapon({
+    id: 7031,
+    name: 'Stilva Megaphone',
+    character: charactersData[7],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: 10703101,
+      name: 'Deblizzara Surge A',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Mag. Non-elem.', 'All Enemies', 10)}\nAlso, ${decrease('Ice Resist.', 'Low', 'All Enemies', null, undefined, undefined, 'Mid')}`,
+      valuesByOverboostLevel: {
+        damage: ['180', '210', '210', '210', '210', '210', '240', '240', '240', '240', '250'],
+        iceResistDecreaseDur: ['20', '25', '25', '25', '25', '25', '30', '30', '30', '30', '35'],
+        iceResistDecreaseExt: ['5', '6', '6', '6', '6', '6', '7', '7', '7', '7', '8']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 205,
+      mAtk: 226,
+      heal: 161
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost Ice Pot."]
+    ]
+  }),
   "Cath Palug": new Weapon({
     id: 8002,
     name: 'Cath Palug',
@@ -7467,6 +7495,33 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData["Boost Ice Pot."]
     ]
   }),
+  "Blade of Ruin": new Weapon({
+    id: 50013,
+    name: 'Blade of Ruin',
+    character: charactersData[50],
+    element: 'Ice',
+    commandAbility: new CommandAbility({
+      id: 15001301,
+      name: 'Frost Slash',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Phys. Ice', 'Single Enemy', null)}\nAlso, ${apply('Provoke', null, 'Self', null, 60, 0)}\n${increaseCommandGauge(undefined)}`,
+      valuesByOverboostLevel: {
+        damage: ['520', '620', '620', '620', '620', '620', '780', '780', '780', '780', '940'],
+        commandGaugeIncreasePot: ['10', '10', '10', '10', '10', '10', '20', '20', '20', '20', '20']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 283,
+      mAtk: 218,
+      heal: 157
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData["Boost PATK"],
+      reinforcementAbilitiesData["Boost Ice Pot."]
+    ]
+  }),
   "Broadsword: Axis": new Weapon({
     id: 51001,
     name: 'Broadsword: Axis',
@@ -8033,6 +8088,38 @@ export const weaponsData: Weapons = {
       pAtk: 204,
       mAtk: 214,
       heal: 226
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData["Boost HEAL"],
+      reinforcementAbilitiesData["Buff/Debuff Extension (Stats/Pot./Res.)"]
+    ]
+  }),
+  "Nautilus Spiral": new Weapon({
+    id: 51021,
+    name: 'Nautilus Spiral',
+    character: charactersData[51],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: 15102101,
+      name: 'Spiral Edge',
+      atbCost: 3,
+      sigil: 'rhombus',
+      description: `${damage(undefined, 'Phys. Non-elem.', 'Single Enemy', 10)}\nAlso, ${decrease('Ice Resist.', undefined, 'Single Enemy', null, undefined, undefined, 'High')}\n${conditionHP('Self', '50', 'more')}, ${decrease('Thunder Resist.', undefined, 'Single Enemy', null, undefined, undefined, 'High')}`,
+      valuesByOverboostLevel: {
+        damage: ['260', '300', '300', '300', '300', '300', '360', '360', '360', '360', '420'],
+        iceResistDecreasePot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        iceResistDecreaseDur: ['16', '18', '18', '18', '18', '18', '20', '20', '20', '20', '24'],
+        iceResistDecreaseExt: ['5', '6', '6', '6', '6', '6', '6', '6', '6', '6', '8'],
+        lightningResistDecreasePot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        lightningResistDecreaseDur: ['16', '18', '18', '18', '18', '18', '20', '20', '20', '20', '24'],
+        lightningResistDecreaseExt: ['5', '6', '6', '6', '6', '6', '6', '6', '6', '6', '8']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 212,
+      mAtk: 215,
+      heal: 216
     },
     reinforcementAbilities: [
       reinforcementAbilitiesData["Boost HEAL"],
