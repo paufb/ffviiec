@@ -662,5 +662,14 @@ export const reinforcementAbilitiesData = {
       defPercent: [10],
       hpPercent: [10]
     }
+  }),
+  "Enhanced Interruption (Veil)": new ReinforcementAbility({
+    id: 54701,
+    name: 'Enhanced Interruption (Veil)',
+    effect: 'Applies Veil to self when interrupting enemy (Pot: {{percent}}% of max. HP of the affected / Dur.: 60s / Ext.: +60s)',
+    reqPts: [1, 5, 15, 25],
+    levelValues: {
+      percent: [10, 15, 20, 25]
+    }
   })
 }

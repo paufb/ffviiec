@@ -737,6 +737,34 @@ export const weaponsData: Weapons = {
       reinforcementAbilitiesData["Boost Fire Pot."]
     ]
   }),
+  "Sleek Saber": new Weapon({
+    id: 1042,
+    name: 'Sleek Saber',
+    character: charactersData[1],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: 10104201,
+      name: 'Armora Breach Surge A++',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Mag. Non-elem.', 'All Enemies', 10)}\nAlso, ${decrease('PDEF', 'Low', 'All Enemies', null, undefined, undefined, 'Mid')}`,
+      valuesByOverboostLevel: {
+        damage: ['180', '210', '210', '210', '210', '210', '240', '240', '240', '240', '250'],
+        pDefDecreaseDur: ['20', '25', '25', '25', '25', '25', '30', '30', '30', '30', '35'],
+        pDefDecreaseExt: ['5', '6', '6', '6', '6', '6', '7', '7', '7', '7', '8']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 218,
+      mAtk: 218,
+      heal: 158
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData["Boost HP"],
+      reinforcementAbilitiesData["Boost Phys. Ability Pot."]
+    ]
+  }),
   "Gatling Gun": new Weapon({
     id: 2001,
     name: 'Gatling Gun',
@@ -1317,6 +1345,27 @@ export const weaponsData: Weapons = {
     reinforcementAbilities: [
       reinforcementAbilitiesData["Boost MDEF"],
       reinforcementAbilitiesData["Buff/Debuff Extension (Stats/Pot./Res.)"]
+    ]
+  }),
+  "Missing Score": new UltimateWeapon({
+    id: 2036,
+    name: 'Missing Score',
+    character: charactersData[3],
+    element: 'Non-elemental',
+    commandAbility: new UltimateCommandAbility({
+      id: null,
+      name: 'Guardian Aura',
+      sigil: null,
+      description: `${increase('Physical Resistance', '+50%', 'All Allies', null, 15, 0, null)}\nAlso, ${increase('Magic Resistance', '+50%', 'All Allies', null, 15, 0, null)}\n${heal(5, 'Mag.', 'All Allies')}\n${chargeAndUses(60, 20, 2)}`
+    }),
+    maxRarityStats: {
+      pAtk: 196,
+      mAtk: 191,
+      heal: 136
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData["Boost MDEF"],
+      reinforcementAbilitiesData["Enhanced Interruption (Veil)"]
     ]
   }),
   "Leather Gloves": new Weapon({
@@ -2852,6 +2901,37 @@ export const weaponsData: Weapons = {
     },
     reinforcementAbilities: [
       reinforcementAbilitiesData["Boost MATK (All Allies)"],
+      reinforcementAbilitiesData["Buff/Debuff Extension (Stats/Pot./Res.)"]
+    ]
+  }),
+  "Gambanteinn": new Weapon({
+    id: 4034,
+    name: 'Gambanteinn',
+    character: charactersData[4],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: 10403401,
+      name: 'Paeon',
+      atbCost: 5,
+      sigil: null,
+      description: `${heal(undefined, 'Mag.', 'All Allies')}\nAlso, ${increase('PATK', undefined, 'All Allies', null, undefined, undefined, undefined)}\n${conditionHP('Self', undefined, 'less')}, ${increaseATBGauge(1, 'Ally (Excluding Self)')}`,
+      valuesByOverboostLevel: {
+        heal: ['42', '50', '50', '50', '50', '50', '54', '54', '54', '54', '59'],
+        pAtkIncreasePot: ['Low', 'Low', 'Low', 'Low', 'Low', 'Low', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid'],
+        pAtkIncreaseDur: ['12', '12', '12', '12', '12', '12', '12', '12', '12', '12', '16'],
+        pAtkIncreaseExt: ['4', '4', '4', '4', '4', '4', '4', '4', '4', '4', '5'],
+        pAtkIncreaseMaxPot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        conditionHPThreshold: ['40', '50', '50', '50', '50', '50', '70', '70', '70', '70', '90']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 193,
+      mAtk: 214,
+      heal: 234
+    },
+    reinforcementAbilities: [
+      reinforcementAbilitiesData["Boost HEAL"],
       reinforcementAbilitiesData["Buff/Debuff Extension (Stats/Pot./Res.)"]
     ]
   }),
@@ -9181,13 +9261,13 @@ export const weaponsData: Weapons = {
 type Range = 'Single Enemy' | 'All Enemies' | 'Single Ally' | 'All Allies' | 'Self' | 'Affected Targets' | 'Ally (Excluding Self)' | null;
 type CriticalRate = number | null;
 type Effect = 'Ailment: Stun' | 'Ailment: Poison' | 'Ailment: Silence' | 'Haste' | 'Provoke' | 'Veil' | 'Exploit Weakness' | 'Status Ailment: Stop' | 'Status Ailment: Enfeeble';
-type Attribute = 'PATK' | 'MATK' | 'PDEF' | 'MDEF' | 'Fire Resist.' | 'Ice Resist.' | 'Thunder Resist.' | 'Earth Resist.' | 'Water Resist.' | 'Wind Resist.' | 'Fire Damage' | 'Ice Damage' | 'Lightning Damage' | 'Earth Damage' | 'Water Damage' | 'Wind Damage';
+type Attribute = 'PATK' | 'MATK' | 'PDEF' | 'MDEF' | 'Fire Resist.' | 'Ice Resist.' | 'Thunder Resist.' | 'Earth Resist.' | 'Water Resist.' | 'Wind Resist.' | 'Fire Damage' | 'Ice Damage' | 'Lightning Damage' | 'Earth Damage' | 'Water Damage' | 'Wind Damage' | 'Physical Resistance' | 'Magic Resistance';
 type Element = 'Non-elem.' | 'Fire' | 'Ice' | 'Lightning' | 'Earth' | 'Water' | 'Wind';
 type Damage = string | undefined;
 type DamageType = `Phys. ${Element}` | `Mag. ${Element}` | `Phys./Mag. ${Element}`;
 type Heal = number | undefined;
 type HealType = 'Mag.' | 'Phys.';
-type Potency = 'Low' | 'Mid' | 'High' | 'Extra High' | undefined;
+type Potency = 'Low' | 'Mid' | 'High' | 'Extra High' | `+${number}%` | undefined;
 type Rate = number | undefined | null;
 type Duration = number | undefined;
 type Extension = number | undefined;
@@ -9211,7 +9291,9 @@ function getAttributeKey(attribute: Attribute) {
     'Lightning Damage': 'lightningDamage',
     'Earth Damage': 'earthDamage',
     'Water Damage': 'waterDamage',
-    'Wind Damage': 'windDamage'
+    'Wind Damage': 'windDamage',
+    'Physical Resistance': 'physicalResistance',
+    'Magic Resistance': 'magicResistance'
   };
   return attributeMap[attribute];
 }
@@ -9236,16 +9318,18 @@ function decrease(attribute: Attribute, potency: Potency, range: Range, rate: Ra
   return `${attribute} is decreased. [Pot.: ${pot}]${rateString} [Rng.: ${range}] [Dur.: ${dur}s]. [Ext.: +${ext}s] [Max. pot.: ${maxPot}]`;
 }
 
-function increase(attribute: Attribute, potency: Potency, range: Range, rate: Rate, duration: Duration, extension: Extension, maxPotency: Potency) {
+function increase(attribute: Attribute, potency: Potency, range: Range, rate: Rate, duration: Duration, extension: Extension, maxPotency: Potency | null) {
   const attributeKey = getAttributeKey(attribute);
   const pot = potency ? potency : `{{${attributeKey}IncreasePot}}`;
   const rateString = rate === null      ? ''                                          :
                      rate === undefined ? ` [Rate: {{${attributeKey}IncreaseRate}}%]` :
                                           ` [Rate: ${rate}%]`                         ;
   const dur = duration ? duration : `{{${attributeKey}IncreaseDur}}`;
-  const ext = extension ? extension : `{{${attributeKey}IncreaseExt}}`;
-  const maxPot = maxPotency ? maxPotency : `{{${attributeKey}IncreaseMaxPot}}`;
-  return `${attribute} is increased. [Pot.: ${pot}]${rateString} [Rng.: ${range}] [Dur.: ${dur}s]. [Ext.: +${ext}s] [Max. pot.: ${maxPot}]`;
+  const ext = typeof extension === 'number' ? extension : `{{${attributeKey}IncreaseExt}}`;
+  const maxPotString = maxPotency === null      ?  ''                                               :
+                       maxPotency === undefined ? ` [Max. pot.: {{${attributeKey}IncreaseMaxPot}}]` :
+                                                  ` [Max. pot.: ${maxPotency}]`                     ;
+  return `${attribute} is increased. [Pot.: ${pot}]${rateString} [Rng.: ${range}] [Dur.: ${dur}s]. [Ext.: +${ext}s]${maxPotString}`;
 }
 
 function heal(heal: Heal, type: HealType, range: Range) {
