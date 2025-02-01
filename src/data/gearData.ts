@@ -443,6 +443,16 @@ export const gearData = {
     ],
     reinforcementAbilitiesPoints: [15, 10]
   }),
+  "Loveless Songstress": new Gear({
+    id: 4016,
+    name: 'Loveless Songstress',
+    character: charactersData[4],
+    reinforcementAbilities: [
+      reinforcementAbilitiesData["ATB Boost"],
+      reinforcementAbilitiesData["Soothing Song"]
+    ],
+    reinforcementAbilitiesPoints: [10, 10]
+  }),
   "Hojo's Specimen": new Gear({
     id: 5001,
     name: 'Hojo\'s Specimen',
@@ -491,7 +501,7 @@ export const gearData = {
       reinforcementAbilitiesData["Boost HP"],
       reinforcementAbilitiesData["Flamefrost Fangs"]
     ],
-    reinforcementAbilitiesPoints: [10, 10]
+    reinforcementAbilitiesPoints: [15, 10]
   }),
   "Pilot's Jacket": new Gear({
     id: 5004,

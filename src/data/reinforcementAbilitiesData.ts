@@ -671,5 +671,15 @@ export const reinforcementAbilitiesData = {
     levelValues: {
       percent: [10, 15, 20, 25]
     }
+  }),
+  "Soothing Song": new ReinforcementAbility({
+    id: 54601,
+    name: 'Soothing Song',
+    effect: 'Buff/Debuff (Stats/Pot./Res.) Effect Duration +{{buffDebuffDurationPercent}}%\nHealing Pot. +{{healPercent}}%',
+    reqPts: [10],
+    levelValues: {
+      buffDebuffDurationPercent: [40],
+      healPercent: [10]
+    }
   })
 }
