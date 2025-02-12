@@ -1,0 +1,35 @@
+---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+import { characters } from '../data/instances/characters';
+import Layout from './Layout.astro';
+
+interface Props {
+  selectedCharacterPath?: string;
+}
+
+const { selectedCharacterPath } = Astro.props;
+const characterBtns = import.meta.glob<{ default: ImageMetadata }>('../assets/character_btn/*.png');
+---
+
+<Layout>
+  <div class="flex flex-col gap-4 max-w-360 m-auto">
+    <div class="flex flex-wrap justify-center gap-1">
+      {Object.values(characters).map((character) => (
+        <a
+          href={`/weapons/${character.path}`}
+          class={`border-2 border-[#394d60] rounded-xs outline-2 outline-[#394d60] -outline-offset-6 ${selectedCharacterPath === character.path ? 'bg-[#032950] !border-[#2c80d7] !outline-[#2c80d7]' : ''}`}
+        >
+          <Image
+            class="min-w-15 min-h-12 p-1"
+            src={characterBtns[`../assets/character_btn/${character.id}.png`]()}
+            alt={character.name}
+            width={60}
+            height={48}
+          />
+        </a>
+      ))}
+    </div>
+    <slot />
+  </div>
+</Layout>

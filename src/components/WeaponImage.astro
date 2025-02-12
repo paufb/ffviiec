@@ -1,0 +1,41 @@
+---
+import type { ImageMetadata } from 'astro';
+import type { Weapon } from '../data/classes/Weapon';
+import { Image } from 'astro:assets';
+
+interface Props {
+  weapon: Weapon;
+  size: 'normal' | 'large';
+  class?: string;
+  hoverable?: boolean;
+  clickable?: boolean;
+  width?: number;
+  height?: number;
+}
+
+const { weapon, size, class: className, hoverable, clickable, width, height } = Astro.props;
+const imagesNormal = import.meta.glob<{ default: ImageMetadata }>(`../assets/weapon/*.png`);
+const imagesLarge = import.meta.glob<{ default: ImageMetadata }>(`../assets/weapon_l/*.png`);
+const normalImage = imagesNormal[`../assets/weapon/${weapon.id}.png`]();
+const largeImage = imagesLarge[`../assets/weapon_l/${weapon.id}.png`]();
+---
+
+<Image
+  class={`
+    bg-[#04101e] rounded-sm aspect-square
+    border-2 border-[#155197]
+    outline-2 outline-[#155197] -outline-offset-6
+    bg-[radial-gradient(circle,_#0a68a8,_#0a68a8fc_4.86%,_#0a68a8f3_9.3%,_#0a68a8e4_13.5%,_#0a68a8d2_17.4%,_#0a68a8bd_21.18%,_#0a68a8a5_25%,_#0a68a88c_28.26%,_#0a68a873_31.74%,_#0a68a85a_35%,_#0a68a842_38.82%,_#0a68a82d_42.6%,_#0a68a81b_46.5%,_#0a68a80c_50.7%,_#0a68a803_55.14%,_#0a68a800_60%)]
+    ${hoverable ? 'hover:border-[#2164ab] hover:outline-[#2164ab]' : ''}
+    ${clickable ? 'transform active:scale-95 transition duration-100' : ''}
+    ${className ?? '' }`
+  }
+  src={
+    size === 'normal' ? normalImage :
+    size === 'large'  ? largeImage  :
+                        normalImage
+  }
+  alt={weapon.name}
+  width={width}
+  height={height}
+/>

@@ -1,0 +1,22 @@
+---
+import type { ImageMetadata } from 'astro';
+import type { ReinforcementAbility } from '../data/classes/ReinforcementAbility';
+import { Image } from 'astro:assets';
+
+interface Props {
+  reinforcementAbility: ReinforcementAbility;
+  width?: number;
+  height?: number;
+}
+
+const { reinforcementAbility, width, height } = Astro.props;
+const images = import.meta.glob<{ default: ImageMetadata }>('../assets/passiveskill/*.png');
+---
+
+<Image
+  class="bg-[#182d39] border-2 border-[#108a9c] aspect-square object-contain"
+  src={images[`../assets/passiveskill/${reinforcementAbility.id}.png`]()}
+  alt={reinforcementAbility.name}
+  width={width}
+  height={height}
+/>

@@ -1,0 +1,104 @@
+---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+
+interface Props {
+  href: string;
+  imgSrc: ImageMetadata;
+  imgAlt: string;
+  disabled?: boolean;
+}
+
+const { href, imgSrc, imgAlt, disabled } = Astro.props;
+---
+
+<div class="diamond-container scale-75">
+  <div class="diamond-outer-shadow" />
+  <div class="diamond-inner-shadow" />
+  <div class="diamond-border" />
+  <a
+    href={href}
+    class="diamond-anchor"
+    style={{
+      pointerEvents: disabled ? 'none' : undefined,
+      filter: disabled ? 'grayscale(0.75)' : undefined
+    }}
+  >
+    <Image
+      src={imgSrc}
+      alt={imgAlt}
+      class={href === '/weapons' ? 'weapons-img' : undefined}
+      style={{
+        opacity: disabled ? '.5' : undefined
+      }}
+    />
+  </a>
+</div>
+
+<style>
+  .diamond-container {
+    position: relative;
+    transition: transform 0.1s;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+
+    & .diamond-outer-shadow,
+    & .diamond-inner-shadow,
+    & .diamond-border {
+      top: 50%;   
+      left: 50%;  
+      transform: translate(-50%, -50%);
+    }
+
+    & .diamond-outer-shadow {
+      position: absolute;
+      width: 270px;
+      height: 270px;
+      background: linear-gradient(to top, rgba(74, 99, 195, 1) 0%, transparent 30%);
+      clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+    }
+
+    & .diamond-inner-shadow {
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      background: rgba(26, 63, 176, 0.5);
+      clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+    }
+
+    & .diamond-border {
+      position: absolute;
+      width: 137px;
+      height: 137px;
+      background: rgb(68, 159, 201);
+      clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+    }
+
+    & .diamond-anchor {
+      display: block;
+      width: 128px;
+      height: 128px;
+      background: rgb(26, 63, 176);
+      clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+      transition: background-color 0.1s;
+
+      &:hover {
+        background-color: rgb(30, 72, 200);
+      }
+    
+      & img.weapons-img {
+        transform: scale(0.8) translateX(-17px) translateY(5px);
+      }
+
+      & img {
+        transform: scale(0.6);
+      }
+    }
+  }
+</style>

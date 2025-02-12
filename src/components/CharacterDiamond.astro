@@ -1,0 +1,23 @@
+---
+import type { ImageMetadata } from 'astro';
+import type { Character } from '../data/types';
+import { Image } from 'astro:assets';
+
+interface Props {
+  character: Character;
+  class?: string;
+  width?: number;
+  height?: number;
+}
+
+const { character, class: className, width, height } = Astro.props;
+const characterDiamonds = import.meta.glob<{ default: ImageMetadata }>('../assets/character_diamond/*.png');
+---
+
+<Image
+  class={className}
+  src={characterDiamonds[`../assets/character_diamond/${character.id}.png`]()}
+  alt={character.name}
+  width={width}
+  height={height}
+/>

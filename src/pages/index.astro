@@ -1,0 +1,33 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import ffviiec from '../assets/ffviiec.png';
+import DiamondAnchor from '../components/DiamondAnchor.astro';
+import weapons from '../assets/_ui/icon/common/enhance.png';
+import gear from '../assets/_ui/icon/common/wear_battle.png';
+import materia from '../assets/_ui/icon/common/materia.png';
+
+const routes = [
+  { path: '/weapons', name: 'Weapons', imgSrc: weapons, imgAlt: 'Weapons', isDisabled: false },
+  { path: '/gear', name: 'Gear', imgSrc: gear, imgAlt: 'Gear', isDisabled: true },
+  { path: '/materia', name: 'Materia', imgSrc: materia, imgAlt: 'Materia', isDisabled: true }
+];
+---
+
+<Layout>
+	<div class="flex flex-col gap-[1.5rem] items-center justify-center">
+		<Image src={ffviiec} alt="FINAL FANTASY VII EVER CRISIS" width={562} />
+		<h1 class="text-center">
+			This site is not affiliated with or endorsed by SQUARE ENIX or Applibot, Inc.
+			<br />
+			All rights to the assets and content used belong to their respective owners.
+			<br />
+			© SQUARE ENIX Powered by Applibot, Inc.
+		</h1>
+		<div class="flex flex-wrap justify-center gap-5">
+			{routes.map((route) => (
+				<DiamondAnchor href={route.path} imgSrc={route.imgSrc} imgAlt={route.imgAlt} disabled={route.isDisabled} />
+			))}
+		</div>
+	</div>
+</Layout>

@@ -1,0 +1,38 @@
+---
+import { Image } from 'astro:assets';
+import home from '../assets/_ui/icon/common/main.png';
+import weapons from '../assets/_ui/icon/common/enhance.png';
+import gear from '../assets/_ui/icon/common/wear_battle.png';
+import materia from '../assets/_ui/icon/common/materia.png';
+
+const routes = [
+  { path: '/weapons', name: 'Weapons', imgSrc: weapons, imgAlt: 'Weapons', isDisabled: false },
+  { path: '/gear', name: 'Gear', imgSrc: gear, imgAlt: 'Gear', isDisabled: true },
+  { path: '/materia', name: 'Materia', imgSrc: materia, imgAlt: 'Materia', isDisabled: true }
+];
+const downscaleOnActive = 'transform active:scale-95 transition duration-100';
+---
+
+<nav class="sticky top-0 z-[99] flex flex-col flex-shrink-0 gap-2 h-screen p-[8px_0_8px_8px]">
+  <a href="/" class={`flex items-center bg-[#08325e] rounded-sm border-2 border-[#155197] outline-2 outline-[#155197] -outline-offset-6 hover:bg-[#08325e] hover:border-[#2164ab] hover:outline-[#2164ab] ${downscaleOnActive}`}>
+    <Image src={home} alt="Home" width={52} height={52} class="p-2" />
+  </a>
+  <ul class="bg-[#23232380] rounded-md h-full overflow-hidden">
+    {routes.map((route) => (
+      <li>
+        <a
+          href={route.path}
+          class={`flex items-center justify-center px-1 py-2 hover:bg-[#33333380] ${downscaleOnActive}`}
+          style={{
+            background: Astro.url.pathname === route.path ? 'radial-gradient(circle at right,rgb(11,64,136) 0%,transparent 100%)' : undefined,
+            pointerEvents: route.isDisabled ? 'none' : undefined
+          }}
+        >
+          <div class="p-1">
+            <Image src={route.imgSrc} alt={route.imgAlt} width={32} height={42} style={{ opacity: route.isDisabled ? '.5' : undefined }} />
+          </div>
+        </a>
+      </li>
+    ))}
+  </ul>
+</nav>

@@ -1,0 +1,43 @@
+---
+import '@fontsource/noto-sans';
+import '../styles/global.css';
+import { ClientRouter } from 'astro:transitions';
+import AppBackground from '../components/AppBackground.astro';
+import AppBar from '../components/AppBar.astro';
+import AppSidebar from '../components/AppSidebar.astro';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<title>FFVIIEC</title>
+		<ClientRouter />
+	</head>
+	<body>
+		<div class="flex">
+			<AppSidebar />
+			<main class="flex flex-col flex-1">
+				<AppBar />
+				<div class="p-2">
+					<slot />
+				</div>
+			</main>
+			<AppBackground />
+		</div>
+	</body>
+</html>
+
+<style>
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+		font-family: 'Noto Sans', sans-serif;
+		color: white;
+	}
+</style>
