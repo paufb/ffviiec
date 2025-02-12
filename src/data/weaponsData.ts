@@ -1350,7 +1350,7 @@ export const weaponsData: Weapons = {
   "Missing Score": new UltimateWeapon({
     id: 2036,
     name: 'Missing Score',
-    character: charactersData[3],
+    character: charactersData[2],
     element: 'Non-elemental',
     commandAbility: new UltimateCommandAbility({
       id: null,
