@@ -9,7 +9,6 @@ interface Props {
 }
 
 const { selectedCharacterPath } = Astro.props;
-const characterBtns = import.meta.glob<{ default: ImageMetadata }>('../assets/character_btn/*.png');
 ---
 
 <Layout>
@@ -18,14 +17,19 @@ const characterBtns = import.meta.glob<{ default: ImageMetadata }>('../assets/ch
       {Object.values(characters).map((character) => (
         <a
           href={`/weapons/${character.path}`}
-          class={`border-2 border-[#394d60] rounded-xs outline-2 outline-[#394d60] -outline-offset-6 ${selectedCharacterPath === character.path ? 'bg-[#032950] !border-[#2c80d7] !outline-[#2c80d7]' : ''}`}
+          class={`
+            border-2 border-[#394d60] rounded-xs
+            outline-2 outline-[#394d60] -outline-offset-6
+            hover:border-[#5574aa] hover:outline-[#5574aa]
+            transition duration-100 active:scale-95
+            ${selectedCharacterPath === character.path ? 'bg-[#032950] !border-[#2c80d7] !outline-[#2c80d7]' : ''}
+          `}
+          style={{ width: '64px', height: '54px' }}
         >
-          <Image
-            class="min-w-15 min-h-12 p-1"
-            src={characterBtns[`../assets/character_btn/${character.id}.png`]()}
+          <img
+            class="p-1"
+            src={`data:image/png;base64,${character.btn60x48Base64}`}
             alt={character.name}
-            width={60}
-            height={48}
           />
         </a>
       ))}

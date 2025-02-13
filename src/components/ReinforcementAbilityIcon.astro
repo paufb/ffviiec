@@ -13,10 +13,18 @@ const { reinforcementAbility, width, height } = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>('../assets/passiveskill/*.png');
 ---
 
-<Image
-  class="bg-[#182d39] border-2 border-[#108a9c] aspect-square object-contain"
-  src={images[`../assets/passiveskill/${reinforcementAbility.id}.png`]()}
-  alt={reinforcementAbility.name}
-  width={width}
-  height={height}
-/>
+<div
+  style={{
+    width: width ? `${width}px` : undefined,
+    height: height ? `${height}px` : undefined
+  }}
+  class="bg-[#182d39] border-2 border-[#108a9c] object-contain flex-none"
+>
+  <Image
+    class="animate-imageload"
+    src={images[`../assets/passiveskill/${reinforcementAbility.id}.png`]()}
+    alt={reinforcementAbility.name}
+    width={width}
+    height={height}
+  />
+</div>

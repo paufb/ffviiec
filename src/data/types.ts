@@ -8,6 +8,7 @@ export interface Character {
   id: number;
   name: string;
   path: string;
+  btn60x48Base64: string;
 }
 
 export interface CommandAbility {

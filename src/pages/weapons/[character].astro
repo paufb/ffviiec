@@ -21,7 +21,7 @@ const filteredWeapons = Object.values(weapons).filter((weapon) => weapon.charact
 <WeaponsLayout selectedCharacterPath={selectedCharacterPath}>
   <div class="grid grid-cols-[repeat(auto-fit,minmax(min(300px,100%),1fr))] gap-4">
     {filteredWeapons.map((weapon) => (
-      <div class="flex gap-2">
+      <div class="flex gap-2 min-w-0">
         <a href={`/weapons/${weapon.character.path}/${weapon.id}`}>
           <WeaponImage
             weapon={weapon}
@@ -39,7 +39,7 @@ const filteredWeapons = Object.values(weapons).filter((weapon) => weapon.charact
               {weapon.reinforcementAbilities.map((reinforcementAbility) => (
                 <div class="flex gap-2 items-center">
                   <ReinforcementAbilityIcon reinforcementAbility={reinforcementAbility} width={24} height={24} />
-                  <span class="text-xs whitespace-nowrap">{reinforcementAbility.name}</span>
+                  <span class="text-sm whitespace-nowrap">{reinforcementAbility.name}</span>
                 </div>
               ))}
             </div>

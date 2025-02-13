@@ -36,19 +36,25 @@ const sigils = import.meta.glob<{ default: ImageMetadata }>('../assets/_ui/icon/
 ---
 
 <div class="flex gap-0.5">
-  <Image
-    class={`w-10 h-10 bg-[#052854] border-2 border-[#3f75ad] ${commandAbility.id ? '' : 'p-1'}`}
-    src={commandAbility.id ? activeSkills[`../assets/activeskill/${commandAbility.id}.png`]() : unfixImage}
-    alt={commandAbility.name}
-  />
-  <Image
-    class={`w-5 h-5 bg-[#052854] border-2 border-[#3f75ad] ${element ? '' : 'p-1'}`}
-    src={element ? attributes[`../assets/_ui/icon/attribute/${elementsIcons[element]}.png`]() : minusImage }
-    alt={element ?? ''}
-  />
-  <Image
-    class={`w-5 h-5 bg-[#052854] border-2 border-[#3f75ad] ${commandAbility.sigil ? '' : 'p-1'}`}
-    src={commandAbility.sigil ? sigils[`../assets/_ui/icon/sign/${signsIcons[commandAbility.sigil]}.png`]() : minusImage}
-    alt={commandAbility.sigil ?? ''}
-  />
+  <div class={`w-10 h-10 bg-[#052854] border-2 border-[#3f75ad] ${commandAbility.id ? '' : 'p-1'}`}>
+    <Image
+      class="animate-imageload"
+      src={commandAbility.id ? activeSkills[`../assets/activeskill/${commandAbility.id}.png`]() : unfixImage}
+      alt={commandAbility.name}
+    />
+  </div>
+  <div class={`w-5 h-5 bg-[#052854] border-2 border-[#3f75ad] ${element ? '' : 'p-1'}`}>
+    <Image
+      class="animate-imageload"
+      src={element ? attributes[`../assets/_ui/icon/attribute/${elementsIcons[element]}.png`]() : minusImage }
+      alt={element ?? ''}
+    />
+  </div>
+  <div class={`w-5 h-5 bg-[#052854] border-2 border-[#3f75ad] ${commandAbility.sigil ? '' : 'p-1'}`}>
+    <Image
+      class="animate-imageload"
+      src={commandAbility.sigil ? sigils[`../assets/_ui/icon/sign/${signsIcons[commandAbility.sigil]}.png`]() : minusImage}
+      alt={commandAbility.sigil ?? ''}
+    />
+  </div>
 </div>
