@@ -1,17 +1,47 @@
 @import "tailwindcss";
 
 @keyframes imageload {
-  0% {
-    opacity: 0;
-    scale: 0
-  }
-  to {
-    opacity: 1;
-    scale: 1
-  }
+  0% { opacity: 0; scale: 0 }
+  to { opacity: 1; scale: 1 }
+}
+
+@keyframes fade-in-from-top {
+  from { opacity: 0; transform: translate(0, -2.5rem) }
+  to { opacity: 1; transform: translate(0, 0) }
+}
+
+@keyframes fade-in-from-right {
+  from { opacity: 0; transform: translate(2.5rem, 0) }
+  to { opacity: 1; transform: translate(0, 0) }
+}
+
+@keyframes fade-in-from-bottom {
+  from { opacity: 0; transform: translate(0, 2.5rem) }
+  to { opacity: 1; transform: translate(0, 0) }
+}
+
+@keyframes fade-in-from-left {
+  from { opacity: 0; transform: translate(-2.5rem, 0) }
+  to { opacity: 1; transform: translate(0, 0) }
 }
 
 .animate-imageload {
   animation: imageload .33s forwards;
   color: transparent;
+}
+
+.animate-fadeinfromtop {
+  animation: fade-in-from-top .5s;
+}
+
+.animate-fadeinfromright {
+  animation: fade-in-from-right .5s;
+}
+
+.animate-fadeinfrombottom {
+  animation: fade-in-from-bottom .5s;
+}
+
+.animate-fadeinfromleft {
+  animation: fade-in-from-left .5s;
 }

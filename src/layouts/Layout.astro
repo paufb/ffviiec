@@ -1,8 +1,6 @@
 ---
 import '@fontsource/noto-sans';
 import '../styles/global.css';
-import { ClientRouter } from 'astro:transitions';
-import AppBackground from '../components/AppBackground.astro';
 import AppBar from '../components/AppBar.astro';
 import AppSidebar from '../components/AppSidebar.astro';
 ---
@@ -12,10 +10,9 @@ import AppSidebar from '../components/AppSidebar.astro';
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
 		<title>FFVIIEC</title>
-		<ClientRouter />
 	</head>
 	<body>
 		<div class="flex">
@@ -26,7 +23,6 @@ import AppSidebar from '../components/AppSidebar.astro';
 					<slot />
 				</div>
 			</main>
-			<AppBackground />
 		</div>
 	</body>
 </html>
@@ -39,5 +35,11 @@ import AppSidebar from '../components/AppSidebar.astro';
 		height: 100%;
 		font-family: 'Noto Sans', sans-serif;
 		color: white;
+	}
+
+	body {
+		background: url('../assets/background.jpg') no-repeat center/cover, #030d17;
+		backdrop-filter: blur(5px);
+		-webkit-backdrop-filter: blur(5px);
 	}
 </style>
