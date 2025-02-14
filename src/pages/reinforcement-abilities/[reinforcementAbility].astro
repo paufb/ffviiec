@@ -1,0 +1,38 @@
+---
+import { reinforcementAbilities } from '../../data/instances/reinforcementAbilities';
+import ReinforcementAbilityIcon from '../../components/ReinforcementAbilityIcon.astro';
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  return Object.values(reinforcementAbilities).map((reinforcementAbility) => ({
+    params: { reinforcementAbility: reinforcementAbility.id },
+    props: { reinforcementAbility }
+  }));
+}
+
+const { reinforcementAbility } = Astro.props;
+---
+
+<Layout>
+  <div class="flex flex-col gap-4 max-w-360 m-auto">
+    <div class="flex items-center gap-4">
+      <ReinforcementAbilityIcon reinforcementAbility={reinforcementAbility} width={48} height={48} />
+      {reinforcementAbility.name}
+    </div>
+    <hr class="h-0.5 border-none bg-[#2e435c]" />
+    {reinforcementAbility.reqPts.map((reqPt, index) => (
+      <div class="relative flex flex-col gap-2 p-2 bg-[#051629] border-2 border-[#193d62] rounded-md">
+        <div class="flex justify-between text-[#95c7ff]">
+          {`Lv. ${index + 1}`}
+          <div>
+            <span class="absolute right-24">Req. pts</span>
+            <span class="text-white">{reqPt}</span>
+            pts
+          </div>
+        </div>
+        <hr class="h-0.5 border-none bg-[#2e435c]" />
+        <div class="whitespace-pre-wrap">{reinforcementAbility.getEffect(index + 1)}</div>
+      </div>
+    ))}
+  </div>
+</Layout>
