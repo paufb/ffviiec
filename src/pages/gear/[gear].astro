@@ -38,13 +38,16 @@ const { selectedGear } = Astro.props;
               <span class="text-[#95c7ff] text-2xl">R. Abilities</span>
               <hr class="h-0.75 mt-1 mb-4 border-none bg-[#95c7ff]" />
               <div class="flex flex-col gap-2">
-                {selectedGear.reinforcementAbilities.map((reinforcementAbility) => (
+                {selectedGear.reinforcementAbilities.map((reinforcementAbility, index) => (
                   <a
                     href={`/reinforcement-abilities/${reinforcementAbility.id}`}
                     class="flex gap-2 border-2 border-[#193d62] outline-2 outline-[#193d62] -outline-offset-7 rounded-lg p-3 hover:bg-[#0b203e] hover:border-[#2164ab] hover:outline-[#2164ab] transform active:scale-95 transition duration-100"
                   >
                     <ReinforcementAbilityIcon reinforcementAbility={reinforcementAbility} width={40} height={40} />
                     {reinforcementAbility.name}
+                    <span class="absolute right-2 bottom-2">
+                      +{selectedGear.reinforcementAbilitiesPoints[index]} <span class="text-[#95c7ff]">pt</span>
+                    </span>
                   </a>
                 ))}
               </div>
