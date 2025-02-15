@@ -173,6 +173,16 @@ export const gear = {
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
+  "Dragon King Varvados": new Gear({
+    id: 2007,
+    name: 'Dragon King Varvados',
+    character: characters[2],
+    reinforcementAbilities: [
+      reinforcementAbilities["Reprieve"],
+      reinforcementAbilities["Dragon King's Mask"]
+    ],
+    reinforcementAbilitiesPoints: [15, 10]
+  }),
   "Seventh Heaven Bartender": new Gear({
     id: 3001,
     name: 'Seventh Heaven Bartender',
@@ -603,6 +613,16 @@ export const gear = {
     ],
     reinforcementAbilitiesPoints: [15, 10]
   }),
+  "Wutai's Idol": new Gear({
+    id: 6011,
+    name: 'Wutai\'s Idol',
+    character: characters[6],
+    reinforcementAbilities: [
+      reinforcementAbilities["Boost Water Pot."],
+      reinforcementAbilities["Waterblade Arcanum"]
+    ],
+    reinforcementAbilitiesPoints: [15, 10]
+  }),
   "Self-Professed Fortune-Teller": new Gear({
     id: 7001,
     name: 'Self-Professed Fortune-Teller',
@@ -840,6 +860,16 @@ export const gear = {
     reinforcementAbilities: [
       reinforcementAbilities["Boost Phys. Ability Pot."],
       reinforcementAbilities["Levinblade Arcanum"]
+    ],
+    reinforcementAbilitiesPoints: [10, 10]
+  }),
+  "SOLDIER: First Class Future Hero": new Gear({
+    id: 20002,
+    name: 'SOLDIER: First Class Future Hero',
+    character: characters[20],
+    reinforcementAbilities: [
+      reinforcementAbilities["Boost HP"],
+      reinforcementAbilities["Boost ATK"]
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),

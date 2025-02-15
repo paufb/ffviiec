@@ -681,5 +681,14 @@ export const reinforcementAbilities = {
       buffDebuffDurationPercent: [40],
       healPercent: [10]
     }
+  }),
+  "Dragon King's Mask": new ReinforcementAbility({
+    id: 54801,
+    name: 'Dragon King\'s Mask',
+    effect: 'Fire/Ice/Lightning/Earth/Water/Wind Resist. +{{percent}}%',
+    reqPts: [10],
+    levelValues: {
+      percent: [20],
+    }
   })
 }
