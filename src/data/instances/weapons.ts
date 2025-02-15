@@ -1367,6 +1367,38 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
       reinforcementAbilities["Enhanced Interruption (Veil)"]
     ]
   }),
+  "Fafnir Rifle": new Weapon({
+    id: 2035,
+    name: 'Fafnir Rifle',
+    character: characters[2],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: 10203501,
+      name: 'Dragon\'s Roar',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Phys. Non-elem.', 'All Enemies', 10)}\nAlso, ${apply('Provoke', null, 'Self', null, 60, 0)}\n${apply('Veil', undefined, 'Self', null, undefined, undefined)}\n${conditionHP('Self', '70', 'more')}, ${increase('PDEF', 'Mid', 'All Allies', null, undefined, undefined, undefined)}`,
+      valuesByOverboostLevel: {
+        damage: ['340', '390', '390', '390', '390', '390', '480', '480', '480', '480', '540'],
+        veilPot: ['5', '6', '6', '6', '6', '6', '8', '8', '8', '8', '10'],
+        veilDur: ['40', '45', '45', '45', '45', '45', '50', '50', '50', '50', '60'],
+        veilExt: ['8', '9', '9', '9', '9', '9', '10', '10', '10', '10', '12'],
+        pDefIncreaseDur: ['12', '16', '16', '16', '16', '16', '16', '16', '16', '16', '20'],
+        pDefIncreaseExt: ['4', '5', '5', '5', '5', '5', '5', '5', '5', '5', '6'],
+        pDefIncreaseMaxPot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 257,
+      mAtk: 233,
+      heal: 165
+    },
+    reinforcementAbilities: [
+      reinforcementAbilities["Boost HP"],
+      reinforcementAbilities["Boost PDEF"]
+    ]
+  }),
   "Leather Gloves": new Weapon({
     id: 3001,
     name: 'Leather Gloves',
@@ -2113,6 +2145,34 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
     reinforcementAbilities: [
       reinforcementAbilities["Boost Ability Pot."],
       reinforcementAbilities["Attack Boost"]
+    ]
+  }),
+  "Járngreipr": new Weapon({
+    id: 3043,
+    name: 'Járngreipr',
+    character: characters[3],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: null,
+      name: 'Armora Breach Surge A',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Mag. Non-elem.', 'All Enemies', 10)}\nAlso, ${decrease('PDEF', 'Low', 'All Enemies', null, undefined, undefined, 'Mid')}`,
+      valuesByOverboostLevel: {
+        damage: ['180', '210', '210', '210', '210', '210', '240', '240', '240', '240', '250'],
+        pDefDecreaseDur: ['20', '25', '25', '25', '25', '25', '30', '30', '30', '30', '35'],
+        pDefDecreaseExt: ['5', '6', '6', '6', '6', '6', '7', '7', '7', '7', '8'],
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 214,
+      mAtk: 220,
+      heal: 160
+    },
+    reinforcementAbilities: [
+      reinforcementAbilities["Boost HP"],
+      reinforcementAbilities["Boost Phys. Ability Pot."]
     ]
   }),
   "Guard Stick": new Weapon({
@@ -4165,6 +4225,35 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
     reinforcementAbilities: [
       reinforcementAbilities["Boost HP"],
       reinforcementAbilities["Boost Fire Pot."]
+    ]
+  }),
+  "Bird of Prey": new Weapon({
+    id: 6033,
+    name: 'Bird of Prey',
+    character: characters[6],
+    element: 'Water',
+    commandAbility: new CommandAbility({
+      id: 10603301,
+      name: 'Raging Torrent',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Phys. Water', 'Single Enemy', null)}\nAlso, ${apply('Exploit Weakness', undefined, 'Self', null, undefined, undefined)}`,
+      valuesByOverboostLevel: {
+        damage: ['520', '620', '620', '620', '620', '620', '780', '780', '780', '780', '940'],
+        exploitWeaknessPot: ['20', '20', '20', '20', '20', '20', '30', '30', '30', '30', '30'],
+        exploitWeaknessDur: ['30', '35', '35', '35', '35', '35', '35', '35', '35', '35', '45'],
+        exploitWeaknessExt: ['6', '7', '7', '7', '7', '7', '7', '7', '7', '7', '9']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 288,
+      mAtk: 212,
+      heal: 158
+    },
+    reinforcementAbilities: [
+      reinforcementAbilities["Boost PATK"],
+      reinforcementAbilities["Boost Phys. Ability Pot."]
     ]
   }),
   "Yellow Megaphone": new Weapon({
@@ -7006,6 +7095,34 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
     reinforcementAbilities: [
       reinforcementAbilities["Boost MATK"],
       reinforcementAbilities["Boost Fire Pot."]
+    ]
+  }),
+  "Humus Saber": new Weapon({
+    id: 49022,
+    name: 'Humus Saber',
+    character: characters[49],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: 14902201,
+      name: 'Deaerora Surge A',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Mag. Non-elem.', 'All Enemies', 10)}\nAlso, ${decrease('Wind Resist.', 'Low', 'All Enemies', null, undefined, undefined, 'Mid')}`,
+      valuesByOverboostLevel: {
+        damage: ['170', '200', '200', '200', '200', '200', '230', '230', '230', '230', '240'],
+        windResistDecreaseDur: ['20', '25', '25', '25', '25', '25', '30', '30', '30', '30', '35'],
+        windResistDecreaseExt: ['5', '6', '6', '6', '6', '6', '7', '7', '7', '7', '8'],
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 215,
+      mAtk: 220,
+      heal: 158
+    },
+    reinforcementAbilities: [
+      reinforcementAbilities["Boost HP"],
+      reinforcementAbilities["Boost Wind Pot."]
     ]
   }),
   "Personal Style": new Weapon({
