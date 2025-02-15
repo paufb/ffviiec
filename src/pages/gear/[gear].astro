@@ -18,14 +18,14 @@ const { selectedGear } = Astro.props;
 <Layout>
   <div class="flex flex-col gap-4 max-w-360 m-auto">
     <div class="flex flex-wrap justify-center gap-5">
-      <div class="flex flex-1 min-w-min text-lg p-3 bg-[#051629] rounded-md border-3 border-[#193d62]">
+      <div class="flex flex-1 basis-80 text-lg p-3 bg-[#051629] rounded-md border-3 border-[#193d62]">
         <div class="flex flex-1 flex-col gap-2">
           <div class="flex flex-col gap-2">
             <div class="flex">
               <CharacterDiamond character={selectedGear.character} class="w-20 h-auto" />
               <div class="flex flex-col justify-center">
                 {selectedGear.name}
-                <div id="overboost-stars" class="flex flex-nowrap">
+                <div id="overboost-stars" class="flex flex-nowrap min-w-min">
                   {[...Array(5)].map((_, i) => (
                     <svg width="24px" height="24px" fill="#d39e24" viewBox="0 0 512 512" style="filter: 'drop-shadow(2px 0 0 black);">
                       <polygon points="512,207.9 315.1,207.9 256,11 196.9,207.9 0,207.9 157.5,316.2 98.5,503.3 256,404.8 413.5,503.3 354.5,316.2 "></polygon>
@@ -41,7 +41,7 @@ const { selectedGear } = Astro.props;
                 {selectedGear.reinforcementAbilities.map((reinforcementAbility) => (
                   <a
                     href={`/reinforcement-abilities/${reinforcementAbility.id}`}
-                    class="flex gap-2 border-2 border-[#193d62] outline-2 outline-[#193d62] -outline-offset-7 rounded-lg p-3 whitespace-nowrap hover:bg-[#0b203e] hover:border-[#2164ab] hover:outline-[#2164ab] transform active:scale-95 transition duration-100"
+                    class="flex gap-2 border-2 border-[#193d62] outline-2 outline-[#193d62] -outline-offset-7 rounded-lg p-3 hover:bg-[#0b203e] hover:border-[#2164ab] hover:outline-[#2164ab] transform active:scale-95 transition duration-100"
                   >
                     <ReinforcementAbilityIcon reinforcementAbility={reinforcementAbility} width={40} height={40} />
                     {reinforcementAbility.name}

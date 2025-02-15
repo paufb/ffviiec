@@ -14,7 +14,7 @@ import ReinforcementAbilityIcon from '../../components/ReinforcementAbilityIcon.
             <GearImage
               gear={gear}
               class="w-24 h-24"
-              style={{ transform: 'scale(2) translateY(23%)' }}
+              style={{ transform: gear.character.name === 'Red XIII' ? 'scale(2) translate(8%, -5%)' : 'scale(2) translateY(23%)' }}
               hoverable
               clickable
             />
