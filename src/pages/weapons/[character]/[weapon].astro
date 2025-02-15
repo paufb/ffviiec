@@ -35,7 +35,7 @@ const container = 'p-3 bg-[#051629] rounded-md border-3 border-[#193d62]';
               <CharacterDiamond character={weapon.character} class="w-20 h-auto" />
               <div class="flex flex-col">
                 {weapon.name}
-                <div id="overboost-stars" class="flex flex-nowrap">
+                <div class="overboost-stars flex flex-nowrap">
                   {[...Array(5)].map((_, i) => (
                     <svg width="24px" height="24px" fill="#e3cdf9" viewBox="0 0 512 512" style="filter: 'drop-shadow(2px 0 0 black);">
                       <polygon points="512,207.9 315.1,207.9 256,11 196.9,207.9 0,207.9 157.5,316.2 98.5,503.3 256,404.8 413.5,503.3 354.5,316.2 "></polygon>
@@ -84,6 +84,20 @@ const container = 'p-3 bg-[#051629] rounded-md border-3 border-[#193d62]';
               <path d="M10.477 0h-8.977l12.024 12-12.024 12h8.977l12.023-12z"></path>
             </svg>
           </button>
+        </div>
+        <div>
+          <div class="flex flex-wrap items-center gap-x-2">
+            *Stats shown at Lv. 120 and
+            <div class="overboost-stars flex flex-nowrap">
+              {[...Array(5)].map((_, i) => (
+                <svg width="24px" height="24px" fill="#e3cdf9" viewBox="0 0 512 512" style="filter: 'drop-shadow(2px 0 0 black);">
+                  <polygon points="512,207.9 315.1,207.9 256,11 196.9,207.9 0,207.9 157.5,316.2 98.5,503.3 256,404.8 413.5,503.3 354.5,316.2 "></polygon>
+                </svg>
+              ))}
+            </div>
+            rarity.
+          </div>
+          <div>*Shown as a main weapon.</div>
         </div>
       </div>
       <div class={`${container} flex flex-1 min-w-68 text-lg`}>
@@ -194,6 +208,6 @@ const container = 'p-3 bg-[#051629] rounded-md border-3 border-[#193d62]';
         <polygon points="512,207.9 315.1,207.9 256,11 196.9,207.9 0,207.9 157.5,316.2 98.5,503.3 256,404.8 413.5,503.3 354.5,316.2 "/>
       </svg>
     `);
-    document.querySelector('#overboost-stars').innerHTML = svgArray.join('');
+    document.querySelectorAll('.overboost-stars').forEach((element) => element.innerHTML = svgArray.join(''));
   }
 </script>
