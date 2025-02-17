@@ -1,21 +1,13 @@
 ---
 import { Image } from 'astro:assets';
+import { routes } from '../data/instances/routes';
 import Layout from '../layouts/Layout.astro';
 import ffviiec from '../assets/ffviiec.png';
 import DiamondAnchor from '../components/DiamondAnchor.astro';
-import weaponsIcon from '../assets/_ui/icon/common/enhance.png';
-import gearIcon from '../assets/_ui/icon/common/wear_battle.png';
-import materiaIcon from '../assets/_ui/icon/common/materia.png';
-
-const routes = [
-  { path: '/weapons', name: 'Weapons', imgSrc: weaponsIcon, imgAlt: 'Weapons', isDisabled: false },
-  { path: '/gear', name: 'Gear', imgSrc: gearIcon, imgAlt: 'Gear', isDisabled: false },
-  { path: '/materia', name: 'Materia', imgSrc: materiaIcon, imgAlt: 'Materia', isDisabled: true }
-];
 ---
 
 <Layout>
-	<div class="flex flex-1 flex-col gap-[1.5rem] items-center justify-center overflow-hidden">
+	<div class="flex flex-1 flex-col gap-[1.5rem] items-center justify-center overflow-clip">
 		<Image
 		  src={ffviiec}
 			alt="FINAL FANTASY VII EVER CRISIS"
@@ -30,8 +22,8 @@ const routes = [
 			© SQUARE ENIX Powered by Applibot, Inc.
 		</h1>
 		<div class="flex flex-wrap justify-center gap-5 pb-10 animate-fadeinfromtop">
-			{routes.map((route) => (
-				<DiamondAnchor href={route.path} imgSrc={route.imgSrc} imgAlt={route.imgAlt} disabled={route.isDisabled} />
+			{Object.values(routes).map((route) => (
+				<DiamondAnchor href={route.path} imgSrc={route.imgMetadata} imgAlt={route.title} />
 			))}
 		</div>
 	</div>
