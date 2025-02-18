@@ -1,0 +1,37 @@
+---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+import { materia } from '../../data/instances/materia';
+import Layout from '../../layouts/Layout.astro';
+import AbilityIcons from '../../components/AbilityIcons.astro';
+import ATBBar from '../../components/ATBBar.astro';
+import MateriaImage from '../../components/MateriaImage.astro';
+---
+
+<Layout>
+  <div class="flex flex-col gap-4 max-w-360 m-auto">
+    <div class="grid grid-cols-[repeat(auto-fit,minmax(min(300px,100%),1fr))] gap-4">
+      {Object.values(materia).map((materia) => (
+        <div class="flex gap-2 min-w-0">
+          <a href={`/materia/${materia.id}`}>
+            <MateriaImage
+              materia={materia}
+              size="normal"
+              width={96}
+              height={96}
+              hoverable
+              clickable
+            />
+          </a>
+          <div class="flex flex-col flex-1 py-1.5 overflow-hidden">
+            <span class="whitespace-nowrap">{materia.name}</span>
+            <div class="flex flex-col gap-1">
+              <AbilityIcons commandAbility={materia.commandAbility} element={materia.element} />
+              <ATBBar cost={materia.commandAbility.atbCost} />
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</Layout>
