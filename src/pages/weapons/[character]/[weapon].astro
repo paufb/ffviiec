@@ -109,7 +109,7 @@ const container = 'p-3 bg-[#051629] rounded-md border-3 border-[#193d62]';
               <div class="flex gap-2">
                 <AbilityIcons commandAbility={weapon.commandAbility} element={weapon.element} />
                 <div class="flex flex-col flex-1">
-                  {weapon.commandAbility.name}
+                  <span id="c-ability-name">{weapon.commandAbility.name}</span>
                   <div class="flex justify-end">
                     <ATBBar cost={weapon.commandAbility.atbCost} />
                   </div>
@@ -156,7 +156,6 @@ const container = 'p-3 bg-[#051629] rounded-md border-3 border-[#193d62]';
 }}>
   document.querySelector('#previous-tier-button').addEventListener('click', () => changeTier('decrease'));
   document.querySelector('#next-tier-button').addEventListener('click', () => changeTier('increase'));
-
   const displayableOverboostLevels = [0, 1, 6, 10];
   let currentOverboostLevel = 10;
   const labels = {
@@ -170,13 +169,13 @@ const container = 'p-3 bg-[#051629] rounded-md border-3 border-[#193d62]';
     const currentIndex = displayableOverboostLevels.indexOf(currentOverboostLevel);
     const nextIndex = (currentIndex + offset + displayableOverboostLevels.length) % displayableOverboostLevels.length;
     currentOverboostLevel = displayableOverboostLevels[nextIndex];
-
     document.querySelector('#c-ability-tier-label').innerHTML = labels[currentOverboostLevel];
     document.querySelector('#c-ability-description').innerHTML = cAbilityDescriptions[currentOverboostLevel];
     document.querySelector('#weapon-patk').innerHTML = stats[currentOverboostLevel].pAtk;
     document.querySelector('#weapon-matk').innerHTML = stats[currentOverboostLevel].mAtk;
     document.querySelector('#weapon-heal').innerHTML = stats[currentOverboostLevel].heal;
-
+    const cAbilityName = document.querySelector('#c-ability-name');
+    cAbilityName.innerHTML = cAbilityName.textContent.replace(/\++$/, '') + (currentOverboostLevel === 6 ? '+' : currentOverboostLevel === 10 ? '++' : '');
     const GOLD = '#d39e24';
     const RED = '#ec373a';
     const PURPLE = '#e3cdf9';
@@ -197,17 +196,7 @@ const container = 'p-3 bg-[#051629] rounded-md border-3 border-[#193d62]';
         starColors.push(RED);
       }
     }
-    const svgArray = [...Array(NUMBER_OF_STARS)].map((_, i) => `
-      <svg
-        width="24px"
-        height="24px"
-        fill="${starColors[i]}"
-        viewBox="0 0 512 512"
-        style="filter: 'drop-shadow(2px 0 0 black);"
-      >
-        <polygon points="512,207.9 315.1,207.9 256,11 196.9,207.9 0,207.9 157.5,316.2 98.5,503.3 256,404.8 413.5,503.3 354.5,316.2 "/>
-      </svg>
-    `);
+    const svgArray = [...Array(NUMBER_OF_STARS)].map((_, i) => `<svg width="24px" height="24px" fill="${starColors[i]}" viewBox="0 0 512 512" style="filter: 'drop-shadow(2px 0 0 black);"><polygon points="512,207.9 315.1,207.9 256,11 196.9,207.9 0,207.9 157.5,316.2 98.5,503.3 256,404.8 413.5,503.3 354.5,316.2 "/></svg>`);
     document.querySelectorAll('.overboost-stars').forEach((element) => element.innerHTML = svgArray.join(''));
   }
 </script>
