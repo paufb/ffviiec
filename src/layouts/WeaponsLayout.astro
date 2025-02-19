@@ -5,13 +5,14 @@ import { characters } from '../data/instances/characters';
 import Layout from './Layout.astro';
 
 interface Props {
+  title?: string;
   selectedCharacterPath?: string;
 }
 
-const { selectedCharacterPath } = Astro.props;
+const { title, selectedCharacterPath } = Astro.props;
 ---
 
-<Layout>
+<Layout title={title}>
   <div class="flex flex-col gap-4 max-w-360 m-auto">
     <div class="flex flex-wrap justify-center gap-1">
       {Object.values(characters).map((character) => (
