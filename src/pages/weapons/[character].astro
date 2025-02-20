@@ -22,7 +22,7 @@ const filteredWeapons = Object.values(weapons).filter((weapon) => weapon.charact
   <div class="grid grid-cols-[repeat(auto-fit,minmax(min(300px,100%),1fr))] gap-4">
     {filteredWeapons.map((weapon) => (
       <div class="flex gap-2 min-w-0">
-        <a href={`/weapons/${weapon.character.path}/${weapon.id}`}>
+        <a href={`/weapons/${weapon.character.path}/${weapon.id || weapon.name}`}>
           <WeaponImage
             weapon={weapon}
             size="normal"

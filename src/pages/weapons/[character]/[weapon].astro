@@ -16,7 +16,7 @@ import healIcon from '../../../assets/_ui/icon/parameter/parameter_heal.png';
 
 export async function getStaticPaths() {
   return Object.values(weapons).map((weapon) => ({
-    params: { character: weapon.character.path, weapon: weapon.id },
+    params: { character: weapon.character.path, weapon: weapon.id || weapon.name },
     props: { weapon }
   }));
 }
