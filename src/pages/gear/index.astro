@@ -10,11 +10,15 @@ import ReinforcementAbilityIcon from '../../components/ReinforcementAbilityIcon.
     <div class="grid grid-cols-[repeat(auto-fit,minmax(min(300px,100%),1fr))] gap-4">
       {Object.values(gear).map((gear) => (
         <div class="flex gap-2 min-w-0">
-          <a href={`/gear/${gear.id}`}>
+          <a href={`/gear/${gear.id || gear.name}`}>
             <GearImage
               gear={gear}
               class="w-24 h-24"
-              style={{ transform: gear.character.name === 'Red XIII' ? 'scale(2) translate(8%, -5%)' : 'scale(2) translateY(23%)' }}
+              style={{
+                transform: !gear.id ? undefined :
+                           gear.character.name === 'Red XIII' ? 'scale(2) translate(8%, -5%)' :
+                           'scale(2) translateY(23%)'
+              }}
               hoverable
               clickable
             />

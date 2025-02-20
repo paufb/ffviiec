@@ -7,7 +7,7 @@ import CharacterDiamond from '../../components/CharacterDiamond.astro';
 
 export async function getStaticPaths() {
   return Object.values(gear).map((gear) => ({
-    params: { gear: gear.id },
+    params: { gear: gear.id || gear.name },
     props: { selectedGear: gear }
   }));
 }
