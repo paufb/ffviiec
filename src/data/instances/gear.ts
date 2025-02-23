@@ -133,6 +133,16 @@ export const gear = {
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
+  "Mystic Coat": new Gear({
+    id: 1006,
+    name: 'Mystic Coat',
+    character: characters[1],
+    reinforcementAbilities: [
+      reinforcementAbilities["Physical & Magic Ward"],
+      reinforcementAbilities["Buff/Debuff Extension+ (Stats/Pot./Res.)"]
+    ],
+    reinforcementAbilitiesPoints: [10, 10]
+  }),
   "Avalanche Leader": new Gear({
     id: 2001,
     name: 'Avalanche Leader',
