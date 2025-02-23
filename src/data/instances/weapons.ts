@@ -743,7 +743,7 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
     element: 'Non-elemental',
     commandAbility: new CommandAbility({
       id: 10104201,
-      name: 'Armora Breach Surge A++',
+      name: 'Armora Breach Surge A',
       atbCost: 4,
       sigil: null,
       description: `${damage(undefined, 'Mag. Non-elem.', 'All Enemies', 10)}\nAlso, ${decrease('PDEF', 'Low', 'All Enemies', null, undefined, undefined, 'Mid')}`,
@@ -762,6 +762,40 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
     reinforcementAbilities: [
       reinforcementAbilities["Boost HP"],
       reinforcementAbilities["Boost Phys. Ability Pot."]
+    ]
+  }),
+  "Mystic Sword": new Weapon({
+    id: 1022,
+    name: 'Mystic Sword',
+    character: characters[1],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: 10102201,
+      name: 'Forcestream',
+      atbCost: 3,
+      sigil: null,
+      description: `${damage(undefined, 'Mag. Non-elem.', 'Single Enemy', 10)}\nAlso, ${decrease('MATK', undefined, 'Single Enemy', null, undefined, undefined, undefined)}\n${conditionHP('Self', '70', 'more')}, ${decrease('PATK', undefined, 'Single Enemy', null, undefined, undefined, undefined)}`,
+      valuesByOverboostLevel: {
+        damage: ['260', '300', '300', '300', '300', '300', '360', '360', '360', '360', '420'],
+        mAtkDecreasePot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        mAtkDecreaseDur: ['16', '18', '18', '18', '18', '18', '20', '20', '20', '20', '24'],
+        mAtkDecreaseExt: ['5', '6', '6', '6', '6', '6', '6', '6', '6', '6', '8'],
+        mAtkDecreaseMaxPot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        pAtkDecreasePot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        pAtkDecreaseDur: ['16', '18', '18', '18', '18', '18', '20', '20', '20', '20', '24'],
+        pAtkDecreaseExt: ['5', '6', '6', '6', '6', '6', '6', '6', '6', '6', '8'],
+        pAtkDecreaseMaxPot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 228,
+      mAtk: 277,
+      heal: 153
+    },
+    reinforcementAbilities: [
+      reinforcementAbilities["Boost ATK"],
+      reinforcementAbilities["Boost Ability Pot."]
     ]
   }),
   "Gatling Gun": new Weapon({
@@ -3600,6 +3634,40 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
     reinforcementAbilities: [
       reinforcementAbilities["Boost HP"],
       reinforcementAbilities["Boost Mag. Ability Pot."]
+    ]
+  }),
+  "Brilliant Collar": new Weapon({
+    id: 5038,
+    name: 'Brilliant Collar',
+    character: characters[5],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: 10503801,
+      name: 'Brilliant Sault',
+      atbCost: 4,
+      sigil: null,
+      description: `${increase('MATK', undefined, 'All Allies', null, undefined, undefined, undefined)}\nAlso, ${conditionHP('Self', '70', 'more')}, ${increase('Wind Damage', undefined, 'All Allies', null, undefined, undefined, undefined)}\n${heal(undefined, 'Mag.', 'All Allies')}`,
+      valuesByOverboostLevel: {
+        mAtkIncreasePot: ['Low', 'Low', 'Low', 'Low', 'Low', 'Low', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid'],
+        mAtkIncreaseDur: ['16', '20', '20', '20', '20', '20', '20', '20', '20', '20', '25'],
+        mAtkIncreaseExt: ['5', '6', '6', '6', '6', '6', '6', '6', '6', '6', '8'],
+        mAtkIncreaseMaxPot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        windDamageIncreasePot: ['Low', 'Low', 'Low', 'Low', 'Low', 'Low', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid'],
+        windDamageIncreaseDur: ['16', '20', '20', '20', '20', '20', '20', '20', '20', '20', '25'],
+        windDamageIncreaseExt: ['5', '6', '6', '6', '6', '6', '6', '6', '6', '6', '8'],
+        windDamageIncreaseMaxPot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        heal: ['5', '6', '6', '6', '6', '6', '7', '7', '7', '7', '7']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 193,
+      mAtk: 236,
+      heal: 215
+    },
+    reinforcementAbilities: [
+      reinforcementAbilities["Boost HP"],
+      reinforcementAbilities["Boost HEAL"]
     ]
   }),
   "4-Point Shuriken": new Weapon({
