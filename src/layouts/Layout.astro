@@ -1,4 +1,5 @@
 ---
+import type { routes } from '../data/instances/routes';
 import '@fontsource/noto-sans';
 import '../styles/global.css';
 import AppBar from '../components/AppBar.astro';
@@ -6,9 +7,10 @@ import AppSidebar from '../components/AppSidebar.astro';
 
 interface Props {
 	title?: string;
+	highlightedRoute?: keyof typeof routes;
 }
 
-const { title } = Astro.props;
+const { title, highlightedRoute } = Astro.props;
 ---
 
 <!doctype html>
@@ -22,7 +24,7 @@ const { title } = Astro.props;
 	</head>
 	<body>
 		<div class="flex">
-			<AppSidebar />
+			<AppSidebar highlightedRoute={highlightedRoute} />
 			<main class="flex flex-col flex-1">
 				<AppBar />
 				<div class="p-2">

@@ -1,5 +1,11 @@
 ---
 import { home, routes } from '../data/instances/routes';
+
+interface Props {
+  highlightedRoute?: keyof typeof routes;
+}
+
+const { highlightedRoute } = Astro.props;
 ---
 
 <nav class="sticky top-0 z-[99] flex flex-col flex-shrink-0 gap-2 h-screen p-[8px_0_8px_8px]">
@@ -10,12 +16,12 @@ import { home, routes } from '../data/instances/routes';
     />
   </a>
   <ul class="bg-[#23232380] rounded-md h-full overflow-hidden">
-    {Object.values(routes).map((route) => (
+    {Object.entries(routes).map(([routeKey, route]) => (
       <li>
         <a
           href={route.path}
           class="flex items-center justify-center px-2 py-3 hover:bg-[#33333380] transform active:scale-95 transition duration-100"
-          style={{ background: Astro.url.toString().endsWith(route.path) ? 'radial-gradient(circle at right,rgb(11,64,136) 0%,transparent 100%)' : undefined }}
+          style={{ background: highlightedRoute === routeKey ? 'radial-gradient(circle at right,rgb(11,64,136) 0%,transparent 100%)' : undefined }}
         >
           <img
             src={`data:image/png;base64,${route.img32x32base64}`}

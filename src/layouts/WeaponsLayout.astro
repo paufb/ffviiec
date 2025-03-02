@@ -14,7 +14,10 @@ const { selectedCharacter, isIndexPage } = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>('../assets/character_btn/*.png');
 ---
 
-<Layout title={isIndexPage ? 'Weapons - FFVIIEC' : `${selectedCharacter.name} - Weapons - FFVIIEC`}>
+<Layout
+  title={isIndexPage ? 'Weapons - FFVIIEC' : `${selectedCharacter.name} - Weapons - FFVIIEC`}
+  highlightedRoute="Weapons"
+>
   <div class="flex flex-col gap-4 max-w-360 m-auto">
     <div class="flex flex-wrap justify-center gap-1">
       {Object.values(characters).map((character) => (
