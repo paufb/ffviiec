@@ -1,5 +1,6 @@
 ---
+import { characters } from '../../data/instances/characters';
 import CharacterWeaponsPage from './[character].astro';
 ---
 
-<CharacterWeaponsPage selectedCharacterPath="cloud" />
+<CharacterWeaponsPage selectedCharacter={characters[1]} isIndexPage />

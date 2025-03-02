@@ -1,4 +1,5 @@
 ---
+import type { Character } from '../../data/types';
 import { characters } from '../../data/instances/characters';
 import { weapons } from '../../data/instances/weapons';
 import WeaponsLayout from '../../layouts/WeaponsLayout.astro';
@@ -10,15 +11,20 @@ import ATBBar from '../../components/ATBBar.astro';
 export async function getStaticPaths() {
   return Object.values(characters).map((character) => ({
     params: { character: character.path },
-    props: { selectedCharacterPath: character.path }
+    props: { selectedCharacter: character }
   }));
 }
 
-const { selectedCharacterPath } = Astro.props;
-const filteredWeapons = Object.values(weapons).filter((weapon) => weapon.character.path === selectedCharacterPath);
+interface Props {
+  selectedCharacter: Character;
+  isIndexPage?: boolean;
+}
+
+const { selectedCharacter, isIndexPage = false } = Astro.props;
+const filteredWeapons = Object.values(weapons).filter((weapon) => weapon.character.path === selectedCharacter.path);
 ---
 
-<WeaponsLayout title="Weapons - FFVIIEC" selectedCharacterPath={selectedCharacterPath}>
+<WeaponsLayout selectedCharacter={selectedCharacter} isIndexPage={isIndexPage}>
   <div class="grid grid-cols-[repeat(auto-fit,minmax(min(300px,100%),1fr))] gap-4">
     {filteredWeapons.map((weapon) => (
       <div class="flex gap-2 min-w-0">
