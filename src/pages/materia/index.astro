@@ -1,6 +1,4 @@
 ---
-import type { ImageMetadata } from 'astro';
-import { Image } from 'astro:assets';
 import { materia } from '../../data/instances/materia';
 import Layout from '../../layouts/Layout.astro';
 import AbilityIcons from '../../components/AbilityIcons.astro';
@@ -13,7 +11,7 @@ import MateriaImage from '../../components/MateriaImage.astro';
     <div class="grid grid-cols-[repeat(auto-fit,minmax(min(300px,100%),1fr))] gap-4">
       {Object.values(materia).map((materia) => (
         <div class="flex gap-2 min-w-0">
-          <a href={`/materia/${materia.id}`}>
+          <a href={`/materia/${materia.id}/${materia.stars}`}>
             <MateriaImage
               materia={materia}
               size="normal"
