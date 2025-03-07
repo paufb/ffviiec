@@ -640,7 +640,7 @@ export const reinforcementAbilities = {
     effect: 'All Allies\' Buff/Debuff (Stats/Pot./Res.) Effect Duration +{{percent}}%',
     reqPts: [1, 5],
     levelValues: {
-      percent: [5, 20],
+      percent: [5, 20]
     }
   }),
   "Cosmic Protection": new ReinforcementAbility({
@@ -688,7 +688,7 @@ export const reinforcementAbilities = {
     effect: 'Fire/Ice/Lightning/Earth/Water/Wind Resist. +{{percent}}%',
     reqPts: [10],
     levelValues: {
-      percent: [20],
+      percent: [20]
     }
   }),
   "Stream Phase ATB Boost": new ReinforcementAbility({
@@ -697,7 +697,16 @@ export const reinforcementAbilities = {
     effect: 'All Allies\' ATB +{{flat}} when stream phase is activated',
     reqPts: [1, 5, 15, 25],
     levelValues: {
-      flat: [1, 1.5, 2, 3],
+      flat: [1, 1.5, 2, 3]
     }
   }),
+  "Belt of the Worthy": new ReinforcementAbility({
+    id: 55001,
+    name: 'Belt of the Worthy',
+    effect: 'Fire/Ice/Lightning/Earth/Water/Wind Ability Dmg. +{{flat}}%',
+    reqPts: [10],
+    levelValues: {
+      flat: [30]
+    }
+  })
 }

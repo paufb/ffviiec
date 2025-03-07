@@ -993,6 +993,16 @@ export const gear = {
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
+  "Cape of the Worthy": new Gear({
+    id: 49012,
+    name: 'Cape of the Worthy',
+    character: characters[49],
+    reinforcementAbilities: [
+      reinforcementAbilities["Boost ATK (All Allies)"],
+      reinforcementAbilities["Belt of the Worthy"]
+    ],
+    reinforcementAbilitiesPoints: [10, 10]
+  }),
   "Unprecedented P0 SOLDIER": new Gear({
     id: 50001,
     name: 'Unprecedented P0 SOLDIER',
