@@ -15,7 +15,7 @@ const characterDiamonds = import.meta.glob<{ default: ImageMetadata }>('../asset
 ---
 
 <Image
-  class={`aspect-square ${className}`}
+  class={`animate-imageload aspect-square ${className}`}
   src={characterDiamonds[`../assets/character_diamond/${character.id}.png`]()}
   alt={character.name}
   width={width}
