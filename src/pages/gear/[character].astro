@@ -1,0 +1,59 @@
+---
+import type { Character } from '../../data/types';
+import { characters } from '../../data/instances/characters';
+import { gear } from '../../data/instances/gear';
+import Layout from '../../layouts/Layout.astro';
+import GearImage from '../../components/GearImage.astro';
+import ReinforcementAbilityIcon from '../../components/ReinforcementAbilityIcon.astro';
+import GearLayout from '../../layouts/GearLayout.astro';
+
+export async function getStaticPaths() {
+  return Object.values(characters).map((character) => ({
+    params: { character: character.path },
+    props: { selectedCharacter: character }
+  }));
+}
+
+interface Props {
+  selectedCharacter: Character;
+  isIndexPage?: boolean;
+}
+
+const { selectedCharacter, isIndexPage = false } = Astro.props;
+const filteredGear = Object.values(gear).filter((gear) => gear.character.path === selectedCharacter.path);
+---
+
+<GearLayout selectedCharacter={selectedCharacter} isIndexPage={isIndexPage}>
+    <div class="grid grid-cols-[repeat(auto-fit,minmax(min(300px,100%),1fr))] gap-4">
+      {Object.values(filteredGear).map((gear) => (
+        <div class="flex gap-2 min-w-0">
+          <a href={`/gear/${gear.character.path}/${gear.id || gear.name}`}>
+            <GearImage
+              gear={gear}
+              class="w-24 h-24"
+              style={{
+                transform: !gear.id ? undefined :
+                           gear.character.name === 'Red XIII' ? 'scale(2) translate(8%, -5%)' :
+                           'scale(2) translateY(23%)'
+              }}
+              hoverable
+              clickable
+            />
+          </a>
+          <div class="flex flex-col flex-1 py-1.5 overflow-hidden">
+            <span class="whitespace-nowrap">{gear.name}</span>
+            <div class="flex flex-1 gap-2 justify-between">
+              <div class="flex flex-col gap-0.5 justify-end overflow-x-scroll">
+                {gear.reinforcementAbilities.map((reinforcementAbility) => (
+                  <div class="flex gap-2 items-center">
+                    <ReinforcementAbilityIcon reinforcementAbility={reinforcementAbility} width={24} height={24} />
+                    <span class="text-sm whitespace-nowrap">{reinforcementAbility.name}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+</GearLayout>
