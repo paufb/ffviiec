@@ -690,5 +690,14 @@ export const reinforcementAbilities = {
     levelValues: {
       percent: [20],
     }
-  })
+  }),
+  "Stream Phase ATB Boost": new ReinforcementAbility({
+    id: 54901,
+    name: 'Stream Phase ATB Boost',
+    effect: 'All Allies\' ATB +{{flat}} when stream phase is activated',
+    reqPts: [1, 5, 15, 25],
+    levelValues: {
+      flat: [1, 1.5, 2, 3],
+    }
+  }),
 }

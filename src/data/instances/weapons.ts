@@ -798,6 +798,33 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
       reinforcementAbilities["Boost Ability Pot."]
     ]
   }),
+  "Umbral Blade": new Weapon({
+    id: 1046,
+    name: 'Umbral Blade',
+    character: characters[1],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: 10104601,
+      name: 'Scratch',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Phys. Non-elem.', 'All Enemies', 10)}\nAlso, ${conditionHP('Self', '50', 'more')}, ${additionalDamage('Non-elem.', 'Phys.', 'All Enemies')}`,
+      valuesByOverboostLevel: {
+        damage: ['310', '360', '360', '360', '360', '360', '420', '420', '420', '420', '430'],
+        additionalDamage: ['5000', '6000', '6000', '6000', '6000', '6000', '8000', '8000', '8000', '8000', '10000']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 239,
+      mAtk: 201,
+      heal: 154
+    },
+    reinforcementAbilities: [
+      reinforcementAbilities["Boost HP"],
+      reinforcementAbilities["Boost Phys. Ability Pot."]
+    ]
+  }),
   "Gatling Gun": new Weapon({
     id: 2001,
     name: 'Gatling Gun',
@@ -4324,6 +4351,35 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
       reinforcementAbilities["Boost Phys. Ability Pot."]
     ]
   }),
+  "Risanautr": new Weapon({
+    id: 6034,
+    name: 'Risanautr',
+    character: characters[6],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: 10603401,
+      name: 'Dequakera Surge',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Mag. Non-elem.', 'Single Enemy', 10)}\nAlso, ${decrease('Earth Resist.', undefined, 'Single Enemy', null, undefined, undefined, 'Mid')}`,
+      valuesByOverboostLevel: {
+        damage: ['260', '300', '300', '300', '300', '300', '350', '350', '350', '350', '360'],
+        earthResistDecreasePot: ['Low', 'Low', 'Low', 'Low', 'Low', 'Low', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid'],
+        earthResistDecreaseDur: ['20', '22', '22', '22', '22', '22', '25', '25', '25', '25', '28'],
+        earthResistDecreaseExt: ['6', '7', '7', '7', '7', '7', '7', '7', '7', '7', '9']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 201,
+      mAtk: 225,
+      heal: 167
+    },
+    reinforcementAbilities: [
+      reinforcementAbilities["Boost MATK"],
+      reinforcementAbilities["Boost Earth Pot."]
+    ]
+  }),
   "Yellow Megaphone": new Weapon({
     id: 7001,
     name: 'Yellow Megaphone',
@@ -5455,6 +5511,27 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
     reinforcementAbilities: [
       reinforcementAbilities["Boost MATK"],
       reinforcementAbilities["Boost Earth Pot."]
+    ]
+  }),
+  "Death Penalty": new UltimateWeapon({
+    id: 8025,
+    name: 'Death Penalty',
+    character: characters[8],
+    element: 'Non-elemental',
+    commandAbility: new UltimateCommandAbility({
+      id: null,
+      name: 'Invisible Shot',
+      sigil: null,
+      description: `${damage('2,000', 'Phys./Mag. Non-elem.', 'Single Enemy', null)}\nAlso, ${ampAbilities('Phys.', 'All Allies', '40', 60, 0)}\n${ampAbilities('Mag.', 'All Allies', '40', 60, 0)}\n${increaseLimitGauge(20, 'Self')}\n${chargeAndUses(60, 20, 2)}`
+    }),
+    maxRarityStats: {
+      pAtk: 198,
+      mAtk: 210,
+      heal: 119
+    },
+    reinforcementAbilities: [
+      reinforcementAbilities["Boost Ability Pot."],
+      reinforcementAbilities["Stream Phase ATB Boost"]
     ]
   }),
   "Spear": new Weapon({
@@ -7191,6 +7268,36 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
     reinforcementAbilities: [
       reinforcementAbilities["Boost HP"],
       reinforcementAbilities["Boost Wind Pot."]
+    ]
+  }),
+  "Blade of the Worthy": new Weapon({
+    id: 49030,
+    name: 'Blade of the Worthy',
+    character: characters[49],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: 14903001,
+      name: 'Diving Scourge',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Mag. Non-elem.', 'All Enemies', 10)}\nAlso, ${additionalDamage('Non-elem.', 'Mag.', 'All Enemies')}\n${exploitWeakness('Self', undefined, undefined, undefined)} ${conditionHP('Self', '50', 'more')}`,
+      valuesByOverboostLevel: {
+        damage: ['540', '650', '650', '650', '650', '650', '840', '840', '840', '840', '1,010'],
+        additionalDamage: ['10000', '20000', '20000', '20000', '20000', '20000', '30000', '30000', '30000', '30000', '40000'],
+        exploitWeaknessPot: ['25', '25', '25', '25', '25', '25', '35', '35', '35', '35', '40'],
+        exploitWeaknessDur: ['30', '35', '35', '35', '35', '35', '45', '45', '45', '45', '60'],
+        exploitWeaknessExt: ['10', '12', '12', '12', '12', '12', '15', '15', '15', '15', '20']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 262,
+      mAtk: 277,
+      heal: 126
+    },
+    reinforcementAbilities: [
+      reinforcementAbilities["Boost ATK (All Allies)"],
+      reinforcementAbilities["Boost Ability Pot."]
     ]
   }),
   "Personal Style": new Weapon({
@@ -9456,6 +9563,7 @@ type Rate = number | undefined | null;
 type Duration = number | undefined;
 type Extension = number | undefined;
 type AdditionalDamageType = 'Phys.' | 'Mag.';
+type AmpAbilitiesType = 'Phys.' | 'Mag.';
 type Quantifier = 'less' | 'more';
 
 function getAttributeKey(attribute: Attribute) {
@@ -9594,4 +9702,11 @@ function exploitWeakness(range: Range, potency: Potency, duration: Duration, ext
   const dur = duration === undefined ? '{{exploitWeaknessDur}}' : duration;
   const ext = extension === undefined ? '{{exploitWeaknessExt}}' : extension;
   return `Applies Exploit Weakness [Rng.: ${range}] [Pot.: ${pot}%] [Dur.: ${dur}s] [Dur. Ext.: +${ext}s]`;
+}
+
+function ampAbilities(type: AmpAbilitiesType, range: Range, abilityDamage: string | undefined, duration: Duration, extension: Extension) {
+  const abilityDmg = abilityDamage === undefined ? '{{ampPhysAbilitiesAbilityDmg}}' : abilityDamage;
+  const dur = duration === undefined ? '{{ampPhysAbilitiesDur}}' : duration;
+  const ext = extension === undefined ? '{{ampPhysAbilitiesExt}}' : extension;
+  return `Applies Amp. ${type} Abilities [Rng.: ${range}] [Next ${type} C./UC. Ability: Dmg +${abilityDmg}%] [Dur.: ${dur}s] [Ext.: ${ext}s]`;
 }
