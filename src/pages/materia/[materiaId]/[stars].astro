@@ -53,7 +53,7 @@ const container = 'p-3 bg-[#051629] rounded-md border-3 border-[#193d62]';
                 </div>
               </div>
               <hr class="h-0.5 my-1.5 border-none bg-[#2e435c]" />
-              <span class="whitespace-pre-wrap">{selectedMateria.commandAbility.description}</span>
+              <span set:html={selectedMateria.commandAbility.description.replace(/\n/g, '<br />')} />
             </div>
           </div>
         </div>
