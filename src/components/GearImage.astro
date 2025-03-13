@@ -24,16 +24,8 @@ const image = gear.id ? images[`../assets/costume/${gear.id}.png`]() : unfixImag
     width: width ? `${width}px` : undefined,
     height: height ? `${height}px` : undefined
   }}
-  class={`
-    flex items-center justify-center
-    bg-[#04101e] rounded-sm border-2 border-[#155197] p-1
-    outline-2 outline-[#155197] -outline-offset-6
-    bg-[radial-gradient(circle,_#0a68a8,_#0a68a8fc_4.86%,_#0a68a8f3_9.3%,_#0a68a8e4_13.5%,_#0a68a8d2_17.4%,_#0a68a8bd_21.18%,_#0a68a8a5_25%,_#0a68a88c_28.26%,_#0a68a873_31.74%,_#0a68a85a_35%,_#0a68a842_38.82%,_#0a68a82d_42.6%,_#0a68a81b_46.5%,_#0a68a80c_50.7%,_#0a68a803_55.14%,_#0a68a800_60%)]
-    ${hoverable ? 'hover:border-[#2164ab] hover:outline-[#2164ab]' : ''}
-    ${clickable ? 'transform active:scale-95 transition duration-100' : ''}
-    ${className ?? '' }
-    ${gear.id ? '' : 'p-5'}
-  `}
+  class={`gear-img ${gear.id ? '' : 'p-5'} ${className ?? '' }`}
+  class:list={{ 'hoverable': hoverable, 'clickable': clickable }}
 >
   <div class="overflow-hidden">
     <Image
@@ -46,3 +38,26 @@ const image = gear.id ? images[`../assets/costume/${gear.id}.png`]() : unfixImag
     />
   </div>
 </div>
+
+<style>
+  .gear-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .25rem;
+    background: #04101e;
+    border: 2px solid #155197;
+    border-radius: .25rem;
+    outline: 2px solid #155197;
+    outline-offset: -6px;
+    background-image: radial-gradient(circle, #0a68a8, #0a68a8fc 4.86%, #0a68a8f3 9.3%, #0a68a8e4 13.5%, #0a68a8d2 17.4%, #0a68a8bd 21.18%, #0a68a8a5 25%, #0a68a88c 28.26%, #0a68a873 31.74%, #0a68a85a 35%, #0a68a842 38.82%, #0a68a82d 42.6%, #0a68a81b 46.5%, #0a68a80c 50.7%, #0a68a803 55.14%, #0a68a800 60%);
+    transition: scale .1s;
+    &.hoverable:hover {
+      border-color: #2164ab;
+      outline-color: #2164ab;
+    }
+    &.clickable:active {
+      scale: .95;
+    }
+  }
+</style>

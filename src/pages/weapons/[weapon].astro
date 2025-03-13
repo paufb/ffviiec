@@ -1,23 +1,23 @@
 ---
 import { Image } from 'astro:assets';
-import { weapons } from '../../../data/instances/weapons';
-import Layout from '../../../layouts/Layout.astro'
-import AbilityIcons from '../../../components/AbilityIcons.astro';
-import ATBBar from '../../../components/ATBBar.astro';
-import CharacterDiamond from '../../../components/CharacterDiamond.astro';
-import OverboostStars from '../../../components/OverboostStars.astro';
-import ReinforcementAbilityIcon from '../../../components/ReinforcementAbilityIcon.astro';
-import WeaponImage from '../../../components/WeaponImage.astro';
-import hpIcon from '../../../assets/_ui/icon/parameter/parameter_hp.png';
-import pAtkIcon from '../../../assets/_ui/icon/parameter/parameter_str.png';
-import mAtkIcon from '../../../assets/_ui/icon/parameter/parameter_int.png';
-import pDefIcon from '../../../assets/_ui/icon/parameter/parameter_def.png';
-import mDefIcon from '../../../assets/_ui/icon/parameter/parameter_res.png';
-import healIcon from '../../../assets/_ui/icon/parameter/parameter_heal.png';
+import { weapons } from '../../data/instances/weapons';
+import Layout from '../../layouts/Layout.astro'
+import AbilityIcons from '../../components/AbilityIcons.astro';
+import ATBBar from '../../components/ATBBar.astro';
+import CharacterDiamond from '../../components/CharacterDiamond.astro';
+import OverboostStars from '../../components/OverboostStars.astro';
+import ReinforcementAbilityIcon from '../../components/ReinforcementAbilityIcon.astro';
+import WeaponImage from '../../components/WeaponImage.astro';
+import hpIcon from '../../assets/_ui/icon/parameter/parameter_hp.png';
+import pAtkIcon from '../../assets/_ui/icon/parameter/parameter_str.png';
+import mAtkIcon from '../../assets/_ui/icon/parameter/parameter_int.png';
+import pDefIcon from '../../assets/_ui/icon/parameter/parameter_def.png';
+import mDefIcon from '../../assets/_ui/icon/parameter/parameter_res.png';
+import healIcon from '../../assets/_ui/icon/parameter/parameter_heal.png';
 
 export async function getStaticPaths() {
   return Object.values(weapons).map((weapon) => ({
-    params: { character: weapon.character.path, weapon: weapon.id || weapon.name },
+    params: { weapon: weapon.id || weapon.name },
     props: { weapon }
   }));
 }

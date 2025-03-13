@@ -1,0 +1,50 @@
+---
+import type { Character } from '../data/types';
+import { Image } from 'astro:assets';
+
+interface Props {
+  href: string;
+  character: Character;
+  isSelected: boolean;
+}
+
+const { href, character, isSelected } = Astro.props;
+const images = import.meta.glob<{ default: ImageMetadata }>('../assets/character_btn/*.png');
+---
+
+<a
+  href={href}
+  class="character-anchor overflow-hidden"
+  class:list={{ 'selected': isSelected }}
+  style={{ width: '3rem', height: '3rem' }}
+>
+  <Image
+    src={images[`../assets/character_btn/${character.id}.png`]()}
+    class="w-full h-full object-cover p-1"
+    width={50}
+    height={40}
+    alt={character.name}
+  />
+</a>
+
+<style>
+  .character-anchor {
+    border: 2px solid #394d60;
+    border-radius: 2px;
+    outline: 2px solid #394d60;
+    outline-offset: -6px;
+    transition: scale .1s;
+    &.selected {
+      background: #032950;
+      border-color: #2c80d7;
+      outline-color: #2c80d7;
+    }
+    &:hover {
+      border-color: #5574aa;
+      outline-color: #5574aa;
+    }
+    &:active {
+      scale: .95;
+    }
+  }
+</style>

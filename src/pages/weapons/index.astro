@@ -1,6 +1,220 @@
 ---
+import { Image } from 'astro:assets';
 import { characters } from '../../data/instances/characters';
-import CharacterWeaponsPage from './[character].astro';
+import { elements } from '../../data/instances/elements';
+import { sigils } from '../../data/instances/sigils';
+import { weapons } from '../../data/instances/weapons';
+import AbilityIcons from '../../components/AbilityIcons.astro';
+import ATBBar from '../../components/ATBBar.astro';
+import ReinforcementAbilityIcon from '../../components/ReinforcementAbilityIcon.astro';
+import WeaponImage from '../../components/WeaponImage.astro';
+import Layout from '../../layouts/Layout.astro';
+
+const characterImages = import.meta.glob<{ default: ImageMetadata }>('../../assets/character_btn/*.png');
+const elementImages = import.meta.glob<{ default: ImageMetadata }>('../../assets/_ui/icon/attribute/*.png');
+const sigilImages = import.meta.glob<{ default: ImageMetadata }>('../../assets/_ui/icon/sign/*.png');
 ---
 
-<CharacterWeaponsPage selectedCharacter={characters[1]} isIndexPage />
+<Layout title="Weapons - FFVIIEC" highlightedRoute="Weapons">
+  <div class="flex flex-col gap-4 max-w-360 m-auto">
+    <div class="flex flex-col gap-2 overflow-x-scroll">
+      <div class="flex flex-nowrap justify-center gap-1">
+        {Object.values(characters).map((character) => (
+          <label
+            class="l-chr"
+            style={{ width: '2.5rem', height: '2.5rem' }}
+          >
+            <input type="checkbox" value={character.name} hidden class="f-chr" />
+            <Image
+              src={characterImages[`../../assets/character_btn/${character.id}.png`]()}
+              class="w-full h-full object-cover p-1"
+              width={50}
+              height={50}
+              alt={character.name}
+            />
+          </label>
+        ))}
+      </div>
+      <div class="flex justify-center gap-2">
+        <div class="flex flex-nowrap justify-center gap-1">
+          {Object.values(elements).map((element) => (
+            <label
+              class="l-chr"
+              style={{ width: '2.5rem', height: '2.5rem' }}
+            >
+              <input type="checkbox" value={element.name} hidden class="f-elt" />
+              <Image
+                src={elementImages[`../../assets/_ui/icon/attribute/${element.icon}.png`]()}
+                class="w-full h-full object-cover p-1"
+                width={50}
+                height={50}
+                alt={element.name}
+              />
+            </label>
+          ))}
+        </div>
+        <div class="flex flex-nowrap justify-center gap-1">
+          {Object.values(sigils).map((sigil) => (
+            <label
+              class="l-chr"
+              style={{ width: '2.5rem', height: '2.5rem' }}
+            >
+              <input type="checkbox" value={sigil.name} hidden class="f-sgl" />
+              <Image
+                src={sigilImages[`../../assets/_ui/icon/sign/${sigil.icon}.png`]()}
+                class="w-full h-full object-cover p-1"
+                width={50}
+                height={50}
+                alt={sigil.name}
+              />
+            </label>
+          ))}
+        </div>
+      </div>
+    </div>
+    <div class="grid grid-cols-[repeat(auto-fit,minmax(min(300px,100%),1fr))] gap-4">
+      {Object.values(weapons).map((weapon) => (
+        <div
+          class="w-etr a"
+          data-character={weapon.character.name}
+          data-element={weapon.element}
+          data-sigil={weapon.commandAbility.sigil?.name}
+        >
+          <a href={`/weapons/${weapon.id || weapon.name}`}>
+            <WeaponImage
+              weapon={weapon}
+              size="normal"
+              width={96}
+              height={96}
+              hoverable
+              clickable
+            />
+          </a>
+          <div class="b">
+            <span class="c">{weapon.name}</span>
+            <div class="d">
+              <div class="e">
+                {weapon.reinforcementAbilities.map((reinforcementAbility) => (
+                  <div class="f">
+                    <ReinforcementAbilityIcon reinforcementAbility={reinforcementAbility} />
+                    <span class="g">{reinforcementAbility.name}</span>
+                  </div>
+                ))}
+              </div>
+              <div class="h">
+                <AbilityIcons commandAbility={weapon.commandAbility} element={weapon.element} />
+                <ATBBar cost={weapon.commandAbility.atbCost} />
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .l-chr {
+    cursor: pointer;
+    border: 2px solid #394d60;
+    border-radius: 2px;
+    outline: 2px solid #394d60;
+    outline-offset: -6px;
+    transition: scale .1s;
+    &.selected {
+      background: #032950;
+      border-color: #2c80d7 !important;
+      outline-color: #2c80d7 !important;
+    }
+    &:hover {
+      border-color: #5574aa;
+      outline-color: #5574aa;
+    }
+    &:active {
+      scale: .95;
+    }
+  }
+  .a {
+    display: flex;
+    gap: .5rem;
+    min-width: 0;
+  }
+  .b {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding-block: 6px;
+    overflow: hidden;
+  }
+  .c {
+    white-space: nowrap;
+  }
+  .d {
+    display: flex;
+    flex: 1;
+    gap: .5rem;
+    justify-content: space-between;
+  }
+  .e {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    justify-content: end;
+    overflow-x: scroll;
+  }
+  .f {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+  }
+  .g {
+    font-size: 14px;
+    line-height: 1.4286;
+    white-space: nowrap;
+  }
+  .h {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+  }
+</style>
+
+<script>
+  let selectedCharacters: string[] = [];
+  document.querySelectorAll<HTMLInputElement>('.f-chr').forEach((checkbox) => checkbox.addEventListener('click', () => {
+    if (checkbox.checked) {
+      selectedCharacters.push(checkbox.value);
+    } else {
+      selectedCharacters = selectedCharacters.filter((value) => value !== checkbox.value);
+    }
+  }));
+  let selectedElements: string[] = [];
+  document.querySelectorAll<HTMLInputElement>('.f-elt').forEach((checkbox) => checkbox.addEventListener('click', () => {
+    if (checkbox.checked) {
+      selectedElements.push(checkbox.value);
+    } else {
+      selectedElements = selectedElements.filter((value) => value !== checkbox.value);
+    }
+  }));
+  let selectedSigils: string[] = [];
+  document.querySelectorAll<HTMLInputElement>('.f-sgl').forEach((checkbox) => checkbox.addEventListener('click', () => {
+    if (checkbox.checked) {
+      selectedSigils.push(checkbox.value);
+    } else {
+      selectedSigils = selectedSigils.filter((value) => value !== checkbox.value);
+    }
+  }));
+  document.querySelectorAll<HTMLInputElement>('.f-chr, .f-elt, .f-sgl').forEach((checkbox) => checkbox.addEventListener('click', () => {
+    (checkbox.parentNode as HTMLLabelElement).classList.toggle('selected', checkbox.checked);
+    document.querySelectorAll<HTMLDivElement>('.w-etr').forEach((weaponEntry) => {
+      if (selectedCharacters.length === 0 && selectedElements.length === 0 && selectedSigils.length === 0) {
+        weaponEntry.removeAttribute('hidden');
+        return;
+      }
+      const shouldWeaponBeSelected = (selectedCharacters.length <= 0 || selectedCharacters.includes(weaponEntry.getAttribute('data-character')!))
+                                  && (selectedElements.length <= 0 || selectedElements.includes(weaponEntry.getAttribute('data-element')!))
+                                  && (selectedSigils.length <= 0 || selectedSigils.includes(weaponEntry.getAttribute('data-sigil')!));
+      weaponEntry.toggleAttribute('hidden', !shouldWeaponBeSelected);
+    });
+  }));
+</script>

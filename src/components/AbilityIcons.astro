@@ -1,6 +1,6 @@
 ---
 import type { ImageMetadata } from 'astro';
-import type { Element, Sigil } from '../data/types';
+import type { Element } from '../data/types';
 import type { CommandAbility } from '../data/classes/CommandAbility';
 import { Image } from 'astro:assets';
 import unfixImage from '../assets/_ui/icon/common/unfix.png';
@@ -21,40 +21,51 @@ const elementsIcons: { [K in Element]: string } = {
     'Wind': 'wind'
   };
 
-const signsIcons: { [K in Sigil]: string } = {
-    'circle': 'a_circle_enable',
-    'triangle': 'b_triangle_enable',
-    'cross': 'c_cross_enable',
-    'rhombus': 'd_rhombus_enable',
-    'square': 'e_square_enable',
-  };
-
 const { commandAbility, element } = Astro.props;
-const activeSkills = import.meta.glob<{ default: ImageMetadata }>('../assets/activeskill/*.png');
-const attributes = import.meta.glob<{ default: ImageMetadata }>('../assets/_ui/icon/attribute/*.png');
-const sigils = import.meta.glob<{ default: ImageMetadata }>('../assets/_ui/icon/sign/*.png');
+const activeSkillImages = import.meta.glob<{ default: ImageMetadata }>('../assets/activeskill/*.png');
+const attributeImages = import.meta.glob<{ default: ImageMetadata }>('../assets/_ui/icon/attribute/*.png');
+const signImages = import.meta.glob<{ default: ImageMetadata }>('../assets/_ui/icon/sign/*.png');
 ---
 
-<div class="flex gap-0.5">
-  <div class={`w-10 h-10 bg-[#052854] border-2 border-[#3f75ad] ${commandAbility.id ? '' : 'p-1'}`}>
+<div class="a">
+  <div class={`b ${commandAbility.id ? '' : 'p-1'}`}>
     <Image
       class="animate-imageload"
-      src={commandAbility.id ? activeSkills[`../assets/activeskill/${commandAbility.id}.png`]() : unfixImage}
+      src={commandAbility.id ? activeSkillImages[`../assets/activeskill/${commandAbility.id}.png`]() : unfixImage}
       alt={commandAbility.name}
     />
   </div>
-  <div class={`w-5 h-5 bg-[#052854] border-2 border-[#3f75ad] ${element ? '' : 'p-1'}`}>
+  <div class={`c ${element ? '' : 'p-1'}`}>
     <Image
       class="animate-imageload"
-      src={element ? attributes[`../assets/_ui/icon/attribute/${elementsIcons[element]}.png`]() : minusImage }
+      src={element ? attributeImages[`../assets/_ui/icon/attribute/${elementsIcons[element]}.png`]() : minusImage }
       alt={element ?? ''}
     />
   </div>
-  <div class={`w-5 h-5 bg-[#052854] border-2 border-[#3f75ad] ${commandAbility.sigil ? '' : 'p-1'}`}>
+  <div class={`c ${commandAbility.sigil ? '' : 'p-1'}`}>
     <Image
       class="animate-imageload"
-      src={commandAbility.sigil ? sigils[`../assets/_ui/icon/sign/${signsIcons[commandAbility.sigil]}.png`]() : minusImage}
-      alt={commandAbility.sigil ?? ''}
+      src={commandAbility.sigil ? signImages[`../assets/_ui/icon/sign/${commandAbility.sigil.icon}.png`]() : minusImage}
+      alt={commandAbility.sigil?.name ?? ''}
     />
   </div>
 </div>
+
+<style>
+  .a {
+    display: flex;
+    gap: 2px;
+  }
+  .b {
+    width: 40px;
+    height: 40px;
+    background: #052854;
+    border: 2px solid #3f75ad;
+  }
+  .c {
+    width: 20px;
+    height: 20px;
+    background: #052854;
+    border: 2px solid #3f75ad;
+  }
+</style>

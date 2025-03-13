@@ -18,7 +18,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>('../assets/passivesk
     width: width ? `${width}px` : undefined,
     height: height ? `${height}px` : undefined
   }}
-  class="bg-[#182d39] border-2 border-[#108a9c] object-contain flex-none"
+  class="a"
 >
   <Image
     class="animate-imageload"
@@ -28,3 +28,13 @@ const images = import.meta.glob<{ default: ImageMetadata }>('../assets/passivesk
     height={height}
   />
 </div>
+
+<style>
+  .a {
+    background: #182d39;
+    border: 2px solid #108a9c;
+    flex: none;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+</style>

@@ -1,6 +1,114 @@
 ---
+import { Image } from 'astro:assets';
 import { characters } from '../../data/instances/characters';
-import CharacterGearPage from './[character].astro';
+import { gear } from '../../data/instances/gear';
+import Layout from '../../layouts/Layout.astro';
+import GearImage from '../../components/GearImage.astro';
+import ReinforcementAbilityIcon from '../../components/ReinforcementAbilityIcon.astro';
+
+const characterImages = import.meta.glob<{ default: ImageMetadata }>('../../assets/character_btn/*.png');
 ---
 
-<CharacterGearPage selectedCharacter={characters[1]} isIndexPage />
+<Layout title="Gear - FFVIIEC" highlightedRoute="Gear">
+  <div class="flex flex-col gap-4 max-w-360 m-auto">
+    <div class="flex flex-col gap-2 overflow-x-scroll">
+      <div class="flex flex-nowrap justify-center gap-1">
+        {Object.values(characters).map((character) => (
+          <label
+            class="l-chr"
+            style={{ width: '2.5rem', height: '2.5rem' }}
+          >
+            <input type="checkbox" value={character.name} hidden class="f-chr" />
+            <Image
+              src={characterImages[`../../assets/character_btn/${character.id}.png`]()}
+              class="w-full h-full object-cover p-1"
+              width={50}
+              height={50}
+              alt={character.name}
+            />
+          </label>
+        ))}
+      </div>
+    </div>
+    <div class="grid grid-cols-[repeat(auto-fit,minmax(min(300px,100%),1fr))] gap-4">
+      {Object.values(gear).map((gear) => (
+        <div
+          class="g-etr flex gap-2 min-w-0"
+          data-character={gear.character.name}
+        >
+          <a href={`/gear/${gear.id || gear.name}`}>
+            <GearImage
+              gear={gear}
+              class="w-24 h-24"
+              style={{
+                transform: !gear.id ? undefined :
+                           gear.character.name === 'Red XIII' ? 'scale(2) translate(8%, -5%)' :
+                           'scale(2) translateY(23%)'
+              }}
+              hoverable
+              clickable
+            />
+          </a>
+          <div class="flex flex-col flex-1 py-1.5 overflow-hidden">
+            <span class="whitespace-nowrap">{gear.name}</span>
+            <div class="flex flex-1 gap-2 justify-between">
+              <div class="flex flex-col gap-0.5 justify-end overflow-x-scroll">
+                {gear.reinforcementAbilities.map((reinforcementAbility) => (
+                  <div class="flex gap-2 items-center">
+                    <ReinforcementAbilityIcon reinforcementAbility={reinforcementAbility} width={24} height={24} />
+                    <span class="text-sm whitespace-nowrap">{reinforcementAbility.name}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .l-chr {
+    cursor: pointer;
+    border: 2px solid #394d60;
+    border-radius: 2px;
+    outline: 2px solid #394d60;
+    outline-offset: -6px;
+    transition: scale .1s;
+    &.selected {
+      background: #032950;
+      border-color: #2c80d7 !important;
+      outline-color: #2c80d7 !important;
+    }
+    &:hover {
+      border-color: #5574aa;
+      outline-color: #5574aa;
+    }
+    &:active {
+      scale: .95;
+    }
+  }
+</style>
+
+<script>
+  let selectedCharacters: string[] = [];
+  document.querySelectorAll<HTMLInputElement>('.f-chr').forEach((checkbox) => checkbox.addEventListener('click', () => {
+    if (checkbox.checked) {
+      selectedCharacters.push(checkbox.value);
+    } else {
+      selectedCharacters = selectedCharacters.filter((value) => value !== checkbox.value);
+    }
+  }));
+  document.querySelectorAll<HTMLInputElement>('.f-chr, .f-elt, .f-sgl').forEach((checkbox) => checkbox.addEventListener('click', () => {
+    (checkbox.parentNode as HTMLLabelElement).classList.toggle('selected', checkbox.checked);
+    document.querySelectorAll<HTMLDivElement>('.g-etr').forEach((gearEntry) => {
+      if (selectedCharacters.length === 0) {
+        gearEntry.removeAttribute('hidden');
+        return;
+      }
+      const shouldWeaponBeSelected = (selectedCharacters.length <= 0 || selectedCharacters.includes(gearEntry.getAttribute('data-character')!));
+      gearEntry.toggleAttribute('hidden', !shouldWeaponBeSelected);
+    });
+  }));
+</script>

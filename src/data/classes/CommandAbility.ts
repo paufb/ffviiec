@@ -1,4 +1,5 @@
-import type { Sigil, ValuesByOverboostLevel } from '../types';
+import type { ValuesByOverboostLevel } from '../types';
+import type { Sigil } from './Sigil';
 
 interface CommandAbilityProps {
   id: number | null;

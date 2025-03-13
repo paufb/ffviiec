@@ -4,6 +4,7 @@ import { UltimateWeapon } from '../classes/UltimateWeapon.ts';
 import { Weapon } from '../classes/Weapon.ts';
 import { characters } from './characters.ts';
 import { reinforcementAbilities } from './reinforcementAbilities.ts';
+import { sigils } from './sigils.ts';
 
 export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
   "Buster Sword": new Weapon({
@@ -15,7 +16,7 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
       id: 10100101,
       name: 'Braver',
       atbCost: 4,
-      sigil: 'cross',
+      sigil: sigils["Cross"],
       description: `${damage(undefined, 'Phys. Non-elem.', 'Single Enemy', 10)}\nAlso, When matching sigils are destroyed, x1.5 damage.`,
       valuesByOverboostLevel: {
         damage: ['400', '480', '480', '480', '480', '480', '620', '620', '620', '620', '750']
@@ -834,7 +835,7 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
       id: 10200101,
       name: 'Blitz Beat',
       atbCost: 4,
-      sigil: 'cross',
+      sigil: sigils["Cross"],
       description: `${damage(undefined, 'Phys. Non-elem.', 'Single Enemy', 10)}`,
       valuesByOverboostLevel: {
         damage: ['400', '480', '480', '480', '480', '480', '620', '620', '620', '620', '750']
@@ -1032,7 +1033,7 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
       id: 10201301,
       name: 'Energy Laser',
       atbCost: 4,
-      sigil: 'rhombus',
+      sigil: sigils["Rhombus"],
       description: `${damage(undefined, 'Mag. Non-elem.', 'Single Enemy', 10)}`,
       valuesByOverboostLevel: {
         damage: ['400', '480', '480', '480', '480', '480', '620', '620', '620', '620', '750']
@@ -1302,7 +1303,7 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
       id: 10202101,
       name: 'Dorsal Fin Shot',
       atbCost: 3,
-      sigil: 'rhombus',
+      sigil: sigils["Rhombus"],
       description: `${damage(undefined, 'Phys. Non-elem.', 'Single Enemy', 10)}\nAlso, ${decrease('Fire Resist.', undefined, 'Single Enemy', null, undefined, undefined, 'High')}\nWhen [Rng.: Self]'s HP is 50% or more, ${decrease('Water Resist.', undefined, 'Single Enemy', null, undefined, undefined, 'High')}`,
       valuesByOverboostLevel: {
         damage: ['260', '300', '300', '300', '300', '300', '360', '360', '360', '360', '420'],
@@ -1776,7 +1777,7 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
       id: 10302401,
       name: 'Ruinra Surge',
       atbCost: 4,
-      sigil: 'rhombus',
+      sigil: sigils["Rhombus"],
       description: `${damage(undefined, 'Mag. Non-elem.', 'Single Enemy', 10)}`,
       valuesByOverboostLevel: {
         damage: ['320', '370', '370', '370', '370', '370', '430', '430', '430', '430', '450']
@@ -3536,7 +3537,7 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
       id: 10500401,
       name: 'Rolling Claw',
       atbCost: 3,
-      sigil: 'rhombus',
+      sigil: sigils["Rhombus"],
       description: `${damage(undefined, 'Phys. Non-elem.', 'Single Enemy', 10)}\nAlso, ${decrease('Wind Resist.', undefined, 'Single Enemy', null, undefined, undefined, 'High')}\nWhen [Rng.: Self]'s HP is 50% or more, ${decrease('Water Resist.', undefined, 'Single Enemy', null, undefined, undefined, 'High')}`,
       valuesByOverboostLevel: {
         damage: ['200', '230', '230', '230', '230', '230', '280', '280', '280', '280', '320'],
@@ -5780,7 +5781,7 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
       id: 10901201,
       name: 'Heavy Swing',
       atbCost: 3,
-      sigil: 'rhombus',
+      sigil: sigils["Rhombus"],
       description: `${damage(undefined, 'Phys. Non-elem.', 'Single Enemy', 10)}\nAlso, [Condition: First use] ${apply('Status Ailment: Stop', null, 'Single Enemy', null, undefined, 3)}`,
       valuesByOverboostLevel: {
         damage: ['260', '300', '300', '300', '300', '300', '360', '360', '360', '360', '420'],
@@ -5887,7 +5888,7 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
       id: 12000101,
       name: 'Rapid Slash',
       atbCost: 4,
-      sigil: 'circle',
+      sigil: sigils["Circle"],
       description: `${damage(undefined, 'Phys. Non-elem.', 'Single Enemy', 10)}`,
       valuesByOverboostLevel: {
         damage: ['400', '480', '480', '480', '480', '480', '620', '620', '620', '620', '750']
@@ -7419,7 +7420,7 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
       id: 15000501,
       name: 'Hell\'s Penalty',
       atbCost: 4,
-      sigil: 'rhombus',
+      sigil: sigils["Rhombus"],
       description: `${damage(undefined, 'Phys. Non-elem.', 'Single Enemy', 10)}`,
       valuesByOverboostLevel: {
         damage: ['400', '480', '480', '480', '480', '480', '620', '620', '620', '620', '750']
@@ -7445,7 +7446,7 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
       id: 15000701,
       name: 'Skullknocker',
       atbCost: 4,
-      sigil: 'circle',
+      sigil: sigils["Circle"],
       description: `${damage(undefined, 'Phys. Non-elem.', 'Single Enemy', 10)}`,
       valuesByOverboostLevel: {
         damage: ['520', '620', '620', '620', '620', '620', '910', '910', '910', '910', '1,040']
@@ -8119,7 +8120,7 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
       id: 15100901,
       name: 'Killing Slash',
       atbCost: 4,
-      sigil: 'rhombus',
+      sigil: sigils["Rhombus"],
       description: `${damage(undefined, 'Phys. Non-elem.', 'Single Enemy', 10)}`,
       valuesByOverboostLevel: {
         damage: ['380', '460', '460', '460', '460', '460', '590', '590', '590', '590', '720']
@@ -8262,7 +8263,7 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
       id: 15101601,
       name: 'Ruinra Surge',
       atbCost: 4,
-      sigil: 'rhombus',
+      sigil: sigils["Rhombus"],
       description: `${damage(undefined, 'Mag. Non-elem.', 'Single Enemy', 10)}`,
       valuesByOverboostLevel: {
         damage: ['320', '370', '370', '370', '370', '370', '430', '430', '430', '430', '450']
@@ -8474,7 +8475,7 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
       id: 15102101,
       name: 'Spiral Edge',
       atbCost: 3,
-      sigil: 'rhombus',
+      sigil: sigils["Rhombus"],
       description: `${damage(undefined, 'Phys. Non-elem.', 'Single Enemy', 10)}\nAlso, ${decrease('Ice Resist.', undefined, 'Single Enemy', null, undefined, undefined, 'High')}\n${conditionHP('Self', '50', 'more')}, ${decrease('Thunder Resist.', undefined, 'Single Enemy', null, undefined, undefined, 'High')}`,
       valuesByOverboostLevel: {
         damage: ['260', '300', '300', '300', '300', '300', '360', '360', '360', '360', '420'],
@@ -8807,7 +8808,7 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
       id: 15201601,
       name: 'Striking Quintet',
       atbCost: 4,
-      sigil: 'rhombus',
+      sigil: sigils["Rhombus"],
       description: `${damage(undefined, 'Phys. Non-elem.', 'Single Enemy', 10)}`,
       valuesByOverboostLevel: {
         damage: ['420', '500', '500', '500', '500', '500', '660', '660', '660', '660', '790']
@@ -9029,7 +9030,7 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
       id: 15201301,
       name: 'Nightglint',
       atbCost: 3,
-      sigil: 'rhombus',
+      sigil: sigils["Rhombus"],
       description: `${damage(undefined, 'Mag. Non-elem.', 'Single Enemy', 10)}\nAlso, ${decrease('PDEF', undefined, 'Single Enemy', null, undefined, undefined, 'High')}\nWhen Buff is granted to [Rng.: Self], ${decrease('MDEF', undefined, 'Single Enemy', null, undefined, undefined, 'Mid')}`,
       valuesByOverboostLevel: {
         damage: ['260', '300', '300', '300', '300', '300', '360', '360', '360', '360', '420'],
@@ -9167,7 +9168,7 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
       id: 15600301,
       name: 'Flash Thrust',
       atbCost: 3,
-      sigil: 'rhombus',
+      sigil: sigils["Rhombus"],
       description: `${damage(undefined, 'Mag. Non-elem.', 'Single Enemy', 10)}\nAlso, ${decrease('PATK', 'Mid', 'Single Enemy', null, undefined, undefined, undefined)}\n${conditionHP('Self', '50', 'more')}, ${decrease('MATK', 'Mid', 'Single Enemy', null, undefined, undefined, 'Mid')}`,
       valuesByOverboostLevel: {
         damage: ['260', '300', '300', '300', '300', '300', '360', '360', '360', '360', '420'],
