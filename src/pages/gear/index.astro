@@ -10,14 +10,11 @@ const characterImages = import.meta.glob<{ default: ImageMetadata }>('../../asse
 ---
 
 <Layout title="Gear - FFVIIEC" highlightedRoute="Gear">
-  <div class="flex flex-col gap-4 max-w-360 m-auto">
+  <div class="flex flex-col gap-4 max-w-360 mx-auto" style={{ width: 'calc(100vw - 75px)' }}>
     <div class="flex flex-col gap-2 overflow-x-scroll">
-      <div class="flex flex-nowrap justify-center gap-1">
+      <div class="flex flex-nowrap justify-center gap-1 min-w-max">
         {Object.values(characters).map((character) => (
-          <label
-            class="l-chr"
-            style={{ width: '2.5rem', height: '2.5rem' }}
-          >
+          <label class="l-chr w-10 h-10">
             <input type="checkbox" value={character.name} hidden class="f-chr" />
             <Image
               src={characterImages[`../../assets/character_btn/${character.id}.png`]()}
