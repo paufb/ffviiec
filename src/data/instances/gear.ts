@@ -753,6 +753,16 @@ export const gear = {
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
+  "Coat of the Worthy": new Gear({
+    id: 8008,
+    name: 'Coat of the Worthy',
+    character: characters[8],
+    reinforcementAbilities: [
+      reinforcementAbilities["Boost ATK (All Allies)"],
+      reinforcementAbilities["Crimson Hue of the Worthy"]
+    ],
+    reinforcementAbilitiesPoints: [10, 10]
+  }),
   "Sky-Loving Pilot": new Gear({
     id: 9001,
     name: 'Sky-Loving Pilot',

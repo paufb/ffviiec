@@ -708,5 +708,15 @@ export const reinforcementAbilities = {
     levelValues: {
       flat: [30]
     }
+  }),
+  "Crimson Hue of the Worthy": new ReinforcementAbility({
+    id: 55101,
+    name: 'Crimson Hue of the Worthy',
+    effect: 'Ice Ability Dmg. +{{iceDmgPercent}}%\nAttack Stance Cmd. Gauge Max.: Phys Ability Dmg. +{{physDmgPercent}}%',
+    reqPts: [10],
+    levelValues: {
+      iceDmgPercent: [30],
+      physDmgPercent: [20]
+    }
   })
 }
