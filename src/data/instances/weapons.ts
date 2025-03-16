@@ -5535,6 +5535,35 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
       reinforcementAbilities["Stream Phase ATB Boost"]
     ]
   }),
+  "Gun of the Worthy": new Weapon({
+    id: 8024,
+    name: 'Gun of the Worthy',
+    character: characters[8],
+    element: 'Ice',
+    commandAbility: new CommandAbility({
+      id: 10802401,
+      name: 'Frozen Strike',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Phys. Ice', 'Single Enemy', null)}\nAlso, ${apply('Ailment: Ice Weakness', undefined, 'Single Enemy', null, undefined, 0)} [Condition: First use] (Cannot be applied to targets weak/resistant to ice)\n${increaseLimitGauge(undefined, 'Self')}`,
+      valuesByOverboostLevel: {
+        damage: ['620', '740', '740', '740', '740', '740', '930', '930', '930', '930', '1,120'],
+        iceWeaknessPot: ['30', '30', '30', '30', '30', '30', '50', '50', '50', '50', '50'],
+        iceWeaknessDur: ['60', '70', '70', '70', '70', '70', '100', '100', '100', '100', '150'],
+        limitGaugeIncreasePot: ['4', '4', '4', '4', '4', '4', '5', '5', '5', '5', '5']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 283,
+      mAtk: 233,
+      heal: 144
+    },
+    reinforcementAbilities: [
+      reinforcementAbilities["Boost PATK (All Allies)"],
+      reinforcementAbilities["Boost Ice Pot."]
+    ]
+  }),
   "Spear": new Weapon({
     id: 9001,
     name: 'Spear',
@@ -9552,7 +9581,7 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
 
 type Range = 'Single Enemy' | 'All Enemies' | 'Single Ally' | 'All Allies' | 'Self' | 'Affected Targets' | 'Ally (Excluding Self)' | null;
 type CriticalRate = number | null;
-type Effect = 'Ailment: Stun' | 'Ailment: Poison' | 'Ailment: Silence' | 'Haste' | 'Provoke' | 'Veil' | 'Exploit Weakness' | 'Status Ailment: Stop' | 'Status Ailment: Enfeeble';
+type Effect = 'Ailment: Stun' | 'Ailment: Poison' | 'Ailment: Silence' | 'Ailment: Ice Weakness' | 'Haste' | 'Provoke' | 'Veil' | 'Exploit Weakness' | 'Status Ailment: Stop' | 'Status Ailment: Enfeeble';
 type Attribute = 'PATK' | 'MATK' | 'PDEF' | 'MDEF' | 'Fire Resist.' | 'Ice Resist.' | 'Thunder Resist.' | 'Earth Resist.' | 'Water Resist.' | 'Wind Resist.' | 'Fire Damage' | 'Ice Damage' | 'Lightning Damage' | 'Earth Damage' | 'Water Damage' | 'Wind Damage' | 'Physical Resistance' | 'Magic Resistance';
 type Element = 'Non-elem.' | 'Fire' | 'Ice' | 'Lightning' | 'Earth' | 'Water' | 'Wind';
 type Damage = string | undefined;
@@ -9641,6 +9670,7 @@ function apply(effect: Effect, potency: number | null | undefined, range: Range,
     'Ailment: Stun': 'stun',
     'Ailment: Poison': 'poison',
     'Ailment: Silence': 'silence',
+    'Ailment: Ice Weakness': 'iceWeakness',
     'Haste': 'haste',
     'Provoke': 'provoke',
     'Veil': 'veil',
