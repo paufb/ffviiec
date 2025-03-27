@@ -718,5 +718,22 @@ export const reinforcementAbilities = {
       iceDmgPercent: [30],
       physDmgPercent: [20]
     }
+  }),
+  "Claw of the Worthy": new ReinforcementAbility({
+    id: 55301,
+    name: 'Claw of the Worthy',
+    effect: 'Earth Ability Dmg. +{{earthDmgPercent}}%\nAttack Stance Cmd. Gauge Max.: Phys Ability Dmg. +{{physDmgPercent}}%',
+    reqPts: [10],
+    levelValues: {
+      earthDmgPercent: [30],
+      physDmgPercent: [20]
+    }
+  }),
+  "Crown of the Worthy": new ReinforcementAbility({
+    id: 55201,
+    name: 'Crown of the Worthy',
+    effect: 'When granting Phys. Defense Up: Max. Pot. Tier +1\n(Only affects max. tier)',
+    reqPts: [10],
+    levelValues: {}
   })
 }

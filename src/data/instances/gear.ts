@@ -323,6 +323,16 @@ export const gear = {
     ],
     reinforcementAbilitiesPoints: [15, 10]
   }),
+  "Armor of the Worthy": new Gear({
+    id: 3018,
+    name: 'Armor of the Worthy',
+    character: characters[3],
+    reinforcementAbilities: [
+      reinforcementAbilities["Boost ATK (All Allies)"],
+      reinforcementAbilities["Claw of the Worthy"]
+    ],
+    reinforcementAbilitiesPoints: [10, 10]
+  }),
   "The Slums' Flower Girl": new Gear({
     id: 4001,
     name: 'The Slums\' Flower Girl',
@@ -1252,5 +1262,15 @@ export const gear = {
       reinforcementAbilities["Boost PDEF"]
     ],
     reinforcementAbilitiesPoints: [8, 8]
+  }),
+  "Garb of the Worthy": new Gear({
+    id: 56005,
+    name: 'Garb of the Worthy',
+    character: characters[56],
+    reinforcementAbilities: [
+      reinforcementAbilities["Reprieve"],
+      reinforcementAbilities["Crown of the Worthy"]
+    ],
+    reinforcementAbilitiesPoints: [15, 10]
   })
 };
