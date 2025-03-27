@@ -2237,6 +2237,37 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
       reinforcementAbilities["Boost Phys. Ability Pot."]
     ]
   }),
+  "Gauntlets of the Worthy": new Weapon({
+    id: 3042,
+    name: 'Gauntlets of the Worthy',
+    character: characters[3],
+    element: 'Earth',
+    commandAbility: new CommandAbility({
+      id: 10304201,
+      name: 'Geo Combo',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Phys. Earth', 'Single Enemy', null)}\nAlso, ${conditionHP('Self', '50', 'more')}, ${increase('Earth Damage', undefined, 'All Allies', null, undefined, undefined, undefined)}\n[Condition: First use] ${increaseATBGauge(undefined, 'Self')}`,
+      valuesByOverboostLevel: {
+        damage: ['600', '720', '720', '720', '720', '720', '990', '990', '990', '990', '1,120'],
+        earthDamageIncreasePot: ['Low', 'Low', 'Low', 'Low', 'Low', 'Low', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid'],
+        earthDamageIncreaseDur: ['15', '20', '20', '20', '20', '20', '20', '20', '20', '20', '25'],
+        earthDamageIncreaseExt: ['5', '6', '6', '6', '6', '6', '6', '6', '6', '6', '8'],
+        earthDamageIncreaseMaxPot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        atbGaugeIncrease: ['1', '1', '1', '1', '1', '1', '2', '2', '2', '2', '3']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 288,
+      mAtk: 214,
+      heal: 157
+    },
+    reinforcementAbilities: [
+      reinforcementAbilities["Boost PATK (All Allies)"],
+      reinforcementAbilities["Boost Earth Pot."]
+    ]
+  }),
   "Guard Stick": new Weapon({
     id: 4001,
     name: 'Guard Stick',
@@ -3054,6 +3085,34 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
     reinforcementAbilities: [
       reinforcementAbilities["Boost HEAL"],
       reinforcementAbilities["Buff/Debuff Extension (Stats/Pot./Res.)"]
+    ]
+  }),
+  "Noblesse Rod": new Weapon({
+    id: 4035,
+    name: 'Noblesse Rod',
+    character: characters[4],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: 10403501,
+      name: 'Debravera Surge',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Mag. Non-elem.', 'Single Enemy', 10)}\nAlso, ${decrease('PATK', 'Low', 'Single Enemy', null, undefined, undefined, 'Mid')}`,
+      valuesByOverboostLevel: {
+        damage: ['260', '300', '300', '300', '300', '300', '350', '350', '350', '350', '360'],
+        pAtkDecreaseDur: ['20', '22', '22', '22', '22', '22', '25', '25', '25', '25', '28'],
+        pAtkDecreaseExt: ['6', '7', '7', '7', '7', '7', '7', '7', '7', '7', '9']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 199,
+      mAtk: 218,
+      heal: 174
+    },
+    reinforcementAbilities: [
+      reinforcementAbilities["Boost HP"],
+      reinforcementAbilities["Boost Mag. Ability Pot."]
     ]
   }),
   "Sleek Collar": new Weapon({
@@ -5562,6 +5621,34 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
     reinforcementAbilities: [
       reinforcementAbilities["Boost PATK (All Allies)"],
       reinforcementAbilities["Boost Ice Pot."]
+    ]
+  }),
+  "Noblesse Automatic": new Weapon({
+    id: 8023,
+    name: 'Noblesse Automatic',
+    character: characters[8],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: 10802301,
+      name: 'Debravera Surge',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Mag. Non-elem.', 'Single Enemy', 10)}\nAlso, ${decrease('PATK', 'Low', 'Single Enemy', null, undefined, undefined, 'Mid')}`,
+      valuesByOverboostLevel: {
+        damage: ['260', '300', '300', '300', '300', '300', '350', '350', '350', '350', '360'],
+        pAtkDecreaseDur: ['20', '22', '22', '22', '22', '22', '25', '25', '25', '25', '28'],
+        pAtkDecreaseExt: ['6', '7', '7', '7', '7', '7', '7', '7', '7', '7', '9']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 222,
+      mAtk: 205,
+      heal: 165
+    },
+    reinforcementAbilities: [
+      reinforcementAbilities["Boost HP"],
+      reinforcementAbilities["Boost Phys. Ability Pot."]
     ]
   }),
   "Spear": new Weapon({
@@ -8527,6 +8614,35 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
       reinforcementAbilities["Buff/Debuff Extension (Stats/Pot./Res.)"]
     ]
   }),
+  "Hrotti": new Weapon({
+    id: 51027,
+    name: 'Hrotti',
+    character: characters[51],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: 15102701,
+      name: 'Dequakera Surge',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Mag. Non-elem.', 'Single Enemy', 10)}\nAlso, ${decrease('Earth Resist.', undefined, 'Single Enemy', null, undefined, undefined, 'Mid')}`,
+      valuesByOverboostLevel: {
+        damage: ['260', '300', '300', '300', '300', '300', '350', '350', '350', '350', '360'],
+        earthResistDecreasePot: ['Low', 'Low', 'Low', 'Low', 'Low', 'Low', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid'],
+        earthResistDecreaseDur: ['20', '22', '22', '22', '22', '22', '25', '25', '25', '25', '28'],
+        earthResistDecreaseExt: ['6', '7', '7', '7', '7', '7', '7', '7', '7', '7', '9']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 194,
+      mAtk: 222,
+      heal: 174
+    },
+    reinforcementAbilities: [
+      reinforcementAbilities["Boost PATK"],
+      reinforcementAbilities["Boost Earth Pot."]
+    ]
+  }),
   "V39": new Weapon({
     id: 52001,
     name: 'V39',
@@ -9576,6 +9692,41 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
       reinforcementAbilities["Boost Wind Resist."],
       reinforcementAbilities["Boost PDEF"]
     ]
+  }),
+  "Greatsword of the Worthy": new Weapon({
+    id: 56019,
+    name: 'Greatsword of the Worthy',
+    character: characters[56],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: 15601901,
+      name: 'Shield of the Mighty',
+      atbCost: 4,
+      sigil: null,
+      description: `${increase('PDEF', 'Mid', 'All Allies', null, undefined, undefined, undefined)}\nAlso, ${increase('MDEF', 'Mid', 'All Allies', null, undefined, undefined, undefined)}\n${heal(undefined, 'Mag.', 'All Allies')}\n${conditionHP('Self', '70', 'less')}, ${apply('Veil', undefined, 'All Allies', null, undefined, undefined)}`,
+      valuesByOverboostLevel: {
+        pDefIncreaseDur: ['12', '14', '14', '14', '14', '14', '16', '16', '16', '16', '20'],
+        pDefIncreaseExt: ['4', '4', '4', '4', '4', '4', '5', '5', '5', '5', '6'],
+        pDefIncreaseMaxPot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        mDefIncreaseDur: ['12', '14', '14', '14', '14', '14', '16', '16', '16', '16', '20'],
+        mDefIncreaseExt: ['4', '4', '4', '4', '4', '4', '5', '5', '5', '5', '6'],
+        mDefIncreaseMaxPot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        heal: ['5', '6', '6', '6', '6', '6', '7', '7', '7', '7', '7'],
+        veilPot: ['4', '5', '5', '5', '5', '5', '8', '8', '8', '8', '10'],
+        veilDur: ['40', '45', '45', '45', '45', '45', '50', '50', '50', '50', '60'],
+        veilExt: ['8', '9', '9', '9', '9', '9', '10', '10', '10', '10', '12']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 260,
+      mAtk: 247,
+      heal: 151
+    },
+    reinforcementAbilities: [
+      reinforcementAbilities["Boost ATK (All Allies)"],
+      reinforcementAbilities["Boost PDEF"]
+    ]
   })
 };
 
@@ -9708,8 +9859,9 @@ function additionalDamage(element: Element, type: AdditionalDamageType, range: R
   return `deals {{additionalDamage}} additional ${element} ${type} pot. damage [Rng.: ${range}].`;
 }
 
-function increaseATBGauge(increase: number, range: Range) {
-  return `+${increase} ATB Gauge [Rng.: ${range}].`;
+function increaseATBGauge(increase: number | undefined, range: Range) {
+  const inc = increase === undefined ? '{{atbGaugeIncrease}}' : increase;
+  return `+${inc} ATB Gauge [Rng.: ${range}].`;
 }
 
 function conditionHP(range: Range, threshold: string | undefined, quantifier: Quantifier) {
