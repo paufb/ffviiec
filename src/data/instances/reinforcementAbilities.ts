@@ -735,5 +735,16 @@ export const reinforcementAbilities = {
     effect: 'When granting Phys. Defense Up: Max. Pot. Tier +1\n(Only affects max. tier)',
     reqPts: [10],
     levelValues: {}
+  }),
+  "Interruption - Exploit Weakness": new ReinforcementAbility({
+    id: 55401,
+    name: 'Interruption - Exploit Weakness',
+    effect: 'Applies Exploit Weakness to self when interrupting enemy\n(Pot.: {{pot}}% / Dur.: {{dur}}s / Ext.: +{{ext}}s)',
+    reqPts: [1, 5, 15, 25],
+    levelValues: {
+      pot: [20, 25, 30, 40],
+      dur: [30, 30, 30, 30],
+      ext: [30, 30, 30, 30]
+    }
   })
 }

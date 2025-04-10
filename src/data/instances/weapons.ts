@@ -5995,6 +5995,32 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
       reinforcementAbilities["Boost MDEF"]
     ]
   }),
+  "Lance of the Hunt": new Weapon({
+    id: 9020,
+    name: 'Lance of the Hunt',
+    character: characters[9],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: null,
+      name: 'Blizzara Surge A',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Mag. Ice', 'All Enemies', null)}`,
+      valuesByOverboostLevel: {
+        damage: ['210', '240', '240', '240', '240', '240', '280', '280', '280', '280', '290']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 207,
+      mAtk: 226,
+      heal: 160
+    },
+    reinforcementAbilities: [
+      reinforcementAbilities["Boost HP"],
+      reinforcementAbilities["Boost Ice Pot."]
+    ]
+  }),
   "Type-99 Longsword": new Weapon({
     id: 20001,
     name: 'Type-99 Longsword',
@@ -6642,6 +6668,56 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
     reinforcementAbilities: [
       reinforcementAbilities["Boost HP"],
       reinforcementAbilities["Boost Wind Pot."]
+    ]
+  }),
+  "Sword of the Hunt": new Weapon({
+    id: 20031,
+    name: 'Sword of the Hunt',
+    character: characters[20],
+    element: 'Ice',
+    commandAbility: new CommandAbility({
+      id: 12003101,
+      name: 'Ice Arc',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Mag. Ice', 'All Enemies', null)}\nAlso, ${conditionHP('Self', '50', 'more')}, ${apply('Exploit Weakness', undefined, 'Self', null, undefined, undefined)}`,
+      valuesByOverboostLevel: {
+        damage: ['440', '530', '530', '530', '530', '530', '660', '660', '660', '660', '800'],
+        exploitWeaknessPot: ['25', '25', '25', '25', '25', '25', '35', '35', '35', '35', '35'],
+        exploitWeaknessDur: ['30', '35', '35', '35', '35', '35', '45', '45', '45', '45', '60'],
+        exploitWeaknessExt: ['6', '7', '7', '7', '7', '7', '9', '9', '9', '9', '12']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 212,
+      mAtk: 281,
+      heal: 164
+    },
+    reinforcementAbilities: [
+      reinforcementAbilities["Boost ATK"],
+      reinforcementAbilities["Boost Ability Pot."]
+    ]
+  }),
+  "Durandal": new UltimateWeapon({
+    id: 20028,
+    name: 'Durandal',
+    character: characters[20],
+    element: 'Non-elemental',
+    commandAbility: new UltimateCommandAbility({
+      id: null,
+      name: 'Ray Blade',
+      sigil: null,
+      description: `${damage('2,000', 'Phys./Mag. Non-elem.', 'Single Enemy', null)}\nAlso, ${increaseATBGauge(3, 'Self')}\n${increase('PATK', 'High', 'Self', null, 30, 30, 'High')}\n${increase('MATK', 'High', 'Self', null, 30, 30, 'High')}\n${chargeAndUses(50, 15, 3)}`
+    }),
+    maxRarityStats: {
+      pAtk: 206,
+      mAtk: 203,
+      heal: 118
+    },
+    reinforcementAbilities: [
+      reinforcementAbilities["Boost Ability Pot."],
+      reinforcementAbilities["Interruption - Exploit Weakness"]
     ]
   }),
   "Nameless": new Weapon({
@@ -9726,6 +9802,32 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
     reinforcementAbilities: [
       reinforcementAbilities["Boost ATK (All Allies)"],
       reinforcementAbilities["Boost PDEF"]
+    ]
+  }),
+  "Blade of the Hunt": new Weapon({
+    id: 56020,
+    name: 'Blade of the Hunt',
+    character: characters[56],
+    element: 'Ice',
+    commandAbility: new CommandAbility({
+      id: null,
+      name: 'Blizzara Surge A',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Mag. Ice', 'All Enemies', null)}`,
+      valuesByOverboostLevel: {
+        damage: ['210', '240', '240', '240', '240', '240', '280', '280', '280', '280', '290']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 204,
+      mAtk: 225,
+      heal: 165
+    },
+    reinforcementAbilities: [
+      reinforcementAbilities["Boost HP"],
+      reinforcementAbilities["Boost Ice Pot."]
     ]
   })
 };
