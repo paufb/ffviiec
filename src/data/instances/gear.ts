@@ -671,7 +671,7 @@ export const gear = {
       reinforcementAbilities["Buff/Debuff Extension (Stats/Pot./Res.)"],
       reinforcementAbilities["Critical Pot. Arcanum"]
     ],
-    reinforcementAbilitiesPoints: [10, 10]
+    reinforcementAbilitiesPoints: [15, 10]
   }),
   "Felyne Kamura Garb": new Gear({
     id: 7009,
@@ -900,6 +900,16 @@ export const gear = {
     reinforcementAbilities: [
       reinforcementAbilities["Boost HP"],
       reinforcementAbilities["Boost ATK"]
+    ],
+    reinforcementAbilitiesPoints: [10, 10]
+  }),
+  "Rabbit Butler": new Gear({
+    id: 20013,
+    name: 'Rabbit Butler',
+    character: characters[20],
+    reinforcementAbilities: [
+      reinforcementAbilities["Boost HP"],
+      reinforcementAbilities["Butler Rabbit Ears"]
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
@@ -1201,7 +1211,7 @@ export const gear = {
       reinforcementAbilities["Buff/Debuff Extension (Stats/Pot./Res.)"],
       reinforcementAbilities["Flamefrost Rabbit Ears"]
     ],
-    reinforcementAbilitiesPoints: [10, 10]
+    reinforcementAbilitiesPoints: [15, 10]
   }),
   "Beach Agent": new Gear({
     id: 52009,

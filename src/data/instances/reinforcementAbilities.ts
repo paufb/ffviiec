@@ -598,10 +598,10 @@ export const reinforcementAbilities = {
   "New Year's Mastery": new ReinforcementAbility({
     id: 54001,
     name: 'New Year\'s Mastery',
-    effect: 'Fire/Ice/Lightning/Earth/Water/Wind Ability Dmg. +{{flat}}%',
+    effect: 'Fire/Ice/Lightning/Earth/Water/Wind Ability Dmg. +{{dmg}}%',
     reqPts: [10],
     levelValues: {
-      flat: [30]
+      dmg: [30]
     }
   }),
   "New Year's Protection": new ReinforcementAbility({
@@ -703,10 +703,10 @@ export const reinforcementAbilities = {
   "Belt of the Worthy": new ReinforcementAbility({
     id: 55001,
     name: 'Belt of the Worthy',
-    effect: 'Fire/Ice/Lightning/Earth/Water/Wind Ability Dmg. +{{flat}}%',
+    effect: 'Fire/Ice/Lightning/Earth/Water/Wind Ability Dmg. +{{dmg}}%',
     reqPts: [10],
     levelValues: {
-      flat: [30]
+      dmg: [30]
     }
   }),
   "Crimson Hue of the Worthy": new ReinforcementAbility({
@@ -745,6 +745,15 @@ export const reinforcementAbilities = {
       pot: [20, 25, 30, 40],
       dur: [30, 30, 30, 30],
       ext: [30, 30, 30, 30]
+    }
+  }),
+  "Butler Rabbit Ears": new ReinforcementAbility({
+    id: 55501,
+    name: 'Butler Rabbit Ears',
+    effect: 'Fire/Ice/Lightning/Earth/Water/Wind Ability Dmg. +{{dmg}}%',
+    reqPts: [10],
+    levelValues: {
+      dmg: [30]
     }
   })
 }
