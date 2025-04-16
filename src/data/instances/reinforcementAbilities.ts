@@ -722,7 +722,7 @@ export const reinforcementAbilities = {
   "Claw of the Worthy": new ReinforcementAbility({
     id: 55301,
     name: 'Claw of the Worthy',
-    effect: 'Earth Ability Dmg. +{{earthDmgPercent}}%\nAttack Stance Cmd. Gauge Max.: Phys Ability Dmg. +{{physDmgPercent}}%',
+    effect: 'Earth Ability Dmg. +{{earthDmgPercent}}%\nAttack Stance Cmd. Gauge Max.: Phys. Ability Dmg. +{{physDmgPercent}}%',
     reqPts: [10],
     levelValues: {
       earthDmgPercent: [30],
@@ -754,6 +754,26 @@ export const reinforcementAbilities = {
     reqPts: [10],
     levelValues: {
       dmg: [30]
+    }
+  }),
+  "Levinspell Arcanum": new ReinforcementAbility({
+    id: 20405,
+    name: 'Levinspell Arcanum',
+    effect: 'Lightning Ability Dmg. +{{lightningDmgPercent}}%\nAttack Stance Cmd. Gauge Max.: Mag. Ability Dmg. +{{magDmgPercent}}%',
+    reqPts: [10],
+    levelValues: {
+      lightningDmgPercent: [30],
+      magDmgPercent: [20]
+    }
+  }),
+  "Earthen Silk Hat": new ReinforcementAbility({
+    id: 55601,
+    name: 'Earthen Silk Hat',
+    effect: 'Earth Ability Dmg. +{{earthDmgPercent}}%\nAttack Stance Cmd. Gauge Max.: Phys. Ability Dmg. +{{physDmgPercent}}%',
+    reqPts: [10],
+    levelValues: {
+      earthDmgPercent: [30],
+      physDmgPercent: [20]
     }
   })
 }

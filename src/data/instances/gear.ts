@@ -421,7 +421,7 @@ export const gear = {
       reinforcementAbilities["Boost Mag. Ability Pot."],
       reinforcementAbilities["Flameblade Arcanum"]
     ],
-    reinforcementAbilitiesPoints: [10, 10]
+    reinforcementAbilitiesPoints: [15, 10]
   }),
   "Kamura Dress": new Gear({
     id: 4011,
@@ -802,6 +802,16 @@ export const gear = {
       reinforcementAbilities["Cosmic Protection"]
     ],
     reinforcementAbilitiesPoints: [5, 10]
+  }),
+  "Dark Flyer": new Gear({
+    id: 9004,
+    name: 'Dark Flyer',
+    character: characters[9],
+    reinforcementAbilities: [
+      reinforcementAbilities["Physical & Magic Ward"],
+      reinforcementAbilities["Levinspell Arcanum"]
+    ],
+    reinforcementAbilitiesPoints: [10, 10]
   }),
   "SOLDIER: Second Class Future Hero": new Gear({
     id: 20001,
@@ -1232,6 +1242,16 @@ export const gear = {
       reinforcementAbilities["Alluring Ploy"]
     ],
     reinforcementAbilitiesPoints: [15, 10]
+  }),
+  "Dealer's Tailcoat": new Gear({
+    id: 52010,
+    name: 'Dealer\'s Tailcoat',
+    character: characters[52],
+    reinforcementAbilities: [
+      reinforcementAbilities["Physical & Magic Ward"],
+      reinforcementAbilities["Earthen Silk Hat"]
+    ],
+    reinforcementAbilitiesPoints: [10, 10]
   }),
   "Genial SOLDIER: Second Class": new Gear({
     id: 56001,
