@@ -2268,6 +2268,32 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
       reinforcementAbilities["Boost Earth Pot."]
     ]
   }),
+  "Odin Gloves": new Weapon({
+    id: 3041,
+    name: 'Odin Gloves',
+    character: characters[3],
+    element: 'Wind',
+    commandAbility: new CommandAbility({
+      id: 10304101,
+      name: 'Aerora Surge',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Mag. Wind', 'Single Enemy', null)}`,
+      valuesByOverboostLevel: {
+        damage: ['320', '370', '370', '370', '370', '370', '430', '430', '430', '430', '450']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 193,
+      mAtk: 228,
+      heal: 170
+    },
+    reinforcementAbilities: [
+      reinforcementAbilities["Boost Earth Resist."],
+      reinforcementAbilities["Boost HP"]
+    ]
+  }),
   "Guard Stick": new Weapon({
     id: 4001,
     name: 'Guard Stick',
@@ -6021,6 +6047,62 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
       reinforcementAbilities["Boost Ice Pot."]
     ]
   }),
+  "Odin Spear": new Weapon({
+    id: 9019,
+    name: 'Odin Spear',
+    character: characters[9],
+    element: 'Wind',
+    commandAbility: new CommandAbility({
+      id: 10901901,
+      name: 'Aerora Surge',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Mag. Wind', 'Single Enemy', null)}`,
+      valuesByOverboostLevel: {
+        damage: ['320', '370', '370', '370', '370', '370', '430', '430', '430', '430', '450']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 186,
+      mAtk: 222,
+      heal: 181
+    },
+    reinforcementAbilities: [
+      reinforcementAbilities["Boost Earth Resist."],
+      reinforcementAbilities["Boost PDEF"]
+    ]
+  }),
+  "Dragoon Lance": new Weapon({
+    id: 9010,
+    name: 'Dragoon Lance',
+    character: characters[9],
+    element: 'Lightning',
+    commandAbility: new CommandAbility({
+      id: 10901001,
+      name: 'Spark Stick',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Mag. Lightning', 'All Enemies', null)}\nAlso, ${conditionHP('Self', '50', 'more')}, ${decrease('Lightning Resist.', undefined, 'All Enemies', null, undefined, undefined, undefined)}\nWhen Buff is granted to [Rng.: Self], x1.2 damage.`,
+      valuesByOverboostLevel: {
+        damage: ['420', '480', '480', '480', '480', '480', '590', '590', '590', '590', '670'],
+        lightningResistDecreasePot: ['Low', 'Low', 'Low', 'Low', 'Low', 'Low', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid'],
+        lightningResistDecreaseDur: ['20', '22', '22', '22', '22', '22', '25', '25', '25', '25', '30'],
+        lightningResistDecreaseExt: ['6', '7', '7', '7', '7', '7', '8', '8', '8', '8', '10'],
+        lightningResistDecreaseMaxPot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 197,
+      mAtk: 281,
+      heal: 175
+    },
+    reinforcementAbilities: [
+      reinforcementAbilities["Boost MATK"],
+      reinforcementAbilities["Boost Lightning Pot."]
+    ]
+  }),
   "Type-99 Longsword": new Weapon({
     id: 20001,
     name: 'Type-99 Longsword',
@@ -9321,6 +9403,40 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
       reinforcementAbilities["Boost Ice Pot."]
     ]
   }),
+  "Rifle of the Hunt": new Weapon({
+    id: 52029,
+    name: 'Rifle of the Hunt',
+    character: characters[52],
+    element: 'Earth',
+    commandAbility: new CommandAbility({
+      id: 15202901,
+      name: 'Dust Whirl',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Phys. Earth', 'Single Enemy', null)}\nAlso, ${decrease('Earth Resist.', undefined, 'Single Enemy', null, undefined, undefined, undefined)}\n${conditionHP('Self', '50', 'more')}, ${decrease('PDEF', undefined, 'Single Enemy', null, undefined, undefined, undefined)}`,
+      valuesByOverboostLevel: {
+        damage: ['390', '450', '450', '450', '450', '450', '550', '550', '550', '550', '620'],
+        earthResistDecreasePot: ['Low', 'Low', 'Low', 'Low', 'Low', 'Low', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid'],
+        earthResistDecreaseDur: ['20', '22', '22', '22', '22', '22', '25', '25', '25', '25', '30'],
+        earthResistDecreaseExt: ['6', '7', '7', '7', '7', '7', '8', '8', '8', '8', '10'],
+        earthResistDecreaseMaxPot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        pDefDecreasePot: ['Low', 'Low', 'Low', 'Low', 'Low', 'Low', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid'],
+        pDefDecreaseDur: ['20', '22', '22', '22', '22', '22', '25', '25', '25', '25', '30'],
+        pDefDecreaseExt: ['6', '7', '7', '7', '7', '7', '8', '8', '8', '8', '10'],
+        pDefDecreaseMaxPot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 285,
+      mAtk: 218,
+      heal: 154
+    },
+    reinforcementAbilities: [
+      reinforcementAbilities["Boost PATK"],
+      reinforcementAbilities["Boost Phys. Ability Pot."]
+    ]
+  }),
   "Type-90 Longsword": new Weapon({
     id: 56001,
     name: 'Type-90 Longsword',
@@ -9835,7 +9951,7 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
 type Range = 'Single Enemy' | 'All Enemies' | 'Single Ally' | 'All Allies' | 'Self' | 'Affected Targets' | 'Ally (Excluding Self)' | null;
 type CriticalRate = number | null;
 type Effect = 'Ailment: Stun' | 'Ailment: Poison' | 'Ailment: Silence' | 'Ailment: Ice Weakness' | 'Haste' | 'Provoke' | 'Veil' | 'Exploit Weakness' | 'Status Ailment: Stop' | 'Status Ailment: Enfeeble';
-type Attribute = 'PATK' | 'MATK' | 'PDEF' | 'MDEF' | 'Fire Resist.' | 'Ice Resist.' | 'Thunder Resist.' | 'Earth Resist.' | 'Water Resist.' | 'Wind Resist.' | 'Fire Damage' | 'Ice Damage' | 'Lightning Damage' | 'Earth Damage' | 'Water Damage' | 'Wind Damage' | 'Physical Resistance' | 'Magic Resistance';
+type Attribute = 'PATK' | 'MATK' | 'PDEF' | 'MDEF' | 'Fire Resist.' | 'Ice Resist.' | 'Thunder Resist.' | 'Lightning Resist.' | 'Earth Resist.' | 'Water Resist.' | 'Wind Resist.' | 'Fire Damage' | 'Ice Damage' | 'Lightning Damage' | 'Earth Damage' | 'Water Damage' | 'Wind Damage' | 'Physical Resistance' | 'Magic Resistance';
 type Element = 'Non-elem.' | 'Fire' | 'Ice' | 'Lightning' | 'Earth' | 'Water' | 'Wind';
 type Damage = string | undefined;
 type DamageType = `Phys. ${Element}` | `Mag. ${Element}` | `Phys./Mag. ${Element}`;
@@ -9858,6 +9974,7 @@ function getAttributeKey(attribute: Attribute) {
     'Fire Resist.': 'fireResist',
     'Ice Resist.': 'iceResist',
     'Thunder Resist.': 'lightningResist',
+    'Lightning Resist.': 'lightningResist',
     'Earth Resist.': 'earthResist',
     'Water Resist.': 'waterResist',
     'Wind Resist.': 'windResist',
