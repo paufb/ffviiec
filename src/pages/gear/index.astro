@@ -1,38 +1,17 @@
 ---
-import { Image } from 'astro:assets';
-import { characters } from '../../data/instances/characters';
 import { gear } from '../../data/instances/gear';
 import Layout from '../../layouts/Layout.astro';
 import GearImage from '../../components/GearImage.astro';
 import ReinforcementAbilityIcon from '../../components/ReinforcementAbilityIcon.astro';
-
-const characterImages = import.meta.glob<{ default: ImageMetadata }>('../../assets/character_btn/*.png');
+import FiltersHeader from '../../components/FiltersHeader.astro';
 ---
 
 <Layout title="Gear - FFVIIEC" highlightedRoute="Gear">
-  <div class="flex flex-col gap-4 max-w-360 mx-auto" style={{ width: 'calc(100vw - 76px)' }}>
-    <div class="flex flex-col gap-2 overflow-x-scroll">
-      <div class="flex flex-nowrap justify-center gap-1 min-w-max">
-        {Object.values(characters).map((character) => (
-          <label class="l-chr w-10 h-10">
-            <input type="checkbox" value={character.name} hidden class="f-chr" />
-            <Image
-              src={characterImages[`../../assets/character_btn/${character.id}.png`]()}
-              class="w-full h-full object-cover p-1"
-              width={50}
-              height={50}
-              alt={character.name}
-            />
-          </label>
-        ))}
-      </div>
-    </div>
+  <div class="flex flex-col gap-4 max-w-360 mx-auto">
+    <FiltersHeader characterCheckboxClass="f-chr" />
     <div class="grid grid-cols-[repeat(auto-fit,minmax(min(300px,100%),1fr))] gap-4">
       {Object.values(gear).map((gear) => (
-        <div
-          class="g-etr flex gap-2 min-w-0"
-          data-character={gear.character.name}
-        >
+        <div class="g-etr" data-character={gear.character.name}>
           <a href={`/gear/${gear.id || gear.name}`}>
             <GearImage
               gear={gear}
@@ -66,25 +45,10 @@ const characterImages = import.meta.glob<{ default: ImageMetadata }>('../../asse
 </Layout>
 
 <style>
-  .l-chr {
-    cursor: pointer;
-    border: 2px solid #394d60;
-    border-radius: 2px;
-    outline: 2px solid #394d60;
-    outline-offset: -6px;
-    transition: scale .1s;
-    &.selected {
-      background: #032950;
-      border-color: #2c80d7 !important;
-      outline-color: #2c80d7 !important;
-    }
-    &:hover {
-      border-color: #5574aa;
-      outline-color: #5574aa;
-    }
-    &:active {
-      scale: .95;
-    }
+  .g-etr {
+    display: flex;
+    gap: .5rem;
+    min-width: 0;
   }
 </style>
 

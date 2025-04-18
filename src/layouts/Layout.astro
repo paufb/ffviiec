@@ -23,6 +23,7 @@ const { title, highlightedRoute } = Astro.props;
 		<title>{title ?? 'FFVIIEC'}</title>
 	</head>
 	<body>
+		<div class="background" />
 		<div class="flex">
 			<AppSidebar highlightedRoute={highlightedRoute} />
 			<main class="flex flex-col flex-1">
@@ -36,18 +37,17 @@ const { title, highlightedRoute } = Astro.props;
 </html>
 
 <style>
-	html,
 	body {
 		margin: 0;
-		width: 100%;
-		height: 100%;
 		font-family: 'Noto Sans', sans-serif;
 		color: white;
 	}
-
-	body {
-		background: fixed no-repeat #030d17 url('../assets/background.jpg') center/cover;
+	.background {
+		position: fixed;
+		width: 100vw;
+		height: 100vh;
+		background: no-repeat #030d17 url('../assets/background.jpg') center/cover;
 		backdrop-filter: blur(5px);
-		-webkit-backdrop-filter: blur(5px);
+		z-index: -1;
 	}
 </style>
