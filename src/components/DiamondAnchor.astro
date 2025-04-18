@@ -6,13 +6,18 @@ interface Props {
   href: string;
   imgSrc: ImageMetadata;
   imgAlt: string;
+  className?: string;
+  style?: astroHTML.JSX.CSSProperties;
   disabled?: boolean;
 }
 
-const { href, imgSrc, imgAlt, disabled } = Astro.props;
+const { href, imgSrc, imgAlt, className, style, disabled } = Astro.props;
 ---
 
-<div class="diamond-container scale-75">
+<div
+  class:list={['diamond-container', { [`${className}`]: className }]}
+  style={style}
+>
   <div class="diamond-outer-shadow" />
   <div class="diamond-inner-shadow" />
   <div class="diamond-border" />
@@ -40,12 +45,16 @@ const { href, imgSrc, imgAlt, disabled } = Astro.props;
     position: relative;
     transition: transform 0.1s;
 
-    &:hover {
-      transform: translateY(-5px);
+    &:has(.diamond-anchor:hover) {
+      transform: translateY(-.5rem);
     }
 
-    &:active {
+    &:has(.diamond-anchor:active) {
       transform: scale(0.95);
+    }
+
+    &:has(.diamond-anchor:active):has(.diamond-anchor:hover) {
+      transform: translateY(-0.5rem) scale(0.95);
     }
 
     & .diamond-outer-shadow,
@@ -58,32 +67,32 @@ const { href, imgSrc, imgAlt, disabled } = Astro.props;
 
     & .diamond-outer-shadow {
       position: absolute;
-      width: 270px;
-      height: 270px;
+      width: 202.5px;
+      height: 202.5px;
       background: linear-gradient(to top, rgba(74, 99, 195, 1) 0%, transparent 30%);
       clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
     }
 
     & .diamond-inner-shadow {
       position: absolute;
-      width: 180px;
-      height: 180px;
+      width: 135px;
+      height: 135px;
       background: rgba(26, 63, 176, 0.5);
       clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
     }
 
     & .diamond-border {
       position: absolute;
-      width: 137px;
-      height: 137px;
+      width: 102.75px;
+      height: 102.75px;
       background: rgb(68, 159, 201);
       clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
     }
 
     & .diamond-anchor {
       display: block;
-      width: 128px;
-      height: 128px;
+      width: 96px;
+      height: 96px;
       background: rgb(26, 63, 176);
       clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
       transition: background-color 0.1s;
@@ -93,7 +102,7 @@ const { href, imgSrc, imgAlt, disabled } = Astro.props;
       }
     
       & img.weapons-img {
-        transform: scale(0.8) translateX(-17px) translateY(5px);
+        transform: scale(0.8) translateX(-12.75px) translateY(3.75px);
       }
 
       & img {

@@ -21,9 +21,18 @@ import DiamondAnchor from '../components/DiamondAnchor.astro';
 			<br />
 			© SQUARE ENIX Powered by Applibot, Inc.
 		</h1>
-		<div class="flex flex-wrap justify-center gap-5 pb-10 animate-fadeinfromtop">
-			{Object.values(routes).map((route) => (
-				<DiamondAnchor href={route.path} imgSrc={route.imgMetadata} imgAlt={route.title} />
+		<div class="flex flex-wrap justify-center gap-12.5 px-5 pt-5 pb-13.5">
+			{Object.values(routes).map((route, index) => (
+				<DiamondAnchor
+				  href={route.path}
+					imgSrc={route.imgMetadata}
+					imgAlt={route.title}
+					className="animate-fadeinfromtop"
+					style={{
+						animationFillMode: 'backwards',
+						animationDelay: `0.${index}s`
+					}}
+				/>
 			))}
 		</div>
 	</div>
