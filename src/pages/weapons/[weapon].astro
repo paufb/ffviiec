@@ -147,7 +147,8 @@ const displayableOverboostLevels = [0, 1, 6, 10];
                 <div class="flex flex-col flex-1">
                   <span id="c-ability-name" class="text-xl items-start">{weapon.commandAbility.name}++</span>
                   <div class="flex justify-end">
-                    <ATBBar cost={weapon.commandAbility.atbCost} />
+                    <span class="text-[#95c7ff] leading-4">ATB</span>
+                    <ATBBar cost={weapon.commandAbility.atbCost} style={{ transform: 'scaleY(.5)', transformOrigin: 'bottom' }} />
                   </div>
                 </div>
               </div>

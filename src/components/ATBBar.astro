@@ -1,16 +1,17 @@
 ---
 interface Props {
   cost: number;
+  style?: astroHTML.JSX.CSSProperties;
 }
 
-const { cost } = Astro.props;
+const { cost, style } = Astro.props;
 const backgroundColor = "#3f77af";
 const foregroundColor = "#09223b";
 const segmentColor = "#8be2ff";
 const segmentColors = [...Array(5)].map((_, i) => cost >= i + 1 ? segmentColor : foregroundColor);
 ---
 
-<svg width="83px" height="16px" viewBox="0 0 83 16">
+<svg width="83px" height="16px" viewBox="0 0 83 16" style={style}>
   <polygon points="0,16 10,0 83,0 73,16" fill={backgroundColor} />
   <polygon points="2,15 11,1 81,1 72,15" fill={foregroundColor} />
   <polygon points="4,14 12,2 24.2,2 16.2,14" fill={segmentColors[0]} />
