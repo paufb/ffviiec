@@ -1,9 +1,9 @@
 ---
 import { gear } from '../../data/instances/gear';
 import Layout from '../../layouts/Layout.astro';
-import GearImage from '../../components/GearImage.astro';
-import ReinforcementAbilityIcon from '../../components/ReinforcementAbilityIcon.astro';
 import CharacterDiamond from '../../components/CharacterDiamond.astro';
+import GearImage from '../../components/GearImage.astro';
+import ReinforcementAbilityAnchor from '../../components/ReinforcementAbilityAnchor.astro';
 
 export async function getStaticPaths() {
   return Object.values(gear).map((gear) => ({
@@ -23,7 +23,7 @@ const { selectedGear } = Astro.props;
           <div class="flex flex-col gap-2">
             <div class="flex">
               <CharacterDiamond character={selectedGear.character} class="w-20 h-auto" />
-              <div class="flex flex-col justify-center">
+              <div class="flex flex-col justify-center text-2xl">
                 {selectedGear.name}
                 <div id="overboost-stars" class="flex flex-nowrap min-w-min">
                   {[...Array(5)].map((_, i) => (
@@ -39,16 +39,10 @@ const { selectedGear } = Astro.props;
               <hr class="h-0.75 mt-1 mb-4 border-none bg-[#95c7ff]" />
               <div class="flex flex-col gap-2">
                 {selectedGear.reinforcementAbilities.map((reinforcementAbility, index) => (
-                  <a
-                    href={`/reinforcement-abilities/${reinforcementAbility.id}`}
-                    class="flex gap-2 border-2 border-[#193d62] outline-2 outline-[#193d62] -outline-offset-7 rounded-lg p-3 hover:bg-[#0b203e] hover:border-[#2164ab] hover:outline-[#2164ab] transform active:scale-95 transition duration-100"
-                  >
-                    <ReinforcementAbilityIcon reinforcementAbility={reinforcementAbility} width={40} height={40} />
-                    {reinforcementAbility.name}
-                    <span class="absolute right-2 bottom-2">
-                      +{selectedGear.reinforcementAbilitiesPoints[index]} <span class="text-[#95c7ff]">pt</span>
-                    </span>
-                  </a>
+                  <ReinforcementAbilityAnchor
+                    reinforcementAbility={reinforcementAbility}
+                    points={selectedGear.reinforcementAbilitiesPoints[index]}
+                  />
                 ))}
               </div>
             </div>

@@ -6,7 +6,7 @@ import AbilityIcons from '../../components/AbilityIcons.astro';
 import ATBBar from '../../components/ATBBar.astro';
 import CharacterDiamond from '../../components/CharacterDiamond.astro';
 import OverboostStars from '../../components/OverboostStars.astro';
-import ReinforcementAbilityIcon from '../../components/ReinforcementAbilityIcon.astro';
+import ReinforcementAbilityAnchor from '../../components/ReinforcementAbilityAnchor.astro';
 import WeaponImage from '../../components/WeaponImage.astro';
 import hpIcon from '../../assets/_ui/icon/parameter/parameter_hp.png';
 import pAtkIcon from '../../assets/_ui/icon/parameter/parameter_str.png';
@@ -35,7 +35,7 @@ const displayableOverboostLevels = [0, 1, 6, 10];
           <div>
             <div class="flex">
               <CharacterDiamond character={weapon.character} class="w-20 h-auto" />
-              <div class="flex flex-col">
+              <div class="flex flex-col text-2xl">
                 {weapon.name}
                 {displayableOverboostLevels.map((level) => (
                   <div
@@ -46,7 +46,7 @@ const displayableOverboostLevels = [0, 1, 6, 10];
                     <OverboostStars level={level} size="24px" />
                   </div>
                 ))}
-                Lv. 120
+                <span class="text-xl">Lv. 120</span>
               </div>
             </div>
           </div>
@@ -61,7 +61,7 @@ const displayableOverboostLevels = [0, 1, 6, 10];
               { icon: mDefIcon, name: 'MDEF', getterFunc: undefined },
               { icon: healIcon, name: 'HEAL', getterFunc: weapon.getHeal.bind(weapon) },
             ].map((stat, index) => (
-              <div class={`flex justify-between px-1.5 py-1 ${index % 2 === 0 ? 'bg-[#051f3f]' : undefined}`}>
+              <div class={`flex justify-between text-xl px-1.5 py-1 ${index % 2 === 0 ? 'bg-[#051f3f]' : undefined}`}>
                 <div class="flex items-center gap-4 text-[#95c7ff]">
                   <Image
                     src={stat.icon}
@@ -88,15 +88,15 @@ const displayableOverboostLevels = [0, 1, 6, 10];
       <div class="flex flex-col gap-5">
         <WeaponImage weapon={weapon} size="large" />
         <div class="flex items-center justify-between gap-5">
-          <button id="decrease-tier-button" class="cursor-pointer flex items-center justify-center w-16 h-16 bg-[#0e151b] border-2 border-[#3a526e] outline-2 outline-[#3a526e] -outline-offset-7 rounded-lg transform active:scale-95 transition duration-100 hover:bg-[#19212f] hover:border-[#5574aa] hover:outline-[#5574aa]">
+          <button id="decrease-tier-button">
             <svg class="w-9 h-9" fill="#91a5bb" style="transform: scaleX(-1);" width="24" height="24" viewBox="0 0 24 24">
               <path d="M10.477 0h-8.977l12.024 12-12.024 12h8.977l12.023-12z"></path>
             </svg>
           </button>
-          <div class="flex flex-1 items-center justify-center bg-[#051629] border-3 border-[#193d62] rounded-lg h-12 whitespace-nowrap overflow-x-scroll px-2">
+          <div class="flex flex-1 items-center justify-center text-xl w-0 overflow-x-scroll bg-[#051629] border-3 border-[#193d62] rounded-lg h-12 whitespace-nowrap px-2">
             {displayableOverboostLevels.map((level) => (
               <span
-                class="overboost-level-dependant"
+                class="overboost-level-dependant min-w-0"
                 data-level={level}
                 { ...(level !== 10 ? { hidden: true } : undefined) }
               >
@@ -109,7 +109,7 @@ const displayableOverboostLevels = [0, 1, 6, 10];
               </span>
             ))}
           </div>
-          <button id="increase-tier-button" class="cursor-pointer flex items-center justify-center w-16 h-16 bg-[#0e151b] border-2 border-[#3a526e] outline-2 outline-[#3a526e] -outline-offset-7 rounded-lg transform active:scale-95 transition duration-100 hover:bg-[#19212f] hover:border-[#5574aa] hover:outline-[#5574aa]">
+          <button id="increase-tier-button">
             <svg class="w-9 h-9" fill="#91a5bb" width="24" height="24" viewBox="0 0 24 24">
               <path d="M10.477 0h-8.977l12.024 12-12.024 12h8.977l12.023-12z"></path>
             </svg>
@@ -139,9 +139,13 @@ const displayableOverboostLevels = [0, 1, 6, 10];
             <hr class="h-0.75 mt-1 mb-4 border-none bg-[#95c7ff]" />
             <div class={container}>
               <div class="flex gap-2">
-                <AbilityIcons commandAbility={weapon.commandAbility} element={weapon.element} />
+                <AbilityIcons
+                  commandAbility={weapon.commandAbility}
+                  element={weapon.element}
+                  size="3rem"
+                />
                 <div class="flex flex-col flex-1">
-                  <span id="c-ability-name">{weapon.commandAbility.name}++</span>
+                  <span id="c-ability-name" class="text-xl items-start">{weapon.commandAbility.name}++</span>
                   <div class="flex justify-end">
                     <ATBBar cost={weapon.commandAbility.atbCost} />
                   </div>
@@ -163,13 +167,7 @@ const displayableOverboostLevels = [0, 1, 6, 10];
             <hr class="h-0.75 mt-1 mb-4 border-none bg-[#95c7ff]" />
             <div class="flex flex-col gap-2">
               {weapon.reinforcementAbilities.map((reinforcementAbility) => (
-                <a
-                  href={`/reinforcement-abilities/${reinforcementAbility.id}`}
-                  class="flex gap-2 border-2 border-[#193d62] outline-2 outline-[#193d62] -outline-offset-7 rounded-lg p-3 hover:bg-[#0b203e] hover:border-[#2164ab] hover:outline-[#2164ab] transform active:scale-95 transition duration-100"
-                >
-                  <ReinforcementAbilityIcon reinforcementAbility={reinforcementAbility} width={40} height={40} />
-                  {reinforcementAbility.name}
-                </a>
+                <ReinforcementAbilityAnchor reinforcementAbility={reinforcementAbility} />
               ))}
             </div>
           </div>
@@ -178,6 +176,35 @@ const displayableOverboostLevels = [0, 1, 6, 10];
     </div>
   </div>
 </Layout>
+
+<style>
+  #decrease-tier-button,
+  #increase-tier-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: #0e151b;
+    border: 2px solid #3a526e;
+    outline: 2px solid #3a526e;
+    outline-offset: -7px;
+    border-radius: .5rem;
+    touch-action: manipulation;
+    cursor: pointer;
+    transition: scale 100ms;
+
+    &:active {
+      scale: .95;
+    }
+
+    &:hover {
+      background-color: #19212f;
+      border-color: #5574aa;
+      outline-color: #5574aa;
+    }
+  }
+</style>
 
 <script>
   document.querySelector('#decrease-tier-button')!.addEventListener('click', () => changeTier('decrease'));

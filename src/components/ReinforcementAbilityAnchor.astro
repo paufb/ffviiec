@@ -1,0 +1,48 @@
+---
+import type { ReinforcementAbility } from '../data/classes/ReinforcementAbility';
+import ReinforcementAbilityIcon from './ReinforcementAbilityIcon.astro';
+
+interface Props {
+  reinforcementAbility: ReinforcementAbility;
+  points?: number;
+}
+
+const { reinforcementAbility, points } = Astro.props;
+---
+
+<a
+  href={`/reinforcement-abilities/${reinforcementAbility.id}`}
+  class="r-ability-anchor text-xl"
+>
+  <ReinforcementAbilityIcon reinforcementAbility={reinforcementAbility} width={48} height={48} />
+  {reinforcementAbility.name}
+  {points && (
+    <span class="absolute right-2 bottom-2">
+      +{points} <span class="text-[#95c7ff]">pt</span>
+    </span>
+  )}
+</a>
+
+<style>
+  .r-ability-anchor {
+    position: relative;
+    display: flex;
+    gap: .5rem;
+    border: 2px solid #193d62;
+    outline: 2px solid #193d62;
+    outline-offset: -7px;
+    border-radius: .5rem;
+    padding: .75rem;
+    transition: scale 100ms;
+
+    &:hover {
+      background-color: #0b203e;
+      border-color: #2164ab;
+      outline-color: #2164ab;
+    }
+
+    &:active {
+      scale: .95;
+    }
+  }
+</style>

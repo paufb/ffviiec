@@ -9,6 +9,7 @@ import minusImage from '../assets/_ui/icon/common/minus.png';
 interface Props {
   commandAbility: CommandAbility;
   element: Element | null;
+  size?: string;
 }
 
 const elementsIcons: { [K in Element]: string } = {
@@ -21,28 +22,37 @@ const elementsIcons: { [K in Element]: string } = {
     'Wind': 'wind'
   };
 
-const { commandAbility, element } = Astro.props;
+const { commandAbility, element, size } = Astro.props;
 const activeSkillImages = import.meta.glob<{ default: ImageMetadata }>('../assets/activeskill/*.png');
 const attributeImages = import.meta.glob<{ default: ImageMetadata }>('../assets/_ui/icon/attribute/*.png');
 const signImages = import.meta.glob<{ default: ImageMetadata }>('../assets/_ui/icon/sign/*.png');
 ---
 
 <div class="a">
-  <div class={`b ${commandAbility.id ? '' : 'p-1'}`}>
+  <div
+    class={`b ${commandAbility.id ? '' : 'p-1'}`}
+    style={{ width: size, height: size }}
+  >
     <Image
       class="animate-imageload"
       src={commandAbility.id ? activeSkillImages[`../assets/activeskill/${commandAbility.id}.png`]() : unfixImage}
       alt={commandAbility.name}
     />
   </div>
-  <div class={`c ${element ? '' : 'p-1'}`}>
+  <div
+    class={`c ${element ? '' : 'p-1'}`}
+    style={size && { width: `calc(${size} / 2)`, height: `calc(${size} / 2)` }}
+  >
     <Image
       class="animate-imageload"
       src={element ? attributeImages[`../assets/_ui/icon/attribute/${elementsIcons[element]}.png`]() : minusImage }
       alt={element ?? ''}
     />
   </div>
-  <div class={`c ${commandAbility.sigil ? '' : 'p-1'}`}>
+  <div
+    class={`c ${commandAbility.sigil ? '' : 'p-1'}`}
+    style={size && { width: `calc(${size} / 2)`, height: `calc(${size} / 2)` }}
+  >
     <Image
       class="animate-imageload"
       src={commandAbility.sigil ? signImages[`../assets/_ui/icon/sign/${commandAbility.sigil.icon}.png`]() : minusImage}
