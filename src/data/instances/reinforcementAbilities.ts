@@ -617,7 +617,7 @@ export const reinforcementAbilities = {
   "Attack Boost": new ReinforcementAbility({
     id: 54201,
     name: 'Attack Boost',
-    effect: 'PATk & MATK are increased when battle begins. (Pot.: High / Rng.: Self / Dur.: {{duration}}s / Ext.: +{{extension}}s / Max. pot.: High / Not affected by increase or reduction in Effect Duration.)',
+    effect: 'PATK & MATK are increased when battle begins. (Pot.: High / Rng.: Self / Dur.: {{duration}}s / Ext.: +{{extension}}s / Max. pot.: High / Not affected by increase or reduction in Effect Duration.)',
     reqPts: [1, 5, 15, 25],
     levelValues: {
       duration: [15, 30, 45, 60],
@@ -775,5 +775,12 @@ export const reinforcementAbilities = {
       earthDmgPercent: [30],
       physDmgPercent: [20]
     }
+  }),
+  "Ribbon Rabbit Ears": new ReinforcementAbility({
+    id: 55701,
+    name: 'Ribbon Rabbit Ears',
+    effect: 'When granting Phys. Attack Down: Max. Pot. Tier +1\n(Only affects max. tier)',
+    reqPts: [10],
+    levelValues: {}
   })
 }

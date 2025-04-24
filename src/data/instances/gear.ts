@@ -261,7 +261,7 @@ export const gear = {
       reinforcementAbilities["Boost Mag. Ability Pot."],
       reinforcementAbilities["Waterblade Arcanum"]
     ],
-    reinforcementAbilitiesPoints: [10, 10]
+    reinforcementAbilitiesPoints: [15, 10]
   }),
   "Feather Style": new Gear({
     id: 3006,
@@ -642,6 +642,16 @@ export const gear = {
       reinforcementAbilities["Waterblade Arcanum"]
     ],
     reinforcementAbilitiesPoints: [15, 10]
+  }),
+  "Bunny Apron": new Gear({
+    id: 6012,
+    name: 'Bunny Apron',
+    character: characters[6],
+    reinforcementAbilities: [
+      reinforcementAbilities["Physical & Magic Ward"],
+      reinforcementAbilities["Ribbon Rabbit Ears"]
+    ],
+    reinforcementAbilitiesPoints: [10, 10]
   }),
   "Self-Professed Fortune-Teller": new Gear({
     id: 7001,
