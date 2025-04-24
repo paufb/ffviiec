@@ -4466,6 +4466,40 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
       reinforcementAbilities["Boost Earth Pot."]
     ]
   }),
+  "Watch of the Hunt": new Weapon({
+    id: 6035,
+    name: 'Watch of the Hunt',
+    character: characters[6],
+    element: 'Lightning',
+    commandAbility: new CommandAbility({
+      id: 10603501,
+      name: 'Lightning Ninjutsu',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Mag. Lightning', 'All Enemies', null)}\nAlso, ${decrease('PATK', undefined, 'All Enemies', null, undefined, undefined, undefined)}\n${conditionHP('Self', '70', 'more')}, ${decrease('PDEF', undefined, 'All Allies', null, undefined, undefined, undefined)}`,
+      valuesByOverboostLevel: {
+        damage: ['340', '390', '390', '390', '390', '390', '480', '480', '480', '480', '540'],
+        pAtkDecreasePot: ['Low', 'Low', 'Low', 'Low', 'Low', 'Low', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid'],
+        pAtkDecreaseDur: ['20', '22', '22', '22', '22', '22', '25', '25', '25', '25', '30'],
+        pAtkDecreaseExt: ['6', '7', '7', '7', '7', '7', '8', '8', '8', '8', '10'],
+        pAtkDecreaseMaxPot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        pDefDecreasePot: ['Low', 'Low', 'Low', 'Low', 'Low', 'Low', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid'],
+        pDefDecreaseDur: ['12', '16', '16', '16', '16', '16', '16', '16', '16', '16', '20'],
+        pDefDecreaseExt: ['4', '5', '5', '5', '5', '5', '5', '5', '5', '5', '6'],
+        pDefDecreaseMaxPot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 214,
+      mAtk: 283,
+      heal: 160
+    },
+    reinforcementAbilities: [
+      reinforcementAbilities["Boost HP"],
+      reinforcementAbilities["Boost Mag. Ability Pot."]
+    ]
+  }),
   "Yellow Megaphone": new Weapon({
     id: 7001,
     name: 'Yellow Megaphone',
@@ -5059,6 +5093,34 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
     reinforcementAbilities: [
       reinforcementAbilities["Boost HP"],
       reinforcementAbilities["Boost Ice Pot."]
+    ]
+  }),
+  "Spirit Demon Megaphone": new Weapon({
+    id: 7033,
+    name: 'Spirit Demon Megaphone',
+    character: characters[7],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: null,
+      name: 'Debravera Surge A',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Mag. Non-elem.', 'All Enemies', 10)}\nAlso, ${decrease('PATK', 'Low', 'All Enemies', null, undefined, undefined, 'Mid')}`,
+      valuesByOverboostLevel: {
+        damage: ['180', '210', '210', '210', '210', '210', '240', '240', '240', '240', '250'],
+        pAtkDecreaseDur: ['20', '25', '25', '25', '25', '25', '30', '30', '30', '30', '35'],
+        pAtkDecreaseExt: ['5', '6', '6', '6', '6', '6', '7', '7', '7', '7', '8']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 214,
+      mAtk: 218,
+      heal: 161
+    },
+    reinforcementAbilities: [
+      reinforcementAbilities["Boost HP"],
+      reinforcementAbilities["Boost Mag. Ability Pot."]
     ]
   }),
   "Cath Palug": new Weapon({
@@ -6561,7 +6623,7 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
       sigil: null,
       description: `${damage(undefined, 'Mag. Fire', 'Single Enemy', null)}\nAlso, ${conditionHP('Self', '70', 'more')}, x1.2 damage.`,
       valuesByOverboostLevel: {
-        damage: ['480', '', '', '', '', '', '710', '710', '710', '710', '850']
+        damage: ['480', '580', '580', '580', '580', '580', '710', '710', '710', '710', '850']
       }
     }),
     maxRarityLevel: 5,
@@ -7207,7 +7269,7 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
       sigil: null,
       description: `${damage(undefined, 'Mag. Non-elem.', 'All Enemies', 10)}\nAlso, against a single target, x1.3 damage.`,
       valuesByOverboostLevel: {
-        damage: ['500', '', '', '', '', '', '740', '740', '740', '740', '900']
+        damage: ['500', '600', '600', '600', '600', '600', '740', '740', '740', '740', '900']
       }
     }),
     maxRarityLevel: 5,
@@ -9437,6 +9499,34 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
       reinforcementAbilities["Boost Phys. Ability Pot."]
     ]
   }),
+  "Spirit Demon Rifle": new Weapon({
+    id: 52030,
+    name: 'Spirit Demon Rifle',
+    character: characters[52],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: null,
+      name: 'Debravera Surge A',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Mag. Non-elem.', 'All Enemies', 10)}\nAlso, ${decrease('PATK', 'Low', 'All Enemies', null, undefined, undefined, 'Mid')}`,
+      valuesByOverboostLevel: {
+        damage: ['180', '210', '210', '210', '210', '210', '240', '240', '240', '240', '250'],
+        pAtkDecreaseDur: ['20', '25', '25', '25', '25', '25', '30', '30', '30', '30', '35'],
+        pAtkDecreaseExt: ['5', '6', '6', '6', '6', '6', '7', '7', '7', '7', '8']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 214,
+      mAtk: 215,
+      heal: 164
+    },
+    reinforcementAbilities: [
+      reinforcementAbilities["Boost HP"],
+      reinforcementAbilities["Boost Mag. Ability Pot."]
+    ]
+  }),
   "Type-90 Longsword": new Weapon({
     id: 56001,
     name: 'Type-90 Longsword',
@@ -9710,10 +9800,10 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
       sigil: null,
       description: `${damage(undefined, 'Phys. Water', 'Single Enemy', null)}\nAlso, ${apply('Provoke', null, 'Self', null, 60, 0)}\n${apply('Veil', undefined, 'Self', null, undefined, undefined)}`,
       valuesByOverboostLevel: {
-        damage: ['520', '', '', '', '', '', '780', '780', '780', '780', '940'],
-        veilPot: ['5', '', '', '', '', '', '8', '8', '8', '8', '10'],
-        veilDur: ['40', '', '', '', '', '', '50', '50', '50', '50', '60'],
-        veilExt: ['8', '', '', '', '', '', '10', '10', '10', '10', '12']
+        damage: ['520', '620', '620', '620', '620', '620', '780', '780', '780', '780', '940'],
+        veilPot: ['5', '6', '6', '6', '6', '6', '8', '8', '8', '8', '10'],
+        veilDur: ['40', '45', '45', '45', '45', '45', '50', '50', '50', '50', '60'],
+        veilExt: ['8', '9', '9', '9', '9', '9', '10', '10', '10', '10', '12']
       }
     }),
     maxRarityLevel: 5,
