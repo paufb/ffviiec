@@ -15,13 +15,17 @@ const { reinforcementAbility } = Astro.props;
 
 <Layout>
   <div class="flex flex-col gap-4 max-w-360 m-auto">
-    <div class="flex items-center gap-4">
-      <ReinforcementAbilityIcon reinforcementAbility={reinforcementAbility} width={48} height={48} />
+    <div class="flex items-center gap-4 text-2xl">
+      <ReinforcementAbilityIcon
+        reinforcementAbility={reinforcementAbility}
+        width="3rem"
+        height="3rem"
+      />
       {reinforcementAbility.name}
     </div>
     <hr class="h-0.5 border-none bg-[#2e435c]" />
     {reinforcementAbility.reqPts.map((reqPt, index) => (
-      <div class="relative flex flex-col gap-2 p-2 bg-[#051629] border-2 border-[#193d62] rounded-md">
+      <div class="relative flex flex-col gap-2 text-lg p-2 bg-[#051629] border-2 border-[#193d62] rounded-md">
         <div class="flex justify-between text-[#95c7ff]">
           {`Lv. ${index + 1}`}
           <div>

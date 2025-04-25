@@ -181,28 +181,27 @@ const displayableOverboostLevels = [0, 1, 6, 10];
 <style>
   #decrease-tier-button,
   #increase-tier-button {
+    --border-color: #3a526e;
+    --background-color: #0e151b;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 4rem;
     height: 4rem;
-    background-color: #0e151b;
-    border: 2px solid #3a526e;
-    outline: 2px solid #3a526e;
-    outline-offset: -7px;
-    border-radius: .5rem;
+    background-color: var(--background-color);
+    border: .375rem double var(--border-color);
+    border-radius: .25rem;
     touch-action: manipulation;
     cursor: pointer;
-    transition: scale 100ms;
+    transition: scale .1s;
+
+    &:hover {
+      --border-color: #5574aa;
+      --background-color: #19212f;
+    }
 
     &:active {
       scale: .95;
-    }
-
-    &:hover {
-      background-color: #19212f;
-      border-color: #5574aa;
-      outline-color: #5574aa;
     }
   }
 </style>

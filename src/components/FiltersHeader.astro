@@ -24,11 +24,15 @@ const sigilImages = import.meta.glob<{ default: ImageMetadata }>('../assets/_ui/
   {characterCheckboxClass && (
     <div class="flex flex-nowrap justify-center gap-1 min-w-max">
       {Object.values(characters).map((character) => (
-        <label class="l-chr w-10 h-10 flex-none">
-          <input type="checkbox" value={character.name} hidden class={characterCheckboxClass} />
+        <label>
+          <input
+            type="checkbox"
+            value={character.name}
+            hidden
+            class={characterCheckboxClass}
+          />
           <Image
             src={characterImages[`../assets/character_btn/${character.id}.png`]()}
-            class="w-full h-full object-cover p-1"
             width={50}
             height={50}
             alt={character.name}
@@ -42,11 +46,15 @@ const sigilImages = import.meta.glob<{ default: ImageMetadata }>('../assets/_ui/
       {elementCheckboxClass && (
         <div class="flex flex-nowrap justify-center gap-1">
           {Object.values(elements).map((element) => (
-            <label class="l-chr w-10 h-10 flex-none">
-              <input type="checkbox" value={element.name} hidden class={elementCheckboxClass} />
+            <label>
+              <input
+                type="checkbox"
+                value={element.name}
+                hidden
+                class={elementCheckboxClass}
+              />
               <Image
                 src={elementImages[`../assets/_ui/icon/attribute/${element.icon}.png`]()}
-                class="w-full h-full object-cover p-1"
                 width={50}
                 height={50}
                 alt={element.name}
@@ -58,11 +66,15 @@ const sigilImages = import.meta.glob<{ default: ImageMetadata }>('../assets/_ui/
       {sigilCheckboxClass && (
         <div class="flex flex-nowrap justify-center gap-1">
           {Object.values(sigils).map((sigil) => (
-            <label class="l-chr w-10 h-10 flex-none">
-              <input type="checkbox" value={sigil.name} hidden class={sigilCheckboxClass} />
+            <label>
+              <input
+                type="checkbox"
+                value={sigil.name}
+                hidden
+                class={sigilCheckboxClass}
+              />
               <Image
                 src={sigilImages[`../assets/_ui/icon/sign/${sigil.icon}.png`]()}
-                class="w-full h-full object-cover p-1"
                 width={50}
                 height={50}
                 alt={sigil.name}
@@ -76,27 +88,34 @@ const sigilImages = import.meta.glob<{ default: ImageMetadata }>('../assets/_ui/
 </div>
 
 <style>
-  .l-chr {
+  label {
+    --border-color: #394d60;
+    --background-color: #1a1a1a;
+    width: 2.5rem;
+    height: 2.5rem;
     cursor: pointer;
-    border: 2px solid #394d60;
-    border-radius: 2px;
-    outline: 2px solid #394d60;
-    outline-offset: -6px;
+    border: .375rem double var(--border-color);
+    border-radius: .125rem;
+    background-color: var(--background-color);
     transition: scale .1s;
-    &.selected {
-      background: #032950;
-      border-color: #2c80d7 !important;
-      outline-color: #2c80d7 !important;
-    }
+
     &:hover {
-      border-color: #5574aa;
-      outline-color: #5574aa;
+      --border-color: #5574aa;
     }
+
     &:active {
       scale: .95;
     }
   }
-  label {
-    background-color: #1a1a1a;
+
+  :is(label.selected, label.selected:hover) {
+    --border-color: #2c80d7;
+    --background-color: #032950;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 </style>

@@ -10,14 +10,18 @@ import FiltersHeader from '../../components/FiltersHeader.astro';
 
 <Layout title="Weapons - FFVIIEC" highlightedRoute="Weapons">
   <div class="flex flex-col gap-4 max-w-360 mx-auto">
-    <FiltersHeader characterCheckboxClass="f-chr" elementCheckboxClass="f-elt" sigilCheckboxClass="f-sgl" />
+    <FiltersHeader
+      characterCheckboxClass="f-chr"
+      elementCheckboxClass="f-elt"
+      sigilCheckboxClass="f-sgl"
+    />
     <div class="grid grid-cols-[repeat(auto-fit,minmax(min(300px,100%),1fr))] gap-4">
       {Object.values(weapons).map((weapon) => (
         <div
           class="w-etr a"
-          data-character={weapon.character.name}
-          data-element={weapon.element}
-          data-sigil={weapon.commandAbility.sigil?.name}
+          data-c={weapon.character.name}
+          data-e={weapon.element}
+          data-s={weapon.commandAbility.sigil?.name}
         >
           <a href={`/weapons/${weapon.id || weapon.name}`}>
             <WeaponImage
@@ -130,9 +134,9 @@ import FiltersHeader from '../../components/FiltersHeader.astro';
         weaponEntry.removeAttribute('hidden');
         return;
       }
-      const shouldWeaponBeSelected = (selectedCharacters.length <= 0 || selectedCharacters.includes(weaponEntry.getAttribute('data-character')!))
-                                  && (selectedElements.length <= 0 || selectedElements.includes(weaponEntry.getAttribute('data-element')!))
-                                  && (selectedSigils.length <= 0 || selectedSigils.includes(weaponEntry.getAttribute('data-sigil')!));
+      const shouldWeaponBeSelected = (selectedCharacters.length <= 0 || selectedCharacters.includes(weaponEntry.dataset.c!))
+                                  && (selectedElements.length <= 0 || selectedElements.includes(weaponEntry.dataset.e!))
+                                  && (selectedSigils.length <= 0 || selectedSigils.includes(weaponEntry.dataset.s!));
       weaponEntry.toggleAttribute('hidden', !shouldWeaponBeSelected);
     });
   }));

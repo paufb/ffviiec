@@ -5,8 +5,8 @@ import { Image } from 'astro:assets';
 
 interface Props {
   reinforcementAbility: ReinforcementAbility;
-  width?: number;
-  height?: number;
+  width?: string;
+  height?: string;
 }
 
 const { reinforcementAbility, width, height } = Astro.props;
@@ -14,25 +14,20 @@ const images = import.meta.glob<{ default: ImageMetadata }>('../assets/passivesk
 ---
 
 <div
-  style={{
-    width: width ? `${width}px` : undefined,
-    height: height ? `${height}px` : undefined
-  }}
-  class="a"
+  style={{ width, height }}
 >
   <Image
     class="animate-imageload"
     src={images[`../assets/passiveskill/${reinforcementAbility.id}.png`]()}
     alt={reinforcementAbility.name}
-    width={width}
-    height={height}
+    
   />
 </div>
 
 <style>
-  .a {
+  div {
     background: #182d39;
-    border: 2px solid #108a9c;
+    border: .125rem solid #108a9c;
     flex: none;
     width: 1.5rem;
     height: 1.5rem;
