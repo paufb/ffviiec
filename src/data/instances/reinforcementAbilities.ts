@@ -782,5 +782,15 @@ export const reinforcementAbilities = {
     effect: 'When granting Phys. Attack Down: Max. Pot. Tier +1\n(Only affects max. tier)',
     reqPts: [10],
     levelValues: {}
-  })
+  }),
+  "Cool Cat's Hat": new ReinforcementAbility({
+    id: 55801,
+    name: 'Cool Cat\'s Hat',
+    effect: 'Attack Stance Cmd. Gauge Max.: Phys. & Mag. Ability Dmg. +{{dmgPercent}}%\nBuff/Debuff (Stats/Pot./Res.) Effect Duration +{{effectDurationPercent}}%',
+    reqPts: [10],
+    levelValues: {
+      dmgPercent: [10],
+      effectDurationPercent: [40]
+    }
+  }),
 }

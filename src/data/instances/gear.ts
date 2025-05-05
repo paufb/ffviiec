@@ -703,6 +703,16 @@ export const gear = {
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
+  "Cool Cat's Jacket": new Gear({
+    id: 7005,
+    name: 'Cool Cat\'s Jacket',
+    character: characters[7],
+    reinforcementAbilities: [
+      reinforcementAbilities["Reprieve"],
+      reinforcementAbilities["Cool Cat's Hat"]
+    ],
+    reinforcementAbilitiesPoints: [15, 10]
+  }),
   "Mournful Former Turk": new Gear({
     id: 8001,
     name: 'Mournful Former Turk',
