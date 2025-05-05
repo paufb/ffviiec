@@ -5123,6 +5123,38 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
       reinforcementAbilities["Boost Mag. Ability Pot."]
     ]
   }),
+  "Cool Cat's Megaphone": new Weapon({
+    id: 7017,
+    name: 'Cool Cat\'s Megaphone',
+    character: characters[7],
+    element: 'Lightning',
+    commandAbility: new CommandAbility({
+      id: 10701701,
+      name: 'Maiming Upper Cut',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Phys. Lightning', 'Single Enemy', null)}\nAlso, ${apply('Status Ailment: Enfeeble', null, 'Single Enemy', null, undefined, undefined)}\n${conditionHP('Self', '50', 'more')}, ${increase('PATK', undefined, 'All Allies', null, undefined, undefined, undefined)}`,
+      valuesByOverboostLevel: {
+        damage: ['380', '460', '460', '460', '460', '460', '590', '590', '590', '590', '710'],
+        enfeebleDur: ['30', '35', '35', '35', '35', '35', '45', '45', '45', '45', '60'],
+        enfeebleExt: ['6', '7', '7', '7', '7', '7', '9', '9', '9', '9', '12'],
+        pAtkIncreasePot: ['Low', 'Low', 'Low', 'Low', 'Low', 'Low', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid'],
+        pAtkIncreaseDur: ['12', '16', '16', '16', '16', '16', '16', '16', '16', '16', '20'],
+        pAtkIncreaseExt: ['4', '5', '5', '5', '5', '5', '5', '5', '5', '5', '6'],
+        pAtkIncreaseMaxPot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 277,
+      mAtk: 222,
+      heal: 158
+    },
+    reinforcementAbilities: [
+      reinforcementAbilities["Boost PATK (All Allies)"],
+      reinforcementAbilities["Boost Lightning Pot."]
+    ]
+  }),
   "Cath Palug": new Weapon({
     id: 8002,
     name: 'Cath Palug',
