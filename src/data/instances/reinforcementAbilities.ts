@@ -802,5 +802,25 @@ export const reinforcementAbilities = {
       duration: [15, 30, 45, 60],
       extension: [15, 30, 45, 60]
     }
+  }),
+  "Class President's Earring": new ReinforcementAbility({
+    id: 55901,
+    name: 'Class President\'s Earring',
+    effect: 'Wind Ability Dmg. +{{windAbilityDmg}}%\nAttack Stance Cmd. Gauge Max.: Phys. Ability Dmg. +{{physAbilityDmg}}%',
+    reqPts: [10],
+    levelValues: {
+      windAbilityDmg: [30],
+      physAbilityDmg: [20]
+    }
+  }),
+  "Gym Teacher's Whistle": new ReinforcementAbility({
+    id: 56001,
+    name: 'Gym Teacher\'s Whistle',
+    effect: 'Wind Ability Dmg. +{{windAbilityDmg}}%\nAttack Stance Cmd. Gauge Max.: Phys. Ability Dmg. +{{physAbilityDmg}}%',
+    reqPts: [10],
+    levelValues: {
+      windAbilityDmg: [30],
+      physAbilityDmg: [20]
+    }
   })
 }

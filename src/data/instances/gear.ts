@@ -193,6 +193,16 @@ export const gear = {
     ],
     reinforcementAbilitiesPoints: [15, 10]
   }),
+  "Seventh High Athletic Gear": new Gear({
+    id: 2008,
+    name: 'Seventh High Athletic Gear',
+    character: characters[2],
+    reinforcementAbilities: [
+      reinforcementAbilities["Physical & Magic Ward"],
+      reinforcementAbilities["Gym Teacher's Whistle"]
+    ],
+    reinforcementAbilitiesPoints: [10, 10]
+  }),
   "Seventh Heaven Bartender": new Gear({
     id: 3001,
     name: 'Seventh Heaven Bartender',
@@ -330,6 +340,16 @@ export const gear = {
     reinforcementAbilities: [
       reinforcementAbilities["Boost ATK (All Allies)"],
       reinforcementAbilities["Claw of the Worthy"]
+    ],
+    reinforcementAbilitiesPoints: [10, 10]
+  }),
+  "Seventh High School Uniform": new Gear({
+    id: 3021,
+    name: 'Seventh High School Uniform',
+    character: characters[3],
+    reinforcementAbilities: [
+      reinforcementAbilities["Physical & Magic Ward"],
+      reinforcementAbilities["Class President's Earring"]
     ],
     reinforcementAbilitiesPoints: [10, 10]
   }),
