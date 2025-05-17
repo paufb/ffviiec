@@ -793,4 +793,14 @@ export const reinforcementAbilities = {
       effectDurationPercent: [40]
     }
   }),
+  "Defense Boost": new ReinforcementAbility({
+    id: 56401,
+    name: 'Defense Boost',
+    effect: 'PDEF & MDEF are increased when battle begins. (Pot.: High / Rng.: Self / Dur.: {{duration}} / Ext.: {{extension}} / Max. pot.: High / Not affected by increase or reduction in Effect Duration.)',
+    reqPts: [1, 5, 15, 25],
+    levelValues: {
+      duration: [15, 30, 45, 60],
+      extension: [15, 30, 45, 60]
+    }
+  })
 }

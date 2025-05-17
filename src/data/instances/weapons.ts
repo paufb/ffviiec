@@ -1,10 +1,10 @@
-import { CommandAbility } from '../classes/CommandAbility.ts';
-import { UltimateCommandAbility } from '../classes/UltimateCommandAbility.ts';
-import { UltimateWeapon } from '../classes/UltimateWeapon.ts';
-import { Weapon } from '../classes/Weapon.ts';
-import { characters } from './characters.ts';
-import { reinforcementAbilities } from './reinforcementAbilities.ts';
-import { sigils } from './sigils.ts';
+import { CommandAbility } from '../classes/CommandAbility';
+import { UltimateCommandAbility } from '../classes/UltimateCommandAbility';
+import { UltimateWeapon } from '../classes/UltimateWeapon';
+import { Weapon } from '../classes/Weapon';
+import { characters } from './characters';
+import { reinforcementAbilities } from './reinforcementAbilities';
+import { sigils } from './sigils';
 
 export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
   "Buster Sword": new Weapon({
@@ -1461,6 +1461,39 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
       reinforcementAbilities["Boost PDEF"]
     ]
   }),
+  "Teacher's Paper Fan": new Weapon({
+    id: 2038,
+    name: 'Teacher\'s Paper Fan',
+    character: characters[2],
+    element: 'Wind',
+    commandAbility: new CommandAbility({
+      id: 10203801,
+      name: 'Winds of Discipline',
+      atbCost: 3,
+      sigil: null,
+      description: `${damage(undefined, 'Phys. Wind', 'All Enemies', null)}\nAlso, ${conditionHP('Self', '50', 'more')}, ${decrease('Wind Resist.', undefined, 'All Enemies', null, undefined, undefined, undefined)}\n${apply('Veil', undefined, 'Self', null, undefined, undefined)}`,
+      valuesByOverboostLevel: {
+        damage: ['310', '360', '360', '360', '360', '360', '430', '430', '430', '430', '500'],
+        windResistDecreasePot: ['Low', 'Low', 'Low', 'Low', 'Low', 'Low', 'High', 'High', 'High', 'High', 'High'],
+        windResistDecreaseDur: ['20', '22', '22', '22', '22', '22', '25', '25', '25', '25', '30'],
+        windResistDecreaseExt: ['6', '7', '7', '7', '7', '7', '8', '8', '8', '8', '10'],
+        windResistDecreaseMaxPot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High'],
+        veilPot: ['5', '6', '6', '6', '6', '6', '8', '8', '8', '8', '10'],
+        veilDur: ['40', '45', '45', '45', '45', '45', '50', '50', '50', '50', '60'],
+        veilExt: ['8', '9', '9', '9', '9', '9', '10', '10', '10', '10', '12']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 270,
+      mAtk: 220,
+      heal: 165
+    },
+    reinforcementAbilities: [
+      reinforcementAbilities["Boost PATK"],
+      reinforcementAbilities["Boost Wind Pot."]
+    ]
+  }),
   "Leather Gloves": new Weapon({
     id: 3001,
     name: 'Leather Gloves',
@@ -2292,6 +2325,36 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
     reinforcementAbilities: [
       reinforcementAbilities["Boost Earth Resist."],
       reinforcementAbilities["Boost HP"]
+    ]
+  }),
+  "Class President's Bracelet": new Weapon({
+    id: 3047,
+    name: 'Class President\'s Bracelet',
+    character: characters[3],
+    element: 'Wind',
+    commandAbility: new CommandAbility({
+      id: 10304701,
+      name: ' Student Council Windstrike',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Phys. Wind', 'Single Enemy', null)}\nAlso, ${conditionHP('Self', '50', 'more')}, ${increase('PATK', undefined, 'All Allies', null, undefined, undefined, undefined)}`,
+      valuesByOverboostLevel: {
+        damage: ['660', '760', '760', '760', '760', '760', '920', '920', '920', '920', '1,060'],
+        pAtkIncreasePot: ['Low', 'Low', 'Low', 'Low', 'Low', 'Low', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid'],
+        pAtkIncreaseDur: ['15', '20', '20', '20', '20', '20', '20', '20', '20', '20', '25'],
+        pAtkIncreaseExt: ['5', '6', '6', '6', '6', '6', '6', '6', '6', '6', '8'],
+        pAtkIncreaseMaxPot: ['Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'Mid', 'High', 'High', 'High', 'High', 'High']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 281,
+      mAtk: 222,
+      heal: 154
+    },
+    reinforcementAbilities: [
+      reinforcementAbilities["Boost PATK"],
+      reinforcementAbilities["Boost Wind Pot."]
     ]
   }),
   "Guard Stick": new Weapon({
@@ -7669,6 +7732,34 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
       reinforcementAbilities["Boost Ability Pot."]
     ]
   }),
+  "Folding Ruler": new Weapon({
+    id: 49034,
+    name: 'Folding Ruler',
+    character: characters[49],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: null,
+      name: 'Armora Breach Surge A',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Mag. Non-elem.', 'All Enemies', 10)}\nAlso, ${decrease('PDEF', 'Low', 'All Enemies', null, undefined, undefined, 'Mid')}`,
+      valuesByOverboostLevel: {
+        damage: ['180', '210', '210', '210', '210', '210', '240', '240', '240', '240', '250'],
+        pDefDecreaseDur: ['20', '25', '25', '25', '25', '25', '30', '30', '30', '30', '35'],
+        pDefDecreaseExt: ['5', '6', '6', '6', '6', '6', '7', '7', '7', '7', '8']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 220,
+      mAtk: 204,
+      heal: 168
+    },
+    reinforcementAbilities: [
+      reinforcementAbilities["Boost HP"],
+      reinforcementAbilities["Boost Phys. Ability Pot."]
+    ]
+  }),
   "Personal Style": new Weapon({
     id: 50001,
     name: 'Personal Style',
@@ -8260,6 +8351,55 @@ export const weapons: { [key: string]: Weapon | UltimateWeapon } = {
     reinforcementAbilities: [
       reinforcementAbilities["Boost PATK"],
       reinforcementAbilities["Boost Ice Pot."]
+    ]
+  }),
+  "Ogrekiller": new UltimateWeapon({
+    id: 50027,
+    name: 'Ogrekiller',
+    character: characters[50],
+    element: 'Non-elemental',
+    commandAbility: new UltimateCommandAbility({
+      id: null,
+      name: 'Finishing Blow',
+      sigil: null,
+      description: `${damage('2,000', 'Phys./Mag. Non-elem.', 'Single Enemy', null)}\nAlso, ${apply('Provoke', null, 'Self', null, 60, 60)}\n${increase('Physical Resistance', '+50%', 'Self', null, 30, 0, null)}\n${increase('Magic Resistance', '+50%', 'Self', null, 30, 0, null)}\n${regen('Self', 15, 15)}\n${chargeAndUses(50, 15, 3)}`
+    }),
+    maxRarityStats: {
+      pAtk: 196,
+      mAtk: 193,
+      heal: 135
+    },
+    reinforcementAbilities: [
+      reinforcementAbilities["Boost PDEF"],
+      reinforcementAbilities["Defense Boost"]
+    ]
+  }),
+  "Set Square": new Weapon({
+    id: 50029,
+    name: 'Set Square',
+    character: characters[50],
+    element: 'Non-elemental',
+    commandAbility: new CommandAbility({
+      id: null,
+      name: 'Armora Breach Surge A',
+      atbCost: 4,
+      sigil: null,
+      description: `${damage(undefined, 'Mag. Non-elem.', 'All Enemies', 10)}\nAlso, ${decrease('PDEF', 'Low', 'All Enemies', null, undefined, undefined, 'Mid')}`,
+      valuesByOverboostLevel: {
+        damage: ['180', '210', '210', '210', '210', '210', '240', '240', '240', '240', '250'],
+        pDefDecreaseDur: ['20', '25', '25', '25', '25', '25', '30', '30', '30', '30', '35'],
+        pDefDecreaseExt: ['5', '6', '6', '6', '6', '6', '7', '7', '7', '7', '8']
+      }
+    }),
+    maxRarityLevel: 5,
+    maxRarityStats: {
+      pAtk: 214,
+      mAtk: 207,
+      heal: 170
+    },
+    reinforcementAbilities: [
+      reinforcementAbilities["Boost HP"],
+      reinforcementAbilities["Boost Phys. Ability Pot."]
     ]
   }),
   "Broadsword: Axis": new Weapon({
